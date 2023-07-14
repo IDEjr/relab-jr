@@ -1,0 +1,37 @@
+backend:
+  name: git-gateway
+  branch: main # Branch que vai mexer no repositório
+
+publish_mode: editorial_workflow # Para fazer um esquema de revisão de novas edições
+media_folder: "public/uploads" # Onde os arquivos de mídia serão armazenados
+public_folder: "/uploads" # Onde a parte de mídia vai poder ser acessada
+display_url: https://exemplos-da-ide.netlify.app/ # URL que será mostrado no UI do Netlify
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "_"
+
+search: false
+locale: 'pt'
+
+collections:
+  - name: "modelos" # Nome usado da rota
+    extension: "json"
+    description: "Coleção que vai conter todos os campos disponíveis no Netlify CMS."
+    label: "Todos os modelos" # Nome usado na label do Netlify 
+    folder: "content/exemplos" # Local da pasta onde vão estar os arquivos
+    create: true # Permite que usuários criem arquivos nesse local
+    slug: "{{fields.nome}}" # Nome que vai ficar no URL da página
+    fields: # Campos disponíveis no Netlify
+      - {label: "Boolean", name: "bool", widget: "boolean", default: true}
+      - {label: 'Cor', name: 'cor', widget: 'color', enableAlpha: true, allowInput: true}
+      - {label: "Título", name: "titulo", widget: "string"}
+      - {label: "Datas com horário", name: "data", widget: "datetime", date_format: "DD.MM.YYYY", time_format: "HH:mm", format: "LLL"}
+      - {label: "Arquivos", name: "arquivos", widget: "file", default: "/uploads/neander_VHDL.pdf"}
+      - {label: "Imagem", name: "imagem", widget: "image"}
+      - {label: "Localização", name: "localizacao", widget: "map"}
+      - {label: "Conteúdo", name: "conteudo", widget: "markdown"}
+      - {label: "Números", name: "numeros", widget: "number", default: 100, value_type: "float", min: 0, max: 100, step: 0.5}
+      - {label: "Seleção", name: "selecao", widget: "select", multiple: true, min: 2, max: 3, options: ["um","dois","três"], default: ["dois"]}
+      - {label: "Texto", name: "texto", widget: "text"}

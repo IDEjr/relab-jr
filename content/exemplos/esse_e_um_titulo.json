@@ -1,0 +1,17 @@
+{
+  "texto": "Esse é um texto puro",
+  "selecao": [
+    "um",
+    "dois",
+    "três"
+  ],
+  "cor": "#ff456d",
+  "arquivos": "/uploads/idelogo-300x176.png",
+  "bool": true,
+  "data": "May 23, 2023 4:32 PM",
+  "localizacao": "{\"type\":\"Point\",\"coordinates\":[-51.1202734,-30.0685455]}",
+  "conteudo": "I﻿sso é o um exemplo com Markdown\r\n\r\n  **N﻿egrito**\r\n\r\n  *I﻿tálico*\r\n\r\n  `E﻿ssa coisa que nao sei o que é`\r\n\r\n  [L﻿ink](https://www.idejr.com.br/)\r\n\r\n  # T﻿ítulos 1\r\n\r\n  ## T﻿ítulos 2\r\n\r\n  ### T﻿ítulos  3\r\n\r\n  #### T﻿ítulos 4\r\n\r\n  ##### T﻿ítulos 5\r\n\r\n  ###### T﻿ítulos 6\r\n\r\n  > c﻿itações\r\n\r\n  * L﻿istas nao ordenadas\r\n  * L﻿istas nao ordenadas\r\n  * L﻿istas nao ordenadas\r\n\r\n  1. L﻿istas ordenadas\r\n  2. L﻿istas ordenadas\r\n  3. L﻿istas ordenadas\r\n\r\n     E﻿xemplo de imagem\r\n\r\n     ![logo da ide](/uploads/idelogo-300x176.png \"exemplo de imagem\")\r\n\r\n  ```javascript\r\n  console.log(\"olá, esse é um exemplo de código\")\r\n  ```",
+  "imagem": "/uploads/idelogo-300x176.png",
+  "numeros": 100,
+  "titulo": "Esse é um título"
+}
