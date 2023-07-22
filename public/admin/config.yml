@@ -16,7 +16,7 @@ search: false
 locale: 'pt'
 
 collections:
-  - name: "modelos" # Nome usado da rota
+  - name: "relab jr" # Nome usado da rota
     extension: "json"
     description: "Coleção que vai conter todos os campos disponíveis no Netlify CMS."
     label: "Todos os modelos" # Nome usado na label do Netlify 
