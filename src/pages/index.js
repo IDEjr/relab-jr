@@ -11,11 +11,11 @@ export default function Home({membros}) {
       <Head><title>Template Next Netlify</title></Head>
       <h1 className={styles['header']}>Este é um template de Next - Netlify</h1>
       <p className={styles['subtitle']}>Abra /admin para ver as opções</p>
-      <ul className={styles['exemplo-list']}>
-        {membros && membros.map((exemplo,i) => (
-          <Link className={styles["link"]} key={i} href={`/membros/${exemplo.fileName}`}>
+      <ul className={styles['membro-list']}>
+        {membros && membros.map((membro,i) => (
+          <Link className={styles["link"]} key={i} href={`/membros/${membro.fileName}`}>
             <div className={styles["card"]}>
-                <span >{exemplo.numeros}</span>
+                <span >{membro.numeros}</span>
             </div>
           </Link>
         ))}
