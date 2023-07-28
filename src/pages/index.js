@@ -15,7 +15,7 @@ export default function Home({membros}) {
         {membros && membros.map((membro,i) => (
           <Link className={styles["link"]} key={i} href={`/membros/${membro.fileName}`}>
             <div className={styles["card"]}>
-                <span >{membro.imagem}</span>
+                <span >{membro.nome}</span>
             </div>
           </Link>
         ))}
