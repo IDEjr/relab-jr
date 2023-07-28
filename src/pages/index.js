@@ -15,7 +15,7 @@ export default function Home({exemplos}) {
         {exemplos && exemplos.map((exemplo,i) => (
           <Link className={styles["link"]} key={i} href={`/exemplos/${exemplo.fileName}`}>
             <div className={styles["card"]}>
-                <span >{exemplo.titulo}</span>
+                <span >{exemplo.numeros}</span>
             </div>
           </Link>
         ))}
