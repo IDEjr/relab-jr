@@ -45,7 +45,7 @@ collections:
     label: "Membros"
     folder: "content/membros"
     create: true
-    slug: "{{fields.membro}}"
+    slug: "{{fields.membros}}"
     fields:
       - {label: "Nome", name: "nome", widget: "string"}
       - {label: "Imagem", name: "imagem", widget: "image"}
