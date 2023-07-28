@@ -12,10 +12,10 @@ export default function Home({membros}) {
       <h1 className={styles['header']}>Este é um template de Next - Netlify</h1>
       <p className={styles['subtitle']}>Abra /admin para ver as opções</p>
       <ul className={styles['membro-list']}>
-        {membros && membros.map((exemplo,i) => (
-          <Link className={styles["link"]} key={i} href={`/membros/${exemplo.fileName}`}>
+        {membros && membros.map((membro,i) => (
+          <Link className={styles["link"]} key={i} href={`/membros/${membro.fileName}`}>
             <div className={styles["card"]}>
-                <span >{lucas.imagem}</span>
+                <span >{membro.imagem}</span>
             </div>
           </Link>
         ))}
@@ -25,9 +25,8 @@ export default function Home({membros}) {
 }
 
 export async function getStaticProps(){
-  const exemplos = handleJSONfiles("./content/exemplos");
   const membros = handleJSONfiles("./content/membros");
   return {
-    props: { exemplos },
+    props: { membros },
   };
 }
