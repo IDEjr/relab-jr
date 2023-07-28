@@ -39,18 +39,18 @@ collections:
 
 
 
-  # - name: "membros"
-  #   extension: "json"
-  #   description: "Membros Relab Jr."
-  #   label: "Membros"
-  #   folder: "content/membros"
-  #   create: true
-  #   slug: "{{fields.nome}}"
-  #   fields:
-  #     - {label: "Nome", name: "nome", widget: "string"}
-  #     - {label: "Imagem", name: "imagem", widget: "image"}
-  #     - {label: "Posição", name: "posicao", widget: "select", multiple: true, min: 2, max: 3, options: ["comercial","marketing","financeiro"], default: ["trainee"]}
-  #     - {label: "Texto", name: "texto", widget: "text"}
+  - name: "membros"
+    extension: "json"
+    description: "Membros Relab Jr."
+    label: "Membros"
+    folder: "content/membros"
+    create: true
+    slug: "{{fields.nome}}"
+    fields:
+      - {label: "Nome", name: "nome", widget: "string"}
+      - {label: "Imagem", name: "imagem", widget: "image"}
+      - {label: "Posição", name: "posicao", widget: "select", multiple: true, min: 2, max: 3, options: ["comercial","marketing","financeiro"], default: ["trainee"]}
+      - {label: "Texto", name: "texto", widget: "text"}
 
 
 
