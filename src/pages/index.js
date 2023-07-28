@@ -13,9 +13,9 @@ export default function Home({membros}) {
       <p className={styles['subtitle']}>Abra /admin para ver as opções</p>
       <ul className={styles['membro-list']}>
         {membros && membros.map((membro,i) => (
-          <Link className={styles["link"]} key={i} href={`/membros/${membro.fileName}`}>
+          <Link className={styles["link"]} key={i} href={`/membros/${membros.fileName}`}>
             <div className={styles["card"]}>
-                <span >{membro.nome}</span>
+                <span >{membros.nome}</span>
             </div>
           </Link>
         ))}
