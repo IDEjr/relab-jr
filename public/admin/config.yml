@@ -55,7 +55,7 @@ collections:
 
 
 
-  - name: "Arthur S2" # Nome usado da rota
+  - name: "ArthurS2" # Nome usado da rota
     extension: "json"
     description: "O dev mais gatinho da ide ;)"
     label: "Arthur gatinho" # Nome usado na label do Netlify 
