@@ -5,29 +5,13 @@ import Head from 'next/head'
 import styles from '../../styles/Examples.module.css'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
 
-export default function Blog({ content }) {
+export default function Membros({ content }) {
     return (
         <div className={styles['container']}>
-          <Head>
-              <title>Página de demonstração | {content.titulo}</title>
-          </Head>
           <div className={styles['examples-container']}>
-            <h1>{content.titulo}</h1>
-            {content.bool ? <div>true</div> : <div>false</div>}
-            <div>{content.data}</div>
-            <div style={{backgroundColor: content.cor, color: 'white'}}>exemplo de cor</div>
             <img className={styles['img']} src={`${content.imagem}`}></img>
-            <a href={`${content.arquivos}`} download>{content.arquivos}</a>
-            <div>{content.localizacao}</div>
-            <div>{content.numeros}</div>
-            {content.selecao.map(conteudo =>{
-              return (<div>{conteudo}</div>)
-            })}
             <div>{content.texto}</div>
             <div className={styles['markdown']}>
-              <ReactMarkdown>
-                  {content.conteudo}
-              </ReactMarkdown>
             </div>
           </div>
         </div>
@@ -35,7 +19,7 @@ export default function Blog({ content }) {
 }
 
 export async function getStaticProps({params : {slug} }){
-  const caminho = "exemplos";
+  const caminho = "membros";
 
   const content = handleJSONfile(`./content/${caminho}/${slug}.json`);
   return {
@@ -44,8 +28,8 @@ export async function getStaticProps({params : {slug} }){
 }
 
 export async function getStaticPaths() {
-  const raiz = process.env.PWD;
-  const caminho = "exemplos";
+  const raiz = process.env.PWD || process.env.INIT_CWD;
+  const caminho = "membros";
 
   const filesInProjects = fs.readdirSync(raiz + `/content/${caminho}`)
 

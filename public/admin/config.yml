@@ -16,42 +16,36 @@ search: false
 locale: 'pt'
 
 collections:
-  - name: "membros"
+  - name: "membros" # Nome usado da rota
     extension: "json"
-    description: "Membros Relab Jr."
+    description: "Membros da Relab Jr."
     label: "Membros"
-    folder: "content/membros"
-    create: true
-    slug: "{{fields.nome}}"
-    fields:
+    folder: "content/membros" # Local da pasta onde vão estar os arquivos
+    create: true # Permite que usuários criem arquivos nesse local
+    slug: "{{fields.nome}}" # Nome que vai ficar no URL da página
+    fields: # Campos disponíveis no Netlify
       - {label: "Nome", name: "nome", widget: "string"}
       - {label: "Imagem", name: "imagem", widget: "image"}
       - {label: "Posição", name: "posicao", widget: "select",  options: ["comercial","marketing","financeiro"], default: ["trainee"]}
       - {label: "Texto", name: "texto", widget: "text"}
       - {label: "Linkedin", name: "linkedin", widget: "text"}
 
-# multiple: true, min: 1, max: 1,
-
-
-  # - name: "ArthurS2" # Nome usado da rota
-  #   extension: "json"
-  #   description: "O dev mais gatinho da ide ;)"
-  #   label: "Arthur gatinho" # Nome usado na label do Netlify 
-  #   folder: "content/exemplos" # Local da pasta onde vão estar os arquivos
-  #   create: true # Permite que usuários criem arquivos nesse local
-  #   slug: "{{fields.nome}}" # Nome que vai ficar no URL da página
-  #   fields: # Campos disponíveis no Netlify
-  #     - {label: "Boolean", name: "bool", widget: "boolean", default: true}
-  #     - {label: 'Cor', name: 'cor', widget: 'color', enableAlpha: true, allowInput: true}
-  #     - {label: "Título", name: "titulo", widget: "string"}
-  #     - {label: "Datas com horário", name: "data", widget: "datetime", date_format: "DD.MM.YYYY", time_format: "HH:mm", format: "LLL"}
-  #     - {label: "Arquivos", name: "arquivos", widget: "file", default: "/uploads/neander_VHDL.pdf"}
-  #     - {label: "Imagem", name: "imagem", widget: "image"}
-  #     - {label: "Localização", name: "localizacao", widget: "map"}
-  #     - {label: "Conteúdo", name: "conteudo", widget: "markdown"}
-  #     - {label: "Números", name: "numeros", widget: "number", default: 100, value_type: "float", min: 0, max: 100, step: 0.5}
-  #     - {label: "Seleção", name: "selecao", widget: "select", multiple: true, min: 2, max: 3, options: ["um","dois","três"], default: ["dois"]}
-  #     - {label: "Texto", name: "texto", widget: "text"}
+  - name: "posts" # Nome usado da rota
+    extension: "json"
+    description: "Posts da Relab Jr"
+    label: "Posts"
+    folder: "content/posts" # Local da pasta onde vão estar os arquivos
+    create: true # Permite que usuários criem arquivos nesse local
+    slug: "{{fields.nome}}" # Nome que vai ficar no URL da página
+    fields: # Campos disponíveis no Netlify
+      - {label: "Boolean", name: "bool", widget: "boolean", default: true}
+      - {label: "Título", name: "titulo", widget: "string"}
+      - {label: "Datas com horário", name: "data", widget: "datetime", date_format: "DD.MM.YYYY", time_format: "HH:mm", format: "LLL"}
+      - {label: "Imagem", name: "imagem", widget: "image"}
+      - {label: "Localização", name: "localizacao", widget: "map"}
+      - {label: "Conteúdo", name: "conteudo", widget: "markdown"}
+      - {label: "Seleção", name: "selecao", widget: "select", multiple: true, min: 2, max: 3, options: ["um","dois","três"], default: ["dois"]}
+      - {label: "Texto", name: "texto", widget: "text"}
 
   
   # - name: "relab-jr" # Nome usado da rota
