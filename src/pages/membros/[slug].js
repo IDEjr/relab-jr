@@ -10,8 +10,7 @@ export default function Membros({ content }) {
           <div className={styles['examples-container']}>
             <img className={styles['img']} src={`${content.imagem}`}></img>
             <div>{content.texto}</div>
-            <div className={styles['markdown']}>
-            </div>
+            <div className={styles['markdown']}></div>
           </div>
         </div>
     )
