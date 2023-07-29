@@ -1,33 +1,29 @@
-import Link from 'next/link';
+import Link from 'next/link'
+import styles from '../styles/geral.module.css'
 
 export default () => (
-    <header>
+    <header className={styles['footer']}>
         <ul>
             <li>
                 <Link href="/">
-                    <a>Home</a>
+                    <h1>Home</h1>
                 </Link>
             </li>
             <li>
                 <Link href="/quemSomos">
-                    <a>About</a>
+                    <h1>Quem Somos</h1>
                 </Link>
             </li>
             <li>
                 <Link href="/servicos">
-                    <a>Contact</a>
-                </Link>
-            </li>
-            {/* <li>
-                <Link as="/post/first" href="/post/[id]">
-                    <a>First Post</a>
+                    <h1>Serviços</h1>
                 </Link>
             </li>
             <li>
-                <Link as="/post/second" href="/post[id]">
-                    <a> Second Post</a>
+                <Link href="/blog">
+                    <h1>Blog</h1>
                 </Link>
-            </li> */}
+            </li>
         </ul>
     </header>
 );
