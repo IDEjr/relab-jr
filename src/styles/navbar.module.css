@@ -1,0 +1,27 @@
+.navbar {
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  .navList {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between; /* Add this line to evenly space the words */
+    padding: 0; /* Remove default padding of the ul element */
+  }
+  
+  .navItem {
+    margin: 0;
+  }
+  
+  /* Styling for the anchor tags inside the list items */
+  .navItem a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Styling for the anchor tags when hovered */
+  .navItem a:hover {
+    text-decoration: underline;
+  }
+  

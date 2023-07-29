@@ -28,8 +28,10 @@ export default function blog({posts}) {
                 />
               </div>
             </a>
-            <div>
-              <p>{post.conteudo}</p>
+            <div className={styles['container']}>
+              <div className={styles['box']}>
+                <p>{post.conteudo}</p>
+              </div>
             </div>
           </div>
         ))}
