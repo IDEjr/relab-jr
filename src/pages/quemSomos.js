@@ -21,8 +21,8 @@ export default function quemSomos({membros}) {
             <div>
               <Image
                 src={`${membro.imagem}`}
-                width={500}
-                height={500}
+                width={400}
+                height={400}
                 alt="Membro"
               />
             </div>
