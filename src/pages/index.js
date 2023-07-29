@@ -18,11 +18,12 @@ export default function Home({membros}) {
           <p className={styles['subtitle']}>Abra /admin para ver as opções</p>
           <ul className={styles['membro-list']}>
             {membros && membros.map((membro,i) => (
-              <Link href="/serviços.js" className={styles["link"]} key={i}>
+              <a target="_blank" href="https://br.linkedin.com/in/luca-pasquetti-comelli-fritscher" className={styles["link"]} key={i}>
                 <div className={styles["card"]}>
                     <span >{membro.texto}</span>
                 </div>
-              </Link>
+              </a>
+              
             ))}
           </ul>
         </div>

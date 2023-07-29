@@ -28,6 +28,7 @@ collections:
       - {label: "Imagem", name: "imagem", widget: "image"}
       - {label: "Posição", name: "posicao", widget: "select",  options: ["comercial","marketing","financeiro"], default: ["trainee"]}
       - {label: "Texto", name: "texto", widget: "text"}
+      - {label: "Linkedin", name: "linkedin", widget: "text"}
 
 # multiple: true, min: 1, max: 1,
 
