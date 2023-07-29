@@ -14,7 +14,7 @@ export default function Home({membros}) {
       <div className={styles['tudo']}>
         <Navbar />
         <div className={styles['container']}>
-          <Head><title>Exemplo Next Netlify</title></Head>
+          <Head><title>Exemplo Next + Netlify</title></Head>
           <h1 className={styles['header']}>Exemplo</h1>
           <p className={styles['subtitle']}>Abra /admin para acessar configurações netlify</p>
           <ul className={styles['membro-list']}>
