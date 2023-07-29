@@ -18,7 +18,7 @@ export default function Home({membros}) {
           <p className={styles['subtitle']}>Abra /admin para ver as opções</p>
           <ul className={styles['membro-list']}>
             {membros && membros.map((membro,i) => (
-              <a target="_blank" href={`/membros/${membro.linkedin}`} className={styles["link"]} key={i}>
+              <a target="_blank" href={`${membro.linkedin}`} className={styles["link"]} key={i}>
                 <div className={styles["card"]}>
                     <span >{membro.texto}</span>
                 </div>
