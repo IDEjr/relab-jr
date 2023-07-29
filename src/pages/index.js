@@ -12,7 +12,7 @@ export default function Home({membros}) {
       <h1 className={styles['header']}>Este é um template de Next - Netlify</h1>
       <p className={styles['subtitle']}>Abra /admin para ver as opções</p>
       <ul className={styles['membro-list']}>
-        {exemplos && exemplos.map((membro,i) => (
+        {membros && membros.map((membro,i) => (
           <Link className={styles["link"]} key={i} href={`/membros/${membro.fileName}`}>
             <div className={styles["card"]}>
                 <span >{membro.texto}</span>
