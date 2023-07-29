@@ -44,7 +44,7 @@ collections:
       - {label: "Imagem", name: "imagem", widget: "image"}
       - {label: "Localização", name: "localizacao", widget: "map"}
       - {label: "Conteúdo", name: "conteudo", widget: "markdown"}
-      - {label: "Seleção", name: "selecao", widget: "select", multiple: true, min: 2, max: 3, options: ["um","dois","três"], default: ["dois"]}
+      - {label: "Seleção", name: "selecao", widget: "select", options: ["outros","economia","social"], default: ["dois"]}
       - {label: "Texto", name: "texto", widget: "text"}
 
   
