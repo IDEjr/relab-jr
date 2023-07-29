@@ -25,8 +25,8 @@ export default function Home({exemplos}) {
 }
 
 export async function getStaticProps(){
-  const membros = handleJSONfiles("./content/membros");
+  const exemplos = handleJSONfiles("./content/membros");
   return {
-    props: { membros },
+    props: { exemplos },
   };
 }
