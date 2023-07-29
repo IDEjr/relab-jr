@@ -1,8 +1,7 @@
 import Link from 'next/link'
-import styles from '../styles/geral.module.css'
 
 export default () => (
-    <div className={styles['footer']}>
+    <div className='footer'>
         <br></br>
         <br></br>
         <br></br>

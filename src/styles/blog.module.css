@@ -31,14 +31,14 @@
   text-decoration: underline;
 }
 
-.card{
-  height: 200px;
+.texto-post{
   padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: blueviolet;
   margin: 10px;
+  overflow: scroll;
 }
 
 .link, .link *{

@@ -17,19 +17,21 @@ export default function blog({posts}) {
       </h2>
       <ul className={styles['exemplo-list']}>
         {posts && posts.map((post,i) => (
-          <a target="_blank" href={`${post.linkedin}`} className={styles["link"]} key={i}>
+          <div>
+            <a target="_blank" href="/blog" key={i}>
+              <div>
+                <Image
+                  src={`${post.imagem}`}
+                  width={500}
+                  height={500}
+                  alt="Post"
+                />
+              </div>
+            </a>
             <div>
-              <Image
-                src={`${post.imagem}`}
-                width={500}
-                height={500}
-                alt="Post"
-              />
+              <p>{post.conteudo}</p>
             </div>
-            <div className={styles["card"]}>
-              <span >{post.conteudo}</span>
-            </div>
-          </a>
+          </div>
         ))}
       </ul>
       <Footer />

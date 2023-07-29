@@ -1,8 +1,7 @@
 import Link from 'next/link'
-import styles from '../styles/geral.module.css'
 
 export default () => (
-    <header className={styles['footer']}>
+    <div className='navbar'>
         <ul>
             <li>
                 <Link href="/">
@@ -25,5 +24,5 @@ export default () => (
                 </Link>
             </li>
         </ul>
-    </header>
+    </div>
 );
