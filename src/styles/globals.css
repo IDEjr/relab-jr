@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,300;0,400;0,600;0,700;1,100;1,300;1,400&display=swap');
 
 * {
   background-color: #262626;
+  color: white;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
 }
 
 
@@ -29,10 +31,10 @@
 body {
   background: #f2f2f2;
   color: #333;
-  font-family: "Nunito";
+  font-family: 'Work Sans', sans-serif;
 }
 a {
-  color: #333;
+  color: #f2c12e;
   text-decoration: none;
 }
 .content {
