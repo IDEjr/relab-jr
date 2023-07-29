@@ -4,8 +4,8 @@ import styles from '../styles/Home.module.css'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 
 
-export default function Home({exemplos}) {
-  console.log(exemplos)
+export default function Home({membros}) {
+  console.log(membros)
   return (
     <div className={styles['container']}>
       <Head><title>Template Next Netlify</title></Head>
@@ -25,8 +25,8 @@ export default function Home({exemplos}) {
 }
 
 export async function getStaticProps(){
-  const exemplos = handleJSONfiles("./content/membros");
+  const membros = handleJSONfiles("./content/membros");
   return {
-    props: { exemplos },
+    props: { membros },
   };
 }
