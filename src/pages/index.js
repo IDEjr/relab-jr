@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import Head from 'next/head'
-import styles from '../styles/home.module.css'
+import styles from '../styles/Home.module.css'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 
 
-export default function home({membros}) {
+export default function Home({membros}) {
   console.log(membros)
   return (
     <div className={styles['container']}>
