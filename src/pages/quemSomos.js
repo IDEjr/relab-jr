@@ -27,7 +27,7 @@ export default function quemSomos({membros}) {
               />
             </div>
             <div className={styles["card"]}>
-              <span >{membro.texto}</span>
+              <span >{membro.conteudo}</span>
             </div>
           </a>
         ))}

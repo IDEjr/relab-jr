@@ -27,7 +27,7 @@ export default function blog({posts}) {
               />
             </div>
             <div className={styles["card"]}>
-              <span >{post.texto}</span>
+              <span >{post.conteudo}</span>
             </div>
           </a>
         ))}
