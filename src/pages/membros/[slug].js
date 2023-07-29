@@ -35,7 +35,7 @@ export default function Blog({ content }) {
 }
 
 export async function getStaticProps({params : {slug} }){
-  const caminho = "membros";
+  const caminho = "exemplos";
 
   const content = handleJSONfile(`./content/${caminho}/${slug}.json`);
   return {
@@ -45,7 +45,7 @@ export async function getStaticProps({params : {slug} }){
 
 export async function getStaticPaths() {
   const raiz = process.env.PWD;
-  const caminho = "membros";
+  const caminho = "exemplos";
 
   const filesInProjects = fs.readdirSync(raiz + `/content/${caminho}`)
 
