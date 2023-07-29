@@ -26,8 +26,8 @@ collections:
     fields: # Campos disponíveis no Netlify
       - {label: "Nome", name: "nome", widget: "string"}
       - {label: "Imagem", name: "imagem", widget: "image"}
-      - {label: "Posição", name: "posicao", widget: "select",  options: ["comercial","marketing","financeiro"], default: ["trainee"]}
-      - {label: "Texto", name: "texto", widget: "text"}
+      - {label: "Posição", name: "posicao", widget: "select",  options: ["Projetos", "Diretoria", "Financeiro", "Comercial", "RH", "Marketing"], default: ["trainee"]}
+      - {label: "Conteúdo", name: "conteudo", widget: "markdown"}
       - {label: "Linkedin", name: "linkedin", widget: "text"}
 
   - name: "posts" # Nome usado da rota
@@ -44,8 +44,7 @@ collections:
       - {label: "Imagem", name: "imagem", widget: "image"}
       - {label: "Localização", name: "localizacao", widget: "map"}
       - {label: "Conteúdo", name: "conteudo", widget: "markdown"}
-      - {label: "Seleção", name: "selecao", widget: "select", options: ["outros","economia","social"], default: ["dois"]}
-      - {label: "Texto", name: "texto", widget: "text"}
+      - {label: "Assunto", name: "assunto", widget: "select", options: ["outros","economia","social"], default: ["outros"]}
 
   
   # - name: "relab-jr" # Nome usado da rota
