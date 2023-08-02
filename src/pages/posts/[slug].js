@@ -1,7 +1,7 @@
 import fs from 'fs'
 import ReactMarkdown from 'react-markdown'
 import matter from 'gray-matter'
-import styles from './Examples.module.css'
+import styles from './slug.module.css'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
 
 export default function Posts({ content }) {
