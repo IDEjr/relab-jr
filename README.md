@@ -1,8 +1,20 @@
-<h1 align="center"> Projeto XXXXXXXXX </h1>
+<h1 align="center"> Projeto Relab Jr. </h1>
 
 - ### [Documentação React](https://pt-br.reactjs.org/docs/getting-started.html)
   
 - ### [Guia rápido de comandos do git](https://rogerdudler.github.io/git-guide/index.pt_BR.html)
+
+- ### Importante!
+  
+  - #### Instalar pacotes necessários.
+  - #### Clonar repositório! Recomendo o Git Desktop.
+  - #### Cada issue é um arquivo diferente na pasta "components" que será chamado na sua devida página.
+  - #### Se forem editar parte do site que esteja sendo desenvolvida por outro membro avise para minimizar problemas no código (ex.: global.css).
+  - #### Cada página (+ navbar e footer) tem o seu módulo.css próprio.
+  - #### Se forem mexer em nos arquivos "config.yml", "[slug.js]" ou na pasta "content" me avisem ANTES de fazer commit (bugs).
+  - #### Imagino que existam alguns arquivos ou trechos de código desnecessários que vem no create-next-app. Se acharem me AVISEM antes de deletar (bugs).
+  - #### Cuidado com esses arquivos e páginas!
+  - ![imagem](https://github.com/IDEjr/relab-jr/assets/119978877/9944fceb-e1a6-4423-a38c-0ad2feae9732)
 
 
 
@@ -20,7 +32,7 @@
   
   - #### Comandos no terminal do VSCode
     
-    - ``` npm start ``` 
+    - ``` npm run dev ``` 
     - abrir http://localhost:3000/
   
 - ### Guia rápido de boas práticas do git
