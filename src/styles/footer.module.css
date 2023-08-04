@@ -27,10 +27,12 @@
     justify-content: center;
     background-color: transparent;
     
-    padding: 100px 150px;
+    padding: 156px 198px;
     background-image: url("../../public/uploads/relabIconYellow.png");
     background-repeat: no-repeat;
     background-position: center;
+    border: none;
+    cursor:pointer;
 
     
 }

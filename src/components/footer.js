@@ -1,8 +1,10 @@
 import Link from 'next/link'
+import {useEffect} from 'react'
 import relabIconYellow from '../../public/uploads/relabIconYellow.svg'
 import linkedinIcon from '../../public/uploads/linkedinIcon.png'
 import twitterIcon from '../../public/uploads/twitterIcon.png'
 import instagramIcon from '../../public/uploads/instagramIcon.png'
+import navBarPoint from './navbar.js'
 /*
 import labIcon from '../../public/uploads/labIcon.png'
 import jesuitasIcon from '../../public/uploads/jesuitasIcon.png'
@@ -14,13 +16,19 @@ import unisinosIcon from '../../public/uploads/unisinosIcon.png'
 
 import styles from '../styles/footer.module.css'
 
+const handleMove = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" }); // here it goes
+  };
+
+
+
 function Footer() {
     return (
         <div className={styles['footer']}>
             <div className={styles['top-part']}>
-                <a href='/'target="_blank" rel="noreferrer" className={styles['relab-icon']}>
+                <button onClick={handleMove} className={styles['relab-icon']}>
                     <img src={relabIconYellow}></img>
-                </a>
+                </button>                
                 
                 <div className={styles['contact-socials']}>
                     <span className={styles['contact-text']}>
@@ -53,7 +61,7 @@ function Footer() {
 
                     </a>
                     <a className={styles['unisinos-icon']} href='https://www.unisinos.br/' target='_blank'>
-                        
+
                     </a>
                 </div>
 

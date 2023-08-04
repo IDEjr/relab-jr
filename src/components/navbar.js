@@ -3,7 +3,7 @@ import styles from '../styles/navbar.module.css'
 
 export default () => (
     <>
-        <div className={styles.navbar}>
+        <div className={styles.navbar} id='navBarPoint'>
             <ul className={styles.navList}>
                 <li className={styles.navItem}>
                     <Link href="/">
