@@ -16,7 +16,7 @@
     justify-content: space-between;
     align-items:flex-start;
     flex-direction: row;
-    height: 66%;
+    height: 80%;
 
     
 }
@@ -102,7 +102,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    height: 34%;
+    height: 20%;
     padding: 0px 150px;
     
 }
@@ -127,21 +127,21 @@
     width: 113px;
     background-image: url("../../public/uploads/labIcon.png");
     background-repeat: no-repeat;
-    height: 51px;
+    height: 50px;
     background-position: center;
 }
 .jesuitas-icon {
     width: 159px;
     background-image: url("../../public/uploads/jesuitasIcon.png");
     background-repeat: no-repeat;
-    height: 51px;
+    height: 50px;
     background-position: center;
 }
 .unisinos-icon {
     width: 184px;
     background-image: url("../../public/uploads/unisinosIcon.png");
     background-repeat: no-repeat;
-    height: 51px;
+    height: 50px;
     background-position: center;
 }
 
