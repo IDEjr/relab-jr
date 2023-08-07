@@ -1,3 +1,32 @@
+.toptext{
+
+  height: 336px;
+  width: 932px;
+  margin-left: 182px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-left: solid 15px #F2C12E;
+}
+.bottomtext{
+  margin-top: 86px;
+  margin-left: 1018px;
+    height: 336px;
+    width: 932px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-left: solid 15px #F2C12E;
+}
+
+.text-content{
+  color: #ffff;
+  font-size: 22px;
+  font-family: sans-serif;
+}
+
 .tudo{
   background-color: #262626;
 }
