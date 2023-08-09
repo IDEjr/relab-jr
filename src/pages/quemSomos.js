@@ -14,7 +14,7 @@ export default function quemSomos({membros}) {
   return (
     <>
       <Navbar />
-      <Inicio title = {"QUEM SOMOS?"} image= {path}/>
+      <Inicio title = {"QUEM SOMOS"} image= {path}/>
 
 
 
