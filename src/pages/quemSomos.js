@@ -1,10 +1,9 @@
-import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import styles from '../styles/quemSomos.module.css'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
-import Image from 'next/image'
 
 export default function quemSomos({membros}) {
   console.log(membros)
@@ -36,7 +35,6 @@ export default function quemSomos({membros}) {
     </>
   );
 }
-
 
 
 export async function getStaticProps(){

@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import Head from 'next/head'
 import styles from '../styles/home.module.css'
 import Navbar from '../components/navbar'
@@ -12,14 +11,16 @@ export default function Home() {
     imagem: imagemResultados,
     titulo: 'MELHORE SEUS RESULTADOS',
     texto: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget libero viverra velit pellentesque hendrerit. Donec interdum dolor nisl, at rhoncus dolor consectetur euismod. Aliquam scelerisque finibus egestas.',
-    textoBotao: 'Entre em contato'
+    textoBotao: 'Entre em contato',
+    link: 'servicos'
   };
 
   const membros = {
     imagem: imagemMembros,
     titulo: 'MEMBROS',
     texto: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget libero viverra velit pellentesque hendrerit. Donec interdum dolor nisl, at rhoncus dolor consectetur euismod. Aliquam scelerisque finibus egestas.',
-    textoBotao: 'Sejo membro'
+    textoBotao: 'Sejo membro',
+    link: 'quemSomos'
   };
 
   return (

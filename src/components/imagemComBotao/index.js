@@ -2,30 +2,29 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from './imagemComBotao.module.css'
 
-export default function imagemComBotao({ imagem, titulo, texto, textoBotao }) {
-    return (
-      <>
-          
-          <div className={styles['container']}>
-          <Image
-          src={imagem}
-          fill
-          style={{objectFit: "cover"}}
-          // style={{background-size: "cover"}}
-          // width={100%}
-          // height={100%}
-          alt="Imagem Resultados"
-          className={styles['background']}/>
-          {/* <div className={styles['box']}> */}
-            <h2 className={styles['titulo']}>{titulo}</h2>
-            <p className={styles['texto']}>{texto}</p>
-            <div className={styles['boxBotao']}>
-              <Link
-              href='servicos' className={styles['botao']}>{textoBotao}
-              </Link>
-            </div>
-          {/* </div> */}
-          </div>
-        </>
-      );
-    }
+export default function imagemComBotao({ imagem, titulo, texto, textoBotao, link }) {
+  return (
+    <>        
+      <div className={styles['container']}>
+      <Image
+      src={imagem}
+      // fill
+      style={{objectFit: 'cover'}}
+      // style={{background-size: 'cover'}}
+      // width={100%}
+      // height={100%}
+      alt='Imagem Resultados'
+      className={styles['background']}/>
+      {/* <div className={styles['box']}> */}
+        <h2 className={styles['titulo']}>{titulo}</h2>
+        <p className={styles['texto']}>{texto}</p>
+        <div className={styles['boxBotao']}>
+          <Link
+          href={link} className={styles['botao']}>{textoBotao}
+          </Link>
+        </div>
+      {/* </div> */}
+      </div>
+    </>
+  );
+}
