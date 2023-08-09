@@ -1,20 +1,8 @@
-import Link from 'next/link'
-import {useEffect} from 'react'
-import relabIconYellow from '../../public/uploads/relabIconYellow.svg'
-import linkedinIcon from '../../public/uploads/linkedinIcon.png'
-import twitterIcon from '../../public/uploads/twitterIcon.png'
-import instagramIcon from '../../public/uploads/instagramIcon.png'
-import navBarPoint from './navbar.js'
-/*
-import labIcon from '../../public/uploads/labIcon.png'
-import jesuitasIcon from '../../public/uploads/jesuitasIcon.png'
-import unisinosIcon from '../../public/uploads/unisinosIcon.png'
-<img src='../../public/uploads/labIcon.png'/>
-                    <img src='../../public/uploads/jesuitasIcon.png'/>
-                    <img src='../../public/uploads/unisinosIcon.png'/>
-*/
 
-import styles from '../styles/footer.module.css'
+import relabIconYellow from '../../../public/uploads/relabIconYellow.svg'
+
+
+import styles from './footer.module.css'
 
 const handleMove = () => {
     window.scrollTo({ top: 0, behavior: "smooth" }); // here it goes
@@ -27,7 +15,6 @@ function Footer() {
         <div className={styles['footer']}>
             <div className={styles['top-part']}>
                 <button onClick={handleMove} className={styles['relab-icon']}>
-                    <img src={relabIconYellow}></img>
                 </button>                
                 
                 <div className={styles['contact-socials']}>

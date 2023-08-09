@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Navbar from '../components/navbar'
-import Footer from '../components/footer'
+import Footer from '../components/footer/footer'
 import styles from '../styles/blog.module.css'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import Image from 'next/image'
