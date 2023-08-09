@@ -11,7 +11,7 @@ export default function quemSomos({membros}) {
   return (
     <>
       <Navbar />
-      <h1>Quem1 Somos</h1>
+      <h1>Quem Somos</h1>
       <h2>
         <Link href="/">Back to home</Link>
       </h2>
