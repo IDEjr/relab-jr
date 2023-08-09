@@ -1,20 +1,24 @@
 import React from 'react'
-import Link from 'next/link'
+
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import styles from '../styles/quemSomos.module.css'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import Image from 'next/image'
+import Inicio from '@/components/inicio'
 
 export default function quemSomos({membros}) {
-  console.log(membros)
+  console.log(membros);
+  const path = '/../public/images/padrao.jpg';
+  
   return (
     <>
       <Navbar />
-      <h1>Quem Somos</h1>
-      <h2>
-        <Link href="/">Back to home</Link>
-      </h2>
+      <Inicio title = {"QUEM SOMOS?"} image= {path}/>
+
+
+
+
       <ul className={styles['exemplo-list']}>
         {membros && membros.map((membro,i) => (
           <a target="_blank" href={`${membro.linkedin}`} className={styles["link"]} key={i}>
@@ -23,7 +27,7 @@ export default function quemSomos({membros}) {
                 src={`${membro.imagem}`}
                 width={400}
                 height={400}
-                alt="Membro"
+                alt="Membro "
               />
             </div>
             <div className={styles["card"]}>

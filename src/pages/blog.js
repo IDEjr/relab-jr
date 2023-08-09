@@ -1,20 +1,22 @@
 import React from 'react'
-import Link from 'next/link'
+
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import styles from '../styles/blog.module.css'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import Image from 'next/image'
+import Inicio from '@/components/inicio'
 
 export default function blog({posts}) {
-  console.log(posts)
+  console.log(posts);
+  const path = '/../public/images/padrao.jpg';
   return (
     <>
       <Navbar />
-      <h1>Blog</h1>
-      <h2>
-        <Link href="/">Back to home</Link>
-      </h2>
+      
+      <Inicio title = {"BLOG"} image= {path}/>
+
+
       <ul className={styles['exemplo-list']}>
         {posts && posts.map((post,i) => (
           <div>
@@ -22,7 +24,7 @@ export default function blog({posts}) {
               <div>
                 <Image
                   src={`${post.imagem}`}
-                  width={500}
+                  width={1500}
                   height={500}
                   alt="Post"
                 />
