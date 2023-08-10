@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import Navbar from '../components/navbar'
-import Footer from '../components/footer/footer'
+import Footer from '../components/footer'
 import styles from '../styles/quemSomos.module.css'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 

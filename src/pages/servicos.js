@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Navbar from '../components/navbar'
-import Footer from '../components/footer/footer'
+import Footer from '../components/footer'
 
 export default function servicos() {
   return (
