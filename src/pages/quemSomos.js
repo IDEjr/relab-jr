@@ -9,7 +9,7 @@ import Inicio from '@/components/inicio'
 
 export default function quemSomos({membros}) {
   console.log(membros);
-  const path = '/../public/images/padrao.jpg';
+  const path = '/../public/images/padrao3.jpg';
   
   return (
     <>

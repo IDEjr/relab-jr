@@ -5,7 +5,7 @@ import Footer from '../components/footer'
 import Inicio from '@/components/inicio';
 
 export default function servicos() {
-  const path = '/../public/images/padrao.jpg';
+  const path = '/../public/images/padrao4.jpg';
   return (
     <>
       <Navbar />
