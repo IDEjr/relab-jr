@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
+import TextoBarraQuemSomos from '../components/textoBarraQuemSomos'
 import styles from '../styles/quemSomos.module.css'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 
@@ -9,27 +10,7 @@ export default function quemSomos({ membros }) {
   return (
     <>
       <Navbar />
-      <h1>Quem Somos</h1>
-      <h2>
-        <Link href="/">Back to home</Link>
-    </h2>
-      <div className={styles['toptext']}>
-        
-        <p className={styles['text-content']} >
-            Texto explicando um pouco da história da Relab jr e seus valores. 
-            Contando o como começou, com que intuito, quais suas maiores causas.
-        </p>  
-      </div>
-      
-      <div className={styles['bottomtext']}>
-        
-        <p className={styles['text-content']}>
-        E também falando um pouco melhor sobre as metas gerais e norteadoras da empresa no futuro.
-        Texto meramente ilustrativo.
-        </p>
-       </div>
-
-
+      <TextoBarraQuemSomos />
       <ul className={styles['exemplo-list']}>
         {membros && membros.map((membro, i) => (
           <a target="_blank" href={`${membro.linkedin}`} className={styles["link"]} key={i}>

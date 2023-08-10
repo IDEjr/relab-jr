@@ -1,4 +1,4 @@
-import relabIconYellow from '../../../public/uploads/relabIconYellow.svg'
+// import relabIconYellow from '../../../public/uploads/image/relabIconYellow.svg'
 import styles from './footer.module.css'
 
 const handleMove = () => {

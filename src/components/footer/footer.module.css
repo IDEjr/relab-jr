@@ -12,7 +12,7 @@
 }
 .top-part {
     display: flex;
-    background-image:linear-gradient(#262626,transparent),url("../../../public/uploads/backgroundLogos.png");
+    background-image:linear-gradient(#262626,transparent),url("../../../public/uploads/image/backgroundLogos.png");
     justify-content: space-between;
     align-items:flex-start;
     flex-direction: row;
@@ -28,7 +28,7 @@
     background-color: transparent;
     
     padding: 156px 198px;
-    background-image: url("../../../public/uploads/relabIconYellow.png");
+    background-image: url("../../../public/uploads/image/relabIconYellow.png");
     background-repeat: no-repeat;
     background-position: center;
     border: none;
@@ -43,7 +43,7 @@
     flex-shrink: 0;
     justify-content: center;
     cursor:alias;
-    background-image: url("../../../public/uploads/relabIconYellow.png");
+    background-image: url("../../../public/uploads/image/relabIconYellow.png");
     
     
 }
@@ -73,7 +73,7 @@
 .linkedin-icon {
     height: 51px;
     width: 33%;
-    background-image: url("../../../public/uploads/linkedinIcon.png");
+    background-image: url("../../../public/uploads/image/linkedinIcon.png");
     background-repeat: no-repeat;
     background-position: center;
     
@@ -82,7 +82,7 @@
 .twitter-icon {
     height: 51px;
     width: 33%;
-    background-image: url("../../../public/uploads/twitterIcon.png");
+    background-image: url("../../../public/uploads/image/twitterIcon.png");
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -90,7 +90,7 @@
 .instagram-icon {
     height: 51px;
     width: 33%;
-    background-image: url("../../../public/uploads/instagramIcon.png");
+    background-image: url("../../../public/uploads/image/instagramIcon.png");
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -125,21 +125,21 @@
 
 .lab-icon {
     width: 113px;
-    background-image: url("../../../public/uploads/labIcon.png");
+    background-image: url("../../../public/uploads/image/labIcon.png");
     background-repeat: no-repeat;
     height: 50px;
     background-position: center;
 }
 .jesuitas-icon {
     width: 159px;
-    background-image: url("../../../public/uploads/jesuitasIcon.png");
+    background-image: url("../../../public/uploads/image/jesuitasIcon.png");
     background-repeat: no-repeat;
     height: 50px;
     background-position: center;
 }
 .unisinos-icon {
     width: 184px;
-    background-image: url("../../../public/uploads/unisinosIcon.png");
+    background-image: url("../../../public/uploads/image/unisinosIcon.png");
     background-repeat: no-repeat;
     height: 50px;
     background-position: center;

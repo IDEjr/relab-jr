@@ -48,7 +48,7 @@ each service
     justify-content: flex-end;
 }
 .frames {
-    background-image: url('../../../public/uploads/yellowFrame.png');
+    background-image: url('../../../public/uploads/image/yellowFrame.png');
     background-repeat: no-repeat;
     width: 323px;
     height: 419px;

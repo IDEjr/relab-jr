@@ -4,8 +4,8 @@ import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import ImagemComBotao from '../components/imagemComBotao'
 import ServicesHome from '../components/servicesHome'
-import imagemResultados from '../images/imagemResultados.png'
-import imagemMembros from '../images/imagemMembros.png'
+import imagemResultados from '../../public/uploads/image/imagemResultados.png'
+import imagemMembros from '../../public/uploads/image/imagemMembros.png'
 
 export default function Home() {
   const resultados = {

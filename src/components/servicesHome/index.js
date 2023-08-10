@@ -1,11 +1,11 @@
 import styles from './servicesHome.module.css'
-import yellowFrame from '../../../public/uploads/yellowFrame.png'
-import image1 from '../../../public/uploads/inside-image1.png'
-import image2 from '../../../public/uploads/inside-image2.png'
-import image3 from '../../../public/uploads/inside-image3.png'
-import image4 from '../../../public/uploads/inside-image4.png'
-import image5 from '../../../public/uploads/inside-image5.png'
-import image6 from '../../../public/uploads/inside-image6.png'
+import yellowFrame from '../../../public/uploads/image/yellowFrame.png'
+import image1 from '../../../public/uploads//image/inside-image1.png'
+import image2 from '../../../public/uploads/image/inside-image2.png'
+import image3 from '../../../public/uploads/image/inside-image3.png'
+import image4 from '../../../public/uploads/image/inside-image4.png'
+import image5 from '../../../public/uploads/image/inside-image5.png'
+import image6 from '../../../public/uploads/image/inside-image6.png'
 import Image from 'next/image'
 
 
