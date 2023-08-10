@@ -27,11 +27,11 @@ export default function Home() {
   return (
     <div className={styles['tudo']}>
       <Navbar />
-      <div className={styles['container']}>
+      {/* <div className={styles['container']}>
         <Head><title>Exemplo Next + Netlify</title></Head>
         <h1 className={styles['header']}>Exemplo</h1>
         <p className={styles['subtitle']}>Abra /admin para acessar configurações netlify</p>
-      </div>
+      </div> */}
       <ImagemComBotao {...resultados} />
       <ServicesHome />
       <ImagemComBotao {...membros} />        

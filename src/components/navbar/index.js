@@ -7,22 +7,22 @@ export default () => (
             <ul className={styles.navList}>
                 <li className={styles.navItem}>
                     <Link href="/">
-                        <h1>Home</h1>
+                        <h4>Home</h4>
                     </Link>
                 </li>
                 <li>
                     <Link href="/quemSomos">
-                        <h1>Quem Somos</h1>
+                        <h4>Quem Somos</h4>
                     </Link>
                 </li>
                 <li>
                     <Link href="/servicos">
-                        <h1>Serviços</h1>
+                        <h4>Serviços</h4>
                     </Link>
                 </li>
                 <li>
                     <Link href="/blog">
-                        <h1>Blog</h1>
+                        <h4>Blog</h4>
                     </Link>
                 </li>
             </ul>
