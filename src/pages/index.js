@@ -1,11 +1,10 @@
 import Head from 'next/head'
 import styles from '../styles/home.module.css'
 import Navbar from '../components/navbar'
-import Footer from '../components/footer/footer'
+import Footer from '../components/footer'
 import ImagemComBotao from '../components/imagemComBotao'
 import imagemResultados from '../images/imagemResultados.png'
 import imagemMembros from '../images/imagemMembros.png'
-import ServicesHome from '@/components/servicesHome/servicesHome'
 
 export default function Home() {
   const resultados = {
@@ -28,15 +27,13 @@ export default function Home() {
     <>
       <div className={styles['tudo']}>
         <Navbar />
-        
         <div className={styles['container']}>
           <Head><title>Exemplo Next + Netlify</title></Head>
           <h1 className={styles['header']}>Exemplo</h1>
           <p className={styles['subtitle']}>Abra /admin para acessar configurações netlify</p>
         </div>
         <ImagemComBotao {...resultados} />
-        <ServicesHome/>
-        <ImagemComBotao {...membros} />
+        <ImagemComBotao {...membros} />        
         <Footer />
       </div>
     </>
