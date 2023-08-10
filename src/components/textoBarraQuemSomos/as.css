@@ -1,0 +1,84 @@
+
+
+.toptext{
+
+    display: flex;
+    width: 1247px;
+    height: 692px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .bottomtext{
+    margin-top: 86px;
+    margin-left: 1000px;
+      height: 285px;
+      width: 721px;
+      text-align: center;
+      align-items: center;
+      display: flex;
+      border-left: solid 15px #F2C12E;
+      padding-left: 100px; 
+      line-height: 50px;
+  }
+  
+  .text-content{
+    color: #ffff;
+    font-size: 22px;
+    font-weight: '400';
+    display: flex;
+  }
+  
+  .tudo{
+    background-color: #262626;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+    height: 100vh;
+  }
+  
+  .header {
+    font-size: 3rem;
+  }
+  
+  .subtitle {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+  
+  .exemplo-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: start;
+    margin: auto;
+    width: max-content;
+  }
+  
+  .exemplo-list a {
+    color: rgb(4, 165, 165);
+    text-decoration: underline;
+  }
+  
+  .card{
+    height: 200px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+    margin: 10px;
+  }
+  
+  .link, .link *{
+    text-decoration: none !important;
+    color: white;
+    font-size: 1.5rem;
+    transition: all .3s ease-in-out;
+  }
+  
+  .link:hover{
+    transform: scale(1.1);
+  }
