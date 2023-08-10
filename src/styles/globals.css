@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,300;0,400;0,600;0,700;1,100;1,300;1,400&display=swap');
 
 
+:root{
+  width: 100%;
+}
+
 html {
   background-color: #262626;
 }
@@ -32,14 +36,13 @@ a {
 
 p {
   background: none;
-  width: 100%;
 }
 
 
-.content {
+/* .content {
   max-width: 960px;
   margin: 0 auto;
-}
+} */
 
 
 nav {

@@ -6,13 +6,13 @@ import { handleJSONfile } from '@/utils/functions/jsonHandler'
 
 export default function Membros({ content }) {
     return (
-        <div className={styles['container']}>
-          <div className={styles['examples-container']}>
-            <img className={styles['img']} src={`${content.imagem}`}></img>
-            <div>{content.texto}</div>
-            <div className={styles['markdown']}></div>
-          </div>
+      <div className={styles['container']}>
+        <div className={styles['examples-container']}>
+          <img className={styles['img']} src={`${content.imagem}`}></img>
+          <div>{content.texto}</div>
+          <div className={styles['markdown']}></div>
         </div>
+      </div>
     )
 }
 

@@ -26,19 +26,22 @@ function eachService(top_text, image_path) {
 function servicesHome() {
     
    return(
-        <div className={styles['container']}>
-            <h1 className={styles['title-text']}>NOSSOS SERVIÇOS</h1>
-            <div className={styles['upper-part']}>
-                {eachService("MODELAGEM DE NEGÓCIOS", image1)}
-                {eachService("VIABILIDADE ECONÔMICA", image2)}
-                {eachService("ANÁLISE DA SAÚDE FINANCEIRA", image3)}
+        <>
+            <div className={styles['container']}>
+                <h1 className={styles['title-text']}>NOSSOS SERVIÇOS</h1>
+                <div className={styles['upper-part']}>
+                    {eachService("MODELAGEM DE NEGÓCIOS", image1)}
+                    {eachService("VIABILIDADE ECONÔMICA", image2)}
+                    {eachService("ANÁLISE DA SAÚDE FINANCEIRA", image3)}
+                </div>
+                <div className={styles['lower-part']}>              
+                    {eachService("PLANEJAMENTO ESTRATÉGICO", image4)}
+                    {eachService("CAPTAÇÃO DE CLENTES", image5)}
+                    {eachService("GESTÃO DE PESSOAS", image6)}
+                </div>
             </div>
-            <div className={styles['lower-part']}>              
-                {eachService("PLANEJAMENTO ESTRATÉGICO", image4)}
-                {eachService("CAPTAÇÃO DE CLENTES", image5)}
-                {eachService("GESTÃO DE PESSOAS", image6)}
-            </div>
-        </div>
+        </>
+        
     )
 }
 

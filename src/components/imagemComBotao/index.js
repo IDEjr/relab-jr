@@ -4,7 +4,7 @@ import styles from './imagemComBotao.module.css'
 
 export default function imagemComBotao({ imagem, titulo, texto, textoBotao, link }) {
   return (
-    <>        
+    <>
       <div className={styles['container']}>
       <Image
       src={imagem}
