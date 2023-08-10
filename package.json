@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@netlify/plugin-nextjs": "^4.36.1",
+    "@next/font": "^13.4.13",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
     "next": "13.3.4",
