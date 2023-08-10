@@ -17,7 +17,7 @@ export default function Membros({ content }) {
 }
 
 export async function getStaticProps({params : {slug} }){
-  const caminho = "membros";
+  const caminho = 'membros';
 
   const content = handleJSONfile(`./content/${caminho}/${slug}.json`);
   return {
@@ -27,7 +27,7 @@ export async function getStaticProps({params : {slug} }){
 
 export async function getStaticPaths() {
   const raiz = process.env.PWD || process.env.INIT_CWD;
-  const caminho = "membros";
+  const caminho = 'membros';
 
   const filesInProjects = fs.readdirSync(raiz + `/content/${caminho}`)
 

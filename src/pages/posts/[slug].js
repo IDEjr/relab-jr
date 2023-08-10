@@ -5,19 +5,19 @@ import styles from './slug.module.css'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
 
 export default function Posts({ content }) {
-    return (
-        <div className={styles['container']}>
-          <div className={styles['examples-container']}>
-            <img className={styles['img']} src={`${content.imagem}`}></img>
-            <div>{content.texto}</div>
-            <div className={styles['markdown']}></div>
-          </div>
-        </div>
-    )
+  return (
+    <div className={styles['container']}>
+      <div className={styles['examples-container']}>
+        <img className={styles['img']} src={`${content.imagem}`}></img>
+        <div>{content.texto}</div>
+        <div className={styles['markdown']}></div>
+      </div>
+    </div>
+  )
 }
 
 export async function getStaticProps({params : {slug} }){
-  const caminho = "posts";
+  const caminho = 'posts';
 
   const content = handleJSONfile(`./content/${caminho}/${slug}.json`);
   return {
@@ -27,7 +27,7 @@ export async function getStaticProps({params : {slug} }){
 
 export async function getStaticPaths() {
   const raiz = process.env.PWD || process.env.INIT_CWD;
-  const caminho = "posts";
+  const caminho = 'posts';
 
   const filesInProjects = fs.readdirSync(raiz + `/content/${caminho}`)
 
