@@ -1,10 +1,11 @@
 import Head from 'next/head'
 import styles from '../styles/home.module.css'
 import Navbar from '../components/navbar'
-import Footer from '../components/footer'
+import Footer from '../components/footer/footer'
 import ImagemComBotao from '../components/imagemComBotao'
 import imagemResultados from '../images/imagemResultados.png'
 import imagemMembros from '../images/imagemMembros.png'
+import ServicesHome from '@/components/servicesHome/servicesHome'
 
 export default function Home() {
   const resultados = {
@@ -34,6 +35,7 @@ export default function Home() {
           <p className={styles['subtitle']}>Abra /admin para acessar configurações netlify</p>
         </div>
         <ImagemComBotao {...resultados} />
+        <ServicesHome/>
         <ImagemComBotao {...membros} />
         <Footer />
       </div>
