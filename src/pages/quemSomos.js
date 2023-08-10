@@ -5,7 +5,6 @@ import Footer from '../components/footer'
 import styles from '../styles/quemSomos.module.css'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 
-import Image from 'next/image'
 export default function quemSomos({ membros }) {
   return (
     <>
