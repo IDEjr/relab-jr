@@ -36,7 +36,6 @@ export default function quemSomos({membros}) {
   );
 }
 
-
 export async function getStaticProps(){
   const membros = handleJSONfiles("./content/membros");
   return {
