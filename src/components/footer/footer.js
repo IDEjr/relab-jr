@@ -41,7 +41,7 @@ function Footer() {
             
             <div className={styles['bottom-part']}>
                 <div className={styles['membership-icons']}>
-                    <a className={styles['lab-icon']} href='https://unisinos.br/lab/' target='_blank'>
+                    <a className={styles['lab-icon']} href='https://unisinos.br/lab/programas/relab' target='_blank'>
 
                     </a>
                     <a className={styles['jesuitas-icon']} href='https://jesuitasbrasil.org.br' target='_blank'>
