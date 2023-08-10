@@ -5,7 +5,6 @@ import Footer from '../components/footer'
 import styles from '../styles/quemSomos.module.css'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import Image from 'next/image'
-
 export default function quemSomos({ membros }) {
   return (
     <>
@@ -16,7 +15,7 @@ export default function quemSomos({ membros }) {
     </h2>
       <div className={styles['toptext']}>
         
-        <p className={styles['text-content']}>
+        <p className={styles['text-content']} >
             Texto explicando um pouco da história da Relab jr e seus valores. 
             Contando o como começou, com que intuito, quais suas maiores causas.
         </p>  
