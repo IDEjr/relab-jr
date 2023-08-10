@@ -6,6 +6,8 @@ import ImagemComBotao from '../components/imagemComBotao'
 import ServicesHome from '../components/servicesHome'
 import imagemResultados from '../../public/uploads/image/imagemResultados.png'
 import imagemMembros from '../../public/uploads/image/imagemMembros.png'
+import Inicio from '@/components/inicio'
+
 
 export default function Home() {
   const resultados = {
@@ -23,10 +25,14 @@ export default function Home() {
     textoBotao: 'Sejo membro',
     link: 'quemSomos'
   };
+  console.log(membros);
+  const path = '/../public/images/padrao.jpg';
+
 
   return (
     <div className={styles['tudo']}>
       <Navbar />
+      <Inicio title = {"GESTÃO É A NOSSA CAUSA"} image= {path}/>
       {/* <div className={styles['container']}>
         <Head><title>Exemplo Next + Netlify</title></Head>
         <h1 className={styles['header']}>Exemplo</h1>
@@ -36,6 +42,11 @@ export default function Home() {
       <ServicesHome />
       <ImagemComBotao {...membros} />        
       <Footer />
+
+
+
     </div>
+
+
   )
 }

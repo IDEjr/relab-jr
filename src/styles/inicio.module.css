@@ -1,0 +1,23 @@
+.container {
+    position: relative; /* Define o posicionamento relativo para o container */
+    display: inline-block; /* Ou display: block, dependendo do layout desejado */
+  }
+  
+  .initImg {
+    max-width: 100%;
+    height: auto;
+    max-height: 850px;
+    filter: brightness(40%); 
+  }
+  
+  .title {
+    position: absolute; /* Define o posicionamento absoluto para o texto */
+    top: 50%; /* Move o texto 50% para baixo em relação ao container */
+    left: 5%; /* Move o texto 50% para a direita em relação ao container */
+    font-size: 5em;
+    color: white; /* Define a cor do texto */
+    padding: 10px; /* Adiciona algum espaço interno ao redor do texto */
+    max-width: 600px; /* Defina a largura máxima desejada */
+    word-wrap: break-word; /* Garante que as palavras se quebrem para a próxima linha */
+  }
+  
