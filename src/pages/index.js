@@ -3,6 +3,7 @@ import styles from '../styles/home.module.css'
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import ImagemComBotao from '../components/imagemComBotao'
+import ServicesHome from '../components/servicesHome'
 import imagemResultados from '../images/imagemResultados.png'
 import imagemMembros from '../images/imagemMembros.png'
 
@@ -33,6 +34,7 @@ export default function Home() {
           <p className={styles['subtitle']}>Abra /admin para acessar configurações netlify</p>
         </div>
         <ImagemComBotao {...resultados} />
+        <ServicesHome />
         <ImagemComBotao {...membros} />        
         <Footer />
       </div>
