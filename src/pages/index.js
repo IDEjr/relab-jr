@@ -7,6 +7,7 @@ import ServicesHome from '../components/servicesHome'
 import Inicio from '../components/inicio'
 import imagemResultados from '../../public/uploads/image/imagemComBotao/imagemResultados.png'
 import imagemMembros from '../../public/uploads/image/imagemComBotao/imagemMembros.png'
+import imagemHome from '../../public/uploads/image/inicio/imagemHome.jpg'
 
 
 export default function Home() {
@@ -26,7 +27,7 @@ export default function Home() {
     link: 'quemSomos'
   };
 
-  const path = '/../public/uploads/image/inicio/padrao.jpg'
+  const path = imagemHome
 
   return (
     <div className={styles['tudo']}>

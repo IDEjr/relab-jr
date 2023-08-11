@@ -8,7 +8,6 @@ import { handleJSONfiles } from '../utils/functions/jsonHandler'
 
 export default function blog({posts}) {
   console.log(posts);
-  const path = '/../public/images/padrao2.jpg';
   return (
     <>
       <Navbar />
