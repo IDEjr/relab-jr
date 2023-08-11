@@ -12,7 +12,7 @@ import imagemMembros from '../../public/uploads/image/imagemComBotao/imagemMembr
 export default function Home() {
   const resultados = {
     imagem: imagemResultados,
-    titulo: 'MELHORE TESTE SEUS RESULTADOS',
+    titulo: 'MELHORE SEUS RESULTADOS',
     texto: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget libero viverra velit pellentesque hendrerit. Donec interdum dolor nisl, at rhoncus dolor consectetur euismod. Aliquam scelerisque finibus egestas.',
     textoBotao: 'Entre em contato',
     link: 'servicos'
