@@ -1,11 +1,11 @@
 import styles from './servicesHome.module.css'
-import yellowFrame from '../../../public/uploads/image/yellowFrame.png'
-import image1 from '../../../public/uploads//image/inside-image1.png'
-import image2 from '../../../public/uploads/image/inside-image2.png'
-import image3 from '../../../public/uploads/image/inside-image3.png'
-import image4 from '../../../public/uploads/image/inside-image4.png'
-import image5 from '../../../public/uploads/image/inside-image5.png'
-import image6 from '../../../public/uploads/image/inside-image6.png'
+import yellowFrame from '../../../public/uploads/image/servicosHome/yellowFrame.png'
+import image1 from '../../../public/uploads//image/servicosHome/inside-image1.png'
+import image2 from '../../../public/uploads/image/servicosHome/inside-image2.png'
+import image3 from '../../../public/uploads/image/servicosHome/inside-image3.png'
+import image4 from '../../../public/uploads/image/servicosHome/inside-image4.png'
+import image5 from '../../../public/uploads/image/servicosHome/inside-image5.png'
+import image6 from '../../../public/uploads/image/servicosHome/inside-image6.png'
 import Image from 'next/image'
 
 
@@ -23,8 +23,7 @@ function eachService(top_text, image_path) {
 }
 
 
-function servicesHome() {
-    
+export default function servicesHome() {
    return(
         <>
             <div className={styles['container']}>
@@ -41,10 +40,5 @@ function servicesHome() {
                 </div>
             </div>
         </>
-        
     )
 }
-
-
-
-export default servicesHome;

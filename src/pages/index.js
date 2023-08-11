@@ -4,9 +4,9 @@ import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import ImagemComBotao from '../components/imagemComBotao'
 import ServicesHome from '../components/servicesHome'
-import imagemResultados from '../../public/uploads/image/imagemResultados.png'
-import imagemMembros from '../../public/uploads/image/imagemMembros.png'
-import Inicio from '@/components/inicio'
+import Inicio from '../components/inicio'
+import imagemResultados from '../../public/uploads/image/imagemComBotao/imagemResultados.png'
+import imagemMembros from '../../public/uploads/image/imagemComBotao/imagemMembros.png'
 
 
 export default function Home() {
@@ -25,9 +25,8 @@ export default function Home() {
     textoBotao: 'Sejo membro',
     link: 'quemSomos'
   };
-  console.log(membros);
-  const path = '/../public/images/padrao.jpg';
 
+  const path = '/../public/uploads/image/inicio/padrao.jpg'
 
   return (
     <div className={styles['tudo']}>
@@ -42,11 +41,6 @@ export default function Home() {
       <ServicesHome />
       <ImagemComBotao {...membros} />        
       <Footer />
-
-
-
     </div>
-
-
   )
 }

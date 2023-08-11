@@ -1,12 +1,9 @@
-
 import Link from 'next/link'
+import Image from 'next/image'
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import styles from '../styles/blog.module.css'
-import { handleJSONfiles } from '@/utils/functions/jsonHandler'
-
-import Image from 'next/image'
-import Inicio from '@/components/inicio'
+import { handleJSONfiles } from '../utils/functions/jsonHandler'
 
 
 export default function blog({posts}) {
@@ -15,8 +12,6 @@ export default function blog({posts}) {
   return (
     <>
       <Navbar />
-      <Inicio title = {"BLOG"} image= {path}/>
-
       <ul className={styles['exemplo-list']}>
         {posts && posts.map((post,i) => (
           <div>
@@ -43,8 +38,10 @@ export default function blog({posts}) {
   );
 }
 
-export async function getStaticProps(){
-  const posts = handleJSONfiles('./content/posts');
+
+export async function getStaticProps() {
+  const posts = handleJSONfiles('./content/posts')
+
   return {
     props: { posts },
   };

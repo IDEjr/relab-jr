@@ -5,21 +5,26 @@
   width: 100%;
 }
 
+
 html {
   background-color: #262626;
 }
+
 
 h1{
   font-size: 3rem;
 }
 
+
 h2{
   font-size: 2rem;
 }
 
+
 h3{
   font-size: 1.5rem;
 }
+
 
 h4{
   font-size: 1rem;
@@ -40,9 +45,6 @@ h4{
 }
 
 
-
-
-
 a {
   color: #f2c12e;
   text-decoration: none;
@@ -52,12 +54,6 @@ a {
 p {
   background: none;
 }
-
-
-/* .content {
-  max-width: 960px;
-  margin: 0 auto;
-} */
 
 
 nav {

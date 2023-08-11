@@ -1,7 +1,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import Inicio from '@/components/inicio'
+import Inicio from '../components/inicio'
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import TextoBarraQuemSomos from '../components/textoBarraQuemSomos'
@@ -16,7 +16,6 @@ export default function quemSomos({ membros }) {
       <Navbar />
       <Inicio title = {"QUEM SOMOS"} image= {path}/>
       <TextoBarraQuemSomos />
-
       <ul className={styles['exemplo-list']}>
         {membros && membros.map((membro, i) => (
           <a target="_blank" href={`${membro.linkedin}`} className={styles["link"]} key={i}>
@@ -38,8 +37,6 @@ export default function quemSomos({ membros }) {
     </>
   );
 }
-
-
 
 
 export async function getStaticProps() {
