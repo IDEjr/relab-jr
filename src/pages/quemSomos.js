@@ -11,6 +11,7 @@ import imagemInicioQuemSomos from '../../public/uploads/image/inicio/imagemInici
 
 
 export default function quemSomos({ membros }) {
+  console.log(membros);
   const path = imagemInicioQuemSomos
   return (
     <>
