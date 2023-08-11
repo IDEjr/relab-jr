@@ -4,10 +4,11 @@
     font-size: large;
     display: flex;
     align-items: center;
-    padding-left: 50px;
+    padding-left: 1vw;
     flex-direction:column;
     gap:150px;
     padding:150px;
+    max-width: 100%;
 }
 .h1 {
     font-weight: 1000;
@@ -20,6 +21,7 @@
     justify-content: center;
     gap:40px;
     width: 100%;
+    max-width: 100%;
 }
 
 .lower-part {
@@ -28,6 +30,7 @@
     justify-content: center;
     gap:40px;
     width: 100%;
+    max-width: 100%;
 }
 
 .title-text {
