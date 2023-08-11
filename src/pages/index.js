@@ -21,9 +21,9 @@ export default function Home({imagensComBotao, imagensInicio}) {
   console.log(imagensComBotao);
   
   
-  let imagemInicioHome;
+  // let imagemInicioHome;
 
-  imagemInicioHome = imagensInicio.imagem
+  // imagemInicioHome = imagensInicio.imagem
 
 
   let imagemResultados;
@@ -168,9 +168,9 @@ export default function Home({imagensComBotao, imagensInicio}) {
 export async function getStaticProps() {
 
   const imagensComBotao = handleJSONfiles("./content/imagensComBotao");
-  const imagensInicio = handleJSONfiles("./content/imagensInicio");
+  // const imagensInicio = handleJSONfiles("./content/imagensInicio");, imagensInicio 
   return {
-    props: { imagensComBotao, imagensInicio },
+    props: { imagensComBotao},
   };
 }
 
