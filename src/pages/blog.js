@@ -18,8 +18,8 @@ export default function blog({posts}) {
               <div>
                 <Image
                   src={`${post.imagem}`}
-                  width={1500}
-                  height={500}
+                  width={1920}
+                  height={1080}
                   alt='Post'
                 />
               </div>
