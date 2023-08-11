@@ -10,7 +10,7 @@ import Inicio from '../components/inicio'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 // import imagemResultados from '../../public/uploads/image/imagemComBotao/imagemResultados.png'
 // import imagemMembros from '../../public/uploads/image/imagemComBotao/imagemMembros.png'
-// import imagemInicioHome from '../../public/uploads/image/inicio/imagemInicioHome.jpg'
+import imagemInicioHome from '../../public/uploads/image/inicio/imagemInicioHome.jpg'
 
 
 
