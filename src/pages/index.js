@@ -32,11 +32,6 @@ export default function Home() {
     <div className={styles['tudo']}>
       <Navbar />
       <Inicio title = {"GESTÃO É A NOSSA CAUSA"} image= {path}/>
-      {/* <div className={styles['container']}>
-        <Head><title>Exemplo Next + Netlify</title></Head>
-        <h1 className={styles['header']}>Exemplo</h1>
-        <p className={styles['subtitle']}>Abra /admin para acessar configurações netlify</p>
-      </div> */}
       <ImagemComBotao {...resultados} />
       <ServicesHome />
       <ImagemComBotao {...membros} />        
