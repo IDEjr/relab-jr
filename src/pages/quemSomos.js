@@ -7,11 +7,11 @@ import Footer from '../components/footer'
 import TextoBarraQuemSomos from '../components/textoBarraQuemSomos'
 import styles from '../styles/quemSomos.module.css'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
-import imagemQuemSomos from '../../public/uploads/image/inicio/imagemQuemSomos.jpg'
+import imagemInicioQuemSomos from '../../public/uploads/image/inicio/imagemInicioQuemSomos.jpg'
 
 
 export default function quemSomos({ membros }) {
-  const path = imagemQuemSomos
+  const path = imagemInicioQuemSomos
   return (
     <>
       <Navbar />

@@ -2,10 +2,10 @@ import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import Inicio from '../components/inicio'
 import styles from '../styles/servicos.module.css'
-import imagemServicos from '../../public/uploads/image/inicio/imagemServicos.jpg'
+import imagemInicioServicos from '../../public/uploads/image/inicio/imagemInicioServicos.jpg'
 
 export default function servicos() {
-  const path = imagemServicos
+  const path = imagemInicioServicos
 
   return (
     <>
