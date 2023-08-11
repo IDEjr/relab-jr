@@ -1,4 +1,3 @@
-
 import Link from 'next/link'
 import Image from 'next/image'
 import Inicio from '../components/inicio'
@@ -10,8 +9,20 @@ import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import imagemInicioQuemSomos from '../../public/uploads/image/inicio/imagemInicioQuemSomos.jpg'
 
 
-export default function quemSomos({ membros }) {
+export default function quemSomos({membros, imagensInicio}) {
   console.log(membros);
+
+  // pega imagem da home do netlify
+  let imagemInicioHome;
+  let img = [];
+
+  imagensInicio.map((imagemInicio, i) => {
+    img[i] = imagemInicio.imagem
+  });
+
+  imagemInicioHome = img[1]
+
+
   const path = imagemInicioQuemSomos
   return (
     <>
@@ -44,7 +55,8 @@ export default function quemSomos({ membros }) {
 export async function getStaticProps() {
 
   const membros = handleJSONfiles("./content/membros");
+  const imagensInicio = handleJSONfiles("./content/imagensInicio");
   return {
-    props: { membros },
+    props: { membros, imagensInicio },
   };
 }

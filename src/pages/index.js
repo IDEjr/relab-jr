@@ -10,7 +10,7 @@ import Inicio from '../components/inicio'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 // import imagemResultados from '../../public/uploads/image/imagemComBotao/imagemResultados.png'
 // import imagemMembros from '../../public/uploads/image/imagemComBotao/imagemMembros.png'
-import imagemInicioHome from '../../public/uploads/image/inicio/imagemInicioHome.jpg'
+// import imagemInicioHome from '../../public/uploads/image/inicio/imagemInicioHome.jpg'
 
 
 
@@ -19,16 +19,22 @@ import imagemInicioHome from '../../public/uploads/image/inicio/imagemInicioHome
 
 export default function Home({imagensComBotao, imagensInicio}) {
   console.log(imagensComBotao);
+  console.log(imagensInicio);
   
+  // pega imagem da home do netlify
+  let imagemInicioHome;
+  let img = [];
+
+  imagensInicio.map((imagemInicio, i) => {
+    img[i] = imagemInicio.imagem
+  });
   
-  // let imagemInicioHome;
-
-  // imagemInicioHome = imagensInicio.imagem
+  imagemInicioHome = img[0]
 
 
+  // pega imagem dos botões do netlify
   let imagemResultados;
   let imagemMembros;
-  let img = [];
 
   imagensComBotao.map((imagemComBotao, i) => {
     img[i] = imagemComBotao.imagem
@@ -69,115 +75,11 @@ export default function Home({imagensComBotao, imagensInicio}) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// export default function Home({imagensComBotao}) {
-//   const resultados = {
-//     imagem: imagemResultados,
-//     titulo: 'MELHORE SEUS RESULTADOS',
-//     texto: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget libero viverra velit pellentesque hendrerit. Donec interdum dolor nisl, at rhoncus dolor consectetur euismod. Aliquam scelerisque finibus egestas.',
-//     textoBotao: 'Entre em contato',
-//     link: 'servicos'
-//   };
-
-//   const membros = {
-//     imagem: imagemMembros,
-//     titulo: 'MEMBROS',
-//     texto: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget libero viverra velit pellentesque hendrerit. Donec interdum dolor nisl, at rhoncus dolor consectetur euismod. Aliquam scelerisque finibus egestas.',
-//     textoBotao: 'Sejo membro',
-//     link: 'quemSomos'
-//   };
-
-//   const path = imagemInicioHome
-
-//   return (
-//     <div className={styles['tudo']}>
-//       <Navbar />
-//       <Inicio title = {"GESTÃO É A NOSSA CAUSA"} image= {path}/>
-//       <ImagemComBotao {...resultados} />
-//       <ServicesHome />
-//       <ImagemComBotao {...membros} />        
-//       <Footer />
-//     </div>
-//   )
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// {imagensComBotao && imagensComBotao.map((imagemComBotao, i) => (
-//   <a target="_blank" href={`${imagemComBotao.linkedin}`} className={styles["link"]} key={i}>
-//     <div>
-//       <Image
-//         src={`${imagemComBotao.imagem}`}
-//         width={400}
-//         height={400}
-//         alt="imagemComBotao "
-//       />
-//     </div>
-//     <div className={styles["card"]}>
-//       <p>{imagemComBotao.conteudo}</p>
-//     </div>
-//   </a>
-// )
-
-
-
-// export async function getStaticProps() {
-
-//   const imagensComBotao = handleJSONfiles("./content/imagensComBotao");
-//   return {
-//     props: { imagensComBotao },
-//   };
-// }
-
 export async function getStaticProps() {
 
   const imagensComBotao = handleJSONfiles("./content/imagensComBotao");
-  // const imagensInicio = handleJSONfiles("./content/imagensInicio");, imagensInicio 
+  const imagensInicio = handleJSONfiles("./content/imagensInicio");
   return {
-    props: { imagensComBotao},
+    props: { imagensComBotao, imagensInicio }
   };
 }
-
-// export async function getStaticProps() {
-
-//   const imagensInicio = handleJSONfiles("./content/imagensInicio");
-//   return {
-//     props: { imagensInicio },
-//   };
-// }
