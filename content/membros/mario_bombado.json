@@ -1,10 +1,6 @@
 {
-  "posicao": [
-    "trainee"
-  ],
+  "posicao": "trainee",
   "nome": "Mario Bombado",
   "imagem": "/uploads/download.jpeg",
-  "texto": "lightweight!",
-  "linkedin": "https://www.linkedin.com/in/williamhgates/",
-  "conteudo": "lightweight!!!"
+  "linkedin": "https://www.linkedin.com/in/williamhgates/"
 }
