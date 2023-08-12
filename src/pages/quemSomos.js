@@ -31,19 +31,20 @@ export default function quemSomos({membros, imagensInicio}) {
       <TextoBarraQuemSomos />
       <ul className={styles['exemplo-list']}>
         {membros && membros.map((membro, i) => (
-          <a target="_blank" href={`${membro.linkedin}`} className={styles["link"]} key={i}>
+          <Link target="_blank" href={`${membro.linkedin}`} className={styles["link"]} key={i}>
+            <div className={styles["card"]}>
+              <p>{membro.nome}</p>
+              <p>{membro.posicao}</p>
+            </div>
             <div>
               <Image
                 src={`${membro.imagem}`}
                 width={400}
-                height={400}
+                height={500}
                 alt="Membro "
               />
             </div>
-            <div className={styles["card"]}>
-              <p>{membro.conteudo}</p>
-            </div>
-          </a>
+          </Link>
         ))}
       </ul>
       <Footer />
