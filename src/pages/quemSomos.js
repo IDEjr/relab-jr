@@ -40,7 +40,7 @@ export default function quemSomos({membros, imagensInicio}) {
               <Image
                 src={`${membro.imagem}`}
                 width={400}
-                height={400}
+                height={500}
                 alt="Membro"
               />
             </div>
