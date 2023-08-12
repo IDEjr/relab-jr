@@ -71,6 +71,7 @@
 
 .card{
   height: 200px;
+  width: 400px;
   padding: 20px;
   display: flex;
   justify-content: center;
