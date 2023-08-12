@@ -58,18 +58,16 @@
 
 
 .exemplo-list {
-  /* display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  /*flex-direction: column;
   text-align: start;
   margin: auto;
   width: max-content; */
 
   display: flex;
-  flex-wrap: wrap; /* Allow list items to wrap to the next row */
-  justify-content: center; /* Center list items horizontally */
+  flex-wrap: wrap;
+  justify-content: center;
   margin: auto;
-  max-width: 1200px; /* Added max-width for better control */
+  max-width: 1200px;
   padding: 0;
   list-style: none;
 }
@@ -83,7 +81,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 400px; /* Set a fixed width for each item */
+  width: 400px;
   margin: 10px;
   transition: transform 0.3s ease-in-out;
 }
@@ -91,25 +89,20 @@
 
 .card{
 
-  height: auto; /* Adjusted height to accommodate content */
-  width: 100%; /* Make the card width 100% */
+  height: auto;
+  width: 100%;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: blueviolet;
-  margin-top: 10px; /* Removed margin from the sides */
+  margin-top: 10px;
 
 
-  /* height: 200px;
-  width: 400px;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: blueviolet;
-  margin: 10px; */
+  /* height: 200px; */
+  /* width: 400px; */
+  /* margin: 10px; */
 }
 
 .card p {
@@ -117,6 +110,8 @@
 }
 
 .link, .link *{
+  width: 100%;
+  text-align: center;
   text-decoration: none !important;
   color: white;
   font-size: 1.5rem;
