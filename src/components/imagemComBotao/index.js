@@ -11,8 +11,8 @@ export default function imagemComBotao({ imagem, titulo, texto, textoBotao, link
       // fill
       style={{objectFit: 'cover'}}
       // style={{background-size: 'cover'}}
-      // width={100%}
-      // height={100%}
+      width={1920}
+      height={1080}
       alt='Imagem Resultados'
       className={styles['background']}/>
       {/* <div className={styles['box']}> */}

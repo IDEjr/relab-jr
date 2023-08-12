@@ -1,3 +1,8 @@
+.tudo{
+  width: 100%;
+}
+
+
 .toptext{
   display: flex;
   width: 1247px;
@@ -6,7 +11,6 @@
   justify-content: center;
   flex-shrink: 0;
 }
-
 
 .bottomtext{
   margin-top: 86px;
@@ -54,33 +58,60 @@
 
 
 .exemplo-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  /*flex-direction: column;
   text-align: start;
   margin: auto;
-  width: max-content;
+  width: max-content; */
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  max-width: 1200px;
+  padding: 0;
+  list-style: none;
 }
 
 
 .exemplo-list a {
   color: rgb(4, 165, 165);
   text-decoration: underline;
+
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  margin: 10px;
+  transition: transform 0.3s ease-in-out;
 }
 
 
 .card{
-  height: 200px;
+
+  height: auto;
+  width: 100%;
   padding: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: blueviolet;
-  margin: 10px;
+  margin-top: 10px;
+
+
+  /* height: 200px; */
+  /* width: 400px; */
+  /* margin: 10px; */
 }
 
+.card p {
+  margin-top: 10px;
+}
 
 .link, .link *{
+  width: 100%;
+  text-align: center;
   text-decoration: none !important;
   color: white;
   font-size: 1.5rem;
