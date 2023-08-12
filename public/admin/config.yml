@@ -26,8 +26,8 @@ collections:
     fields: # Campos disponíveis no Netlify
       - {label: "Nome e sobrenome", name: "nome", widget: "string"}
       - {label: "Imagem", name: "imagem", widget: "image"}
-      - {label: "Posição", name: "posicao", widget: "select",  options: ["Presidência", "Vice-Presidência", "Projetos", "Administrativo Financeiro", "Comercial", "Gestão de Pessoas", "Marketing"], default: ["Trainee"]}
-      - {label: "Linkedin", name: "linkedin", widget: "string"}
+      - {label: "Posição", name: "posicao", widget: "select",  options: ["Presidência", "Vice-Presidência", "Projetos", "Administrativo Financeiro", "Comercial", "Gestão de Pessoas", "Marketing", "Trainee"], default: ["Trainee"]}
+      - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
 
   - name: "posts" # Nome usado da rota
     extension: "json"
@@ -38,12 +38,12 @@ collections:
     slug: "{{fields.titulo}}" # Nome que vai ficar no URL da página
     fields: # Campos disponíveis no Netlify
       - {label: "Visível", name: "bool", widget: "boolean", default: true}
-      - {label: "Assunto", name: "assunto", widget: "select", options: ["outros","economia","social"], default: ["outros"]}
+      - {label: "Assunto", name: "assunto", widget: "select", options: ["outros", "economia", "social"], default: ["outros"]}
+      - {label: "Autor(a)", name: "autor", widget: "string"}
+      - {label: "Data", name: "data", widget: "date", date_format: "DD.MM.YYYY"}
       - {label: "Título", name: "titulo", widget: "string"}
-      - {label: "Datas com horário", name: "data", widget: "date", date_format: "DD.MM.YYYY"}
-      - {label: "Imagem", name: "imagem", widget: "image"}
-      - {label: "Localização", name: "localizacao", widget: "map"}
       - {label: "Conteúdo", name: "conteudo", widget: "markdown"}
+      - {label: "Imagem", name: "imagem", widget: "image", required: false}
 
   - name: "imagensComBotao" # Nome usado da rota
     extension: "json"
