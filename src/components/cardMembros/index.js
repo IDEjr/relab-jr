@@ -14,7 +14,6 @@ export default function cardMembros({ nome, foto, posicao, linkedin }) {
             src={foto}
             // fill
             style={{objectFit: 'cover'}}
-            // style={{background-size: 'cover'}}
             width={500}
             height={300}
             alt='Foto Membro'

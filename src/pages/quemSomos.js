@@ -52,6 +52,28 @@ export default function quemSomos({membros, imagensInicio}) {
 }
 
 
+
+{/* <ul className={styles['exemplo-list']}>
+  {membros && membros.map((membro, i) => (
+    <a target="_blank" href={`${membro.linkedin}`} className={styles["link"]} key={i}>
+      <div>
+        <Image
+          src={`${membro.imagem}`}
+          width={400}
+          height={400}
+          alt="Membro "
+        />
+      </div>
+      <div className={styles["card"]}>
+        <p>{membro.conteudo}</p>
+      </div>
+    </a>
+  ))}
+</ul> */}
+
+
+
+
 export async function getStaticProps() {
 
   const membros = handleJSONfiles("./content/membros");
