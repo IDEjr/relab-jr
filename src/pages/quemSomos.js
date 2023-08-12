@@ -24,7 +24,7 @@ export default function quemSomos({ membros }) {
                 src={`${membro.imagem}`}
                 width={400}
                 height={400}
-                alt="Membro "
+                alt="Membro"
               />
             </div>
             <div className={styles["card"]}>
