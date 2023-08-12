@@ -1,3 +1,8 @@
+.tudo{
+  width: 100%;
+}
+
+
 .toptext{
   display: flex;
   width: 1247px;
@@ -6,7 +11,6 @@
   justify-content: center;
   flex-shrink: 0;
 }
-
 
 .bottomtext{
   margin-top: 86px;
@@ -54,32 +58,63 @@
 
 
 .exemplo-list {
-  display: flex;
-  flex-direction: row;
+  /* display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   text-align: start;
   margin: auto;
-  width: max-content;
+  width: max-content; */
+
+  display: flex;
+  flex-wrap: wrap; /* Allow list items to wrap to the next row */
+  justify-content: center; /* Center list items horizontally */
+  margin: auto;
+  max-width: 1200px; /* Added max-width for better control */
+  padding: 0;
+  list-style: none;
 }
 
 
 .exemplo-list a {
   color: rgb(4, 165, 165);
   text-decoration: underline;
+
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px; /* Set a fixed width for each item */
+  margin: 10px;
+  transition: transform 0.3s ease-in-out;
 }
 
 
 .card{
-  height: 200px;
+
+  height: auto; /* Adjusted height to accommodate content */
+  width: 100%; /* Make the card width 100% */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: blueviolet;
+  margin-top: 10px; /* Removed margin from the sides */
+
+
+  /* height: 200px;
   width: 400px;
   padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: blueviolet;
-  margin: 10px;
+  margin: 10px; */
 }
 
+.card p {
+  margin-top: 10px;
+}
 
 .link, .link *{
   text-decoration: none !important;
