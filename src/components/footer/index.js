@@ -7,7 +7,8 @@ const handleMove = () => {
 
 
 
-function Footer() {
+
+export default function Footer() {
     return (
         <>
             <div className={styles['footer']}>
@@ -57,6 +58,5 @@ function Footer() {
                 </div>
             </div>
         </>
-    )
+    );
 }
-export default Footer;
