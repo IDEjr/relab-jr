@@ -31,7 +31,6 @@ export default function servicos({imagensInicio}) {
 
 
 export async function getStaticProps() {
-
   const imagensInicio = handleJSONfiles("./content/imagensInicio");
   return {
     props: { imagensInicio }
