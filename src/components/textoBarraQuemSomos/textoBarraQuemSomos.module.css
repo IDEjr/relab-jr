@@ -16,24 +16,26 @@ height: 100rem;
 width: 100%;
 display: flex;
 flex-direction: column;
-justify-content: space-evenly;
-
-
-
+margin-top: 5%;
+gap: 5%;
 }
-.main{
+
+.textImage{
   display: flex;
   align-items:center ;
-  justify-content: center;
+  justify-content: flex-end;
   padding: 3rem;
-  
+  width: 90%;
     
 }
 .lampada{
-  margin-right: 20rem;
-  margin-left: 20rem;
+ 
+  margin-right: 15%;
   height: 225px;
-  width: 224px;
+  width: 15%;
+}
+.retangulo{
+  display: none;
 }
 
 .bottomtext{
@@ -53,25 +55,25 @@ justify-content: space-evenly;
   color: #ffff;
   font-size: 22px;
   font-weight: '400';
-  display: flex;
 }
 
 .imagebox{
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 
 }
 
 .ImageBoxContent{
-  width: 960px;
-  height: 540px;
+  width: 50%;
+  height: 30rem;
 
 }
 
 .hiddenImage{
-  width: 960px;
-  height: 540px;
+  width: 50%;
+  height: 30rem;
 
 }
 
@@ -102,7 +104,6 @@ justify-content: space-evenly;
   .bottomtext {
 
     height: 285px;  
-    width: 39rem;
     border-left: solid 1rem #F2C12E;
     padding-left: 3.5rem; 
   }
@@ -118,6 +119,7 @@ justify-content: space-evenly;
   }
   .lampada{
     margin-left: 6rem;
+    
   }
 
   @media only screen and (max-width: 1279px) {
@@ -142,6 +144,7 @@ justify-content: space-evenly;
       margin-right: 0rem;
       
     }
+    
   }  
    
 
@@ -165,10 +168,15 @@ justify-content: space-evenly;
     margin-left: 2rem;
   }
   .lampada{
-    margin-left: 4rem;
     width: 200px;
     height: 199px;
-    margin-right: 15rem;
+    margin-right: 9%;
+  }
+  .ImageBoxContent{
+    height: 22rem;
+  }
+  .hiddenImage{
+    height: 22rem;
   }
 }  
  
@@ -176,6 +184,8 @@ justify-content: space-evenly;
 @media only screen and (max-width: 1024px) {
   .bottomtext {
     padding-left: 2.5rem; 
+    line-height: 40px;
+    height: 22vh;
   }
 
   .text-content{
@@ -188,34 +198,45 @@ justify-content: space-evenly;
     margin-left: 1.5rem;
   }
   .lampada{
-    margin-left: 4rem;
+    
     width: 150px;
     height: 149px;
-    margin-right: 14rem;
+    margin-right: 5%;
+  }
+  .ImageBoxContent{
+    height: 20rem;
+  }
+  .hiddenImage{
+    height: 20rem;
   }
 }  
 
 
 @media only screen and (max-width: 800px) {
   .bottomtext {
-    border: solid 1px beige;
-    width: 75%;
+    padding-left: 0px;
+    margin-left: 0%;
+    line-height: 150%;
+    width: 70%;
+    height: 15vh; 
+    border: none;
+
   }
   .hiddenImage{
     display: none;
   }
 
-  .text-content{
-    font-size: 15px;
-  }
+ 
   .toptext{
+    
     border: solid 1px beige;
-    
-    width: 75%;
-    height: 230px;
-    padding-left: 2.5rem;
-    
-    
+    width: 70%;
+    height: 15vh;  
+    padding-left: 0px;
+    margin-left: 0%;
+    line-height: 150%;
+  
+
   }
   .imagebox{
     width: 100%;
@@ -223,28 +244,40 @@ justify-content: space-evenly;
 
   
   .lampada{
-
-    width: 150px;
-    height: 149px;
-  
+    width: 25%;
+    height: 50%;
+    margin: auto;
   }
-  .main{
+  .textImage{
     flex-direction: column-reverse;
     align-items: center;
-    justify-content: center;
     width: 100%;
-    margin: none;
+    padding: 0%;
   }
   .container{
     align-items: center;
-
+    width: 100%;
+    justify-content: flex-start;
+    gap: 2%;
   }
   .ImageBoxContent{
     width: 100%;
     height: 100%;
   }
   .text-content{
+    
     font-size: 80%;
+    width: 100%;
+    height: 100%;
+        
+  }
+  .retangulo{
+    width: 50%;
+    background-color: #F2C12E;
+    height: 0.5rem;
+    align-self: baseline;
+    display: block;
+    
   }
   
 }  

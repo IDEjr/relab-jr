@@ -12,16 +12,18 @@ export default function textoBarraQuemSomos() {
         <div className={styles['container']}>  
           <div className={styles['toptext']}>
                 <p className={styles['text-content']} >
-                    Texto explicando um pouco da história da Relab jr e seus valores. 
-                    Contando o como começou, com que intuito, quais suas maiores causas.
+                A RELAB Jr. Consultoria, empresa júnior da Unisinos, teve sua fundação em setembro de 2021, e 
+                hoje é federada junto à Federação das Empresas Juniores do Rio Grande do Sul - FEJERS.
                 </p>  
             </div>
-        <div className={styles['main']}>
+        <div className={styles['retangulo']}></div>
+        
+        <div className={styles['textImage']}>
             <Image src={image1} className={styles['lampada']}/>
             <div className={styles['bottomtext']}>
                 <p className={styles['text-content']}>
-                    E também falando um pouco melhor sobre as metas gerais e norteadoras da empresa no futuro.
-                    Texto meramente ilustrativo.
+                Nosso objetivo é  nos tornarmos  a empresa júnior referência na região metropolitana de Porto Alegre para micro e pequenas 
+                empresas nos principais setores de gestão empresarial, trazendo a inovação e a assertividade.
                 </p>
             </div>
         </div>
