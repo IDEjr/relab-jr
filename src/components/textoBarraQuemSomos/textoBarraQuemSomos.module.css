@@ -1,6 +1,6 @@
 .toptext{
   display: flex;
-  width: 50rem;
+  width: 50%;
   height: 300px;
   justify-content: center;
   align-items: center;
@@ -11,12 +11,22 @@ padding-left: 4rem;
 line-height: 50px;
 
 }
+.container{
+height: 100rem;
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+
+
+
+}
 .main{
   display: flex;
   align-items:center ;
   justify-content: center;
   padding: 3rem;
-  margin-top: 2rem;
+  
     
 }
 .lampada{
@@ -27,9 +37,9 @@ line-height: 50px;
 }
 
 .bottomtext{
-  margin-top: 1rem;
+  
   height: 285px;  
-  width: 40rem;
+  width: 45%;
   text-align: center;
   align-items: center;
   display: flex;
@@ -54,6 +64,12 @@ line-height: 50px;
 }
 
 .ImageBoxContent{
+  width: 960px;
+  height: 540px;
+
+}
+
+.hiddenImage{
   width: 960px;
   height: 540px;
 
@@ -104,7 +120,7 @@ line-height: 50px;
     margin-left: 6rem;
   }
 
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1279px) {
     .bottomtext {
       height: 285px;  
       width: 35rem;
@@ -183,7 +199,10 @@ line-height: 50px;
 @media only screen and (max-width: 800px) {
   .bottomtext {
     border: solid 1px beige;
-
+    width: 75%;
+  }
+  .hiddenImage{
+    display: none;
   }
 
   .text-content{
@@ -192,15 +211,19 @@ line-height: 50px;
   .toptext{
     border: solid 1px beige;
     
-    width: 35rem;
+    width: 75%;
     height: 230px;
     padding-left: 2.5rem;
     
     
   }
+  .imagebox{
+    width: 100%;
+  }
+
+  
   .lampada{
 
-    margin: auto;
     width: 150px;
     height: 149px;
   
@@ -209,7 +232,19 @@ line-height: 50px;
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    
+    width: 100%;
+    margin: none;
+  }
+  .container{
+    align-items: center;
+
+  }
+  .ImageBoxContent{
+    width: 100%;
+    height: 100%;
+  }
+  .text-content{
+    font-size: 80%;
   }
   
 }  
