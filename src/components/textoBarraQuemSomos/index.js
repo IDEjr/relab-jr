@@ -17,7 +17,7 @@ export default function textoBarraQuemSomos() {
                 </p>  
             </div>
         <div className={styles['retangulo']}></div>
-        
+    
         <div className={styles['textImage']}>
             <Image src={image1} className={styles['lampada']}/>
             <div className={styles['bottomtext']}>

@@ -229,7 +229,7 @@ gap: 5%;
  
   .toptext{
     
-    border: solid 1px beige;
+    border: none;
     width: 70%;
     height: 15vh;  
     padding-left: 0px;
