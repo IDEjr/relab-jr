@@ -8,7 +8,6 @@ export default function textoBarraQuemSomos() {
         <>
             <h1>Quem Somos</h1>
             <h2><Link href='/'>Back to home</Link></h2>
-
             <div className={styles['toptext']}>
                 <p className={styles['text-content']} >
                     Texto explicando um pouco da história da Relab jr e seus valores. 

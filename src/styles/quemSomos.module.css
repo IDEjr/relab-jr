@@ -1,7 +1,9 @@
+.tudo{
+  width: 100%;
+}
 
 
 .toptext{
-
   display: flex;
   width: 1247px;
   height: 692px;
@@ -9,18 +11,20 @@
   justify-content: center;
   flex-shrink: 0;
 }
+
 .bottomtext{
   margin-top: 86px;
   margin-left: 1000px;
-    height: 285px;
-    width: 721px;
-    text-align: center;
-    align-items: center;
-    display: flex;
-    border-left: solid 15px #F2C12E;
-    padding-left: 100px; 
-    line-height: 50px;
+  height: 285px;
+  width: 721px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  border-left: solid 15px #F2C12E;
+  padding-left: 100px; 
+  line-height: 50px;
 }
+
 
 .text-content{
   color: #ffff;
@@ -29,9 +33,11 @@
   display: flex;
 }
 
+
 .tudo{
   background-color: #262626;
 }
+
 
 .container {
   text-align: center;
@@ -39,45 +45,79 @@
   height: 100vh;
 }
 
+
 .header {
   font-size: 3rem;
 }
+
 
 .subtitle {
   font-size: 1.75rem;
   margin-bottom: 2rem;
 }
 
+
 .exemplo-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  /*flex-direction: column;
   text-align: start;
   margin: auto;
-  width: max-content;
+  width: max-content; */
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  max-width: 1200px;
+  padding: 0;
+  list-style: none;
 }
+
 
 .exemplo-list a {
   color: rgb(4, 165, 165);
   text-decoration: underline;
+
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  margin: 10px;
+  transition: transform 0.3s ease-in-out;
 }
 
+
 .card{
-  height: 200px;
+
+  height: auto;
+  width: 100%;
   padding: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: blueviolet;
-  margin: 10px;
+  margin-top: 10px;
+
+
+  /* height: 200px; */
+  /* width: 400px; */
+  /* margin: 10px; */
+}
+
+.card p {
+  margin-top: 10px;
 }
 
 .link, .link *{
+  width: 100%;
+  text-align: center;
   text-decoration: none !important;
   color: white;
   font-size: 1.5rem;
   transition: all .3s ease-in-out;
 }
+
 
 .link:hover{
   transform: scale(1.1);

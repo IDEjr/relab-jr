@@ -1,30 +1,26 @@
-import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import styles from '../styles/blog.module.css'
-import { handleJSONfiles } from '@/utils/functions/jsonHandler'
-import Image from 'next/image'
+import { handleJSONfiles } from '../utils/functions/jsonHandler'
+
 
 export default function blog({posts}) {
-  console.log(posts)
+  console.log(posts);
   return (
     <>
       <Navbar />
-      <h1>Blog</h1>
-      <h2>
-        <Link href="/">Back to home</Link>
-      </h2>
       <ul className={styles['exemplo-list']}>
         {posts && posts.map((post,i) => (
           <div>
-            <a target="_blank" href="/blog" key={i}>
+            <a target='_blank' href='/blog' key={i}>
               <div>
                 <Image
                   src={`${post.imagem}`}
-                  width={500}
-                  height={500}
-                  alt="Post"
+                  width={1920}
+                  height={1080}
+                  alt='Post'
                 />
               </div>
             </a>
@@ -41,8 +37,10 @@ export default function blog({posts}) {
   );
 }
 
-export async function getStaticProps(){
-  const posts = handleJSONfiles("./content/posts");
+
+export async function getStaticProps() {
+  const posts = handleJSONfiles('./content/posts')
+
   return {
     props: { posts },
   };

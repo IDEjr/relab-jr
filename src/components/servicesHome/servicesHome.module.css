@@ -1,0 +1,82 @@
+.container {
+    font-size: large;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    flex-direction:column;
+    gap:150px;
+    padding:150px;
+}
+
+
+.h1 {
+    font-weight: 1000;
+}
+
+
+.upper-part {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:40px;
+    width: 100%;
+}
+
+
+.lower-part {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:40px;
+    width: 100%;
+}
+
+
+.title-text {
+    color: #F2C12E;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+/*
+each service
+*/
+
+
+.individual-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+
+.frames {
+    background-image: url('../../../public/uploads/image/servicosHome/yellowFrame.png');
+    background-repeat: no-repeat;
+    width: 323px;
+    height: 419px;
+}
+
+
+.inside-image {
+    display: flex;
+    width: 245px;
+    height: 340px;
+    padding: 50px 14px;
+}
+
+
+.top-text {
+    color: #fff;
+    width: 280px;
+    display: flex;
+    padding-right: 78px;
+    text-align: center;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 300;
+    justify-content: center;
+    line-height: 45px; /* 150% */
+}
