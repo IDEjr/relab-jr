@@ -46,6 +46,19 @@ line-height: 50px;
   display: flex;
 }
 
+.imagebox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.ImageBoxContent{
+  width: 960px;
+  height: 540px;
+
+}
+
 
 @media only screen and (max-width: 1640px) {
   .bottomtext {
@@ -178,22 +191,25 @@ line-height: 50px;
   }
   .toptext{
     border: solid 1px beige;
-
+    
     width: 35rem;
     height: 230px;
     padding-left: 2.5rem;
-    margin-left: 1.5rem;
+    
     
   }
   .lampada{
 
-    margin-left: 4rem;
+    margin: auto;
     width: 150px;
     height: 149px;
-    margin-right: 14rem;
+  
   }
   .main{
     flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
     
   }
+  
 }  

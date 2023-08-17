@@ -2,13 +2,15 @@ import Link from 'next/link'
 import styles from './textoBarraQuemSomos.module.css'
 import Image from 'next/image'
 import image1 from '../../../public/uploads/image/QuemSomos/iconelampada.png'
+import image2 from '../../../public/uploads/image/QuemSomos/empe.png'
+import image3 from '../../../public/uploads/image/QuemSomos/sorrisoRelab.png'
+
 
 export default function textoBarraQuemSomos() {
     return(
         <>
-            <h1>Quem Somos</h1>
-            <h2><Link href='/'>Back to home</Link></h2>
-            <div className={styles['toptext']}>
+        <div className={styles['jose']}>  
+          <div className={styles['toptext']}>
                 <p className={styles['text-content']} >
                     Texto explicando um pouco da história da Relab jr e seus valores. 
                     Contando o como começou, com que intuito, quais suas maiores causas.
@@ -23,6 +25,11 @@ export default function textoBarraQuemSomos() {
                 </p>
             </div>
             </div>
+        <div className={styles['imagebox']}>
+         <Image src={image2} className={styles['ImageBoxContent']}/>                            {/* procurar ambas imagens com resolução melhor */}
+        <Image src={image3} className={styles['ImageBoxContent']}/>
+        </div>
+        </div>
         </>
     )
 }
