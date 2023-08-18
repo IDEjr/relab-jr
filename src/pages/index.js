@@ -63,9 +63,9 @@ export default function Home({imagensComBotao, imagensInicio}) {
       <Navbar />
       <Inicio title = {"GESTÃO É A NOSSA CAUSA"} image= {path}/>
       <ImagemComBotao {...resultados} />
-      <ServicesHome />
+      {/* <ServicesHome /> */}
       <ImagemComBotao {...membros} />        
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }
