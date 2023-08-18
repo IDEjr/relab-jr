@@ -13,10 +13,6 @@ import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 // import imagemInicioHome from '../../public/uploads/image/inicio/imagemInicioHome.jpg'
 
 
-
-
-
-
 export default function Home({imagensComBotao, imagensInicio}) {
   console.log(imagensComBotao);
   console.log(imagensInicio);
