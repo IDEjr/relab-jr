@@ -1,11 +1,11 @@
 import styles from './servicesHome.module.css'
 import yellowFrame from '../../../public/uploads/image/servicosHome/yellowFrame.png'
-import image1 from '../../../public/uploads//image/servicosHome/inside-image1.png'
-import image2 from '../../../public/uploads/image/servicosHome/inside-image2.png'
-import image3 from '../../../public/uploads/image/servicosHome/inside-image3.png'
-import image4 from '../../../public/uploads/image/servicosHome/inside-image4.png'
-import image5 from '../../../public/uploads/image/servicosHome/inside-image5.png'
-import image6 from '../../../public/uploads/image/servicosHome/inside-image6.png'
+import imageOne from '../../../public/uploads//image/servicosHome/inside-image1.png'
+import imageTwo from '../../../public/uploads/image/servicosHome/inside-image2.png'
+import imageThree from '../../../public/uploads/image/servicosHome/inside-image3.png'
+import imageFour from '../../../public/uploads/image/servicosHome/inside-image4.png'
+import imageFive from '../../../public/uploads/image/servicosHome/inside-image5.png'
+import imageSix from '../../../public/uploads/image/servicosHome/inside-image6.png'
 import Image from 'next/image'
 
 
@@ -16,27 +16,45 @@ function eachService(top_text, image_path) {
                 {top_text}
             </h3>
             <div className={styles['frames']}>
-                <Image src={image_path} className={styles['inside-image']} ></Image>
+                <div className={styles['inside-image']} style={image_path}/>
+                
             </div>
         </div>
     )
 }
 
-
-export default function servicesHome() {
+export default function servicesHome({imageOne, imageTwo, imageThree, imageFour, imageFive, imageSix}) {
+    const imgOne = {
+        '--img-one' : `url(${imageOne})` 
+    };
+    const imgTwo = {
+        '--img-two' : `url(${imageTwo})`
+    };
+    const imgThree = {
+        '--img-three' : `url(${imageThree})`
+    };
+    const imgFour = {
+        '--img-four' : `url(${imageFour})`
+    };
+    const imgFive = {
+        '--img-five' : `url(${imageFive})`
+    };
+    const imgSix = {
+        '--img-six' : `url(${imageSix})`
+    };
    return(
         <>
             <div className={styles['container']}>
                 <h1 className={styles['title-text']}>NOSSOS SERVIÇOS</h1>
                 <div className={styles['upper-part']}>
-                    {eachService("MODELAGEM DE NEGÓCIOS", image1)}
-                    {eachService("VIABILIDADE ECONÔMICA", image2)}
-                    {eachService("ANÁLISE DA SAÚDE FINANCEIRA", image3)}
+                    {eachService("MODELAGEM DE NEGÓCIOS", imageOne)}
+                    {eachService("VIABILIDADE ECONÔMICA", imageTwo)}
+                    {eachService("ANÁLISE DA SAÚDE FINANCEIRA", imageThree)}
                 </div>
                 <div className={styles['lower-part']}>              
-                    {eachService("PLANEJAMENTO ESTRATÉGICO", image4)}
-                    {eachService("CAPTAÇÃO DE CLENTES", image5)}
-                    {eachService("GESTÃO DE PESSOAS", image6)}
+                    {eachService("PLANEJAMENTO ESTRATÉGICO", imageFour)}
+                    {eachService("CAPTAÇÃO DE CLENTES", imageFive)}
+                    {eachService("GESTÃO DE PESSOAS", imageSix)}
                 </div>
             </div>
         </>
