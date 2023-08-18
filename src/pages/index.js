@@ -47,7 +47,7 @@ export default function Home({imagensComBotao, imagensInicio}) {
   const resultados = {
     imagem: imagemResultados,
     titulo: 'MELHORE SEUS RESULTADOS',
-    texto: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget libero viverra velit pellentesque hendrerit. Donec interdum dolor nisl, at rhoncus dolor consectetur euismod. Aliquam scelerisque finibus egestas.',
+    texto: 'Potencialize seu negócio com soluções inovadoras da Relab Jr. Consultoria. Desbloqueie oportunidades, supere desafios e alcance novos horizontes. Descubra nossos serviços e comece sua jornada para o sucesso agora!',
     textoBotao: 'Entre em contato',
     link: 'servicos'
   };
@@ -55,7 +55,7 @@ export default function Home({imagensComBotao, imagensInicio}) {
   const membros = {
     imagem: imagemMembros,
     titulo: 'MEMBROS',
-    texto: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget libero viverra velit pellentesque hendrerit. Donec interdum dolor nisl, at rhoncus dolor consectetur euismod. Aliquam scelerisque finibus egestas.',
+    texto: 'Faça parte da nossa equipe e amplie seu conhecimento em consultoria empresarial. Na Relab Jr., você se prepara para um futuro de excelência profissional. Junte-se a nós e trilhe um caminho de aprendizado e realizações.',
     textoBotao: 'Sejo membro',
     link: 'quemSomos'
   };

@@ -1,23 +1,52 @@
 .toptext{
   display: flex;
-  width: 1247px;
-  height: 692px;
-  flex-direction: column;
+  width: 50%;
+  height: 300px;
   justify-content: center;
-  flex-shrink: 0;
+  align-items: center;
+  text-align: center;
+  margin-left: 10rem;
+  border-left: solid 1rem #F2C12E;
+padding-left: 4rem;  
+line-height: 50px;
+
+}
+.container{
+height: 100rem;
+width: 100%;
+display: flex;
+flex-direction: column;
+margin-top: 5%;
+gap: 5%;
 }
 
+.textImage{
+  display: flex;
+  align-items:center ;
+  justify-content: flex-end;
+  padding: 3rem;
+  width: 90%;
+    
+}
+.lampada{
+ 
+  margin-right: 15%;
+  height: 225px;
+  width: 15%;
+}
+.retangulo{
+  display: none;
+}
 
 .bottomtext{
-  margin-top: 86px;
-  margin-left: 1000px;
-  height: 285px;
-  width: 721px;
+  
+  height: 285px;  
+  width: 45%;
   text-align: center;
   align-items: center;
   display: flex;
-  border-left: solid 15px #F2C12E;
-  padding-left: 100px; 
+  border-left: solid 1rem #F2C12E;
+  padding-left: 4rem; 
   line-height: 50px;
 }
 
@@ -26,68 +55,229 @@
   color: #ffff;
   font-size: 22px;
   font-weight: '400';
+}
+
+.imagebox{
   display: flex;
-}
-
-
-.tudo{
-  background-color: #262626;
-}
-
-
-.container {
-  text-align: center;
-  padding: 20px;
-  height: 100vh;
-}
-
-
-.header {
-  font-size: 3rem;
-}
-
-
-.subtitle {
-  font-size: 1.75rem;
-  margin-bottom: 2rem;
-}
-
-
-.exemplo-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  text-align: start;
-  margin: auto;
-  width: max-content;
-}
-
-
-.exemplo-list a {
-  color: rgb(4, 165, 165);
-  text-decoration: underline;
-}
-
-
-.card{
-  height: 200px;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  background-color: blueviolet;
-  margin: 10px;
+  justify-content: center;
+  width: 100%;
+
+}
+
+.ImageBoxContent{
+  width: 50%;
+  height: 30rem;
+
+}
+
+.hiddenImage{
+  width: 50%;
+  height: 30rem;
+
 }
 
 
-.link, .link *{
-  text-decoration: none !important;
-  color: white;
-  font-size: 1.5rem;
-  transition: all .3s ease-in-out;
-}
+@media only screen and (max-width: 1640px) {
+  .bottomtext {
+    
+    height: 285px;  
+    width: 39rem;
+    border-left: solid 1rem #F2C12E;
+    padding-left: 3.5rem; 
+  }
+
+  .text-content{
+    font-size: 20px;
+  }
+  .toptext{
+    width: 49rem;
+    height: 250px;
+    padding-left: 3.5rem;
+  }
 
 
-.link:hover{
-  transform: scale(1.1);
+   
+
 }
+@media only screen and (max-width: 1440px) {
+  .bottomtext {
+
+    height: 285px;  
+    border-left: solid 1rem #F2C12E;
+    padding-left: 3.5rem; 
+  }
+
+  .text-content{
+    font-size: 18px;
+  }
+  .toptext{
+    width: 45rem;
+    height: 240px;
+    padding-left: 3.5rem;
+    margin-left: 5rem;
+  }
+  .lampada{
+    margin-left: 6rem;
+    
+  }
+
+  @media only screen and (max-width: 1279px) {
+    .bottomtext {
+      height: 285px;  
+      width: 35rem;
+      border-left: solid 1rem #F2C12E;
+      padding-left: 3rem; 
+    }
+  
+    .text-content{
+      font-size: 16px;
+    }
+    .toptext{
+      width: 37rem;
+      height: 230px;
+      padding-left: 3rem;
+      margin-left: 3rem;
+    }
+    .lampada{
+      margin-left: 0rem;
+      margin-right: 0rem;
+      
+    }
+    
+  }  
+   
+
+}
+
+@media only screen and (max-width: 1152px) {
+  .bottomtext {
+    height: 285px;  
+    width: 35rem;
+    border-left: solid 1rem #F2C12E;
+    padding-left: 3rem; 
+  }
+
+  .text-content{
+    font-size: 15px;
+  }
+  .toptext{
+    width: 35rem;
+    height: 230px;
+    padding-left: 2.5rem;
+    margin-left: 2rem;
+  }
+  .lampada{
+    width: 200px;
+    height: 199px;
+    margin-right: 9%;
+  }
+  .ImageBoxContent{
+    height: 22rem;
+  }
+  .hiddenImage{
+    height: 22rem;
+  }
+}  
+ 
+
+@media only screen and (max-width: 1024px) {
+  .bottomtext {
+    padding-left: 2.5rem; 
+    line-height: 40px;
+    height: 22vh;
+  }
+
+  .text-content{
+    font-size: 15px;
+  }
+  .toptext{
+    width: 35rem;
+    height: 230px;
+    padding-left: 2.5rem;
+    margin-left: 1.5rem;
+  }
+  .lampada{
+    
+    width: 150px;
+    height: 149px;
+    margin-right: 5%;
+  }
+  .ImageBoxContent{
+    height: 20rem;
+  }
+  .hiddenImage{
+    height: 20rem;
+  }
+}  
+
+
+@media only screen and (max-width: 800px) {
+  .bottomtext {
+    padding-left: 0px;
+    margin-left: 0%;
+    line-height: 150%;
+    width: 70%;
+    height: 15vh; 
+    border: none;
+
+  }
+  .hiddenImage{
+    display: none;
+  }
+
+ 
+  .toptext{
+    
+    border: none;
+    width: 70%;
+    height: 15vh;  
+    padding-left: 0px;
+    margin-left: 0%;
+    line-height: 150%;
+  
+
+  }
+  .imagebox{
+    width: 100%;
+  }
+
+  
+  .lampada{
+    width: 25%;
+    height: 50%;
+    margin: auto;
+  }
+  .textImage{
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+    padding: 0%;
+  }
+  .container{
+    align-items: center;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 2%;
+  }
+  .ImageBoxContent{
+    width: 100%;
+    height: 100%;
+  }
+  .text-content{
+    
+    font-size: 80%;
+    width: 100%;
+    height: 100%;
+        
+  }
+  .retangulo{
+    width: 50%;
+    background-color: #F2C12E;
+    height: 0.5rem;
+    align-self: baseline;
+    display: block;
+    
+  }
+  
+}  
