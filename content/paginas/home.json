@@ -1,0 +1,36 @@
+{
+  "inicioHome": {
+    "imagem": "/uploads/imageminiciohome.jpg",
+    "titulo": "GESTÃO É A NOSSA CAUSA",
+    "texto": "“lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget libero viverra velit pellentesque hendrerit. Donec interdum dolor nisl, at rhoncus dolor consectetur euismod. Aliquam scelerisque finibus egestas. Mauris augue purus, faucibus sit amet elit vitae, porta interdum nisl. Proin sed velit sed mauris finibus congue vitae non neque. Maecenas laoreet quam nibh, a bibendum magna suscipit non. Integer mi nisi, volutpat vel magna ac, accumsan interdum massa. Aliquam sed dolor a ligula malesuada fringilla. Ut suscipit dolor sit amet tellus auctor consequat. Maecenas eget elit neque.”"
+  },
+  "imgbotaoRes": {
+    "imagem": "/uploads/imagemresultados.png",
+    "titulo": "MELHORE SEUS RESULTADOS",
+    "texto": "Potencialize seu negócio com soluções inovadoras da Relab Jr. Consultoria. Desbloqueie oportunidades, supere desafios e alcance novos horizontes. Descubra nossos serviços e comece sua jornada para o sucesso agora!\r\n\r\n"
+  },
+  "servicosHome": {
+    "imagem2": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.freepik.com%2Ffotos-gratis%2Fimagem-aproximada-da-cabeca-de-um-lindo-leao_14191980.htm&psig=AOvVaw26D9HzOnhJofMop5pxBoOl&ust=1692498273012000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCPDkwdnV54ADFQAAAAAdAAAAABAL",
+    "imagem3": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.freepik.com%2Ffotos-gratis%2Fimagem-aproximada-da-cabeca-de-um-lindo-leao_14191980.htm&psig=AOvVaw26D9HzOnhJofMop5pxBoOl&ust=1692498273012000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCPDkwdnV54ADFQAAAAAdAAAAABAL",
+    "imagem4": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.freepik.com%2Ffotos-gratis%2Fimagem-aproximada-da-cabeca-de-um-lindo-leao_14191980.htm&psig=AOvVaw26D9HzOnhJofMop5pxBoOl&ust=1692498273012000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCPDkwdnV54ADFQAAAAAdAAAAABAL",
+    "imagem5": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.freepik.com%2Ffotos-gratis%2Fimagem-aproximada-da-cabeca-de-um-lindo-leao_14191980.htm&psig=AOvVaw26D9HzOnhJofMop5pxBoOl&ust=1692498273012000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCPDkwdnV54ADFQAAAAAdAAAAABAL",
+    "imagem6": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.freepik.com%2Ffotos-gratis%2Fimagem-aproximada-da-cabeca-de-um-lindo-leao_14191980.htm&psig=AOvVaw26D9HzOnhJofMop5pxBoOl&ust=1692498273012000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCPDkwdnV54ADFQAAAAAdAAAAABAL",
+    "servico1": "MODELAGEM DE NEGÓCIOS",
+    "servico2": "Viabilidade Econômica",
+    "servico3": "Análise da Saúde Financeira",
+    "servico4": "Planejamento estratégico",
+    "servico5": "Captação de clientes",
+    "servico6": "Gestão de pessoas",
+    "imagem1": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.freepik.com%2Ffotos-gratis%2Fimagem-aproximada-da-cabeca-de-um-lindo-leao_14191980.htm&psig=AOvVaw26D9HzOnhJofMop5pxBoOl&ust=1692498273012000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCPDkwdnV54ADFQAAAAAdAAAAABAL"
+  },
+  "imgbotaoMem": {
+    "imagem": "/uploads/imagemmembros.png",
+    "texto": "Faça parte da nossa equipe e amplie seu conhecimento em consultoria empresarial. Na Relab Jr., você se prepara para um futuro de excelência profissional. Junte-se a nós e trilhe um caminho de aprendizado e realizações.\r\n\r\n",
+    "titulo": "MEMBROS"
+  },
+  "footer": {
+    "linkedin": "https://www.linkedin.com/company/relabjr/",
+    "email": "adm.relab@gmail.com",
+    "instagram": "https://www.instagram.com/relabjrconsultoria/"
+  }
+}
