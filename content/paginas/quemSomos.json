@@ -1,0 +1,15 @@
+{
+  "inicioQuemSomos": {
+    "imagem": "/uploads/imageminicioquemsomos.jpg",
+    "titulo": "QUEM SOMOS",
+    "texto1": "A RELAB Jr. Consultoria, empresa júnior da Unisinos, teve sua fundação em setembro de 2021, e hoje é federada junto à Federação das Empresas Juniores do Rio Grande do Sul - FEJERS.",
+    "texto2": "Nosso objetivo é nos tornarmos a empresa júnior referência na região metropolitana de Porto Alegre para micro e pequenas empresas nos principais setores de gestão empresarial, trazendo a inovação e a assertividade.\r\n\r\n"
+  },
+  "CarrosselQuemSomos": {
+    "imagensCarrossel": [
+      "/uploads/52439304239_c93c0802c7_o.png",
+      "/uploads/index.png",
+      "/uploads/imagemmembros.png"
+    ]
+  }
+}
