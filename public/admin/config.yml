@@ -155,7 +155,11 @@ collections:
             name: "CarrosselQuemSomos"
             widget: "object"
             fields:
-              - {label: "Imagens Carrossel", name: "imagensCarrossel", widget: "list", min: 3, max: 10}
+              - label: "Imagens Carrossel"
+                name: "imagensCarrossel"
+                widget: "list"
+                min: 3
+                max: 10
                 field: {label: "Imagem", name: "imagem", widget: "image"}
 
   # - name: "CarrosselQuemSomos" # Nome usado da rota
