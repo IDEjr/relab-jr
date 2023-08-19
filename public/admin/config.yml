@@ -97,6 +97,9 @@ collections:
             name: "footer"
             widget: "object"
             fields:
+              - {label: "Imagem Inicio", name: "imagemInicio", widget: "image"}
+              - {label: "Imagem Botao Resultados", name: "imagemBotaoResultados", widget: "image"}
+              - {label: "Imagem Botao Membros", name: "imagemBotaoMembros", widget: "image"}
               - {
                   label: "Instagram",
                   name: "instagram",
