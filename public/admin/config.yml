@@ -80,6 +80,7 @@ collections:
       - {label: "Imagem", name: "imagem", widget: "image"}
 
 
+              # - {label: "Imagem Inicio", name: "imagemInicio", widget: "image"}
 
 
   - name: "pages"
@@ -93,37 +94,31 @@ collections:
         editor:
           preview: false
         fields:
-          - label: "Conteúdo do Rodapé"
+          - label: "Imagem Com Botão Resultados"
+            name: "imgbotaoRes"
+            widget: "object"
+            fields:
+              - {label: "Imagem Botao Resultados", name: "imagemBotaoResultados", widget: "image"}
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Texto", name: "texto", widget: "markdown" }
+
+
+          - label: "Imagem Com Botão Membros"
+            name: "imgbotaoMem"
+            widget: "object"
+            fields:
+              - {label: "Imagem Botao Membros", name: "imagemBotaoMembros", widget: "image"}
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Texto", name: "texto", widget: "markdown" }
+
+          - label: "Conteúdo do Footer"
             name: "footer"
             widget: "object"
             fields:
-              - {label: "Imagem Inicio", name: "imagemInicio", widget: "image"}
-              - {label: "Imagem Botao Resultados", name: "imagemBotaoResultados", widget: "image"}
-              - {label: "Imagem Botao Membros", name: "imagemBotaoMembros", widget: "image"}
-              - {
-                  label: "Instagram",
-                  name: "instagram",
-                  widget: "string",
-                  default: "abenrs_",
-                }
-              - {
-                  label: "Email para contato",
-                  name: "email",
-                  widget: "string",
-                  default: "aben-rs@abennacional.org.br",
-                }
-              - {
-                  label: "Telefone para Contato",
-                  name: "phone",
-                  widget: "string",
-                  default: "(51) 3232-3232",
-                }
-              - {
-                  label: "Facebook",
-                  name: "facebook",
-                  widget: "string",
-                  default: "facebook/aben",
-                }
+              - { label: "Linkedin", name: "linkedin", widget: "string" }
+              - {label: "Email", name: "email", widget: "string"}
+              - {label: "Instagram", name: "instagram", widget: "string"}
+                
 
       - label: "Página Quem Somos"
         name: "paginaQuemSomos"
