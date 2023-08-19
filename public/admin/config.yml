@@ -78,6 +78,79 @@ collections:
     fields: # Campos disponíveis no Netlify
       - {label: "Título", name: "titulo", widget: "string"}
       - {label: "Imagem", name: "imagem", widget: "image"}
+
+
+
+
+  - name: "pages"
+    label: "Páginas"
+    files:
+      - label: "Home"
+        name: "paginaHome"
+        file: "content/paginas/home.json"
+        extension: "json"
+        format: "json"
+        editor:
+          preview: false
+        fields:
+          - label: "Conteúdo do Rodapé"
+            name: "footer"
+            widget: "object"
+            fields:
+              - {
+                  label: "Instagram",
+                  name: "instagram",
+                  widget: "string",
+                  default: "abenrs_",
+                }
+              - {
+                  label: "Email para contato",
+                  name: "email",
+                  widget: "string",
+                  default: "aben-rs@abennacional.org.br",
+                }
+              - {
+                  label: "Telefone para Contato",
+                  name: "phone",
+                  widget: "string",
+                  default: "(51) 3232-3232",
+                }
+              - {
+                  label: "Facebook",
+                  name: "facebook",
+                  widget: "string",
+                  default: "facebook/aben",
+                }
+
+      - label: "Página Quem Somos"
+        name: "paginaQuemSomos"
+        file: "content/paginas/quemSomos.json"
+        extension: "json"
+        format: "json"
+        editor:
+          preview: false
+        fields:
+          - { label: "Conteúdo da página (HTML)", name: "content", widget: "string" }
+
+      - label: "Página Serviços"
+        name: "paginaServicos"
+        file: "content/paginas/servicos.json"
+        extension: "json"
+        format: "json"
+        editor:
+          preview: false
+        fields:
+          - { label: "Conteúdo da página (HTML)", name: "content", widget: "string" }
+
+      - label: "Página Blog"
+        name: "paginaBlog"
+        file: "content/paginas/blog.json"
+        extension: "json"
+        format: "json"
+        editor:
+          preview: false
+        fields:
+          - { label: "Conteúdo da página (HTML)", name: "content", widget: "string" }
   
   # - name: "relab-jr" # Nome usado da rota
   #   extension: "json"
