@@ -131,7 +131,7 @@ collections:
               - {label: "Linkedin", name: "linkedin", widget: "string"}
               - {label: "Email", name: "email", widget: "string"}
               - {label: "Instagram", name: "instagram", widget: "string"}
-                
+
 
       - label: "Página Quem Somos"
         name: "paginaQuemSomos"
@@ -150,7 +150,7 @@ collections:
               - {label: "Texto 1", name: "texto1", widget: "markdown"}
               - {label: "Texto 2", name: "texto2", widget: "markdown"}
 
-          
+
           - label: "Carrossel Quem Somos"
             name: "CarrosselQuemSomos"
             widget: "object"
