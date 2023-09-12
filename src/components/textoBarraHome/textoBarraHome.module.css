@@ -1,0 +1,22 @@
+.container{
+
+    width:  100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 30rem;
+    justify-content:space-around;
+    
+}
+.retangulo{
+    background-color: #F2C12E;
+    height: 15px;
+    width: 30%;
+    align-self: flex-end;
+
+}
+.text{
+    width: 70%;
+    justify-content: center;
+    text-align: justify;
+}

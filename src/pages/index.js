@@ -7,6 +7,7 @@ import Footer from '../components/footer'
 import ImagemComBotao from '../components/imagemComBotao'
 import ServicesHome from '../components/servicesHome'
 import Inicio from '../components/inicio'
+import TextoBarraHome from '../components/textoBarraHome/index'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 // import imagemResultados from '../../public/uploads/image/imagemComBotao/imagemResultados.png'
 // import imagemMembros from '../../public/uploads/image/imagemComBotao/imagemMembros.png'
@@ -62,6 +63,7 @@ export default function Home({imagensComBotao, imagensInicio}) {
     <div className={styles['tudo']}>
       <Navbar />
       <Inicio title = {"GESTÃO É A NOSSA CAUSA"} image= {path}/>
+      <TextoBarraHome/>
       <ImagemComBotao {...resultados} />
       {/* <ServicesHome /> */}
       <ImagemComBotao {...membros} />        
