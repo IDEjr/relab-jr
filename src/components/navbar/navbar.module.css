@@ -1,31 +1,102 @@
-.navbar {
-  background-color: black;
-  padding: 10px;
-  position: sticky;
-  top: 0;
-  z-index: 1;
+
+
+
+ header .logo{
+	
+	background-color: #262626;
 }
+
+.cabecalho {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 80px;
+	padding: 0 2rem;
+	background-color: #262626;
+	color: white;
+}
+
+.navbar a {
+	margin: 0 1rem;
+	color: white;
+	text-decoration: none;
+}
+
+.navbar a:hover {
+	color: #F2C12E;
+}
+
+.cabecalho .navBtn {
+	padding: 5px;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: white;
+	visibility: hidden;
+	opacity: 0;
+	font-size: 1.8rem;
+}
+
+.cabecalho .navbar {
+	display: flex;
+	align-items: center;
+}
+
+.links {
+	color: #F2C12E;
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+	.cabecalho .navBtn {
+		visibility: visible;
+		opacity: 1;
+	}
+
+
+
+
+	
+
+	.cabecalho .navbar {
+		position: fixed;
+		top: -100vh;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5rem;
+		background-color: #262626;
+		transition: 1s;
+    	z-index: 900;
+	}
+
+	.cabecalho .responsiveNav {
+		transform: translateY(100vh);
   
+	}
 
-.navList {
-  list-style-type: none;
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
-}
+	.navbar .navCloseBtn {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+	}
+	
+	
+	.navbar .navRelabBtn {
+		position: absolute;
+		top: 2rem;
+		right: auto;
+		left: auto;
+	}
+	
 
-
-.navItem {
-  margin: 0;
-}
-
-
-.navItem a {
-  color: white;
-  text-decoration: none;
-}
-
-
-.navItem a:hover {
-  text-decoration: underline;
+	.navbar a {
+		font-size: 1.5rem;
+	}
 }

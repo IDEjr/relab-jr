@@ -8,6 +8,7 @@ import ImagemComBotao from '../components/imagemComBotao'
 import ServicesHome from '../components/servicesHome'
 import Inicio from '../components/inicio'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
+import React from 'react';
 // import imagemResultados from '../../public/uploads/image/imagemComBotao/imagemResultados.png'
 // import imagemMembros from '../../public/uploads/image/imagemComBotao/imagemMembros.png'
 // import imagemInicioHome from '../../public/uploads/image/inicio/imagemInicioHome.jpg'
@@ -60,7 +61,10 @@ export default function Home({imagensComBotao, imagensInicio}) {
 
   return (
     <div className={styles['tudo']}>
-      <Navbar />
+      <React.Fragment>
+        <Navbar />
+      </React.Fragment>
+      
       <Inicio title = {"GESTÃO É A NOSSA CAUSA"} image= {path}/>
       <ImagemComBotao {...resultados} />
       {/* <ServicesHome /> */}
