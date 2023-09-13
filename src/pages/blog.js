@@ -3,6 +3,8 @@ import Image from 'next/image'
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import styles from '../styles/blog.module.css'
+import MenuBlog from '../components/menuBlog/menuBlog'
+
 import { handleJSONfiles } from '../utils/functions/jsonHandler'
 
 
@@ -11,6 +13,7 @@ export default function blog({posts}) {
   return (
     <>
       <Navbar />
+      <MenuBlog/>
       <ul className={styles['exemplo-list']}>
         {posts && posts.map((post,i) => (
           <div>
