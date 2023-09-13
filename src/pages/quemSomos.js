@@ -4,6 +4,7 @@ import Inicio from '../components/inicio'
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import TextoBarraQuemSomos from '../components/textoBarraQuemSomos'
+import Valores from '../components/valores'
 import styles from '../styles/quemSomos.module.css'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import imagemInicioQuemSomos from '../../public/uploads/image/inicio/imagemInicioQuemSomos.jpg'
@@ -29,6 +30,8 @@ export default function quemSomos({membros, imagensInicio}) {
       <Navbar />
       <Inicio title = {"QUEM SOMOS"} image= {path}/>
       <TextoBarraQuemSomos />
+      <Valores />
+      <div></div>
       <ul className={styles['exemplo-list']}>
         {membros && membros.map((membro, i) => (
           <Link target="_blank" href={`${membro.linkedin}`} className={styles["link"]} key={i}>
@@ -47,7 +50,7 @@ export default function quemSomos({membros, imagensInicio}) {
           </Link>
         ))}
       </ul>
-      <Footer />
+      {/*<Footer />*/}
     </>
   );
 }
