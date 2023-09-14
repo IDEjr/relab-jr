@@ -16,17 +16,22 @@ search: false
 locale: 'pt'
 
 collections:
-  - name: "membros" # Nome usado da rota
-    extension: "json"
-    description: "Membros da Relab Jr."
-    label: "Membros"
-    folder: "content/membros" # Local da pasta onde vão estar os arquivos
-    create: true # Permite que usuários criem arquivos nesse local
-    fields: # Campos disponíveis no Netlify
-      - {label: "Nome e sobrenome", name: "nome", widget: "string"}
-      - {label: "Imagem", name: "imagem", widget: "image"}
-      - {label: "Posição", name: "posicao", widget: "select",  options: ["Presidência", "Vice-Presidência", "Projetos", "Administrativo Financeiro", "Comercial", "Gestão de Pessoas", "Marketing", "Trainee"], default: ["Trainee"]}
-      - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
+
+
+
+
+
+  # - name: "membros" # Nome usado da rota
+  #   extension: "json"
+  #   description: "Membros da Relab Jr."
+  #   label: "Membros"
+  #   folder: "content/membros" # Local da pasta onde vão estar os arquivos
+  #   create: true # Permite que usuários criem arquivos nesse local
+  #   fields: # Campos disponíveis no Netlify
+  #     - {label: "Nome e sobrenome", name: "nome", widget: "string"}
+  #     - {label: "Imagem", name: "imagem", widget: "image"}
+  #     - {label: "Posição", name: "posicao", widget: "select",  options: ["Presidência", "Vice-Presidência", "Projetos", "Administrativo Financeiro", "Comercial", "Gestão de Pessoas", "Marketing", "Trainee"], default: ["Trainee"]}
+  #     - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
 
 
   - name: "posts" # Nome usado da rota
@@ -46,26 +51,30 @@ collections:
       - {label: "Imagem", name: "imagem", widget: "image", required: false}
 
 
-  - name: "imagensComBotao" # Nome usado da rota
-    extension: "json"
-    description: "Imagens que vão atrás dos botões de redirecionamento na Home"
-    label: "ImagensComBotao"
-    folder: "content/imagensComBotao" # Local da pasta onde vão estar os arquivos
-    create: true # Permite que usuários criem arquivos nesse local
-    fields: # Campos disponíveis no Netlify
-      - {label: "Título", name: "titulo", widget: "string"}
-      - {label: "Imagem", name: "imagem", widget: "image"}
+  # - name: "imagensComBotao" # Nome usado da rota
+  #   extension: "json"
+  #   description: "Imagens que vão atrás dos botões de redirecionamento na Home"
+  #   label: "ImagensComBotao"
+  #   folder: "content/imagensComBotao" # Local da pasta onde vão estar os arquivos
+  #   create: true # Permite que usuários criem arquivos nesse local
+  #   fields: # Campos disponíveis no Netlify
+  #     - {label: "Título", name: "titulo", widget: "string"}
+  #     - {label: "Imagem", name: "imagem", widget: "image"}
 
 
-  - name: "imagensInicio" # Nome usado da rota
-    extension: "json"
-    description: "Imagens no início das páginas"
-    label: "ImagensInicio"
-    folder: "content/imagensInicio" # Local da pasta onde vão estar os arquivos
-    create: true # Permite que usuários criem arquivos nesse local
-    fields: # Campos disponíveis no Netlify
-      - {label: "Título", name: "titulo", widget: "string"}
-      - {label: "Imagem", name: "imagem", widget: "image"}
+  # - name: "imagensInicio" # Nome usado da rota
+  #   extension: "json"
+  #   description: "Imagens no início das páginas"
+  #   label: "ImagensInicio"
+  #   folder: "content/imagensInicio" # Local da pasta onde vão estar os arquivos
+  #   create: true # Permite que usuários criem arquivos nesse local
+  #   fields: # Campos disponíveis no Netlify
+  #     - {label: "Título", name: "titulo", widget: "string"}
+  #     - {label: "Imagem", name: "imagem", widget: "image"}
+
+
+
+# PÁGINAS--------------------------------------------------------------------------------------------------------
 
 
   - name: "paginas"
@@ -162,6 +171,15 @@ collections:
                 max: 10
                 field: {label: "Imagem", name: "imagem", widget: "image"}
 
+          - label: "Membros"
+            name: "membros"
+            widget: "object"
+            fields: # Campos disponíveis no Netlify
+                - {label: "Nome e sobrenome", name: "nome", widget: "string"}
+                - {label: "Imagem", name: "imagem", widget: "image"}
+                - {label: "Posição", name: "posicao", widget: "select",  options: ["Presidência", "Vice-Presidência", "Projetos", "Administrativo Financeiro", "Comercial", "Gestão de Pessoas", "Marketing", "Trainee"], default: ["Trainee"]}
+                - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
+
   # - name: "CarrosselQuemSomos" # Nome usado da rota
   #   extension: "json"
   #   description: "Imagens do carrossel da página Quem Somos"
@@ -204,6 +222,11 @@ collections:
             fields:
               - {label: "Imagem", name: "imagem", widget: "image"}
               - {label: "Título", name: "titulo", widget: "string"}
+
+
+# PÁGINAS--------------------------------------------------------------------------------------------------------
+
+
 
 
   - name: "recipe" 
