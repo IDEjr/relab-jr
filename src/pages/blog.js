@@ -15,7 +15,7 @@ export default function blog({posts}) {
       <Navbar />
       <MenuBlog/>
       <ul className={styles['exemplo-list']}>
-        {posts && posts.map((post,i) => (
+        {/* {posts && posts.map((post,i) => (
           <div>
             <a target='_blank' href='/blog' key={i}>
               <div>
@@ -33,7 +33,7 @@ export default function blog({posts}) {
               </div>
             </div>
           </div>
-        ))}
+        ))} */}
       </ul>
       <Footer />
     </> 
