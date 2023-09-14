@@ -171,15 +171,32 @@ collections:
                 max: 10
                 field: {label: "Imagem", name: "imagem", widget: "image"}
 
-          - label: "Membros"
-            name: "membros"
-            widget: "object"
-            create: true # Permite que usuários criem arquivos nesse local
-            fields: # Campos disponíveis no Netlify
-                - {label: "Nome e sobrenome", name: "nome", widget: "string"}
-                - {label: "Imagem", name: "imagem", widget: "image"}
-                - {label: "Posição", name: "posicao", widget: "select",  options: ["Presidência", "Vice-Presidência", "Projetos", "Administrativo Financeiro", "Comercial", "Gestão de Pessoas", "Marketing", "Trainee"], default: ["Trainee"]}
-                - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
+          # - label: "Membros"
+          #   name: "membros"
+          #   widget: "list"
+          #   create: true # Permite que usuários criem arquivos nesse local
+          #   fields: # Campos disponíveis no Netlify
+          #       - {label: "Nome e sobrenome", name: "nome", widget: "string"}
+          #       - {label: "Imagem", name: "imagem", widget: "image"}
+          #       - {label: "Posição", name: "posicao", widget: "select",  options: ["Presidência", "Vice-Presidência", "Projetos", "Administrativo Financeiro", "Comercial", "Gestão de Pessoas", "Marketing", "Trainee"], default: ["Trainee"]}
+          #       - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
+          - label: "Membros" 
+                      name: "membros" 
+                      widget: "list" 
+                      max: 10
+                      fields:
+                        - {label: "Nome e sobrenome", name: "nome", widget: "string"}
+                        - {label: "Imagem", name: "imagem", widget: "image"}
+                        - {label: "Posição", name: "posicao", widget: "select",  options: ["Presidência", "Vice-Presidência", "Projetos", "Administrativo Financeiro", "Comercial", "Gestão de Pessoas", "Marketing", "Trainee"], default: ["Trainee"]}
+                        - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
+
+
+
+          
+
+
+
+
 
   # - name: "CarrosselQuemSomos" # Nome usado da rota
   #   extension: "json"
