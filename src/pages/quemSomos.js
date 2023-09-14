@@ -4,6 +4,7 @@ import Inicio from '../components/inicio'
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import TextoBarraQuemSomos from '../components/textoBarraQuemSomos'
+import Valores from '../components/valores'
 import styles from '../styles/quemSomos.module.css'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 
@@ -17,6 +18,8 @@ export default function quemSomos({paginas}) {
       <Navbar />
       <Inicio title = {"QUEM SOMOS"} image= {path}/>
       <TextoBarraQuemSomos />
+      <Valores />
+      <div></div>
       <ul className={styles['exemplo-list']}>
         {paginas[2].painelMembros.membros && paginas[2].painelMembros.membros.map((membros, i) => (
           <Link target="_blank" href={`${membros.membro.linkedin}`} className={styles["link"]} key={i}>
@@ -35,7 +38,7 @@ export default function quemSomos({paginas}) {
           </Link>
         ))}
       </ul>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
@@ -44,7 +47,7 @@ export default function quemSomos({paginas}) {
 
 
 
-{/* <ul className={styles['exemplo-list']}>
+/*{ <ul className={styles['exemplo-list']}>
         {membros && membros.map((membro, i) => (
           <Link target="_blank" href={`${membro.linkedin}`} className={styles["link"]} key={i}>
             <div className={styles["card"]}>
@@ -61,7 +64,11 @@ export default function quemSomos({paginas}) {
             </div>
           </Link>
         ))}
-      </ul> */}
+      </ul>
+      {/*<Footer />}
+    </>
+  );
+}*/
 
 
 

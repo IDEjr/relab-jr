@@ -8,6 +8,9 @@ import ImagemComBotao from '../components/imagemComBotao'
 import ServicesHome from '../components/servicesHome'
 import Inicio from '../components/inicio'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
+import React from 'react';
+
+
 
 
 export default function Home({paginas}) {
@@ -35,7 +38,10 @@ export default function Home({paginas}) {
 
   return (
     <div className={styles['tudo']}>
-      <Navbar />
+      <React.Fragment>
+        <Navbar />
+      </React.Fragment>
+      
       <Inicio title = {"GESTÃO É A NOSSA CAUSA"} image= {path}/>
       <ImagemComBotao {...resultados} />
       {/* <ServicesHome /> */}
