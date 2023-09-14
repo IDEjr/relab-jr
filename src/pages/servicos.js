@@ -13,7 +13,7 @@ export default function servicos({paginas}) {
     <>
       <Navbar />
       <Inicio title = {"SERVIÇOS"} image= {path}/>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

@@ -38,7 +38,7 @@ export default function quemSomos({paginas}) {
           </Link>
         ))}
       </ul>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
