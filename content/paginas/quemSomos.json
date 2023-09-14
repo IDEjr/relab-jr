@@ -11,5 +11,11 @@
       "/uploads/index.png",
       "/uploads/imagemmembros.png"
     ]
+  },
+  "membros": {
+    "nome": "Billy",
+    "posicao": "Presidência",
+    "linkedin": "https://www.linkedin.com/in/williamhgates/",
+    "imagem": "/uploads/bill_gates_2018.jpg"
   }
 }
