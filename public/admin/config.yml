@@ -191,6 +191,55 @@ collections:
           #     - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
 
 
+          - label: "Membros" 
+              name: "membros" 
+              widget: "list" 
+              max: 10
+              fields:
+              - label: "Membro"
+                name: "membro"
+                widget: "object"
+                fields:
+                  - {label: "Nome e sobrenome", name: "nome", widget: "string"}
+                  - {label: "Imagem", name: "imagem", widget: "image"}
+                  - {label: "Posição", name: "posicao", widget: "select",  options: ["Presidência", "Vice-Presidência", "Projetos", "Administrativo Financeiro", "Comercial", "Gestão de Pessoas", "Marketing", "Trainee"], default: ["Trainee"]}
+                  - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
+
+
+            
+
+
+
+
+
+
+
+  # - name: "recipe" 
+  #   label: "Recipe" 
+  #   folder: "content/recipes" # The path to the folder where the documents are stored
+  #   create: true # Allow users to create new documents in this collection
+  #   slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  #   fields: # The fields for each document, usually in front matter
+  #     - {label: "Title", name: "title", widget: "string"}
+  #     - {label: "Publish Date", name: "date", widget: "datetime", date_format: "DD.MM.YYYY", time_format: "HH:mm", format: "LLL"}
+  #     - {label: "Photo", name: "photo", widget: "image"}
+  #     - label: "HowToMake"
+  #       name: "howtomake"
+  #       widget: "object"
+  #       fields:
+  #         - label: "Ingredients" 
+  #           name: "ingredients" 
+  #           widget: "list" 
+  #           max: 10
+  #           fields:
+  #           - label: "Ingredient"
+  #             name: "ingredient"
+  #             widget: "object"
+  #             fields:
+  #               - {label: "Nome e sobrenome", name: "nome", widget: "string"}
+  #               - {label: "Imagem", name: "imagem", widget: "image"}
+  #               - {label: "Posição", name: "posicao", widget: "select",  options: ["Presidência", "Vice-Presidência", "Projetos", "Administrativo Financeiro", "Comercial", "Gestão de Pessoas", "Marketing", "Trainee"], default: ["Trainee"]}
+  #               - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
 
           
 
