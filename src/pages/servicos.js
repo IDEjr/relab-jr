@@ -3,28 +3,17 @@ import Footer from '../components/footer'
 import Inicio from '../components/inicio'
 import styles from '../styles/servicos.module.css'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
-import imagemInicioServicos from '../../public/uploads/image/inicio/imagemInicioServicos.jpg'
-
-export default function servicos({imagensInicio}) {
-
-  // pega imagem da home do netlify
-  let imagemInicioHome;
-  let img = [];
-
-  imagensInicio.map((imagemInicio, i) => {
-    img[i] = imagemInicio.imagem
-  });
-
-  imagemInicioHome = img[2]
 
 
-  const path = imagemInicioServicos
+export default function servicos({paginas}) {
+
+  const path = paginas[3].inicioServicos.imagem;
 
   return (
     <>
       <Navbar />
       <Inicio title = {"SERVIÇOS"} image= {path}/>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
@@ -32,8 +21,9 @@ export default function servicos({imagensInicio}) {
 
 export async function getStaticProps() {
 
-  const imagensInicio = handleJSONfiles("./content/imagensInicio");
+  const paginas = handleJSONfiles("./content/paginas");
+
   return {
-    props: { imagensInicio }
+    props: { paginas }
   };
 }

@@ -35,7 +35,7 @@ export default function blog({posts}) {
           </div>
         ))} */}
       </ul>
-      <Footer />
+      {/* <Footer /> */}
     </> 
   );
 }
