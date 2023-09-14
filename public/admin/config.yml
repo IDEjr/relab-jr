@@ -181,14 +181,14 @@ collections:
           #       - {label: "Posição", name: "posicao", widget: "select",  options: ["Presidência", "Vice-Presidência", "Projetos", "Administrativo Financeiro", "Comercial", "Gestão de Pessoas", "Marketing", "Trainee"], default: ["Trainee"]}
           #       - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
           - label: "Membros" 
-                      name: "membros" 
-                      widget: "list" 
-                      max: 10
-                      fields:
-                        - {label: "Nome e sobrenome", name: "nome", widget: "string"}
-                        - {label: "Imagem", name: "imagem", widget: "image"}
-                        - {label: "Posição", name: "posicao", widget: "select",  options: ["Presidência", "Vice-Presidência", "Projetos", "Administrativo Financeiro", "Comercial", "Gestão de Pessoas", "Marketing", "Trainee"], default: ["Trainee"]}
-                        - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
+            name: "membros" 
+            widget: "list" 
+            max: 10
+            fields:
+              - {label: "Nome e sobrenome", name: "nome", widget: "string"}
+              - {label: "Imagem", name: "imagem", widget: "image"}
+              - {label: "Posição", name: "posicao", widget: "select",  options: ["Presidência", "Vice-Presidência", "Projetos", "Administrativo Financeiro", "Comercial", "Gestão de Pessoas", "Marketing", "Trainee"], default: ["Trainee"]}
+              - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
 
 
 
