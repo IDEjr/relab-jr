@@ -20,7 +20,7 @@ export default function quemSomos({paginas}) {
       <Inicio title = {"QUEM SOMOS"} image= {path}/>
       <TextoBarraQuemSomos />
       <Valores />
-      <CardMembros />
+      {/* <CardMembros /> */}
       <div></div>
       <ul className={styles['exemplo-list']}>
         {paginas[2].painelMembros.membros && paginas[2].painelMembros.membros.map((membros, i) => (
