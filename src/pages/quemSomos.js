@@ -6,30 +6,45 @@ import Footer from '../components/footer'
 import TextoBarraQuemSomos from '../components/textoBarraQuemSomos'
 import styles from '../styles/quemSomos.module.css'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
-import imagemInicioQuemSomos from '../../public/uploads/image/inicio/imagemInicioQuemSomos.jpg'
 
 
-export default function quemSomos({membros, imagensInicio}) {
-  console.log(membros);
+export default function quemSomos({paginas}) {
+  // console.log(membros);
 
-  // pega imagem da home do netlify
-  let imagemInicioHome;
-  let img = [];
-
-  imagensInicio.map((imagemInicio, i) => {
-    img[i] = imagemInicio.imagem
-  });
-
-  imagemInicioHome = img[1]
-
-
-  const path = imagemInicioQuemSomos
+  const path = paginas[2].inicioQuemSomos.imagem;
   return (
     <>
       <Navbar />
       <Inicio title = {"QUEM SOMOS"} image= {path}/>
       <TextoBarraQuemSomos />
       <ul className={styles['exemplo-list']}>
+        {paginas[2].painelMembros.membros && paginas[2].painelMembros.membros.map((membros, i) => (
+          <Link target="_blank" href={`${membros.membro.linkedin}`} className={styles["link"]} key={i}>
+            <div className={styles["card"]}>
+              <p>{membros.membro.nome}</p>
+              <p>{membros.membro.posicao}</p>
+            </div>
+            <div>
+              <Image
+                src={`${membros.membro.imagem}`}
+                width={400}
+                height={500}
+                alt="Membro"
+              />
+            </div>
+          </Link>
+        ))}
+      </ul>
+      <Footer />
+    </>
+  );
+}
+
+
+
+
+
+{/* <ul className={styles['exemplo-list']}>
         {membros && membros.map((membro, i) => (
           <Link target="_blank" href={`${membro.linkedin}`} className={styles["link"]} key={i}>
             <div className={styles["card"]}>
@@ -46,11 +61,7 @@ export default function quemSomos({membros, imagensInicio}) {
             </div>
           </Link>
         ))}
-      </ul>
-      <Footer />
-    </>
-  );
-}
+      </ul> */}
 
 
 
@@ -77,9 +88,10 @@ export default function quemSomos({membros, imagensInicio}) {
 
 export async function getStaticProps() {
 
-  const membros = handleJSONfiles("./content/membros");
-  const imagensInicio = handleJSONfiles("./content/imagensInicio");
+  // const membros = handleJSONfiles("./content/membros");
+  const paginas = handleJSONfiles("./content/paginas");
+
   return {
-    props: { membros, imagensInicio },
+    props: { paginas }
   };
 }

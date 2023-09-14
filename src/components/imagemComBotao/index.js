@@ -1,21 +1,13 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import styles from './imagemComBotao.module.css'
 
 export default function imagemComBotao({ imagem, titulo, texto, textoBotao, link }) {
+  const img = {
+    '--bg-image': `url(${imagem})`
+  };
   return (
     <>
-      <div className={styles['container']}>
-      <Image
-      src={imagem}
-      // fill
-      style={{objectFit: 'cover'}}
-      // style={{background-size: 'cover'}}
-      width={1920}
-      height={1080}
-      alt='Imagem Resultados'
-      className={styles['background']}/>
-      {/* <div className={styles['box']}> */}
+      <div className={styles['container']} style={img}>
         <h2 className={styles['titulo']}>{titulo}</h2>
         <p className={styles['texto']}>{texto}</p>
         <div className={styles['boxBotao']}>
@@ -24,7 +16,6 @@ export default function imagemComBotao({ imagem, titulo, texto, textoBotao, link
           <h3 className={styles['botao']}>{textoBotao}</h3>
           </Link>
         </div>
-      {/* </div> */}
       </div>
     </>
   );

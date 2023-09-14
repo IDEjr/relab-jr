@@ -1,0 +1,75 @@
+{
+  "inicioQuemSomos": {
+    "imagem": "/uploads/imageminicioquemsomos.jpg",
+    "titulo": "QUEM SOMOS",
+    "texto1": "A RELAB Jr. Consultoria, empresa júnior da Unisinos, teve sua fundação em setembro de 2021, e hoje é federada junto à Federação das Empresas Juniores do Rio Grande do Sul - FEJERS.",
+    "texto2": "Nosso objetivo é nos tornarmos a empresa júnior referência na região metropolitana de Porto Alegre para micro e pequenas empresas nos principais setores de gestão empresarial, trazendo a inovação e a assertividade.\r\n\r\n"
+  },
+  "CarrosselQuemSomos": {
+    "imagensCarrossel": [
+      "/uploads/52439304239_c93c0802c7_o.png",
+      "/uploads/index.png",
+      "/uploads/imagemmembros.png"
+    ]
+  },
+  "membros": {
+    "nome": "Billy",
+    "posicao": "Presidência",
+    "linkedin": "https://www.linkedin.com/in/williamhgates/",
+    "imagem": "/uploads/bill_gates_2018.jpg"
+  },
+  "painelMembros": {
+    "membros": [
+      {
+        "membro": {
+          "posicao": "Presidência",
+          "nome": "Billy",
+          "imagem": "/uploads/bill_gates_2018.jpg",
+          "linkedin": "https://www.linkedin.com/in/williamhgates"
+        }
+      },
+      {
+        "membro": {
+          "posicao": "Presidência",
+          "nome": "bruno",
+          "imagem": "/uploads/idelogo-300x176.png",
+          "linkedin": "asssasawrwe"
+        }
+      },
+      {
+        "membro": {
+          "posicao": "Projetos",
+          "nome": "Luca Pasquetti Comelli Fritscher",
+          "imagem": "/uploads/eu_camisa_floral_laranja.jpg",
+          "linkedin": "https://br.linkedin.com/in/luca-pasquetti-comelli-fritscher"
+        }
+      },
+      {
+        "membro": {
+          "posicao": "Administrativo Financeiro",
+          "nome": "Warren Buffet da favelinha",
+          "imagem": "/uploads/warren_buffett_at_the_2015_selectusa_investment_summit_cropped_.jpg",
+          "linkedin": "https://www.linkedin.com/showcase/warren-edward-buffett"
+        }
+      },
+      {
+        "membro": {
+          "posicao": "Projetos",
+          "nome": "Maqui Zucken Bergue",
+          "linkedin": "https://www.linkedin.com/in/arthur-ferreira-ely-3a54761b9",
+          "imagem": "/uploads/mark_zuckerberg_f8_2019_keynote_32830578717_cropped_.jpg"
+        }
+      },
+      {
+        "membro": {
+          "posicao": [
+            "Trainee"
+          ],
+          "nome": "Mario Bombado",
+          "imagem": "/uploads/download.jpeg",
+          "linkedin": "https://www.linkedin.com/in/williamhgates"
+        }
+      }
+    ]
+  }
+}

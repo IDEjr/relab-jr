@@ -1,14 +1,16 @@
 .container {
   position: relative; /* Define o posicionamento relativo para o container */
   display: inline-block; /* Ou display: block, dependendo do layout desejado */
+  width: 100%;
 }
 
 
 .initImg {
-  max-width: 100%;
+  /* max-width: 100%; */ /*n entendi pq tava aqui ent comentei pq vai que era o problema*/
   height: auto;
   max-height: 850px;
-  filter: brightness(40%); 
+  filter: brightness(40%);
+  width: 100%;
 }
 
 
@@ -21,4 +23,5 @@
   padding: 10px; /* Adiciona algum espaço interno ao redor do texto */
   max-width: 600px; /* Defina a largura máxima desejada */
   word-wrap: break-word; /* Garante que as palavras se quebrem para a próxima linha */
+  width: 100%;
 }
