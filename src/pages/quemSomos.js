@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Inicio from '../components/inicio'
 import Navbar from '../components/navbar'
+import CardMembros from '../components/cardMembros'
 import Footer from '../components/footer'
 import TextoBarraQuemSomos from '../components/textoBarraQuemSomos'
 import Valores from '../components/valores'
@@ -19,6 +20,7 @@ export default function quemSomos({paginas}) {
       <Inicio title = {"QUEM SOMOS"} image= {path}/>
       <TextoBarraQuemSomos />
       <Valores />
+      <CardMembros />
       <div></div>
       <ul className={styles['exemplo-list']}>
         {paginas[2].painelMembros.membros && paginas[2].painelMembros.membros.map((membros, i) => (
