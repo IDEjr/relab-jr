@@ -6,11 +6,10 @@ import Footer from '../components/footer'
 import TextoBarraQuemSomos from '../components/textoBarraQuemSomos'
 import styles from '../styles/quemSomos.module.css'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
-import imagemInicioQuemSomos from '../../public/uploads/image/inicio/imagemInicioQuemSomos.jpg'
 
 
-export default function quemSomos({membros, paginas}) {
-  console.log(membros);
+export default function quemSomos({paginas}) {
+  // console.log(membros);
 
   const path = paginas[2].inicioQuemSomos.imagem;
   return (
@@ -18,7 +17,7 @@ export default function quemSomos({membros, paginas}) {
       <Navbar />
       <Inicio title = {"QUEM SOMOS"} image= {path}/>
       <TextoBarraQuemSomos />
-      <ul className={styles['exemplo-list']}>
+      {/* <ul className={styles['exemplo-list']}>
         {paginas[2].membros && paginas.map((membro, i) => (
           <Link target="_blank" href={`${membro.linkedin}`} className={styles["link"]} key={i}>
             <div className={styles["card"]}>
@@ -35,7 +34,7 @@ export default function quemSomos({membros, paginas}) {
             </div>
           </Link>
         ))}
-      </ul>
+      </ul> */}
       <Footer />
     </>
   );
@@ -89,10 +88,10 @@ export default function quemSomos({membros, paginas}) {
 
 export async function getStaticProps() {
 
-  const membros = handleJSONfiles("./content/membros");
+  // const membros = handleJSONfiles("./content/membros");
   const paginas = handleJSONfiles("./content/paginas");
 
   return {
-    props: { membros, paginas }
+    props: { paginas }
   };
 }
