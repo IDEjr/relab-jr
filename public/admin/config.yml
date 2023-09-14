@@ -192,18 +192,18 @@ collections:
 
 
           - label: "Membros" 
-              name: "membros" 
-              widget: "list" 
-              max: 10
+            name: "membros" 
+            widget: "list" 
+            max: 10
+            fields:
+            - label: "Membro"
+              name: "membro"
+              widget: "object"
               fields:
-              - label: "Membro"
-                name: "membro"
-                widget: "object"
-                fields:
-                  - {label: "Nome e sobrenome", name: "nome", widget: "string"}
-                  - {label: "Imagem", name: "imagem", widget: "image"}
-                  - {label: "Posição", name: "posicao", widget: "select",  options: ["Presidência", "Vice-Presidência", "Projetos", "Administrativo Financeiro", "Comercial", "Gestão de Pessoas", "Marketing", "Trainee"], default: ["Trainee"]}
-                  - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
+                - {label: "Nome e sobrenome", name: "nome", widget: "string"}
+                - {label: "Imagem", name: "imagem", widget: "image"}
+                - {label: "Posição", name: "posicao", widget: "select",  options: ["Presidência", "Vice-Presidência", "Projetos", "Administrativo Financeiro", "Comercial", "Gestão de Pessoas", "Marketing", "Trainee"], default: ["Trainee"]}
+                - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
 
 
             
