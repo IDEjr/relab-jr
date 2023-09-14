@@ -17,5 +17,59 @@
     "posicao": "Presidência",
     "linkedin": "https://www.linkedin.com/in/williamhgates/",
     "imagem": "/uploads/bill_gates_2018.jpg"
+  },
+  "painelMembros": {
+    "membros": [
+      {
+        "membro": {
+          "posicao": "Presidência",
+          "nome": "Billy",
+          "imagem": "/uploads/bill_gates_2018.jpg",
+          "linkedin": "https://www.linkedin.com/in/williamhgates"
+        }
+      },
+      {
+        "membro": {
+          "posicao": "Presidência",
+          "nome": "bruno",
+          "imagem": "/uploads/idelogo-300x176.png",
+          "linkedin": "asssasawrwe"
+        }
+      },
+      {
+        "membro": {
+          "posicao": "Projetos",
+          "nome": "Luca Pasquetti Comelli Fritscher",
+          "imagem": "/uploads/eu_camisa_floral_laranja.jpg",
+          "linkedin": "https://br.linkedin.com/in/luca-pasquetti-comelli-fritscher"
+        }
+      },
+      {
+        "membro": {
+          "posicao": "Administrativo Financeiro",
+          "nome": "Warren Buffet da favelinha",
+          "imagem": "/uploads/warren_buffett_at_the_2015_selectusa_investment_summit_cropped_.jpg",
+          "linkedin": "https://www.linkedin.com/showcase/warren-edward-buffett"
+        }
+      },
+      {
+        "membro": {
+          "posicao": "Projetos",
+          "nome": "Maqui Zucken Bergue",
+          "linkedin": "https://www.linkedin.com/in/arthur-ferreira-ely-3a54761b9",
+          "imagem": "/uploads/mark_zuckerberg_f8_2019_keynote_32830578717_cropped_.jpg"
+        }
+      },
+      {
+        "membro": {
+          "posicao": [
+            "Trainee"
+          ],
+          "nome": "Mario Bombado",
+          "imagem": "/uploads/download.jpeg",
+          "linkedin": "https://www.linkedin.com/in/williamhgates"
+        }
+      }
+    ]
   }
 }
