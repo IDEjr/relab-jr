@@ -10,25 +10,25 @@ import Inicio from '../components/inicio'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 
 
-export default function Home({pagina}) {
+export default function Home({paginas}) {
 
   // pega imagem da home do netlify
-  const path = pagina[1].inicioHome.imagem;
+  const path = paginas[1].inicioHome.imagem;
 
   // pega dados dos botões do netlify
 
   const resultados = {
-    imagem: pagina[1].imgbotaoRes.imagem,
-    titulo: pagina[1].imgbotaoRes.titulo,
-    texto: pagina[1].imgbotaoRes.texto,
+    imagem: paginas[1].imgBotaoRes.imagem,
+    titulo: paginas[1].imgBotaoRes.titulo,
+    texto: paginas[1].imgBotaoRes.texto,
     textoBotao: 'Entre em contato',
     link: 'servicos'
   };
 
   const membros = {
-    imagem: pagina[1].imgbotaoMem.imagem,
-    titulo: pagina[1].imgbotaoMem.titulo,
-    texto: pagina[1].imgbotaoMem.texto,
+    imagem: paginas[1].imgBotaoMem.imagem,
+    titulo: paginas[1].imgBotaoMem.titulo,
+    texto: paginas[1].imgBotaoMem.texto,
     textoBotao: 'Sejo membro',
     link: 'quemSomos'
   };
@@ -48,9 +48,9 @@ export default function Home({pagina}) {
 
 export async function getStaticProps() {
 
-  const pagina = handleJSONfiles("./content/paginas");
+  const paginas = handleJSONfiles("./content/paginas");
 
   return {
-    props: { pagina }
+    props: { paginas }
   };
 }

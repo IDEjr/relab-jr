@@ -9,17 +9,17 @@ import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import imagemInicioQuemSomos from '../../public/uploads/image/inicio/imagemInicioQuemSomos.jpg'
 
 
-export default function quemSomos({membros, pagina}) {
+export default function quemSomos({membros, paginas}) {
   console.log(membros);
 
-  const path = pagina[2].inicioQuemSomos.imagem;
+  const path = paginas[2].inicioQuemSomos.imagem;
   return (
     <>
       <Navbar />
       <Inicio title = {"QUEM SOMOS"} image= {path}/>
       <TextoBarraQuemSomos />
       <ul className={styles['exemplo-list']}>
-        {membros && membros.map((membro, i) => (
+        {paginas[2].membros && paginas.map((membro, i) => (
           <Link target="_blank" href={`${membro.linkedin}`} className={styles["link"]} key={i}>
             <div className={styles["card"]}>
               <p>{membro.nome}</p>
@@ -40,6 +40,29 @@ export default function quemSomos({membros, pagina}) {
     </>
   );
 }
+
+
+
+
+
+{/* <ul className={styles['exemplo-list']}>
+        {membros && membros.map((membro, i) => (
+          <Link target="_blank" href={`${membro.linkedin}`} className={styles["link"]} key={i}>
+            <div className={styles["card"]}>
+              <p>{membro.nome}</p>
+              <p>{membro.posicao}</p>
+            </div>
+            <div>
+              <Image
+                src={`${membro.imagem}`}
+                width={400}
+                height={500}
+                alt="Membro"
+              />
+            </div>
+          </Link>
+        ))}
+      </ul> */}
 
 
 
@@ -67,9 +90,9 @@ export default function quemSomos({membros, pagina}) {
 export async function getStaticProps() {
 
   const membros = handleJSONfiles("./content/membros");
-  const pagina = handleJSONfiles("./content/paginas");
+  const paginas = handleJSONfiles("./content/paginas");
 
   return {
-    props: { membros, pagina }
+    props: { membros, paginas }
   };
 }

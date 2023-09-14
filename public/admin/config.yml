@@ -98,7 +98,7 @@ collections:
 
 
           - label: "Imagem Com Botão Resultados"
-            name: "imgbotaoRes"
+            name: "imgBotaoRes"
             widget: "object"
             fields:
               - {label: "Imagem", name: "imagem", widget: "image"}
@@ -125,7 +125,7 @@ collections:
 
 
           - label: "Imagem Com Botão Membros"
-            name: "imgbotaoMem"
+            name: "imgBotaoMem"
             widget: "object"
             fields:
               - {label: "Imagem", name: "imagem", widget: "image"}
@@ -174,6 +174,7 @@ collections:
           - label: "Membros"
             name: "membros"
             widget: "object"
+            create: true # Permite que usuários criem arquivos nesse local
             fields: # Campos disponíveis no Netlify
                 - {label: "Nome e sobrenome", name: "nome", widget: "string"}
                 - {label: "Imagem", name: "imagem", widget: "image"}

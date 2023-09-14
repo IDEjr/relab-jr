@@ -5,9 +5,9 @@ import styles from '../styles/servicos.module.css'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 
 
-export default function servicos({pagina}) {
+export default function servicos({paginas}) {
 
-  const path = pagina[3].inicioServicos.imagem;
+  const path = paginas[3].inicioServicos.imagem;
 
   return (
     <>
@@ -21,9 +21,9 @@ export default function servicos({pagina}) {
 
 export async function getStaticProps() {
 
-  const pagina = handleJSONfiles("./content/paginas");
+  const paginas = handleJSONfiles("./content/paginas");
 
   return {
-    props: { pagina }
+    props: { paginas }
   };
 }
