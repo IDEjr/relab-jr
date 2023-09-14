@@ -17,16 +17,16 @@ export default function quemSomos({paginas}) {
       <Navbar />
       <Inicio title = {"QUEM SOMOS"} image= {path}/>
       <TextoBarraQuemSomos />
-      {/* <ul className={styles['exemplo-list']}>
-        {paginas[2].membros && paginas.map((membro, i) => (
-          <Link target="_blank" href={`${membro.linkedin}`} className={styles["link"]} key={i}>
+      <ul className={styles['exemplo-list']}>
+        {paginas[2].painelMembros.membros && paginas[2].painelMembros.membros.map((membros, i) => (
+          <Link target="_blank" href={`${membros.membro.linkedin}`} className={styles["link"]} key={i}>
             <div className={styles["card"]}>
-              <p>{membro.nome}</p>
-              <p>{membro.posicao}</p>
+              <p>{membros.membro.nome}</p>
+              <p>{membros.membro.posicao}</p>
             </div>
             <div>
               <Image
-                src={`${membro.imagem}`}
+                src={`${membros.membro.imagem}`}
                 width={400}
                 height={500}
                 alt="Membro"
@@ -34,7 +34,7 @@ export default function quemSomos({paginas}) {
             </div>
           </Link>
         ))}
-      </ul> */}
+      </ul>
       <Footer />
     </>
   );
