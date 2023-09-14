@@ -287,7 +287,7 @@ collections:
             name: "ingredients" 
             widget: "list" 
             max: 10
-            field:
+            fields:
             - label: "Ingredient"
               name: "ingredient"
               widget: "object"
