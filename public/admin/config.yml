@@ -49,6 +49,36 @@ collections:
       - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
 
 
+
+  - label: "Navbar e Footer"
+    name: "navFooter"
+    files:
+      - label: "Navbar"
+        name: "navbar"
+        file: "content/navFooter/navbar.json"
+        extension: "json"
+        format: "json"
+        editor:
+        preview: false
+        fields:
+          - {label: "Logo", name: "logo", widget: "image"}
+
+      - label: "Footer"
+        name: "footer"
+        file: "content/navFooter/footer.json"
+        extension: "json"
+        format: "json"
+        editor:
+        preview: false
+        fields:
+          - {label: "Logo", name: "logo", widget: "image"}
+          - {label: "Copyright", name: "copy", widget: "string"}
+          - {label: "Watermark1", name: "watermark1", widget: "image"}
+          - {label: "Watermark2", name: "watermark2", widget: "image"}
+          - {label: "Watermark3", name: "watermark3", widget: "image"}
+          - {label: "Background", name: "background", widget: "image"}
+
+
 # PÁGINAS--------------------------------------------------------------------------------------------------------
 
 
