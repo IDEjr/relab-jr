@@ -229,21 +229,21 @@ collections:
               - {label: "Imagem", name: "imagem", widget: "image"}
               - {label: "Título", name: "titulo", widget: "string"}
 
-
-          - label: "Menu Blog"
-            name: "menuBlog" 
-            widget: "object" 
-            fields:
-              - label: "Gêneros" 
-                name: "generos" 
-                widget: "list"
-                min: 4
-                fields:
-                  - label: "Gênero"
-                    name: "genero"
-                    widget: "object"
-                    fields:
-                      - {label: "Gênero", name: "genero", widget: "string"}
+          # ACHO QUE DA PRA PEGAR OS GÊNEROS DOS PRÓPRIOS POSTS
+          # - label: "Menu Blog"
+          #   name: "menuBlog" 
+          #   widget: "object" 
+          #   fields:
+          #     - label: "Gêneros" 
+          #       name: "generos" 
+          #       widget: "list"
+          #       min: 4
+          #       fields:
+          #         - label: "Gênero"
+          #           name: "genero"
+          #           widget: "object"
+          #           fields:
+          #             - {label: "Gênero", name: "genero", widget: "string"}
 
 
 # PÁGINAS--------------------------------------------------------------------------------------------------------
