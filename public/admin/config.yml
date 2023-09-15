@@ -18,32 +18,16 @@ locale: 'pt'
 collections:
 
 
-
-
-
-  # - name: "membros" # Nome usado da rota
-  #   extension: "json"
-  #   description: "Membros da Relab Jr."
-  #   label: "Membros"
-  #   folder: "content/membros" # Local da pasta onde vão estar os arquivos
-  #   create: true # Permite que usuários criem arquivos nesse local
-  #   fields: # Campos disponíveis no Netlify
-  #     - {label: "Nome e sobrenome", name: "nome", widget: "string"}
-  #     - {label: "Imagem", name: "imagem", widget: "image"}
-  #     - {label: "Posição", name: "posicao", widget: "select",  options: ["Presidência", "Vice-Presidência", "Projetos", "Administrativo Financeiro", "Comercial", "Gestão de Pessoas", "Marketing", "Trainee"], default: ["Trainee"]}
-  #     - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
-
-
-  - name: "posts" # Nome usado da rota
+  - label: "Posts"
+    name: "posts" # Nome usado da rota
     extension: "json"
     description: "Posts da Relab Jr"
-    label: "Posts"
     folder: "content/posts" # Local da pasta onde vão estar os arquivos
     create: true # Permite que usuários criem arquivos nesse local
     slug: "{{fields.titulo}}" # Nome que vai ficar no URL da página
     fields: # Campos disponíveis no Netlify
       - {label: "Visível", name: "bool", widget: "boolean", default: true}
-      - {label: "Assunto", name: "assunto", widget: "select", options: ["outros", "economia", "social"], default: ["outros"]}
+      - {label: "Gênero", name: "genero", widget: "select", options: ["outros", "economia", "social"], default: ["outros"]}
       - {label: "Autor(a)", name: "autor", widget: "string"}
       - {label: "Data", name: "data", widget: "date", date_format: "DD.MM.YYYY"}
       - {label: "Título", name: "titulo", widget: "string"}
@@ -51,34 +35,12 @@ collections:
       - {label: "Imagem", name: "imagem", widget: "image", required: false}
 
 
-  # - name: "imagensComBotao" # Nome usado da rota
-  #   extension: "json"
-  #   description: "Imagens que vão atrás dos botões de redirecionamento na Home"
-  #   label: "ImagensComBotao"
-  #   folder: "content/imagensComBotao" # Local da pasta onde vão estar os arquivos
-  #   create: true # Permite que usuários criem arquivos nesse local
-  #   fields: # Campos disponíveis no Netlify
-  #     - {label: "Título", name: "titulo", widget: "string"}
-  #     - {label: "Imagem", name: "imagem", widget: "image"}
-
-
-  # - name: "imagensInicio" # Nome usado da rota
-  #   extension: "json"
-  #   description: "Imagens no início das páginas"
-  #   label: "ImagensInicio"
-  #   folder: "content/imagensInicio" # Local da pasta onde vão estar os arquivos
-  #   create: true # Permite que usuários criem arquivos nesse local
-  #   fields: # Campos disponíveis no Netlify
-  #     - {label: "Título", name: "titulo", widget: "string"}
-  #     - {label: "Imagem", name: "imagem", widget: "image"}
-
-
 
 # PÁGINAS--------------------------------------------------------------------------------------------------------
 
 
-  - name: "paginas"
-    label: "Páginas"
+  - label: "Páginas"
+    name: "paginas"
     files:
       - label: "Home"
         name: "paginaHome"
@@ -142,6 +104,8 @@ collections:
               - {label: "Instagram", name: "instagram", widget: "string"}
 
 
+
+
       - label: "Página Quem Somos"
         name: "paginaQuemSomos"
         file: "content/paginas/quemSomos.json"
@@ -187,25 +151,6 @@ collections:
               - {label: "Texto 4", name: "texto4", widget: "markdown"}
 
 
-          # - label: "Membros"
-          #   name: "membros"
-          #   widget: "list"
-          #   create: true # Permite que usuários criem arquivos nesse local
-          #   fields: # Campos disponíveis no Netlify
-          #       - {label: "Nome e sobrenome", name: "nome", widget: "string"}
-          #       - {label: "Imagem", name: "imagem", widget: "image"}
-          #       - {label: "Posição", name: "posicao", widget: "select",  options: ["Presidência", "Vice-Presidência", "Projetos", "Administrativo Financeiro", "Comercial", "Gestão de Pessoas", "Marketing", "Trainee"], default: ["Trainee"]}
-          #       - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
-          # - label: "Membros" 
-          #   name: "membros" 
-          #   widget: "list" 
-          #   max: 10
-          #   fields:
-          #     - {label: "Nome e sobrenome", name: "nome", widget: "string"}
-          #     - {label: "Imagem", name: "imagem", widget: "image"}
-          #     - {label: "Posição", name: "posicao", widget: "select",  options: ["Presidência", "Vice-Presidência", "Projetos", "Administrativo Financeiro", "Comercial", "Gestão de Pessoas", "Marketing", "Trainee"], default: ["Trainee"]}
-          #     - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
-
           - label: "Painel Membros"
             name: "painelMembros" 
             widget: "object" 
@@ -225,30 +170,6 @@ collections:
                       - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
 
 
-
-
-
-# - label: "Carrossel Quem Somos"
-#             name: "CarrosselQuemSomos"
-#             widget: "object"
-#             fields:
-#               - label: "Imagens Carrossel"
-#                 name: "imagensCarrossel"
-#                 widget: "list"
-#                 min: 3
-#                 max: 10
-#                 field: {label: "Imagem", name: "imagem", widget: "image"}
-
-
-  # - name: "CarrosselQuemSomos" # Nome usado da rota
-  #   extension: "json"
-  #   description: "Imagens do carrossel da página Quem Somos"
-  #   label: "Carrossel Quem Somos"
-  #   folder: "content/carrosselQuemSomos" # Local da pasta onde vão estar os arquivos
-  #   fields: # Campos disponíveis no Netlify
-  #     - {label: "Ingredients", name: "ingredients", widget: "list", max: 10}
-  #     field:
-  #     - {label: "Ingredient", name: "ingredient", widget: "string"}
 
       - label: "Página Serviços"
         name: "paginaServicos"
@@ -309,57 +230,5 @@ collections:
               - {label: "Título", name: "titulo", widget: "string"}
 
 
+
 # PÁGINAS--------------------------------------------------------------------------------------------------------
-
-
-
-
-  # - name: "recipe" 
-  #   label: "Recipe" 
-  #   folder: "content/recipes" # The path to the folder where the documents are stored
-  #   create: true # Allow users to create new documents in this collection
-  #   slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-  #   fields: # The fields for each document, usually in front matter
-  #     - {label: "Title", name: "title", widget: "string"}
-  #     - {label: "Publish Date", name: "date", widget: "datetime", date_format: "DD.MM.YYYY", time_format: "HH:mm", format: "LLL"}
-  #     - {label: "Photo", name: "photo", widget: "image"}
-  #     - label: "HowToMake"
-  #       name: "howtomake"
-  #       widget: "object"
-  #       fields:
-  #         - label: "Ingredients" 
-  #           name: "ingredients" 
-  #           widget: "list" 
-  #           max: 10
-  #           field: {label: "Ingredient", name: "ingredient", widget: "string"}
-  #         - label: "Instructions"
-  #           name: "instructions"
-  #           widget: "text"
-
-
-  - name: "recipe" 
-    label: "Recipe" 
-    folder: "content/recipes" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime", date_format: "DD.MM.YYYY", time_format: "HH:mm", format: "LLL"}
-      - {label: "Photo", name: "photo", widget: "image"}
-      - label: "HowToMake"
-        name: "howtomake"
-        widget: "object"
-        fields:
-          - label: "Ingredients" 
-            name: "ingredients" 
-            widget: "list" 
-            max: 10
-            fields:
-            - label: "Ingredient"
-              name: "ingredient"
-              widget: "object"
-              fields:
-                - {label: "Nome e sobrenome", name: "nome", widget: "string"}
-                - {label: "Imagem", name: "imagem", widget: "image"}
-                - {label: "Posição", name: "posicao", widget: "select",  options: ["Presidência", "Vice-Presidência", "Projetos", "Administrativo Financeiro", "Comercial", "Gestão de Pessoas", "Marketing", "Trainee"], default: ["Trainee"]}
-                - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
