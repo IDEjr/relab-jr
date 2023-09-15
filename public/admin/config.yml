@@ -41,6 +41,7 @@ collections:
     description: "Membros da Relab Jr"
     folder: "content/membros" # Local da pasta onde vão estar os arquivos
     create: true # Permite que usuários criem arquivos nesse local
+    slug: "{{fields.nome}}" # Nome que vai ficar no URL da página
     # fields: # Campos disponíveis no Netlify
     # widget: "object" 
     fields:
