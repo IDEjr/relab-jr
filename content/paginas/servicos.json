@@ -1,8 +1,28 @@
 {
   "inicioServicos": {
     "texto1": "O que podemos fazer pela sua empresa?",
-    "texto2": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget libero viverra velit pellentesque hendrerit. Donec interdum dolor nisl, at rhoncus dolor consectetur euismod. Aliquam scelerisque finibus egestas. Mauris augue purus, faucibus sit amet elit vitae, porta interdum nisl. Proin sed velit sed mauris finibus congue vitae non neque. Maecenas laoreet quam nibh, a bibendum magna suscipit non. Integer mi nisi, volutpat vel magna ac, accumsan interdum massa. Aliquam sed dolor a ligula malesuada fringilla. Ut suscipit dolor sit amet tellus auctor consequat. Maecenas eget elit neque.",
+    "texto2": "Na Relab Jr. estamos prontos para impulsionar o seu negócio. Podemos ajudá-lo a desbloquear seu potencial máximo, superar desafios e alcançar novos patamares de sucesso. Nossos serviços personalizados, desde Modelação de Negócios até Gestão de Pessoas, são projetados para atender às necessidades exclusivas da sua empresa. Com uma equipe comprometida e valores sólidos, estamos preparados para enfrentar qualquer desafio que sua empresa possa enfrentar. Deixe-nos ser seu parceiro de confiança na busca pelo crescimento e pela excelência. Descubra como podemos fazer a diferença para o seu negócio.",
     "titulo": "SERVIÇOS",
     "imagem": "/uploads/imageminicioservicos.jpg"
+  },
+  "servicos": {
+    "imagem2": "/uploads/1113005.jpg",
+    "imagem3": "/uploads/1113005.jpg",
+    "imagem4": "/uploads/1113005.jpg",
+    "imagem5": "/uploads/1113005.jpg",
+    "imagem6": "/uploads/1113005.jpg",
+    "texto1": "Nossa equipe especializada vai além da concepção de ideias. Com a Modelação de Negócios, transformamos seus conceitos em planos tangíveis. Desenvolvemos estratégias personalizadas para garantir que seu negócio comece com o pé direito, sustentável e preparado para enfrentar os desafios.",
+    "texto2": "Avaliamos a saúde financeira do seu projeto. Oferecemos uma análise profunda dos custos, investimentos e projeções de retorno. Com a Viabilidade Econômica, você toma decisões embasadas e constrói um futuro financeiramente sólido.",
+    "texto3": "Gerencie suas finanças com clareza. Com nossa Análise da Saúde Financeira e Planilha, ajudamos a mapear seu fluxo de caixa, despesas e faturamento. Assim, você toma decisões informadas para maximizar seus lucros.",
+    "servico1": "Modelação de Negócios",
+    "texto4": "Defina um caminho claro para o sucesso. Com o Planejamento Estratégico, ajudamos a estabelecer metas sólidas, identificamos oportunidades e criamos um roteiro prático para o crescimento sustentável de sua empresa.\r",
+    "servico2": "Viabilidade Econômica",
+    "texto5": "Conquistar e manter clientes é essencial. Com a Captação de Clientes, você entenderá o comportamento do seu público-alvo e criará estratégias eficazes de aquisição. Aumente suas vendas e expanda sua base de clientes.",
+    "servico3": "Análise da Saúde Financeira + Planilha",
+    "texto6": "As pessoas são seu ativo mais valioso. Oferecemos soluções abrangentes para a Gestão de Pessoas, desde estruturar processos seletivos até otimizar a jornada dos membros da equipe. Melhore a cultura organizacional e alcance o máximo potencial.",
+    "servico4": "Planejamento Estratégico",
+    "servico5": "Captação de Clientes",
+    "servico6": "Gestão de Pessoas",
+    "imagem1": "/uploads/1113005.jpg"
   }
 }

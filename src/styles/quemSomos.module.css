@@ -1,5 +1,6 @@
 .tudo{
   width: 100%;
+  background-color: white;
 }
 
 
@@ -34,11 +35,6 @@
 }
 
 
-.tudo{
-  background-color: #262626;
-}
-
-
 .container {
   text-align: center;
   padding: 20px;
@@ -62,29 +58,24 @@
   text-align: start;
   margin: auto;
   width: max-content; */
-
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: auto;
   max-width: 1200px;
   padding: 0;
-  list-style: none;
+  /* list-style: none; */
 }
 
 
-.exemplo-list a {
-  color: rgb(4, 165, 165);
-  text-decoration: underline;
-
-
+/* .exemplo-list a {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 400px;
   margin: 10px;
   transition: transform 0.3s ease-in-out;
-}
+} */
 
 
 .card{

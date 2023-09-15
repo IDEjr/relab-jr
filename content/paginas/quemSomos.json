@@ -33,7 +33,7 @@
           "posicao": "Presidência",
           "nome": "bruno",
           "imagem": "/uploads/idelogo-300x176.png",
-          "linkedin": "asssasawrwe"
+          "linkedin": "https://www.linkedin.com/company/empresa-j%C3%BAnior-ide/mycompany/"
         }
       },
       {
@@ -71,5 +71,16 @@
         }
       }
     ]
+  },
+  "valores": {
+    "texto1": "Na Relab Jr., a disciplina é a base do nosso sucesso. Mantemos um foco incansável na excelência e na entrega de resultados consistentes.",
+    "texto2": "Nosso compromisso com nossos clientes e nossa equipe é inabalável. Estamos dedicados a superar expectativas.",
+    "texto3": "A lealdade é nossa força. Valorizamos relacionamentos sólidos e integridade em tudo o que fazemos.",
+    "texto4": "Trabalhamos incansavelmente para alcançar nossos objetivos. O trabalho árduo é o coração da nossa jornada para o sucesso.",
+    "titulo1": "Disciplina",
+    "titulo2": "Compromisso",
+    "titulo": "VALORES RELAB JR.",
+    "titulo3": "Lealdade",
+    "titulo4": "Trabalho"
   }
 }
