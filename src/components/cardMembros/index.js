@@ -16,10 +16,7 @@ export default function cardMembros({ nome, posicao, imagem, linkedin }) {
                 fill
                 cover
                 style={{objectFit: 'cover'}}
-                // width={500}
-                // height={300}
                 alt='Foto Membro'
-                // className={styles['background']}
                 />
               </div>
           </div>
@@ -28,31 +25,3 @@ export default function cardMembros({ nome, posicao, imagem, linkedin }) {
     </>
   );
 }
-
-
-// export default function cardMembros({ nome, posicao, imagem, linkedin }) {
-//   return (
-//     <>
-//       <Link href={linkedin} target="_blank">
-//         <div className={styles['container']}>
-//           <div className={styles['box']}>
-//             <h2 className={styles['titulo']}>{nome}</h2>
-//             <p className={styles['texto']}>{posicao}</p>
-//             <div className={styles['img']}>
-//               <Image
-//                 src={imagem}
-//                 fill
-//                 // cover
-//                 style={{objectFit: 'cover'}}
-//                 // width={500}
-//                 // height={300}
-//                 alt='Foto Membro'
-//                 // className={styles['background']}
-//                 />
-//               </div>
-//           </div>
-//         </div>
-//       </Link>
-//     </>
-//   );
-// }

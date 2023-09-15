@@ -7,8 +7,8 @@
     width: 250px;
     position: relative;
     text-align: center;
+    margin: 40px;
 }
-
 
     
 .box {
@@ -22,50 +22,24 @@
     justify-content: space-between;
 }
 
-/* .exemplo-list {
-  
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: auto;
-    max-width: 1200px;
-    padding: 0;
-    list-style: none;
-  }
-  
-  
-  .exemplo-list a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 400px;
-    margin: 10px;
-    transition: transform 0.3s ease-in-out;
-  } */
-
-
-
-
 
 .link {
     text-decoration: none;
 }
 
+
 .img {
     position: relative; 
-    width: 100%; /* Adjust to your desired width */
-    height: 66%; /* Adjust to your desired height */
-    overflow: hidden; /* This will ensure the image doesn't exceed the boundaries of the container */
+    width: 100%;
+    height: 66%;
+    overflow: hidden;
 }
-
 
 
 .nome {
     display: flex;
     align-items: flex-end;
     flex: 1;
-    /* font-size: 2rem; */
-    /* margin-bottom: 10px; */
     padding-bottom: 5vh;
 }
 
@@ -73,21 +47,27 @@
 .posicao {
     flex: 1;
     font-size: 1rem;
-    /* width: 70%; */
-    /* line-height: 2rem; */
 }
 
+@media only screen and (max-width: 768px) {
 
-.boxBotao {
-    flex: 1;
-}
+    .container {
+        height: 400px;
+        width: 200px;
+        margin: 60px;
+    }
 
+    .box {
+        width: 250px;
+        height: 350px;
+    }
 
-.botao {
-    padding: 0.5rem 3rem;
-    background-color: transparent;
-    color: #f2c12e;
-    border: 2px solid #f2c12e;
-    cursor: pointer;
-    font-size: 1.5rem;
+    .nome {
+        font-size: 1.5rem;
+    }
+
+    .posicao {
+        font-size: 1rem;
+    }
+
 }
