@@ -31,6 +31,7 @@ collections:
       - {label: "Autor(a)", name: "autor", widget: "string"}
       - {label: "Data", name: "data", widget: "date", date_format: "DD.MM.YYYY"}
       - {label: "Título", name: "titulo", widget: "string"}
+      - {label: "Prévia", name: "previa", widget: "markdown"}
       - {label: "Conteúdo", name: "conteudo", widget: "markdown"}
       - {label: "Imagem", name: "imagem", widget: "image", required: false}
 
@@ -72,6 +73,9 @@ collections:
         preview: false
         fields:
           - {label: "Logo", name: "logo", widget: "image"}
+          - {label: "Linkedin", name: "linkedin", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Instagram", name: "instagram", widget: "string"}
           - {label: "Copyright", name: "copy", widget: "string"}
           - {label: "Watermark1", name: "watermark1", widget: "image"}
           - {label: "Watermark2", name: "watermark2", widget: "image"}
@@ -163,6 +167,7 @@ collections:
             fields:
               - {label: "Imagem", name: "imagem", widget: "image"}
               - {label: "Título", name: "titulo", widget: "string"}
+              - {label: "Logo", name: "logo", widget: "image"}
               - {label: "Texto 1", name: "texto1", widget: "markdown"}
               - {label: "Texto 2", name: "texto2", widget: "markdown"}
 
