@@ -42,13 +42,7 @@ collections:
     folder: "content/membros" # Local da pasta onde vão estar os arquivos
     create: true # Permite que usuários criem arquivos nesse local
     slug: "{{fields.nome}}" # Nome que vai ficar no URL da página
-    # fields: # Campos disponíveis no Netlify
-    # widget: "object" 
     fields:
-      # - label: "Membro"
-      #   name: "membro"
-      #   widget: "object"
-      #   fields:
       - {label: "Nome e sobrenome", name: "nome", widget: "string"}
       - {label: "Imagem", name: "imagem", widget: "image"}
       - {label: "Posição", name: "posicao", widget: "select",  options: ["Presidência", "Vice-Presidência", "Projetos", "Administrativo Financeiro", "Comercial", "Gestão de Pessoas", "Marketing", "Trainee"], default: ["Trainee"]}
@@ -169,7 +163,7 @@ collections:
               - {label: "Título 4", name: "titulo4", widget: "string"}
               - {label: "Texto 4", name: "texto4", widget: "markdown"}
 
-
+          # VOU DEIXAR PQ VAI QUE USAMOS DPS, MAS EXISTE UM MODELO SÓ PARA OS MEMBROS
           # - label: "Painel Membros"
           #   name: "painelMembros" 
           #   widget: "object" 

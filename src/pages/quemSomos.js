@@ -11,8 +11,7 @@ import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
 
 
-export default function quemSomos({quemSomos}) {
-  // console.log(membros);
+export default function quemSomos({quemSomos, membros}) {
 
   const path = quemSomos.inicioQuemSomos.imagem;
   
@@ -23,13 +22,13 @@ export default function quemSomos({quemSomos}) {
       <TextoBarraQuemSomos />
       <Valores />
       <ul className={styles['exemplo-list']}>
-        {quemSomos.painelMembros.membros && quemSomos.painelMembros.membros.map((membros, i) => (
+        {membros && membros.map((membro, i) => (
           <CardMembros
             key={i}
-            nome={membros.membro.nome}
-            posicao={membros.membro.posicao}
-            imagem={membros.membro.imagem}
-            linkedin={membros.membro.linkedin}
+            nome={membro.nome}
+            posicao={membro.posicao}
+            imagem={membro.imagem}
+            linkedin={membro.linkedin}
           />
         ))}
       </ul>
@@ -45,9 +44,11 @@ export async function getStaticProps(){
   const caminho = "paginas";
   const pagina = "quemSomos";
   const quemSomos = handleJSONfile(`./content/${caminho}/${pagina}.json`);
-  // const membros = handleJSONfiles("./content/membros");
+
+  const pasta = "membros"
+  const membros = handleJSONfiles(`./content/${pasta}`);
 
   return {
-    props: { quemSomos },
+    props: { quemSomos, membros },
   };
 }
