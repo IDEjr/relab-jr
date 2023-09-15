@@ -1,6 +1,6 @@
 import styles from './navbar.module.css';
 import { useRef } from "react";
-import { FaBars, FaTimes, FaInstagram, FaLinkedin,FaTwitter  } from "react-icons/fa";
+import { FaBars, FaTimes, FaInstagram, FaLinkedin,FaTwitter} from "react-icons/fa";
 import classnames from 'classnames';
 
 
