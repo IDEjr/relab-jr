@@ -157,8 +157,8 @@ collections:
             fields:
               - label: "Membros" 
                 name: "membros" 
-                widget: "list" 
-                max: 50
+                widget: "list"
+                min: 6
                 fields:
                   - label: "Membro"
                     name: "membro"
@@ -229,6 +229,21 @@ collections:
               - {label: "Imagem", name: "imagem", widget: "image"}
               - {label: "Título", name: "titulo", widget: "string"}
 
+
+          - label: "Menu Blog"
+          name: "menuBlog" 
+          widget: "object" 
+          fields:
+            - label: "Gêneros" 
+              name: "generos" 
+              widget: "list"
+              min: 4
+              fields:
+                - label: "Gênero"
+                  name: "genero"
+                  widget: "object"
+                  fields:
+                    - {label: "Gênero", name: "genero", widget: "string"}
 
 
 # PÁGINAS--------------------------------------------------------------------------------------------------------
