@@ -15,14 +15,36 @@ export default function quemSomos({quemSomos}) {
   // console.log(membros);
 
   const path = quemSomos.inicioQuemSomos.imagem;
+  
   return (
     <>
       <Navbar />
       <Inicio title = {"QUEM SOMOS"} image= {path}/>
       <TextoBarraQuemSomos />
       <Valores />
-      {/* <CardMembros /> */}
-      <div></div>
+      <ul className={styles['exemplo-list']}>
+        {quemSomos.painelMembros.membros && quemSomos.painelMembros.membros.map((membros, i) => (
+          <CardMembros
+            key={i}
+            nome={membros.membro.nome}
+            posicao={membros.membro.posicao}
+            imagem={membros.membro.imagem}
+            linkedin={membros.membro.linkedin}
+          />
+        ))}
+      </ul>
+      {/* <Footer /> */}
+    </>
+  );
+}
+
+
+
+
+
+
+
+{/* <div></div>
       <ul className={styles['exemplo-list']}>
         {quemSomos.painelMembros.membros && quemSomos.painelMembros.membros.map((membros, i) => (
           <Link target="_blank" href={`${membros.membro.linkedin}`} className={styles["link"]} key={i}>
@@ -40,11 +62,20 @@ export default function quemSomos({quemSomos}) {
             </div>
           </Link>
         ))}
-      </ul>
-      {/* <Footer /> */}
-    </>
-  );
-}
+      </ul> */}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -72,6 +103,14 @@ export default function quemSomos({quemSomos}) {
     </>
   );
 }*/
+
+
+
+
+
+  
+
+
 
 
 
