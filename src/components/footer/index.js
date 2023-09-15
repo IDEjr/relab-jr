@@ -10,7 +10,6 @@ const handleMove = () => {
 
 export default function Footer() {
     return (
-        <>
             <div className={styles['footer']}>
                 <div className={styles['top-part']}>
                     <button onClick={handleMove} className={styles['relab-icon']}>
@@ -57,6 +56,5 @@ export default function Footer() {
                     </span>
                 </div>
             </div>
-        </>
     );
 }
