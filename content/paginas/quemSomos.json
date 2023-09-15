@@ -23,40 +23,40 @@
       {
         "membro": {
           "posicao": "Presidência",
-          "nome": "Billy",
+          "nome": "Membro 1",
           "imagem": "/uploads/bill_gates_2018.jpg",
-          "linkedin": "https://www.linkedin.com/in/williamhgates"
+          "linkedin": "https://www.linkedin.com/company/relabjr/"
         }
       },
       {
         "membro": {
           "posicao": "Presidência",
-          "nome": "bruno",
+          "nome": "Membro 2",
           "imagem": "/uploads/idelogo-300x176.png",
-          "linkedin": "https://www.linkedin.com/company/empresa-j%C3%BAnior-ide/mycompany/"
+          "linkedin": "https://www.linkedin.com/company/relabjr/"
         }
       },
       {
         "membro": {
           "posicao": "Projetos",
-          "nome": "Luca Pasquetti Comelli Fritscher",
+          "nome": "Membro 3",
           "imagem": "/uploads/eu_camisa_floral_laranja.jpg",
-          "linkedin": "https://br.linkedin.com/in/luca-pasquetti-comelli-fritscher"
+          "linkedin": "https://www.linkedin.com/company/relabjr/"
         }
       },
       {
         "membro": {
           "posicao": "Administrativo Financeiro",
-          "nome": "Warren Buffet da favelinha",
+          "nome": "Membro 4",
           "imagem": "/uploads/warren_buffett_at_the_2015_selectusa_investment_summit_cropped_.jpg",
-          "linkedin": "https://www.linkedin.com/showcase/warren-edward-buffett"
+          "linkedin": "https://www.linkedin.com/company/relabjr/"
         }
       },
       {
         "membro": {
           "posicao": "Projetos",
-          "nome": "Maqui Zucken Bergue",
-          "linkedin": "https://www.linkedin.com/in/arthur-ferreira-ely-3a54761b9",
+          "nome": "Membro 5",
+          "linkedin": "https://www.linkedin.com/company/relabjr/",
           "imagem": "/uploads/mark_zuckerberg_f8_2019_keynote_32830578717_cropped_.jpg"
         }
       },
@@ -65,9 +65,9 @@
           "posicao": [
             "Trainee"
           ],
-          "nome": "Mario Bombado",
+          "nome": "Membro 6",
           "imagem": "/uploads/download.jpeg",
-          "linkedin": "https://www.linkedin.com/in/williamhgates"
+          "linkedin": "https://www.linkedin.com/company/relabjr/"
         }
       }
     ]
