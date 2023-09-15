@@ -19,8 +19,8 @@ export default function navbar() {
     return(
         
             <header className={styles.cabecalho}>
-                <a className={styles.logo} >
-                    <h3>RELAB</h3>
+                <a href="/" className={styles.logo} >
+                    <h3>RELABJR</h3>
                 </a>
                 <nav className={styles.navbar} ref={navRef}>
                     <button className={
@@ -29,11 +29,11 @@ export default function navbar() {
                               styles.navRelabBtn
                             )
                           } ref={logoRef}>
-                        <h3>RELAB</h3>
+                        <h3>RELABJR</h3>
                     </button>
-                    <a href="/">HOME</a>
+                    {/*<a href="/">HOME</a>*/}
                     <a href="/quemSomos">QUEM SOMOS</a>
-                    <a href="/servicos">SERVICOS</a>
+                    <a href="/servicos">SERVIÇOS</a>
                     <a href="/blog">BLOG</a>
                     <button
                         className={

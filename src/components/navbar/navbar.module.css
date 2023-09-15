@@ -7,23 +7,33 @@
 }
 
 .cabecalho {
+	top: 0;
+	position: sticky;
+	z-index: 999;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 80px;
+	height: 100px;
 	padding: 0 2rem;
 	background-color: #262626;
 	color: white;
+}
+
+.navbar{
+	margin-left: auto;
+
 }
 
 .navbar a {
 	margin: 0 1rem;
 	color: white;
 	text-decoration: none;
+	font-size: 1.2rem;
 }
 
 .navbar a:hover {
-	color: #F2C12E;
+	color: #D9D9D9;
+	transition: .2s;
 }
 
 .cabecalho .navBtn {
@@ -48,6 +58,21 @@
 }
 
 
+
+@media only screen and (min-width: 1024px) {
+	.cabecalho .navBtn {
+		padding: 5px;
+		cursor: pointer;
+		background: transparent;
+		border: none;
+		outline: none;
+		color: white;
+		visibility: hidden;
+		opacity: 0;
+		font-size: 1.8rem;
+		display: none;
+	}
+}
 
 @media only screen and (max-width: 1024px) {
 	.cabecalho .navBtn {
