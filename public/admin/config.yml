@@ -268,22 +268,22 @@ collections:
               - {label: "Texto 2", name: "texto2", widget: "markdown"}
 
 
-      - label: "Serviços Relab Jr."
-        name: "servicos"
-        widget: "object"
-        fields:
-          - {label: "Serviço 1", name: "servico1", widget: "string"}
-          - {label: "Texto 1", name: "texto1", widget: "markdown"}
-          - {label: "Imagem 1", name: "imagem1", widget: "image"} 
-          - {label: "Serviço 2", name: "servico2", widget: "string"}
-          - {label: "Texto 2", name: "texto2", widget: "markdown"}
-          - {label: "Imagem 2", name: "imagem2", widget: "image"} 
-          - {label: "Serviço 3", name: "servico3", widget: "string"}
-          - {label: "Texto 3", name: "texto3", widget: "markdown"}
-          - {label: "Imagem 3", name: "imagem3", widget: "image"} 
-          - {label: "Serviço 4", name: "servico4", widget: "string"}
-          - {label: "Texto 4", name: "texto4", widget: "markdown"}
-          - {label: "Imagem 4", name: "imagem4", widget: "image"} 
+          - label: "Serviços Relab Jr."
+            name: "servicos"
+            widget: "object"
+            fields:
+              - {label: "Serviço 1", name: "servico1", widget: "string"}
+              - {label: "Texto 1", name: "texto1", widget: "markdown"}
+              - {label: "Imagem 1", name: "imagem1", widget: "image"} 
+              - {label: "Serviço 2", name: "servico2", widget: "string"}
+              - {label: "Texto 2", name: "texto2", widget: "markdown"}
+              - {label: "Imagem 2", name: "imagem2", widget: "image"} 
+              - {label: "Serviço 3", name: "servico3", widget: "string"}
+              - {label: "Texto 3", name: "texto3", widget: "markdown"}
+              - {label: "Imagem 3", name: "imagem3", widget: "image"} 
+              - {label: "Serviço 4", name: "servico4", widget: "string"}
+              - {label: "Texto 4", name: "texto4", widget: "markdown"}
+              - {label: "Imagem 4", name: "imagem4", widget: "image"} 
 
 
 
