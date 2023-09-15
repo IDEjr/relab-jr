@@ -4,6 +4,7 @@ import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import styles from '../styles/blog.module.css'
 import { handleJSONfiles } from '../utils/functions/jsonHandler'
+import { handleJSONfile } from '../utils/functions/jsonHandler'
 
 
 export default function blog({posts}) {
@@ -45,3 +46,14 @@ export async function getStaticProps() {
     props: { posts },
   };
 }
+
+// export async function getStaticProps(){
+
+//   const caminho = "posts";
+//   const pagina = "asas";
+//   const posts = handleJSONfile(`./content/${caminho}/${pagina}.json`);
+
+//   return {
+//     props: { posts },
+//   };
+// }

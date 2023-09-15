@@ -8,30 +8,31 @@ import ImagemComBotao from '../components/imagemComBotao'
 import ServicesHome from '../components/servicesHome'
 import Inicio from '../components/inicio'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
+import { handleJSONfile } from '@/utils/functions/jsonHandler'
 import React from 'react';
 
 
 
 
-export default function Home({paginas}) {
+export default function Home({home}) {
 
   // pega imagem da home do netlify
-  const path = paginas[1].inicioHome.imagem;
+  const path = home.inicioHome.imagem;
 
   // pega dados dos botões do netlify
 
   const resultados = {
-    imagem: paginas[1].imgBotaoRes.imagem,
-    titulo: paginas[1].imgBotaoRes.titulo,
-    texto: paginas[1].imgBotaoRes.texto,
+    imagem: home.imgBotaoRes.imagem,
+    titulo: home.imgBotaoRes.titulo,
+    texto: home.imgBotaoRes.texto,
     textoBotao: 'Entre em contato',
     link: 'servicos'
   };
 
   const membros = {
-    imagem: paginas[1].imgBotaoMem.imagem,
-    titulo: paginas[1].imgBotaoMem.titulo,
-    texto: paginas[1].imgBotaoMem.texto,
+    imagem: home.imgBotaoMem.imagem,
+    titulo: home.imgBotaoMem.titulo,
+    texto: home.imgBotaoMem.texto,
     textoBotao: 'Sejo membro',
     link: 'quemSomos'
   };
@@ -52,11 +53,23 @@ export default function Home({paginas}) {
 }
 
 
-export async function getStaticProps() {
+// export async function getStaticProps() {
 
-  const paginas = handleJSONfiles("./content/paginas");
+//   const paginas = handleJSONfiles("./content/paginas");
+
+//   return {
+//     props: { paginas }
+//   };
+// }
+
+
+export async function getStaticProps(){
+
+  const caminho = "paginas";
+  const pagina = "home";
+  const home = handleJSONfile(`./content/${caminho}/${pagina}.json`);
 
   return {
-    props: { paginas }
+    props: { home },
   };
 }
