@@ -274,16 +274,22 @@ collections:
             fields:
               - {label: "Serviço 1", name: "servico1", widget: "string"}
               - {label: "Texto 1", name: "texto1", widget: "markdown"}
-              - {label: "Imagem 1", name: "imagem1", widget: "image"} 
+              - {label: "Imagem 1", name: "imagem1", widget: "image"}
               - {label: "Serviço 2", name: "servico2", widget: "string"}
               - {label: "Texto 2", name: "texto2", widget: "markdown"}
-              - {label: "Imagem 2", name: "imagem2", widget: "image"} 
+              - {label: "Imagem 2", name: "imagem2", widget: "image"}
               - {label: "Serviço 3", name: "servico3", widget: "string"}
               - {label: "Texto 3", name: "texto3", widget: "markdown"}
-              - {label: "Imagem 3", name: "imagem3", widget: "image"} 
+              - {label: "Imagem 3", name: "imagem3", widget: "image"}
               - {label: "Serviço 4", name: "servico4", widget: "string"}
               - {label: "Texto 4", name: "texto4", widget: "markdown"}
-              - {label: "Imagem 4", name: "imagem4", widget: "image"} 
+              - {label: "Imagem 4", name: "imagem4", widget: "image"}
+              - {label: "Serviço 5", name: "servico5", widget: "string"}
+              - {label: "Texto 5", name: "texto5", widget: "markdown"}
+              - {label: "Imagem 5", name: "imagem5", widget: "image"}
+              - {label: "Serviço 6", name: "servico6", widget: "string"}
+              - {label: "Texto 6", name: "texto6", widget: "markdown"}
+              - {label: "Imagem 6", name: "imagem6", widget: "image"}
 
 
 
