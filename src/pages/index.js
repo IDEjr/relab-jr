@@ -53,16 +53,6 @@ export default function Home({home}) {
 }
 
 
-// export async function getStaticProps() {
-
-//   const paginas = handleJSONfiles("./content/paginas");
-
-//   return {
-//     props: { paginas }
-//   };
-// }
-
-
 export async function getStaticProps(){
 
   const caminho = "paginas";

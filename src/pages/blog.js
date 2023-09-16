@@ -3,12 +3,20 @@ import Image from 'next/image'
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import styles from '../styles/blog.module.css'
+import CardPosts from '../components/cardPosts'
 import { handleJSONfiles } from '../utils/functions/jsonHandler'
 import { handleJSONfile } from '../utils/functions/jsonHandler'
 
 
 export default function blog({posts}) {
   console.log(posts);
+
+  const cardPost = {
+    titulo: posts.titulo,
+    data: posts.data,
+    previa: posts.previa
+  };
+
   return (
     <>
       <Navbar />
@@ -33,6 +41,7 @@ export default function blog({posts}) {
           </div>
         ))}
       </ul>
+      <CardPosts {...cardPost}/>
       {/* <Footer /> */}
     </> 
   );
@@ -46,14 +55,3 @@ export async function getStaticProps() {
     props: { posts },
   };
 }
-
-// export async function getStaticProps(){
-
-//   const caminho = "posts";
-//   const pagina = "asas";
-//   const posts = handleJSONfile(`./content/${caminho}/${pagina}.json`);
-
-//   return {
-//     props: { posts },
-//   };
-// }
