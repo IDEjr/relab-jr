@@ -2,11 +2,11 @@
     font-size: large;
     display: flex;
     align-items: center;
-    padding-right: 50px;
+    padding-left: 1vw;
     flex-direction:column;
     gap:150px;
     padding:150px;
-    width: 100vmax;
+    max-width: 100%;
 }
 
 
@@ -21,6 +21,7 @@
     justify-content: center;
     gap:40px;
     width: 100%;
+    max-width: 100%;
 }
 
 
@@ -30,6 +31,7 @@
     justify-content: center;
     gap:40px;
     width: 100%;
+    max-width: 100%;
 }
 
 
