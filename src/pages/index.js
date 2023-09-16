@@ -40,12 +40,12 @@ export default function Home({home}) {
   return (
     <div className={styles['tudo']}>
       <React.Fragment>
-        <Navbar />
+        {/*<Navbar />*/}
       </React.Fragment>
       
       <Inicio title = {"GESTÃO É A NOSSA CAUSA"} image= {path}/>
       <ImagemComBotao {...resultados} />
-      {/* <ServicesHome /> */}
+      {<ServicesHome />}
       <ImagemComBotao {...membros} />        
       {/* <Footer /> */}
     </div>

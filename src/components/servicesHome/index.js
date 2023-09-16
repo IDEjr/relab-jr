@@ -46,15 +46,19 @@ export default function servicesHome({imageOne, imageTwo, imageThree, imageFour,
         <>
             <div className={styles['container']}>
                 <h1 className={styles['title-text']}>NOSSOS SERVIÇOS</h1>
-                <div className={styles['upper-part']}>
-                    {eachService("MODELAGEM DE NEGÓCIOS", imageOne)}
-                    {eachService("VIABILIDADE ECONÔMICA", imageTwo)}
-                    {eachService("ANÁLISE DA SAÚDE FINANCEIRA", imageThree)}
-                </div>
-                <div className={styles['lower-part']}>              
-                    {eachService("PLANEJAMENTO ESTRATÉGICO", imageFour)}
-                    {eachService("CAPTAÇÃO DE CLENTES", imageFive)}
-                    {eachService("GESTÃO DE PESSOAS", imageSix)}
+                <div className={styles['blocks-handler']}>
+                    <div className={styles['first-two']}>
+                        {eachService("MODELAGEM DE NEGÓCIOS", imageOne)}
+                        {eachService("VIABILIDADE ECONÔMICA", imageTwo)}
+                    </div>
+                    <div className={styles['second-two']}>
+                        {eachService("ANÁLISE DA SAÚDE FINANCEIRA", imageThree)}
+                        {eachService("PLANEJAMENTO ESTRATÉGICO", imageFour)}
+                    </div>
+                    <div className={styles['third-two']}>
+                        {eachService("CAPTAÇÃO DE CLENTES", imageFive)}
+                        {eachService("GESTÃO DE PESSOAS", imageSix)}
+                    </div>
                 </div>
             </div>
         </>
