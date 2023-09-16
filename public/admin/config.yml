@@ -16,73 +16,282 @@ search: false
 locale: 'pt'
 
 collections:
-  - name: "membros" # Nome usado da rota
-    extension: "json"
-    description: "Membros da Relab Jr."
-    label: "Membros"
-    folder: "content/membros" # Local da pasta onde vão estar os arquivos
-    create: true # Permite que usuários criem arquivos nesse local
-    slug: "{{fields.nome}}" # Nome que vai ficar no URL da página
-    fields: # Campos disponíveis no Netlify
-      - {label: "Nome e sobrenome", name: "nome", widget: "string"}
-      - {label: "Imagem", name: "imagem", widget: "image"}
-      - {label: "Posição", name: "posicao", widget: "select",  options: ["Presidência", "Vice-Presidência", "Projetos", "Administrativo Financeiro", "Comercial", "Gestão de Pessoas", "Marketing", "Trainee"], default: ["Trainee"]}
-      - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
 
-  - name: "posts" # Nome usado da rota
+
+  - label: "Posts"
+    name: "posts" # Nome usado da rota
     extension: "json"
     description: "Posts da Relab Jr"
-    label: "Posts"
     folder: "content/posts" # Local da pasta onde vão estar os arquivos
     create: true # Permite que usuários criem arquivos nesse local
     slug: "{{fields.titulo}}" # Nome que vai ficar no URL da página
     fields: # Campos disponíveis no Netlify
       - {label: "Visível", name: "bool", widget: "boolean", default: true}
-      - {label: "Assunto", name: "assunto", widget: "select", options: ["outros", "economia", "social"], default: ["outros"]}
+      - {label: "Gênero", name: "genero", widget: "select", options: ["outros", "economia", "social"], default: ["outros"]}
       - {label: "Autor(a)", name: "autor", widget: "string"}
       - {label: "Data", name: "data", widget: "date", date_format: "DD.MM.YYYY"}
       - {label: "Título", name: "titulo", widget: "string"}
+      - {label: "Prévia", name: "previa", widget: "markdown"}
       - {label: "Conteúdo", name: "conteudo", widget: "markdown"}
       - {label: "Imagem", name: "imagem", widget: "image", required: false}
 
-  - name: "imagensComBotao" # Nome usado da rota
-    extension: "json"
-    description: "Imagens que vão atrás dos botões de redirecionamento na Home"
-    label: "ImagensComBotao"
-    folder: "content/imagensComBotao" # Local da pasta onde vão estar os arquivos
-    create: true # Permite que usuários criem arquivos nesse local
-    slug: "{{fields.titulo}}" # Nome que vai ficar no URL da página
-    fields: # Campos disponíveis no Netlify
-      - {label: "Título", name: "titulo", widget: "string"}
-      - {label: "Imagem", name: "imagem", widget: "image"}
 
-  - name: "imagensInicio" # Nome usado da rota
+  - label: "Membros"
+    name: "Membros"
     extension: "json"
-    description: "Imagens no início das páginas"
-    label: "ImagensInicio"
-    folder: "content/imagensInicio" # Local da pasta onde vão estar os arquivos
+    description: "Membros da Relab Jr"
+    folder: "content/membros" # Local da pasta onde vão estar os arquivos
     create: true # Permite que usuários criem arquivos nesse local
-    slug: "{{fields.titulo}}" # Nome que vai ficar no URL da página
-    fields: # Campos disponíveis no Netlify
-      - {label: "Título", name: "titulo", widget: "string"}
+    slug: "{{fields.nome}}" # Nome que vai ficar no URL da página
+    fields:
+      - {label: "Nome e sobrenome", name: "nome", widget: "string"}
       - {label: "Imagem", name: "imagem", widget: "image"}
-  
-  # - name: "relab-jr" # Nome usado da rota
-  #   extension: "json"
-  #   description: "Coleção que vai conter todos os campos disponíveis no Netlify CMS."
-  #   label: "Todos os modelos" # Nome usado na label do Netlify 
-  #   folder: "content/exemplos" # Local da pasta onde vão estar os arquivos
-  #   create: true # Permite que usuários criem arquivos nesse local
-  #   slug: "{{fields.nome}}" # Nome que vai ficar no URL da página
-  #   fields: # Campos disponíveis no Netlify
-  #     - {label: "Boolean", name: "bool", widget: "boolean", default: true}
-  #     - {label: 'Cor', name: 'cor', widget: 'color', enableAlpha: true, allowInput: true}
-  #     - {label: "Título", name: "titulo", widget: "string"}
-  #     - {label: "Datas com horário", name: "data", widget: "datetime", date_format: "DD.MM.YYYY", time_format: "HH:mm", format: "LLL"}
-  #     - {label: "Arquivos", name: "arquivos", widget: "file", default: "/uploads/neander_VHDL.pdf"}
-  #     - {label: "Imagem", name: "imagem", widget: "image"}
-  #     - {label: "Localização", name: "localizacao", widget: "map"}
-  #     - {label: "Conteúdo", name: "conteudo", widget: "markdown"}
-  #     #- {label: "Números", name: "numeros", widget: "number", default: 100, value_type: "float", min: 0, max: 100, step: 0.5}
-  #     - {label: "Seleção", name: "selecao", widget: "select", multiple: true, min: 2, max: 3, options: ["um","dois","três"], default: ["dois"]}
-  #     - {label: "Texto", name: "texto", widget: "text"}
+      - {label: "Posição", name: "posicao", widget: "select",  options: ["Presidência", "Vice-Presidência", "Projetos", "Administrativo Financeiro", "Comercial", "Gestão de Pessoas", "Marketing", "Trainee"], default: ["Trainee"]}
+      - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
+
+
+
+  - label: "Navbar e Footer"
+    name: "navFooter"
+    files:
+      - label: "Navbar"
+        name: "navbar"
+        file: "content/navFooter/navbar.json"
+        extension: "json"
+        format: "json"
+        editor:
+        preview: false
+        fields:
+          - {label: "Logo", name: "logo", widget: "image"}
+
+      - label: "Footer"
+        name: "footer"
+        file: "content/navFooter/footer.json"
+        extension: "json"
+        format: "json"
+        editor:
+        preview: false
+        fields:
+          - {label: "Logo", name: "logo", widget: "image"}
+          - {label: "Linkedin", name: "linkedin", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Instagram", name: "instagram", widget: "string"}
+          - {label: "Copyright", name: "copy", widget: "string"}
+          - {label: "Watermark1", name: "watermark1", widget: "image"}
+          - {label: "Watermark2", name: "watermark2", widget: "image"}
+          - {label: "Watermark3", name: "watermark3", widget: "image"}
+          - {label: "Background", name: "background", widget: "image"}
+
+
+# PÁGINAS--------------------------------------------------------------------------------------------------------
+
+
+  - label: "Páginas"
+    name: "paginas"
+    files:
+      - label: "Home"
+        name: "paginaHome"
+        file: "content/paginas/home.json"
+        extension: "json"
+        format: "json"
+        editor:
+        preview: false
+        fields:
+          - label: "Início Home"
+            name: "inicioHome"
+            widget: "object"
+            fields:
+              - {label: "Imagem", name: "imagem", widget: "image"}
+              - {label: "Título", name: "titulo", widget: "string"}
+              - {label: "Texto", name: "texto", widget: "markdown"}
+
+
+          - label: "Imagem Com Botão Resultados"
+            name: "imgBotaoRes"
+            widget: "object"
+            fields:
+              - {label: "Imagem", name: "imagem", widget: "image"}
+              - {label: "Título", name: "titulo", widget: "string"}
+              - {label: "Texto", name: "texto", widget: "markdown"}
+
+
+          - label: "Nossos Serviços"
+            name: "servicosHome"
+            widget: "object"
+            fields:
+              - {label: "Serviço 1", name: "servico1", widget: "string"}
+              - {label: "Imagem 1", name: "imagem1", widget: "image"}
+              - {label: "Serviço 2", name: "servico2", widget: "string"}
+              - {label: "Imagem 2", name: "imagem2", widget: "image"}
+              - {label: "Serviço 3", name: "servico3", widget: "string"}
+              - {label: "Imagem 3", name: "imagem3", widget: "image"}
+              - {label: "Serviço 4", name: "servico4", widget: "string"}
+              - {label: "Imagem 4", name: "imagem4", widget: "image"}
+              - {label: "Serviço 5", name: "servico5", widget: "string"}
+              - {label: "Imagem 5", name: "imagem5", widget: "image"}
+              - {label: "Serviço 6", name: "servico6", widget: "string"}
+              - {label: "Imagem 6", name: "imagem6", widget: "image"}
+
+
+          - label: "Imagem Com Botão Membros"
+            name: "imgBotaoMem"
+            widget: "object"
+            fields:
+              - {label: "Imagem", name: "imagem", widget: "image"}
+              - {label: "Título", name: "titulo", widget: "string"}
+              - {label: "Texto", name: "texto", widget: "markdown"}
+
+
+          - label: "Conteúdo do Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - {label: "Linkedin", name: "linkedin", widget: "string"}
+              - {label: "Email", name: "email", widget: "string"}
+              - {label: "Instagram", name: "instagram", widget: "string"}
+
+
+
+
+      - label: "Página Quem Somos"
+        name: "paginaQuemSomos"
+        file: "content/paginas/quemSomos.json"
+        extension: "json"
+        format: "json"
+        editor:
+        preview: false
+        fields:
+          - label: "Início Quem Somos"
+            name: "inicioQuemSomos"
+            widget: "object"
+            fields:
+              - {label: "Imagem", name: "imagem", widget: "image"}
+              - {label: "Título", name: "titulo", widget: "string"}
+              - {label: "Logo", name: "logo", widget: "image"}
+              - {label: "Texto 1", name: "texto1", widget: "markdown"}
+              - {label: "Texto 2", name: "texto2", widget: "markdown"}
+
+
+          - label: "Carrossel Quem Somos"
+            name: "CarrosselQuemSomos"
+            widget: "object"
+            fields:
+              - label: "Imagens Carrossel"
+                name: "imagensCarrossel"
+                widget: "list"
+                min: 3
+                max: 10
+                field: {label: "Imagem", name: "imagem", widget: "image"}
+
+
+          - label: "Valores Relab Jr."
+            name: "valores"
+            widget: "object"
+            fields:
+              - {label: "Título", name: "titulo", widget: "string"}
+              - {label: "Título 1", name: "titulo1", widget: "string"}
+              - {label: "Texto 1", name: "texto1", widget: "markdown"}
+              - {label: "Título 2", name: "titulo2", widget: "string"}
+              - {label: "Texto 2", name: "texto2", widget: "markdown"}
+              - {label: "Título 3", name: "titulo3", widget: "string"}
+              - {label: "Texto 3", name: "texto3", widget: "markdown"}
+              - {label: "Título 4", name: "titulo4", widget: "string"}
+              - {label: "Texto 4", name: "texto4", widget: "markdown"}
+
+          # VOU DEIXAR PQ VAI QUE USAMOS DPS, MAS EXISTE UM MODELO SÓ PARA OS MEMBROS
+          # - label: "Painel Membros"
+          #   name: "painelMembros" 
+          #   widget: "object" 
+          #   fields:
+          #     - label: "Membros" 
+          #       name: "membros" 
+          #       widget: "list"
+          #       min: 6
+          #       fields:
+          #         - label: "Membro"
+          #           name: "membro"
+          #           widget: "object"
+          #           fields:
+          #             - {label: "Nome e sobrenome", name: "nome", widget: "string"}
+          #             - {label: "Imagem", name: "imagem", widget: "image"}
+          #             - {label: "Posição", name: "posicao", widget: "select",  options: ["Presidência", "Vice-Presidência", "Projetos", "Administrativo Financeiro", "Comercial", "Gestão de Pessoas", "Marketing", "Trainee"], default: ["Trainee"]}
+          #             - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
+
+
+
+      - label: "Página Serviços"
+        name: "paginaServicos"
+        file: "content/paginas/servicos.json"
+        extension: "json"
+        format: "json"
+        editor:
+        preview: false
+        fields:
+          - label: "Início Serviços"
+            name: "inicioServicos"
+            widget: "object"
+            fields:
+              - {label: "Imagem", name: "imagem", widget: "image"}
+              - {label: "Título", name: "titulo", widget: "string"}
+              - {label: "Texto 1", name: "texto1", widget: "markdown"}
+              - {label: "Texto 2", name: "texto2", widget: "markdown"}
+
+
+          - label: "Serviços Relab Jr."
+            name: "servicos"
+            widget: "object"
+            fields:
+              - {label: "Serviço 1", name: "servico1", widget: "string"}
+              - {label: "Texto 1", name: "texto1", widget: "markdown"}
+              - {label: "Imagem 1", name: "imagem1", widget: "image"}
+              - {label: "Serviço 2", name: "servico2", widget: "string"}
+              - {label: "Texto 2", name: "texto2", widget: "markdown"}
+              - {label: "Imagem 2", name: "imagem2", widget: "image"}
+              - {label: "Serviço 3", name: "servico3", widget: "string"}
+              - {label: "Texto 3", name: "texto3", widget: "markdown"}
+              - {label: "Imagem 3", name: "imagem3", widget: "image"}
+              - {label: "Serviço 4", name: "servico4", widget: "string"}
+              - {label: "Texto 4", name: "texto4", widget: "markdown"}
+              - {label: "Imagem 4", name: "imagem4", widget: "image"}
+              - {label: "Serviço 5", name: "servico5", widget: "string"}
+              - {label: "Texto 5", name: "texto5", widget: "markdown"}
+              - {label: "Imagem 5", name: "imagem5", widget: "image"}
+              - {label: "Serviço 6", name: "servico6", widget: "string"}
+              - {label: "Texto 6", name: "texto6", widget: "markdown"}
+              - {label: "Imagem 6", name: "imagem6", widget: "image"}
+
+
+
+      - label: "Página Blog"
+        name: "paginaBlog"
+        file: "content/paginas/blog.json"
+        extension: "json"
+        format: "json"
+        editor:
+        preview: false
+        fields:
+          - label: "Início Blog"
+            name: "inicioBlog"
+            widget: "object"
+            fields:
+              - {label: "Imagem", name: "imagem", widget: "image"}
+              - {label: "Título", name: "titulo", widget: "string"}
+
+          # ACHO QUE DA PRA PEGAR OS GÊNEROS DOS PRÓPRIOS POSTS
+          # - label: "Menu Blog"
+          #   name: "menuBlog" 
+          #   widget: "object" 
+          #   fields:
+          #     - label: "Gêneros" 
+          #       name: "generos" 
+          #       widget: "list"
+          #       min: 4
+          #       fields:
+          #         - label: "Gênero"
+          #           name: "genero"
+          #           widget: "object"
+          #           fields:
+          #             - {label: "Gênero", name: "genero", widget: "string"}
+
+
+# PÁGINAS--------------------------------------------------------------------------------------------------------
