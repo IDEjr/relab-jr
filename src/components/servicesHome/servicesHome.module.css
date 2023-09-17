@@ -50,16 +50,19 @@
     display: flex;
     flex-direction: column;
     gap:5vh;
+    height: 100vh;
 }
 .second-two {
     display: flex;
     flex-direction: column;
     gap:5vh;
+    height: 100vh;
 }
 .third-two {
     display: flex;
     flex-direction: column;
     gap:5vh;
+    height: 100vh;
 }
 
 
@@ -105,6 +108,7 @@ each service
 .top-text {
     color: #fff;
     width: 20vw;
+    height: 10vh;
     display: flex;
     text-align: center;
     font-size: 30px;
