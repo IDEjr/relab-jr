@@ -1,6 +1,6 @@
 .footer {
     display: flex;
-    width: 100%;
+    width: 100vmax;
     height: 650px;
     /*background-color: #262626;*/
     flex-direction: column;
