@@ -1,7 +1,7 @@
 .container {
     font-size: large;
     display: flex;
-    align-items: stretch;
+    align-items: center;
     padding-left: 1vw;
     flex-direction:column;
     gap:15vh;
