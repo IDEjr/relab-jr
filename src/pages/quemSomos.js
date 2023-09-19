@@ -32,7 +32,7 @@ export default function quemSomos({quemSomos, membros}) {
           />
         ))}
       </ul>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
