@@ -1,9 +1,9 @@
 {
   "texto": "a",
-  "autor": "michael jackson",
+  "autor": "Autor Autoral",
   "selecao": "economia",
   "bool": true,
-  "data": "July 29, 2023 6:40 PM",
+  "data": "2023-07-29T21:40:00.000Z",
   "previa": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   "localizacao": "{\"type\":\"Point\",\"coordinates\":[21.7389693,32.7712449]}",
   "conteudo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum magna iaculis scelerisque tristique. Nunc eleifend rutrum libero at consequat. Vestibulum viverra enim eu dolor porta, non elementum tortor tincidunt. Mauris feugiat est in erat accumsan varius. Fusce rutrum elit sit amet arcu sagittis ultrices. Aliquam erat volutpat. Sed ultricies vulputate quam eu auctor. Quisque sagittis vehicula tincidunt. Duis ac efficitur erat. Sed eget bibendum leo. Nullam fermentum massa non dapibus vehicula. Proin in luctus quam, eu accumsan lacus.\n\nNullam pellentesque augue et nulla lobortis, non ultricies urna semper. Pellentesque lorem metus, dignissim ac pretium at, venenatis ac leo. Cras auctor eros ac ipsum malesuada, et faucibus leo tempor. Nunc orci quam, malesuada a risus non, varius blandit nisi. Nam vel dui magna. Nulla facilisi. Duis in leo id enim fringilla molestie. Vivamus cursus leo quis tortor maximus, nec laoreet quam laoreet. In posuere lacus eget cursus dignissim. Aenean commodo lectus malesuada ex auctor, eu rhoncus sem laoreet. Praesent cursus leo non nunc dapibus sollicitudin. Nullam eu vulputate ipsum.\n\nNulla laoreet dolor vitae diam molestie, sit amet feugiat est egestas. Mauris lacinia lorem turpis. Maecenas vulputate, nulla at rutrum accumsan, tortor odio commodo est, ac feugiat tortor lectus non libero. Pellentesque consectetur fringilla ipsum, sit amet eleifend est eleifend et. Sed semper accumsan metus, at convallis turpis. Curabitur iaculis lacinia lectus, non gravida nibh sagittis at. Quisque consectetur efficitur accumsan. Ut in diam eu metus maximus venenatis a vel urna. Proin ut nunc quis mauris consectetur iaculis. Nulla id elit non arcu ultrices commodo. Donec mollis mattis arcu in tempor. Mauris eu odio consequat, molestie arcu tristique, ornare erat.",
