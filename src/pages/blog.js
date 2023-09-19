@@ -11,22 +11,42 @@ import { handleJSONfile } from '../utils/functions/jsonHandler'
 export default function blog({posts}) {
   console.log(posts);
 
-  const cardPost = {
-    titulo: posts.titulo,
-    data: posts.data,
-    previa: posts.previa
-  };
-
   return (
     <>
       <Navbar />
-      <ul className={styles['exemplo-list']}>
+      {posts.map((post, i) => (
+        <CardPosts
+          key={i}
+          titulo={post.titulo}
+          data={post.data}
+          previa={post.previa}
+        />
+      ))}
+      <Footer />
+    </> 
+  );
+}
+
+
+export async function getStaticProps() {
+  const posts = handleJSONfiles('./content/posts')
+
+  return {
+    props: { posts },
+  };
+}
+
+
+
+
+
+      {/* <ul className={styles['exemplo-list']}>
         {posts && posts.map((post,i) => (
           <div>
             <a target='_blank' href='/blog' key={i}>
               <div>
                 <Image
-                  src={`${post.imagem}`}
+                  src={post.imagem}
                   width={1920}
                   height={1080}
                   alt='Post'
@@ -40,18 +60,4 @@ export default function blog({posts}) {
             </div>
           </div>
         ))}
-      </ul>
-      <CardPosts {...cardPost}/>
-      {/* <Footer /> */}
-    </> 
-  );
-}
-
-
-export async function getStaticProps() {
-  const posts = handleJSONfiles('./content/posts')
-
-  return {
-    props: { posts },
-  };
-}
+      </ul> */}
