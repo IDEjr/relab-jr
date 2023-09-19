@@ -89,8 +89,8 @@
 		position: fixed;
 		top: -100vh;
 		left: 0;
-		height: 100%;
-		width: 100%;
+		height: 100vh;
+		width: 100vh;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -98,7 +98,10 @@
 		gap: 1.5rem;
 		background-color: #262626;
 		transition: 1s;
-    	z-index: 900;
+    	z-index: 999;
+		
+		border-bottom: 5px solid black;
+		border-image: linear-gradient(to right, red, blue);
 	}
 
 	.cabecalho .responsiveNav {
