@@ -30,8 +30,8 @@ collections:
       - {label: "Gênero", name: "genero", widget: "select", options: ["outros", "economia", "social"], default: ["outros"]}
       - {label: "Autor(a)", name: "autor", widget: "string"}
       - {label: "Data", name: "data", widget: "date", date_format: "DD.MM.YYYY"}
-      - {label: "Título", name: "titulo", widget: "string", max: 50}
-      - {label: "Prévia", name: "previa", widget: "text", max: 50}
+      - {label: "Título", name: "titulo", widget: "string", pattern: ['^.{1,40}$', "Must have at least 20 characters"]}
+      - {label: "Prévia", name: "previa", widget: "text", pattern: ['^.{1,50}$', "Must have at least 20 characters"]}
       - {label: "Conteúdo", name: "conteudo", widget: "markdown"}
       - {label: "Imagem", name: "imagem", widget: "image"}
 
