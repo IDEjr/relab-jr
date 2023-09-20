@@ -30,10 +30,10 @@ collections:
       - {label: "Gênero", name: "genero", widget: "select", options: ["outros", "economia", "social"], default: ["outros"]}
       - {label: "Autor(a)", name: "autor", widget: "string"}
       - {label: "Data", name: "data", widget: "date", date_format: "DD.MM.YYYY"}
-      - {label: "Título", name: "titulo", widget: "string"}
+      - {label: "Título", name: "titulo", widget: "string", max: 50}
       - {label: "Prévia", name: "previa", widget: "text", max: 50}
-      - {label: "Conteúdo", name: "conteudo", widget: "text"}
-      - {label: "Imagem", name: "imagem", widget: "image", required: false}
+      - {label: "Conteúdo", name: "conteudo", widget: "markdown"}
+      - {label: "Imagem", name: "imagem", widget: "image"}
 
 
   - label: "Membros"
