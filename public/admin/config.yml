@@ -32,7 +32,7 @@ collections:
       - {label: "Data", name: "data", widget: "date", date_format: "DD.MM.YYYY"}
       - {label: "Título", name: "titulo", widget: "string", max: 50}
       - {label: "Prévia", name: "previa", widget: "text", max: 50}
-      - {label: "Conteúdo", name: "conteudo", widget: "markdown", pattern: ['^.{20,50}$', "Must have at least 20 characters"]}
+      - {label: "Conteúdo", name: "conteudo", widget: "markdown"}
       - {label: "Imagem", name: "imagem", widget: "image"}
 
 
