@@ -31,8 +31,8 @@ collections:
       - {label: "Autor(a)", name: "autor", widget: "string"}
       - {label: "Data", name: "data", widget: "date", date_format: "DD.MM.YYYY"}
       - {label: "Título", name: "titulo", widget: "string"}
-      - {label: "Prévia", name: "previa", widget: "markdown", max: 50}
-      - {label: "Conteúdo", name: "conteudo", widget: "markdown"}
+      - {label: "Prévia", name: "previa", widget: "text", max: 50}
+      - {label: "Conteúdo", name: "conteudo", widget: "text"}
       - {label: "Imagem", name: "imagem", widget: "image", required: false}
 
 
