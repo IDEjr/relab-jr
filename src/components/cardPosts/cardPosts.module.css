@@ -1,43 +1,71 @@
 .card {
-    border: 1px solid #F2C12E;
+    background-color: #242424;
     border-radius: 8px;
-    padding: 20px;
-    width: 300px;
+    width: 500px;
     display: flex;
-    flex-direction: column;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 1);
 }
 
-.title {
+
+.imageContainer {
+    flex: 1;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.dados {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.titulo {
     font-size: 24px;
     margin-bottom: 10px;
     color: #F2C12E;
+    text-align: center;
 }
 
-.line {
+
+.linha {
     border: 0;
-    height: 1px;
+    height: 2px;
+    width: 80%;
+    align-self: center;
     background: #F2C12E;
-    margin: 10px 0;
+    margin: 10px;
 }
 
-.description {
+
+.previa {
     flex: 1;
     font-size: 18px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
-.footer {
+
+.embaixo {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.date {
+
+.data {
     font-size: 14px;
-    color: gray;
+    color: white;
 }
 
-.readMore {
+
+.saibaMais {
     font-size: 16px;
     color: white;
 }
