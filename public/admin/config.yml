@@ -27,11 +27,11 @@ collections:
     slug: "{{fields.titulo}}" # Nome que vai ficar no URL da página
     fields: # Campos disponíveis no Netlify
       - {label: "Visível", name: "bool", widget: "boolean", default: true}
-      - {label: "Gênero", name: "genero", widget: "select", options: ["outros", "economia", "social"], default: ["outros"]}
+      - {label: "Gênero", name: "genero", widget: "select", options: ["Outros", "Economia", "Social"], default: ["Outros"]}
       - {label: "Autor(a)", name: "autor", widget: "string"}
       - {label: "Data", name: "data", widget: "date", date_format: "DD.MM.YYYY"}
-      - {label: "Título", name: "titulo", widget: "string", pattern: ['^.{1,40}$', "Must have at least 20 characters"]}
-      - {label: "Prévia", name: "previa", widget: "text", pattern: ['^.{1,50}$', "Must have at least 20 characters"]}
+      - {label: "Título", name: "titulo", widget: "string", pattern: ['^.{1,40}$', "Máximo 40 carateres."]}
+      - {label: "Prévia", name: "previa", widget: "text", pattern: ['^.{1,50}$', "Máximo 50 carateres."]}
       - {label: "Conteúdo", name: "conteudo", widget: "markdown"}
       - {label: "Imagem", name: "imagem", widget: "image"}
 
@@ -44,7 +44,7 @@ collections:
     create: true # Permite que usuários criem arquivos nesse local
     slug: "{{fields.nome}}" # Nome que vai ficar no URL da página
     fields:
-      - {label: "Nome e sobrenome", name: "nome", widget: "string"}
+      - {label: "Nome e sobrenome", name: "nome", widget: "string", pattern: ['^.{1,30}$', "Máximo 30 carateres."]}
       - {label: "Imagem", name: "imagem", widget: "image"}
       - {label: "Posição", name: "posicao", widget: "select",  options: ["Presidência", "Vice-Presidência", "Projetos", "Administrativo Financeiro", "Comercial", "Gestão de Pessoas", "Marketing", "Trainee"], default: ["Trainee"]}
       - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
