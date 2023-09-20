@@ -189,14 +189,14 @@ collections:
             widget: "object"
             fields:
               - {label: "Título", name: "titulo", widget: "string"}
-              - {label: "Título 1", name: "titulo1", widget: "string", pattern: ['^.{1,100}$', "Máximo 100 carateres."]}
-              - {label: "Texto 1", name: "texto1", widget: "markdown"}
-              - {label: "Título 2", name: "titulo2", widget: "string", pattern: ['^.{1,100}$', "Máximo 100 carateres."]}
-              - {label: "Texto 2", name: "texto2", widget: "markdown"}
-              - {label: "Título 3", name: "titulo3", widget: "string", pattern: ['^.{1,100}$', "Máximo 100 carateres."]}
-              - {label: "Texto 3", name: "texto3", widget: "markdown"}
-              - {label: "Título 4", name: "titulo4", widget: "string", pattern: ['^.{1,100}$', "Máximo 100 carateres."]}
-              - {label: "Texto 4", name: "texto4", widget: "markdown"}
+              - {label: "Título 1", name: "titulo1", widget: "string"}
+              - {label: "Texto 1", name: "texto1", widget: "markdown", pattern: ['^.{1,100}$', "Máximo 100 carateres."]}
+              - {label: "Título 2", name: "titulo2", widget: "string"}
+              - {label: "Texto 2", name: "texto2", widget: "markdown", pattern: ['^.{1,100}$', "Máximo 100 carateres."]}
+              - {label: "Título 3", name: "titulo3", widget: "string"}
+              - {label: "Texto 3", name: "texto3", widget: "markdown", pattern: ['^.{1,100}$', "Máximo 100 carateres."]}
+              - {label: "Título 4", name: "titulo4", widget: "string"}
+              - {label: "Texto 4", name: "texto4", widget: "markdown", pattern: ['^.{1,100}$', "Máximo 100 carateres."]}
 
           # VOU DEIXAR PQ VAI QUE USAMOS DPS, MAS EXISTE UM MODELO SÓ PARA OS MEMBROS
           # - label: "Painel Membros"
