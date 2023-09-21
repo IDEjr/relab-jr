@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Styles from './menuBlog.module.css'
 
 
-export default function textoBarraQuemSomos() {
+export default function textoBarraQuemSomos({post}) {
 
     const [text, setText] = useState("TODOS")
 
@@ -19,18 +19,17 @@ export default function textoBarraQuemSomos() {
 
                             <select className={Styles.button}>
 
-                                <option  onClick={() => setText('aaaa')}>TODOS</option>
-
-                                <option value="vegetable">Vegetable</option>
-
-                                <option value="meat">Meat</option>
-
+                                {post.map((post) =>(
+                                    <option>{post.assunto}</option>
+                                ))}
                             </select>
 
                         </div>                    
                     </li>
                     <li>
-                        <button className={Styles.button}><p className={Styles.buttonText}>TODOS</p></button>
+                        <button className={Styles.button}>{post.map((post) =>(
+                                    <p className={Styles.buttonText}>{post.assunto}</p>
+                                ))}</button>
                     </li>
                     <li>
                         <button className={Styles.button}><p className={Styles.buttonText} >ECONOMIA</p></button>

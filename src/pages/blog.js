@@ -13,7 +13,7 @@ export default function blog({posts}) {
   return (
     <>
       <Navbar />
-      <MenuBlog/>
+      <MenuBlog  post={posts}/>
       <ul className={styles['exemplo-list']}>
         {/* {posts && posts.map((post,i) => (
           <div>
