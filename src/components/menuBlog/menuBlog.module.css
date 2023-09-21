@@ -6,7 +6,7 @@
     height: 9vh;
     background: none;
     color: #F2C12E;
-
+    font-size: 1.4vw;
 }
 
 .lista{
@@ -18,19 +18,24 @@
 }
 
 .container{
-width: 50vw;
-height: 10vh;
+width: fit-content;
+height: fit-content;
 border-radius: 15px;
 background: rgba(0, 0, 0, 0.18);
 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
 }
 
-.buttonText{
-color: #F2C12E;
 
-}
 
-#button{
-    
-}
+.button:focus{
+    border-radius: 10px;
+    background: #F2C12E;
+    color: black;
+      }
+
+      .button:hover{
+        border-radius: 10px;
+        background: #F2C12E;
+        color: black;
+        cursor:pointer
+          }

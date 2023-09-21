@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import styles from '../styles/blog.module.css'
+import MenuBlog from '../components/menuBlog/menuBlog'
 import CardPosts from '../components/cardPosts'
 import { handleJSONfiles } from '../utils/functions/jsonHandler'
 import { handleJSONfile } from '../utils/functions/jsonHandler'
@@ -14,14 +15,15 @@ export default function blog({posts}) {
   return (
     <>
       <Navbar />
-      {posts.map((post, i) => (
+      <MenuBlog post={posts}/>
+      {/* {posts.map((post, i) => (
         <CardPosts
           key={i}
           titulo={post.titulo}
           data={post.data}
           previa={post.previa}
         />
-      ))}
+      ))} */}
       <Footer />
     </> 
   );
