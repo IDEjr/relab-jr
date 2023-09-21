@@ -2,10 +2,11 @@
     font-size: large;
     display: flex;
     align-items: center;
-    padding-left: 50px;
+    padding-left: 1vw;
     flex-direction:column;
-    gap:150px;
-    padding:150px;
+    gap:15vh;
+    padding:15vw;
+    max-width: 100%;
 }
 
 
@@ -13,13 +14,14 @@
     font-weight: 1000;
 }
 
-
+/*
 .upper-part {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap:40px;
     width: 100%;
+    max-width: 100%;
 }
 
 
@@ -29,10 +31,45 @@
     justify-content: center;
     gap:40px;
     width: 100%;
+    max-width: 100%;
+}
+
+*/
+
+
+.blocks-handler {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
 }
 
 
+.first-two {
+    display: flex;
+    flex-direction: column;
+    gap:5vh;
+    height: 100vh;
+}
+.second-two {
+    display: flex;
+    flex-direction: column;
+    gap:5vh;
+    height: 100vh;
+}
+.third-two {
+    display: flex;
+    flex-direction: column;
+    gap:5vh;
+    height: 100vh;
+}
+
+
+
 .title-text {
+    display: flex;
+    justify-content: center;
     color: #F2C12E;
     font-size: 40px;
     font-style: normal;
@@ -55,28 +92,82 @@ each service
 .frames {
     background-image: url('../../../public/uploads/image/servicosHome/yellowFrame.png');
     background-repeat: no-repeat;
-    width: 323px;
-    height: 419px;
+    width: 300px;
+    height: 47vh;
 }
 
 
 .inside-image {
     display: flex;
-    width: 245px;
-    height: 340px;
-    padding: 50px 14px;
+    width: 24vw;
+    height: 34vh;
+    padding: 5vw 1vh;
 }
 
 
 .top-text {
     color: #fff;
-    width: 280px;
+    width: 20vw;
+    height: 10vh;
     display: flex;
-    padding-right: 78px;
     text-align: center;
     font-size: 30px;
     font-style: normal;
     font-weight: 300;
-    justify-content: center;
+
     line-height: 45px; /* 150% */
+}
+
+@media (max-width: 1085px) {
+    .container {
+        display: flex;
+        padding: 0;
+    }
+    .blocks-handler {
+        display: flex;
+        flex-direction: column;
+        
+        align-items: center;
+    }
+    .first-two {
+        flex-direction: row;
+        width: 70vw;
+        gap:13vw;
+    }
+    .second-two {
+        flex-direction: row;
+        width: 70vw;
+        gap:13vw;
+    }
+    .third-two {
+        flex-direction: row;
+        width: 70vw;
+        gap:13vw;
+    }
+
+}
+@media (max-width: 750px) {
+    .individual-block {
+        padding-left: 7vw;
+    }
+    .frames {
+        background-image: url('../../../public/uploads/image/servicosHome/yellowFrame.png');
+        background-repeat: no-repeat;
+        width: 80vw;
+        height: 47vh;
+        
+    }
+    .first-two {
+        flex-direction: column;
+    }
+    .second-two {
+        flex-direction: column;
+    }
+    .third-two {
+        flex-direction: column;
+    }
+    .top-text {
+        display: flex;
+        width: 70vw;
+    }
 }
