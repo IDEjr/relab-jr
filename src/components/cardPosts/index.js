@@ -14,7 +14,7 @@ export default function cardPosts({ titulo, data, previa }) {
         <div className={styles.card}>
               <h2 className={styles.title}>{titulo}</h2>
               <hr className={styles.line} />
-              <p className={styles.description}>{previa}</p>
+              <p className={styles.previa}>{previa}</p>
               <div className={styles.footer}>
                   <span className={styles.date}>{dataForm}</span>
                   <span className={styles.readMore}>Saiba mais</span>

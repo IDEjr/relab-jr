@@ -41,6 +41,7 @@
     align-items: flex-end;
     flex: 1;
     padding-bottom: 5vh;
+    word-wrap: break-word;
 }
 
 
