@@ -14,7 +14,9 @@ export default function blog({posts}) {
 
   return (
     <>
+      
       <Navbar />
+      <div className={styles.container}>
       <MenuBlog post={posts}/>
       {/* {posts.map((post, i) => (
         <CardPosts
@@ -25,6 +27,7 @@ export default function blog({posts}) {
         />
       ))} */}
       <Footer />
+      </div>
     </> 
   );
 }

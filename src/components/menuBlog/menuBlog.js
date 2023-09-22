@@ -8,7 +8,12 @@ export default function MenuBlog({ post }) {
     const handleChange = (event) =>{
         setAssunto(`${event.target.value}`); //a função pega o valor passado pelo campo "value" de cada opção e guarda no hook
     }
+    
+    let genderSelection = []
+    let gender = [post.map((post) =>(genderSelection.push(post.genero)))]
+    const filteredgenders = [...new Set(genderSelection)];
 
+    console.log(filteredgenders);
     return (
         <>
             <div className={Styles.container}>
@@ -17,19 +22,19 @@ export default function MenuBlog({ post }) {
                     <li>
                         <div >
 
-                            <select className={Styles.button} onChange={handleChange}>
+                            <select className={Styles.buttonMobile} onChange={handleChange}>
                             <option value={"TODOS"}> TODOS</option>
-                                {post.map((post) => (
-                                    <option value={post.assunto}  className={Styles.button}>{post.assunto}</option>
+                                {filteredgenders.map((filteredgenders) => (
+                                    <option value={filteredgenders}  className={Styles.button}>{filteredgenders}</option>
                                 ))}
                             </select>
 
                         </div>
                     </li>
                         <li><button  className={Styles.button} onClick={() => setAssunto(`TODOS`)}> TODOS</button></li>
-                        {post.map((post) => ( <li>
-                            <button className={Styles.button} onClick={() => { setAssunto(`${post.assunto}`) }}> 
-                            {post.assunto}
+                        {filteredgenders.map((filteredgenders) => ( <li>
+                            <button className={Styles.button} onClick={() => { setAssunto(`${filteredgenders}`) }}> 
+                            {filteredgenders}
                             </button>
                             </li>
                         ))}
@@ -42,7 +47,7 @@ export default function MenuBlog({ post }) {
                 titulo={post.titulo}
                 data={post.data}
                 previa={post.previa}
-            />: post.assunto == assunto ? <CardPosts
+            />: post.genero == assunto ? <CardPosts
             key={i}
             titulo={post.titulo}
             data={post.data}
