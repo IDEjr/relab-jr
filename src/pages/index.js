@@ -45,7 +45,7 @@ export default function Home({home}) {
       </React.Fragment>
       
       <Inicio title = {"GESTÃO É A NOSSA CAUSA"} image= {path}/>
-      <TextoBarraHome/>
+      <TextoBarraHome text = {home.inicioHome.texto}/>
       <ImagemComBotao {...resultados} />
       <ServicesHome />
       <ImagemComBotao {...membros} />        
