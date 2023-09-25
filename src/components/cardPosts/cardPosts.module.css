@@ -31,6 +31,7 @@
     margin-bottom: 10px;
     color: #F2C12E;
     text-align: center;
+    word-wrap: break-word;
 }
 
 
@@ -43,12 +44,12 @@
     margin: 10px;
 }
 
-
 .previa {
     flex: 1;
     font-size: 18px;
     margin-bottom: 20px;
     text-align: center;
+    word-wrap: break-word;
 }
 
 
