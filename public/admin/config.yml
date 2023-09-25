@@ -63,6 +63,9 @@ collections:
         preview: false
         fields:
           - {label: "Logo", name: "logo", widget: "image"}
+          - {label: "Linkedin", name: "linkedin", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Instagram", name: "instagram", widget: "string"}
 
       - label: "Footer"
         name: "footer"
@@ -78,8 +81,11 @@ collections:
           - {label: "Instagram", name: "instagram", widget: "string"}
           - {label: "Copyright", name: "copy", widget: "string"}
           - {label: "Watermark1", name: "watermark1", widget: "image"}
+          - {label: "Link1", name: "link1", widget: "string"}
           - {label: "Watermark2", name: "watermark2", widget: "image"}
+          - {label: "Link2", name: "link2", widget: "string"}
           - {label: "Watermark3", name: "watermark3", widget: "image"}
+          - {label: "Link3", name: "link3", widget: "string"}
           - {label: "Background", name: "background", widget: "image"}
 
 
@@ -198,6 +204,12 @@ collections:
               - {label: "Título 4", name: "titulo4", widget: "string"}
               - {label: "Texto 4", name: "texto4", widget: "markdown", pattern: ['^.{1,100}$', "Máximo 100 carateres."]}
 
+
+          - label: "Formulário Quem Somos"
+            name: "formularioQuemSomos"
+            widget: "object"
+            fields:
+              - {label: "Título", name: "titulo", widget: "string"}
           # VOU DEIXAR PQ VAI QUE USAMOS DPS, MAS EXISTE UM MODELO SÓ PARA OS MEMBROS
           # - label: "Painel Membros"
           #   name: "painelMembros" 
@@ -260,7 +272,11 @@ collections:
               - {label: "Texto 6", name: "texto6", widget: "markdown", pattern: ['^.{1,550}$', "Máximo 550 carateres."]}
               - {label: "Imagem 6", name: "imagem6", widget: "image"}
 
-
+          - label: "Formulário Serviços"
+            name: "formularioServicos"
+            widget: "object"
+            fields:
+              - {label: "Título", name: "titulo", widget: "string"}
 
       - label: "Página Blog"
         name: "paginaBlog"
