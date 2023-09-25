@@ -33,7 +33,7 @@ collections:
       - {label: "Título", name: "titulo", widget: "string", pattern: ['^.{1,40}$', "Máximo 40 carateres."]}
       - {label: "Prévia", name: "previa", widget: "text", pattern: ['^.{1,60}$', "Máximo 60 carateres."]}
       - {label: "Conteúdo", name: "conteudo", widget: "markdown"}
-      - {label: "Imagem", name: "imagem", widget: "image"}
+      - {label: "Imagem de Capa", name: "imagemCapa", widget: "image"}
 
 
   - label: "Membros"
@@ -292,6 +292,7 @@ collections:
             fields:
               - {label: "Imagem", name: "imagem", widget: "image"}
               - {label: "Título", name: "titulo", widget: "string"}
+
 
           # ACHO QUE DA PRA PEGAR OS GÊNEROS DOS PRÓPRIOS POSTS
           # - label: "Menu Blog"
