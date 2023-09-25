@@ -8,63 +8,41 @@ import ImagemComBotao from '../components/imagemComBotao'
 import ServicesHome from '../components/servicesHome'
 import Inicio from '../components/inicio'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
-// import imagemResultados from '../../public/uploads/image/imagemComBotao/imagemResultados.png'
-// import imagemMembros from '../../public/uploads/image/imagemComBotao/imagemMembros.png'
-// import imagemInicioHome from '../../public/uploads/image/inicio/imagemInicioHome.jpg'
+import { handleJSONfile } from '@/utils/functions/jsonHandler'
+import React from 'react';
 
 
 
 
+export default function Home({home}) {
 
-
-export default function Home({imagensComBotao, imagensInicio}) {
-  console.log(imagensComBotao);
-  console.log(imagensInicio);
-  
   // pega imagem da home do netlify
-  let imagemInicioHome;
-  let img = [];
+  const path = home.inicioHome.imagem;
 
-  imagensInicio.map((imagemInicio, i) => {
-    img[i] = imagemInicio.imagem
-  });
-  
-  imagemInicioHome = img[0]
-
-
-  // pega imagem dos botões do netlify
-  let imagemResultados;
-  let imagemMembros;
-
-  imagensComBotao.map((imagemComBotao, i) => {
-    img[i] = imagemComBotao.imagem
-  });
-
-  imagemResultados = img[1]
-  imagemMembros = img[0]
-
+  // pega dados dos botões do netlify
 
   const resultados = {
-    imagem: imagemResultados,
-    titulo: 'MELHORE SEUS RESULTADOS',
-    texto: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget libero viverra velit pellentesque hendrerit. Donec interdum dolor nisl, at rhoncus dolor consectetur euismod. Aliquam scelerisque finibus egestas.',
+    imagem: home.imgBotaoRes.imagem,
+    titulo: home.imgBotaoRes.titulo,
+    texto: home.imgBotaoRes.texto,
     textoBotao: 'Entre em contato',
     link: 'servicos'
   };
 
   const membros = {
-    imagem: imagemMembros,
-    titulo: 'MEMBROS',
-    texto: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget libero viverra velit pellentesque hendrerit. Donec interdum dolor nisl, at rhoncus dolor consectetur euismod. Aliquam scelerisque finibus egestas.',
+    imagem: home.imgBotaoMem.imagem,
+    titulo: home.imgBotaoMem.titulo,
+    texto: home.imgBotaoMem.texto,
     textoBotao: 'Sejo membro',
     link: 'quemSomos'
   };
 
-  const path = imagemInicioHome
-
   return (
     <div className={styles['tudo']}>
+      <React.Fragment>
       <Navbar />
+      </React.Fragment>
+      
       <Inicio title = {"GESTÃO É A NOSSA CAUSA"} image= {path}/>
       <ImagemComBotao {...resultados} />
       <ServicesHome />
@@ -75,11 +53,13 @@ export default function Home({imagensComBotao, imagensInicio}) {
 }
 
 
-export async function getStaticProps() {
+export async function getStaticProps(){
 
-  const imagensComBotao = handleJSONfiles("./content/imagensComBotao");
-  const imagensInicio = handleJSONfiles("./content/imagensInicio");
+  const caminho = "paginas";
+  const pagina = "home";
+  const home = handleJSONfile(`./content/${caminho}/${pagina}.json`);
+
   return {
-    props: { imagensComBotao, imagensInicio }
+    props: { home },
   };
 }
