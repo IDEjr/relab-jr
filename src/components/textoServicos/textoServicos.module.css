@@ -1,12 +1,19 @@
 .mainContainer{
     background-color: #262626;
-    width: 50%;
+    /*width: 50%;*/
     color: white;
     text-align: center;
     display: flex;
     justify-content: center;
     margin-top: 7rem;
+    margin-bottom: 6rem;
+}
 
+.centerContainer{
+    width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .topContainer{
@@ -21,8 +28,9 @@
 .bar{
     background-color: #f2c12e;
     width: 30%;
-    height: 15px;
+    height: 12px;
     display: flex;
     justify-content: center;
-    /*margin-top: 7rem;*/
+    text-align: center;
+    margin: auto;
 }

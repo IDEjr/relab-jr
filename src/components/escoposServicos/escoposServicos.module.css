@@ -1,0 +1,29 @@
+.mainContainer{
+    background-color: #262626;
+    color: #F2C12E;
+    margin-top: 10rem;
+}
+
+.title{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color: #F2C12E;
+}
+
+.serviceContainer{
+    /*text-align: center;
+    display: flex;
+    justify-content: center;*/
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 8rem;
+}
+
+.imagemContainer{
+    background-color: #F2C12E;
+    /*position: fixed;
+    left: 0;*/
+    height: 15rem;
+    width: 15rem;
+}
