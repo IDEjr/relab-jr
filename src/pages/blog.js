@@ -21,6 +21,7 @@ export default function blog({posts}) {
           titulo={post.titulo}
           data={post.data}
           previa={post.previa}
+          autor={post.autor}
         />
       ))}
       <Footer />
