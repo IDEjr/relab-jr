@@ -9,7 +9,7 @@ import { handleJSONfile } from '../utils/functions/jsonHandler'
 
 
 export default function blog({posts}) {
-  console.log(posts.imagem);
+  // console.log(posts.imagem);
 
   return (
     <>
