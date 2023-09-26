@@ -6,7 +6,7 @@
     /*background-color: #262626;*/
     flex-direction: column;
     background-image:linear-gradient(transparent,#262626),url("../../../public/uploads/image/footer/backgroundLogos.png");
-    background-position-y: 0%;
+    gap:1vh;
 }
 
 
@@ -67,7 +67,7 @@
     align-items: center;
     justify-content: space-between;
     cursor: alias;
-    height: 5vh;
+    height: 7vh;
 }
 
 
@@ -123,12 +123,13 @@
     justify-content: center;
     align-items: center;
     color: rgba(255, 255, 255, 0.534);
+    justify-content: flex-end;
 }
 
 
 .membership-icons {
     display:flex;
-    align-self: center;
+    align-self: flex-start;
     gap:5vw;
     padding-left: 2vw;
 }
@@ -140,6 +141,7 @@
     background-repeat: no-repeat;
     height: 5vh;
     background-position: center;*/
+    justify-content: flex-end;
 }
 
 
