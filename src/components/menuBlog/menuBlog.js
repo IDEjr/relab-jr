@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Styles from './menuBlog.module.css'
 import CardPosts from '../cardPosts'
 
-export default function MenuBlog({ post }) {
+export default function MenuBlog({ posts }) {
 
     const [assunto, setAssunto] = useState("TODOS")
     const handleChange = (event) =>{
@@ -10,10 +10,9 @@ export default function MenuBlog({ post }) {
     }
     
     let genderSelection = []
-    let gender = [post.map((post) =>(genderSelection.push(post.genero)))]
+    let gender = [posts.map((posts) =>(genderSelection.push(posts.genero)))]
     const filteredgenders = [...new Set(genderSelection)];
 
-    console.log(filteredgenders);
     return (
         <>
             <div className={Styles.container}>
@@ -41,7 +40,7 @@ export default function MenuBlog({ post }) {
                    
                 </ul>
             </div>
-            {post.map((post, i) => ( //a função faz um map e verifica se foi selecionado algum filtro ou se está na posição todos
+            {posts.map((posts, i) => ( //a função faz um map e verifica se foi selecionado algum filtro ou se está na posição todos
                 assunto == "TODOS" ? <CardPosts 
                 key={i}
                 titulo={post.titulo}
