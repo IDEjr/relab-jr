@@ -12,10 +12,10 @@
 
     
 .box {
-    width: 220px;
-    height: 500px;
+    width: 215px;
+    height: 430px;
     background-color: black;
-    padding: 15px;
+    padding: 13px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,7 +50,7 @@
     font-size: 1rem;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 950px) {
 
     .container {
         height: 400px;
@@ -59,7 +59,7 @@
     }
 
     .box {
-        width: 250px;
+        width: 220px;
         height: 350px;
     }
 
