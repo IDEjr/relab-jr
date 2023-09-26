@@ -1,56 +1,60 @@
 import { useState } from 'react'
 import Styles from './menuBlog.module.css'
+import CardPosts from '../cardPosts'
 
+export default function MenuBlog({ post }) {
 
-export default function textoBarraQuemSomos() {
+    const [assunto, setAssunto] = useState("TODOS")
+    const handleChange = (event) =>{
+        setAssunto(`${event.target.value}`); //a função pega o valor passado pelo campo "value" de cada opção e guarda no hook
+    }
+    
+    let genderSelection = []
+    let gender = [post.map((post) =>(genderSelection.push(post.genero)))]
+    const filteredgenders = [...new Set(genderSelection)];
 
-    const [text, setText] = useState("TODOS")
-
-
+    console.log(filteredgenders);
     return (
         <>
             <div className={Styles.container}>
                 <ul className={Styles.lista}>
-                    <li>
-                        <button className={Styles.button}><p className={Styles.buttonText}>{text}</p></button>
-                    </li>
+            
                     <li>
                         <div >
 
-                            <select className={Styles.button}>
-
-                                <option  onClick={() => setText('aaaa')}>TODOS</option>
-
-                                <option value="vegetable">Vegetable</option>
-
-                                <option value="meat">Meat</option>
-
+                            <select className={Styles.buttonMobile} onChange={handleChange}>
+                            <option value={"TODOS"}> TODOS</option>
+                                {filteredgenders.map((filteredgenders) => (
+                                    <option value={filteredgenders}  className={Styles.button}>{filteredgenders}</option>
+                                ))}
                             </select>
 
-                        </div>                    
+                        </div>
                     </li>
-                    <li>
-                        <button className={Styles.button}><p className={Styles.buttonText}>TODOS</p></button>
-                    </li>
-                    <li>
-                        <button className={Styles.button}><p className={Styles.buttonText} >ECONOMIA</p></button>
-                    </li>
-
-                    <li>
-                        <button className={Styles.button} ><p className={Styles.buttonText}>GESTÃO</p></button>
-                    </li>
-
-                    <li>
-                        <button className={Styles.button} ><p className={Styles.buttonText}>GÊNERO3</p></button>
-                    </li>
-
-                    <li>
-                        <button className={Styles.button} ><p className={Styles.buttonText}>GÊNERO4</p></button>
-                    </li>
-
-
+                        <li><button  className={Styles.button} onClick={() => setAssunto(`TODOS`)}> TODOS</button></li>
+                        {filteredgenders.map((filteredgenders) => ( <li>
+                            <button className={Styles.button} onClick={() => { setAssunto(`${filteredgenders}`) }}> 
+                            {filteredgenders}
+                            </button>
+                            </li>
+                        ))}
+                   
                 </ul>
             </div>
+            {post.map((post, i) => ( //a função faz um map e verifica se foi selecionado algum filtro ou se está na posição todos
+                assunto == "TODOS" ? <CardPosts 
+                key={i}
+                titulo={post.titulo}
+                data={post.data}
+                previa={post.previa}
+            />: post.genero == assunto ? <CardPosts
+            key={i}
+            titulo={post.titulo}
+            data={post.data}
+            previa={post.previa}
+        />: ''
+            ))}
+                            
         </>
     )
 }

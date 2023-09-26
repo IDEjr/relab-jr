@@ -1,0 +1,45 @@
+.card {
+    border: 1px solid #F2C12E;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #F2C12E;
+    word-wrap: break-word;
+}
+
+.line {
+    border: 0;
+    height: 1px;
+    background: #F2C12E;
+    margin: 10px 0;
+}
+
+.previa {
+    flex: 1;
+    font-size: 18px;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.date {
+    font-size: 14px;
+    color: gray;
+}
+
+.readMore {
+    font-size: 16px;
+    color: white;
+}
