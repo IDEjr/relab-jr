@@ -22,10 +22,9 @@ gap: 5%;
 
 .textImage{
   display: flex;
-  align-items:center ;
-  justify-content: flex-end;
+  justify-content: space-evenly;
   padding: 3rem;
-  width: 90%;
+  width: 100%;
     
 }
 .lampada{
@@ -40,21 +39,22 @@ gap: 5%;
 
 .bottomtext{
   
-  height: 285px;  
-  width: 45%;
+  height: 30vh;  
+  width: 40%;
   text-align: center;
   align-items: center;
   display: flex;
   border-left: solid 1rem #F2C12E;
   padding-left: 4rem; 
-  line-height: 50px;
+  line-height: 3.5vh;
 }
 
 
 .text-content{
   color: #ffff;
-  font-size: 22px;
-  font-weight: '400';
+  font-size: 1.5vw;
+  width: 100%;
+  height: auto;
 }
 
 .imagebox{
