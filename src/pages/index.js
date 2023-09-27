@@ -30,6 +30,10 @@ export default function Home({home}) {
     link: 'servicos'
   };
 
+  const textoBarraHome = {
+    texto: home.inicioHome.texto
+  }
+
   const membros = {
     imagem: home.imgBotaoMem.imagem,
     titulo: home.imgBotaoMem.titulo,
@@ -45,7 +49,7 @@ export default function Home({home}) {
       </React.Fragment>
       
       <Inicio title = {"GESTÃO É A NOSSA CAUSA"} image= {path}/>
-      <TextoBarraHome text = {home.inicioHome.texto}/>
+      <TextoBarraHome {...textoBarraHome}/>
       <ImagemComBotao {...resultados} />
       <ServicesHome />
       <ImagemComBotao {...membros} />        

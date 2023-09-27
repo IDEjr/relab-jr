@@ -27,12 +27,11 @@
     height: 70%;
     line-height: 4vh;
     margin-bottom: 2vh;
-    border: #F2C12E solid 1px;
     
 }
 
 .text-content{
-    font-size: 1.6vw;
+    font-size: 1.2rem;
     font-style: italic;
     width: 100%;
 }
@@ -46,10 +45,10 @@
       @media only screen and (max-width: 800px) {
        .text{
         
-        line-height: 2vh;
+        line-height: 3vh;
        }
         .text-content{
-            font-size: 3.9vw;
+            font-size: 1.5rem;
         }
           }  
   
