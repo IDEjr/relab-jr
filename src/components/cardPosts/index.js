@@ -2,24 +2,37 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from './cardPosts.module.css'
 
-export default function cardPosts({ titulo, data, previa }) {
+export default function cardPosts({ imagem, titulo, data, previa, autor}) {
 
   var dataForm;
   dataForm = data.substring(8, 10) + '/' + data.substring(5, 7) + '/' + data.substring(0, 4);
+
+  // console.log(imagem);
   
 
   return (
     <>
       <Link href="/blog" target="_blank" className={styles['link']}>
         <div className={styles.card}>
-              <h2 className={styles.title}>{titulo}</h2>
-              <hr className={styles.line} />
-              <p className={styles.previa}>{previa}</p>
-              <div className={styles.footer}>
-                  <span className={styles.date}>{dataForm}</span>
-                  <span className={styles.readMore}>Saiba mais</span>
-              </div>
+          <div className={styles.imageContainer}>
+            <Image
+              src={imagem}
+              fill
+              style={{objectFit: 'cover'}}
+              alt="Post"
+            />
           </div>
+          <div className={styles.dados}>
+            <h2 className={styles.titulo}>{titulo}</h2>
+            <hr className={styles.linha} />
+            <p className={styles.previa}>{previa}</p>
+            <div className={styles.embaixo}>
+                <span className={styles.data}>{dataForm}</span>
+                <span className={styles.saibaMais}>{autor}</span>
+            </div>
+          </div>
+        </div>
+          <br></br>
       </Link>
     </>
   );

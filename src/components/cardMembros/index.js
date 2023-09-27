@@ -14,7 +14,6 @@ export default function cardMembros({ nome, posicao, imagem, linkedin }) {
               <Image
                 src={imagem}
                 fill
-                cover
                 style={{objectFit: 'cover'}}
                 alt='Foto Membro'
                 />

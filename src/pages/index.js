@@ -49,7 +49,7 @@ export default function Home({home}) {
       <ImagemComBotao {...resultados} />
       <ServicesHome />
       <ImagemComBotao {...membros} />        
-      <Footer />
+      <Footer /> 
     </div>
   )
 }

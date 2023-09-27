@@ -9,7 +9,7 @@ import { handleJSONfile } from '../utils/functions/jsonHandler'
 
 
 export default function blog({posts}) {
-  console.log(posts);
+  // console.log(posts.imagem);
 
   return (
     <>
@@ -17,9 +17,11 @@ export default function blog({posts}) {
       {posts.map((post, i) => (
         <CardPosts
           key={i}
+          imagem={post.imagem}
           titulo={post.titulo}
           data={post.data}
           previa={post.previa}
+          autor={post.autor}
         />
       ))}
       <Footer />
