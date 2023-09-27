@@ -48,9 +48,11 @@ export default function Home({home, posts}) {
       <Inicio title = {"GESTÃO É A NOSSA CAUSA"} image= {path}/>
       <ImagemComBotao {...resultados} />
       <ServicesHome />
+
       <ImagemComBotao {...membros} />     
       <CarouselHome {...posts}/>  
       <Footer />
+
     </div>
   )
 }

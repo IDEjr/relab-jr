@@ -9,7 +9,7 @@ import { handleJSONfile } from '../utils/functions/jsonHandler'
 
 
 export default function blog({posts}) {
-  console.log(posts.imagem);
+  // console.log(posts.imagem);
 
   return (
     <>
@@ -21,6 +21,7 @@ export default function blog({posts}) {
           titulo={post.titulo}
           data={post.data}
           previa={post.previa}
+          autor={post.autor}
         />
       ))}
       <Footer />

@@ -38,14 +38,13 @@ export default function quemSomos({quemSomos, membros}) {
 }
 
 
-
 export async function getStaticProps(){
 
   const caminho = "paginas";
   const pagina = "quemSomos";
   const quemSomos = handleJSONfile(`./content/${caminho}/${pagina}.json`);
 
-  const pasta = "membros"
+  const pasta = "membros";
   const membros = handleJSONfiles(`./content/${pasta}`);
 
   return {

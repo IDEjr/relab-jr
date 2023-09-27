@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from './cardPosts.module.css'
 
-export default function cardPosts({ imagem, titulo, data, previa }) {
+export default function cardPosts({ imagem, titulo, data, previa, autor}) {
 
   var dataForm;
   dataForm = data.substring(8, 10) + '/' + data.substring(5, 7) + '/' + data.substring(0, 4);
@@ -28,7 +28,7 @@ export default function cardPosts({ imagem, titulo, data, previa }) {
             <p className={styles.previa}>{previa}</p>
             <div className={styles.embaixo}>
                 <span className={styles.data}>{dataForm}</span>
-                <span className={styles.saibaMais}>Saiba mais</span>
+                <span className={styles.saibaMais}>{autor}</span>
             </div>
           </div>
         </div>

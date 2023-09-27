@@ -2,15 +2,17 @@
     display: flex;
     width: 100%;
     max-width: 100%;
-    height: 650px;
+    height: 300px;
     /*background-color: #262626;*/
     flex-direction: column;
+    background-image:linear-gradient(transparent,#262626),url("../../../public/uploads/image/footer/backgroundLogos.png");
+    gap:1vh;
 }
 
 
 .top-part {
     display: flex;
-    background-image:linear-gradient(#262626,transparent),url("../../../public/uploads/image/footer/backgroundLogos.png");
+    
     justify-content: space-between;
     align-items:flex-start;
     flex-direction: row;
@@ -19,16 +21,14 @@
 
 
 .relab-icon {
-    width: 13vw;
-    height: 13vh;
-    flex-shrink: 0;
+    width: 350px;
     justify-content: center;
     background-color: transparent;
-    
-    padding: 15vw 19vh;
-    background-image: url("../../../public/uploads/image/footer/relabIconYellow.png");
+    height: auto;
+    padding: 6vw 13vh;
+    /*background-image: url("../../../public/uploads/image/footer/relabIconYellow.png");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center;*/
     border: none;
     cursor:pointer;
 }
@@ -67,34 +67,40 @@
     align-items: center;
     justify-content: space-between;
     cursor: alias;
-    height: 5vh;
+    height: 7vh;
 }
 
 
 .linkedin-icon {
-    height: 10vh;
-    width: 33%;
-    background-image: url("../../../public/uploads/image/footer/linkedinIcon.png");
+    width: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*background-image: url("../../../public/uploads/image/footer/linkedinIcon.png");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center;*/
 }
 
 
 .twitter-icon {
-    height: 10vh;
-    width: 33%;
-    background-image: url("../../../public/uploads/image/footer/twitterIcon.png");
+    width: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*background-image: url("../../../public/uploads/image/footer/twitterIcon.png");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center;*/
 }
 
 
 .instagram-icon {
-    height: 10vh;
-    width: 33%;
-    background-image: url("../../../public/uploads/image/footer/instagramIcon.png");
+    width: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*background-image: url("../../../public/uploads/image/footer/instagramIcon.png");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center;*/
 }
 
 
@@ -102,7 +108,7 @@
 
 .bottom-part {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: row;
     height: 20%;
     
@@ -112,45 +118,48 @@
 .footer-text {
     display: flex;
     flex-direction: column;
-    font-size: 25px;
-    gap:1vw;
+    font-size: 15px;
+    gap:0.5vw;
     justify-content: center;
     align-items: center;
     color: rgba(255, 255, 255, 0.534);
+    justify-content: flex-end;
 }
 
 
 .membership-icons {
     display:flex;
-    align-self: center;
-    gap:8vw;
+    align-self: flex-start;
+    gap:5vw;
+    padding-left: 2vw;
 }
 
 
 .lab-icon {
-    width: 11vw;
-    background-image: url("../../../public/uploads/image/footer/labIcon.png");
+    width: 8vw;
+    /*background-image: url("../../../public/uploads/image/footer/labIcon.png");
     background-repeat: no-repeat;
     height: 5vh;
-    background-position: center;
+    background-position: center;*/
+    justify-content: flex-end;
 }
 
 
 .jesuitas-icon {
-    width: 15vw;
-    background-image: url("../../../public/uploads/image/footer/jesuitasIcon.png");
+    width: 13vw;
+    /*background-image: url("../../../public/uploads/image/footer/jesuitasIcon.png");
     background-repeat: no-repeat;
     height: 5vh;
-    background-position: center;
+    background-position: center;*/
 }
 
 
 .unisinos-icon {
-    width: 18vw;
-    background-image: url("../../../public/uploads/image/footer/unisinosIcon.png");
+    width: 13vw;
+    /*background-image: url("../../../public/uploads/image/footer/unisinosIcon.png");
     background-repeat: no-repeat;
     height: 5vh;
-    background-position: center;
+    background-position: center;*/
 }
 
 @media (max-width: 870px) {
@@ -164,26 +173,51 @@
         justify-content: flex-end;
         align-items: center;
     }
+    .contact-text {
+        padding-top: 2vh;
+        font-size:larger;
+    }
     .relab-icon {
-        width: 30vw;
-        height: 30vh;
+        width: 15vw;
+        height: auto;
+        display: flex;
         padding: 0;
+    }
+    .instagram-icon {
+        width: 5vw;
+    }
+    .twitter-icon {
+        width: 5vw;
+    }
+    .linkedin-icon {
+        width: 5vw;
     }
     .contact-socials {
         padding: 0;
     }
 
+    .membership-icons {
+        padding-left: 0;
+        display: flex;
+        width: 100vw;
+    }
     .unisinos-icon {
-        width: 34vw;
-        height: 15vh;
+        width: 20vw;
+        height: 5vh;
+        display: flex;
+        align-items: center;
     }
     .jesuitas-icon {
-        width: 34vw;
-        height: 15vh;
+        width: 20vw;
+        height: 5vh;
+        display: flex;
+        align-items: center;
     }
     .lab-icon {
-        width: 34vw;
-        height: 15vh;
+        width: 13vw;
+        height: 5vh;
+        display: flex;
+        align-items: center;
     }
     .footer-text {
         font-size: small;
@@ -191,13 +225,25 @@
 }
 
 @media (max-width: 450px) {
+    .relab-icon {
+        width: 20vw;
+    }
+    .instagram-icon {
+        width: 8vw;
+    }
+    .twitter-icon {
+        width: 8vw;
+    }
+    .linkedin-icon {
+        width: 8vw;
+    }
     .unisinos-icon {
-        width: 60vw;
+        width: 30vw;
     }
     .jesuitas-icon {
-        width: 60vw;
+        width: 30vw;
     }
     .lab-icon {
-        width: 60vw;
+        width: 22vw;
     }
 }
