@@ -12,7 +12,7 @@ export default function cardPosts({ imagem, titulo, data, previa }) {
 
   return (
     <>
-      <Link href="/blog" target="_blank" className={styles['link']}>
+      <Link href="/blog" target="_blank" >
         <div className={styles.card}>
           <div className={styles.imageContainer}>
             <Image

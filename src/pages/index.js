@@ -10,15 +10,15 @@ import Inicio from '../components/inicio'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
 import React from 'react';
+import CarouselHome from '../components/carouselHome'
 
 
 
-
-export default function Home({home}) {
+export default function Home({home, posts}) {
 
   // pega imagem da home do netlify
   const path = home.inicioHome.imagem;
-
+ 
   // pega dados dos botões do netlify
 
   const resultados = {
@@ -37,6 +37,8 @@ export default function Home({home}) {
     link: 'quemSomos'
   };
 
+
+
   return (
     <div className={styles['tudo']}>
       <React.Fragment>
@@ -46,7 +48,8 @@ export default function Home({home}) {
       <Inicio title = {"GESTÃO É A NOSSA CAUSA"} image= {path}/>
       <ImagemComBotao {...resultados} />
       <ServicesHome />
-      <ImagemComBotao {...membros} />        
+      <ImagemComBotao {...membros} />     
+      <CarouselHome {...posts}/>  
       <Footer />
     </div>
   )
@@ -58,8 +61,8 @@ export async function getStaticProps(){
   const caminho = "paginas";
   const pagina = "home";
   const home = handleJSONfile(`./content/${caminho}/${pagina}.json`);
-
+  const posts = handleJSONfiles('./content/posts');
   return {
-    props: { home },
+    props: { home, posts },
   };
 }
