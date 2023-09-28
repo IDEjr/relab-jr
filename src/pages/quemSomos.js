@@ -14,12 +14,19 @@ import { handleJSONfile } from '@/utils/functions/jsonHandler'
 export default function quemSomos({quemSomos, membros}) {
 
   const path = quemSomos.inicioQuemSomos.imagem;
+ 
+  const textoBarra = {
+    texto1: quemSomos.inicioQuemSomos.texto1,
+    texto2:  quemSomos.inicioQuemSomos.texto2,
+    logo:  quemSomos.inicioQuemSomos.logo
+  }
+
   
   return (
     <>
       <Navbar />
       <Inicio title = {"QUEM SOMOS"} image= {path}/>
-      <TextoBarraQuemSomos />
+      <TextoBarraQuemSomos {...textoBarra}/>
       <Valores />
       <ul className={styles['exemplo-list']}>
         {membros && membros.map((membro, i) => (
