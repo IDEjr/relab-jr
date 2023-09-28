@@ -20,7 +20,7 @@ export default function navbar({logo,linkedin, instagram, email }) {
     return(
         
             <header className={styles.cabecalho}>
-                <a href="/" className={styles.logo} >
+                <Link href="/" className={styles.logo} >
                     <Image
                         src={logo}
                         width={95}
@@ -28,7 +28,7 @@ export default function navbar({logo,linkedin, instagram, email }) {
                         alt="Logo"
                     />
                         
-                </a>
+                </Link>
                 <nav className={styles.navbar} ref={navRef}>
                     <button className={
                             classnames(
@@ -36,12 +36,14 @@ export default function navbar({logo,linkedin, instagram, email }) {
                               styles.navRelabBtn
                             )
                           } ref={logoRef}>
-                          <Image
-                        src={logo}
-                        width={95}
-                        height={95}
-                        alt="Logo"
-                    />
+                            <Link href="/">
+                                <Image
+                                    src={logo}
+                                    width={95}
+                                    height={95}
+                                    alt="Logo"
+                                />
+                            </Link> 
                     </button>
                     {/*<a href="/">HOME</a>*/}
                     <a href="/quemSomos">QUEM SOMOS</a>
