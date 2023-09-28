@@ -8,12 +8,17 @@ import { handleJSONfiles } from '../utils/functions/jsonHandler'
 import { handleJSONfile } from '../utils/functions/jsonHandler'
 
 
-export default function blog({posts}) {
+export default function blog({posts, nav}) {
   // console.log(posts.imagem);
-
+  const navData = {
+    logo : nav.logo,
+    linkedin : nav.linkedin,
+    instagram : nav.instagram,
+    email : nav.email
+  };
   return (
     <>
-      <Navbar />
+      <Navbar  {...navData}/>
       {posts.map((post, i) => (
         <CardPosts
           key={i}
@@ -31,10 +36,12 @@ export default function blog({posts}) {
 
 
 export async function getStaticProps() {
+  const caminho2 = "navFooter";
+  const pagina2 = "navbar";
   const posts = handleJSONfiles('./content/posts')
-
+  const nav = handleJSONfile(`./content/${caminho2}/${pagina2}.json`);
   return {
-    props: { posts },
+    props: { posts, nav },
   };
 }
 
