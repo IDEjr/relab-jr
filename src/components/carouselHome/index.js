@@ -21,7 +21,8 @@ export default function carouselHome(...posts) {
 
   
   const data = [];
-  for (var i in posts[0]){
+  for (var i =0; i<4 ; i++){
+
     data.push(posts[0][i]);
   }
 

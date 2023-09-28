@@ -1,10 +1,11 @@
 import styles from './navbar.module.css';
 import { useRef } from "react";
+import Image from 'next/image'
 import { FaBars, FaTimes, FaInstagram, FaLinkedin,FaTwitter} from "react-icons/fa";
 import classnames from 'classnames';
 
 
-export default function navbar() {
+export default function navbar({logo,linkedin, instagram, twitter }) {
     const navRef = useRef();
     const logoRef = useRef();
 	const showNavbar = () => {
@@ -20,7 +21,13 @@ export default function navbar() {
         
             <header className={styles.cabecalho}>
                 <a href="/" className={styles.logo} >
-                    <h3>RELABJR</h3>
+                    <Image
+                        src={logo}
+                        width={130}
+                        height={90}
+                        alt="Post"
+                    />
+                        
                 </a>
                 <nav className={styles.navbar} ref={navRef}>
                     <button className={
