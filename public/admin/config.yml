@@ -28,7 +28,7 @@ collections:
     fields: # Campos disponíveis no Netlify
       - {label: "Visível", name: "bool", widget: "boolean", default: true}
       - {label: "Gênero", name: "genero", widget: "select", options: ["Outros", "Economia", "Social"], default: ["Outros"]}
-      - {label: "Autor(a)", name: "autor", widget: "string"}
+      - {label: "Autor(a)", name: "autor", widget: "string", pattern: ['^.{1,30}$', "Máximo 30 carateres."]}
       - {label: "Data", name: "data", widget: "date", date_format: "DD.MM.YYYY"}
       - {label: "Título", name: "titulo", widget: "string", pattern: ['^.{1,40}$', "Máximo 40 carateres."]}
       - {label: "Prévia", name: "previa", widget: "text", pattern: ['^.{1,60}$', "Máximo 60 carateres."]}

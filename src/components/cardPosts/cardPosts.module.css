@@ -85,8 +85,8 @@
 }
 
 
-
-@media only screen and (max-width: 768px) {
+/* smarphones */
+@media only screen and (max-width: 480px) and (orientation: portrait) {
 
     .card {
         width: 400px;
