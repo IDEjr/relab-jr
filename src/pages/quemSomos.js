@@ -11,7 +11,7 @@ import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
 
 
-export default function quemSomos({quemSomos, membros}) {
+export default function quemSomos({quemSomos, membros, nav}) {
 
   const path = quemSomos.inicioQuemSomos.imagem;
  
@@ -22,9 +22,15 @@ export default function quemSomos({quemSomos, membros}) {
   }
 
   
+  const navData = {
+    logo : nav.logo,
+    linkedin : nav.linkedin,
+    instagram : nav.instagram,
+    email : nav.email
+  };
   return (
     <>
-      <Navbar />
+      <Navbar  {...navData}/>
       <Inicio title = {"QUEM SOMOS"} image= {path}/>
       <TextoBarraQuemSomos {...textoBarra}/>
       <Valores />
@@ -45,17 +51,18 @@ export default function quemSomos({quemSomos, membros}) {
 }
 
 
-
 export async function getStaticProps(){
 
   const caminho = "paginas";
   const pagina = "quemSomos";
+  const caminho2 = "navFooter";
+  const pagina2 = "navbar";
   const quemSomos = handleJSONfile(`./content/${caminho}/${pagina}.json`);
 
-  const pasta = "membros"
+  const pasta = "membros";
   const membros = handleJSONfiles(`./content/${pasta}`);
-
+  const nav = handleJSONfile(`./content/${caminho2}/${pagina2}.json`);
   return {
-    props: { quemSomos, membros },
+    props: { quemSomos, membros, nav },
   };
 }
