@@ -1,10 +1,11 @@
 {
+  "imagemCapa": "/uploads/05_1.png",
+  "autor": "AAAAAAAAAAAAAAAAAAAAAAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
   "bool": true,
-  "genero": "Social",
   "data": "2023-09-21T21:59:02.806Z",
-  "autor": "AAAAAAAAAAAAAAAAAAAAAA",
-  "titulo": "AAAAAAAAAAAAAAAAAAAAAA",
   "previa": "1111111111111111111111111",
   "conteudo": "1﻿11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
-  "imagem": "/uploads/05_1.png"
+  "genero": "Social",
+  "imagem": "/uploads/05_1.png",
+  "titulo": "AAAAAAAAAAAAAAAAAAAAAA"
 }
