@@ -50,6 +50,8 @@ export default function Home({home, posts, nav}) {
   //console.log(navData);
 
 
+
+
   return (
     <div className={styles['tudo']}>
       <React.Fragment>
@@ -59,7 +61,7 @@ export default function Home({home, posts, nav}) {
       <Inicio title = {"GESTÃO É A NOSSA CAUSA"} image= {path}/>
       <TextoBarraHome {...textoBarraHome}/>
       <ImagemComBotao {...resultados} />
-      <ServicesHome />
+      <ServicesHome servicosHome = {home.servicosHome}/>
 
       <ImagemComBotao {...membros} />     
       <CarouselHome {...posts}/>  

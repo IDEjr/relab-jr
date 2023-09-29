@@ -50,19 +50,19 @@
     display: flex;
     flex-direction: column;
     gap:5vh;
-    height: 100vh;
+    
 }
 .second-two {
     display: flex;
     flex-direction: column;
     gap:5vh;
-    height: 100vh;
+    
 }
 .third-two {
     display: flex;
     flex-direction: column;
     gap:5vh;
-    height: 100vh;
+    
 }
 
 
@@ -90,18 +90,26 @@ each service
 
 
 .frames {
-    background-image: url('../../../public/uploads/image/servicosHome/yellowFrame.png');
-    background-repeat: no-repeat;
-    width: 300px;
-    height: 450px;
+    display: flex;
+    width: 20vw;
+    height: 500px;
+    align-items: flex-end;
+    justify-content: center;
 }
 
+.overlayGrid {
+    display: grid;
+    grid-template-areas: overlay;
+}
 
-.inside-image {
-    display: flex;
-    width: 24vw;
-    height: 34vh;
-    padding: 5vw 1vh;
+.frameImg {
+    position: absolute;
+    
+}
+.insideImg {
+    padding-left: 17px;
+    padding-top:63px;
+    object-fit: cover;
 }
 
 
@@ -118,7 +126,7 @@ each service
     line-height: 45px; /* 150% */
 }
 
-@media (max-width: 1085px) {
+@media (max-width: 1450px) {
     .container {
         display: flex;
         padding: 0;
@@ -126,8 +134,8 @@ each service
     .blocks-handler {
         display: flex;
         flex-direction: column;
-        
-        align-items: center;
+        padding-right: 3vw;
+
     }
     .first-two {
         flex-direction: row;
@@ -146,28 +154,63 @@ each service
     }
 
 }
-@media (max-width: 750px) {
-    .individual-block {
-        padding-left: 7vw;
-    }
-    .frames {
-        background-image: url('../../../public/uploads/image/servicosHome/yellowFrame.png');
-        background-repeat: no-repeat;
-        width: 80vw;
-        height: 47vh;
-        
+@media (max-width: 1050px) {
+    .blocks-handler {
+        align-items: center;
     }
     .first-two {
+        width: 80vw;
+        height: 1600px;
         flex-direction: column;
     }
     .second-two {
+        width: 80vw;
+        height: 1600px;
         flex-direction: column;
     }
     .third-two {
+        width: 80vw;
+        height: 1600px;
         flex-direction: column;
     }
+
+    .individual-block {
+        width: 100%;
+        height:700px;
+        display: flex;
+    }
+    .frames {
+ 
+        width: 80vw;
+        height: 800px;
+        display: flex;
+        
+    }
+    .frameImg {
+        width: 80vw;
+        height: 700px;
+    }
+    .insideImg {
+        width: 64.5vw;
+        height: 600px;
+        padding-left: 23px;
+        padding-top:76px;
+    }
+    
     .top-text {
         display: flex;
         width: 70vw;
+        justify-content: center;
+    }
+}
+@media (max-width: 500px) {
+    .frameImg {
+        width: 120vw;
+
+    }
+    .insideImg {
+        width: 96vw;
+
+
     }
 }

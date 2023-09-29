@@ -1,63 +1,88 @@
 import styles from './servicesHome.module.css'
-import yellowFrame from '../../../public/uploads/image/servicosHome/yellowFrame.png'
-import imageOne from '../../../public/uploads//image/servicosHome/inside-image1.png'
-import imageTwo from '../../../public/uploads/image/servicosHome/inside-image2.png'
-import imageThree from '../../../public/uploads/image/servicosHome/inside-image3.png'
-import imageFour from '../../../public/uploads/image/servicosHome/inside-image4.png'
-import imageFive from '../../../public/uploads/image/servicosHome/inside-image5.png'
-import imageSix from '../../../public/uploads/image/servicosHome/inside-image6.png'
+import React from 'react'
+
 import Image from 'next/image'
+import backFrame from '../../../public/uploads/image/servicosHome/yellowFrame.png'
 
 
-function eachService(top_text, image_path) { 
+function eachService(frame) { 
     return(
         <div className={styles['individual-block']}>
             <h3 className={styles['top-text']}>
-                {top_text}
+                {frame.texto}
             </h3>
             <div className={styles['frames']}>
-                <div className={styles['inside-image']} style={image_path}/>
+                <div className={styles['overlayGrid']}>
+                    <Image
+                        src={frame.imagem}
+                        width={321}
+                        height={497}
+                        className={styles['insideImg']}
+                        
+                    />
+                    <Image
+                        src={backFrame}
+                        width={400}
+                        height={580}
+                        className={styles['frameImg']}
+                        
+                    />
+                    
+                    
+                </div>
+                
+                
+                
                 
             </div>
         </div>
     )
 }
 
-export default function servicesHome({imageOne, imageTwo, imageThree, imageFour, imageFive, imageSix}) {
-    const imgOne = {
-        '--img-one' : `url(${imageOne})` 
-    };
-    const imgTwo = {
-        '--img-two' : `url(${imageTwo})`
-    };
-    const imgThree = {
-        '--img-three' : `url(${imageThree})`
-    };
-    const imgFour = {
-        '--img-four' : `url(${imageFour})`
-    };
-    const imgFive = {
-        '--img-five' : `url(${imageFive})`
-    };
-    const imgSix = {
-        '--img-six' : `url(${imageSix})`
-    };
+export default function servicesHome({servicosHome}) {
+
+
+   const firstFrame = {
+    imagem : servicosHome.imagem1,
+    texto : servicosHome.servico1
+   };
+   const secondFrame = {
+    imagem : servicosHome.imagem2,
+    texto : servicosHome.servico2
+   };
+   const thirdFrame = {
+    imagem : servicosHome.imagem3,
+    texto : servicosHome.servico3
+   };
+   const fourthFrame = {
+    imagem : servicosHome.imagem4,
+    texto : servicosHome.servico4
+   };
+   const fifthFrame = {
+    imagem : servicosHome.imagem5,
+    texto : servicosHome.servico5
+   };
+   const sixthFrame = {
+    imagem : servicosHome.imagem6,
+    texto : servicosHome.servico6
+   };
    return(
         <>
+        
             <div className={styles['container']}>
                 <h1 className={styles['title-text']}>NOSSOS SERVIÇOS</h1>
                 <div className={styles['blocks-handler']}>
                     <div className={styles['first-two']}>
-                        {eachService("MODELAGEM DE NEGÓCIOS", imageOne)}
-                        {eachService("VIABILIDADE ECONÔMICA", imageTwo)}
+                        {eachService(firstFrame)}
+                        {eachService(secondFrame)}
                     </div>
                     <div className={styles['second-two']}>
-                        {eachService("ANÁLISE DA SAÚDE FINANCEIRA", imageThree)}
-                        {eachService("PLANEJAMENTO ESTRATÉGICO", imageFour)}
+                        {eachService(thirdFrame)}
+                        {eachService(fourthFrame)}
                     </div>
                     <div className={styles['third-two']}>
-                        {eachService("CAPTAÇÃO DE CLENTES", imageFive)}
-                        {eachService("GESTÃO DE PESSOAS", imageSix)}
+                        {eachService(fifthFrame)}
+                        {eachService(sixthFrame)}
                     </div>
                 </div>
             </div>
