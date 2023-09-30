@@ -17,79 +17,7 @@ locale: 'pt'
 
 collections:
 
-
-  - label: "Posts"
-    name: "posts" # Nome usado da rota
-    extension: "json"
-    description: "Posts da Relab Jr"
-    folder: "content/posts" # Local da pasta onde vão estar os arquivos
-    create: true # Permite que usuários criem arquivos nesse local
-    slug: "{{fields.titulo}}" # Nome que vai ficar no URL da página
-    fields: # Campos disponíveis no Netlify
-      - {label: "Visível", name: "bool", widget: "boolean", default: true}
-      - {label: "Gênero", name: "genero", widget: "select", options: ["Outros", "Economia", "Social"], default: ["Outros"]}
-      - {label: "Autor(a)", name: "autor", widget: "relation", collection: "Membros", search_fields: ["nome"], display_fields: ["nome"], value_field: "nome"}
-      - {label: "Data", name: "data", widget: "date", date_format: "DD.MM.YYYY"}
-      - {label: "Título", name: "titulo", widget: "string", pattern: ['^.{1,40}$', "Máximo 40 carateres."]}
-      - {label: "Prévia", name: "previa", widget: "text", pattern: ['^.{1,60}$', "Máximo 60 carateres."]}
-      - {label: "Conteúdo", name: "conteudo", widget: "markdown"}
-      - {label: "Imagem de Capa", name: "imagemCapa", widget: "image"}
-
-
-  - label: "Membros"
-    name: "Membros"
-    extension: "json"
-    description: "Membros da Relab Jr"
-    folder: "content/membros" # Local da pasta onde vão estar os arquivos
-    create: true # Permite que usuários criem arquivos nesse local
-    slug: "{{fields.nome}}" # Nome que vai ficar no URL da página
-    fields:
-      - {label: "Nome e sobrenome", name: "nome", widget: "string", pattern: ['^.{1,30}$', "Máximo 30 carateres."]}
-      - {label: "Imagem", name: "imagem", widget: "image"}
-      - {label: "Posição", name: "posicao", widget: "select",  options: ["Presidência", "Vice-Presidência", "Projetos", "Administrativo Financeiro", "Comercial", "Gestão de Pessoas", "Marketing", "Trainee"], default: ["Trainee"]}
-      - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
-
-
-
-  - label: "Navbar e Footer"
-    name: "navFooter"
-    files:
-      - label: "Navbar"
-        name: "navbar"
-        file: "content/navFooter/navbar.json"
-        extension: "json"
-        format: "json"
-        editor:
-        preview: false
-        fields:
-          - {label: "Logo", name: "logo", widget: "image"}
-          - {label: "Linkedin", name: "linkedin", widget: "string"}
-          - {label: "Email", name: "email", widget: "string"}
-          - {label: "Instagram", name: "instagram", widget: "string"}
-
-      - label: "Footer"
-        name: "footer"
-        file: "content/navFooter/footer.json"
-        extension: "json"
-        format: "json"
-        editor:
-        preview: false
-        fields:
-          - {label: "Logo", name: "logo", widget: "image"}
-          - {label: "Linkedin", name: "linkedin", widget: "string"}
-          - {label: "Email", name: "email", widget: "string"}
-          - {label: "Instagram", name: "instagram", widget: "string"}
-          - {label: "Copyright", name: "copy", widget: "string"}
-          - {label: "Watermark1", name: "watermark1", widget: "image"}
-          - {label: "Link1", name: "link1", widget: "string"}
-          - {label: "Watermark2", name: "watermark2", widget: "image"}
-          - {label: "Link2", name: "link2", widget: "string"}
-          - {label: "Watermark3", name: "watermark3", widget: "image"}
-          - {label: "Link3", name: "link3", widget: "string"}
-          - {label: "Background", name: "background", widget: "image"}
-
-
-# PÁGINAS--------------------------------------------------------------------------------------------------------
+  # PÁGINAS--------------------------------------------------------------------------------------------------------
 
 
   - label: "Páginas"
@@ -158,6 +86,7 @@ collections:
                 min: 3
                 max: 8
                 field: {label: "Post", name: "post", widget: "relation", collection: "Posts", search_fields: ["titulo"], display_fields: ["titulo"], value_field: "titulo"}
+
 
 
       - label: "Página Quem Somos"
@@ -313,3 +242,74 @@ collections:
 
 
 # PÁGINAS--------------------------------------------------------------------------------------------------------
+
+
+  - label: "Posts"
+    name: "posts" # Nome usado da rota
+    extension: "json"
+    description: "Posts da Relab Jr"
+    folder: "content/posts" # Local da pasta onde vão estar os arquivos
+    create: true # Permite que usuários criem arquivos nesse local
+    slug: "{{fields.titulo}}" # Nome que vai ficar no URL da página
+    fields: # Campos disponíveis no Netlify
+      - {label: "Visível", name: "bool", widget: "boolean", default: true}
+      - {label: "Gênero", name: "genero", widget: "select", options: ["Outros", "Economia", "Social"], default: ["Outros"]}
+      - {label: "Autor(a)", name: "autor", widget: "relation", collection: "Membros", search_fields: ["nome"], display_fields: ["nome"], value_field: "nome"}
+      - {label: "Data", name: "data", widget: "date", date_format: "DD.MM.YYYY"}
+      - {label: "Título", name: "titulo", widget: "string", pattern: ['^.{1,40}$', "Máximo 40 carateres."]}
+      - {label: "Prévia", name: "previa", widget: "text", pattern: ['^.{1,60}$', "Máximo 60 carateres."]}
+      - {label: "Conteúdo", name: "conteudo", widget: "markdown"}
+      - {label: "Imagem de Capa", name: "imagemCapa", widget: "image"}
+
+
+  - label: "Membros"
+    name: "Membros"
+    extension: "json"
+    description: "Membros da Relab Jr"
+    folder: "content/membros" # Local da pasta onde vão estar os arquivos
+    create: true # Permite que usuários criem arquivos nesse local
+    slug: "{{fields.nome}}" # Nome que vai ficar no URL da página
+    fields:
+      - {label: "Nome e sobrenome", name: "nome", widget: "string", pattern: ['^.{1,30}$', "Máximo 30 carateres."]}
+      - {label: "Imagem", name: "imagem", widget: "image"}
+      - {label: "Posição", name: "posicao", widget: "select",  options: ["Presidência", "Vice-Presidência", "Projetos", "Administrativo Financeiro", "Comercial", "Gestão de Pessoas", "Marketing", "Trainee"], default: ["Trainee"]}
+      - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
+
+
+
+  - label: "Navbar e Footer"
+    name: "navFooter"
+    files:
+      - label: "Navbar"
+        name: "navbar"
+        file: "content/navFooter/navbar.json"
+        extension: "json"
+        format: "json"
+        editor:
+        preview: false
+        fields:
+          - {label: "Logo", name: "logo", widget: "image"}
+          - {label: "Linkedin", name: "linkedin", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Instagram", name: "instagram", widget: "string"}
+
+      - label: "Footer"
+        name: "footer"
+        file: "content/navFooter/footer.json"
+        extension: "json"
+        format: "json"
+        editor:
+        preview: false
+        fields:
+          - {label: "Logo", name: "logo", widget: "image"}
+          - {label: "Linkedin", name: "linkedin", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Instagram", name: "instagram", widget: "string"}
+          - {label: "Copyright", name: "copy", widget: "string"}
+          - {label: "Watermark1", name: "watermark1", widget: "image"}
+          - {label: "Link1", name: "link1", widget: "string"}
+          - {label: "Watermark2", name: "watermark2", widget: "image"}
+          - {label: "Link2", name: "link2", widget: "string"}
+          - {label: "Watermark3", name: "watermark3", widget: "image"}
+          - {label: "Link3", name: "link3", widget: "string"}
+          - {label: "Background", name: "background", widget: "image"}
