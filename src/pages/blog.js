@@ -6,7 +6,7 @@ import styles from '../styles/blog.module.css'
 import CardPosts from '../components/cardPosts'
 import { handleJSONfiles } from '../utils/functions/jsonHandler'
 import { handleJSONfile } from '../utils/functions/jsonHandler'
-
+import GridPosts from '@/components/gridPosts'
 
 export default function blog({posts, nav}) {
   // console.log(posts.imagem);
@@ -16,19 +16,12 @@ export default function blog({posts, nav}) {
     instagram : nav.instagram,
     email : nav.email
   };
+  //console.log(posts);
   return (
     <>
       <Navbar  {...navData}/>
-      {posts.map((post, i) => (
-        <CardPosts
-          key={i}
-          imagem={post.imagem}
-          titulo={post.titulo}
-          data={post.data}
-          previa={post.previa}
-          autor={post.autor}
-        />
-      ))}
+      <GridPosts {...posts}/>
+     
       <Footer />
     </> 
   );
