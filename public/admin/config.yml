@@ -80,8 +80,10 @@ collections:
             name: "CarrosselHome"
             widget: "object"
             fields:
-              - {label: "Post", name: "post", widget: "relation", collection: "Posts", search_fields: ["titulo"], display_fields: ["titulo"], value_field: "titulo"}
-              - {label: "Imagem 6", name: "imagem6", widget: "image"}
+              # - {label: "Post", name: "post", widget: "relation", collection: "Posts", search_fields: ["titulo"], display_fields: ["titulo"], value_field: "titulo"}
+              - {label: "Autor(a)", name: "autor", widget: "relation", collection: "Membros", search_fields: ["nome"], display_fields: ["nome"], value_field: "nome"}
+
+              # - {label: "Imagem 6", name: "imagem6", widget: "image"}
               # - label: "Posts Carrossel"
               #   name: "postsCarrossel"
               #   widget: "list"
