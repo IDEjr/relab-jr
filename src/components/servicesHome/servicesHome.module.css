@@ -92,7 +92,7 @@ each service
 .frames {
     display: flex;
     width: 20vw;
-    height: 500px;
+    height: 600px;
     align-items: flex-end;
     justify-content: center;
 }
@@ -107,8 +107,8 @@ each service
     
 }
 .insideImg {
-    padding-left: 17px;
-    padding-top:63px;
+    padding-left: 19px;
+    padding-top:69px;
     object-fit: cover;
 }
 
