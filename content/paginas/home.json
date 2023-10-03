@@ -32,5 +32,15 @@
     "linkedin": "https://www.linkedin.com/company/relabjr/",
     "email": "adm.relab@gmail.com",
     "instagram": "https://www.instagram.com/relabjrconsultoria/"
+  },
+  "CarrosselHome": {
+    "postsCarrossel": [
+      "Dicas de Gestão Financeira",
+      "Modelação de Negócios Eficiente",
+      "Desvendando a Saúde Financeira",
+      "Roteiro para o Planejamento Estratégico",
+      "Gestão de Pessoas de Alto Impacto",
+      "Viabilidade econômica para o sucesso"
+    ]
   }
 }
