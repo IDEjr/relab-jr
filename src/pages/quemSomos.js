@@ -9,7 +9,7 @@ import Valores from '../components/valores'
 import styles from '../styles/quemSomos.module.css'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
-
+import GridMembros from '@/components/gridMembros'
 
 export default function quemSomos({quemSomos, membros, nav}) {
 
@@ -34,17 +34,8 @@ export default function quemSomos({quemSomos, membros, nav}) {
       <Inicio title = {"QUEM SOMOS"} image= {path}/>
       <TextoBarraQuemSomos {...textoBarra}/>
       <Valores />
-      <ul className={styles['exemplo-list']}>
-        {membros && membros.map((membro, i) => (
-          <CardMembros
-            key={i}
-            nome={membro.nome}
-            posicao={membro.posicao}
-            imagem={membro.imagem}
-            linkedin={membro.linkedin}
-          />
-        ))}
-      </ul>
+      <GridMembros {...membros}/>
+      
       <Footer />
     </>
   );
