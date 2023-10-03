@@ -10,18 +10,18 @@
     "texto": "Potencialize seu negócio com soluções inovadoras da Relab Jr. Consultoria. Desbloqueie oportunidades, supere desafios e alcance novos horizontes. Descubra nossos serviços e comece sua jornada para o sucesso agora!"
   },
   "servicosHome": {
-    "imagem2": "/uploads/download.jpeg",
-    "imagem3": "/uploads/bill_gates_2018.jpg",
-    "imagem4": "/uploads/download.jpeg",
-    "imagem5": "/uploads/bill_gates_2018.jpg",
-    "imagem6": "/uploads/download.jpeg",
+    "imagem2": "/uploads/images.jpeg",
+    "imagem3": "/uploads/brainstorming.jpg.webp",
+    "imagem4": "/uploads/pexels-photo-1509428.jpeg",
+    "imagem5": "/uploads/blog-aperto-de-mao-pnqr2oxv4y0cbmsd6r7ggbvlbabhr238ak13due564.png",
+    "imagem6": "/uploads/gestao-pessoas-scaled.jpg",
     "servico1": "MODELAGEM DE NEGÓCIOS",
     "servico2": "Viabilidade Econômica",
     "servico3": "Análise da Saúde Financeira",
     "servico4": "Planejamento estratégico",
     "servico5": "Captação de clientes",
     "servico6": "Gestão de pessoas",
-    "imagem1": "/uploads/bill_gates_2018.jpg"
+    "imagem1": "/uploads/adobestock_349728647-1024x684.jpg"
   },
   "imgBotaoMem": {
     "imagem": "/uploads/imagemmembros.png",
@@ -32,5 +32,15 @@
     "linkedin": "https://www.linkedin.com/company/relabjr/",
     "email": "adm.relab@gmail.com",
     "instagram": "https://www.instagram.com/relabjrconsultoria/"
+  },
+  "CarrosselHome": {
+    "postsCarrossel": [
+      "Dicas de Gestão Financeira",
+      "Modelação de Negócios Eficiente",
+      "Desvendando a Saúde Financeira",
+      "Roteiro para o Planejamento Estratégico",
+      "Gestão de Pessoas de Alto Impacto",
+      "Viabilidade econômica para o sucesso"
+    ]
   }
 }
