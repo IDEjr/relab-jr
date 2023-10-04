@@ -20,6 +20,7 @@ collections:
   # PÁGINAS--------------------------------------------------------------------------------------------------------
 
 
+
   - label: "Páginas"
     name: "paginas"
     files:
@@ -134,6 +135,7 @@ collections:
               - {label: "Título 4", name: "titulo4", widget: "string"}
               - {label: "Texto 4", name: "texto4", widget: "markdown", pattern: ['^.{1,100}$', "Máximo 100 carateres."]}
 
+
           - label: "Painel Membros"
             name: "painelMembros"
             widget: "object"
@@ -196,6 +198,7 @@ collections:
               - {label: "Texto 6", name: "texto6", widget: "markdown", pattern: ['^.{1,550}$', "Máximo 550 carateres."]}
               - {label: "Imagem 6", name: "imagem6", widget: "image"}
 
+
           - label: "Formulário Serviços"
             name: "formularioServicos"
             widget: "object"
@@ -206,6 +209,8 @@ collections:
               - {label: "Email", name: "email", widget: "string"}
               - {label: "Endereço 1", name: "endereco1", widget: "string"}
               - {label: "Endereço 1", name: "endereco2", widget: "string"}
+
+
 
       - label: "Página Blog"
         name: "blog"
@@ -222,22 +227,6 @@ collections:
               - {label: "Imagem", name: "imagem", widget: "image"}
               - {label: "Título", name: "titulo", widget: "string"}
 
-
-          # ACHO QUE DA PRA PEGAR OS GÊNEROS DOS PRÓPRIOS POSTS
-          # - label: "Menu Blog"
-          #   name: "menuBlog" 
-          #   widget: "object" 
-          #   fields:
-          #     - label: "Gêneros" 
-          #       name: "generos" 
-          #       widget: "list"
-          #       min: 4
-          #       fields:
-          #         - label: "Gênero"
-          #           name: "genero"
-          #           widget: "object"
-          #           fields:
-          #             - {label: "Gênero", name: "genero", widget: "string"}
 
 
 # PÁGINAS--------------------------------------------------------------------------------------------------------
@@ -305,6 +294,7 @@ collections:
           - {label: "Linkedin", name: "linkedin", widget: "string"}
           - {label: "Email", name: "email", widget: "string"}
           - {label: "Instagram", name: "instagram", widget: "string"}
+
 
       - label: "Footer"
         name: "footer"
