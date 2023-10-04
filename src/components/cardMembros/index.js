@@ -8,8 +8,10 @@ export default function cardMembros({ nome, posicao, imagem, linkedin }) {
       <Link href={linkedin} target="_blank" className={styles['link']}>
         <div className={styles['container']}>
           <div className={styles['box']}>
-            <h3 className={styles['nome']}>{nome}</h3>
-            <p className={styles['posicao']}>{posicao}</p>
+            <div className={styles['dados']}>
+              <h3 className={styles['nome']}>{nome}</h3>
+              <p className={styles['posicao']}>{posicao}</p>
+            </div>
             <div className={styles['img']}>
               <Image
                 src={imagem}
