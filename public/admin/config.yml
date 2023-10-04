@@ -148,6 +148,10 @@ collections:
             fields:
               - {label: "Logo", name: "logo", widget: "image"}
               - {label: "Título", name: "titulo", widget: "string"}
+              - {label: "Celular", name: "celular", widget: "string"}
+              - {label: "Email", name: "email", widget: "string"}
+              - {label: "Endereço 1", name: "endereco1", widget: "string"}
+              - {label: "Endereço 1", name: "endereco2", widget: "string"}
 
           # VOU DEIXAR PQ VAI QUE USAMOS DPS, MAS EXISTE UM MODELO SÓ PARA OS MEMBROS
           # - label: "Painel Membros"
