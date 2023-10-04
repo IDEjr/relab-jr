@@ -24,7 +24,7 @@ collections:
     name: "paginas"
     files:
       - label: "Home"
-        name: "paginaHome"
+        name: "home"
         file: "content/paginas/home.json"
         extension: "json"
         format: "json"
@@ -90,7 +90,7 @@ collections:
 
 
       - label: "Página Quem Somos"
-        name: "paginaQuemSomos"
+        name: "quemSomos"
         file: "content/paginas/quemSomos.json"
         extension: "json"
         format: "json"
@@ -153,29 +153,10 @@ collections:
               - {label: "Endereço 1", name: "endereco1", widget: "string"}
               - {label: "Endereço 1", name: "endereco2", widget: "string"}
 
-          # VOU DEIXAR PQ VAI QUE USAMOS DPS, MAS EXISTE UM MODELO SÓ PARA OS MEMBROS
-          # - label: "Painel Membros"
-          #   name: "painelMembros" 
-          #   widget: "object" 
-          #   fields:
-          #     - label: "Membros" 
-          #       name: "membros" 
-          #       widget: "list"
-          #       min: 6
-          #       fields:
-          #         - label: "Membro"
-          #           name: "membro"
-          #           widget: "object"
-          #           fields:
-          #             - {label: "Nome e sobrenome", name: "nome", widget: "string"}
-          #             - {label: "Imagem", name: "imagem", widget: "image"}
-          #             - {label: "Posição", name: "posicao", widget: "select",  options: ["Presidência", "Vice-Presidência", "Projetos", "Administrativo Financeiro", "Comercial", "Gestão de Pessoas", "Marketing", "Trainee"], default: ["Trainee"]}
-          #             - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
-
 
 
       - label: "Página Serviços"
-        name: "paginaServicos"
+        name: "servicos"
         file: "content/paginas/servicos.json"
         extension: "json"
         format: "json"
@@ -227,7 +208,7 @@ collections:
               - {label: "Endereço 1", name: "endereco2", widget: "string"}
 
       - label: "Página Blog"
-        name: "paginaBlog"
+        name: "blog"
         file: "content/paginas/blog.json"
         extension: "json"
         format: "json"
@@ -262,6 +243,19 @@ collections:
 # PÁGINAS--------------------------------------------------------------------------------------------------------
 
 
+
+  - label: "Gêneros"
+    name: "generos"
+    extension: "json"
+    description: "Gêneros dos Posts"
+    folder: "content/generos" # Local da pasta onde vão estar os arquivos
+    create: true # Permite que usuários criem arquivos nesse local
+    slug: "{{fields.genero}}" # Nome que vai ficar no URL da página
+    fields:
+      - {label: "Gênero", name: "genero", widget: "string", pattern: ['^.{1,30}$', "Máximo 30 carateres."]}
+
+
+
   - label: "Posts"
     name: "posts" # Nome usado da rota
     extension: "json"
@@ -278,6 +272,7 @@ collections:
       - {label: "Prévia", name: "previa", widget: "text", pattern: ['^.{1,60}$', "Máximo 60 carateres."]}
       - {label: "Conteúdo", name: "conteudo", widget: "markdown"}
       - {label: "Imagem de Capa", name: "imagemCapa", widget: "image"}
+
 
 
   - label: "Membros"
