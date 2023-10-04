@@ -14,7 +14,11 @@ import GridMembros from '@/components/gridMembros'
 export default function quemSomos({quemSomos, membros, nav}) {
 
   const path = quemSomos.inicioQuemSomos.imagem;
- 
+  const grid = {
+    titulo :quemSomos.painelMembros.titulo,
+    logo: quemSomos.painelMembros.logo
+  }
+
   const textoBarra = {
     texto1: quemSomos.inicioQuemSomos.texto1,
     texto2:  quemSomos.inicioQuemSomos.texto2,
@@ -34,7 +38,7 @@ export default function quemSomos({quemSomos, membros, nav}) {
       <Inicio title = {"QUEM SOMOS"} image= {path}/>
       <TextoBarraQuemSomos {...textoBarra}/>
       <Valores />
-      <GridMembros {...membros}/>
+      <GridMembros   titulo={grid.titulo} logo={grid.logo} membros={membros}/>
       
       <Footer />
     </>

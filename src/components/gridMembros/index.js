@@ -2,24 +2,17 @@ import Image from 'next/image'
 import styles from './gridMembros.module.css'
 import CardMembros from '../cardMembros';
 
-export default function gridMembros({...membros }) {
+export default function gridMembros({titulo, logo ,membros }) {
     
+
     
-    var arrMembros = [];
-    for( const i in membros){
-        //console.log(membros[i]);
-        arrMembros.push(membros[i]);
-    }
-    membros = arrMembros
-    //console.log(membros);
-    console.log(membros);
   return (
     <>
       <div className={styles.chamariz}>
-        <h2 className={styles.tituloMembros}> CONHEÇA NOSSOS MEMBROS</h2>
+        <h2 className={styles.tituloMembros}> {titulo}</h2>
         <Image          
                         className={styles.logoGrid}
-                        src={'/.logo/aqui'}
+                        src={logo}
                         width={95}
                         height={95}
                         alt="Logo"
