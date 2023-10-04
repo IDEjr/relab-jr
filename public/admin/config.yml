@@ -135,11 +135,11 @@ collections:
               - {label: "Texto 4", name: "texto4", widget: "markdown", pattern: ['^.{1,100}$', "Máximo 100 carateres."]}
 
           - label: "Painel Membros"
-              name: "painelMembros"
-              widget: "object"
-              fields:
-                - {label: "Logo", name: "logo", widget: "image"}
-                - {label: "Título", name: "titulo", widget: "string"}
+            name: "painelMembros"
+            widget: "object"
+            fields:
+              - {label: "Logo", name: "logo", widget: "image"}
+              - {label: "Título", name: "titulo", widget: "string"}
 
 
           - label: "Formulário Quem Somos"
@@ -212,15 +212,15 @@ collections:
               - {label: "Imagem 6", name: "imagem6", widget: "image"}
 
           - label: "Formulário Serviços"
-              name: "formularioServicos"
-              widget: "object"
-              fields:
-                - {label: "Logo", name: "logo", widget: "image"}
-                - {label: "Título", name: "titulo", widget: "string"}
-                - {label: "Celular", name: "celular", widget: "string"}
-                - {label: "Email", name: "email", widget: "string"}
-                - {label: "Endereço 1", name: "endereco1", widget: "string"}
-                - {label: "Endereço 1", name: "endereco2", widget: "string"}
+            name: "formularioServicos"
+            widget: "object"
+            fields:
+              - {label: "Logo", name: "logo", widget: "image"}
+              - {label: "Título", name: "titulo", widget: "string"}
+              - {label: "Celular", name: "celular", widget: "string"}
+              - {label: "Email", name: "email", widget: "string"}
+              - {label: "Endereço 1", name: "endereco1", widget: "string"}
+              - {label: "Endereço 1", name: "endereco2", widget: "string"}
 
       - label: "Página Blog"
         name: "paginaBlog"
