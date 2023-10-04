@@ -9,15 +9,12 @@
     margin-right: auto;
 }
 
-
-
 .imageContainer {
     width: 33.33%;
     border-radius: 8px;
     position: relative;
     overflow: hidden;
 }
-
 
 .dados {
     display: flex;
@@ -29,7 +26,6 @@
     padding-left: 20px;
     padding-right: 20px;
 }
-
 
 .titulo {
     font-size: 24px;
@@ -43,7 +39,6 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
-
 
 .linha {
     border: 0;
@@ -72,21 +67,18 @@
     align-items: center;
 }
 
-
 .data {
     font-size: 14px;
     color: white;
 }
 
-
-.saibaMais {
+.autor {
     font-size: 16px;
     color: white;
 }
 
-
 /* smarphones */
-@media only screen and (max-width: 480px) and (orientation: portrait) {
+@media only screen and (max-width: 767px) and (orientation: portrait) {
 
     .card {
         width: 400px;
@@ -100,6 +92,40 @@
     
     .dados {
         width: 60%;
+    }
+
+}
+
+/* smarphones menores*/
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+
+    .card {
+        width: 350px;
+        height: 140px;
+    }
+
+    .imageContainer {
+        width: 40%;
+    }
+    
+    .dados {
+        width: 60%;
+    }
+
+    .titulo {
+        font-size: 15px;
+    }
+    
+    .previa {
+        font-size: 15px;
+    }
+    
+    .data {
+        font-size: 11px;
+    }
+    
+    .autor {
+        font-size: 12px;
     }
 
 }
