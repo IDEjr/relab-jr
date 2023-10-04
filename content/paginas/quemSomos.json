@@ -71,7 +71,9 @@
           "linkedin": "https://www.linkedin.com/in/williamhgates"
         }
       }
-    ]
+    ],
+    "titulo": "CONHEÇA NOSSOS MEMBROS",
+    "logo": "/uploads/bandeira-amarela-removebg-preview.png"
   },
   "valores": {
     "texto1": "Na Relab Jr., a disciplina é a base do nosso sucesso, garantindo qualidade e consistência.",
@@ -85,6 +87,7 @@
     "titulo4": "Trabalho"
   },
   "formularioQuemSomos": {
-    "titulo": "SE TORNE UM RELABER ENTRE EM CONTATO!"
+    "titulo": "SE TORNE UM RELABER ENTRE EM CONTATO!",
+    "logo": "/uploads/iconelampada-removebg-preview.png"
   }
 }
