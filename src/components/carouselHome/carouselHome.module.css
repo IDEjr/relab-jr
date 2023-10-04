@@ -23,7 +23,7 @@ section .swiperContainer{
     font-size: 30px;
     color: #F2C12E;
     text-align: center;
-    margin: 10px;
+  
     width: 100%;
     display: block;
 }
