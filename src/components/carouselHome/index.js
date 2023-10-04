@@ -16,7 +16,8 @@ import {Swiper, SwiperSlide} from 'swiper/react'
 import { EffectFlip, Pagination, Navigation } from "swiper/modules";
 
 
-
+/*Pegue os titulos que estão no json da home, e passar para aqui, e renderizar somente os posts que tem mesmo titulo dos 
+selecionados.*/
 export default function carouselHome(...posts) {
 
   
