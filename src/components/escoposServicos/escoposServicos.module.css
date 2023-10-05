@@ -1,0 +1,60 @@
+.mainContainer{
+    background-color: #262626;
+    color: #F2C12E;
+    margin-top: 10rem;
+}
+
+.title{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color: #F2C12E;
+}
+
+.serviceContainer{
+    /*justify-content: center;
+    text-align: center;*/
+    display: inline-block;
+    width: 70%;
+    margin-top: 8rem;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.imagemContainer{
+    background-color: #F2C12E;
+    height: 15rem;
+    width: 20%;
+    display: inline-block;
+}
+
+.textContainer{
+    width: 80%;
+    display: inline-block;
+    position: relative;
+    align-items: flex-start;
+}
+
+.titleContainer{
+    color: #F2C12E;
+    position: absolute;
+    margin-top: -15rem;
+    margin-left: 2rem;
+}
+
+.underBar{
+    background-color: #F2C12E;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    margin-top: -12rem;
+    margin-left: 2rem;
+}
+
+.descriptionContainer{
+    text-align: justify;
+    position: absolute;
+    width: 100%;
+    margin-top: -11rem;
+    margin-left: 2rem;
+}

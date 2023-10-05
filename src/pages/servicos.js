@@ -1,6 +1,7 @@
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import Inicio from '../components/inicio'
+import EscoposServicos from '../components/escoposServicos'
 import styles from '../styles/servicos.module.css'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
@@ -19,6 +20,7 @@ export default function servicos({servicos, nav}) {
     <>
       <Navbar  {...navData}/>
       <Inicio title = {"SERVIÇOS"} image= {path}/>
+      <EscoposServicos />
       <Footer />
     </>
   );
