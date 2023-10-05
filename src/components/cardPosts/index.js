@@ -28,7 +28,7 @@ export default function cardPosts({ imagem, titulo, data, previa, autor}) {
             <p className={styles.previa}>{previa}</p>
             <div className={styles.embaixo}>
                 <span className={styles.data}>{dataForm}</span>
-                <span className={styles.saibaMais}>{autor}</span>
+                <span className={styles.autor}>{autor}</span>
             </div>
           </div>
         </div>
