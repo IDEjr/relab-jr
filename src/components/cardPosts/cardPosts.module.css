@@ -42,7 +42,9 @@
     color: #F2C12E;
     text-align: center;
     word-wrap: break-word;
-    font-size: 100%;
+    font-size: 3vw;
+    
+    /* font-size: 30rem; */
 
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -53,11 +55,11 @@
 
 .linha {
     border: 0;
-    height: 1px;
+    height: 0.3vh;
     width: 80%;
     align-self: center;
     background: #F2C12E;
-    margin: 10px;
+    margin: 1vh;
 }
 
 
@@ -67,7 +69,7 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-align: center;
-    font-size: 18px;
+    font-size: 2.5vw;
     margin-bottom: 20px;
     word-wrap: break-word;
 }
@@ -81,19 +83,48 @@
 
 
 .data {
-    font-size: 14px;
+    font-size: 2vw;
     color: white;
 }
 
 
 .autor {
-    font-size: 16px;
+    font-size: 2vw;
     color: white;
 }
 
 
+
+
+@media only screen and (min-width: 1500px) {
+
+    .titulo {
+        font-size: 1.5vw;
+    }
+    
+    .linha {
+        height: 0.2vh;
+    }
+    
+    .previa {
+        font-size: 1.2vw;
+    }
+    
+    .data {
+        font-size: 1vw;
+    }
+    
+    .autor {
+        font-size: 1vw;
+    }
+
+}
+
+
+
+
 /* smarphones */
-@media only screen and (max-width: 767px) and (orientation: portrait) {
+/* @media only screen and (max-width: 767px) and (orientation: portrait) {
 
     .card {
         width: 400px;
@@ -125,10 +156,10 @@
         font-size: 12px;
     }
 
-}
+} */
 
 /* smarphones menores*/
-@media only screen and (max-width: 480px) and (orientation: portrait) {
+/* @media only screen and (max-width: 480px) and (orientation: portrait) {
 
     .card {
         width: 350px;
@@ -159,4 +190,4 @@
         font-size: 9px;
     }
 
-}
+} */
