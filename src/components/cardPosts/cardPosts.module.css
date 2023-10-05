@@ -1,19 +1,21 @@
 .card {
     background-color: #242424;
     border-radius: 8px;
-    width: 600px;
-    height: 200px;
+    /* width: 600px;
+    height: 200px; */
+    aspect-ratio: 3/1;
     display: flex;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 1);
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
 }
 
 
-
 .imageContainer {
-    width: 33.33%;
-    border-radius: 8px;
+    /* width: 33.33%; */
+    aspect-ratio: 1/1;
+    /* border-radius: 8px; */
+    border-radius: 4%;
     position: relative;
     overflow: hidden;
 }
@@ -24,19 +26,28 @@
     width: 66.66%;
     flex-direction: column;
     justify-content: space-between;
-    padding-bottom: 10px;
+    /* padding-bottom: 10px;
     padding-top: 10px;
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 20px; */
+    padding-bottom: 4%;
+    padding-top: 4%;
+    padding-left: 8%;
+    padding-right: 8%;
 }
 
 
 .titulo {
-    font-size: 24px;
-    margin-bottom: 10px;
+    /* font-size: 24px; */
+    /* margin-bottom: 10px;
+    margin-bottom: 4%; */
     color: #F2C12E;
     text-align: center;
     word-wrap: break-word;
+    /* font-size: 3vw; */
+    font-size: 140%;
+    
+    /* font-size: 30rem; */
 
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -47,12 +58,14 @@
 
 .linha {
     border: 0;
-    height: 1px;
+    /* height: 0.3vh; */
+    height: 1%;
     width: 80%;
     align-self: center;
     background: #F2C12E;
-    margin: 10px;
+    margin: 2%;
 }
+
 
 .previa {
     display: -webkit-box;
@@ -60,7 +73,8 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-align: center;
-    font-size: 18px;
+    /* font-size: 2.5vw; */
+    font-size: 120%;
     margin-bottom: 20px;
     word-wrap: break-word;
 }
@@ -74,19 +88,50 @@
 
 
 .data {
-    font-size: 14px;
+    /* font-size: 2vw; */
+    font-size: 90%;
     color: white;
 }
 
 
-.saibaMais {
-    font-size: 16px;
+.autor {
+    /* font-size: 2vw; */
+    font-size: 90%;
     color: white;
 }
+
+
+
+
+/* @media only screen and (min-width: 1500px) {
+
+    .titulo {
+        font-size: 1.5vw;
+    }
+    
+    .linha {
+        height: 0.2vh;
+    }
+    
+    .previa {
+        font-size: 1.2vw;
+    }
+    
+    .data {
+        font-size: 1vw;
+    }
+    
+    .autor {
+        font-size: 1vw;
+    }
+
+} */
+
+
 
 
 /* smarphones */
-@media only screen and (max-width: 767px) and (orientation: portrait) {
+/* @media only screen and (max-width: 767px) and (orientation: portrait) {
 
     .card {
         width: 400px;
@@ -100,6 +145,31 @@
     
     .dados {
         width: 60%;
+    }
+
+    .titulo {
+        font-size: 17px;
+    }
+    
+    .previa {
+        font-size: 13px;
+    }
+    
+    .data {
+        font-size: 11px;
+    }
+    
+    .autor {
+        font-size: 12px;
+    }
+
+} */
+
+/* smarphones menores*/
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+
+    .card {
+        /* aspect-ratio: 5/3; */
     }
 
 }
