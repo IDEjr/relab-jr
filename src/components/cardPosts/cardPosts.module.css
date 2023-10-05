@@ -12,7 +12,8 @@
 
 
 .imageContainer {
-    width: 33.33%;
+    /* width: 33.33%; */
+    aspect-ratio: 1/1;
     /* border-radius: 8px; */
     border-radius: 4%;
     position: relative;
@@ -38,11 +39,13 @@
 
 .titulo {
     /* font-size: 24px; */
-    margin-bottom: 10px;
+    /* margin-bottom: 10px;
+    margin-bottom: 4%; */
     color: #F2C12E;
     text-align: center;
     word-wrap: break-word;
-    font-size: 3vw;
+    /* font-size: 3vw; */
+    font-size: 140%;
     
     /* font-size: 30rem; */
 
@@ -55,11 +58,12 @@
 
 .linha {
     border: 0;
-    height: 0.3vh;
+    /* height: 0.3vh; */
+    height: 1%;
     width: 80%;
     align-self: center;
     background: #F2C12E;
-    margin: 1vh;
+    margin: 2%;
 }
 
 
@@ -69,7 +73,8 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-align: center;
-    font-size: 2.5vw;
+    /* font-size: 2.5vw; */
+    font-size: 120%;
     margin-bottom: 20px;
     word-wrap: break-word;
 }
@@ -83,20 +88,22 @@
 
 
 .data {
-    font-size: 2vw;
+    /* font-size: 2vw; */
+    font-size: 90%;
     color: white;
 }
 
 
 .autor {
-    font-size: 2vw;
+    /* font-size: 2vw; */
+    font-size: 90%;
     color: white;
 }
 
 
 
 
-@media only screen and (min-width: 1500px) {
+/* @media only screen and (min-width: 1500px) {
 
     .titulo {
         font-size: 1.5vw;
@@ -118,7 +125,7 @@
         font-size: 1vw;
     }
 
-}
+} */
 
 
 
@@ -159,35 +166,10 @@
 } */
 
 /* smarphones menores*/
-/* @media only screen and (max-width: 480px) and (orientation: portrait) {
+@media only screen and (max-width: 480px) and (orientation: portrait) {
 
     .card {
-        width: 350px;
-        height: 140px;
+        /* aspect-ratio: 5/3; */
     }
 
-    .imageContainer {
-        width: 40%;
-    }
-    
-    .dados {
-        width: 60%;
-    }
-
-    .titulo {
-        font-size: 15px;
-    }
-    
-    .previa {
-        font-size: 12px;
-    }
-    
-    .data {
-        font-size: 9px;
-    }
-    
-    .autor {
-        font-size: 9px;
-    }
-
-} */
+}
