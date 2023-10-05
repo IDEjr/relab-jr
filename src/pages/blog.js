@@ -15,9 +15,9 @@ export default function blog({posts}) {
   return (
     <>
       
-      <Navbar />
+      <Navbar />  
       <div className={styles.container}>
-      <MenuBlog {...posts}/>
+      <MenuBlog posts={posts}/>
       {/* {posts.map((post, i) => (
         <CardPosts
           key={i}
