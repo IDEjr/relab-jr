@@ -5,11 +5,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: white;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
 }
+
 
 body {
   width: 100%;
 }
+
 
 :root{
   width: 100%;
@@ -19,6 +24,17 @@ body {
 
 html {
   background-color: #262626;
+}
+
+
+a {
+  color: #f2c12e;
+  text-decoration: none;
+}
+
+
+p {
+  background: none;
 }
 
 
@@ -42,28 +58,8 @@ h4{
 }
 
 
-* {
-  color: white;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 300;
-  margin: 0;
-  padding: 0;
-}
-
-
-.footer{
+/* .footer{
   background-color: #f2c12e;
-}
-
-
-a {
-  color: #f2c12e;
-  text-decoration: none;
-}
-
-
-p {
-  background: none;
 }
 
 
@@ -150,4 +146,4 @@ header nav {
 	nav a {
 		font-size: 1.5rem;
 	}
-}
+} */

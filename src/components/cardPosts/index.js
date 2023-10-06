@@ -14,7 +14,7 @@ export default function cardPosts({ imagem, titulo, data, previa, autor}) {
     <>
       <Link href="/blog" target="_blank" >
         <div className={styles.card}>
-          <div className={styles.imageContainer}>
+          <div className={styles.img}>
             <Image
               src={imagem}
               fill

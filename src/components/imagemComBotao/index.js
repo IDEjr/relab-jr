@@ -7,13 +7,13 @@ export default function imagemComBotao({ imagem, titulo, texto, textoBotao, link
   };
   return (
     <>
-      <div className={styles['container']} style={img}>
-        <h3 className={styles['titulo']}>{titulo}</h3>
-        <p className={styles['texto']}>{texto}</p>
-        <div className={styles['boxBotao']}>
+      <div className={styles.container} style={img}>
+        <h3 className={styles.titulo}>{titulo}</h3>
+        <p className={styles.texto}>{texto}</p>
+        <div className={styles.boxBotao}>
           <Link
           href={link}>
-          <h3 className={styles['botao']}>{textoBotao}</h3>
+          <h3 className={styles.botao}>{textoBotao}</h3>
           </Link>
         </div>
       </div>
