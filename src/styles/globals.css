@@ -2,10 +2,15 @@
 
 
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	color: white;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 300;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
+
+
 
 body {
   width: 100%;
@@ -39,15 +44,6 @@ h3{
 
 h4{
   font-size: 1rem;
-}
-
-
-* {
-  color: white;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 300;
-  margin: 0;
-  padding: 0;
 }
 
 

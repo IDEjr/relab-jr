@@ -1,53 +1,5 @@
 .postsGrid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Duas colunas por linha e colunas flexíveis */
+    grid-template-columns:  400px 400px; /* Duas colunas por linha e colunas flexíveis */
     padding:5vh 15vw ;
-}
-
-
-@media only screen and (min-width: 768px) and (max-width: 1200px) and (orientation: portrait) {
-
-   
-    .postsGrid{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Duas colunas por linha e colunas flexíveis */
-    }
-
-
-}
-
-@media only screen and (min-width: 500px) and (max-width: 767px) and (orientation: portrait) {
-
-   
-    .postsGrid{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Duas colunas por linha e colunas flexíveis */
-
-    }
-
-
-}
-
-
-@media only screen and (min-width: 300px) and (max-width: 499px) and (orientation: portrait) {
-
-   
-    .postsGrid{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Duas colunas por linha e colunas flexíveis */
-
-    }
-
-
-}
-@media only screen and (max-width: 299px) and (orientation: portrait) {
-
-   
-    .postsGrid{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Duas colunas por linha e colunas flexíveis */
-   
-    }
-
-
 }
