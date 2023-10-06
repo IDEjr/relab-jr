@@ -11,11 +11,16 @@ export default function servicos({servicos}) {
 
   const path = servicos.inicioServicos.imagem;
 
+  const inicioServicos = {
+    titulo: servicos.inicioServicos.texto1,
+    texto: servicos.inicioServicos.texto2,
+  }
+
   return (
     <>
       <Navbar />
       <Inicio title = {"SERVIÇOS"} image= {path}/>
-      <TextoServicos />
+      <TextoServicos {...inicioServicos}/>
       <Footer />
     </>
   );
