@@ -58,7 +58,7 @@
         display: grid;
         grid-template-columns: 200px 200px ;/* Três colunas por linha e colunas flexíveis */
         gap: 50px;
-        padding: 0px 0px ;
+        padding: 15vh 0vw ;
         justify-content: center; /* Centraliza horizontalmente */
         clip-path: polygon(50% 0, 50% 0, 100% 4%, 100% 96%, 50% 100%, 50% 100%, 0 96%, 0 4%);
     }
