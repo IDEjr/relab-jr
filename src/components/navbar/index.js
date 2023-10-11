@@ -1,10 +1,11 @@
 import styles from './navbar.module.css';
 import { useRef } from "react";
-import { FaBars, FaTimes, FaInstagram, FaLinkedin,FaTwitter} from "react-icons/fa";
+import Image from 'next/image'
+import { FaBars, FaTimes, FaInstagram, FaLinkedin,FaEnvelope} from "react-icons/fa";
 import classnames from 'classnames';
+import Link from 'next/link'
 
-
-export default function navbar() {
+export default function navbar({logo,linkedin, instagram, email }) {
     const navRef = useRef();
     const logoRef = useRef();
 	const showNavbar = () => {
@@ -19,9 +20,15 @@ export default function navbar() {
     return(
         
             <header className={styles.cabecalho}>
-                <a href="/" className={styles.logo} >
-                    <h3>RELABJR</h3>
-                </a>
+                <Link href="/" className={styles.logo} >
+                    <Image
+                        src={logo}
+                        width={95}
+                        height={95}
+                        alt="Logo"
+                    />
+                        
+                </Link>
                 <nav className={styles.navbar} ref={navRef}>
                     <button className={
                             classnames(
@@ -29,7 +36,14 @@ export default function navbar() {
                               styles.navRelabBtn
                             )
                           } ref={logoRef}>
-                        <h3>RELABJR</h3>
+                            <Link href="/">
+                                <Image
+                                    src={logo}
+                                    width={95}
+                                    height={95}
+                                    alt="Logo"
+                                />
+                            </Link> 
                     </button>
                     {/*<a href="/">HOME</a>*/}
                     <a href="/quemSomos">QUEM SOMOS</a>
@@ -43,6 +57,7 @@ export default function navbar() {
                             )
                           }
                         onClick={showNavbar}>
+                        
                         <FaTimes />
                     </button>
                     <div className={styles.links}>
@@ -53,7 +68,7 @@ export default function navbar() {
                                 )
                             }
                             onClick={showNavbar}>
-                            <FaInstagram />
+                            <Link href={instagram} target="_blank"><FaInstagram /></Link>
                         </button>
                         <button
                             className={
@@ -63,7 +78,7 @@ export default function navbar() {
                                 )
                             }
                             onClick={showNavbar}>
-                            <FaLinkedin />
+                            <Link href={linkedin} target="_blank"><FaLinkedin /></Link>
                         </button>
                         <button
                             className={
@@ -72,7 +87,7 @@ export default function navbar() {
                                 )
                             }
                             onClick={showNavbar}>
-                            <FaTwitter />
+                            <Link href={email} target="_blank"><FaEnvelope /></Link>
                         </button>
                     </div>
                     
