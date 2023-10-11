@@ -1,17 +1,5 @@
 .postsGrid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); /* Duas colunas por linha e colunas flexíveis */
-    padding:5vh 10vw ;
-}
-
-@media only screen and (max-width: 767px) and (orientation: portrait) {
-
-   
-    .postsGrid{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Duas colunas por linha e colunas flexíveis */
-        padding:5vh 10vw ;
-    }
-
-
+    grid-template-columns:  400px 400px; /* Duas colunas por linha e colunas flexíveis */
+    padding:5vh 15vw ;
 }
