@@ -2,7 +2,7 @@
     
 
     border: none;
-    width: 18vw;
+    width: 15vw;
     height: 9vh;
     background: none;
     color: #F2C12E;
@@ -17,7 +17,7 @@
     
 display: none;
   border: none;
-  width: 10vw;
+  width: fit-content;
   height: 9vh;
   background: none;
   color: #F2C12E;

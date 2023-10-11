@@ -7,14 +7,9 @@ import GridPosts from '../gridPosts'
 
 
 export default function MenuBlog( ...posts) {
-    const [assunto, setAssunto] = useState("TODOS")
-    
     const handleChange = (event) =>{
-        setAssunto(`${event.target.value}`); //a função pega o valor passado pelo campo "value" de cada opção e guarda no hook
+        filter(`${event.target.value}`, arrPosts); //a função pega o valor passado pelo campo "value" de cada opção e guarda no hook
     } 
-
-
-
     posts = posts[0]
     var genderSelection = []
    
@@ -24,11 +19,22 @@ export default function MenuBlog( ...posts) {
 
         arrPosts.push(posts[i]);
     }
+    const [filteredPosts, setFilteredPosts] = useState(arrPosts)
 arrPosts.map((arrPosts) =>{genderSelection.push(arrPosts.genero)});
+const filteredgenders = [...new Set(genderSelection)];
 
+    
 
+const filter  = (select, arrPosts) =>{
+    let aux  =  arrPosts;
+    (select == "TODOS")? aux =  arrPosts: 
+     aux = arrPosts.filter((obj) =>obj.genero == select )
+    
 
-    const filteredgenders = [...new Set(genderSelection)];
+setFilteredPosts(aux)
+console.log(filteredPosts);
+}
+
     return (
         <>
         <div className={Styles.container}>
@@ -36,26 +42,41 @@ arrPosts.map((arrPosts) =>{genderSelection.push(arrPosts.genero)});
                 <ul className={Styles.lista}>
                     <li>
                         <div >
-
                             <select className={Styles.buttonMobile} onChange={handleChange}>
                             <option value={"TODOS"}> Todos</option>
-                                {filteredgenders.map((filteredgenders) => (
-                                    <option value={filteredgenders}  className={Styles.button}>{filteredgenders}</option>
-                                ))}
+
+                            {filteredgenders.map((filteredgenders) => ( <option> 
+                            {filteredgenders}
+                            </option>
+                        ))}
+
                             </select>
 
                         </div>
                     </li>
-                        <li><button  className={Styles.button} onClick={() => setAssunto(`TODOS`)}> TODOS</button></li>
+                        <li><button  className={Styles.button} onClick={() => filter("TODOS", arrPosts)}> Todos</button></li>
                         {filteredgenders.map((filteredgenders) => ( <li>
-                            <button className={Styles.button} onClick={() => { setAssunto(`${filteredgenders}`) }}> 
+                            <button className={Styles.button} onClick={() => {filter(filteredgenders, arrPosts) }}> 
                             {filteredgenders}
                             </button>
                             </li>
                         ))}
-                   
                 </ul>
             </div>
+
+            
+            <GridPosts {...filteredPosts}/>
+            
+            
+            {/* {posts.map((posts, i) => ( //a função faz um map e verifica se foi selecionado algum filtro ou se está na posição todos
+                assunto == "TODOS" ?<li className={Styles.post}> <CardPosts  key={i} titulo={posts.titulo} data={posts.data} 
+                previa={posts.previa} /></li>: posts.genero == assunto ?
+                <li className={Styles.post}> 
+            <CardPosts key={i} titulo={posts.titulo} data={posts.data} previa={posts.previa} /> 
+                </li>: ''
+    
+            ))} */}
+
          
     </div>                           
         </> 

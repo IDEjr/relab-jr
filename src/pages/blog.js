@@ -23,7 +23,7 @@ export default function blog({posts, nav}) {
   return (
     <>
       <Navbar  {...navData}/>
-      <GridPosts {...posts}/>
+      {/* <GridPosts {...posts}/> */}
       <MenuBlog {...posts}/>
       <Footer />
     </> 
