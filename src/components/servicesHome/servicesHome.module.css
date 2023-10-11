@@ -203,14 +203,9 @@ each service
         justify-content: center;
     }
 }
-@media (max-width: 500px) {
-    .frameImg {
-        width: 120vw;
-
+@media (max-width: 440px) {
+    .container {
+        width: 80%;
     }
-    .insideImg {
-        width: 96vw;
 
-
-    }
 }

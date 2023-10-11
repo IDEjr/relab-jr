@@ -60,7 +60,7 @@ export default function Home({home, posts, nav}) {
       <ServicesHome servicosHome = {home.servicosHome}/>
 
       <ImagemComBotao {...membros} />     
-      <CarouselHome {...posts}/>  
+      {/*<CarouselHome {...posts}/>  */}
       <Footer />
 
     </div>
