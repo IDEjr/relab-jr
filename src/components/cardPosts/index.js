@@ -12,27 +12,30 @@ export default function cardPosts({ imagem, titulo, data, previa, autor}) {
 
   return (
     <>
-      <Link href="/blog" target="_blank" className={styles['link']}>
+      <Link href="/blog" target="_blank" className={styles.link}>
         <div className={styles.card}>
-          <div className={styles.imageContainer}>
-            <Image
-              src={imagem}
-              fill
-              style={{objectFit: 'cover'}}
-              alt="Post"
-            />
-          </div>
-          <div className={styles.dados}>
-            <h2 className={styles.titulo}>{titulo}</h2>
-            <hr className={styles.linha} />
-            <p className={styles.previa}>{previa}</p>
-            <div className={styles.embaixo}>
+          <div className={styles.box}>
+            <div className={styles.img}>
+              <Image
+                src={imagem}
+                fill
+                style={{objectFit: 'cover'}}
+                alt="Post"
+              />
+            </div>
+            <div className={styles.dados}>
+              <div className={styles.emCima}>
+                <h2 className={styles.titulo}>{titulo}</h2>
+                <hr className={styles.linha} />
+                <p className={styles.previa}>{previa}</p>
+              </div>
+              <div className={styles.embaixo}>
                 <span className={styles.data}>{dataForm}</span>
-                <span className={styles.saibaMais}>{autor}</span>
+                <span className={styles.autor}>{autor}</span>
+              </div>
             </div>
           </div>
         </div>
-          <br></br>
       </Link>
     </>
   );

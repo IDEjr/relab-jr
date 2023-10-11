@@ -1,10 +1,11 @@
 {
+  "imagemCapa": "/uploads/imagemmembros.png",
+  "autor": "Rodrigo da Silva Santos",
   "bool": true,
-  "genero": "Social",
   "data": "2023-09-21T21:59:02.806Z",
-  "autor": "AAAAAAAAAAAAAAAAAAAAAA",
-  "titulo": "AAAAAAAAAAAAAAAAAAAAAA",
-  "previa": "1111111111111111111111111",
+  "previa": "Conquiste mais clientes com nossas estratégias eficazes",
   "conteudo": "1﻿11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
-  "imagem": "/uploads/05_1.png"
+  "genero": "Dicas e Estratégias",
+  "imagem": "/uploads/05_1.png",
+  "titulo": "Dicas de Gestão Financeira"
 }

@@ -1,0 +1,54 @@
+.container{
+
+    width:  100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 55vh;
+    justify-content: space-around;
+    
+}
+.retangulo{
+    background-color: #F2C12E;
+    height: 1vh;  
+    width: 39%;
+    align-self: flex-end;
+    margin-top: 5vh;
+    
+
+}
+.text{
+    
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 70%;
+    line-height: 4vh;
+    margin-bottom: 2vh;
+    
+}
+
+.text-content{
+    font-size: 1.2rem;
+    font-style: italic;
+    width: 100%;
+}
+
+
+
+
+
+    
+
+      @media only screen and (max-width: 800px) {
+       .text{
+        
+        line-height: 3vh;
+       }
+        .text-content{
+            font-size: 1.5rem;
+        }
+          }  
+  
