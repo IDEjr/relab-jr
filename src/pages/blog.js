@@ -1,12 +1,11 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import styles from '../styles/blog.module.css'
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import styles from '../styles/blog.module.css'
 import MenuBlog from '../components/menuBlog/menuBlog'
 import CardPosts from '../components/cardPosts'
-import GridPosts from '@/components/gridPosts'
+import GridPosts from '../components/gridPosts'
 import { handleJSONfiles } from '../utils/functions/jsonHandler'
 import { handleJSONfile } from '../utils/functions/jsonHandler'
 
@@ -26,7 +25,7 @@ export default function blog({posts, nav}) {
       
       <Navbar />  
       <div className={styles.container}>
-      <MenuBlog posts={posts}/>
+      {/* <MenuBlog posts={posts}/> */}
   
       <Navbar  {...navData}/>
       <GridPosts {...posts}/>
