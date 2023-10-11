@@ -1,0 +1,5 @@
+.postsGrid{
+    display: grid;
+    grid-template-columns:  400px 400px; /* Duas colunas por linha e colunas flexíveis */
+    padding:5vh 15vw ;
+}

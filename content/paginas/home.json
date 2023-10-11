@@ -7,30 +7,40 @@
   "imgBotaoRes": {
     "imagem": "/uploads/imagemresultados.png",
     "titulo": "MELHORE SEUS RESULTADOS",
-    "texto": "Potencialize seu negócio com soluções inovadoras da Relab Jr. Consultoria. Desbloqueie oportunidades, supere desafios e alcance novos horizontes. Descubra nossos serviços e comece sua jornada para o sucesso agora!\r\n\r\n"
+    "texto": "Potencialize seu negócio com soluções inovadoras da Relab Jr. Consultoria. Desbloqueie oportunidades, supere desafios e alcance novos horizontes. Descubra nossos serviços e comece sua jornada para o sucesso agora!"
   },
   "servicosHome": {
-    "imagem2": "https://static.poder360.com.br/2020/10/gato-animal-covid-19-scaled.jpg",
-    "imagem3": "https://static.poder360.com.br/2020/10/gato-animal-covid-19-scaled.jpg",
-    "imagem4": "https://static.poder360.com.br/2020/10/gato-animal-covid-19-scaled.jpg",
-    "imagem5": "https://static.poder360.com.br/2020/10/gato-animal-covid-19-scaled.jpg",
-    "imagem6": "https://static.poder360.com.br/2020/10/gato-animal-covid-19-scaled.jpg",
-    "servico1": "MODELAGEM DE NEGÓCIOS",
+    "imagem2": "/uploads/images.jpeg",
+    "imagem3": "/uploads/brainstorming.jpg.webp",
+    "imagem4": "/uploads/pexels-photo-1509428.jpeg",
+    "imagem5": "/uploads/blog-aperto-de-mao-pnqr2oxv4y0cbmsd6r7ggbvlbabhr238ak13due564.png",
+    "imagem6": "/uploads/gestao-pessoas-scaled.jpg",
+    "servico1": "Modelagem de Negócios",
     "servico2": "Viabilidade Econômica",
     "servico3": "Análise da Saúde Financeira",
     "servico4": "Planejamento estratégico",
     "servico5": "Captação de clientes",
     "servico6": "Gestão de pessoas",
-    "imagem1": "https://static.poder360.com.br/2020/10/gato-animal-covid-19-scaled.jpg"
+    "imagem1": "/uploads/adobestock_349728647-1024x684.jpg"
   },
   "imgBotaoMem": {
     "imagem": "/uploads/imagemmembros.png",
-    "texto": "Faça parte da nossa equipe e amplie seu conhecimento em consultoria empresarial. Na Relab Jr., você se prepara para um futuro de excelência profissional. Junte-se a nós e trilhe um caminho de aprendizado e realizações.\r\n\r\n",
+    "texto": "Faça parte da nossa equipe e amplie seu conhecimento em consultoria empresarial. Na Relab Jr., você se prepara para um futuro de excelência profissional. Junte-se a nós e trilhe um caminho de aprendizado e realizações.",
     "titulo": "MEMBROS"
   },
   "footer": {
     "linkedin": "https://www.linkedin.com/company/relabjr/",
     "email": "adm.relab@gmail.com",
     "instagram": "https://www.instagram.com/relabjrconsultoria/"
+  },
+  "CarrosselHome": {
+    "postsCarrossel": [
+      "Dicas de Gestão Financeira",
+      "Modelação de Negócios Eficiente",
+      "Desvendando a Saúde Financeira",
+      "Roteiro para o Planejamento Estratégico",
+      "Gestão de Pessoas de Alto Impacto",
+      "Viabilidade econômica para o sucesso"
+    ]
   }
 }

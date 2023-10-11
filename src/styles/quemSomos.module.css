@@ -1,4 +1,4 @@
-.tudo{
+/* .tudo{
   width: 100%;
   background-color: white;
 }
@@ -54,28 +54,13 @@
 
 
 .exemplo-list {
-  /*flex-direction: column;
-  text-align: start;
-  margin: auto;
-  width: max-content; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: auto;
   max-width: 1200px;
   padding: 0;
-  /* list-style: none; */
 }
-
-
-/* .exemplo-list a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 400px;
-  margin: 10px;
-  transition: transform 0.3s ease-in-out;
-} */
 
 
 .card{
@@ -89,11 +74,6 @@
   align-items: center;
   background-color: blueviolet;
   margin-top: 10px;
-
-
-  /* height: 200px; */
-  /* width: 400px; */
-  /* margin: 10px; */
 }
 
 .card p {
@@ -112,4 +92,4 @@
 
 .link:hover{
   transform: scale(1.1);
-}
+} */

@@ -1,10 +1,11 @@
 {
+  "imagemCapa": "/uploads/imageminicioservicos.jpg",
+  "autor": "Isabella Oliveira Almeida",
   "bool": true,
-  "genero": "Outros",
   "data": "2023-09-21T22:08:34.133Z",
-  "autor": "DDDDDDDDDDDDDDDDDD",
-  "titulo": "DDDDDDDDDDDDDDDDDDDD",
-  "previa": "33333333333333333333333333333333333",
+  "previa": "Trace seu futuro com nosso planejamento estratégico",
   "conteudo": "33333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333",
-  "imagem": "/uploads/262120-qual-a-importancia-dos-relatorios-contabeis-na-tomada-de-decisoes-1200x675.jpg"
+  "genero": "Dicas e Estratégias",
+  "imagem": "/uploads/262120-qual-a-importancia-dos-relatorios-contabeis-na-tomada-de-decisoes-1200x675.jpg",
+  "titulo": "Roteiro para o Planejamento Estratégico"
 }
