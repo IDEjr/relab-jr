@@ -24,7 +24,6 @@ export default function blog({posts, nav}) {
       <GridPosts {...posts}/>
      
       <Footer />
-      </div>
     </> 
   );
 }
