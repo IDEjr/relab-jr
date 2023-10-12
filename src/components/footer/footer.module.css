@@ -10,7 +10,7 @@
 }
 
 
-.top-part {
+.topPart {
     display: flex;
     
     justify-content: space-between;
@@ -20,7 +20,7 @@
 }
 
 
-.relab-icon {
+.relabIcon {
     width: 350px;
     justify-content: center;
     background-color: transparent;
@@ -47,14 +47,14 @@
 }
 */
 
-.contact-socials {
+.contactSocials {
     display:flex;
     flex-direction: column;
     padding-right: 15vw;
 }
 
 
-.contact-text {
+.contactText {
     font-weight: 350;
     padding-top:10vh;
     font-size: 30px;
@@ -62,7 +62,7 @@
 }
 
 
-.social-icons {
+.socialIcons {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -71,7 +71,7 @@
 }
 
 
-.linkedin-icon {
+.linkedinIcon {
     width: 3vw;
     display: flex;
     align-items: center;
@@ -82,7 +82,7 @@
 }
 
 
-.twitter-icon {
+.twitterIcon {
     width: 3vw;
     display: flex;
     align-items: center;
@@ -93,7 +93,7 @@
 }
 
 
-.instagram-icon {
+.instagramIcon {
     width: 3vw;
     display: flex;
     align-items: center;
@@ -106,7 +106,7 @@
 
 /* css for the bottom part of the footer */
 
-.bottom-part {
+.bottomPart {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
@@ -115,7 +115,7 @@
 }
 
 
-.footer-text {
+.footerText {
     display: flex;
     flex-direction: column;
     font-size: 15px;
@@ -127,7 +127,7 @@
 }
 
 
-.membership-icons {
+.membershipIcons {
     display:flex;
     align-self: flex-start;
     gap:5vw;
@@ -135,7 +135,7 @@
 }
 
 
-.lab-icon {
+.labIcon {
     width: 8vw;
     /*background-image: url("../../../public/uploads/image/footer/labIcon.png");
     background-repeat: no-repeat;
@@ -145,7 +145,7 @@
 }
 
 
-.jesuitas-icon {
+.jesuitasIcon {
     width: 13vw;
     /*background-image: url("../../../public/uploads/image/footer/jesuitasIcon.png");
     background-repeat: no-repeat;
@@ -154,7 +154,7 @@
 }
 
 
-.unisinos-icon {
+.unisinosIcon {
     width: 13vw;
     /*background-image: url("../../../public/uploads/image/footer/unisinosIcon.png");
     background-repeat: no-repeat;
@@ -163,87 +163,87 @@
 }
 
 @media (max-width: 870px) {
-    .bottom-part {
+    .bottomPart {
         display: flex;
         flex-direction: column;
     }
-    .top-part {
+    .topPart {
         display: flex;
         flex-direction: column-reverse;
         justify-content: flex-end;
         align-items: center;
     }
-    .contact-text {
+    .contactText {
         padding-top: 2vh;
         font-size:larger;
     }
-    .relab-icon {
+    .relabIcon {
         width: 15vw;
         height: auto;
         display: flex;
         padding: 0;
     }
-    .instagram-icon {
+    .instagramIcon {
         width: 5vw;
     }
-    .twitter-icon {
+    .twitterIcon {
         width: 5vw;
     }
-    .linkedin-icon {
+    .linkedinIcon {
         width: 5vw;
     }
     .contact-socials {
         padding: 0;
     }
 
-    .membership-icons {
+    .membershipIcons {
         padding-left: 0;
         display: flex;
         width: 100vw;
     }
-    .unisinos-icon {
+    .unisinosIcon {
         width: 20vw;
         height: 5vh;
         display: flex;
         align-items: center;
     }
-    .jesuitas-icon {
+    .jesuitasIcon {
         width: 20vw;
         height: 5vh;
         display: flex;
         align-items: center;
     }
-    .lab-icon {
+    .labIcon {
         width: 13vw;
         height: 5vh;
         display: flex;
         align-items: center;
     }
-    .footer-text {
+    .footerText {
         font-size: small;
     }
 }
 
 @media (max-width: 450px) {
-    .relab-icon {
+    .relabIcon {
         width: 20vw;
     }
-    .instagram-icon {
+    .instagramIcon {
         width: 8vw;
     }
-    .twitter-icon {
+    .twitterIcon {
         width: 8vw;
     }
-    .linkedin-icon {
+    .linkedinIcon {
         width: 8vw;
     }
-    .unisinos-icon {
+    .unisinosIcon {
         width: 30vw;
     }
-    .jesuitas-icon {
+    .jesuitasIcon {
         width: 30vw;
     }
-    .lab-icon {
+    .labIcon {
         width: 22vw;
     }
 }
