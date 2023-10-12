@@ -7,27 +7,22 @@ import MenuBlog from '../components/menuBlog/menuBlog'
 import CardPosts from '../components/cardPosts'
 import { handleJSONfiles } from '../utils/functions/jsonHandler'
 import { handleJSONfile } from '../utils/functions/jsonHandler'
+import GridPosts from '@/components/gridPosts'
 
-
-export default function blog({posts}) {
+export default function blog({posts, nav}) {
   // console.log(posts.imagem);
-
+  const navData = {
+    logo : nav.logo,
+    linkedin : nav.linkedin,
+    instagram : nav.instagram,
+    email : nav.email
+  };
+  //console.log(posts);
   return (
     <>
-      
-      <Navbar />  
-      <div className={styles.container}>
-      <MenuBlog posts={posts}/>
-      {/* {posts.map((post, i) => (
-        <CardPosts
-          key={i}
-          imagem={post.imagem}
-          titulo={post.titulo}
-          data={post.data}
-          previa={post.previa}
-          autor={post.autor}
-        />
-      ))} */}
+      <Navbar  {...navData}/>
+      <GridPosts {...posts}/>
+     
       <Footer />
       </div>
     </> 
@@ -36,10 +31,12 @@ export default function blog({posts}) {
 
 
 export async function getStaticProps() {
+  const caminho2 = "navFooter";
+  const pagina2 = "navbar";
   const posts = handleJSONfiles('./content/posts')
-
+  const nav = handleJSONfile(`./content/${caminho2}/${pagina2}.json`);
   return {
-    props: { posts },
+    props: { posts, nav },
   };
 }
 

@@ -1,8 +1,8 @@
 .toptext{
   display: flex;
   width: 50%;
-  height: 300px;
-  justify-content: center;
+  height: 20rem;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
   margin-left: 10rem;
@@ -22,17 +22,16 @@ gap: 5%;
 
 .textImage{
   display: flex;
-  align-items:center ;
-  justify-content: flex-end;
+  justify-content: space-evenly;
   padding: 3rem;
-  width: 90%;
+  width: 100%;
     
 }
 .lampada{
  
   margin-right: 15%;
-  height: 225px;
-  width: 15%;
+  height: 100%;
+  width: 300px;
 }
 .retangulo{
   display: none;
@@ -40,21 +39,22 @@ gap: 5%;
 
 .bottomtext{
   
-  height: 285px;  
-  width: 45%;
+  height: 20rem;  
+  width: 40%;
   text-align: center;
   align-items: center;
   display: flex;
   border-left: solid 1rem #F2C12E;
   padding-left: 4rem; 
-  line-height: 50px;
+  line-height: 3.5vh;
 }
 
 
 .text-content{
   color: #ffff;
-  font-size: 22px;
-  font-weight: '400';
+  font-size: 1.5vw;
+  width: 100%;
+  height: auto;
 }
 
 .imagebox{
@@ -76,140 +76,6 @@ gap: 5%;
   height: 30rem;
 
 }
-
-
-@media only screen and (max-width: 1640px) {
-  .bottomtext {
-    
-    height: 285px;  
-    width: 39rem;
-    border-left: solid 1rem #F2C12E;
-    padding-left: 3.5rem; 
-  }
-
-  .text-content{
-    font-size: 20px;
-  }
-  .toptext{
-    width: 49rem;
-    height: 250px;
-    padding-left: 3.5rem;
-  }
-
-
-   
-
-}
-@media only screen and (max-width: 1440px) {
-  .bottomtext {
-
-    height: 285px;  
-    border-left: solid 1rem #F2C12E;
-    padding-left: 3.5rem; 
-  }
-
-  .text-content{
-    font-size: 18px;
-  }
-  .toptext{
-    width: 45rem;
-    height: 240px;
-    padding-left: 3.5rem;
-    margin-left: 5rem;
-  }
-  .lampada{
-    margin-left: 6rem;
-    
-  }
-
-  @media only screen and (max-width: 1279px) {
-    .bottomtext {
-      height: 285px;  
-      width: 35rem;
-      border-left: solid 1rem #F2C12E;
-      padding-left: 3rem; 
-    }
-  
-    .text-content{
-      font-size: 16px;
-    }
-    .toptext{
-      width: 37rem;
-      height: 230px;
-      padding-left: 3rem;
-      margin-left: 3rem;
-    }
-    .lampada{
-      margin-left: 0rem;
-      margin-right: 0rem;
-      
-    }
-    
-  }  
-   
-
-}
-
-@media only screen and (max-width: 1152px) {
-  .bottomtext {
-    height: 285px;  
-    width: 35rem;
-    border-left: solid 1rem #F2C12E;
-    padding-left: 3rem; 
-  }
-
-  .text-content{
-    font-size: 15px;
-  }
-  .toptext{
-    width: 35rem;
-    height: 230px;
-    padding-left: 2.5rem;
-    margin-left: 2rem;
-  }
-  .lampada{
-    width: 200px;
-    height: 199px;
-    margin-right: 9%;
-  }
-  .ImageBoxContent{
-    height: 22rem;
-  }
-  .hiddenImage{
-    height: 22rem;
-  }
-}  
- 
-
-@media only screen and (max-width: 1024px) {
-  .bottomtext {
-    padding-left: 2.5rem; 
-    line-height: 40px;
-    height: 22vh;
-  }
-
-  .text-content{
-    font-size: 15px;
-  }
-  .toptext{
-    width: 35rem;
-    height: 230px;
-    padding-left: 2.5rem;
-    margin-left: 1.5rem;
-  }
-  .lampada{
-    
-    width: 150px;
-    height: 149px;
-    margin-right: 5%;
-  }
-  .ImageBoxContent{
-    height: 20rem;
-  }
-  .hiddenImage{
-    height: 20rem;
-  }
-}  
 
 
 @media only screen and (max-width: 800px) {
@@ -235,6 +101,10 @@ gap: 5%;
     padding-left: 0px;
     margin-left: 0%;
     line-height: 150%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
   
 
   }
@@ -244,31 +114,33 @@ gap: 5%;
 
   
   .lampada{
-    width: 25%;
-    height: 50%;
-    margin: auto;
+   width: 9rem;
+   margin: auto;
+    padding-top: 5vh;
   }
   .textImage{
     flex-direction: column-reverse;
     align-items: center;
     width: 100%;
     padding: 0%;
+    
   }
   .container{
     align-items: center;
     width: 100%;
     justify-content: flex-start;
     gap: 2%;
+    margin-top: 8vh;
   }
   .ImageBoxContent{
     width: 100%;
     height: 100%;
+
   }
   .text-content{
-    
-    font-size: 80%;
-    width: 100%;
-    height: 100%;
+    text-align: center;
+    font-size: 3vw;
+    height: fit-content;
         
   }
   .retangulo{
@@ -281,3 +153,5 @@ gap: 5%;
   }
   
 }  
+
+
