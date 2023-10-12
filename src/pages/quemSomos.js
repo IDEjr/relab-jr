@@ -10,6 +10,7 @@ import styles from '../styles/quemSomos.module.css'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
 import GridMembros from '@/components/gridMembros'
+import CarrosselQuemSomos from '@/components/CarrosselQuemSomos'
 
 export default function quemSomos({quemSomos, membros, nav}) {
 
@@ -37,6 +38,7 @@ export default function quemSomos({quemSomos, membros, nav}) {
       <Navbar  {...navData}/>
       <Inicio title = {"QUEM SOMOS"} image= {path}/>
       <TextoBarraQuemSomos {...textoBarra}/>
+      <CarrosselQuemSomos/>
       <Valores />
       <GridMembros   titulo={grid.titulo} logo={grid.logo} membros={membros}/>
       

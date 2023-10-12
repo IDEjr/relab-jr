@@ -1,30 +1,29 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import styles from '../styles/blog.module.css'
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
-import styles from '../styles/blog.module.css'
-import MenuBlog from '../components/menuBlog/menuBlog'
-import CardPosts from '../components/cardPosts'
+import GridPosts from '@/components/gridPosts'
 import { handleJSONfiles } from '../utils/functions/jsonHandler'
 import { handleJSONfile } from '../utils/functions/jsonHandler'
-import GridPosts from '@/components/gridPosts'
 
 export default function blog({posts, nav}) {
   // console.log(posts.imagem);
+  // console.log(posts);
+
   const navData = {
     logo : nav.logo,
     linkedin : nav.linkedin,
     instagram : nav.instagram,
     email : nav.email
   };
-  //console.log(posts);
+
   return (
     <>
       <Navbar  {...navData}/>
       <GridPosts {...posts}/>
      
       <Footer />
-      </div>
     </> 
   );
 }
@@ -39,29 +38,3 @@ export async function getStaticProps() {
     props: { posts, nav },
   };
 }
-
-
-
-
-
-      {/* <ul className={styles['exemplo-list']}>
-        {posts && posts.map((post,i) => (
-          <div>
-            <a target='_blank' href='/blog' key={i}>
-              <div>
-                <Image
-                  src={post.imagem}
-                  width={1920}
-                  height={1080}
-                  alt='Post'
-                />
-              </div>
-            </a>
-            <div className={styles['container']}>
-              <div className={styles['box']}>
-                <p>{post.conteudo}</p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </ul> */}
