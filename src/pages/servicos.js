@@ -1,4 +1,3 @@
-import styles from '../styles/servicos.module.css'
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import Inicio from '../components/inicio'

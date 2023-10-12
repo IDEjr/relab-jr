@@ -23,10 +23,13 @@
 }
 
 .imagemContainer{
-    background-color: #F2C12E;
+    /* background-color: #F2C12E; */
     height: 15rem;
     width: 20%;
-    display: flex;
+    /* display: flex; */
+    position: relative;
+    display: block;
+    overflow: hidden;
 }
 
 .textContainer{
@@ -35,7 +38,7 @@
     position: relative;
     /* align-items: flex-start; */
     flex-direction: column;
-    
+    padding: 5%;
 }
 
 .titleContainer{

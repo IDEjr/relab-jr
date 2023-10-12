@@ -14,8 +14,7 @@ export default function escoposServicos({imagem1, servico1, texto1, imagem2, ser
                         <Image
                             src={imagem1}
                             style={{objectFit: 'cover'}}
-                            width={215}
-                            height={240}
+                            fill
                         />
                     </div>
                     <div className={styles.textContainer}>
@@ -39,8 +38,7 @@ export default function escoposServicos({imagem1, servico1, texto1, imagem2, ser
                         <Image
                             src={imagem2}
                             style={{objectFit: 'cover'}}
-                            width={215}
-                            height={240}
+                            fill
                         />
                     </div>
                 </div>
@@ -50,8 +48,7 @@ export default function escoposServicos({imagem1, servico1, texto1, imagem2, ser
                         <Image
                             src={imagem3}
                             style={{objectFit: 'cover'}}
-                            width={215}
-                            height={240}
+                            fill
                         />
                     </div>
                     <div className={styles.textContainer}>
@@ -75,8 +72,7 @@ export default function escoposServicos({imagem1, servico1, texto1, imagem2, ser
                         <Image
                             src={imagem4}
                             style={{objectFit: 'cover'}}
-                            width={215}
-                            height={240}
+                            fill
                         />
                     </div>
                 </div>
@@ -86,8 +82,7 @@ export default function escoposServicos({imagem1, servico1, texto1, imagem2, ser
                         <Image
                             src={imagem5}
                             style={{objectFit: 'cover'}}
-                            width={215}
-                            height={240}
+                            fill
                         />
                     </div>
                     <div className={styles.textContainer}>
@@ -111,8 +106,7 @@ export default function escoposServicos({imagem1, servico1, texto1, imagem2, ser
                         <Image
                             src={imagem6}
                             style={{objectFit: 'cover'}}
-                            width={215}
-                            height={240}
+                            fill
                         />
                     </div>
                 </div>
