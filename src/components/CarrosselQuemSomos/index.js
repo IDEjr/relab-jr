@@ -18,17 +18,14 @@ import { EffectFlip, Pagination, Navigation } from "swiper/modules";
 
 /*Pegue os titulos que estão no json da home, e passar para aqui, e renderizar somente os posts que tem mesmo titulo dos 
 selecionados.*/
-export default function CarrosselQuemSomos() {
+export default function CarrosselQuemSomos(...images) {
 
   
  
 
   return (
     <>
-    <section >
-      <h3 >
-        NOVIDADES
-      </h3>
+    
       <Swiper
           style={{
             "--swiper-theme-color":"#F2C12E",
@@ -49,11 +46,20 @@ export default function CarrosselQuemSomos() {
          
 
       >
-       
+
+      {data.map((item)=> (
+        <SwiperSlide key={item.titulo} className={styles.swiperIndi}>
+          <Image src={...images}/>
+          <div >
+
+          </div>
+        </SwiperSlide>))
+        }
+
       </Swiper>
       
       
-    </section>
+    
       
     </>
   );
