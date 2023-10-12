@@ -14,47 +14,50 @@
 .serviceContainer{
     /*justify-content: center;
     text-align: center;*/
-    display: inline-block;
+    display: flex;
     width: 70%;
     margin-top: 8rem;
     margin-left: 15%;
     margin-right: 15%;
+    justify-content: space-evenly;
 }
 
 .imagemContainer{
     background-color: #F2C12E;
     height: 15rem;
     width: 20%;
-    display: inline-block;
+    display: flex;
 }
 
 .textContainer{
     width: 80%;
-    display: inline-block;
+    display: flex;
     position: relative;
-    align-items: flex-start;
+    /* align-items: flex-start; */
+    flex-direction: column;
+    
 }
 
 .titleContainer{
     color: #F2C12E;
-    position: absolute;
-    margin-top: -15rem;
-    margin-left: 2rem;
+    /* position: absolute; */
+    /*margin-top: -15rem;*/
+    /* margin-left: 2rem; */
 }
 
 .underBar{
     background-color: #F2C12E;
     width: 100%;
     height: 3px;
-    position: absolute;
-    margin-top: -12rem;
-    margin-left: 2rem;
+    /*position: absolute;*/
+    margin-top: 1rem;
+    /* margin-left: 2rem; */
 }
 
 .descriptionContainer{
     text-align: justify;
-    position: absolute;
+    /* position: absolute; */
     width: 100%;
-    margin-top: -11rem;
-    margin-left: 2rem;
+    margin-top: 1rem;
+    /* margin-left: 2rem; */
 }

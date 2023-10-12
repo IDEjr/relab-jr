@@ -1,20 +1,119 @@
+import Image from 'next/image'
 import styles from './escoposServicos.module.css'
 
-export default function escoposServicos() {
+export default function escoposServicos({imagem1, servico1, texto1, imagem2, servico2, texto2, imagem3, servico3, texto3, imagem4, servico4, texto4, imagem5, servico5, texto5, imagem6, servico6, texto6,}) {
     return(
         <>
             <div className={styles.mainContainer}>
                 <h2 className={styles.title}>
                     NOSSOS ESCOPOS
                 </h2>
+
                 <div className={styles.serviceContainer}>
-                    <div className={styles.imagemContainer}></div>
+                    <div className={styles.imagemContainer}>
+                        <Image
+                            src={imagem1}
+                            style={{objectFit: 'cover'}}
+                            width={215}
+                            height={240}
+                        />
+                    </div>
                     <div className={styles.textContainer}>
-                            <h3 className={styles.titleContainer}>Modelagem de negócio</h3>
+                            <h3 className={styles.titleContainer}>{servico1}</h3>
                             <div className={styles.underBar}></div>
                             <div className={styles.descriptionContainer}>
-                            lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget libero viverra velit pellentesque hendrerit. Donec interdum dolor nisl, at rhoncus dolor consectetur euismod. Aliquam scelerisque finibus egestas. Mauris augue purus, faucibus sit amet elit vitae, porta interdum nisl. Proin sed velit sed mauris finibus congue vitae non neque. Maecenas laoreet quam nibh, a bibendum magna suscipit non. Integer mi nisi, volutpat vel magna ac, accumsan interdum massa. Aliquam sed dolor a ligula malesuada fringilla. Ut suscipit dolor sit amet tellus auctor consequat. Maecenas eget elit neque.
+                                {texto1}
                             </div>
+                    </div>
+                </div>
+
+                <div className={styles.serviceContainer}>
+                    <div className={styles.textContainer}>
+                            <h3 className={styles.titleContainer}>{servico2}</h3>
+                            <div className={styles.underBar}></div>
+                            <div className={styles.descriptionContainer}>
+                                {texto2}
+                            </div>
+                    </div>
+                    <div className={styles.imagemContainer}>
+                        <Image
+                            src={imagem2}
+                            style={{objectFit: 'cover'}}
+                            width={215}
+                            height={240}
+                        />
+                    </div>
+                </div>
+
+                <div className={styles.serviceContainer}>
+                    <div className={styles.imagemContainer}>
+                        <Image
+                            src={imagem3}
+                            style={{objectFit: 'cover'}}
+                            width={215}
+                            height={240}
+                        />
+                    </div>
+                    <div className={styles.textContainer}>
+                            <h3 className={styles.titleContainer}>{servico3}</h3>
+                            <div className={styles.underBar}></div>
+                            <div className={styles.descriptionContainer}>
+                                {texto3}
+                            </div>
+                    </div>
+                </div>
+
+                <div className={styles.serviceContainer}>
+                    <div className={styles.textContainer}>
+                            <h3 className={styles.titleContainer}>{servico4}</h3>
+                            <div className={styles.underBar}></div>
+                            <div className={styles.descriptionContainer}>
+                                {texto4}
+                            </div>
+                    </div>
+                    <div className={styles.imagemContainer}>
+                        <Image
+                            src={imagem4}
+                            style={{objectFit: 'cover'}}
+                            width={215}
+                            height={240}
+                        />
+                    </div>
+                </div>
+
+                <div className={styles.serviceContainer}>
+                    <div className={styles.imagemContainer}>
+                        <Image
+                            src={imagem5}
+                            style={{objectFit: 'cover'}}
+                            width={215}
+                            height={240}
+                        />
+                    </div>
+                    <div className={styles.textContainer}>
+                            <h3 className={styles.titleContainer}>{servico5}</h3>
+                            <div className={styles.underBar}></div>
+                            <div className={styles.descriptionContainer}>
+                                {texto5}
+                            </div>
+                    </div>
+                </div>
+
+                <div className={styles.serviceContainer}>
+                    <div className={styles.textContainer}>
+                            <h3 className={styles.titleContainer}>{servico6}</h3>
+                            <div className={styles.underBar}></div>
+                            <div className={styles.descriptionContainer}>
+                                {texto6}
+                            </div>
+                    </div>
+                    <div className={styles.imagemContainer}>
+                        <Image
+                            src={imagem6}
+                            style={{objectFit: 'cover'}}
+                            width={215}
+                            height={240}
+                        />
                     </div>
                 </div>
             </div>
