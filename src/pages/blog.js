@@ -6,6 +6,8 @@ import Footer from '../components/footer'
 import GridPosts from '@/components/gridPosts'
 import { handleJSONfiles } from '../utils/functions/jsonHandler'
 import { handleJSONfile } from '../utils/functions/jsonHandler'
+import MenuBlog from '@/components/menuBlog/menuBlog'
+
 
 export default function blog({posts, nav}) {
   // console.log(posts.imagem);
@@ -21,8 +23,8 @@ export default function blog({posts, nav}) {
   return (
     <>
       <Navbar  {...navData}/>
-      <GridPosts {...posts}/>
-     
+      {/* <GridPosts {...posts}/> */}
+      <MenuBlog {...posts}/>
       <Footer />
     </> 
   );
