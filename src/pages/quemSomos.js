@@ -9,46 +9,55 @@ import Valores from '../components/valores'
 import styles from '../styles/quemSomos.module.css'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
+import GridMembros from '@/components/gridMembros'
 
-
-export default function quemSomos({quemSomos, membros}) {
+export default function quemSomos({quemSomos, membros, nav}) {
 
   const path = quemSomos.inicioQuemSomos.imagem;
+  const grid = {
+    titulo :quemSomos.painelMembros.titulo,
+    logo: quemSomos.painelMembros.logo
+  }
+
+  const textoBarra = {
+    texto1: quemSomos.inicioQuemSomos.texto1,
+    texto2:  quemSomos.inicioQuemSomos.texto2,
+    logo:  quemSomos.inicioQuemSomos.logo
+  }
+
   
+  const navData = {
+    logo : nav.logo,
+    linkedin : nav.linkedin,
+    instagram : nav.instagram,
+    email : nav.email
+  };
   return (
     <>
-      <Navbar />
+      <Navbar  {...navData}/>
       <Inicio title = {"QUEM SOMOS"} image= {path}/>
-      <TextoBarraQuemSomos />
+      <TextoBarraQuemSomos {...textoBarra}/>
       <Valores />
-      <ul className={styles['exemplo-list']}>
-        {membros && membros.map((membro, i) => (
-          <CardMembros
-            key={i}
-            nome={membro.nome}
-            posicao={membro.posicao}
-            imagem={membro.imagem}
-            linkedin={membro.linkedin}
-          />
-        ))}
-      </ul>
+      <GridMembros   titulo={grid.titulo} logo={grid.logo} membros={membros}/>
+      
       <Footer />
     </>
   );
 }
 
 
-
 export async function getStaticProps(){
 
   const caminho = "paginas";
   const pagina = "quemSomos";
+  const caminho2 = "navFooter";
+  const pagina2 = "navbar";
   const quemSomos = handleJSONfile(`./content/${caminho}/${pagina}.json`);
 
-  const pasta = "membros"
+  const pasta = "membros";
   const membros = handleJSONfiles(`./content/${pasta}`);
-
+  const nav = handleJSONfile(`./content/${caminho2}/${pagina2}.json`);
   return {
-    props: { quemSomos, membros },
+    props: { quemSomos, membros, nav },
   };
 }

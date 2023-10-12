@@ -1,10 +1,11 @@
 {
+  "imagemCapa": "/uploads/imagemresultados.png",
+  "autor": "Gustavo Ribeiro Rodrigues",
   "bool": true,
-  "genero": "economia",
   "data": "2023-09-20T20:31:17.346Z",
-  "autor": "Nome Sobrenome",
-  "titulo": "Título Título Título Título Título 40 ch",
-  "previa": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ip 50 ch",
+  "previa": "Potencialize sua equipe com nossa gestão de pessoas",
   "conteudo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in rseprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-  "imagem": "/uploads/imageminicioservicos.jpg"
+  "genero": "Gestão Empresarial",
+  "imagem": "/uploads/imageminicioservicos.jpg",
+  "titulo": "Gestão de Pessoas de Alto Impacto"
 }

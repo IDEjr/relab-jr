@@ -1,6 +1,6 @@
 {
   "inicioQuemSomos": {
-    "imagem": "/uploads/imageminicioquemsomos.jpg",
+    "imagem": "/uploads/imagemresultados.png",
     "titulo": "QUEM SOMOS",
     "texto1": "A RELAB Jr. Consultoria, empresa júnior da Unisinos, teve sua fundação em setembro de 2021, e hoje é federada junto à Federação das Empresas Juniores do Rio Grande do Sul - FEJERS.",
     "texto2": "Nosso objetivo é nos tornarmos a empresa júnior referência na região metropolitana de Porto Alegre para micro e pequenas empresas nos principais setores de gestão empresarial, trazendo a inovação e a assertividade.\r\n\r\n",
@@ -71,7 +71,9 @@
           "linkedin": "https://www.linkedin.com/in/williamhgates"
         }
       }
-    ]
+    ],
+    "titulo": "CONHEÇA NOSSOS MEMBROS",
+    "logo": "/uploads/bandeira-amarela-removebg-preview.png"
   },
   "valores": {
     "texto1": "Na Relab Jr., a disciplina é a base do nosso sucesso, garantindo qualidade e consistência.",
@@ -83,5 +85,13 @@
     "titulo": "VALORES RELAB JR.",
     "titulo3": "Lealdade",
     "titulo4": "Trabalho"
+  },
+  "formularioQuemSomos": {
+    "titulo": "SE TORNE UM RELABER ENTRE EM CONTATO!",
+    "logo": "/uploads/iconelampada-removebg-preview.png",
+    "celular": "555199998888",
+    "email": "adm.relab@gmail.com",
+    "endereco1": "Av. Dr. Nilo Peçanha, 1600, Boa Vista - Porto Alegre/RS",
+    "endereco2": "Av. Unisinos, 950 - Cristo Rei, São Leopoldo, RS"
   }
 }
