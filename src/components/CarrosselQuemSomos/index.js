@@ -25,9 +25,17 @@ export default function CarrosselQuemSomos(...images) {
         arrImages.push(images[i]);
     }
     images = arrImages
+
+    arrObjImg = []
     //console.log(posts);
-  
- console.log(images);
+    for(let i = 0; i < images.length; i+=2){
+      var i++   = {img1: images[i],
+        img2: images[i+1]
+
+      }
+      
+    }
+    console.log(i);
 
   return (
     <>
@@ -53,14 +61,16 @@ export default function CarrosselQuemSomos(...images) {
 
       >
 
-      {images.map((item)=> (
+
+        
+      {/* {images.map((item)=> (
         <SwiperSlide key={item.titulo} className={Styles.swiperSlide}>
           <Image src={item.imagem} width={300} height={200} className={Styles.image} />
           <div >
 
           </div>
         </SwiperSlide>))  
-        }
+        } */}
 
       </Swiper>
       </div>
