@@ -13,7 +13,7 @@ import GridMembros from '@/components/gridMembros'
 import CarrosselQuemSomos from '@/components/CarrosselQuemSomos'
 
 export default function quemSomos({quemSomos, membros, nav}) {
-
+console.log(carouselQuemSomos.titulo);
   const path = quemSomos.inicioQuemSomos.imagem;
   const grid = {
     titulo :quemSomos.painelMembros.titulo,
@@ -55,11 +55,11 @@ export async function getStaticProps(){
   const caminho2 = "navFooter";
   const pagina2 = "navbar";
   const quemSomos = handleJSONfile(`./content/${caminho}/${pagina}.json`);
-
+  const carouselQuemSomos = handleJSONfiles(`./content/carrosselQuemSomos`)
   const pasta = "membros";
   const membros = handleJSONfiles(`./content/${pasta}`);
   const nav = handleJSONfile(`./content/${caminho2}/${pagina2}.json`);
   return {
-    props: { quemSomos, membros, nav },
+    props: { quemSomos, membros, nav, carouselQuemSomos },
   };
 }
