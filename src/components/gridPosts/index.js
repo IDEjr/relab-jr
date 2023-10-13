@@ -16,6 +16,7 @@ export default function gridPosts(...posts) {
         <section className={styles.postsGrid}>
             {posts.map((post, i) => (
             <CardPosts
+            
             key={i}
             imagem={post.imagem}
             titulo={post.titulo}

@@ -1,0 +1,36 @@
+.mainContainer{
+    background-color: #262626;
+    /*width: 50%;*/
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 7rem;
+    margin-bottom: 6rem;
+}
+
+.centerContainer{
+    width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.topContainer{
+    /* background-color: yellowgreen; */
+    height: 35px;
+    width: 100%;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.bar{
+    background-color: #f2c12e;
+    width: 30%;
+    height: 12px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
