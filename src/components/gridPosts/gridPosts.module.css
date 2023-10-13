@@ -10,13 +10,13 @@
 
 
 
-
+/*
 @media only screen  and (min-width: 768px) and (max-width: 1200px) and (orientation: portrait) {
 
    
     .postsGrid{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Duas colunas por linha e colunas flexíveis */
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Duas colunas por linha e colunas flexíveis *//*
         
     }
 
@@ -28,7 +28,7 @@
    
     .postsGrid{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Duas colunas por linha e colunas flexíveis */
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Duas colunas por linha e colunas flexíveis *//*
         padding:5vh 10vw ;
     }
 
@@ -40,7 +40,7 @@
    
     .postsGrid{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Duas colunas por linha e colunas flexíveis */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Duas colunas por linha e colunas flexíveis *//*
         padding:5vh 10vw ;
     }
 
@@ -51,9 +51,10 @@
    
     .postsGrid{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); /* Duas colunas por linha e colunas flexíveis */
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); /* Duas colunas por linha e colunas flexíveis *//*
         padding:5vh 10vw ;
     }
 
 
 }
+*/
