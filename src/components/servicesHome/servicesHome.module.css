@@ -6,7 +6,7 @@
     flex-direction:column;
     gap:15vh;
     padding:15vw;
-    max-width: 100%;
+    width: 100%;
 }
 
 
@@ -43,6 +43,7 @@
     align-items: flex-end;
     justify-content: space-between;
     width: 100%;
+    gap: 10vw;
 }
 
 
@@ -51,17 +52,20 @@
     flex-direction: column;
     gap:5vh;
     
+    
 }
 .second-two {
     display: flex;
     flex-direction: column;
     gap:5vh;
     
+    
 }
 .third-two {
     display: flex;
     flex-direction: column;
     gap:5vh;
+    
     
 }
 
@@ -140,17 +144,17 @@ each service
     .first-two {
         flex-direction: row;
         width: 70vw;
-        gap:13vw;
+        gap:18vw;
     }
     .second-two {
         flex-direction: row;
         width: 70vw;
-        gap:13vw;
+        gap:18vw;
     }
     .third-two {
         flex-direction: row;
         width: 70vw;
-        gap:13vw;
+        gap:18vw;
     }
 
 }
@@ -162,16 +166,19 @@ each service
         width: 80vw;
         height: 1600px;
         flex-direction: column;
+        gap: 5;
     }
     .second-two {
         width: 80vw;
         height: 1600px;
         flex-direction: column;
+        gap: 5;
     }
     .third-two {
         width: 80vw;
         height: 1600px;
         flex-direction: column;
+        gap: 5;
     }
 
     .individual-block {
