@@ -26,16 +26,12 @@ export default function CarrosselQuemSomos(...images) {
     }
     images = arrImages
 
-    arrObjImg = []
+  
     //console.log(posts);
-    for(let i = 0; i < images.length; i+=2){
-      var i++   = {img1: images[i],
-        img2: images[i+1]
-
-      }
+   
       
-    }
-    console.log(i);
+ 
+ 
 
   return (
     <>
@@ -52,7 +48,8 @@ export default function CarrosselQuemSomos(...images) {
             "--swiper-pagination-bullet-height": "6px",
             "--swiper-pagination-bullet-horizontal-gap" :" 15px"
           }}
-         effect={"flip"}
+          slidesPerView={2}
+        
          grabCursor={true}
          pagination={true}
          navigation={true}
@@ -63,14 +60,12 @@ export default function CarrosselQuemSomos(...images) {
 
 
         
-      {/* {images.map((item)=> (
+      {images.map((item)=> (
         <SwiperSlide key={item.titulo} className={Styles.swiperSlide}>
-          <Image src={item.imagem} width={300} height={200} className={Styles.image} />
-          <div >
-
-          </div>
+          
+          <img src={item.imagem}  className={Styles.image} />
         </SwiperSlide>))  
-        } */}
+        }
 
       </Swiper>
       </div>

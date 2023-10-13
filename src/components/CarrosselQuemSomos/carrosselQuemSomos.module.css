@@ -1,12 +1,22 @@
 .image{
 
 width: 50vw;
-height: 500px;
+height: 50rem;
 }
 
 .container{
 align-self: center;
 border: 2px solid black;
 align-items: center;
-width: 50%;
+}
+
+
+
+@media only screen  and  (max-width: 1200px)  {
+
+   .image{
+    height: 30rem;
+   }
+
+
 }
