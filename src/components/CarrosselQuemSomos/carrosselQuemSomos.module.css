@@ -1,0 +1,12 @@
+.image{
+
+width: 50vw;
+height: 500px;
+}
+
+.container{
+align-self: center;
+border: 2px solid black;
+align-items: center;
+width: 50%;
+}

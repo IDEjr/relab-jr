@@ -12,8 +12,8 @@ import { handleJSONfile } from '@/utils/functions/jsonHandler'
 import GridMembros from '@/components/gridMembros'
 import CarrosselQuemSomos from '@/components/CarrosselQuemSomos'
 
-export default function quemSomos({quemSomos, membros, nav}) {
-console.log(carouselQuemSomos.titulo);
+export default function quemSomos({quemSomos, membros, nav, carouselQuemSomos}) {
+console.log(carouselQuemSomos[0].titulo);
   const path = quemSomos.inicioQuemSomos.imagem;
   const grid = {
     titulo :quemSomos.painelMembros.titulo,
@@ -38,7 +38,7 @@ console.log(carouselQuemSomos.titulo);
       <Navbar  {...navData}/>
       <Inicio title = {"QUEM SOMOS"} image= {path}/>
       <TextoBarraQuemSomos {...textoBarra}/>
-      <CarrosselQuemSomos/>
+       <CarrosselQuemSomos {...carouselQuemSomos}/>
       <Valores />
       <GridMembros   titulo={grid.titulo} logo={grid.logo} membros={membros}/>
       
