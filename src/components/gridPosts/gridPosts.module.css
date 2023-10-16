@@ -1,7 +1,7 @@
 
 .postsGrid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Duas colunas por linha e colunas flexíveis */
+    grid-template-columns: 30vw 30vw; /* Duas colunas por linha e colunas flexíveis *//* Duas colunas por linha e colunas flexíveis */
     padding:5vh 20vw ;
     grid-column-gap: 4rem; /* Espaço horizontal de 20 pixels */
     grid-row-gap: 10px; /* Espaço vertical de 10 pixels */
@@ -11,24 +11,24 @@
 
 
 
-@media only screen  and (min-width: 768px) and (max-width: 1200px) and (orientation: portrait) {
+@media only screen  and (min-width: 1000px) and (max-width: 1200px)  {
 
    
     .postsGrid{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Duas colunas por linha e colunas flexíveis */
+        
+        grid-template-columns: 30vw 30vw; /* Duas colunas por linha e colunas flexíveis */
         
     }
 
 
 }
 
-@media only screen  and (min-width: 500px) and (max-width: 767px) and (orientation: portrait) {
+@media only screen  and (min-width: 500px) and (max-width: 999px)  {
 
    
     .postsGrid{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Duas colunas por linha e colunas flexíveis */
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
         padding:5vh 10vw ;
     }
 
@@ -40,7 +40,7 @@
    
     .postsGrid{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Duas colunas por linha e colunas flexíveis */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
         padding:5vh 10vw ;
     }
 
@@ -51,7 +51,7 @@
    
     .postsGrid{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); /* Duas colunas por linha e colunas flexíveis */
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); 
         padding:5vh 10vw ;
     }
 
