@@ -85,8 +85,8 @@ export default function Footer(footerData) {
                         <a className={styles['lab-icon']} href='https://unisinos.br/lab/programas/relab' target='_blank'>
                             <Image
                                 src={footerData.watermark1}
-                                width={1000}
-                                height={1000}
+                                width={165}
+                                height={50}
                                 className={styles['watermarkImg']}
                                 quality={100}
                                 />
@@ -96,8 +96,8 @@ export default function Footer(footerData) {
                         <a className={styles['jesuitas-icon']} href='https://jesuitasbrasil.org.br' target='_blank'>
                             <Image
                                 src={footerData.watermark2}
-                                width={1000}
-                                height={1000}
+                                width={165}
+                                height={50}
                                 className={styles['watermarkImg']}
                                 quality={100}
                                 />
@@ -107,8 +107,8 @@ export default function Footer(footerData) {
                         <a className={styles['unisinos-icon']} href='https://www.unisinos.br/' target='_blank'>
                             <Image
                                 src={footerData.watermark3}
-                                width={1000}
-                                height={1000}
+                                width={165}
+                                height={50}
                                 className={styles['watermarkImg']}
                                 quality={100}
                                 />

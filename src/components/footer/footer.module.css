@@ -39,6 +39,7 @@
     flex-direction: column;
     padding-right: 15vw;
     gap: 1vh;
+    align-items: center;
 }
 
 
@@ -98,7 +99,7 @@
     flex-direction: row;
     height: 20%;
     padding-right: 8vw;
-    align-items: flex-start;
+    align-items: center;
 }
 
 
@@ -213,6 +214,15 @@
     }
     .topPart {
         padding-top: 1vh;
+    }
+
+    .insideImg {
+        width: 35px;
+        height: 35px;
+    }
+
+    .social-icons {
+        gap:+5vw;
     }
 
 }
