@@ -171,8 +171,8 @@
     }
 
     .watermarkImg {
-        width: 150px;
-        height: 30px;
+        width: 120px;
+        height: 40px;
     }
 }
 
@@ -198,4 +198,21 @@
     .watermarkImg {
         width: 50px;
     }
+}
+
+@media (max-width: 650px) {
+    .watermarkImg {
+        width: 50px;
+        height: 30px;
+    }
+    .footerText {
+        font-size: 3vw;
+    }
+    .relabIcon {
+        padding-left: +2vw;
+    }
+    .topPart {
+        padding-top: 1vh;
+    }
+
 }
