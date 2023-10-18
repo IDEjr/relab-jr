@@ -13,7 +13,7 @@ line-height: 50px;
 }
 .container{
   
-height: 56rem;
+height: 54rem;
 width: 100%;
 display: flex;
 flex-direction: column;
@@ -106,10 +106,11 @@ gap: 5%;
 
   
   .lampada{
-   width: 9rem;
+   width: 30vw;
    margin: auto;
    display: flex;
    margin-top: 5%;
+   margin-bottom: 5%;
   }
   .textImage{
     flex-direction: column-reverse;
@@ -125,14 +126,10 @@ gap: 5%;
     justify-content: flex-start;
     gap: 2%;
     margin-top: 8vh;
-    height: 35rem;
+    height: fit-content;
 
   }
-  .ImageBoxContent{
-    width: 100%;
-    height: 100%;
-
-  }
+  
   .text-content{
     text-align: center;
     font-size: 3vw;
