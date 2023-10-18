@@ -309,6 +309,7 @@ collections:
           - {label: "Email", name: "email", widget: "string"}
           - {label: "Instagram", name: "instagram", widget: "string"}
           - {label: "Copyright", name: "copy", widget: "string"}
+          - {label: "Direitos", name: "direitos", widget: "string"}
           - {label: "Watermark1", name: "watermark1", widget: "image"}
           - {label: "Link1", name: "link1", widget: "string"}
           - {label: "Watermark2", name: "watermark2", widget: "image"}
