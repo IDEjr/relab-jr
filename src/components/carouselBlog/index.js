@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import styles from './carouselHome.module.css'
+import styles from './CarrosselBlog.module.css'
 import CardPosts from '../cardPosts';
 import { register } from 'swiper/element/bundle'
 
@@ -18,25 +18,30 @@ import { EffectFlip, Pagination, Navigation } from "swiper/modules";
 
 /*Pegue os titulos que estão no json da home, e passar para aqui, e renderizar somente os posts que tem mesmo titulo dos 
 selecionados.*/
-export default function carouselHome(...posts) {
+export default function CarrosselBlog(...posts) {
 
   
-  const data = [];
-  for (var i =0; i<4 ; i++){
-
-    data.push(posts[0][i]);
+  const arrPosts = [];
+  for (let i =0; i<4 ; i++){
+    arrPosts.push(posts[0][i]);
+    arrPosts[i].data = new Date(arrPosts[i].data)
   }
+  
+  const compareTime = (time1, time2) =>{
+    return time1 - time2
+  }
+  arrPosts.sort(compareTime) //ordena os quatro primeiros por data
 
-  console.log(data);
+  for (let i =0; i<arrPosts.length ; i++){
+  console.log(arrPosts[i].data);
+  arrPosts[i].data  =  arrPosts[i].data.toISOString().split('T')[0];      
+  }
 
 
   return (
     <>
-    <section className={styles.carrossel}>
-      <h3 className={styles.titleSection}>
-        NOVIDADES
-      </h3>
-      <Swiper
+
+       <Swiper
           style={{
             "--swiper-theme-color":"#F2C12E",
             "--swiper-pagination-color": "#F2C12E",
@@ -48,9 +53,8 @@ export default function carouselHome(...posts) {
             "--swiper-pagination-bullet-height": "6px",
             "--swiper-pagination-bullet-horizontal-gap" :" 15px"
           }}
-          
-            
-         effect={"flip"}
+        slidesPerView={1}
+         effect={'swipe'}   
          grabCursor={true}
          pagination={true}
          navigation={true}
@@ -58,18 +62,15 @@ export default function carouselHome(...posts) {
          className={styles.swiperContainer}
 
       >
-        {data.map((item)=> (
+        {arrPosts.map((item)=> (
         <SwiperSlide key={item.titulo} className={styles.swiperIndi}>
           <CardPosts {...item}/>
-          <div className={styles.margin}>
-
-          </div>
         </SwiperSlide>))
         }
       </Swiper>
+       
       
-      
-    </section>
+  
       
     </>
   );

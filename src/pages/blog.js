@@ -7,7 +7,7 @@ import GridPosts from '@/components/gridPosts'
 import { handleJSONfiles } from '../utils/functions/jsonHandler'
 import { handleJSONfile } from '../utils/functions/jsonHandler'
 import MenuBlog from '@/components/menuBlog/menuBlog'
-
+import CarrosselBlog from '@/components/carouselBlog'
 
 export default function blog({posts, nav}) {
   // console.log(posts.imagem);
@@ -23,7 +23,7 @@ export default function blog({posts, nav}) {
   return (
     <>
       <Navbar  {...navData}/>
-      {/* <GridPosts {...posts}/> */}
+      <CarrosselBlog {...posts}/>  
       <MenuBlog {...posts}/>
       <Footer />
     </> 
