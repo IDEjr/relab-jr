@@ -62,19 +62,8 @@ gap: 5%;
   height: auto;
 }
 
-.imagebox{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
 
-}
 
-.ImageBoxContent{
-  width: 50%;
-  height: 30rem;
-
-}
 
 .hiddenImage{
   width: 50%;
@@ -113,18 +102,19 @@ gap: 5%;
   
 
   }
-  .imagebox{
-    width: 100%;
-  }
+  
 
   
   .lampada{
    width: 9rem;
    margin: auto;
+   display: flex;
+   margin-top: 5%;
   }
   .textImage{
     flex-direction: column-reverse;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
     padding: 0%;
     
