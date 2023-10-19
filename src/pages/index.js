@@ -57,7 +57,7 @@ export default function Home({home, posts, nav}) {
       <Inicio title = {"GESTÃO É A NOSSA CAUSA"} image= {path}/>
       <TextoBarraHome {...textoBarraHome}/>
       <ImagemComBotao {...resultados} />
-      <ServicesHome servicosHome = {home.servicosHome}/>
+      {/* <ServicesHome servicosHome = {home.servicosHome}/> */}
 
       <ImagemComBotao {...membros} />     
       <CarouselHome {...posts}/>  

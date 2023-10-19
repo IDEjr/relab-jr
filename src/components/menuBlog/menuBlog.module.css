@@ -2,7 +2,7 @@
     
 
     border: none;
-    width: 18vw;
+    width: 15vw;
     height: 9vh;
     background: none;
     color: #F2C12E;
@@ -14,14 +14,20 @@
   align-items: center;
 }
 .buttonMobile{
-    
+    background-color: black;
 display: none;
   border: none;
-  width: 10vw;
+  width: fit-content;
   height: 9vh;
   background: none;
   color: #F2C12E;
   font-size: 1.4vw;
+}
+
+
+.optionStyle {
+  background-color: black;
+  color: white;
 }
 
 .lista{
