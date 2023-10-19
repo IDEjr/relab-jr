@@ -40,7 +40,11 @@ function ordemDecrescente(a, b) {
    for (let i =0; i<arrPosts.length ; i++){
    arrPosts[i].data  =  arrPosts[i].data.toISOString().split('T')[0];      
    }
-  var recents = []
+  var recents = [];
+  for (let i = 0; i < 3; i++) {
+    recents.push(arrPosts[i])
+    
+  }
   
 
 
@@ -69,9 +73,17 @@ function ordemDecrescente(a, b) {
          className={styles.swiperContainer}
 
       >
-        {arrPosts.map((item)=> (
+        {recents.map((item)=> (
         <SwiperSlide key={item.titulo} className={styles.swiperIndi}>
-          <CardPosts {...item}/>
+         <div>
+          <div>
+            <Image src={item.imagem} height={300} width={200}  alt={item.titulo}/>
+          </div>
+          <h1>BLOG</h1>
+          <h3>{item.genero}</h3>
+          <h2>{item.titulo}</h2>
+          <h4>{item.previa}</h4>
+         </div>
         </SwiperSlide>))
         }
       </Swiper>
