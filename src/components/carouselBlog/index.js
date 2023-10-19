@@ -16,8 +16,7 @@ import {Swiper, SwiperSlide} from 'swiper/react'
 import { EffectFlip, Pagination, Navigation } from "swiper/modules";
 
 
-/*Pegue os titulos que estão no json da home, e passar para aqui, e renderizar somente os posts que tem mesmo titulo dos 
-selecionados.*/
+
 export default function CarrosselBlog(...posts) {
 
   
@@ -33,7 +32,7 @@ export default function CarrosselBlog(...posts) {
 
   
 function ordemDecrescente(a, b) {
-  return a.data - b.data;
+  return b.data - a.data;
 }
   arrPosts.sort(ordemDecrescente) //ordena os quatro primeiros por data
 
@@ -78,15 +77,15 @@ function ordemDecrescente(a, b) {
          <div className={styles.carouselImage}>
           
             <Image src={item.imagem}  fill  alt={item.titulo} style={{objectFit: 'cover', background: 'black', opacity:0.6} }  />
-         <div className={styles.titles}>
+          <div className={styles.titles}>
            <h1 className={styles.h1}>BLOG</h1>
            
-             <h3 className={styles.h3}>{item.genero}</h3>                                                                                             
+            <h3><p className={styles.h3}>{item.genero}</p></h3>                                                                                             
+        
+            <h2><p className={styles.h2}>{item.titulo}</p></h2>
          
-            <h2 className={styles.h2}>{item.titulo}</h2>
-         
-            <h3 className={styles.h3}>{item.previa}</h3>
-         </div>
+            <h3><p className={styles.h3}>{item.previa}</p></h3> 
+         </div> 
          </div>
         </SwiperSlide>))
         }
