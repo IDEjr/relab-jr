@@ -33,7 +33,7 @@ export default function CarrosselBlog(...posts) {
 
   
 function ordemDecrescente(a, b) {
-  return b.data - a.data;
+  return a.data - b.data;
 }
   arrPosts.sort(ordemDecrescente) //ordena os quatro primeiros por data
 
@@ -51,7 +51,7 @@ function ordemDecrescente(a, b) {
 
   return (
     <>
-
+<section className={styles.container}>
        <Swiper
           style={{
             "--swiper-theme-color":"#F2C12E",
@@ -74,20 +74,24 @@ function ordemDecrescente(a, b) {
 
       >
         {recents.map((item)=> (
-        <SwiperSlide key={item.titulo} className={styles.swiperIndi}>
-         <div>
-          <div>
-            <Image src={item.imagem} height={300} width={200}  alt={item.titulo}/>
-          </div>
-          <h1>BLOG</h1>
-          <h3>{item.genero}</h3>
-          <h2>{item.titulo}</h2>
-          <h4>{item.previa}</h4>
+        <SwiperSlide key={item.titulo} className={styles.swiperInd}>
+         <div className={styles.carouselImage}>
+          
+            <Image src={item.imagem}  fill  alt={item.titulo} style={{objectFit: 'cover', background: 'black', opacity:0.6} }  />
+         <div className={styles.titles}>
+           <h1 className={styles.h1}>BLOG</h1>
+           
+             <h3 className={styles.h3}>{item.genero}</h3>                                                                                             
+         
+            <h2 className={styles.h2}>{item.titulo}</h2>
+         
+            <h3 className={styles.h3}>{item.previa}</h3>
+         </div>
          </div>
         </SwiperSlide>))
         }
       </Swiper>
-       
+      </section>
       
   
       
