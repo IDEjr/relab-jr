@@ -22,20 +22,27 @@ export default function CarrosselBlog(...posts) {
 
   
   const arrPosts = [];
-  for (let i =0; i<4 ; i++){
-    arrPosts.push(posts[0][i]);
-    arrPosts[i].data = new Date(arrPosts[i].data)
-  }
-  
-  const compareTime = (time1, time2) =>{
-    return time1 - time2
-  }
-  arrPosts.sort(compareTime) //ordena os quatro primeiros por data
+  for( const i in posts[0]){
 
-  for (let i =0; i<arrPosts.length ; i++){
-  console.log(arrPosts[i].data);
-  arrPosts[i].data  =  arrPosts[i].data.toISOString().split('T')[0];      
-  }
+    arrPosts.push(posts[0] [i]);
+    
+
+    arrPosts[i].data = new Date(arrPosts[i].data)
+
+}
+
+  
+function ordemDecrescente(a, b) {
+  return b.data - a.data;
+}
+  arrPosts.sort(ordemDecrescente) //ordena os quatro primeiros por data
+
+   for (let i =0; i<arrPosts.length ; i++){
+   arrPosts[i].data  =  arrPosts[i].data.toISOString().split('T')[0];      
+   }
+  var recents = []
+  
+
 
 
   return (
