@@ -48,13 +48,19 @@ export default function CarrosselQuemSomos(...images) {
             "--swiper-pagination-bullet-height": "6px",
             "--swiper-pagination-bullet-horizontal-gap" :" 15px"
           }}
-          slidesPerView={2}
+          slidesPerView={1}
         
          grabCursor={true}
          pagination={true}
          navigation={true}
          modules={[EffectFlip, Pagination, Navigation]}
-         
+         breakpoints={{
+          800: {
+            slidesPerView: 2
+          }
+         }
+
+         }
 
       >
 
@@ -62,8 +68,15 @@ export default function CarrosselQuemSomos(...images) {
         
       {images.map((item)=> (
         <SwiperSlide key={item.titulo} className={Styles.swiperSlide}>
-          
-          <img src={item.imagem}  className={Styles.image} />
+           <div   className={Styles.image}>
+                <Image src={item.imagem}   
+                
+                fill
+                style={{objectFit:'cover'}}
+                alt="Post"
+                // 
+                />
+            </div>
         </SwiperSlide>))  
         }
 
