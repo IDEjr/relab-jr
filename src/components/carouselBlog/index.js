@@ -32,7 +32,7 @@ export default function CarrosselBlog(...posts) {
 
   
 function ordemDecrescente(a, b) {
-  return b.data - a.data;
+  return a.data - b.data;
 }
   arrPosts.sort(ordemDecrescente) //ordena os quatro primeiros por data
 
