@@ -43,9 +43,9 @@ console.log(filteredPosts);
                     <li>
                         <div >
                             <select className={Styles.buttonMobile} onChange={handleChange}>
-                            <option className={Styles.optionStyle} value={"TODOS"}> Todos</option>
+                            <option value={"TODOS"}> Todos</option>
 
-                            {filteredgenders.map((filteredgenders) => ( <option className={Styles.optionStyle}> 
+                            {filteredgenders.map((filteredgenders) => ( <option> 
                             {filteredgenders}
                             </option>
                         ))}
