@@ -12,6 +12,7 @@ import CarrosselBlog from '@/components/carouselBlog'
 export default function blog({posts, nav}) {
   // console.log(posts.imagem);
   // console.log(posts);
+  
 
   const navData = {
     logo : nav.logo,

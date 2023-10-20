@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from './CarrosselBlog.module.css'
 import CardPosts from '../cardPosts';
 import { register } from 'swiper/element/bundle'
-
+import { useState, useEffect } from 'react';
 register();
 
 import 'swiper/css';
@@ -17,11 +17,18 @@ import { EffectFlip, Pagination, Navigation } from "swiper/modules";
 
 
 
-export default function CarrosselBlog(...posts) {
-
-  
+export default function CarrosselBlog(...posts) {  
+  const [domLoaded, setDomLoaded] = useState(false);
   const arrPosts = [];
-  for( const i in posts[0]){
+  var recents = [];
+
+  useEffect(() => {
+    setDomLoaded(true);
+  }, []);
+
+
+
+  for(const i in posts[0]){
 
     arrPosts.push(posts[0] [i]);
     
@@ -39,7 +46,7 @@ function ordemDecrescente(a, b) {
    for (let i =0; i<arrPosts.length ; i++){
    arrPosts[i].data  =  arrPosts[i].data.toISOString().split('T')[0];      
    }
-  var recents = [];
+  
   for (let i = 0; i < 3; i++) {
     recents.push(arrPosts[i])
     
@@ -50,7 +57,9 @@ function ordemDecrescente(a, b) {
 
   return (
     <>
+    
 <section className={styles.container}>
+{domLoaded && (
        <Swiper
           style={{
             "--swiper-theme-color":"#F2C12E",
@@ -90,6 +99,7 @@ function ordemDecrescente(a, b) {
         </SwiperSlide>))
         }
       </Swiper>
+)}
       </section>
       
   
