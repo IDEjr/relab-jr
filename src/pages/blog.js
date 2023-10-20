@@ -7,7 +7,7 @@ import GridPosts from '@/components/gridPosts'
 import { handleJSONfiles } from '../utils/functions/jsonHandler'
 import { handleJSONfile } from '../utils/functions/jsonHandler'
 import MenuBlog from '@/components/menuBlog/menuBlog'
-import CarrosselBlog from '@/components/carouselBlog'
+import CarrosselBlog from '@/components/carrosselBlog'
 
 export default function blog({posts, nav}) {
   // console.log(posts.imagem);

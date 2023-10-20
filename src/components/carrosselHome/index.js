@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import styles from './carouselHome.module.css'
+import styles from './carrosselHome.module.css'
 import CardPosts from '../cardPosts';
 import { register } from 'swiper/element/bundle'
 
@@ -18,7 +18,7 @@ import { EffectFlip, Pagination, Navigation } from "swiper/modules";
 
 /*Pegue os titulos que estão no json da home, e passar para aqui, e renderizar somente os posts que tem mesmo titulo dos 
 selecionados.*/
-export default function carouselHome(...posts) {
+export default function carrosselHome(...posts) {
 
   
   const data = [];

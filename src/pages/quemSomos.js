@@ -10,10 +10,10 @@ import styles from '../styles/quemSomos.module.css'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
 import GridMembros from '@/components/gridMembros'
-import CarrosselQuemSomos from '@/components/CarrosselQuemSomos'
+import CarrosselQuemSomos from '@/components/carrosselQuemSomos'
 
-export default function quemSomos({quemSomos, membros, nav, carouselQuemSomos}) {
-console.log(carouselQuemSomos[0].titulo);
+export default function quemSomos({quemSomos, membros, nav, carrosselQuemSomos}) {
+console.log(carrosselQuemSomos[0].titulo);
   const path = quemSomos.inicioQuemSomos.imagem;
   const grid = {
     titulo :quemSomos.painelMembros.titulo,
@@ -38,7 +38,7 @@ console.log(carouselQuemSomos[0].titulo);
       <Navbar  {...navData}/>
       <Inicio title = {"QUEM SOMOS"} image= {path}/>
       <TextoBarraQuemSomos {...textoBarra}/>
-       <CarrosselQuemSomos {...carouselQuemSomos}/>
+       <CarrosselQuemSomos {...carrosselQuemSomos}/>
       <Valores />
       <GridMembros   titulo={grid.titulo} logo={grid.logo} membros={membros}/>
       
@@ -55,11 +55,11 @@ export async function getStaticProps(){
   const caminho2 = "navFooter";
   const pagina2 = "navbar";
   const quemSomos = handleJSONfile(`./content/${caminho}/${pagina}.json`);
-  const carouselQuemSomos = handleJSONfiles(`./content/carrosselQuemSomos`)
+  const carrosselQuemSomos = handleJSONfiles(`./content/carrosselQuemSomos`)
   const pasta = "membros";
   const membros = handleJSONfiles(`./content/${pasta}`);
   const nav = handleJSONfile(`./content/${caminho2}/${pagina2}.json`);
   return {
-    props: { quemSomos, membros, nav, carouselQuemSomos },
+    props: { quemSomos, membros, nav, carrosselQuemSomos },
   };
 }

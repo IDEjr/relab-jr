@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import styles from './CarrosselBlog.module.css'
+import styles from './carrosselBlog.module.css'
 import CardPosts from '../cardPosts';
 import { register } from 'swiper/element/bundle'
 
@@ -74,7 +74,7 @@ function ordemDecrescente(a, b) {
       >
         {recents.map((item)=> (
         <SwiperSlide key={item.titulo} className={styles.swiperInd}>
-         <div className={styles.carouselImage}>
+         <div className={styles.carrosselImage}>
           
             <Image src={item.imagem}  fill  alt={item.titulo} style={{objectFit: 'cover', background: 'black', opacity:0.6} }  />
           <div className={styles.titles}>
