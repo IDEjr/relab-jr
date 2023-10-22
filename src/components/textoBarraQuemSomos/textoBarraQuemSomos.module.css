@@ -12,7 +12,8 @@ line-height: 50px;
 
 }
 .container{
-height: 100rem;
+  
+height: 54rem;
 width: 100%;
 display: flex;
 flex-direction: column;
@@ -28,10 +29,14 @@ gap: 5%;
     
 }
 .lampada{
- 
+ position: relative;
+ aspect-ratio: 1/1;
+ overflow: hidden;
+ display: block;
   margin-right: 15%;
   height: 100%;
   width: 300px;
+  
 }
 .retangulo{
   display: none;
@@ -57,19 +62,8 @@ gap: 5%;
   height: auto;
 }
 
-.imagebox{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
 
-}
 
-.ImageBoxContent{
-  width: 50%;
-  height: 30rem;
-
-}
 
 .hiddenImage{
   width: 50%;
@@ -108,19 +102,20 @@ gap: 5%;
   
 
   }
-  .imagebox{
-    width: 100%;
-  }
+  
 
   
   .lampada{
-   width: 9rem;
+   width: 30vw;
    margin: auto;
-    padding-top: 5vh;
+   display: flex;
+   margin-top: 5%;
+   margin-bottom: 5%;
   }
   .textImage{
     flex-direction: column-reverse;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
     padding: 0%;
     
@@ -131,12 +126,10 @@ gap: 5%;
     justify-content: flex-start;
     gap: 2%;
     margin-top: 8vh;
-  }
-  .ImageBoxContent{
-    width: 100%;
-    height: 100%;
+    height: fit-content;
 
   }
+  
   .text-content{
     text-align: center;
     font-size: 3vw;
@@ -149,6 +142,8 @@ gap: 5%;
     height: 0.5rem;
     align-self: baseline;
     display: block;
+    margin-top: 5%;
+    margin-bottom: 5%;
     
   }
   

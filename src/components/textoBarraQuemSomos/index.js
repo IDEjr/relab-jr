@@ -19,8 +19,14 @@ export default function textoBarraQuemSomos({texto1, texto2, logo}) {
     
         <div className={styles['textImage']}>
             
-            <div className={styles['lampada']} >
-                <Image src={logo}    width={300} height={300}/>
+            <div   className={styles['lampada']}>
+                <Image src={logo}   
+                
+                fill
+                style={{objectFit:'cover'}}
+                alt="Post"
+                // 
+                />
             </div>
 
             <div className={styles['bottomtext']}>

@@ -7,14 +7,14 @@ import ImagemComBotao from '../components/imagemComBotao'
 import ServicesHome from '../components/servicesHome'
 import Inicio from '../components/inicio'
 import TextoBarraHome from '../components/textoBarraHome/index'
-import CarouselHome from '../components/carouselHome'
+import carrosselHome from '../components/carrosselHome'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
 import React from 'react';
 
 
 
-export default function Home({home, posts, nav}) {
+export default function Home({home, posts, nav, foo}) {
 
   // pega imagem da home do netlify
   const path = home.inicioHome.imagem;
@@ -46,7 +46,7 @@ export default function Home({home, posts, nav}) {
     instagram : nav.instagram,
     email : nav.email
   };
-
+  console.log(foo);
 
   return (
     <div className={styles['tudo']}>
@@ -59,9 +59,9 @@ export default function Home({home, posts, nav}) {
       <ImagemComBotao {...resultados} />
       <ServicesHome servicosHome = {home.servicosHome}/>
 
-      <ImagemComBotao {...membros} />     
-      {/*<CarouselHome {...posts}/>  */}
-      <Footer />
+      <ImagemComBotao {...membros} />
+      <carrosselHome {...posts}/>  
+      <Footer {...foo}/>
 
     </div>
   )
@@ -74,10 +74,12 @@ export async function getStaticProps(){
   const pagina = "home";
   const caminho2 = "navFooter";
   const pagina2 = "navbar";
+  const pagina3 = "footer";
   const home = handleJSONfile(`./content/${caminho}/${pagina}.json`);
   const nav = handleJSONfile(`./content/${caminho2}/${pagina2}.json`);
+  const foo = handleJSONfile(`./content/${caminho2}/${pagina3}.json`);
   const posts = handleJSONfiles('./content/posts');
   return {
-    props: { home, posts, nav },
+    props: { home, posts, nav, foo },
   };
 }
