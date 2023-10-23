@@ -39,7 +39,7 @@ export default function CarrosselBlog(...posts) {
 
   
 function ordemDecrescente(a, b) {
-  return a.data - b.data;
+  return b.data - a.data;
 }
   arrPosts.sort(ordemDecrescente) //ordena os quatro primeiros por data
 
@@ -64,13 +64,15 @@ function ordemDecrescente(a, b) {
           style={{
             "--swiper-theme-color":"#F2C12E",
             "--swiper-pagination-color": "#F2C12E",
-            "--swiper-pagination-bullet-inactive-color": "#999999",
-            "--swiper-pagination-bullet-inactive-opacity": "1",
+            "--swiper-pagination-bullet-inactive-color": "#F2C12E",
+            "--swiper-pagination-bullet-inactive-opacity": "0.2",
             "--swiper-pagination-bullet-size": "16px",
             "--swiper-pagination-bullet-border-radius": "0",
-            "--swiper-pagination-bullet-width": "40px",
-            "--swiper-pagination-bullet-height": "6px",
+            "--swiper-pagination-bullet-width": "70px",
+            "--swiper-pagination-bullet-height": "10px",
+            "--swiper-pagination-bullet-vertical-gap" :" 3000000px",
             "--swiper-pagination-bullet-horizontal-gap" :" 15px"
+
           }}
         slidesPerView={1}
          effect={'swipe'}   
