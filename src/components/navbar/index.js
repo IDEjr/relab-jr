@@ -16,6 +16,7 @@ export default function navbar({logo,linkedin, instagram, email }) {
 			"responsiveLogo"
 		);
 	};
+    const style = { color: "#F2C12E !important", fontSize: "1.5em", marginTop: "150px" }
     
     return(
         
@@ -68,7 +69,7 @@ export default function navbar({logo,linkedin, instagram, email }) {
                                 )
                             }
                             onClick={showNavbar}>
-                            <Link href={instagram} target="_blank"><FaInstagram /></Link>
+                            <Link href={instagram} target="_blank"><FaInstagram style = {style} /></Link>
                         </button>
                         <button
                             className={
@@ -78,7 +79,7 @@ export default function navbar({logo,linkedin, instagram, email }) {
                                 )
                             }
                             onClick={showNavbar}>
-                            <Link href={linkedin} target="_blank"><FaLinkedin /></Link>
+                            <Link href={linkedin} target="_blank"><FaLinkedin style = {style}/></Link>
                         </button>
                         <button
                             className={
@@ -87,7 +88,7 @@ export default function navbar({logo,linkedin, instagram, email }) {
                                 )
                             }
                             onClick={showNavbar}>
-                            <Link href={email} target="_blank"><FaEnvelope /></Link>
+                            <Link href={email} target="_blank"><FaEnvelope style = {style}/></Link>
                         </button>
                     </div>
                     
