@@ -6,8 +6,10 @@ import Footer from '../components/footer'
 import GridPosts from '@/components/gridPosts'
 import { handleJSONfiles } from '../utils/functions/jsonHandler'
 import { handleJSONfile } from '../utils/functions/jsonHandler'
+import MenuBlog from '@/components/menuBlog/menuBlog'
+import CarrosselBlog from '@/components/carrosselBlog'
 
-export default function blog({posts, nav}) {
+export default function blog({posts, nav, foo}) {
   // console.log(posts.imagem);
   // console.log(posts);
 
@@ -21,9 +23,9 @@ export default function blog({posts, nav}) {
   return (
     <>
       <Navbar  {...navData}/>
-      <GridPosts {...posts}/>
-     
-      <Footer />
+      <CarrosselBlog {...posts}/>  
+      <MenuBlog {...posts}/>
+      <Footer {...foo}/>
     </> 
   );
 }
@@ -32,9 +34,16 @@ export default function blog({posts, nav}) {
 export async function getStaticProps() {
   const caminho2 = "navFooter";
   const pagina2 = "navbar";
+
+  const pagina3 = "footer";
+  const foo = handleJSONfile(`./content/${caminho2}/${pagina3}.json`);
+
+
+
+
   const posts = handleJSONfiles('./content/posts')
   const nav = handleJSONfile(`./content/${caminho2}/${pagina2}.json`);
   return {
-    props: { posts, nav },
+    props: { posts, nav, foo },
   };
 }

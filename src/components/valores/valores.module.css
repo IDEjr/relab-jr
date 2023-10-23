@@ -55,6 +55,7 @@
 }
 
 .titleValores{
+  
     color: #F2C12E;
     align-content: center;
     justify-content: center;
@@ -88,6 +89,7 @@
     .valores {
         grid-template-columns: 1fr; /* Uma única coluna */
         grid-template-rows: auto auto auto auto auto ;
+        
     }
     .middle{
         grid-row: 1;
@@ -109,8 +111,8 @@
         grid-column: 1 / span 2; /* Ocupa da coluna 1 até a coluna 2 */
     }
     .titleGrande{
-        font-size: 4vh;
-        font-weight: 600;
+        font-size: 3vh;
+        font-weight: 500;
         width: 80%;
 
     }
@@ -118,6 +120,7 @@
         width: 60%;
     }
     .titleValores{
-        width: 80%;
+        font-weight: 500;
+        width: 100%;
     }
 }

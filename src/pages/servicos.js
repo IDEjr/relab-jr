@@ -8,7 +8,7 @@ import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
 
 
-export default function servicos({servicos, nav}) {
+export default function servicos({servicos, nav, foo}) {
 
   const path = servicos.inicioServicos.imagem;
 
@@ -50,7 +50,7 @@ export default function servicos({servicos, nav}) {
       <Inicio title = {"SERVIÇOS"} image= {path}/>
       <TextoServicos {...inicioServicos}/>
       <EscoposServicos {...blocosServicos}/>
-      <Footer />
+      <Footer {...foo}/>
     </>
   );
 }
@@ -61,10 +61,17 @@ export async function getStaticProps(){
   const caminho = "paginas";
   const pagina = "servicos";
   const caminho2 = "navFooter";
+
+
+
+  const pagina3 = "footer";
+  const foo = handleJSONfile(`./content/${caminho2}/${pagina3}.json`);
+
+
   const pagina2 = "navbar";
   const servicos = handleJSONfile(`./content/${caminho}/${pagina}.json`);
   const nav = handleJSONfile(`./content/${caminho2}/${pagina2}.json`);
   return {
-    props: { servicos, nav },
+    props: { servicos, nav, foo },
   };
 }

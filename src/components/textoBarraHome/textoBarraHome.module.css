@@ -10,7 +10,7 @@
 }
 .retangulo{
     background-color: #F2C12E;
-    height: 1vh;  
+    height: 13px;  
     width: 39%;
     align-self: flex-end;
     margin-top: 5vh;
@@ -31,7 +31,7 @@
 }
 
 .text-content{
-    font-size: 1.2rem;
+    font-size: 1.2vw;
     font-style: italic;
     width: 100%;
 }
@@ -48,7 +48,17 @@
         line-height: 3vh;
        }
         .text-content{
-            font-size: 1.5rem;
+            font-size: 1px;
+        }
+
+        .retangulo{
+            height: 13px;
+            margin-bottom: 2rem;
+        }
+
+        .container{
+            height: fit-content;
+            justify-content: space-around;
         }
           }  
   
