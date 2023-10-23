@@ -2,11 +2,11 @@
     font-size: large;
     display: flex;
     align-items: center;
-    padding-left: 1vw;
+    padding: 5vh 1vw;
+    padding-left: 3vw;
     flex-direction:column;
-    gap:15vh;
-    padding:15vw;
-    max-width: 100%;
+    width: 100%;
+
 }
 
 
@@ -43,6 +43,8 @@
     align-items: flex-end;
     justify-content: space-between;
     width: 100%;
+    gap: 5vw;
+    padding-bottom: 10vh;
 }
 
 
@@ -50,18 +52,22 @@
     display: flex;
     flex-direction: column;
     gap:5vh;
+    width: 100%;
+    
     
 }
 .second-two {
     display: flex;
     flex-direction: column;
     gap:5vh;
+    width: 100%;
     
 }
 .third-two {
     display: flex;
     flex-direction: column;
     gap:5vh;
+    width: 100%;
     
 }
 
@@ -86,13 +92,15 @@ each service
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    width: 100%;
+    align-items: center;
 }
 
 
 .frames {
     display: flex;
-    width: 20vw;
-    height: 600px;
+    width: 100%;
+    height: 500px;
     align-items: flex-end;
     justify-content: center;
 }
@@ -100,28 +108,40 @@ each service
 .overlayGrid {
     display: grid;
     grid-template-areas: overlay;
+    width: 100%;
+    position: relative;
+    height: 500px;
+    align-content: center;
 }
 
 .frameImg {
     position: absolute;
+    padding-left: 5vw;
     
 }
 .insideImg {
-    padding-left: 19px;
-    padding-top:69px;
+    width: 80.5%;
+    height: 530px;
+    padding-left: 1.2vw;
+    padding-top: 7.5vh;
     object-fit: cover;
+}
+.backFrameImg {
+    position: absolute;
+    width: 100%;
+    height: 600px;
 }
 
 
 .top-text {
     color: #fff;
-    width: 20vw;
+    width: 18vw;
     height: 10vh;
     display: flex;
     text-align: center;
     font-size: 30px;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 400;
 
     line-height: 45px; /* 150% */
 }
@@ -135,82 +155,95 @@ each service
         display: flex;
         flex-direction: column;
         padding-right: 3vw;
+        align-items: center;
 
+    }
+    .insideImg {
+        padding-left: 1.1vw;
+    }
+    .overlayGrid {
+        height: 500;
     }
     .first-two {
         flex-direction: row;
         width: 70vw;
-        gap:13vw;
+        gap:18vw;
     }
     .second-two {
         flex-direction: row;
         width: 70vw;
-        gap:13vw;
+        gap:18vw;
     }
     .third-two {
         flex-direction: row;
         width: 70vw;
-        gap:13vw;
+        gap:18vw;
     }
 
 }
 @media (max-width: 1050px) {
     .blocks-handler {
         align-items: center;
+        padding-left: 9vw;
     }
     .first-two {
         width: 80vw;
         height: 1600px;
         flex-direction: column;
+        gap: 5;
     }
     .second-two {
         width: 80vw;
         height: 1600px;
         flex-direction: column;
+        gap: 5;
     }
     .third-two {
         width: 80vw;
         height: 1600px;
         flex-direction: column;
+        gap: 5;
     }
 
     .individual-block {
-        width: 100%;
         height:700px;
-        display: flex;
     }
     .frames {
- 
-        width: 80vw;
         height: 800px;
-        display: flex;
         
     }
-    .frameImg {
-        width: 80vw;
-        height: 700px;
+
+    .title-text {
+        padding-top: 5vh;
+        padding-bottom: 5vh;
     }
-    .insideImg {
-        width: 64.5vw;
-        height: 600px;
-        padding-left: 23px;
-        padding-top:76px;
-    }
-    
     .top-text {
         display: flex;
         width: 70vw;
         justify-content: center;
+        padding-top: 12vh;
+    }
+
+    .insideImg {
+        padding-left: 3.4vw;
     }
 }
-@media (max-width: 500px) {
-    .frameImg {
-        width: 120vw;
+@media(max-width: 500px) {
 
+    .blocks-handler{
+        padding-left: 20vw;
     }
+}
+@media(max-width: 700px) {
     .insideImg {
-        width: 96vw;
-
-
+        padding-top: 10vh;
     }
+}
+
+
+@media(max-width: 500px) {
+    .insideImg {
+        padding-top: 10vh;
+    }
+
 }

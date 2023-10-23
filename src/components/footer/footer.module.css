@@ -12,62 +12,49 @@
 
 .topPart {
     display: flex;
-    
-    justify-content: space-between;
+    justify-content: space-around;
     align-items:flex-start;
-    flex-direction: row;
     height: 80%;
+    align-items: center;
+    gap:10vw;
 }
 
 
 .relabIcon {
-    width: 350px;
-    justify-content: center;
+    display: flex;
+    width: 150px;
     background-color: transparent;
-    height: auto;
-    padding: 6vw 13vh;
-    /*background-image: url("../../../public/uploads/image/footer/relabIconYellow.png");
-    background-repeat: no-repeat;
-    background-position: center;*/
+    height: 150px;
+
+
     border: none;
     cursor:pointer;
 }
 
 
-/*
-.relabIconYellow {
-    width: 135px;
-    height: 135px;
-    flex-shrink: 0;
-    justify-content: center;
-    cursor:alias;
-    background-image: url("../../../public/uploads/image/footer/relabIconYellow.png");
-    
-    
-}
-*/
+
 
 .contactSocials {
     display:flex;
     flex-direction: column;
     padding-right: 15vw;
+    gap: 1vh;
+    align-items: center;
 }
 
 
 .contactText {
     font-weight: 350;
-    padding-top:10vh;
     font-size: 30px;
     color: #F2C12E;
 }
 
 
-.socialIcons {
+.social-icons {
     display: flex;
     align-items: center;
     justify-content: space-between;
     cursor: alias;
-    height: 7vh;
 }
 
 
@@ -106,19 +93,20 @@
 
 /* css for the bottom part of the footer */
 
-.bottomPart {
+.bottom-part {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-direction: row;
     height: 20%;
-    
+    padding-right: 8vw;
+    align-items: center;
 }
 
 
 .footerText {
     display: flex;
     flex-direction: column;
-    font-size: 15px;
+    font-size: 1vw;
     gap:0.5vw;
     justify-content: center;
     align-items: center;
@@ -127,123 +115,114 @@
 }
 
 
-.membershipIcons {
+.membership-icons {
     display:flex;
     align-self: flex-start;
-    gap:5vw;
+    gap:2vw;
     padding-left: 2vw;
 }
 
 
-.labIcon {
-    width: 8vw;
-    /*background-image: url("../../../public/uploads/image/footer/labIcon.png");
-    background-repeat: no-repeat;
-    height: 5vh;
-    background-position: center;*/
-    justify-content: flex-end;
-}
 
-
-.jesuitasIcon {
-    width: 13vw;
-    /*background-image: url("../../../public/uploads/image/footer/jesuitasIcon.png");
-    background-repeat: no-repeat;
-    height: 5vh;
-    background-position: center;*/
-}
-
-
-.unisinosIcon {
-    width: 13vw;
-    /*background-image: url("../../../public/uploads/image/footer/unisinosIcon.png");
-    background-repeat: no-repeat;
-    height: 5vh;
-    background-position: center;*/
-}
 
 @media (max-width: 870px) {
-    .bottomPart {
-        display: flex;
-        flex-direction: column;
-    }
+
     .topPart {
+        width: 100%;
         display: flex;
         flex-direction: column-reverse;
         justify-content: flex-end;
         align-items: center;
+        height: 80%;
+        gap:0;
+
     }
     .contactText {
         padding-top: 2vh;
         font-size:larger;
     }
     .relabIcon {
-        width: 15vw;
-        height: auto;
+        width: 12vw;
+        height: 12vh;
         display: flex;
         padding: 0;
     }
-    .instagramIcon {
-        width: 5vw;
+    .logoImg {
+        width: 12vw;
+        height: 12vh;
     }
-    .twitterIcon {
-        width: 5vw;
+    .insideImg {
+        width: 40px;
+        height: 40px;
     }
-    .linkedinIcon {
-        width: 5vw;
-    }
-    .contact-socials {
+    .contactSocials {
         padding: 0;
+    }
+    .bottom-part {
+        display:flex;
+        padding-right: 0;
+        flex-direction: column;
+        align-items: center;
+        height: 20%;
+    }
+    .membership-icons {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
     }
 
-    .membershipIcons {
-        padding-left: 0;
-        display: flex;
-        width: 100vw;
-    }
-    .unisinosIcon {
-        width: 20vw;
-        height: 5vh;
-        display: flex;
-        align-items: center;
-    }
-    .jesuitasIcon {
-        width: 20vw;
-        height: 5vh;
-        display: flex;
-        align-items: center;
-    }
-    .labIcon {
-        width: 13vw;
-        height: 5vh;
-        display: flex;
-        align-items: center;
-    }
-    .footerText {
-        font-size: small;
+    .watermarkImg {
+        width: 120px;
+        height: 40px;
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 650px) {
     .relabIcon {
-        width: 20vw;
+        width: 120px;
+        height: 120px;
     }
-    .instagramIcon {
-        width: 8vw;
+    .logoImg {
+        width: 120px;
+        height: 120px;
     }
-    .twitterIcon {
-        width: 8vw;
+}
+
+@media (max-width: 650px) {
+    .contactText {
+        font-size: small;
     }
-    .linkedinIcon {
-        width: 8vw;
+    .insideImg {
+        width: 25px;
+        height: 25px;
     }
-    .unisinosIcon {
-        width: 30vw;
+    .watermarkImg {
+        width: 50px;
     }
-    .jesuitasIcon {
-        width: 30vw;
+}
+
+@media (max-width: 650px) {
+    .watermarkImg {
+        width: 50px;
+        height: 30px;
     }
-    .labIcon {
-        width: 22vw;
+    .footerText {
+        font-size: 3vw;
     }
+    .relabIcon {
+        padding-left: +2vw;
+    }
+    .topPart {
+        padding-top: 1vh;
+    }
+
+    .insideImg {
+        width: 35px;
+        height: 35px;
+    }
+
+    .social-icons {
+        gap:+5vw;
+    }
+
 }
