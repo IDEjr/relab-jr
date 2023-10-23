@@ -68,26 +68,34 @@ function ordemDecrescente(a, b) {
             "--swiper-pagination-bullet-inactive-opacity": "0.2",
             "--swiper-pagination-bullet-size": "16px",
             "--swiper-pagination-bullet-border-radius": "0",
-            "--swiper-pagination-bullet-width": "70px",
-            "--swiper-pagination-bullet-height": "10px",
-            "--swiper-pagination-bullet-vertical-gap" :" 3000000px",
+            "--swiper-pagination-bullet-width": "30px",
+            "--swiper-pagination-bullet-height": "5px",
             "--swiper-pagination-bullet-horizontal-gap" :" 15px"
 
           }}
+
+      
         slidesPerView={1}
          effect={'swipe'}   
-         grabCursor={true}
          pagination={true}
-         navigation={true}
+         navigation={false}
+         
          modules={[EffectFlip, Pagination, Navigation]}
          className={styles.swiperContainer}
+         breakpoints={{
+          800: {
+            navigation:true
+          }
+         }
+
+         }
 
       >
         {recents.map((item)=> (
         <SwiperSlide key={item.titulo} className={styles.swiperInd}>
          <div className={styles.carrosselImage}>
           
-            <Image src={item.imagem}  fill  alt={item.titulo} style={{objectFit: 'cover', background: 'black', opacity:0.6} }  />
+            <Image src={item.imagem}  fill  alt={item.titulo} style={{objectFit: 'cover', background: 'black', opacity:0.3} }  />
           <div className={styles.titles}>
            <h1 className={styles.h1}>BLOG</h1>
            

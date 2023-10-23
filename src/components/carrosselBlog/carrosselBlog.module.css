@@ -8,14 +8,14 @@
 
 .swiperContainer{
 width: 100%;
+
 }
 .container{
     margin-bottom: 5%;
 }
 
 .titles{   
-    top: 15%;
-    border: 1px solid black;
+    top: 10%;
     position: absolute;
     left: 8%;
     display: flex;
@@ -23,7 +23,7 @@ width: 100%;
     
 }
 .h1{
-    margin-bottom: 10%;
+    margin-bottom: 35%;
     font-size: 3vw;
 }   
 .h3{
@@ -36,3 +36,41 @@ width: 100%;
     font-size: 2.5vw;
 
 }
+
+
+@media only screen  and  (max-width: 1200px)  {
+
+    .carrosselimage{
+     height: 50vh;
+    }
+ 
+ 
+ }
+
+
+
+ @media only screen  and  (max-width: 800px)  {
+
+    .carrosselImage{
+     height: 50vh;
+    }
+    .h2{
+        font-size: 8vw;
+        width: 95%;
+        align-items: center;
+    }
+    .h3{
+        font-size: 3vw;
+    }
+    .h1{
+        font-size: 5vw;
+        margin-bottom: 30%;
+    }
+    .titles{
+        left: 3%;
+        width: 100%;
+        
+    }
+ 
+ 
+ }
