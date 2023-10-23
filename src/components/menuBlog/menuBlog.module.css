@@ -2,16 +2,19 @@
     
 
     border: none;
-    width: 15vw;
+    width: fit-content;
     height: 9vh;
     background: none;
     color: #F2C12E;
     font-size: 1.4vw;
+    padding: 2vw;
+    
 }
 .container{
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 .buttonMobile{
     background-color: black;
