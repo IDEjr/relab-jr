@@ -24,7 +24,27 @@ export default function Posts({ content }) {
   return (
     <div className={styles['container']}>
       <div className={styles['top-part']}>
-        <img className={styles['img']} src={`${content.imagem}`}></img>
+        <Image
+            src={content.imagem}
+            fill={true}
+            className={styles['top-img']}
+        />
+        <div className={styles['content-block']}>
+          <div className={styles['title-and-rest']}>
+            <text className={styles['categorie']}>
+              {content.selecao}
+            </text>
+            <h1 className={styles['title']}>
+              {content.titulo}
+            </h1>
+            <text className={styles['sub-title']}>
+              {content.previa}
+            </text>
+          </div>
+          <text className={styles['details']}>
+            {content.autor}{content.data}
+          </text>
+        </div>
       </div>
       <div className={styles['bottom-part']}>
         <div className={styles['text-and-rest']}>
