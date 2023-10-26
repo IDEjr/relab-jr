@@ -18,8 +18,8 @@ import { EffectFlip, Pagination, Navigation } from "swiper/modules";
 
 /*Pegue os titulos que estão no json da home, e passar para aqui, e renderizar somente os posts que tem mesmo titulo dos 
 selecionados.*/
-export default function carrosselHome(...posts) {
-
+export default function CarrosselHome(...posts) {
+  console.log(posts);
   
   const data = [];
   for (var i =0; i<4 ; i++){
@@ -47,15 +47,14 @@ export default function carrosselHome(...posts) {
             "--swiper-pagination-bullet-width": "40px",
             "--swiper-pagination-bullet-height": "6px",
             "--swiper-pagination-bullet-horizontal-gap" :" 15px"
-          }}
-          
-            
-         effect={"flip"}
+          }}  
+         
          grabCursor={true}
          pagination={true}
-         navigation={true}
-         modules={[EffectFlip, Pagination, Navigation]}
+         navigation={false}
+         
          className={styles.swiperContainer}
+         
 
       >
         {data.map((item)=> (

@@ -7,7 +7,7 @@ import ImagemComBotao from '../components/imagemComBotao'
 import ServicesHome from '../components/servicesHome'
 import Inicio from '../components/inicio'
 import TextoBarraHome from '../components/textoBarraHome/index'
-import carrosselHome from '../components/carrosselHome'
+import CarrosselHome from '../components/carrosselHome'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
 import React from 'react';
@@ -59,8 +59,8 @@ export default function Home({home, posts, nav, foo}) {
       <ImagemComBotao {...resultados} />
       <ServicesHome servicosHome = {home.servicosHome}/>
 
-      <ImagemComBotao {...membros} />
-      <carrosselHome {...posts}/>  
+      <ImagemComBotao {...membros} />S
+      <CarrosselHome {...posts}/>  
       <Footer {...foo}/>
 
     </div>
