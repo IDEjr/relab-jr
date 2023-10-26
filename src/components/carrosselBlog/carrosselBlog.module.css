@@ -40,8 +40,8 @@ width: 100%;
 
 @media only screen  and  (max-width: 1200px)  {
 
-    .carrosselimage{
-     height: 50vh;
+    .carrosselImage{
+     height: 80vh;
     }
  
  
@@ -53,9 +53,42 @@ width: 100%;
 
     .carrosselImage{
      height: 50vh;
+     justify-content: center;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     
     }
     .h2{
-        font-size: 8vw;
+        font-size: 6vw;
+        width: 95%;
+        align-items: center;
+    }
+    .h3{
+        font-size: 4vw;
+    }
+    .h1{
+        font-size: 6vw;
+        margin-bottom: 0
+    }
+    .titles{
+        position: relative;
+        margin-bottom: 10%;
+        width: 95%;
+        
+    }
+ 
+ 
+ }
+
+
+ @media only screen  and  (max-width: 740px) and (min-width: 800px)   {
+
+    .carrosselImage{
+     height: 60vh;
+    }
+    .h2{
+        font-size: 5vw;
         width: 95%;
         align-items: center;
     }
@@ -64,13 +97,7 @@ width: 100%;
     }
     .h1{
         font-size: 5vw;
-        margin-bottom: 30%;
+        margin-bottom: 0
     }
-    .titles{
-        left: 3%;
-        width: 100%;
-        
-    }
- 
  
  }

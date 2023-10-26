@@ -11,7 +11,6 @@ import "swiper/css/effect-flip";
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-
 import {Swiper, SwiperSlide} from 'swiper/react'
 import { EffectFlip, Pagination, Navigation } from "swiper/modules";
 
@@ -78,13 +77,16 @@ function ordemDecrescente(a, b) {
         slidesPerView={1}
          effect={'swipe'}   
          pagination={true}
-         navigation={false}
-         
+          navigation ={{
+            enabled: false
+          }
+          }
          modules={[EffectFlip, Pagination, Navigation]}
          className={styles.swiperContainer}
          breakpoints={{
           800: {
-            navigation:true
+            navigation: {enabled: true}
+            
           }
          }
 
