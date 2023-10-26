@@ -26,6 +26,18 @@ console.log(carrosselQuemSomos[0].titulo);
     logo:  quemSomos.inicioQuemSomos.logo
   }
 
+  const valores = {
+    titulo: quemSomos.valores.titulo,
+    titulo1: quemSomos.valores.titulo1,
+    titulo2: quemSomos.valores.titulo2,
+    titulo3: quemSomos.valores.titulo3,
+    titulo4: quemSomos.valores.titulo4,
+    texto1: quemSomos.valores.texto1,
+    texto2: quemSomos.valores.texto2,
+    texto3: quemSomos.valores.texto3,
+    texto4: quemSomos.valores.texto4,
+  }
+
   
   const navData = {
     logo : nav.logo,
@@ -39,7 +51,7 @@ console.log(carrosselQuemSomos[0].titulo);
       <Inicio title = {"QUEM SOMOS"} image= {path}/>
       <TextoBarraQuemSomos {...textoBarra}/>
        <CarrosselQuemSomos {...carrosselQuemSomos}/>
-      <Valores />
+      <Valores  {...valores}/>
       <GridMembros   titulo={grid.titulo} logo={grid.logo} membros={membros}/>
       
       <Footer {...foo}/>
