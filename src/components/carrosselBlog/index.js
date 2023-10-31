@@ -98,9 +98,9 @@ function ordemDecrescente(a, b) {
          <div className={styles.carrosselImage}>
           
             <Image src={item.imagem}  fill  alt={item.titulo} style={{objectFit: 'cover', background: 'black', opacity:0.3} }  />
-          <div className={styles.titles}>
+         
            <h1 className={styles.h1}>BLOG</h1>
-           
+           <div className={styles.titles}>
             <h3><p className={styles.h3}>{item.genero}</p></h3>                                                                                             
         
             <h2><p className={styles.h2}>{item.titulo}</p></h2>
