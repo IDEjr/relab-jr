@@ -48,7 +48,7 @@ height: fit-content;
 border-radius: 15px;
 background: rgba(0, 0, 0, 0.18);
 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-margin-bottom: 16vh;
+margin-bottom: 15vh;
 }
 
 .postList{
@@ -78,11 +78,16 @@ margin-bottom: 16vh;
   
   .buttonMobile{
     display: block;
-    width: 5rem;
+    width: 10rem;
     font-size: 0.8rem;
+    text-align: center;
   }
   .button{
     display: none;
     
+    
+  }
+  .menuContainer{
+    margin-bottom: 0;
   }
 }
