@@ -74,7 +74,7 @@ export default function CarrosselQuemSomos(...images) {
       {images.map((item)=> (
         <SwiperSlide key={item.titulo} className={Styles.swiperSlide}>
            <div   className={Styles.image}>
-                <Image src={item.imagem}   
+                <Image src={item.imagemCapa}   
                 
                 fill
                 style={{objectFit:'cover'}}

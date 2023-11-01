@@ -90,14 +90,14 @@ function ordemDecrescente(a, b) {
           }
          }
 
-         }
+         } 
 
       >
         {recents.map((item)=> (
         <SwiperSlide key={item.titulo} className={styles.swiperInd}>
          <div className={styles.carrosselImage}>
           
-            <Image src={item.imagem}  fill  alt={item.titulo} style={{objectFit: 'cover', background: 'black', opacity:0.3} }  />
+            <Image src={item.imagemCapa}  fill  alt={item.titulo} style={{objectFit: 'cover', background: 'black', opacity:0.3} }  />
          
            <h1 className={styles.h1}>BLOG</h1>
            <div className={styles.titles}>
