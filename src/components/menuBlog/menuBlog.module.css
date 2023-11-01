@@ -2,16 +2,19 @@
     
 
     border: none;
-    width: 15vw;
+    width: fit-content;
     height: 9vh;
     background: none;
     color: #F2C12E;
     font-size: 1.4vw;
+    padding: 2vw;
+    
 }
 .container{
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 .buttonMobile{
     background-color: black;
@@ -45,7 +48,7 @@ height: fit-content;
 border-radius: 15px;
 background: rgba(0, 0, 0, 0.18);
 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-margin-bottom: 16vh;
+margin-bottom: 15vh;
 }
 
 .postList{
@@ -75,11 +78,16 @@ margin-bottom: 16vh;
   
   .buttonMobile{
     display: block;
-    width: 5rem;
+    width: 10rem;
     font-size: 0.8rem;
+    text-align: center;
   }
   .button{
     display: none;
     
+    
+  }
+  .menuContainer{
+    margin-bottom: 0;
   }
 }
