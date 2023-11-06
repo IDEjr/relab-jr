@@ -52,11 +52,16 @@ export default function CarrosselQuemSomos(...images) {
         
          grabCursor={true}
          pagination={true}
-         navigation={true}
-         modules={[EffectFlip, Pagination, Navigation]}
+         navigation ={{
+          enabled: false
+        }
+        }         modules={[EffectFlip, Pagination, Navigation]}
          breakpoints={{
           800: {
-            slidesPerView: 2
+            slidesPerView: 2,
+            navigation:{
+              enabled: true
+            }
           }
          }
 
