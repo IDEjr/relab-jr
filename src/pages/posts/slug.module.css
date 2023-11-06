@@ -36,19 +36,38 @@
 
 .sub-title {
   position: absolute;
+  top: 47%;
+  left: 5.1%;
+  font-size: 1.4em;
+  font-weight: 500;
+  color: #F2C12E;
 }
 
 .details {
   position: absolute;
+  width: 80%;
+  top: 88%;
+  left: 5.1%;
+  font-size: 1.1em;
+  font-weight: 400;
+  color: #F2C12E;
+  display: flex;
+  gap:30%;
 }
 
 .categorie {
   position: absolute;
+  top:37%;
+  left: 5.1%;
+  font-size: 1.2em;
+  font-weight: 400;
+  color : #F2C12E;
 }
 .text-and-rest {
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding-top: 10vh;
 }
 
 .post-text {
@@ -65,25 +84,26 @@
 .author {
   display: flex;
   align-items: center;
-  width: 50%;
+  width: 100%;
 }
 
 .author-and-pencil {
   display: flex;
   align-items: center;
-  padding-left: 38%;
+  padding-left: 19%;
+  width: 38%;
 }
 
 .voltar-button {
   background-color: transparent;
   border: none;
   cursor:pointer;
-  width: 7vw;
+  width: 15vw;
   height: 7vh;
-  padding-left: 20%;
+  padding-left: 6.5vw;
 }
 
 .button-image {
-  width: 7vw;
-  height: 7vh;
+  width: 9vw;
+  height: 8vh;
 }

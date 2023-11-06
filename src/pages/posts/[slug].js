@@ -10,6 +10,7 @@ import buttonImg from '../../../public/uploads/slug//voltarButton.png'
 
 
 
+
 const handleMove = () => {
   window.scrollTo({ top: 0, behavior: "smooth" }); // here it goes
 };
@@ -25,7 +26,7 @@ export default function Posts({ content }) {
     <div className={styles['container']}>
       <div className={styles['top-part']}>
         <Image
-            src={content.imagem}
+            src={content.imagemCapa}
             fill={true}
             className={styles['top-img']}
         />
@@ -42,10 +43,12 @@ export default function Posts({ content }) {
             </text>
           </div>
           <text className={styles['details']}>
-            {content.autor}{content.data}
+            {content.autor}<span/>{content.data}
           </text>
         </div>
       </div>
+
+
       <div className={styles['bottom-part']}>
         <div className={styles['text-and-rest']}>
           <div className={styles['text-formater']}>
