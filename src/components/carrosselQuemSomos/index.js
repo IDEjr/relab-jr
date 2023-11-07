@@ -20,14 +20,11 @@ export default function CarrosselQuemSomos(...images) {
   images = images[0];
     var arrImages = [];
     for( const i in images){
-        //console.log(posts[i]);
         arrImages.push(images[i]);
     }
     images = arrImages
-    console.log(images);
 
   
-    //console.log(posts);
    
       
  
