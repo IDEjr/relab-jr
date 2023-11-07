@@ -18,13 +18,13 @@ import { EffectFlip, Pagination, Navigation } from "swiper/modules";
 selecionados.*/
 export default function CarrosselQuemSomos(...images) {
   images = images[0];
-    //console.log(posts);
     var arrImages = [];
     for( const i in images){
         //console.log(posts[i]);
         arrImages.push(images[i]);
     }
     images = arrImages
+    console.log(images);
 
   
     //console.log(posts);
@@ -74,7 +74,7 @@ export default function CarrosselQuemSomos(...images) {
       {images.map((item)=> (
         <SwiperSlide key={item.titulo} className={Styles.swiperSlide}>
            <div   className={Styles.image}>
-                <Image src={item.imagemCapa}   
+                <Image src={item.imagem}   
                 
                 fill
                 style={{objectFit:'cover'}}
