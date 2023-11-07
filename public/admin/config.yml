@@ -321,11 +321,14 @@ collections:
 
   - label: "Formulários"
     name: "forms"
-    file: "content/forms/forms.json"
-    extension: "json"
-    format: "json"
-    editor:
-    preview: false
-    fields:
-      - {label: "Email", name: "email", widget: "string"}
-      - {label: "Senha Google", name: "senha", widget: "string"}
+    files:
+      - label: "Formulários"
+        name: "forms"
+        file: "content/forms/forms.json"
+        extension: "json"
+        format: "json"
+        editor:
+        preview: false
+        fields:
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Senha Google", name: "senha", widget: "string"}
