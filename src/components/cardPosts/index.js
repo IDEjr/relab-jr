@@ -1,16 +1,21 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from './cardPosts.module.css'
+import fs from 'fs';
+import path from 'path';
 
-export default function cardPosts({ imagem, titulo, data, previa, autor}) {
+export default function cardPosts({ fileName, imagem, titulo, data, previa, autor}) {
 
   var dataForm;
   dataForm = data.substring(8, 10) + '/' + data.substring(5, 7) + '/' + data.substring(0, 4);
+
+  const url = `/posts/${fileName}`;
   
 
   return (
-    <><div className={styles.link}>
-      <Link href="/blog" target="_blank" className={styles.card}>
+    <>
+      <Link href={url} className={styles.link}>
+        <div className={styles.card}>
           <div className={styles.box}>
             <div className={styles.img}>
               <Image
@@ -32,9 +37,8 @@ export default function cardPosts({ imagem, titulo, data, previa, autor}) {
               </div>
             </div>
           </div>
+        </div>
       </Link>
-    </div>
-      
     </>
   );
 }
