@@ -13,7 +13,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 import {Swiper, SwiperSlide} from 'swiper/react'
-import { EffectFlip, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Navigation} from "swiper/modules";
 
 
 /*Pegue os titulos que estão no json da home, e passar para aqui, e renderizar somente os posts que tem mesmo titulo dos 
@@ -37,6 +37,7 @@ export default function CarrosselHome(...posts) {
         NOVIDADES
       </h3>
       <Swiper
+    
           style={{
             "--swiper-theme-color":"#F2C12E",
             "--swiper-pagination-color": "#F2C12E",
@@ -48,13 +49,20 @@ export default function CarrosselHome(...posts) {
             "--swiper-pagination-bullet-height": "6px",
             "--swiper-pagination-bullet-horizontal-gap" :" 15px"
           }}  
+          autoplay ={{
+            delay: 7000,
+            disableOnInteraction: false,
+          }}
+          modules={[Autoplay]}
+          grabCursor={true}
+          pagination={{
+            clickable:true
+          }}
          
-         grabCursor={true}
-         pagination={true}
-         navigation={false}
-         
-         className={styles.swiperContainer}
-         
+          
+          
+          className={styles.swiperContainer}
+          
 
       >
         {data.map((item)=> (
