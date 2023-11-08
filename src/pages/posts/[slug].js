@@ -95,6 +95,7 @@ export async function getStaticProps({params : {slug} }){
   const content = handleJSONfile(`./content/${caminho}/${slug}.json`);
   const nav = handleJSONfile(`./content/${caminho2}/${pagina2}.json`);
   const foo = handleJSONfile(`./content/${caminho2}/${pagina3}.json`);
+
   return {
     props: { content , nav, foo},
   };
