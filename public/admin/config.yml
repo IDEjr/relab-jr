@@ -336,5 +336,6 @@ collections:
         editor:
         preview: false
         fields:
-          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Email Destino", name: "emailDestino", widget: "string"}
+          - {label: "Email Origem", name: "emailOrigem", widget: "string"}
           - {label: "Senha Google", name: "senha", widget: "string"}
