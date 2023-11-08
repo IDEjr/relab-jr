@@ -14,6 +14,7 @@ export default function gridPosts(...posts) {
             {posts.map((post, i) => (
             <CardPosts
             key={i}
+            index={i}
             imagem={post.imagemCapa}
             titulo={post.titulo}
             data={post.data}
