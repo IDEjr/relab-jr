@@ -1,11 +1,10 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from './cardPosts.module.css'
-import fs from 'fs';
-import path from 'path';
 
 export default function cardPosts({ fileName, imagem, titulo, data, previa, autor}) {
 
+  // formata data
   var dataForm;
   dataForm = data.substring(8, 10) + '/' + data.substring(5, 7) + '/' + data.substring(0, 4);
 

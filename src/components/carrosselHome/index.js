@@ -68,11 +68,14 @@ export default function CarrosselHome(...posts) {
         {data.map((item)=> (
           
         <SwiperSlide key={item.titulo} className={styles.swiperIndi}>
-          <CardPosts imagem={item.imagemCapa}
-                      titulo={item.titulo}
-                      data={item.data}
-                      previa={item.previa}
-                      autor={item.autor}/>
+          <CardPosts 
+            fileName={item.fileName}
+            imagem={item.imagemCapa}
+            titulo={item.titulo}
+            data={item.data}
+            previa={item.previa}
+            autor={item.autor}
+          />
           <div className={styles.margin}>
 
           </div>

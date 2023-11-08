@@ -13,13 +13,13 @@ export default function gridPosts(...posts) {
         <section className={styles.postsGrid}>
             {posts.map((post, i) => (
             <CardPosts
-            key={i}
-            index={i}
-            imagem={post.imagemCapa}
-            titulo={post.titulo}
-            data={post.data}
-            previa={post.previa}
-            autor={post.autor}
+              key={i}
+              fileName={post.fileName}
+              imagem={post.imagemCapa}
+              titulo={post.titulo}
+              data={post.data}
+              previa={post.previa}
+              autor={post.autor}
             />   
          ))}
         </section>

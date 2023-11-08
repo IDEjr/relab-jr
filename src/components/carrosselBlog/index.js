@@ -96,26 +96,25 @@ function ordemDecrescente(a, b) {
         {recents.map((item)=> (
         <SwiperSlide key={item.titulo} className={styles.swiperInd}>
          <div className={styles.carrosselImage}>
-          
-            <Image src={item.imagemCapa}  fill  alt={item.titulo} style={{objectFit: 'cover', background: 'black', opacity:0.3} }  />
-         
-           <h1 className={styles.h1}>BLOG</h1>
-           <div className={styles.titles}>
+          <Image src={item.imagemCapa}
+            fill
+            alt={item.titulo}
+            style={{objectFit: 'cover', background: 'black', opacity:0.3}}
+          />
+          <h1 className={styles.h1}>BLOG</h1>
+          <div className={styles.titles}>
             <h3><p className={styles.h3}>{item.genero}</p></h3>                                                                                             
         
             <h2><p className={styles.h2}>{item.titulo}</p></h2>
          
             <h3><p className={styles.h3}>{item.previa}</p></h3> 
-         </div> 
+          </div> 
          </div>
         </SwiperSlide>))
         }
       </Swiper>
 )}
       </section>
-      
-  
-      
     </>
   );
 }
