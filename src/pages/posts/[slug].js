@@ -41,11 +41,12 @@ export default function Posts({ content, nav, foo }) {
             src={content.imagemCapa}
             fill={true}
             className={styles['top-img']}
+            style={{objectFit: 'cover', background: 'black', opacity:0.3}}
         />
         <div className={styles['content-block']}>
           <div className={styles['title-and-rest']}>
             <text className={styles['categorie']}>
-              {content.selecao}
+              {content.genero}
             </text>
             <h1 className={styles['title']}>
               {content.titulo}
