@@ -73,14 +73,18 @@ function ordemDecrescente(a, b) {
 
           }}
 
-      
+          
         slidesPerView={1}
          effect={'swipe'}   
          pagination={true}
           navigation ={{
-            enabled: false
+            enabled: false,
           }
           }
+          slidesPerGroup={1}
+          autoplay ={{
+            delay: 5000
+          }}
          modules={[EffectFlip, Pagination, Navigation]}
          className={styles.swiperContainer}
          breakpoints={{
