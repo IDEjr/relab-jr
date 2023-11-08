@@ -12,7 +12,6 @@ export default function inicio(props) {
           height={400}
           alt='Imagem Inicio'
           className={styles['initImg']}
-          placeholder="blur"
         />
         <h1 className={styles['title']}>{props.title}</h1>
       </div>
