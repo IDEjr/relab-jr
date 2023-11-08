@@ -5,7 +5,7 @@ import styles from './cardMembros.module.css'
 export default function cardMembros({ nome, posicao, imagem, linkedin }) {
   return (
     <>
-      <Link href={linkedin} target="_blank" className={styles.link}>
+      <Link href={linkedin || "/quemSomos"} target="_blank" className={styles.link}>
         <div className={styles.container}>
           <div className={styles.box}>
             <div className={styles.dados}>

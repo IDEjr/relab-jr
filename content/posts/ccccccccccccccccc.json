@@ -1,11 +1,10 @@
 {
-  "imagemCapa": "/uploads/1113005.jpg",
-  "autor": "Lucas Fernandes Barbosa",
   "bool": true,
+  "genero": "Economia",
   "data": "2023-09-21T22:07:05.322Z",
+  "autor": "Lucas Fernandes Barbosa",
+  "titulo": "Desvendando a Saúde Financeira",
   "previa": "Mantenha as finanças em ordem e impulsione seus lucros",
   "conteudo": "333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333",
-  "genero": "Economia",
-  "imagem": "/uploads/index.png",
-  "titulo": "Desvendando a Saúde Financeira"
+  "imagemCapa": "/uploads/1113005.jpg"
 }
