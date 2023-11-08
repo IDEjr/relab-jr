@@ -274,7 +274,13 @@ collections:
     fields:
       - {label: "Nome e sobrenome", name: "nome", widget: "string", pattern: ['^.{1,30}$', "Máximo 30 carateres."]}
       - {label: "Imagem", name: "imagem", widget: "image"}
-      - {label: "Posição", name: "posicao", widget: "select",  options: ["Presidência", "Vice-Presidência", "Projetos", "Administrativo Financeiro", "Comercial", "Gestão de Pessoas", "Marketing", "Trainee"], default: ["Trainee"]}
+      - {label: "Posição", name: "posicao", widget: "select",  options: ["Presidência", "Vice-Presidência",
+                                                                        "Diretoria Projetos", "Assessoria Projetos", "Gerência Projetos", "Consultoria Projetos",
+                                                                        "Diretoria Financeiro", "Assessoria Financeiro", "Gerência Financeiro", "Consultoria Financeiro",
+                                                                        "Diretoria Comercial", "Assessoria Comercial", "Gerência Comercial", "Consultoria Comercial",
+                                                                        "Diretoria Gestão de Pessoas", "Assessoria Gestão de Pessoas", "Gerência Gestão de Pessoas", "Consultoria Gestão de Pessoas",
+                                                                        "Diretoria Marketing", "Assessoria Marketing", "Gerência Marketing", "Consultoria Marketing",
+                                                                        "Trainee"], default: ["Trainee"]}
       - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
 
 
