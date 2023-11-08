@@ -21,7 +21,9 @@ export default function Footer(footerData) {
     console.log(footerData);
     return (
             <div className={styles.footer}>
+                <div className={styles['bg-img-handle']}/>
                 <div className={styles.topPart}>
+                    
                     <button onClick={handleMove} className={styles.relabIcon}>
                         <Image
                             
@@ -85,8 +87,8 @@ export default function Footer(footerData) {
                         <a className={styles['lab-icon']} href='https://unisinos.br/lab/programas/relab' target='_blank'>
                             <Image
                                 src={footerData.watermark1}
-                                width={165}
-                                height={50}
+                                width={90}
+                                height={35}
                                 className={styles['watermarkImg']}
                                 quality={100}
                                 />
@@ -107,8 +109,8 @@ export default function Footer(footerData) {
                         <a className={styles['unisinos-icon']} href='https://www.unisinos.br/' target='_blank'>
                             <Image
                                 src={footerData.watermark3}
-                                width={165}
-                                height={50}
+                                width={150}
+                                height={40}
                                 className={styles['watermarkImg']}
                                 quality={100}
                                 />
