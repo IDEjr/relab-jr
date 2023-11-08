@@ -27,7 +27,7 @@ export default function CarrosselHome(...posts) {
     data.push(posts[0][i]);
   }
 
-  console.log(data);
+ 
 
 
   return (
@@ -66,6 +66,7 @@ export default function CarrosselHome(...posts) {
 
       >
         {data.map((item)=> (
+          
         <SwiperSlide key={item.titulo} className={styles.swiperIndi}>
           <CardPosts {...item}/>
           <div className={styles.margin}>
