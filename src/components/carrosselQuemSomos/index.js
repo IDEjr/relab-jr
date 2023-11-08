@@ -14,20 +14,15 @@ import {Swiper, SwiperSlide} from 'swiper/react'
 import { EffectFlip, Pagination, Navigation } from "swiper/modules";
 
 
-/*Pegue os titulos que estão no json da home, e passar para aqui, e renderizar somente os posts que tem mesmo titulo dos 
-selecionados.*/
 export default function CarrosselQuemSomos(...images) {
   images = images[0];
-    //console.log(posts);
     var arrImages = [];
     for( const i in images){
-        //console.log(posts[i]);
         arrImages.push(images[i]);
     }
     images = arrImages
 
   
-    //console.log(posts);
    
       
  
@@ -74,7 +69,7 @@ export default function CarrosselQuemSomos(...images) {
       {images.map((item)=> (
         <SwiperSlide key={item.titulo} className={Styles.swiperSlide}>
            <div   className={Styles.image}>
-                <Image src={item.imagemCapa}   
+                <Image src={item.imagem}   
                 
                 fill
                 style={{objectFit:'cover'}}

@@ -6,13 +6,11 @@ export default function cardPosts({ imagem, titulo, data, previa, autor}) {
 
   var dataForm;
   dataForm = data.substring(8, 10) + '/' + data.substring(5, 7) + '/' + data.substring(0, 4);
-
-  // console.log(imagem);
   
 
   return (
     <>
-      <Link href="/blog" target="_blank" className={styles.link}>
+      <Link href="/posts/asas" className={styles.link}>
         <div className={styles.card}>
           <div className={styles.box}>
             <div className={styles.img}>

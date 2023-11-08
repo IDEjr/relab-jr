@@ -46,7 +46,7 @@ export default function Home({home, posts, nav, foo}) {
     instagram : nav.instagram,
     email : nav.email
   };
-  console.log(foo);
+  console.log(posts);
 
   return (
     <div className={styles['tudo']}>
