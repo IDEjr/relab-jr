@@ -50,7 +50,7 @@ export default function CarrosselHome(...posts) {
             "--swiper-pagination-bullet-horizontal-gap" :" 15px"
           }}  
           autoplay ={{
-            delay: 7000,
+            delay: 5000,
             disableOnInteraction: false,
           }}
           modules={[Autoplay]}
@@ -68,7 +68,11 @@ export default function CarrosselHome(...posts) {
         {data.map((item)=> (
           
         <SwiperSlide key={item.titulo} className={styles.swiperIndi}>
-          <CardPosts {...item}/>
+          <CardPosts imagem={item.imagemCapa}
+                      titulo={item.titulo}
+                      data={item.data}
+                      previa={item.previa}
+                      autor={item.autor}/>
           <div className={styles.margin}>
 
           </div>
