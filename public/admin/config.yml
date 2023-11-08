@@ -317,3 +317,18 @@ collections:
           - {label: "Watermark3", name: "watermark3", widget: "image"}
           - {label: "Link3", name: "link3", widget: "string"}
           - {label: "Background", name: "background", widget: "image"}
+
+
+  - label: "Formulários"
+    name: "forms"
+    files:
+      - label: "Formulários"
+        name: "forms"
+        file: "content/forms/forms.json"
+        extension: "json"
+        format: "json"
+        editor:
+        preview: false
+        fields:
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Senha Google", name: "senha", widget: "string"}
