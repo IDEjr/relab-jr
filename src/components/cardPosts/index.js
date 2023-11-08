@@ -9,9 +9,8 @@ export default function cardPosts({ imagem, titulo, data, previa, autor}) {
   
 
   return (
-    <>
-      <Link href="/posts/asas" className={styles.link}>
-        <div className={styles.card}>
+    <><div className={styles.link}>
+      <Link href="/blog" target="_blank" className={styles.card}>
           <div className={styles.box}>
             <div className={styles.img}>
               <Image
@@ -33,9 +32,8 @@ export default function cardPosts({ imagem, titulo, data, previa, autor}) {
               </div>
             </div>
           </div>
-          </div>
       </Link>
-    
+    </div>
       
     </>
   );
