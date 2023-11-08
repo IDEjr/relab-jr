@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from './cardPosts.module.css'
 
-export default function cardPosts({ imagemCapa, titulo, data, previa, autor}) {
+export default function cardPosts({ imagem, titulo, data, previa, autor}) {
 
   var dataForm;
   dataForm = data.substring(8, 10) + '/' + data.substring(5, 7) + '/' + data.substring(0, 4);
@@ -14,7 +14,7 @@ export default function cardPosts({ imagemCapa, titulo, data, previa, autor}) {
           <div className={styles.box}>
             <div className={styles.img}>
               <Image
-                src={imagemCapa}
+                src={imagem}
                 fill
                 style={{objectFit: 'cover'}}
                 alt="Post"
