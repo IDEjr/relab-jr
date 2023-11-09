@@ -3,6 +3,7 @@
     color: #F2C12E;
     margin-top: 10rem;
     text-align: center;
+    justify-content: center;
 }
 
 .title{
@@ -12,13 +13,22 @@
     color: #F2C12E;
 }
 
-.formContainer{
+.formIconsContainer{
     display: flex;
-    flex-direction: column;
-    width: 40%;
+    width: 60%;
     margin-top: 4rem;
     margin-left: 20%;
     margin-right: 20%;
+    justify-content: space-evenly;
+}
+
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    /* margin-top: 4rem;
+    margin-left: 20%; */
+    position: relative;
 }
 
 .halfContainer{
@@ -75,4 +85,21 @@
 .fullContainer input::placeholder {
     color: #000000;
     font-weight: 500;
+}
+
+.iconsContainer{
+    width: 20%;
+    position: relative;
+    margin-top: 5%;
+    margin-left: 10%;
+}
+
+.icons{
+    font-size: 1.5em; 
+    margin-right: 1rem
+}
+
+.iconsP{
+    margin-top: 2rem;
+    text-align: left;
 }
