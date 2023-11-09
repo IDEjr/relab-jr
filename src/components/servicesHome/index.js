@@ -3,6 +3,7 @@ import React from 'react'
 
 import Image from 'next/image'
 import backFrame from '../../../public/uploads/image/servicosHome/yellowFrame.png'
+import bigBackFrame from '../../../public/uploads/image/servicosHome/bigYellowFrame.png'
 
 
 function eachService(frame) { 
@@ -27,6 +28,12 @@ function eachService(frame) {
                         quality={100}
                         
                     />
+                    <Image
+                        src={bigBackFrame}
+                        className={styles['bigBackFrameImg']}
+                        quality={100}
+                    />
+
 
                     
                     
