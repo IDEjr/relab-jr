@@ -274,7 +274,13 @@ collections:
     fields:
       - {label: "Nome e sobrenome", name: "nome", widget: "string", pattern: ['^.{1,30}$', "Máximo 30 carateres."]}
       - {label: "Imagem", name: "imagem", widget: "image"}
-      - {label: "Posição", name: "posicao", widget: "select",  options: ["Presidência", "Vice-Presidência", "Projetos", "Administrativo Financeiro", "Comercial", "Gestão de Pessoas", "Marketing", "Trainee"], default: ["Trainee"]}
+      - {label: "Posição", name: "posicao", widget: "select",  options: ["Presidência", "Vice-Presidência",
+                                                                        "Diretoria Projetos", "Assessoria Projetos", "Gerência Projetos", "Consultoria Projetos",
+                                                                        "Diretoria Financeiro", "Assessoria Financeiro", "Gerência Financeiro", "Consultoria Financeiro",
+                                                                        "Diretoria Comercial", "Assessoria Comercial", "Gerência Comercial", "Consultoria Comercial",
+                                                                        "Diretoria Gestão de Pessoas", "Assessoria Gestão de Pessoas", "Gerência Gestão de Pessoas", "Consultoria Gestão de Pessoas",
+                                                                        "Diretoria Marketing", "Assessoria Marketing", "Gerência Marketing", "Consultoria Marketing",
+                                                                        "Trainee"], default: ["Trainee"]}
       - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
 
 
@@ -317,3 +323,19 @@ collections:
           - {label: "Watermark3", name: "watermark3", widget: "image"}
           - {label: "Link3", name: "link3", widget: "string"}
           - {label: "Background", name: "background", widget: "image"}
+
+
+  - label: "Formulários"
+    name: "forms"
+    files:
+      - label: "Formulários"
+        name: "forms"
+        file: "content/forms/forms.json"
+        extension: "json"
+        format: "json"
+        editor:
+        preview: false
+        fields:
+          - {label: "Email Destino", name: "emailDestino", widget: "string"}
+          - {label: "Email Origem", name: "emailOrigem", widget: "string"}
+          - {label: "Senha Google", name: "senha", widget: "string"}
