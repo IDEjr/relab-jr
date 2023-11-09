@@ -139,13 +139,14 @@ each service
 
 .top-text {
     color: #fff;
-    width: 18vw;
+    width: 20vw;
     height: 10vh;
     display: flex;
     text-align: center;
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
+    padding-right: 3vw;
 
     line-height: 45px; /* 150% */
 }
@@ -164,7 +165,7 @@ each service
     }
 
     .frames {
-        width: 100%;
+        width: 140%;
     }
     .insideImg {
         padding-left: 1.1vw;
@@ -219,6 +220,7 @@ each service
     .frames {
         height: 800px;
         margin-right: 4vw;
+        width: 100%;
     }
 
     .title-text {
@@ -249,22 +251,27 @@ each service
         padding-bottom: 4.7vh;
     }
 }
-@media(max-width: 500px) {
 
-    .blocks-handler{
-        padding-left: 20vw;
-    }
-}
 @media(max-width: 700px) {
     .insideImg {
         padding-top: 10vh;
     }
 }
 
-
 @media(max-width: 500px) {
-    .insideImg {
-        padding-top: 10vh;
+
+    .blocks-handler{
+        padding-left: 20vw;
+    }
+    .bigBackFrameImg {
+        height: 500px;
     }
 
+    .insideImg {
+        height: 444px;
+        margin-bottom: 130.5px;
+    }
 }
+
+
+
