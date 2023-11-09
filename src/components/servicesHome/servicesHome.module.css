@@ -99,7 +99,7 @@ each service
 
 .frames {
     display: flex;
-    width: 100%;
+    width: 80%;
     height: 500px;
     align-items: flex-end;
     justify-content: center;
@@ -120,16 +120,20 @@ each service
     
 }
 .insideImg {
-    width: 80.5%;
+    width: 80.2%;
     height: 530px;
-    padding-left: 1.2vw;
-    padding-top: 7.5vh;
+    padding-left: 0.9vw;
+    padding-top: 8.3vh;
     object-fit: cover;
 }
 .backFrameImg {
     position: absolute;
     width: 100%;
     height: 600px;
+}
+.bigBackFrameImg{
+    position: absolute;
+    display: none;
 }
 
 
@@ -158,6 +162,10 @@ each service
         align-items: center;
 
     }
+
+    .frames {
+        width: 100%;
+    }
     .insideImg {
         padding-left: 1.1vw;
     }
@@ -181,7 +189,7 @@ each service
     }
 
 }
-@media (max-width: 1050px) {
+@media (max-width: 1000px) {
     .blocks-handler {
         align-items: center;
         padding-left: 9vw;
@@ -210,7 +218,7 @@ each service
     }
     .frames {
         height: 800px;
-        
+        margin-right: 4vw;
     }
 
     .title-text {
@@ -219,13 +227,26 @@ each service
     }
     .top-text {
         display: flex;
-        width: 70vw;
+        width: 80vw;
         justify-content: center;
         padding-top: 12vh;
+        padding-right: 14vw;
+        
+    }
+    .backFrameImg {
+        display: none;
+    }
+    .bigBackFrameImg {
+        display: flex;
+        width: 83.5%;
+        height: 635px;
     }
 
     .insideImg {
-        padding-left: 3.4vw;
+        padding-left: 2.6vw;
+        margin-top: 9.3vh;
+        height: 531px;
+        padding-bottom: 4.7vh;
     }
 }
 @media(max-width: 500px) {
