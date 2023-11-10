@@ -25,7 +25,7 @@ export default function Home({home, posts, nav, foo}) {
     imagem: home.imgBotaoRes.imagem,
     titulo: home.imgBotaoRes.titulo,
     texto: home.imgBotaoRes.texto,
-    textoBotao: 'Entre em contato',
+    textoBotao: home.imgBotaoRes.textoBotao,
     link: 'servicos'
   };
 
@@ -37,7 +37,7 @@ export default function Home({home, posts, nav, foo}) {
     imagem: home.imgBotaoMem.imagem,
     titulo: home.imgBotaoMem.titulo,
     texto: home.imgBotaoMem.texto,
-    textoBotao: 'Sejo membro',
+    textoBotao: home.imgBotaoMem.textoBotao,
     link: 'quemSomos'
   };
   const navData = {
