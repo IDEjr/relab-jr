@@ -7,7 +7,8 @@
   "imgBotaoRes": {
     "imagem": "/uploads/imagemresultados.png",
     "titulo": "MELHORE SEUS RESULTADOS",
-    "texto": "Potencialize seu negócio com soluções inovadoras da Relab Jr. Consultoria. Desbloqueie oportunidades, supere desafios e alcance novos horizontes. Descubra nossos serviços e comece sua jornada para o sucesso agora!"
+    "texto": "Potencialize seu negócio com soluções inovadoras da Relab Jr. Consultoria. Desbloqueie oportunidades, supere desafios e alcance novos horizontes. Descubra nossos serviços e comece sua jornada para o sucesso agora!",
+    "textoBotao": "Entre em Contato"
   },
   "servicosHome": {
     "imagem2": "/uploads/images.jpeg",
@@ -26,7 +27,8 @@
   "imgBotaoMem": {
     "imagem": "/uploads/imagemmembros.png",
     "texto": "Faça parte da nossa equipe e amplie seu conhecimento em consultoria empresarial. Na Relab Jr., você se prepara para um futuro de excelência profissional. Junte-se a nós e trilhe um caminho de aprendizado e realizações.",
-    "titulo": "MEMBROS"
+    "titulo": "MEMBROS",
+    "textoBotao": "Seja Membro"
   },
   "footer": {
     "linkedin": "https://www.linkedin.com/company/relabjr/",
