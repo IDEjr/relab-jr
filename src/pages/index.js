@@ -59,7 +59,7 @@ export default function Home({home, posts, nav, foo}) {
       <ImagemComBotao {...resultados} />
       <ServicesHome servicosHome = {home.servicosHome}/>
 
-      <ImagemComBotao {...membros} />S
+      <ImagemComBotao {...membros} />
       <CarrosselHome {...posts}/>  
       <Footer {...foo}/>
 

@@ -89,7 +89,7 @@ export default function navbar({logo,linkedin, instagram, email }) {
                             }
                             onClick={showNavbar}>
                             
-                            <Link href={`https://mailto:${email}`} target="_blank"><FaEnvelope style = {style}/></Link>
+                            <Link href={`mailto:${email}`} target="_blank"><FaEnvelope style = {style}/></Link>
                         </button>
                     </div>
                     

@@ -9,20 +9,21 @@ export default function gridPosts(...posts) {
     }
     posts = arrPosts
     return (
-      <>
-        <section className={styles.postsGrid}>
-            {posts.map((post, i) => (
-            <CardPosts
-              key={i}
-              fileName={post.fileName}
-              imagem={post.imagemCapa}
-              titulo={post.titulo}
-              data={post.data}
-              previa={post.previa}
-              autor={post.autor}
-            />   
-         ))}
-        </section>
+      <><div className={styles.big}>
+          <section className={styles.postsGrid}>
+              {posts.map((post, i) => (
+              <CardPosts
+                key={i}
+                fileName={post.fileName}
+                imagem={post.imagemCapa}
+                titulo={post.titulo}
+                data={post.data}
+                previa={post.previa}
+                autor={post.autor}
+              />   
+          ))}
+          </section>
+        </div>
       </>
     );
   }
