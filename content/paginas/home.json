@@ -16,6 +16,7 @@
     "imagem4": "/uploads/pexels-photo-1509428.jpeg",
     "imagem5": "/uploads/blog-aperto-de-mao-pnqr2oxv4y0cbmsd6r7ggbvlbabhr238ak13due564.png",
     "imagem6": "/uploads/gestao-pessoas-scaled.jpg",
+    "tituloServicos": "NOSSOS SERVIÇOS",
     "servico1": "Modelagem de Negócios",
     "servico2": "Viabilidade Econômica",
     "servico3": "Análise da Saúde Financeira",
@@ -43,6 +44,7 @@
       "Roteiro para o Planejamento Estratégico",
       "Gestão de Pessoas de Alto Impacto",
       "Viabilidade econômica para o sucesso"
-    ]
+    ],
+    "tituloCarrossel": "NOVIDADES"
   }
 }
