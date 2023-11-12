@@ -320,8 +320,7 @@ collections:
           - {label: "Email Destino", name: "emailDestino", widget: "string"}
           - {label: "Email Origem", name: "emailOrigem", widget: "string"}
           - {label: "Senha Google", name: "senha", widget: "string"}
-          - {label: "Logo Membros", name: "logoMembros", widget: "image"}
-          - {label: "Logo Serviços", name: "logoServicos", widget: "image"}
+          - {label: "Logo Formulários", name: "logo", widget: "image"}
           - {label: "Título Membros", name: "tituloMembros", widget: "string"}
           - {label: "Título Servicos", name: "tituloServicos", widget: "string"}
           - {label: "Email", name: "email", widget: "string"}
