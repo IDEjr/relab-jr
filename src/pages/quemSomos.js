@@ -1,16 +1,13 @@
-import Link from 'next/link'
-import Image from 'next/image'
 import Inicio from '../components/inicio'
 import Navbar from '../components/navbar'
-import CardMembros from '../components/cardMembros'
 import Footer from '../components/footer'
 import TextoBarraQuemSomos from '../components/textoBarraQuemSomos'
 import Valores from '../components/valores'
+import GridMembros from '@/components/gridMembros'
+import CarrosselQuemSomos from '@/components/carrosselQuemSomos'
 import styles from '../styles/quemSomos.module.css'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
-import GridMembros from '@/components/gridMembros'
-import CarrosselQuemSomos from '@/components/carrosselQuemSomos'
 
 export default function quemSomos({quemSomos, membros, nav, carrosselQuemSomos, foo}) {
 console.log(carrosselQuemSomos[0].titulo);
@@ -50,7 +47,7 @@ console.log(carrosselQuemSomos[0].titulo);
       <Navbar  {...navData}/>
       <Inicio title = {"QUEM SOMOS"} image= {path}/>
       <TextoBarraQuemSomos {...textoBarra}/>
-       <CarrosselQuemSomos {...carrosselQuemSomos}/>
+      <CarrosselQuemSomos {...carrosselQuemSomos}/>
       <Valores  {...valores}/>
       <GridMembros   titulo={grid.titulo} logo={grid.logo} membros={membros}/>
       

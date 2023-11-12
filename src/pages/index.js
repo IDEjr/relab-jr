@@ -1,5 +1,3 @@
-import Link from 'next/link'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
@@ -11,7 +9,6 @@ import CarrosselHome from '../components/carrosselHome'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
 import React from 'react';
-
 
 
 export default function Home({home, posts, nav, foo}) {
@@ -53,16 +50,13 @@ export default function Home({home, posts, nav, foo}) {
       <React.Fragment>
       <Navbar  {...navData}/>
       </React.Fragment>
-      
       <Inicio title = {"GESTÃO É A NOSSA CAUSA"} image= {path}/>
       <TextoBarraHome {...textoBarraHome}/>
       <ImagemComBotao {...resultados} />
       <ServicesHome servicosHome = {home.servicosHome}/>
-
-      <ImagemComBotao {...membros} />S
+      <ImagemComBotao {...membros} />
       <CarrosselHome {...posts}/>  
       <Footer {...foo}/>
-
     </div>
   )
 }
