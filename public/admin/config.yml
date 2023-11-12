@@ -65,7 +65,7 @@ collections:
             name: "servicosHome"
             widget: "object"
             fields:
-             - {label: "Título Serviços", name: "tituloServicos", widget: "string", pattern: ['^.{1,20}$', "Máximo 20 carateres."]}
+              - {label: "Título Serviços", name: "tituloServicos", widget: "string", pattern: ['^.{1,20}$', "Máximo 20 carateres."]}
               - {label: "Serviço 1", name: "servico1", widget: "string", pattern: ['^.{1,35}$', "Máximo 35 carateres."]}
               - {label: "Imagem 1", name: "imagem1", widget: "image"}
               - {label: "Serviço 2", name: "servico2", widget: "string", pattern: ['^.{1,35}$', "Máximo 35 carateres."]}
