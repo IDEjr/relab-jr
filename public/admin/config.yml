@@ -325,6 +325,6 @@ collections:
           - {label: "Título Membros", name: "tituloMembros", widget: "string"}
           - {label: "Título Servicos", name: "tituloServicos", widget: "string"}
           - {label: "Email", name: "email", widget: "string"}
-          - {label: "Celular", name: "senha", widget: "string"}
+          - {label: "Celular", name: "celular", widget: "string"}
           - {label: "Endereço 1", name: "endereco1", widget: "string"}
           - {label: "Endereço 2", name: "endereco2", widget: "string"}
