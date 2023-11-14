@@ -37,7 +37,7 @@
     
     .membrosGrid{
         display: grid;
-        grid-template-columns: 200px 200px ;/* Três colunas por linha e colunas flexíveis */
+        grid-template-columns: 200px 200px; /* Três colunas por linha e colunas flexíveis */
         gap: 100px;
         padding: 15vh 10vh ;
         justify-content: center; /* Centraliza horizontalmente */

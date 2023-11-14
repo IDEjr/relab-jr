@@ -8,7 +8,9 @@
     /*grid-template-columns: 30vw 30vw;  Duas colunas por linha e colunas flexíveis *//* Duas colunas por linha e colunas flexíveis */
     /* grid-template-columns: 30vw 30vw; */
     /* grid-template-columns: 450px 450px 450px; */
-    grid-template-columns: repeat(auto-fill, 400px);
+    /* grid-template-columns: repeat(4, 450px); */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 350px));
+    /* grid-template-columns: repeat(auto-fill, 400px); */
     /* grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); */
     /* padding:5vh 20vw ; */
     /* gap: 800px; */
@@ -27,45 +29,50 @@
 
 
 
-/* @media only screen  and (min-width: 800px) and (max-width: 3000px)  {
+@media only screen  and (min-width: 1550px) and (max-width: 2049px)  {
 
    
     .postsGrid{
         
-        grid-template-columns: repeat(auto-fill, 450px);
+        /* grid-template-columns: repeat(auto-fill, 450px); */
+        /* grid-template-columns: 450px 450px 450px; */
         
     }
 
 
 }
 
-@media only screen  and (min-width: 1250px) and (max-width: 1549px)  {
+@media only screen  and (min-width: 1050px) and (max-width: 1449px)  {
 
    
     .postsGrid{
         display: grid;
-    }
-
-
-} */
-
-@media only screen  and (min-width: 400px) and (max-width: 550px) {
-
-   
-    .postsGrid{
-        display: grid;
-        grid-template-columns: repeat(auto-fill, 300px);
+        /* grid-template-columns: 450px 450px; */
     }
 
 
 }
 
-@media only screen  and (max-width: 399px) {
+@media only screen  and (min-width: 550px) and (max-width: 1049px) {
 
    
     .postsGrid{
         display: grid;
-        grid-template-columns: repeat(auto-fill, 250px);
+        /* grid-template-columns: repeat(auto-fill, 300px); */
+        /* grid-template-columns: 450px; */
+    }
+
+
+}
+
+@media only screen  and (max-width: 449px) {
+
+   
+    .postsGrid{
+        display: grid;
+        /* grid-template-columns: repeat(auto-fill, 250px); */
+        /* grid-template-columns: 275x; */
+        /* grid-template-columns: repeat(1, 275px); */
     }
 
 
