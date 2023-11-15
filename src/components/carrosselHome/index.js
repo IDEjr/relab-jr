@@ -22,7 +22,7 @@ export default function CarrosselHome(...posts) {
   console.log(posts);
   
   const data = [];
-  for (var i =0; i<4 ; i++){
+  for (var i =0; i<3 ; i++){
 
     data.push(posts[0][i]);
   }
