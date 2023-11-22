@@ -5,7 +5,7 @@
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), var(--bg-image, none);
 }
 
-.cleiton{
+.imagemCarrossel{
     object-fit: cover;
     filter: brightness(40%);
 }
