@@ -3,10 +3,10 @@ import Footer from '../components/footer'
 import Inicio from '../components/inicio'
 import TextoServicos from '../components/textoServicos'
 import EscoposServicos from '../components/escoposServicos'
+import Formulario from '../components/formularioServicos'
 import styles from '../styles/servicos.module.css'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
-
 
 export default function servicos({servicos, nav, foo}) {
 
@@ -50,6 +50,7 @@ export default function servicos({servicos, nav, foo}) {
       <Inicio title = {"SERVIÇOS"} image= {path}/>
       <TextoServicos {...inicioServicos}/>
       <EscoposServicos {...blocosServicos}/>
+      <Formulario />
       <Footer {...foo}/>
     </>
   );

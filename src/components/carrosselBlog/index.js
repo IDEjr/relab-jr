@@ -110,16 +110,13 @@ function ordemDecrescente(a, b) {
             <h2><p className={styles.h2}>{item.titulo}</p></h2>
          
             <h3><p className={styles.h3}>{item.previa}</p></h3> 
-         </div> 
+          </div> 
          </div>
         </SwiperSlide>))
         }
       </Swiper>
 )}
       </section>
-      
-  
-      
     </>
   );
 }

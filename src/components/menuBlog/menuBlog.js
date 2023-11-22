@@ -70,7 +70,7 @@ const filter  = (select, arrPosts) =>{
          
 
          
-    </div>                           
+         </div>                           
         </> 
     )
 }

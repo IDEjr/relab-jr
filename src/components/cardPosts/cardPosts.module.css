@@ -1,5 +1,10 @@
 .link {
     text-decoration: none;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 
@@ -10,7 +15,7 @@
     text-align: center;
     aspect-ratio: 3/1;
     position: relative;
-    width: 100%;
+    width: 95%;
     height: 100%;
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 1);
@@ -64,7 +69,7 @@
 
 .titulo {
     display: flex;
-    font-size: 110%;
+    font-size: 20px;
     word-wrap: break-word;
     color: #F2C12E;
 
@@ -86,7 +91,7 @@
 
 
 .previa {
-    font-size: 80%;
+    font-size: 18px;
     word-wrap: break-word;
     color: white;
 
@@ -107,18 +112,177 @@
 
 
 .data {
-    font-size: 70%;
+    font-size: 15px;
     color: white;
     padding: 5%;
 }
 
 
 .autor {
-    font-size: 70%;
+    font-size: 15px;
     color: white;
     padding: 5%;
     
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+}
+
+
+
+
+
+  @media only screen  and (min-width: 1921px)   {
+
+   .previa{
+    font-size:16px ;
+   }
+   .autor{
+    font-size: 16px;
+   }
+   .data{
+    font-size: 16px;
+   }
+   .titulo{
+    font-size: 20px;
+   }
+     
+ 
+
+
+}
+
+@media only screen  and (min-width: 1441px) and (max-width: 1920px)  {
+
+    .previa{
+        font-size:16px ;
+       }
+       .autor{
+        font-size: 16px;
+       }
+       .data{
+        font-size: 16px;
+       }
+       .titulo{
+        font-size: 20px;
+       }
+ 
+
+
+}
+@media only screen  and (min-width: 1281px) and (max-width: 1440px)  {
+    .previa{
+        font-size:16px ;
+       }
+       .autor{
+        font-size: 16px;
+       }
+       .data{
+        font-size: 16px;
+       }
+       .titulo{
+        font-size: 20px;
+       }
+   
+
+}
+
+
+
+@media only screen  and (min-width: 1025px) and (max-width: 1280px)  {
+
+    .previa{
+        font-size:14px ;
+       }
+       .autor{
+        font-size: 14px;
+       }
+       .data{
+        font-size: 14px;
+       }
+       .titulo{
+        font-size: 18px;
+       }
+   
+
+
+}
+
+@media only screen  and (min-width: 769px) and (max-width: 1024px)  {
+
+   
+  
+    .card{
+        width: 99%;
+    }
+    .previa{
+        font-size:16px ;
+       }
+       .autor{
+        font-size: 16px;
+       }
+       .data{
+        font-size: 16px;
+       }
+       .titulo{
+        font-size: 20px;
+       }
+
+
+}
+
+@media only screen  and (min-width: 577px) and (max-width: 768px) and (orientation: portrait) {
+
+    .previa{
+        font-size:12px ;
+       }
+       .autor{
+        font-size: 12px;
+       }
+       .data{
+        font-size: 12px;
+       }
+       .titulo{
+        font-size: 13px;
+       }
+
+
+}
+@media only screen and (min-width: 300px) and (max-width: 576px)  and (orientation: portrait) {
+    .previa{
+        font-size:12px ;
+        
+       }
+       .autor{
+        font-size: 12px;
+       }
+       .data{
+        font-size: 12px;
+       }
+       .titulo{
+        font-size: 13px;
+       }
+       .card{
+        aspect-ratio: 9/5;
+       }
+       
+}
+
+@media only screen  and (max-width: 299px)  and (orientation: portrait) {
+    .previa{
+        font-size:12px ;
+       
+       }
+       .autor{
+        font-size: 12px;
+       }
+       .data{
+        font-size: 12px;
+       }
+       .titulo{
+        font-size: 13px;
+       }
+       .card{
+        aspect-ratio: 9/5;
+       }
 }
