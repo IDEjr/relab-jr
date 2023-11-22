@@ -10,6 +10,20 @@
     padding: 2vw;
     
 }
+
+
+
+.buttonMobile{
+  border: none;
+    width: 100%;
+    text-align: center;
+    background: none;
+    color: #F2C12E;
+    font-size: 3.4vw;
+    padding: 2vw;
+}
+
+
 .container{
   display: flex;
   flex-direction: column;
@@ -17,39 +31,53 @@
   padding-bottom: 150px;
   
 }
-.buttonMobile{
-    background-color: black;
-display: none;
+.tituloMobile{
+    background-color: #262626;
   border: none;
-  width: fit-content;
-  height: 9vh;
-  background: none;
+  font-style: bold;
+  width: 71%;
+  text-align: center;
   color: #F2C12E;
-  font-size: 1.4vw;
+  font-size: 5.4vw;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border-bottom-left-radius: 14px;
+  border-top-left-radius: 14px;
 }
 
-
-.optionStyle {
-  background-color: black;
-  color: white;
+.mais{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  width: 30%;
+  color: #F2C12E;
+  font-size: 5.4vw;
+  padding: 10px;
+  text-align: end;
+  height: 100%;
 }
-
 .lista{
     list-style-type: none;
     display: flex;
-
-    
-
 }
+
+
 
 
 .menuContainer{
 width: fit-content;
 height: fit-content;
+
 border-radius: 15px;
 background: rgba(0, 0, 0, 0.18);
 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 margin-bottom: 15vh;
+}
+.optionsMobile{
+  width: 100%;
 }
 
 .postList{
@@ -57,7 +85,6 @@ margin-bottom: 15vh;
   list-style: none;
 }
 .post{
-  
   padding: 0.8vw;
 }
 .button:focus{
@@ -77,18 +104,36 @@ margin-bottom: 15vh;
  
 @media only screen and (max-width: 800px) {
   
-  .buttonMobile{
-    display: block;
-    width: 10rem;
-    font-size: 0.8rem;
-    text-align: center;
+  .containerMobile{
+display: flex;
+   
+width: 80vw;
+height: 10vh;
+background-color: #262626;
+border-radius: 15px;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+align-items: center;
+position: relative;
+
+
   }
-  .button{
+.optionsMobile{
+  
+  position: absolute;
+  
+  background-color: #262626;
+  z-index: 1;
+  width: fit-content;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  top: 42.5%;
+  left: 54.5%;
+  }
+  
+  
+  .optionDesktop{
     display: none;
     
-    
   }
-  .menuContainer{
-    margin-bottom: 0;
-  }
+ 
 }
