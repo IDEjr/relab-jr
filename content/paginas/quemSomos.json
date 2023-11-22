@@ -24,4 +24,8 @@
     "titulo3": "Lealdade",
     "titulo4": "Trabalho"
   },
+  "painelMembros": {
+    "titulo": "CONHEÇA NOSSOS MEMBROS",
+    "logo": "/uploads/bandeira-amarela-removebg-preview.png"
+  }
 }
