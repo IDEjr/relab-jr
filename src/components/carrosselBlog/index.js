@@ -12,7 +12,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { EffectFlip, Pagination, Navigation } from "swiper/modules";
 import next from 'next';
 
 
@@ -51,6 +50,7 @@ export default function CarrosselBlog(...posts) {
     recents.push(arrPosts[i])  //limita o tamanho dos posts para 3
   }
 
+  
   return (
     <>
 
@@ -73,15 +73,16 @@ export default function CarrosselBlog(...posts) {
             pagination={{ clickable: next }} //permite a troca de páginas pelo pagination
             navigation={{  enabled: false  }}
             slidesPerGroup={1}
-            autoplay={{  delay: 5000  }}
-            modules={[EffectFlip, Pagination, Navigation]}
+            autoplay={{  delay: 5000, disableOnInteraction: false  }}
             className={styles.swiperContainer}
             breakpoints={{ 800: {  navigation: { enabled: true }  }}}  //se a tela for maior que 800 pixels, ativa o navigation(as setinhas)
-          >
-            {recents.map((item) => ( //renderiza um slide para cada item no array de recents
-
+          > 
+          {(console.log(recents))}
+            {recents.map((item) =>  ( //renderiza um slide para cada item no array de recents
+              
               <SwiperSlide key={item.titulo} className={styles.swiperInd}>
-
+                
+                  <Link href={`/posts/${item.fileName}`}>
                 <div className={styles.carrosselImage}>
                  
                   <Image src={item.imagemCapa} fill alt={item.titulo} className={styles.imagemCarrossel} />
@@ -94,7 +95,7 @@ export default function CarrosselBlog(...posts) {
                   </div>
 
                 </div>
-
+                </Link>
               </SwiperSlide>))
             }
           </Swiper>

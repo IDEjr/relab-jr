@@ -56,47 +56,8 @@ width: 100%;
 
 
 
- @media only screen  and  (max-width: 400px)  {
-    .swiperInd{
-        height: 50vh;
-    }
-    .carrosselImage{
-     height: 100%;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-    
-    }
-    .h2{
-        font-size: 6vw;
-        width: 95%;
-        align-items: center;
-    }
-    .h3{
-        font-size: 4vw;
-        margin-left: 2px;
-    }
-    .h1{
-        font-size: 6vw;
-        width: 95%;
-        left: 2%;
-        top: 20%;
 
-    }
-    .titles{
-        position: relative;
-        
-        width: 95%;
-        left: 0;
-        top: 0;
-    }
- 
- 
- }
-
-
- @media only screen  and  (min-width: 400px) and (max-width: 800px)   {
+ @media only screen  and (max-width: 800px)   {
 
     .carrosselImage{
      height: 80vw;
