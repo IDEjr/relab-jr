@@ -11,7 +11,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { EffectFlip, Pagination, Navigation } from "swiper/modules";
+import { EffectFlip, Pagination, Navigation, Autoplay } from "swiper/modules";
 
 
 export default function CarrosselQuemSomos(...images) {
@@ -23,11 +23,6 @@ export default function CarrosselQuemSomos(...images) {
   images = arrImages //atribuindo a images
 
 
-
-
-
-console.log(images);
-
   return (
     <>
       <div className={Styles.container}>
@@ -35,7 +30,7 @@ console.log(images);
           style={{
             "--swiper-theme-color": "#F2C12E",
             "--swiper-pagination-color": "#F2C12E",
-            "--swiper-pagination-bullet-inactive-color": "#999999",   //algumas estilizações do anivgation, pagination
+            "--swiper-pagination-bullet-inactive-color": "#999999",   //algumas estilizações do navigation, pagination
             "--swiper-pagination-bullet-inactive-opacity": "1",
             "--swiper-pagination-bullet-size": "16px",
             "--swiper-pagination-bullet-border-radius": "0",
@@ -45,42 +40,37 @@ console.log(images);
           }}
           slidesPerView={1}  //define a quantidade de slides por visualização
 
-          grabCursor={true}
-          pagination={true}
-          navigation={{
+          grabCursor={true}  //ativando o grabCursor com configurações default
+          pagination={{   //configurações da pagination
+            clickable: true   
+          }}
+
+          navigation={{  //configurações do navi
             enabled: false
-          }
-          } modules={[EffectFlip, Pagination, Navigation]}
+          }}
+
+          autoplay={{  //configurações do autoplay
+            delay: 5000,
+            disableOnInteraction: false
+          }}
+
           breakpoints={{
             800: {  //acima de 800px, aumenta os slides por visualização para dois, e ativa o navigation (as setinhas)
               slidesPerView: 2,
               navigation: {
                 enabled: true  
-              }
-            }
-          }}
+              }}}}
         >
 
-          
-
           {images.map((item) => (     //mostra um slide para cada imagem contida em images
-            <SwiperSlide key={item.titulo} className={Styles.swiperSlide}>
+            <SwiperSlide key={item} className={Styles.swiperSlide} >
               <div className={Styles.image}>
-                <Image src={item.imagem}
 
-                  fill
-                  style={{ objectFit: 'cover' }}
-                  alt="Post"
-                // 
-                />
+                <Image src={item} fill style={{ objectFit: 'cover' }} alt="Post" />
               </div>
             </SwiperSlide>))
           }
         </Swiper>
       </div>
-
-
-
     </>
-  );
-}
+  )}
