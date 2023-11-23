@@ -1,41 +1,30 @@
-import Link from 'next/link'
 import styles from './textoBarraQuemSomos.module.css'
 import Image from 'next/image'
-import image1 from '../../../public/uploads/image/QuemSomos/iconelampada.png'
-import image2 from '../../../public/uploads/image/QuemSomos/empe.png'
-import image3 from '../../../public/uploads/image/QuemSomos/sorrisoRelab.png'
 
 
-export default function textoBarraQuemSomos({texto1, texto2, logo}) {
-    return(
-        <>
-        <div className={styles['container']}>  
-          <div className={styles['toptext']}>
-                <p className={styles['text-content']} >
-                    {texto1}
-                </p>  
-            </div>
-        <div className={styles['retangulo']}></div>
-    
-        <div className={styles['textImage']}>
-            
-            <div   className={styles['lampada']}>
-                <Image src={logo}   
-                
-                fill
-                style={{objectFit:'cover'}}
-                alt="Post"
-                // 
-                />
-            </div>
+export default function textoBarraQuemSomos({ texto1, texto2, logo }) {
+    return (
+          <>  
+            <div className={styles['container']}> {/* inicio da div container */}
+                <div className={styles['toptext']}>
+                    <p className={styles['text-content']} > {texto1}  </p>
+                </div>
 
-            <div className={styles['bottomtext']}>
+                <div className={styles['retangulo']}></div>
 
-                <p className={styles['text-content']}> {texto2}  </p>
+                <div className={styles['textImage']}> {/* inicio da div textImage */}
 
-            </div>
-        </div>
-               </div>
+                    <div className={styles['lampada']}>
+                        <Image src={logo} fill style={{ objectFit: 'cover' }} alt="Post"/>
+                    </div>
+
+                    <div className={styles['bottomtext']}>
+                        <p className={styles['text-content']}> {texto2}  </p>
+                    </div>
+
+                </div> {/* fim da div textImage */}
+          
+            </div>  {/* fim da div container */}
         </>
     )
 }

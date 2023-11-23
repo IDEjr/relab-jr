@@ -1,4 +1,4 @@
-.toptext{
+.toptext{ /* css da div superior */
   display: flex;
   width: 50%;
   height: 20rem;
@@ -7,12 +7,11 @@
   text-align: center;
   margin-left: 10rem;
   border-left: solid 1rem #F2C12E;
-padding-left: 4rem;  
-line-height: 3.5vh;
-
+  padding-left: 4rem;  
+  line-height: 3.5vh;
 }
-.container{
-  
+
+.container{ /* css do container geral da página*/
 height: 54rem;
 width: 100%;
 display: flex;
@@ -21,14 +20,14 @@ margin-top: 5%;
 gap: 5%;
 }
 
-.textImage{
+.textImage{ /* css da div que suporta a imagem e o texto inferior*/
   display: flex;
   justify-content: space-evenly;
   padding: 3rem;
   width: 100%;
     
 }
-.lampada{
+.lampada{ /* css da  própria imagem*/
  position: relative;
  aspect-ratio: 1/1;
  overflow: hidden;
@@ -38,11 +37,11 @@ gap: 5%;
   width: 300px;
   
 }
-.retangulo{
+.retangulo{  /* css do retangulo (visivel apenas no mobile)*/
   display: none;
 }
 
-.bottomtext{
+.bottomtext{ /* css da div do texto inferior*/
   
   height: 20rem;  
   width: 40%;
@@ -55,7 +54,7 @@ gap: 5%;
 }
 
 
-.textContent{
+.textContent{ /* formatação  de todos os textos*/
   color: #ffff;
   font-size: 1.5vw;
   width: 100%;
@@ -65,14 +64,10 @@ gap: 5%;
 
 
 
-.hiddenImage{
-  width: 50%;
-  height: 30rem;
-
-}
 
 
-@media only screen and (max-width: 800px) {
+
+@media only screen and (max-width: 800px) { /* incio do breakpoint */
   .bottomtext {
     padding-left: 0px;
     margin-left: 0%;
@@ -80,15 +75,10 @@ gap: 5%;
     width: 70%;
     height: 15vh; 
     border: none;
-
   }
-  .hiddenImage{
-    display: none;
-  }
-
+ 
  
   .toptext{
-    
     border: none;
     width: 70%;
     height: 15vh;  
@@ -99,12 +89,8 @@ gap: 5%;
     text-align: center;
     align-items: center;
     justify-content: center;
-  
-
   }
-  
 
-  
   .lampada{
    width: 30vw;
    margin: auto;
@@ -112,14 +98,15 @@ gap: 5%;
    margin-top: 5%;
    margin-bottom: 5%;
   }
+
   .textImage{
     flex-direction: column-reverse;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 0%;
-    
+    padding: 0%;   
   }
+
   .container{
     align-items: center;
     width: 100%;
@@ -127,15 +114,14 @@ gap: 5%;
     gap: 2%;
     margin-top: 8vh;
     height: fit-content;
-
   }
   
   .text-content{
     text-align: center;
     font-size: 3vw;
-    height: fit-content;
-        
+    height: fit-content;      
   }
+
   .retangulo{
     width: 50%;
     background-color: #F2C12E;
@@ -144,9 +130,7 @@ gap: 5%;
     display: block;
     margin-top: 5%;
     margin-bottom: 5%;
-    
   }
-  
-}  
+}  /* fim do breakpoint */
 
 
