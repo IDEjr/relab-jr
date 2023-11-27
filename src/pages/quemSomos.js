@@ -10,7 +10,7 @@ import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
 
 export default function quemSomos({quemSomos, membros, nav, carrosselQuemSomos, foo}) {
-console.log();
+
   const path = quemSomos.inicioQuemSomos.imagem;
   const grid = {
     titulo :quemSomos.painelMembros.titulo,
@@ -43,6 +43,7 @@ console.log();
     instagram : nav.instagram,
     email : nav.email
   };
+  
   return (
     <>
       <Navbar  {...navData}/>

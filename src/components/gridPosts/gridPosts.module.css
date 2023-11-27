@@ -2,9 +2,8 @@
 .postsGrid{
     display: grid;
     
-    
     grid-column-gap: 50px; 
-    grid-row-gap: 40px; 
+    grid-row-gap: 20px; 
 }
 
 

@@ -25,13 +25,5 @@
     "servico5": "Captação de Clientes",
     "servico6": "Gestão de Pessoas",
     "imagem1": "/uploads/modelagem-processos-negocio-scaled.jpg"
-  },
-  "formularioServicos": {
-    "logo": "/uploads/iconelampada-removebg-preview.png",
-    "titulo": "ENTRE EM CONTATO",
-    "celular": "555199998888",
-    "email": "adm.relab@gmail.com",
-    "endereco1": "Av. Dr. Nilo Peçanha, 1600, Boa Vista - Porto Alegre/RS",
-    "endereco2": "Av. Unisinos, 950 - Cristo Rei, São Leopoldo, RS"
   }
 }
