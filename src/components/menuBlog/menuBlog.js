@@ -32,55 +32,47 @@ export default function MenuBlog(...posts) {
         setIsactive(false)
     }
 
+    const RenderOptions = () => {
+        return (
+            
+            <>
+                <li key={'todos'} tabIndex={0} className={Styles.teste}>
+                    <button className={Styles.button} onClick={() => filter("TODOS", arrPosts)} tabIndex={0} > Todos </button>
+                </li>
+                {filteredgenders.map((filteredgenders) => (
+                    <li key={filteredgenders.titulo}>
+                        <button className={Styles.button} onClick={() => { filter(filteredgenders, arrPosts) }}>
+                            {filteredgenders}
+                        </button>
+                    </li>
+                ))}
+            </>)
+
+    }
+
 
     return (
         <>
-            <div className={Styles.container}>
-                <div className={Styles.menuContainer}>
+            <div className={Styles.container}>  {/* div que engloba todo o componente */}
+                <div className={Styles.menuContainer}> {/* div que engloba apenas a parte do menu */}
                     <ul className={Styles.lista}>
-                        <div>
-                            <div className={Styles.containerMobile}>
-                                <h3 className ={Styles.tituloMobile} ><p>{titulo}</p></h3>
-                                <h4  className ={Styles.mais}onClick={() => setIsactive(!isActive) }>Outros</h4>
-                            </div>
-                            
-                            
-                            
-                            {isActive && (
-                                <div className={Styles.optionsMobile}>
-                                       <li> <button className={Styles.buttonMobile} onClick={() => filter("TODOS", arrPosts)}> Todos </button> </li>
-                                    {filteredgenders.map((filteredgenders) => (<li key={filteredgenders.titulo}>
-                                        <button className={Styles.buttonMobile} onClick={() => { filter(filteredgenders, arrPosts) }}>
-                                            {filteredgenders}
-                                        </button>
-                                    </li>
-                                    ))}
-                                </div>
-                            )}
+
+                        <div className={Styles.containerMobile}>  {/* div mobile */}
+
+                            <h3 className={Styles.tituloMobile} ><p>{titulo}</p></h3>
+                            <h4 className={Styles.tituloMobile} onClick={() => setIsactive(!isActive)}>Outros</h4>
+                            <div className={Styles.optionMobile}> {isActive && (<RenderOptions />)}</div>
+                        
+
+                        </div>
+                        <div className={Styles.containerDesktop}> {/* div desktop */}
+                           
+                            <RenderOptions />
                         
                         </div>
-
-
-                        <li key={'todos'} className={Styles.optionDesktop}>
-                            <button className={Styles.button} onClick={() => filter("TODOS", arrPosts)}> Todos </button>
-                        </li>
-                        
-                        {filteredgenders.map((filteredgenders) => (<li key={filteredgenders.titulo} className={Styles.optionDesktop}>
-                            <button className={Styles.button} onClick={() => { filter(filteredgenders, arrPosts) }}>
-                                {filteredgenders}
-                            </button>
-                        </li>
-                        ))}
                     </ul>
                 </div>
-
-
                 <GridPosts {...filteredPosts} />
-
-
-
-
-
             </div>
         </>
     )
