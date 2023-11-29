@@ -51,7 +51,7 @@ export default function Footer(footerData) {
                             </a>
                         
                         
-                            <a className={styles.twitterIcon} href='https://www.youtube.com/watch?v=z7rxl5KsPjs' target="_blank">
+                            <a className={styles.twitterIcon} href='/' target="_blank">
                                 <Image
                                     src={TwitterIcon}
                                     width={50}
