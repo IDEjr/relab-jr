@@ -53,7 +53,7 @@ export default function CarrosselQuemSomos(...images) {
             delay: 5000,
             disableOnInteraction: false
           }}
-
+  
           breakpoints={{
             800: {  //acima de 800px, aumenta os slides por visualização para dois, e ativa o navigation (as setinhas)
               slidesPerView: 2,
