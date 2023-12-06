@@ -26,14 +26,19 @@
 
 .tituloMobile, .optionButton {
   font-style: bold;
+  flex: 1;
   color: #F2C12E;
   font-size: 5.4vw;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 50%;
   height: 100%;
 }
-
+.optionButton{
+  justify-content: end;
+  padding: 20px;
+}
 .lista {
   list-style-type: none;
   display: flex;
@@ -41,7 +46,7 @@
 
 
 
-.menuContainer, .containerMobile {
+.menuContainer, .tituloEBotaoMobile {
   width: fit-content;
   height: fit-content;
   display: flex;
@@ -76,14 +81,29 @@
 
 @media only screen and (max-width: 800px) {
 
-  .containerMobile {
+  
+  .containerMobile{
+    min-width: 40vw;
+ 
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    background: none;
+    box-shadow: none;
+    background-color: none;
+
+  }
+
+  .tituloEBotaoMobile {
     display: flex;
     align-items: center;
     position: relative;
     margin-bottom: 0;
     min-height: 10vh;
-    min-width: 80vw;
+    width: 100%;    
     justify-content: space-between;
+    flex-wrap: wrap;
+    
   }
 
   .button, .active{
@@ -102,13 +122,11 @@
   }
 
   .optionsMobile {
-
     position: relative;
-    
-    z-index: 1;
-    width: fit-content;
+    align-self: flex-end;
     border-radius: 15px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background-color: #262626;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     
   }
 

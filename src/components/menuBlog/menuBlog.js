@@ -63,11 +63,12 @@ export default function MenuBlog(...posts) {
                     <ul className={Styles.lista}>
 
                         <div className={Styles.containerMobile}>  {/* div mobile */}
+                           <div className={Styles.tituloEBotaoMobile}>
                             <h3 className={Styles.tituloMobile} ><p>{titulo}</p></h3>
-                            <h4 className={Styles.optionButton} onClick={() => setIsactive(!isActive)}>Outros</h4>
-                        </div>    
+                            <h4 className={Styles.optionButton} onClick={() => setIsactive(!isActive)}>Outros</h4>    
+                            </div>
                            <div className={Styles.optionsMobile}> {isActive && (<RenderOptions />)}</div>                        
-                        
+                        </div>
 
                         <div className={Styles.containerDesktop}> {/* div desktop */}                           
                             <RenderOptions />                        
