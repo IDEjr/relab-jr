@@ -9,6 +9,7 @@ import GridPosts from '../gridPosts'
 export default function MenuBlog(...posts) {
     const [isActive, setIsactive] = useState(false)
     const [titulo, setTitulo] = useState("TODOS")
+    const [atual, setAtual]  = useState(false)
 
     posts = posts[0]
     var genderSelection = []
@@ -24,12 +25,16 @@ export default function MenuBlog(...posts) {
     const filteredgenders = [...new Set(genderSelection)];
 
     const filter = (select, arrPosts) => {
+
         let aux = arrPosts;
         (select == "TODOS") ? aux = arrPosts :
             aux = arrPosts.filter((obj) => obj.genero == select)
+           
         setFilteredPosts(aux)
         setTitulo(select)
         setIsactive(false)
+        setAtual(select)
+        
     }
 
     const RenderOptions = () => {
@@ -37,11 +42,11 @@ export default function MenuBlog(...posts) {
             
             <>
                 <li key={'todos'} tabIndex={0} className={Styles.teste}>
-                    <button className={Styles.button} onClick={() => filter("TODOS", arrPosts)} tabIndex={0} > Todos </button>
+                    <button className={atual === "TODOS"? Styles.active: Styles.button} onClick={() => filter("TODOS", arrPosts)} tabIndex={0} > Todos </button>
                 </li>
                 {filteredgenders.map((filteredgenders) => (
                     <li key={filteredgenders.titulo}>
-                        <button className={Styles.button} onClick={() => { filter(filteredgenders, arrPosts) }}>
+                        <button className={atual === filteredgenders? Styles.active: Styles.button} onClick={() => { filter(filteredgenders, arrPosts) }}>
                             {filteredgenders}
                         </button>
                     </li>
@@ -58,17 +63,14 @@ export default function MenuBlog(...posts) {
                     <ul className={Styles.lista}>
 
                         <div className={Styles.containerMobile}>  {/* div mobile */}
-
                             <h3 className={Styles.tituloMobile} ><p>{titulo}</p></h3>
-                            <h4 className={Styles.tituloMobile} onClick={() => setIsactive(!isActive)}>Outros</h4>
-                            <div className={Styles.optionMobile}> {isActive && (<RenderOptions />)}</div>
+                            <h4 className={Styles.optionButton} onClick={() => setIsactive(!isActive)}>Outros</h4>
+                        </div>    
+                           <div className={Styles.optionsMobile}> {isActive && (<RenderOptions />)}</div>                        
                         
 
-                        </div>
-                        <div className={Styles.containerDesktop}> {/* div desktop */}
-                           
-                            <RenderOptions />
-                        
+                        <div className={Styles.containerDesktop}> {/* div desktop */}                           
+                            <RenderOptions />                        
                         </div>
                     </ul>
                 </div>

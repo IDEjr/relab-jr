@@ -1,4 +1,4 @@
-.button {
+.button, .active {
 
   display: flex;
   justify-content: center;
@@ -24,17 +24,14 @@
 
 }
 
-.tituloMobile {
+.tituloMobile, .optionButton {
   font-style: bold;
-  width: 71%;
   color: #F2C12E;
   font-size: 5.4vw;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
-  padding-left: 20%;
- 
 }
 
 .lista {
@@ -42,39 +39,37 @@
   display: flex;
 }
 
-.containerMobile{
-  display: none;
-}
 
-.menuContainer {
+
+.menuContainer, .containerMobile {
   width: fit-content;
   height: fit-content;
   display: flex;
   border-radius: 15px;
-  background: rgba(0, 0, 0, 0.18);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   margin-bottom: 15vh;
+}
+
+.containerMobile{
+  display: none;
+  margin-bottom: 0;
+}
+.menuContainer{
+  background: rgba(0, 0, 0, 0.18);
+
 }
 .containerDesktop{
   display: flex; 
 }
 
-.optionsMobile{
-background-color: black;
 
-}
-.teste:focus-within{
-  border-radius: 10px;
+.active, .button:hover {
   background: #F2C12E;
   color: black;
+  cursor: pointer;
+  border-radius: 10px;
 }
 
-  .button:hover {
-  border-radius: 10px;
-  background: #F2C12E;
-  color: black;
-  cursor: pointer
-}
 
 
 
@@ -83,17 +78,15 @@ background-color: black;
 
   .containerMobile {
     display: flex;
-    width: 80vw;
-    height: 10vh;
-    background-color: #262626;
-    border-radius: 15px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     align-items: center;
     position: relative;
-
-
+    margin-bottom: 0;
+    min-height: 10vh;
+    min-width: 80vw;
+    justify-content: space-between;
   }
-  .button{
+
+  .button, .active{
       border: none;
       width: 100%;
       text-align: center;
@@ -101,13 +94,17 @@ background-color: black;
       color: #F2C12E;
       font-size: 3.4vw;
       padding: 2vw;
-    
+  }
+
+  .active{
+    color: black;
+    background-color: #F2C12E;
   }
 
   .optionsMobile {
 
     position: relative;
-    background-color: #262626;
+    
     z-index: 1;
     width: fit-content;
     border-radius: 15px;
