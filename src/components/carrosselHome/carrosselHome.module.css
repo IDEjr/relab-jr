@@ -7,15 +7,15 @@
 
 
 section .swiperContainer{
-  width: 70%;
+  width: 80%;
 
   display: block;
 }
 
-.insideSwiper{
-    height: 60%;
-    width: 70%;
-    padding: 50px;
+.swiperIndi{
+    height: 100%;
+    width: 90%;
+  
 }
 .margin{
     height: 50px;
@@ -34,4 +34,17 @@ section .swiperContainer{
   
     width: 100%;
     display: block;
+}
+
+
+
+@media only screen  and (min-width: 1281px)   {
+
+    .swiperIndi{
+        padding: 50px;
+      
+    }
+  
+
+
 }
