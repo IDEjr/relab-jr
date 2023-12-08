@@ -75,7 +75,9 @@ export default function MenuBlog(...posts) {
                         </div>
                     </ul>
                 </div>
+                <div className={Styles.gridPosts}>
                 <GridPosts {...filteredPosts} />
+                </div>
             </div>
         </>
     )
