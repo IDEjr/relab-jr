@@ -65,9 +65,9 @@ export default function Posts({ content, nav, foo }) {
       <div className={styles['bottom-part']}>
         <div className={styles['text-and-rest']}>
           <div className={styles['text-formater']}>
-            <text className={styles['post-text']}>
+            <ReactMarkdown className={styles['markdown']}>
               {content.conteudo}
-            </text>
+            </ReactMarkdown>
           </div>
           <div className={styles['author']}>
             <div className={styles['author-and-pencil']}>
