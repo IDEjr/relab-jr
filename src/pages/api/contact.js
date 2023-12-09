@@ -4,7 +4,6 @@ const handler = async (req, res) => {
 
     if (req.method === "POST"){
         const data = JSON.parse(req.body);
-        console.log(data.nome);
         if (!data.nome || !data.email || !data.numero || !data.assunto){
              return res.status(400).json({ message: 'Bosta'})
         }
@@ -14,7 +13,7 @@ const handler = async (req, res) => {
                 ...mailOptions,
                 subject: data.assunto,
                 text: "TESTE, TESTE, TESTE",
-                html: `<p>Nome:${data.nome}</p>
+                html: `<p>Nome: ${data.nome}</p>
                        <p>Número: ${data.numero}</p>
                        <p>E-mail: ${data.email}
                        <p>_____________________________________________________________________________</p>

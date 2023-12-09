@@ -58,6 +58,7 @@
 }
 
 .descriptionContainer{
+    color: white;
     text-align: justify;
     /* position: absolute; */
     width: 100%;
