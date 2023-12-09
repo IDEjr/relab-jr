@@ -20,6 +20,7 @@ const handleMove = () => {
 
 
 
+
 export default function Posts({ content, nav, foo }) {
   const router = useRouter();
   const { postId } = router.query
@@ -30,6 +31,12 @@ export default function Posts({ content, nav, foo }) {
     instagram : nav.instagram,
     email : nav.email
   };
+
+    // formata data
+    var dataForm;
+    dataForm = content.data.substring(8, 10) + '/' + content.data.substring(5, 7) + '/' + content.data.substring(0, 4);
+  
+  
 
   return (
     <div className={styles['container']}>
@@ -56,7 +63,7 @@ export default function Posts({ content, nav, foo }) {
             </text>
           </div>
           <text className={styles['details']}>
-            {content.autor}<span/>{content.data}
+            {content.autor}<span/>{dataForm}
           </text>
         </div>
       </div>
