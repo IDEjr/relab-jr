@@ -12,8 +12,6 @@ import Footer from '../../components/footer'
 import React from 'react'
 
 
-
-
 const handleMove = () => {
   window.scrollTo({ top: 0, behavior: "smooth" }); // here it goes
 };

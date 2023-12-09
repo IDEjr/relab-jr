@@ -10,70 +10,9 @@
     "imagensCarrossel": [
       "/uploads/52439304239_c93c0802c7_o.png",
       "/uploads/index.png",
-      "/uploads/imagemmembros.png"
+      "/uploads/imagemmembros.png",
+      "/uploads/whatsapp_image_2022-12-11_at_19.18.43_1_.jpeg"
     ]
-  },
-  "membros": {
-    "nome": "Billy",
-    "posicao": "Presidência",
-    "linkedin": "https://www.linkedin.com/in/williamhgates/",
-    "imagem": "/uploads/bill_gates_2018.jpg"
-  },
-  "painelMembros": {
-    "membros": [
-      {
-        "membro": {
-          "posicao": "Presidência",
-          "nome": "Billy",
-          "imagem": "/uploads/bill_gates_2018.jpg",
-          "linkedin": "https://www.linkedin.com/in/williamhgates"
-        }
-      },
-      {
-        "membro": {
-          "posicao": "Presidência",
-          "nome": "bruno",
-          "imagem": "/uploads/idelogo-300x176.png",
-          "linkedin": "https://www.linkedin.com/company/empresa-j%C3%BAnior-ide/mycompany/"
-        }
-      },
-      {
-        "membro": {
-          "posicao": "Projetos",
-          "nome": "Luca Pasquetti Comelli Fritscher",
-          "imagem": "/uploads/eu_camisa_floral_laranja.jpg",
-          "linkedin": "https://br.linkedin.com/in/luca-pasquetti-comelli-fritscher"
-        }
-      },
-      {
-        "membro": {
-          "posicao": "Administrativo Financeiro",
-          "nome": "Warren Buffet da favelinha",
-          "imagem": "/uploads/warren_buffett_at_the_2015_selectusa_investment_summit_cropped_.jpg",
-          "linkedin": "https://www.linkedin.com/showcase/warren-edward-buffett"
-        }
-      },
-      {
-        "membro": {
-          "posicao": "Projetos",
-          "nome": "Maqui Zucken Bergue",
-          "linkedin": "https://www.linkedin.com/in/arthur-ferreira-ely-3a54761b9",
-          "imagem": "/uploads/mark_zuckerberg_f8_2019_keynote_32830578717_cropped_.jpg"
-        }
-      },
-      {
-        "membro": {
-          "posicao": [
-            "Trainee"
-          ],
-          "nome": "Mario Bombado",
-          "imagem": "/uploads/download.jpeg",
-          "linkedin": "https://www.linkedin.com/in/williamhgates"
-        }
-      }
-    ],
-    "titulo": "CONHEÇA NOSSOS MEMBROS",
-    "logo": "/uploads/bandeira-amarela-removebg-preview.png"
   },
   "valores": {
     "texto1": "Na Relab Jr., a disciplina é a base do nosso sucesso, garantindo qualidade e consistência.",
@@ -86,12 +25,8 @@
     "titulo3": "Lealdade",
     "titulo4": "Trabalho"
   },
-  "formularioQuemSomos": {
-    "titulo": "SE TORNE UM RELABER ENTRE EM CONTATO!",
-    "logo": "/uploads/iconelampada-removebg-preview.png",
-    "celular": "555199998888",
-    "email": "adm.relab@gmail.com",
-    "endereco1": "Av. Dr. Nilo Peçanha, 1600, Boa Vista - Porto Alegre/RS",
-    "endereco2": "Av. Unisinos, 950 - Cristo Rei, São Leopoldo, RS"
+  "painelMembros": {
+    "titulo": "CONHEÇA NOSSOS MEMBROS",
+    "logo": "/uploads/bandeira-amarela-removebg-preview.png"
   }
 }

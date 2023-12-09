@@ -2,8 +2,8 @@ import styles from './servicesHome.module.css'
 import React from 'react'
 
 import Image from 'next/image'
-import backFrame from '../../../public/uploads/image/servicosHome/yellowFrame.png'
-import bigBackFrame from '../../../public/uploads/image/servicosHome/bigYellowFrame.png'
+
+import yellowArrow from '../../../public/uploads/image/servicosHome/yellowArrow.png'
 
 
 function eachService(frame) { 
@@ -14,27 +14,26 @@ function eachService(frame) {
             </h3>
             <div className={styles['frames']}>
                 <div className={styles['overlayGrid']}>
+
+                
                     <Image
+                        src={yellowArrow}
+                        className={styles['arrow']}
+                        width={2000}
+                        height={2000}
+                        quality={100}
+                        />
+                        <Image
                         src={frame.imagem}
                         className={styles['insideImg']}
-                        width={1000}
-                        height={1000}
+                        width={2000}
+                        height={2000}
                         quality={100}
-                        
-                    />
-                    <Image
-                        src={backFrame}
-                        className={styles['backFrameImg']}
-                        quality={100}
-                        
-                    />
-                    <Image
-                        src={bigBackFrame}
-                        className={styles['bigBackFrameImg']}
-                        quality={100}
-                    />
-
-
+                        />
+                
+                    
+                    
+                  
                     
                     
                 </div>

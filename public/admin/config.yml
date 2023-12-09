@@ -48,6 +48,7 @@ collections:
               - {label: "Imagem", name: "imagem", widget: "image"}
               - {label: "Título", name: "titulo", widget: "string"}
               - {label: "Texto", name: "texto", widget: "markdown", pattern: ['^.{1,450}$', "Máximo 450 carateres."]}
+              - {label: "Texto Botão", name: "textoBotao", widget: "string"}
 
 
           - label: "Imagem Com Botão Membros"
@@ -57,12 +58,14 @@ collections:
               - {label: "Imagem", name: "imagem", widget: "image"}
               - {label: "Título", name: "titulo", widget: "string"}
               - {label: "Texto", name: "texto", widget: "markdown", pattern: ['^.{1,450}$', "Máximo 450 carateres."]}
+              - {label: "Texto Botão", name: "textoBotao", widget: "string"}
 
 
           - label: "Nossos Serviços"
             name: "servicosHome"
             widget: "object"
             fields:
+              - {label: "Título Serviços", name: "tituloServicos", widget: "string", pattern: ['^.{1,20}$', "Máximo 20 carateres."]}
               - {label: "Serviço 1", name: "servico1", widget: "string", pattern: ['^.{1,35}$', "Máximo 35 carateres."]}
               - {label: "Imagem 1", name: "imagem1", widget: "image"}
               - {label: "Serviço 2", name: "servico2", widget: "string", pattern: ['^.{1,35}$', "Máximo 35 carateres."]}
@@ -81,6 +84,7 @@ collections:
             name: "CarrosselHome"
             widget: "object"
             fields:
+              - {label: "Título Carrossel", name: "tituloCarrossel", widget: "string", pattern: ['^.{1,20}$', "Máximo 20 carateres."]}
               - label: "Posts Carrossel"
                 name: "postsCarrossel"
                 widget: "list"
@@ -144,18 +148,6 @@ collections:
               - {label: "Título", name: "titulo", widget: "string"}
 
 
-          - label: "Formulário Quem Somos"
-            name: "formularioQuemSomos"
-            widget: "object"
-            fields:
-              - {label: "Logo", name: "logo", widget: "image"}
-              - {label: "Título", name: "titulo", widget: "string"}
-              - {label: "Celular", name: "celular", widget: "string"}
-              - {label: "Email", name: "email", widget: "string"}
-              - {label: "Endereço 1", name: "endereco1", widget: "string"}
-              - {label: "Endereço 1", name: "endereco2", widget: "string"}
-
-
 
       - label: "Página Serviços"
         name: "servicos"
@@ -179,6 +171,7 @@ collections:
             name: "servicos"
             widget: "object"
             fields:
+              - {label: "Título Serviços", name: "tituloServicos", widget: "string", pattern: ['^.{1,20}$', "Máximo 20 carateres."]}
               - {label: "Serviço 1", name: "servico1", widget: "string"}
               - {label: "Texto 1", name: "texto1", widget: "markdown", pattern: ['^.{1,550}$', "Máximo 550 carateres."]}
               - {label: "Imagem 1", name: "imagem1", widget: "image"}
@@ -197,18 +190,6 @@ collections:
               - {label: "Serviço 6", name: "servico6", widget: "string"}
               - {label: "Texto 6", name: "texto6", widget: "markdown", pattern: ['^.{1,550}$', "Máximo 550 carateres."]}
               - {label: "Imagem 6", name: "imagem6", widget: "image"}
-
-
-          - label: "Formulário Serviços"
-            name: "formularioServicos"
-            widget: "object"
-            fields:
-              - {label: "Logo", name: "logo", widget: "image"}
-              - {label: "Título", name: "titulo", widget: "string"}
-              - {label: "Celular", name: "celular", widget: "string"}
-              - {label: "Email", name: "email", widget: "string"}
-              - {label: "Endereço 1", name: "endereco1", widget: "string"}
-              - {label: "Endereço 1", name: "endereco2", widget: "string"}
 
 
 
@@ -315,7 +296,6 @@ collections:
           - {label: "Email", name: "email", widget: "string"}
           - {label: "Instagram", name: "instagram", widget: "string"}
           - {label: "Copyright", name: "copy", widget: "string"}
-          - {label: "Direitos", name: "direitos", widget: "string"}
           - {label: "Watermark1", name: "watermark1", widget: "image"}
           - {label: "Link1", name: "link1", widget: "string"}
           - {label: "Watermark2", name: "watermark2", widget: "image"}
@@ -339,3 +319,10 @@ collections:
           - {label: "Email Destino", name: "emailDestino", widget: "string"}
           - {label: "Email Origem", name: "emailOrigem", widget: "string"}
           - {label: "Senha Google", name: "senha", widget: "string"}
+          - {label: "Logo Formulários", name: "logo", widget: "image"}
+          - {label: "Título Membros", name: "tituloMembros", widget: "string"}
+          - {label: "Título Servicos", name: "tituloServicos", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Celular", name: "celular", widget: "string"}
+          - {label: "Endereço 1", name: "endereco1", widget: "string"}
+          - {label: "Endereço 2", name: "endereco2", widget: "string"}
