@@ -5,18 +5,29 @@
     height: 300px;
     /*background-color: #262626;*/
     flex-direction: column;
-    background-image:linear-gradient(transparent,#262626),url("../../../public/uploads/image/footer/backgroundLogos.png");
+    justify-content: space-between;
     gap:1vh;
+}
+
+.bg-img-handle {
+    background-image:linear-gradient(#262626,transparent),url("../../../public/uploads/image/footer/backgroundLogos.png");
+    
+    height: 255px;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
 }
 
 
 .topPart {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items:flex-start;
-    height: 80%;
+    height: 40%;
     align-items: center;
     gap:10vw;
+    z-index: 1;
+    
 }
 
 
@@ -25,7 +36,7 @@
     width: 150px;
     background-color: transparent;
     height: 150px;
-
+    padding-left: 5vw;
 
     border: none;
     cursor:pointer;
@@ -37,7 +48,7 @@
 .contactSocials {
     display:flex;
     flex-direction: column;
-    padding-right: 15vw;
+    padding-right: 5vw;
     gap: 1vh;
     align-items: center;
 }
@@ -96,10 +107,10 @@
 
 .bottom-part {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-direction: row;
     height: 20%;
-    padding-right: 8vw;
+    padding-right: 2vw;
     align-items: center;
 }
 
@@ -121,6 +132,7 @@
     align-self: flex-start;
     gap:2vw;
     padding-left: 2vw;
+    align-items: center;
 }
 
 
@@ -143,13 +155,13 @@
         font-size:larger;
     }
     .relabIcon {
-        width: 12vw;
+        width: 17vw;
         height: 12vh;
         display: flex;
         padding: 0;
     }
     .logoImg {
-        width: 12vw;
+        width: 17vw;
         height: 12vh;
     }
     .insideImg {
@@ -158,6 +170,8 @@
     }
     .contactSocials {
         padding: 0;
+        width: 25vw;
+        
     }
     .bottom-part {
         display:flex;
@@ -178,35 +192,22 @@
     }
 }
 
-@media (max-width: 650px) {
-    .relabIcon {
-        width: 120px;
-        height: 120px;
-    }
-    .logoImg {
-        width: 120px;
-        height: 120px;
-    }
-}
 
-@media (max-width: 650px) {
-    .contactText {
-        font-size: small;
-    }
-    .insideImg {
-        width: 25px;
-        height: 25px;
-    }
-    .watermarkImg {
-        width: 50px;
-    }
-}
+
 
 @media (max-width: 650px) {
     .watermarkImg {
-        width: 50px;
+        width: 70px;
         height: 30px;
     }
+    .membership-icons {
+        width: 100%;
+    }
+
+    .unisinos-icon {
+        width: 100px;
+    }
+    
     .footerText {
         font-size: 3vw;
     }
@@ -217,13 +218,37 @@
         padding-top: 1vh;
     }
 
-    .insideImg {
-        width: 35px;
-        height: 35px;
+    .relabIcon {
+        width: 120px;
+        height: 120px;
+    }
+    .logoImg {
+        width: 120px;
+        height: 120px;
+    }
+    .contactSocials {
+        width: 40vw;
+        padding-right: 0;
+    }
+    .contactText {
+        display: flex;
+        width: 60vw;
+        justify-content: center;
+        padding-left: 2vw;
+        font-size: small;
+    }
+    .social-icons {
+        width: 20vw;
+        justify-content: center;
+        gap:+5vw;
+        
     }
 
-    .social-icons {
-        gap:+5vw;
+  
+    .insideImg {
+        width: 25px;
+        height: 25px;
     }
+    
 
 }
