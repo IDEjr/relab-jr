@@ -37,7 +37,7 @@ export default function navbar({logo,linkedin, instagram, email }) {
                               styles.navRelabBtn
                             )
                           } ref={logoRef}>
-                            <Link href="/">
+                            <Link href="/" className={styles.droplogo}>
                                 <Image
                                     src={logo}
                                     width={95}
