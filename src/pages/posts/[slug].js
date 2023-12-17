@@ -12,11 +12,10 @@ import Footer from '../../components/footer'
 import React from 'react'
 
 
-
-
 const handleMove = () => {
   window.scrollTo({ top: 0, behavior: "smooth" }); // here it goes
 };
+
 
 
 
@@ -31,6 +30,12 @@ export default function Posts({ content, nav, foo }) {
     email : nav.email
   };
 
+    // formata data
+    var dataForm;
+    dataForm = content.data.substring(8, 10) + '/' + content.data.substring(5, 7) + '/' + content.data.substring(0, 4);
+  
+  
+
   return (
     <div className={styles['container']}>
       <React.Fragment>
@@ -41,11 +46,12 @@ export default function Posts({ content, nav, foo }) {
             src={content.imagemCapa}
             fill={true}
             className={styles['top-img']}
+            style={{objectFit: 'cover', background: 'black', opacity:0.3}}
         />
         <div className={styles['content-block']}>
           <div className={styles['title-and-rest']}>
             <text className={styles['categorie']}>
-              {content.selecao}
+              {content.genero}
             </text>
             <h1 className={styles['title']}>
               {content.titulo}
@@ -55,7 +61,7 @@ export default function Posts({ content, nav, foo }) {
             </text>
           </div>
           <text className={styles['details']}>
-            {content.autor}<span/>{content.data}
+            {content.autor}<span/>{dataForm}
           </text>
         </div>
       </div>
@@ -64,9 +70,9 @@ export default function Posts({ content, nav, foo }) {
       <div className={styles['bottom-part']}>
         <div className={styles['text-and-rest']}>
           <div className={styles['text-formater']}>
-            <text className={styles['post-text']}>
+            <ReactMarkdown className={styles['markdown']}>
               {content.conteudo}
-            </text>
+            </ReactMarkdown>
           </div>
           <div className={styles['author']}>
             <div className={styles['author-and-pencil']}>
