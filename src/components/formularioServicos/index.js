@@ -23,7 +23,7 @@ export default function formularioServicos(formularios) {
     return(
         <div className={styles.mainContainer}>
             <h2 className={styles.title}>
-                ENTRE EM CONTATO
+                {formularios.tituloServicos}
             </h2>
             <div className={styles.formIconsContainer}>
                 <div className={styles.formContainer}>
