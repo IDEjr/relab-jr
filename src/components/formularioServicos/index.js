@@ -1,11 +1,14 @@
 import { useForm } from "react-hook-form";
 import { isEmail } from "validator";
-import styles from "./formulario.module.css"
+import styles from "./formularioServicos.module.css"
 import { sendContactForm } from "./../../lib/api";
 import { FaRegComment, FaRegEnvelope, FaHome } from "react-icons/fa";
 import { useMediaQuery } from 'react-responsive';
 
-const Formulario = () => {
+
+export default function formularioServicos(formularios) {
+
+    console.log(formularios)
 
     const isDesktop = useMediaQuery({ minWidth: 768 });
 
@@ -13,7 +16,7 @@ const Formulario = () => {
         register,
         handleSubmit,
         formState: { errors },
-      } = useForm();
+    } = useForm();
 
     const onSubmit = async (data) => {
         console.log(data);
@@ -202,5 +205,3 @@ const Formulario = () => {
         );
     }
 };
-
-export default Formulario

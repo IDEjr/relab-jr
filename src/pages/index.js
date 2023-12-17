@@ -15,7 +15,7 @@ export default function Home({home, posts, nav, foo}) {
 
   // pega imagem da home do netlify
   const path = home.inicioHome.imagem;
- 
+
   // pega dados dos botões do netlify
 
   const resultados = {

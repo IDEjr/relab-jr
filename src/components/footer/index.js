@@ -12,13 +12,11 @@ import UnisinosIcon from "../../../public/uploads/image/footer/unisinosIcon.png"
 
 const handleMove = () => {
     window.scrollTo({ top: 0, behavior: "smooth" }); // here it goes
-  };
-
+};
 
 
 
 export default function Footer(footerData) {
-    console.log(footerData);
     return (
             <div className={styles.footer}>
                 <div className={styles['bg-img-handle']}/>
@@ -104,8 +102,8 @@ export default function Footer(footerData) {
                                 quality={100}
                                 />
                         </a>
-   
-                     
+
+
                         <a className={styles['unisinos-icon']} href='https://www.unisinos.br/' target='_blank'>
                             <Image
                                 src={footerData.watermark3}
