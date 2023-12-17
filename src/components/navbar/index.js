@@ -5,7 +5,7 @@ import { FaBars, FaTimes, FaInstagram, FaLinkedin,FaEnvelope} from "react-icons/
 import classnames from 'classnames';
 import Link from 'next/link'
 
-export default function navbar({logo,linkedin, instagram, email }) {
+export default function navbar({logo, linkedin, instagram, email }) {
     const navRef = useRef();
     const logoRef = useRef();
 	const showNavbar = () => {

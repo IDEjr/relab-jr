@@ -4,8 +4,6 @@ import CardPosts from '../cardPosts'
 import GridPosts from '../gridPosts'
 
 
-
-
 export default function MenuBlog(...posts) {
     const [isActive, setIsactive] = useState(false)
     const [titulo, setTitulo] = useState("TODOS")
@@ -29,7 +27,7 @@ export default function MenuBlog(...posts) {
         let aux = arrPosts;
         (select == "TODOS") ? aux = arrPosts :
             aux = arrPosts.filter((obj) => obj.genero == select)
-           
+
         setFilteredPosts(aux)
         setTitulo(select)
         setIsactive(false)
