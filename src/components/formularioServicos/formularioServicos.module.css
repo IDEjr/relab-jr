@@ -115,4 +115,8 @@
     .fullContainer textarea{
         height: 100px
     }
+
+    .iconsContainer{
+        display: none
+    }
 }
