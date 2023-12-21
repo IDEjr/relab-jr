@@ -2,8 +2,6 @@
     font-size: large;
     display: flex;
     align-items: center;
-    padding: 5vh 1vw;
-    padding-left: 3vw;
     flex-direction:column;
     width: 100%;
 
@@ -80,6 +78,8 @@
     font-size: 40px;
     font-style: normal;
     font-weight: 400;
+    padding-top: 50px;
+    padding-bottom: 80px;
 }
 
 
@@ -99,8 +99,8 @@ each service
 
 .frames {
     display: flex;
-    width: 100%;
-    height: 500px;
+    width: 70%;
+    height: 600px;
     align-items: flex-end;
     justify-content: center;
 }
@@ -110,140 +110,163 @@ each service
     grid-template-areas: overlay;
     width: 100%;
     position: relative;
-    height: 500px;
+    height: 100%;
     align-content: center;
+    align-items: end;
+    align-content: space-between;
 }
 
-.frameImg {
-    position: absolute;
-    padding-left: 5vw;
-    
+
+
+.arrow {
+    justify-self: flex-start;
+    z-index: 1;
+    height: 100%;
+    width: 115%;
 }
+
+
 .insideImg {
-    width: 80.5%;
-    height: 530px;
-    padding-left: 1.2vw;
-    padding-top: 7.5vh;
-    object-fit: cover;
-}
-.backFrameImg {
-    position: absolute;
     width: 100%;
-    height: 600px;
+    height: 530px;
+    position:absolute;
+    object-fit: cover;
+    border:14px solid #f2c12e99;
+    z-index: 0;
+
 }
+
+
+
+
+
+
+
 
 
 .top-text {
     color: #fff;
-    width: 18vw;
+    width: 20vw;
     height: 10vh;
     display: flex;
     text-align: center;
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
+    padding-right: 3vw;
 
     line-height: 45px; /* 150% */
 }
 
-@media (max-width: 1450px) {
+@media (max-width: 1520px) {
     .container {
         display: flex;
-        padding: 0;
     }
+
+    .title-text {
+        width: 100%;
+    }
+
     .blocks-handler {
         display: flex;
         flex-direction: column;
-        padding-right: 3vw;
         align-items: center;
+        padding-left: 5vw;
 
     }
     .insideImg {
-        padding-left: 1.1vw;
+        width: 80%;
+        border:18px solid #f2c12e99;
+    }
+
+    .individual-block {
+        width: 100%;
+    }
+    .overlayGrid {
+        width: 100%;
+    }
+
+    .frames {
+        width: 100%;
+        height: 630px;
+    }
+    .arrow {
+        width: 80%;
+        height: 550px;
     }
     .overlayGrid {
         height: 500;
     }
     .first-two {
         flex-direction: row;
-        width: 70vw;
+        width: 90vw;
         gap:18vw;
     }
     .second-two {
         flex-direction: row;
-        width: 70vw;
+        width: 90vw;
         gap:18vw;
     }
     .third-two {
         flex-direction: row;
-        width: 70vw;
+        width: 90vw;
         gap:18vw;
     }
 
 }
-@media (max-width: 1050px) {
+@media (max-width: 1000px) {
+
+
+
     .blocks-handler {
         align-items: center;
-        padding-left: 9vw;
+        gap : 15vh;
+        padding-left: 13vw;
     }
     .first-two {
         width: 80vw;
-        height: 1600px;
+
         flex-direction: column;
-        gap: 5;
+        gap: 15vh;
     }
     .second-two {
         width: 80vw;
-        height: 1600px;
+
         flex-direction: column;
-        gap: 5;
+        gap: 15vh;
     }
     .third-two {
         width: 80vw;
-        height: 1600px;
+
         flex-direction: column;
-        gap: 5;
+        gap: 15vh;
     }
 
-    .individual-block {
-        height:700px;
-    }
+
     .frames {
-        height: 800px;
-        
+        width: 100%;
+        height: 650px;
     }
 
     .title-text {
-        padding-top: 5vh;
-        padding-bottom: 5vh;
+        padding-top: 7vh;
+        padding-bottom: 7vh;
     }
     .top-text {
         display: flex;
-        width: 70vw;
+        width: 80vw;
         justify-content: center;
-        padding-top: 12vh;
-    }
-
-    .insideImg {
-        padding-left: 3.4vw;
-    }
-}
-@media(max-width: 500px) {
-
-    .blocks-handler{
-        padding-left: 20vw;
-    }
-}
-@media(max-width: 700px) {
-    .insideImg {
-        padding-top: 10vh;
-    }
-}
+        padding-right: 13vw;
+        align-items: center;
 
 
-@media(max-width: 500px) {
-    .insideImg {
-        padding-top: 10vh;
+        
     }
 
+
+
+    .arrow {
+        width: 70%;
+        height: 590px;
+    }
 }

@@ -12,16 +12,16 @@ import UnisinosIcon from "../../../public/uploads/image/footer/unisinosIcon.png"
 
 const handleMove = () => {
     window.scrollTo({ top: 0, behavior: "smooth" }); // here it goes
-  };
-
+};
 
 
 
 export default function Footer(footerData) {
-    console.log(footerData);
     return (
             <div className={styles.footer}>
+                <div className={styles['bg-img-handle']}/>
                 <div className={styles.topPart}>
+                    
                     <button onClick={handleMove} className={styles.relabIcon}>
                         <Image
                             
@@ -51,7 +51,7 @@ export default function Footer(footerData) {
                             </a>
                         
                         
-                            <a className={styles.twitterIcon} href='https://www.youtube.com/watch?v=z7rxl5KsPjs' target="_blank">
+                            <a className={styles.twitterIcon} href='/' target="_blank">
                                 <Image
                                     src={TwitterIcon}
                                     width={50}
@@ -85,8 +85,8 @@ export default function Footer(footerData) {
                         <a className={styles['lab-icon']} href='https://unisinos.br/lab/programas/relab' target='_blank'>
                             <Image
                                 src={footerData.watermark1}
-                                width={165}
-                                height={50}
+                                width={90}
+                                height={35}
                                 className={styles['watermarkImg']}
                                 quality={100}
                                 />
@@ -102,13 +102,13 @@ export default function Footer(footerData) {
                                 quality={100}
                                 />
                         </a>
-   
-                     
+
+
                         <a className={styles['unisinos-icon']} href='https://www.unisinos.br/' target='_blank'>
                             <Image
                                 src={footerData.watermark3}
-                                width={165}
-                                height={50}
+                                width={150}
+                                height={40}
                                 className={styles['watermarkImg']}
                                 quality={100}
                                 />

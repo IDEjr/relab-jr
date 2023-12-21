@@ -103,3 +103,20 @@
     margin-top: 2rem;
     text-align: left;
 }
+
+@media only screen and (max-width: 768px) and (orientation: portrait){
+
+    .formIconsContainer{
+        width: 95%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+
+    .fullContainer textarea{
+        height: 100px
+    }
+
+    .iconsContainer{
+        display: none
+    }
+}
