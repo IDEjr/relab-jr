@@ -33,7 +33,7 @@
   align-items: center;
   justify-content: start;
   width: 100%;
-  height: 4vh;
+  height: 100%;
   padding: 10px;
   white-space: nowrap;
   border-bottom-left-radius: 20px;
@@ -119,20 +119,21 @@
     position: relative;
     margin-bottom: 0;
     justify-content: space-between;
-  
-    
+    min-width: 70vw;
+    min-height: 6vh;
   }
 
   .button, .active{
       border: none;
+     
       width: 100%;
       justify-content: start;
       align-items: center;
       text-align: start;
       background: none;
       color: #F2C12E;
-      font-size: 2.4vw;
-      height: 3vh;
+      font-size: 3vw;
+      height: 6vh;
   }
 
   .active{
@@ -145,7 +146,6 @@
   } */
 
   .optionsMobile {
-    
     width: 100%;
     position: relative;
     align-self: flex-end;

@@ -71,13 +71,12 @@ export default function CarrosselBlog(...posts) {
             slidesPerView={1}
             effect={'swipe'}
             pagination={{ clickable: next }} //permite a troca de páginas pelo pagination
-            navigation={{  enabled: false  }}
+            navigation={{  enabled: false,   }}
             slidesPerGroup={1}
             autoplay={{  delay: 5000, disableOnInteraction: false  }}
             className={styles.swiperContainer}
             breakpoints={{ 800: {  navigation: { enabled: true }  }}}  //se a tela for maior que 800 pixels, ativa o navigation(as setinhas)
           > 
-          {(console.log(recents))}
             {recents.map((item) =>  ( //renderiza um slide para cada item no array de recents
               
               <SwiperSlide key={item.titulo} className={styles.swiperInd}>
