@@ -43,6 +43,7 @@
     width: 100%;
     gap: 5vw;
     padding-bottom: 10vh;
+    padding-left: 5%;
 }
 
 
@@ -99,7 +100,7 @@ each service
 
 .frames {
     display: flex;
-    width: 70%;
+    width: 85%;
     height: 600px;
     align-items: flex-end;
     justify-content: center;
@@ -121,13 +122,26 @@ each service
 .arrow {
     justify-self: flex-start;
     z-index: 1;
-    height: 100%;
-    width: 115%;
+    /*height: 100%;
+    width: 115%;*/
+    width: 0;
+    height: 0;
 }
 
 
+.arrow-shape {
+    background-color: #a3852b;
+    clip-path: polygon(0px 450px, 93.49% 14px, 88.71% 14px, 98.99% 0px, 96.16% 40px, 95.91% 22px, 0px 480px);
+    z-index: 3;
+    height: 550px;
+    width: 85%;
+    position:relative;
+}
+
+
+
 .insideImg {
-    width: 100%;
+    width: 75%;
     height: 530px;
     position:absolute;
     object-fit: cover;
@@ -146,14 +160,15 @@ each service
 
 .top-text {
     color: #fff;
-    width: 20vw;
+    width: 90%;
     height: 10vh;
     display: flex;
+    justify-content: center;
     text-align: center;
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
-    padding-right: 3vw;
+    padding-right: 20%;
 
     line-height: 45px; /* 150% */
 }
@@ -191,8 +206,12 @@ each service
         height: 630px;
     }
     .arrow {
-        width: 80%;
-        height: 550px;
+        /*width: 80%;
+        height: 550px;*/
+    }
+
+    .arrow-shape {
+        clip-path: polygon(0px 450px, 93.49% 14px, 88.71% 14px, 98.74% 0px, 96.41% 40px, 95.91% 22px, 0px 480px);
     }
     .overlayGrid {
         height: 500;
@@ -245,7 +264,7 @@ each service
 
     .frames {
         width: 100%;
-        height: 650px;
+        height: 500px;
     }
 
     .title-text {
@@ -262,11 +281,74 @@ each service
 
         
     }
+    .overlayGrid {
+        height: 600px;
+    }
+    .frames {
+        height: 600px;
+    }
+    .insideImg {
+        border: 10px solid #f2c12e99;
+        height: 500px;
+    }
+
+    .arrow-shape {
+        height: 550px;
+        clip-path: polygon(0% 400px, 50.27% 35px, 46.93% 34px, 54.12% 18px, 52.28% 65px, 51.82% 45px, 0% 425px);
+    }
+
+    
+}
+@media (max-width: 810px) {
+
+    .arrow-shape {
+        clip-path: polygon(0% 400px, 50.27% 35px, 46.93% 34px, 54.12% 18px, 53% 59px, 52.00% 42px, 0% 425px);
+  }
+    
+
+}
 
 
+@media (max-width: 690px) {
 
-    .arrow {
-        width: 70%;
-        height: 590px;
+    .arrow-shape {
+        clip-path: polygon(0% 400px, 50.27% 35px, 46.93% 34px, 54.12% 18px, 53.86% 53px, 52.27% 41px, 0% 425px);
+    }
+
+}
+
+@media (max-width: 580px) {
+
+    .arrow-shape {
+        clip-path: polygon(0% 400px, 50.27% 35px, 46.93% 34px, 54.12% 18px, 53.86% 53px, 52.27% 41px, 0% 425px);
+    }
+
+}
+
+@media (max-width: 420px) {
+    .insideImg {
+        width: 90%;
+        height: 400px;
+    }
+    .overlayGrid {
+        height: 490px;
+    }
+    .frames {
+        height: 490px;
+    }
+    .arrow-shape {
+        clip-path: polygon(0% 400px, 49.91% 37px, 46.22% 40px, 54.48% 19px, 54.22% 51px, 52.63% 41px, 0% 425px);
+    }
+
+}
+@media (max-width: 380px) {
+    .top-text {
+        height: 150px;
+    }
+    .overlayGrid {
+        height: 490px;
+    }
+    .frames {
+        height: 490px;
     }
 }
