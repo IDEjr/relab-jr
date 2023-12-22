@@ -1,16 +1,19 @@
 import { useForm } from "react-hook-form";
 import { isEmail } from "validator";
-import styles from "./formulario.module.css"
+import styles from "./formularioServicos.module.css"
 import { sendContactForm } from "./../../lib/api";
 import { FaRegComment, FaRegEnvelope, FaHome } from "react-icons/fa";
 
-const Formulario = () => {
+
+export default function formularioServicos(formularios) {
+
+    console.log(formularios)
 
     const {
         register,
         handleSubmit,
         formState: { errors },
-      } = useForm();
+    } = useForm();
 
     const onSubmit = async (data) => {
         console.log(data);
@@ -20,7 +23,7 @@ const Formulario = () => {
     return(
         <div className={styles.mainContainer}>
             <h2 className={styles.title}>
-                ENTRE EM CONTATO
+                {formularios.tituloServicos}
             </h2>
             <div className={styles.formIconsContainer}>
                 <div className={styles.formContainer}>
@@ -113,6 +116,5 @@ const Formulario = () => {
             </div>
         </div>
     );
-};
 
-export default Formulario
+};

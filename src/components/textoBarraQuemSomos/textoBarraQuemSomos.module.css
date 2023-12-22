@@ -1,6 +1,6 @@
 .toptext{
   display: flex;
-  width: 50%;
+  width: 40%;
   height: 20rem;
   justify-content: space-between;
   align-items: center;
@@ -8,7 +8,7 @@
   margin-left: 10rem;
   border-left: solid 1rem #F2C12E;
 padding-left: 4rem;  
-line-height: 50px;
+line-height: 3.5vh;
 
 }
 .container{

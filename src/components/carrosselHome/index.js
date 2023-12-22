@@ -1,5 +1,3 @@
-import Link from 'next/link'
-import Image from 'next/image'
 import styles from './carrosselHome.module.css'
 import CardPosts from '../cardPosts';
 import { register } from 'swiper/element/bundle'
@@ -13,7 +11,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 import {Swiper, SwiperSlide} from 'swiper/react'
-import { Autoplay, Navigation} from "swiper/modules";
+import { Autoplay} from "swiper/modules";
 
 
 /*Pegue os titulos que estão no json da home, e passar para aqui, e renderizar somente os posts que tem mesmo titulo dos 
@@ -22,7 +20,7 @@ export default function CarrosselHome(...posts) {
   console.log(posts);
   
   const data = [];
-  for (var i =0; i<4 ; i++){
+  for (var i =0; i<3 ; i++){
 
     data.push(posts[0][i]);
   }
@@ -47,8 +45,10 @@ export default function CarrosselHome(...posts) {
             "--swiper-pagination-bullet-border-radius": "0",
             "--swiper-pagination-bullet-width": "40px",
             "--swiper-pagination-bullet-height": "6px",
-            "--swiper-pagination-bullet-horizontal-gap" :" 15px"
-          }}  
+            "--swiper-pagination-bullet-horizontal-gap" :" 15px",
+            "--swiper-navigation-gap" : "100px"
+          }
+          }  
           autoplay ={{
             delay: 5000,
             disableOnInteraction: false,
@@ -58,6 +58,17 @@ export default function CarrosselHome(...posts) {
           pagination={{
             clickable:true
           }}
+
+          navigation={{  //configurações do navi
+            enabled: false
+          }}
+
+          breakpoints={{
+            1281: {  //acima de 800px, aumenta os slides por visualização para dois, e ativa o navigation (as setinhas)
+              
+              navigation: {
+                enabled: true  
+              }}}}
          
           
           
