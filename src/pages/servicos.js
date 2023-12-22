@@ -3,12 +3,13 @@ import Footer from '../components/footer'
 import Inicio from '../components/inicio'
 import TextoServicos from '../components/textoServicos'
 import EscoposServicos from '../components/escoposServicos'
-import Formulario from '../components/formularioServicos'
+import FormularioServicos from '../components/formularioServicos'
 import styles from '../styles/servicos.module.css'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
 
-export default function servicos({servicos, nav, foo}) {
+
+export default function servicos({servicos, nav, foo, formularios}) {
 
   const path = servicos.inicioServicos.imagem;
 
@@ -50,7 +51,7 @@ export default function servicos({servicos, nav, foo}) {
       <Inicio title = {"SERVIÇOS"} image= {path}/>
       <TextoServicos {...inicioServicos}/>
       <EscoposServicos {...blocosServicos}/>
-      <Formulario />
+      <FormularioServicos {...formularios}/>
       <Footer {...foo}/>
     </>
   );
@@ -62,6 +63,8 @@ export async function getStaticProps(){
   const caminho = "paginas";
   const pagina = "servicos";
   const caminho2 = "navFooter";
+  const caminho3 = "forms";
+  const pagina4 = "forms";
 
 
 
@@ -72,7 +75,9 @@ export async function getStaticProps(){
   const pagina2 = "navbar";
   const servicos = handleJSONfile(`./content/${caminho}/${pagina}.json`);
   const nav = handleJSONfile(`./content/${caminho2}/${pagina2}.json`);
+
+  const formularios = handleJSONfile(`./content/${caminho3}/${pagina4}.json`);
   return {
-    props: { servicos, nav, foo },
+    props: { servicos, nav, foo, formularios },
   };
 }
