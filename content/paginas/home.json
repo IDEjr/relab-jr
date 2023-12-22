@@ -2,12 +2,13 @@
   "inicioHome": {
     "imagem": "/uploads/imageminiciohome.jpg",
     "titulo": "GESTÃO É A NOSSA CAUSA",
-    "texto": "“lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget libero viverra velit pellentesque hendrerit. Donec interdum dolor nisl, at rhoncus dolor consectetur euismod. Aliquam scelerisque finibus egestas. Mauris augue purus, faucibus sit amet elit vitae, porta interdum nisl. Proin sed velit sed mauris finibus congue vitae non neque. Maecenas laoreet quam nibh, a bibendum magna suscipit non. Integer mi nisi, volutpat vel magna ac, accumsan interdum massa. Aliquam sed dolor a ligula malesuada fringilla. Ut suscipit dolor sit amet tellus auctor consequat. Maecenas eget elit neque.”"
+    "texto": "\"Bem-vindo à Relab Jr., a Empresa Júnior da Universidade do Vale do Rio dos Sinos (UNISINOS). Fundada com paixão em 2021 e federada em 2022, nossa missão é democratizar o acesso a serviços de consultoria empresarial para micro e pequenas empresas na região metropolitana de Porto Alegre. Ao mesmo tempo, oferecemos um ambiente de aprendizado prático para nossos talentosos alunos. Nossos valores, como disciplina, compromisso, lealdade e trabalho árduo, nos impulsionam a entregar soluções de negócios inovadoras. Estamos aqui para ajudar empresas a prosperar e fornecer oportunidades de desenvolvimento profissional para a próxima geração de líderes empresariais. Junte-se a nós nesta jornada de crescimento e sucesso.\""
   },
   "imgBotaoRes": {
     "imagem": "/uploads/imagemresultados.png",
     "titulo": "MELHORE SEUS RESULTADOS",
-    "texto": "Potencialize seu negócio com soluções inovadoras da Relab Jr. Consultoria. Desbloqueie oportunidades, supere desafios e alcance novos horizontes. Descubra nossos serviços e comece sua jornada para o sucesso agora!"
+    "texto": "Potencialize seu negócio com soluções inovadoras da Relab Jr. Consultoria. Desbloqueie oportunidades, supere desafios e alcance novos horizontes. Descubra nossos serviços e comece sua jornada para o sucesso agora!",
+    "textoBotao": "Entre em Contato"
   },
   "servicosHome": {
     "imagem2": "/uploads/images.jpeg",
@@ -15,18 +16,20 @@
     "imagem4": "/uploads/pexels-photo-1509428.jpeg",
     "imagem5": "/uploads/blog-aperto-de-mao-pnqr2oxv4y0cbmsd6r7ggbvlbabhr238ak13due564.png",
     "imagem6": "/uploads/gestao-pessoas-scaled.jpg",
+    "tituloServicos": "NOSSOS SERVIÇOS",
     "servico1": "Modelagem de Negócios",
     "servico2": "Viabilidade Econômica",
     "servico3": "Análise da Saúde Financeira",
-    "servico4": "Planejamento estratégico",
-    "servico5": "Captação de clientes",
-    "servico6": "Gestão de pessoas",
+    "servico4": "Planejamento Estratégico",
+    "servico5": "Captação de Clientes",
+    "servico6": "Gestão de Pessoas",
     "imagem1": "/uploads/adobestock_349728647-1024x684.jpg"
   },
   "imgBotaoMem": {
     "imagem": "/uploads/imagemmembros.png",
     "texto": "Faça parte da nossa equipe e amplie seu conhecimento em consultoria empresarial. Na Relab Jr., você se prepara para um futuro de excelência profissional. Junte-se a nós e trilhe um caminho de aprendizado e realizações.",
-    "titulo": "MEMBROS"
+    "titulo": "MEMBROS",
+    "textoBotao": "Seja Membro"
   },
   "footer": {
     "linkedin": "https://www.linkedin.com/company/relabjr/",
@@ -41,6 +44,7 @@
       "Roteiro para o Planejamento Estratégico",
       "Gestão de Pessoas de Alto Impacto",
       "Viabilidade econômica para o sucesso"
-    ]
+    ],
+    "tituloCarrossel": "NOVIDADES"
   }
 }

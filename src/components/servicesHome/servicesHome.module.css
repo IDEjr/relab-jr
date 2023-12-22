@@ -2,11 +2,9 @@
     font-size: large;
     display: flex;
     align-items: center;
-    padding-left: 1vw;
     flex-direction:column;
-    gap:15vh;
-    padding:15vw;
-    max-width: 100%;
+    width: 100%;
+
 }
 
 
@@ -43,6 +41,8 @@
     align-items: flex-end;
     justify-content: space-between;
     width: 100%;
+    gap: 5vw;
+    padding-bottom: 10vh;
 }
 
 
@@ -50,18 +50,22 @@
     display: flex;
     flex-direction: column;
     gap:5vh;
+    width: 100%;
+    
     
 }
 .second-two {
     display: flex;
     flex-direction: column;
     gap:5vh;
+    width: 100%;
     
 }
 .third-two {
     display: flex;
     flex-direction: column;
     gap:5vh;
+    width: 100%;
     
 }
 
@@ -74,6 +78,8 @@
     font-size: 40px;
     font-style: normal;
     font-weight: 400;
+    padding-top: 50px;
+    padding-bottom: 80px;
 }
 
 
@@ -86,12 +92,14 @@ each service
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    width: 100%;
+    align-items: center;
 }
 
 
 .frames {
     display: flex;
-    width: 20vw;
+    width: 70%;
     height: 600px;
     align-items: flex-end;
     justify-content: center;
@@ -100,17 +108,40 @@ each service
 .overlayGrid {
     display: grid;
     grid-template-areas: overlay;
+    width: 100%;
+    position: relative;
+    height: 100%;
+    align-content: center;
+    align-items: end;
+    align-content: space-between;
 }
 
-.frameImg {
-    position: absolute;
-    
+
+
+.arrow {
+    justify-self: flex-start;
+    z-index: 1;
+    height: 100%;
+    width: 115%;
 }
+
+
 .insideImg {
-    padding-left: 19px;
-    padding-top:69px;
+    width: 100%;
+    height: 530px;
+    position:absolute;
     object-fit: cover;
+    border:14px solid #f2c12e99;
+    z-index: 0;
+
 }
+
+
+
+
+
+
+
 
 
 .top-text {
@@ -121,96 +152,121 @@ each service
     text-align: center;
     font-size: 30px;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 400;
+    padding-right: 3vw;
 
     line-height: 45px; /* 150% */
 }
 
-@media (max-width: 1450px) {
+@media (max-width: 1520px) {
     .container {
         display: flex;
-        padding: 0;
     }
+
+    .title-text {
+        width: 100%;
+    }
+
     .blocks-handler {
         display: flex;
         flex-direction: column;
-        padding-right: 3vw;
-
-    }
-    .first-two {
-        flex-direction: row;
-        width: 70vw;
-        gap:13vw;
-    }
-    .second-two {
-        flex-direction: row;
-        width: 70vw;
-        gap:13vw;
-    }
-    .third-two {
-        flex-direction: row;
-        width: 70vw;
-        gap:13vw;
-    }
-
-}
-@media (max-width: 1050px) {
-    .blocks-handler {
         align-items: center;
+        padding-left: 5vw;
+
     }
-    .first-two {
-        width: 80vw;
-        height: 1600px;
-        flex-direction: column;
-    }
-    .second-two {
-        width: 80vw;
-        height: 1600px;
-        flex-direction: column;
-    }
-    .third-two {
-        width: 80vw;
-        height: 1600px;
-        flex-direction: column;
+    .insideImg {
+        width: 80%;
+        border:18px solid #f2c12e99;
     }
 
     .individual-block {
         width: 100%;
-        height:700px;
-        display: flex;
     }
+    .overlayGrid {
+        width: 100%;
+    }
+
     .frames {
- 
+        width: 100%;
+        height: 630px;
+    }
+    .arrow {
+        width: 80%;
+        height: 550px;
+    }
+    .overlayGrid {
+        height: 500;
+    }
+    .first-two {
+        flex-direction: row;
+        width: 90vw;
+        gap:18vw;
+    }
+    .second-two {
+        flex-direction: row;
+        width: 90vw;
+        gap:18vw;
+    }
+    .third-two {
+        flex-direction: row;
+        width: 90vw;
+        gap:18vw;
+    }
+
+}
+@media (max-width: 1000px) {
+
+
+
+    .blocks-handler {
+        align-items: center;
+        gap : 15vh;
+        padding-left: 13vw;
+    }
+    .first-two {
         width: 80vw;
-        height: 800px;
-        display: flex;
-        
+
+        flex-direction: column;
+        gap: 15vh;
     }
-    .frameImg {
+    .second-two {
         width: 80vw;
-        height: 700px;
+
+        flex-direction: column;
+        gap: 15vh;
     }
-    .insideImg {
-        width: 64.5vw;
-        height: 600px;
-        padding-left: 23px;
-        padding-top:76px;
+    .third-two {
+        width: 80vw;
+
+        flex-direction: column;
+        gap: 15vh;
     }
-    
+
+
+    .frames {
+        width: 100%;
+        height: 650px;
+    }
+
+    .title-text {
+        padding-top: 7vh;
+        padding-bottom: 7vh;
+    }
     .top-text {
         display: flex;
-        width: 70vw;
+        width: 80vw;
         justify-content: center;
+        padding-right: 13vw;
+        align-items: center;
+
+
+        
     }
-}
-@media (max-width: 500px) {
-    .frameImg {
-        width: 120vw;
-
-    }
-    .insideImg {
-        width: 96vw;
 
 
+
+    .arrow {
+        width: 70%;
+        height: 590px;
     }
 }

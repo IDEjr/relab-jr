@@ -6,31 +6,24 @@
     "imagem": "/uploads/imageminicioservicos.jpg"
   },
   "servicos": {
-    "imagem2": "/uploads/1113005.jpg",
-    "imagem3": "/uploads/1113005.jpg",
-    "imagem4": "/uploads/1113005.jpg",
-    "imagem5": "/uploads/1113005.jpg",
-    "imagem6": "/uploads/1113005.jpg",
-    "texto1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec adipiscing tristique risus nec feugiat. Semper feugiat nibh sed pulvinar proin. Urna duis convallis convallis tellus id interdum velit laoreet id. Nisl nunc mi ipsum faucibus vitae aliquet. Enim lobortis scelerisque fermentum dui. Porttitor eget dolor morbi non arcu risus quis varius. Viverra suspendisse potenti nullam ac tortor vitae purus. Nec ultrices dui sapien eget mi proin sed.",
-    "texto2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec adipiscing tristique risus nec feugiat. Semper feugiat nibh sed pulvinar proin. Urna duis convallis convallis tellus id interdum velit laoreet id. Nisl nunc mi ipsum faucibus vitae aliquet. Enim lobortis scelerisque fermentum dui. Porttitor eget dolor morbi non arcu risus quis varius. Viverra suspendisse potenti nullam ac tortor vitae purus. Nec ultrices dui sapien eget mi proin sed.",
-    "texto3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec adipiscing tristique risus nec feugiat. Semper feugiat nibh sed pulvinar proin. Urna duis convallis convallis tellus id interdum velit laoreet id. Nisl nunc mi ipsum faucibus vitae aliquet. Enim lobortis scelerisque fermentum dui. Porttitor eget dolor morbi non arcu risus quis varius. Viverra suspendisse potenti nullam ac tortor vitae purus. Nec ultrices dui sapien eget mi proin sed.",
-    "servico1": "Modelação de Negócios",
-    "texto4": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec adipiscing tristique risus nec feugiat. Semper feugiat nibh sed pulvinar proin. Urna duis convallis convallis tellus id interdum velit laoreet id. Nisl nunc mi ipsum faucibus vitae aliquet. Enim lobortis scelerisque fermentum dui. Porttitor eget dolor morbi non arcu risus quis varius. Viverra suspendisse potenti nullam ac tortor vitae purus. Nec ultrices dui sapien eget mi proin sed.",
+    "imagem2": "/uploads/estudo_de_viabilidade_economica.jpg",
+    "imagem3": "/uploads/lens-minarelli-reserva-financeira-durante-transicao-profissional1-1024x1024.jpg",
+    "imagem4": "/uploads/como-elaborar-um-planejamento-estrategico-que-gere-crescimento.jpg",
+    "imagem5": "/uploads/231789-4-melhores-estrategias-de-marketing-digital-para-captar-clientes.jpg",
+    "imagem6": "/uploads/61c2762b6041f5c39cea9515_img_postblog_1032x580_1_.png",
+    "tituloServicos": "NOSSOS ESCOPOS",
+    "texto1": "Com a Modelação de Negócios da Relab Jr., não se trata apenas de criar ou remodelar empresas, mas de forjar um caminho claro para o sucesso. Usamos análises de mercado aprofundadas e estratégias sólidas para ajudá-lo a estabelecer bases sólidas para seu empreendimento. Nossa abordagem combina criatividade e dados, orientando você a tomar decisões informadas e construir uma estrutura sólida para o sucesso duradouro do seu negócio.",
+    "texto2": "A Viabilidade Econômica da Relab Jr. vai além de números. Realizamos análises detalhadas de custos, investimentos e demanda para fornecer planos financeiros sólidos que garantem o sucesso econômico da sua empresa. Nossas projeções abrangentes ajudam você a tomar decisões informadas e a maximizar o retorno sobre o investimento, enquanto minimiza riscos. Sua empresa estará preparada para crescer de forma segura e sustentável.",
+    "texto3": "Compreendemos minuciosamente o fluxo de caixa da sua empresa, identificando pontos críticos e fornecendo ferramentas personalizadas para otimizar suas finanças e desempenho. Nossa abordagem orientada por dados torna a gestão financeira eficiente e eficaz, permitindo que você mantenha suas finanças sob controle e promova o crescimento sustentável.",
+    "servico1": "Modelagem de Negócios",
+    "texto4": "O Planejamento Estratégico da Relab Jr. é a bússola para o sucesso. Ajudamos você a traçar um caminho claro para alcançar metas empresariais, alinhando a cultura da empresa com operações eficazes e sustentáveis. Nossa análise estratégica abrangente posiciona sua empresa de maneira competitiva, pronta para enfrentar desafios e capitalizar oportunidades, enquanto mantém um foco consistente em seus objetivos.",
     "servico2": "Viabilidade Econômica",
-    "texto5": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec adipiscing tristique risus nec feugiat. Semper feugiat nibh sed pulvinar proin. Urna duis convallis convallis tellus id interdum velit laoreet id. Nisl nunc mi ipsum faucibus vitae aliquet. Enim lobortis scelerisque fermentum dui. Porttitor eget dolor morbi non arcu risus quis varius. Viverra suspendisse potenti nullam ac tortor vitae purus. Nec ultrices dui sapien eget mi proin sed.",
+    "texto5": "Na Relab Jr., desvendamos os segredos do funil de vendas, estratégias de aquisição de clientes e análise de comportamento do consumidor. Compreendemos os desafios e oportunidades exclusivas do seu mercado-alvo, ajudando você a expandir sua base de clientes e aprimorar suas táticas de aquisição. Seja o líder no jogo da captação de clientes e veja seu negócio prosperar.",
     "servico3": "Análise da Saúde Financeira + Planilha",
-    "texto6": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec adipiscing tristique risus nec feugiat. Semper feugiat nibh sed pulvinar proin. Urna duis convallis convallis tellus id interdum velit laoreet id. Nisl nunc mi ipsum faucibus vitae aliquet. Enim lobortis scelerisque fermentum dui. Porttitor eget dolor morbi non arcu risus quis varius. Viverra suspendisse potenti nullam ac tortor vitae purus. Nec ultrices dui sapien eget mi proin sed.",
+    "texto6": "Oferecemos suporte abrangente, desde o recrutamento e desenvolvimento de equipe até a resolução de desafios de recursos humanos. Fortalecemos a cultura organizacional, aumentando a eficiência e a satisfação dos funcionários para promover o sucesso contínuo de sua empresa. Sua equipe será o trunfo que impulsiona o crescimento e a excelência de sua organização.",
     "servico4": "Planejamento Estratégico",
     "servico5": "Captação de Clientes",
     "servico6": "Gestão de Pessoas",
-    "imagem1": "/uploads/1113005.jpg"
-  },
-  "formularioServicos": {
-    "logo": "/uploads/iconelampada-removebg-preview.png",
-    "titulo": "ENTRE EM CONTATO",
-    "celular": "555199998888",
-    "email": "adm.relab@gmail.com",
-    "endereco1": "Av. Dr. Nilo Peçanha, 1600, Boa Vista - Porto Alegre/RS",
-    "endereco2": "Av. Unisinos, 950 - Cristo Rei, São Leopoldo, RS"
+    "imagem1": "/uploads/modelagem-processos-negocio-scaled.jpg"
   }
 }
