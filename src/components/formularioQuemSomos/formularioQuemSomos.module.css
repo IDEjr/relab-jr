@@ -1,0 +1,184 @@
+.mainContainer{
+    background-color: #262626;
+    color: #F2C12E;
+    margin-top: 10rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.title{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color: #F2C12E;
+}
+
+.formIconsContainer{
+    display: flex;
+    width: 60%;
+    margin-top: 4rem;
+    margin-left: 20%;
+    margin-right: 20%;
+    justify-content: space-evenly;
+}
+
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    position: relative;
+}
+
+.halfContainer{
+    width: 100%;
+}
+
+.halfContainer input{
+    color: #000000;
+    width: 100%;
+    height: 40px;
+    margin-left: 0px;
+    margin-top: 2rem;
+}
+
+.halfContainer .input_error {
+    outline: 1px solid rgb(255, 72, 72);
+}
+
+.halfContainer .error_message {
+    color: rgb(255, 72, 72);
+    font-size: 0.75rem;
+    margin-top: 8px;
+    text-align: left;
+}
+
+.halfContainer input::placeholder {
+    color: #000000;
+    font-weight: 500;
+}
+
+.halfContainer button{
+    width: 100%;
+    height: 40px;
+    border-color:#F2C12E;
+    color: #eee;
+    background-color: #262626;
+    color: #F2C12E;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.fullContainer {
+    width: 100%;
+}
+
+.fullContainer textarea{
+    color: #000000;
+    width: 100%;
+    height: 200px;
+    margin-left: 0px;
+    margin-top: 2rem;
+}
+
+.fullContainer input::placeholder {
+    color: #000000;
+    font-weight: 500;
+}
+
+.smallContainers{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.smallContainerLeft{
+    width: 45%;
+    margin-right: 10%;
+    margin-left: 0px;
+}
+
+.smallContainerRight{
+    width: 45%;
+    margin-left: 0px;
+}
+
+.smallContainerLeft input{
+    width: 100%;
+    height: 40px;
+    margin-left: 0px;
+    margin-top: 2rem;
+}
+
+.smallContainerRight input{
+    width: 100%;
+    height: 40px;
+    margin-left: 0px;
+    margin-top: 2rem;
+}
+
+.smallContainerLeft input::placeholder{
+    color: #000000;
+    font-weight: 500;
+}
+
+.smallContainerRight input::placeholder{
+    color: #000000;
+    font-weight: 500;
+}
+
+.smallContainerLeft .input_error {
+    outline: 1px solid rgb(255, 72, 72);
+}
+
+.smallContainerLeft .error_message {
+    color: rgb(255, 72, 72);
+    font-size: 0.75rem;
+    margin-top: 8px;
+    text-align: left;
+}
+
+.smallContainerRight .input_error {
+    outline: 1px solid rgb(255, 72, 72);
+}
+
+.smallContainerRight .error_message {
+    color: rgb(255, 72, 72);
+    font-size: 0.75rem;
+    margin-top: 8px;
+    text-align: left;
+}
+
+.iconsContainer{
+    width: 20%;
+    position: relative;
+    margin-top: 5%;
+    margin-left: 10%;
+}
+
+.icons{
+    font-size: 1.5em; 
+    margin-right: 1rem
+}
+
+.iconsP{
+    margin-top: 2rem;
+    text-align: left;
+}
+
+@media only screen and (max-width: 768px) and (orientation: portrait){
+
+    .formIconsContainer{
+        width: 95%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+
+    .fullContainer textarea{
+        height: 100px
+    }
+
+    .iconsContainer{
+        display: none
+    }
+}

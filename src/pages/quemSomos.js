@@ -5,6 +5,7 @@ import TextoBarraQuemSomos from '../components/textoBarraQuemSomos'
 import Valores from '../components/valores'
 import GridMembros from '@/components/gridMembros'
 import CarrosselQuemSomos from '@/components/carrosselQuemSomos'
+import FormularioQuemSomos from '@/components/formularioQuemSomos'
 import styles from '../styles/quemSomos.module.css'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
@@ -52,7 +53,8 @@ export default function quemSomos({quemSomos, membros, nav, carrosselQuemSomos, 
       <CarrosselQuemSomos {...quemSomos.CarrosselQuemSomos.imagensCarrossel}/>
       <Valores  {...valores}/>
       <GridMembros   titulo={grid.titulo} logo={grid.logo} membros={membros}/>
-      
+      <FormularioQuemSomos />
+
       <Footer {...foo}/>
     </>
   );
