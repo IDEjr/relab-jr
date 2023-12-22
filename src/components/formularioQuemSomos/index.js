@@ -22,7 +22,8 @@ export default function formularioQuemSomos() {
     return(
         <div className={styles.mainContainer}>
             <h2 className={styles.title}>
-                Titulo
+            Se torne um RELABER!
+            Entre em contato!
             </h2>
             <div className={styles.formIconsContainer}>
                 <div className={styles.formContainer}>
