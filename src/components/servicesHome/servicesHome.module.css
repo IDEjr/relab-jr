@@ -325,6 +325,9 @@ each service
 
 }
 @media (max-width: 380px) {
+    .title-text {
+        text-align: center;
+    }
     .top-text {
         height: 150px;
     }
