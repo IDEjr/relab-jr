@@ -131,7 +131,7 @@ each service
 
 .arrow-shape {
     background-color: #a3852b;
-    clip-path: polygon(0px 450px, 93.49% 14px, 88.71% 14px, 98.99% 0px, 96.16% 40px, 95.91% 22px, 0px 480px);
+    clip-path: polygon(0px 450px, 266px 29px, 251px 20px, 294px 2px, 293px 45px, 279px 37px, 0px 480px);
     z-index: 3;
     height: 550px;
     width: 85%;
@@ -205,13 +205,10 @@ each service
         width: 100%;
         height: 630px;
     }
-    .arrow {
-        /*width: 80%;
-        height: 550px;*/
-    }
+    
 
     .arrow-shape {
-        clip-path: polygon(0px 450px, 93.49% 14px, 88.71% 14px, 98.74% 0px, 96.41% 40px, 95.91% 22px, 0px 480px);
+        clip-path: polygon(0px 450px, 231px 63px, 213px 54px, 259px 32px, 262px 80px, 245px 71px, 0px 480px);
     }
     .overlayGrid {
         height: 500;
@@ -294,33 +291,19 @@ each service
 
     .arrow-shape {
         height: 550px;
-        clip-path: polygon(0% 400px, 50.27% 35px, 46.93% 34px, 54.12% 18px, 52.28% 65px, 51.82% 45px, 0% 425px);
+        clip-path: polygon(0px 312px, 337px 45px, 326px 32px, 383px 17px, 359px 70px, 349px 58px, 0px 333px);
     }
 
     
 }
-@media (max-width: 810px) {
-
-    .arrow-shape {
-        clip-path: polygon(0% 400px, 50.27% 35px, 46.93% 34px, 54.12% 18px, 53% 59px, 52.00% 42px, 0% 425px);
-  }
-    
-
-}
 
 
-@media (max-width: 690px) {
 
-    .arrow-shape {
-        clip-path: polygon(0% 400px, 50.27% 35px, 46.93% 34px, 54.12% 18px, 53.86% 53px, 52.27% 41px, 0% 425px);
-    }
-
-}
 
 @media (max-width: 580px) {
 
     .arrow-shape {
-        clip-path: polygon(0% 400px, 50.27% 35px, 46.93% 34px, 54.12% 18px, 53.86% 53px, 52.27% 41px, 0% 425px);
+        clip-path: polygon(0px 312px, 207px 58px, 195px 49px, 239px 33px, 229px 76px, 218px 67px, 0px 333px);
     }
 
 }
@@ -337,7 +320,7 @@ each service
         height: 490px;
     }
     .arrow-shape {
-        clip-path: polygon(0% 400px, 49.91% 37px, 46.22% 40px, 54.48% 19px, 54.22% 51px, 52.63% 41px, 0% 425px);
+        clip-path: polygon(0px 312px, 207px 58px, 195px 49px, 239px 33px, 229px 76px, 218px 67px, 0px 333px);
     }
 
 }
@@ -350,5 +333,8 @@ each service
     }
     .frames {
         height: 490px;
+    }
+    .arrow-shape {
+        clip-path: polygon(0px 312px, 111px 60px, 98px 54px, 134px 26px, 135px 70px, 122px 65px, 0px 333px);
     }
 }
