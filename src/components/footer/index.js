@@ -3,7 +3,7 @@ import styles from './footer.module.css'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
 import Image from 'next/image'
 import LinkedinIcon from "../../../public/uploads/image/footer/linkedinIcon.png"
-import TwitterIcon from "../../../public/uploads/image/footer/twitterIcon.png"
+import MailIcon from "../../../public/uploads/image/footer/mailIcon.png";
 import InstagramIcon from "../../../public/uploads/image/footer/instagramIcon.png"
 
 
@@ -48,11 +48,11 @@ export default function Footer(footerData) {
                             </a>
                         
                         
-                            <a className={styles.twitterIcon} href='/' target="_blank">
+                            <a className={styles['mailIcon']} href='/' target="_blank">
                                 <Image
-                                    src={TwitterIcon}
-                                    width={50}
-                                    height={50}
+                                    src={MailIcon}
+                                    width={53}
+                                    height={45}
                                     className={styles['insideImg']}
                                     quality={100}
                                     />
