@@ -2,13 +2,10 @@
 import styles from './footer.module.css'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
 import Image from 'next/image'
-import RelabIcon from "../../../public/uploads/image/footer/relabIconYellow.png"
 import LinkedinIcon from "../../../public/uploads/image/footer/linkedinIcon.png"
 import TwitterIcon from "../../../public/uploads/image/footer/twitterIcon.png"
 import InstagramIcon from "../../../public/uploads/image/footer/instagramIcon.png"
-import LabIcon from "../../../public/uploads/image/footer/labIcon.png"
-import JesuitasIcon from "../../../public/uploads/image/footer/jesuitasIcon.png"
-import UnisinosIcon from "../../../public/uploads/image/footer/unisinosIcon.png"
+
 
 const handleMove = () => {
     window.scrollTo({ top: 0, behavior: "smooth" }); // here it goes
