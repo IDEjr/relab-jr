@@ -7,7 +7,7 @@ export default function textoBarraQuemSomos({texto1, texto2, logo}) {
     return(
         <>
         <div className={styles['container']}>  
-          <div className={styles['toptext']}>
+            <div className={styles['toptext']}>
                 <p className={styles['text-content']} >
                     {texto1}
                 </p>  
