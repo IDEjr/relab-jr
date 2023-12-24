@@ -2,9 +2,8 @@
 import styles from './footer.module.css'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
 import Image from 'next/image'
-import LinkedinIcon from "../../../public/uploads/image/footer/linkedinIcon.png"
-import MailIcon from "../../../public/uploads/image/footer/mailIcon.png";
-import InstagramIcon from "../../../public/uploads/image/footer/instagramIcon.png"
+
+import {FaInstagram, FaLinkedin,FaEnvelope} from "react-icons/fa";
 
 
 const handleMove = () => {
@@ -16,7 +15,18 @@ const handleMove = () => {
 export default function Footer(footerData) {
     return (
             <div className={styles.footer}>
-                <div className={styles['bg-img-handle']}/>
+                <div className={styles['linear-gradient']}/>
+                <Image 
+                //src={footerData.background}
+                
+                //layout="fill"
+                //objectFit="cover"
+                //quality={100}
+                //className={styles['bg-img-handle']}
+                
+                >
+                
+                </Image>
                 <div className={styles.topPart}>
                     
                     <button onClick={handleMove} className={styles.relabIcon}>
@@ -38,35 +48,17 @@ export default function Footer(footerData) {
                         <div className={styles['social-icons']}>
                         
                             <a className={styles['linkedin-icon']} href={footerData.linkedin} target="_blank">
-                                <Image
-                                    src={LinkedinIcon}
-                                    width={50}
-                                    height={50}
-                                    className={styles['insideImg']}
-                                    quality={100}
-                                    />
+                                <FaLinkedin size={40}/>
                             </a>
                         
                         
-                            <a className={styles['mailIcon']} href='/' target="_blank">
-                                <Image
-                                    src={MailIcon}
-                                    width={53}
-                                    height={45}
-                                    className={styles['insideImg']}
-                                    quality={100}
-                                    />
+                            <a className={styles['mail-icon']} href='/' target="_blank">
+                                <FaEnvelope size={40}/>
                             </a>
                         
                         
                             <a className={styles['instagram-icon']} href={footerData.instagram} target="_blank">
-                                <Image
-                                    src={InstagramIcon}
-                                    width={50}
-                                    height={50}
-                                    className={styles['insideImg']}
-                                    quality={100}
-                                    />
+                                <FaInstagram size={40}/>
                             </a>
                         
 
