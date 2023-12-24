@@ -33,6 +33,7 @@ export default function textoBarraQuemSomos({texto1, texto2, logo}) {
 
                 <p className={styles['text-content']}> {texto2}  </p>
 
+
             </div>
         </div>
                </div>

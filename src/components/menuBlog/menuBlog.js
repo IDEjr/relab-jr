@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Styles from './menuBlog.module.css'
 import CardPosts from '../cardPosts'
 import GridPosts from '../gridPosts'
-
+import { GoChevronDown } from "react-icons/go";
 
 
 
@@ -29,7 +29,7 @@ export default function MenuBlog(...posts) {
         let aux = arrPosts;
         (select == "TODOS") ? aux = arrPosts :
             aux = arrPosts.filter((obj) => obj.genero == select)
-           
+
         setFilteredPosts(aux)
         setTitulo(select)
         setIsactive(false)
@@ -65,7 +65,8 @@ export default function MenuBlog(...posts) {
                         <div className={Styles.containerMobile}>  {/* div mobile */}
                            <div className={Styles.tituloEBotaoMobile}>
                             <h3 className={Styles.tituloMobile} ><p>{titulo}</p></h3>
-                            <h4 className={Styles.optionButton} onClick={() => setIsactive(!isActive)}>Outros</h4>    
+                            <h4 className={Styles.optionButton} onClick={() => setIsactive(!isActive)}><GoChevronDown size={'30'}/></h4>
+                                
                             </div>
                            <div className={Styles.optionsMobile}> {isActive && (<RenderOptions />)}</div>                        
                         </div>

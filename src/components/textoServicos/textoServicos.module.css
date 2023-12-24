@@ -18,11 +18,12 @@
 
 .topContainer{
     /* background-color: yellowgreen; */
-    height: 35px;
+    /* height: 35px; */
     width: 100%;
     margin-top: 3rem;
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 .bar{
@@ -33,4 +34,28 @@
     justify-content: center;
     text-align: center;
     margin: auto;
+}
+
+@media only screen and (max-width: 756px) and (orientation: portrait){
+
+    .topContainer{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+
+    .mainContainer{
+        margin-top: 3rem;
+    }
+
+    .centerContainer{
+        width: 80%;
+    }
+
+    .bar{
+        width: 50%;
+    }
 }

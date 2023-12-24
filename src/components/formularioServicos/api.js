@@ -6,4 +6,4 @@ export const sendContactForm = async (data) =>
             "Content-Type": "aplication/json",
             Accept: "aplication/json",
         }
-});
+    });
