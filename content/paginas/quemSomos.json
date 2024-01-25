@@ -3,27 +3,27 @@
     "imagem": "/uploads/imagemresultados.png",
     "titulo": "QUEM SOMOS",
     "texto1": "A RELAB Jr. Consultoria, empresa júnior da Unisinos, teve sua fundação em setembro de 2021, e hoje é federada junto à Federação das Empresas Juniores do Rio Grande do Sul - FEJERS.",
-    "texto2": "Nosso objetivo é nos tornarmos a empresa júnior referência na região metropolitana de Porto Alegre para micro e pequenas empresas nos principais setores de gestão empresarial, trazendo a inovação e a assertividade.\r\n\r\n",
+    "texto2": "Na Relab Jr., nosso objetivo é claro e poderoso: impulsionar o sucesso de nossos clientes por meio de soluções inovadoras e estratégicas. Comprometemo-nos a ser o parceiro de confiança que catalisa o crescimento e a transformação de negócios. Buscamos não apenas atender, mas superar as expectativas, contribuindo para o desenvolvimento sustentável e a excelência operacional.",
     "logo": "/uploads/iconelampada.png"
   },
   "CarrosselQuemSomos": {
     "imagensCarrossel": [
-      "/uploads/52439304239_c93c0802c7_o.png",
       "/uploads/index.png",
       "/uploads/imagemmembros.png",
-      "/uploads/whatsapp_image_2022-12-11_at_19.18.43_1_.jpeg"
+      "/uploads/whatsapp_image_2022-12-11_at_19.18.43_1_.jpeg",
+      "/uploads/52439304239_c93c0802c7_o.png"
     ]
   },
   "valores": {
-    "texto1": "Na Relab Jr., a disciplina é a base do nosso sucesso, garantindo qualidade e consistência.",
-    "texto2": "Nosso compromisso sólido com clientes e equipe gera resultados excepcionais e parcerias duradouras.",
-    "texto3": "Valorizamos a lealdade, base de relações sólidas, mantendo a integridade em todas as ações.",
-    "texto4": "O trabalho incansável é o coração da nossa busca pela excelência e sucesso duradouro.",
-    "titulo1": "Disciplina",
-    "titulo2": "Compromisso",
-    "titulo": "VALORES RELAB JR.",
-    "titulo3": "Lealdade",
-    "titulo4": "Trabalho"
+    "texto1": "Comprometimento é nosso pilar, impulsionando a excelência empresarial.",
+    "texto2": "Fomentamos a busca constante por melhoria, promovendo crescimento individual e coletivo.",
+    "texto3": "Incentivamos a diversidade, promovendo colaboração e compartilhamento para impulsionar a inovação.",
+    "texto4": "Abraçamos mudança, reconhecendo que flexibilidade é essencial para enfrentar desafios em evolução.",
+    "titulo1": "Comprometimento",
+    "titulo2": "Evolução Contínua",
+    "titulo": "OS VALORES QUE NOS MOVEM",
+    "titulo3": "Cocriação e Coaprendizagem",
+    "titulo4": "Flexibilidade"
   },
   "painelMembros": {
     "titulo": "CONHEÇA NOSSOS MEMBROS",
