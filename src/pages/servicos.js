@@ -48,7 +48,7 @@ export default function servicos({servicos, nav, foo, formularios}) {
   return (
     <>
       <Navbar  {...navData}/>
-      <Inicio title = {"SERVIÇOS"} image= {path}/>
+      <Inicio title = {servicos.inicioQuemSomos.titulo} image= {path}/>
       <TextoServicos {...inicioServicos}/>
       <EscoposServicos {...blocosServicos}/>
       <FormularioServicos {...formularios}/>

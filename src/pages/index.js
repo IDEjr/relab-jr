@@ -50,7 +50,7 @@ export default function Home({home, posts, nav, foo}) {
       <React.Fragment>
       <Navbar  {...navData}/>
       </React.Fragment>
-      <Inicio title = {"GESTÃO É A NOSSA CAUSA"} image= {path}/>
+      <Inicio title = {home.inicioQuemSomos.titulo} image= {path}/>
       <TextoBarraHome {...textoBarraHome}/>
       <ImagemComBotao {...resultados} />
       <ServicesHome servicosHome = {home.servicosHome}/>

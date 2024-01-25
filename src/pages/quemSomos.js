@@ -47,7 +47,7 @@ export default function quemSomos({quemSomos, membros, nav, carrosselQuemSomos, 
   return (
     <>
       <Navbar  {...navData}/>
-      <Inicio title = {"QUEM SOMOS"} image= {path}/>
+      <Inicio title = {quemSomos.inicioQuemSomos.titulo} image= {path}/>
       <TextoBarraQuemSomos {...textoBarra}/>
       <CarrosselQuemSomos {...quemSomos.CarrosselQuemSomos.imagensCarrossel}/>
       <Valores  {...valores}/>
