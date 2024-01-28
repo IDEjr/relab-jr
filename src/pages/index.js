@@ -1,5 +1,3 @@
-import Link from 'next/link'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
@@ -7,25 +5,24 @@ import ImagemComBotao from '../components/imagemComBotao'
 import ServicesHome from '../components/servicesHome'
 import Inicio from '../components/inicio'
 import TextoBarraHome from '../components/textoBarraHome/index'
-import CarouselHome from '../components/carouselHome'
+import CarrosselHome from '../components/carrosselHome'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
 import React from 'react';
 
 
-
-export default function Home({home, posts, nav}) {
+export default function Home({home, posts, nav, foo}) {
 
   // pega imagem da home do netlify
   const path = home.inicioHome.imagem;
- 
+
   // pega dados dos botões do netlify
 
   const resultados = {
     imagem: home.imgBotaoRes.imagem,
     titulo: home.imgBotaoRes.titulo,
     texto: home.imgBotaoRes.texto,
-    textoBotao: 'Entre em contato',
+    textoBotao: home.imgBotaoRes.textoBotao,
     link: 'servicos'
   };
 
@@ -37,7 +34,7 @@ export default function Home({home, posts, nav}) {
     imagem: home.imgBotaoMem.imagem,
     titulo: home.imgBotaoMem.titulo,
     texto: home.imgBotaoMem.texto,
-    textoBotao: 'Sejo membro',
+    textoBotao: home.imgBotaoMem.textoBotao,
     link: 'quemSomos'
   };
   const navData = {
@@ -46,23 +43,20 @@ export default function Home({home, posts, nav}) {
     instagram : nav.instagram,
     email : nav.email
   };
-
+  console.log(posts);
 
   return (
     <div className={styles['tudo']}>
       <React.Fragment>
       <Navbar  {...navData}/>
       </React.Fragment>
-      
-      <Inicio title = {"GESTÃO É A NOSSA CAUSA"} image= {path}/>
+      <Inicio title = {home.inicioHome.titulo} image= {path}/>
       <TextoBarraHome {...textoBarraHome}/>
       <ImagemComBotao {...resultados} />
       <ServicesHome servicosHome = {home.servicosHome}/>
-
-      <ImagemComBotao {...membros} />     
-      <CarouselHome {...posts}/>  
-      <Footer />
-
+      <ImagemComBotao {...membros} />
+      <CarrosselHome {...posts}/>  
+      <Footer {...foo}/>
     </div>
   )
 }
@@ -74,10 +68,12 @@ export async function getStaticProps(){
   const pagina = "home";
   const caminho2 = "navFooter";
   const pagina2 = "navbar";
+  const pagina3 = "footer";
   const home = handleJSONfile(`./content/${caminho}/${pagina}.json`);
   const nav = handleJSONfile(`./content/${caminho2}/${pagina2}.json`);
+  const foo = handleJSONfile(`./content/${caminho2}/${pagina3}.json`);
   const posts = handleJSONfiles('./content/posts');
   return {
-    props: { home, posts, nav },
+    props: { home, posts, nav, foo },
   };
 }

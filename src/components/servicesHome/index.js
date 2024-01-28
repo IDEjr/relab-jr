@@ -2,7 +2,8 @@ import styles from './servicesHome.module.css'
 import React from 'react'
 
 import Image from 'next/image'
-import backFrame from '../../../public/uploads/image/servicosHome/yellowFrame.png'
+
+import yellowArrow from '../../../public/uploads/image/servicosHome/yellowArrow.png'
 
 
 function eachService(frame) { 
@@ -13,28 +14,29 @@ function eachService(frame) {
             </h3>
             <div className={styles['frames']}>
                 <div className={styles['overlayGrid']}>
-                    <div className={styles['sizeBackFrame']} style={{width: '450px', height: '635px', position: 'relative'}}>
-                        <div className={styles['sizeImg']} style={{width: '361px', height: '545px', position: 'relative'}}>
-                            <Image
-                                src={frame.imagem}
-                                layout="fill"
-                                objectFit="cover"
-                                className={styles['insideImg']}
-                                quality={100}
-                                
-                            />
-                        </div>
-                    
-                        <Image
-                            src={backFrame}
-                            layout="fill"
-                            objectFit="cover"
-                            className={styles['frameImg']}
-                            quality={100}
-                            
+
+                    <div className={styles['arrow-shape']}/>
+                    <Image
+                        src={yellowArrow}
+                        className={styles['arrow']}
+                        width={2000}
+                        height={2000}
+                        quality={100}
+                        />
+                    <Image
+                        src={frame.imagem}
+                        className={styles['insideImg']}
+                        width={2000}
+                        height={2000}
+                        quality={100}
                         />
                     
-                    </div>
+                
+                    
+                    
+                  
+                    
+                    
                 </div>
                 
                 

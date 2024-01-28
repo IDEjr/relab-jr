@@ -1,0 +1,50 @@
+.carrossel{
+    height: 80vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;    
+}
+
+
+section .swiperContainer{
+  width: 80%;
+
+  display: block;
+}
+
+.swiperIndi{
+    height: 100%;
+    width: 90%;
+  
+}
+.margin{
+    height: 50px;
+}
+
+.espacoLateral{
+    width: 50px;
+}
+
+
+.titleSection{
+    padding: 5rem;
+    font-size: 30px;
+    color: #F2C12E;
+    text-align: center;
+  
+    width: 100%;
+    display: block;
+}
+
+
+
+@media only screen  and (min-width: 1281px)   {
+
+    .swiperIndi{
+        padding: 50px;
+      
+    }
+  
+
+
+}

@@ -22,6 +22,7 @@
   margin-bottom: 10px;
   color: #f2c12e;
   padding-bottom: 5vh;
+  padding-top: 10vh;
 }
 
 
@@ -34,6 +35,7 @@
 
 
 .boxBotao {
+  padding-top: 5vh;
   flex: 1;
 }
 
@@ -47,23 +49,24 @@
   font-size: 1.5rem;
 }
 
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 620px){
   .container {
-    height: 80vh;
+    /* height: 80vh; */
   }
   
   
   .titulo {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 10px;
     color: #f2c12e;
     padding-bottom: 5vh;
+    padding-top: 5vh;
   }
   
   
   .texto {
     flex: 1;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     width: 70%;
     line-height: 2.5rem;
   }
