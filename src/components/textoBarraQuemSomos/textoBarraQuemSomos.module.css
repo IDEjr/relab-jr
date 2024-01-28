@@ -54,11 +54,10 @@ gap: 5%;
 }
 
 
-.textContent{ /* formatação  de todos os textos*/
+.text-content{ /* formatação  de todos os textos*/
   color: #ffff;
-  font-size: 1.5vw;
-  width: 100%;
-  height: auto;
+  text-align: justify;
+  
 }
 
 
