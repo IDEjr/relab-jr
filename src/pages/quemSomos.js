@@ -61,20 +61,12 @@ export default function quemSomos({quemSomos, membros, nav, carrosselQuemSomos, 
 
 export async function getStaticProps(){
 
-  const caminho = "paginas";
-  const pagina = "quemSomos";
-  const caminho2 = "navFooter";
+  const foo = handleJSONfile(`./content/navFooter/footer.json`);
+  const quemSomos = handleJSONfile(`./content/paginas/quemSomos.json`);
+  const carrosselQuemSomos = handleJSONfiles(`./content/carrosselQuemSomos`);
+  const membros = handleJSONfiles(`./content/membros`);
+  const nav = handleJSONfile(`./content/navFooter/navbar.json`);
 
-
-  const pagina3 = "footer";
-  const foo = handleJSONfile(`./content/${caminho2}/${pagina3}.json`);
-
-  const pagina2 = "navbar";
-  const quemSomos = handleJSONfile(`./content/${caminho}/${pagina}.json`);
-  const carrosselQuemSomos = handleJSONfiles(`./content/carrosselQuemSomos`)
-  const pasta = "membros";
-  const membros = handleJSONfiles(`./content/${pasta}`);
-  const nav = handleJSONfile(`./content/${caminho2}/${pagina2}.json`);
   return {
     props: { quemSomos, membros, nav, carrosselQuemSomos, foo },
   };

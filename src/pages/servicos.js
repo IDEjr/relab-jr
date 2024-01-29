@@ -60,23 +60,11 @@ export default function servicos({servicos, nav, foo, formularios}) {
 
 export async function getStaticProps(){
 
-  const caminho = "paginas";
-  const pagina = "servicos";
-  const caminho2 = "navFooter";
-  const caminho3 = "forms";
-  const pagina4 = "forms";
+  const foo = handleJSONfile(`./content/navFooter/footer.json`);
+  const servicos = handleJSONfile(`./content/paginas/servicos.json`);
+  const nav = handleJSONfile(`./content/navFooter/navbar.json`);
+  const formularios = handleJSONfile(`./content/forms/forms.json`);
 
-
-
-  const pagina3 = "footer";
-  const foo = handleJSONfile(`./content/${caminho2}/${pagina3}.json`);
-
-
-  const pagina2 = "navbar";
-  const servicos = handleJSONfile(`./content/${caminho}/${pagina}.json`);
-  const nav = handleJSONfile(`./content/${caminho2}/${pagina2}.json`);
-
-  const formularios = handleJSONfile(`./content/${caminho3}/${pagina4}.json`);
   return {
     props: { servicos, nav, foo, formularios },
   };

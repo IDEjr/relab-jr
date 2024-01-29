@@ -30,17 +30,11 @@ export default function blog({posts, nav, foo}) {
 
 
 export async function getStaticProps() {
-  const caminho2 = "navFooter";
-  const pagina2 = "navbar";
 
-  const pagina3 = "footer";
-  const foo = handleJSONfile(`./content/${caminho2}/${pagina3}.json`);
+  const foo = handleJSONfile(`./content/navFooter/footer.json`);
+  const posts = handleJSONfiles('./content/posts');
+  const nav = handleJSONfile(`./content/navFooter/navbar.json`);
 
-
-
-
-  const posts = handleJSONfiles('./content/posts')
-  const nav = handleJSONfile(`./content/${caminho2}/${pagina2}.json`);
   return {
     props: { posts, nav, foo },
   };
