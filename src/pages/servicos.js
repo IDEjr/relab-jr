@@ -4,8 +4,8 @@ import Inicio from '../components/inicio'
 import TextoServicos from '../components/textoServicos'
 import EscoposServicos from '../components/escoposServicos'
 import FormularioServicos from '../components/formularioServicos'
-import styles from '../styles/servicos.module.css'
-import { handleJSONfiles } from '@/utils/functions/jsonHandler'
+// import styles from '../styles/servicos.module.css'
+// import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
 
 

@@ -5,7 +5,7 @@ import TextoBarraQuemSomos from '../components/textoBarraQuemSomos'
 import Valores from '../components/valores'
 import GridMembros from '@/components/gridMembros'
 import CarrosselQuemSomos from '@/components/carrosselQuemSomos'
-import styles from '../styles/quemSomos.module.css'
+// import styles from '../styles/quemSomos.module.css'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
 
