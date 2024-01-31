@@ -64,8 +64,8 @@ export default function MenuBlog(...posts) {
 
                         <div className={Styles.containerMobile}>  {/* div mobile */}
                            <div className={Styles.tituloEBotaoMobile}>
-                            <h3 className={Styles.tituloMobile} ><p>{titulo}</p></h3>
-                            <h4 className={Styles.optionButton} onClick={() => setIsactive(!isActive)}><GoChevronDown size={'30'}/></h4>
+                            <h3 className={Styles.tituloMobile} ><p className={Styles.p}>{titulo}</p></h3>
+                            <h4 onClick={() => setIsactive(!isActive)} className={Styles.optionButton}  ><GoChevronDown className={Styles.icone} /></h4>
                                 
                             </div>
                            <div className={Styles.optionsMobile}> {isActive && (<RenderOptions />)}</div>                        
