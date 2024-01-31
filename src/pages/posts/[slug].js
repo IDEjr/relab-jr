@@ -46,7 +46,7 @@ export default function Posts({ content, nav, foo }) {
             src={content.imagemCapa}
             fill={true}
             className={styles['top-img']}
-            style={{objectFit: 'cover', background: 'black', opacity:0.3}}
+            style={{objectFit: 'cover', background: 'black'}}
         />
         <div className={styles['content-block']}>
           <div className={styles['title-and-rest']}>

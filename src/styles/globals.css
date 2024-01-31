@@ -22,7 +22,7 @@ body {
   width: 100%;
   color: white;
 }
-
+strong { font-weight: bold; }
 
 :root{
   width: 100%;

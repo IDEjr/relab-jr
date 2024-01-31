@@ -5,6 +5,7 @@
   height: 80vh;
   position: relative;
   display: flex;
+  
 }
 
 
@@ -26,6 +27,9 @@
 .top.img{
   object-fit: cover;
 }
+.top-img {
+  filter: brightness(40%);
+}
 
 
 .title {
@@ -36,7 +40,7 @@
 
 .sub-title {
   position: absolute;
-  top: 47%;
+  top: 50%;
   left: 5.1%;
   font-size: 1.4em;
   font-weight: 500;
@@ -57,7 +61,7 @@
 
 .categorie {
   position: absolute;
-  top:37%;
+  top:35%;
   left: 5.1%;
   font-size: 1.2em;
   font-weight: 400;
@@ -119,7 +123,7 @@
 @media (max-width: 1280px) {
   .title {
     font-weight: 500;
-    font-size: 5em;
+
     width: 60%;
   }
   .sub-title {
@@ -133,7 +137,7 @@
 
   .details {
     font-size: 1.8em;
-    top: 64%;
+    top: 80%;
     width: 90%;
   }
 
@@ -177,11 +181,15 @@
     height: 40vh;
   }
   .categorie {
-    top: 30%;
+    top:20%;
   }
   .title {
-    font-size: 3.5em;
+    font-size: 2.5em;
   }
+  .categorie {
+    top: 30%;
+  }
+
   .details {
     top: 75%;
     font-size: 1.1em;
@@ -211,7 +219,15 @@
 
 }
 
+@media (max-width: 600px) {
+  .title {
+    font-size: 2em;
+  }
 
+
+
+
+}
 @media (max-width: 560px) {
   .categorie {
     font-size: 1.3em;
@@ -221,6 +237,7 @@
   }
 
   .details {
+    top:90%;
     font-size: 0.9em;
     display: flex;
     gap:5%;

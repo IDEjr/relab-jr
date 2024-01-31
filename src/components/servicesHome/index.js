@@ -15,7 +15,7 @@ function eachService(frame) {
             <div className={styles['frames']}>
                 <div className={styles['overlayGrid']}>
 
-                
+                    <div className={styles['arrow-shape']}/>
                     <Image
                         src={yellowArrow}
                         className={styles['arrow']}
@@ -23,13 +23,14 @@ function eachService(frame) {
                         height={2000}
                         quality={100}
                         />
-                        <Image
+                    <Image
                         src={frame.imagem}
                         className={styles['insideImg']}
                         width={2000}
                         height={2000}
                         quality={100}
                         />
+                    
                 
                     
                     
