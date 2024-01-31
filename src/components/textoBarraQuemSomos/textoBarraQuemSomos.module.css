@@ -1,6 +1,6 @@
 .toptext{ /* css da div superior */
   display: flex;
-  width: 50%;
+  width: 40%;
   height: 20rem;
   justify-content: space-between;
   align-items: center;
@@ -131,5 +131,3 @@ gap: 5%;
     margin-bottom: 5%;
   }
 }  /* fim do breakpoint */
-
-
