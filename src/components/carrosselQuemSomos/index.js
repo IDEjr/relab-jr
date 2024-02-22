@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Styles from './carrosselQuemSomos.module.css'
 import { register } from 'swiper/element/bundle'
+import { IoIosArrowForward, IoIosArrowBack} from "react-icons/io";
 
 register(); //função para utilizar o swiper
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, DotGroup } from 'pure-react-carousel';
@@ -30,20 +31,22 @@ export default function CarrosselQuemSomos(...images) {
           className={Styles.carouselContainer}
         >
           <Slider  className={Styles.slider}>
-          {images.map((item) => (     //mostra um slide para cada imagem contida em images
+          {images.map((item) => (   
+              //mostra um slide para cada imagem contida em images
             <Slide key={item}  >
                <div className={Styles.swiperSlide}>
                 
-                <CarouselImage src={item}  alt="Post"  isBgImage ={true} />
-                <DotGroup/>
-                <ButtonBack className='asdasd'>Back</ButtonBack>
-                <ButtonNext>Next</ButtonNext>
+                <CarouselImage  src={item}  fill style={{ objectFit: 'cover' }} className={Styles.CarouselImage}/>
+                
               </div>
               
-            </Slide>))
+            </Slide>
+            ))
           }
           </Slider>
-        
+          <DotGroup className={Styles.DotGroup}/>
+                <ButtonBack className={Styles.ButtonBack}><IoIosArrowBack /> </ButtonBack>
+                <ButtonNext className={Styles.ButtonNext}><IoIosArrowForward /> </ButtonNext>
         </CarouselProvider>
         </>
       );

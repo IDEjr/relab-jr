@@ -4,18 +4,31 @@ width: 100%;
 height: 10rem;
 }
 .carouselContainer{
-   width: 50rem;
+   width: 100%;
    height: 30vw;
-   border: solid 1px blue;
+}
+.carouselImage{
+   height: 100%;
+   width: 100%;
 }
 .swiperSlide{
-   height: 10%;
+   z-index: 0;
+   height: 100%;
    width: 100%;
    border: solid 1px black;
+}
+
+.ButtonBack, .ButtonNext {
+background-color: transparent;
+border-style: none;
+color: #F2C12E;
+   position: relative;
 }
 .slider{
    width: 100%;
    height: 100%;
+   border: solid 1px blue;
+
 }
 
 .container{
