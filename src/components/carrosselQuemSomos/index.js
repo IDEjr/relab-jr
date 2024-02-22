@@ -5,10 +5,7 @@ import { register } from 'swiper/element/bundle'
 register(); //função para utilizar o swiper
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, DotGroup } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { EffectFlip, Pagination, Navigation, Autoplay } from "swiper/modules";
-import { link } from 'fs';
-
+import { Image  as CarouselImage }  from 'pure-react-carousel'
 
 export default function CarrosselQuemSomos(...images) {
   images = images[0];  //pega os dados do array passado (os dados vem em formato de array, e a posição 0 está com os dados que precisamos)
@@ -23,25 +20,30 @@ export default function CarrosselQuemSomos(...images) {
       return (
         <>
         <CarouselProvider
-          naturalSlideWidth={10}
-          naturalSlideHeight={12}
+          naturalSlideWidth={1}
+          naturalSlideHeight={1}
           totalSlides={arrSize}
+          infinite={true}
+          isPlaying={true}
+          interval={5000}
+          hasMasterSpinner={true}
+          className={Styles.carouselContainer}
         >
-          <Slider>
+          <Slider  className={Styles.slider}>
           {images.map((item) => (     //mostra um slide para cada imagem contida em images
-            <Slide key={item} className={Styles.swiperSlide} >
-              <div className={Styles.image}>
+            <Slide key={item}  >
+               <div className={Styles.swiperSlide}>
                 
-                <Image src={item} fill style={{ objectFit: 'cover' }} alt="Post" />
-               
+                <CarouselImage src={item}  alt="Post"  isBgImage ={true} />
+                <DotGroup/>
+                <ButtonBack className='asdasd'>Back</ButtonBack>
+                <ButtonNext>Next</ButtonNext>
               </div>
               
             </Slide>))
           }
           </Slider>
-          <DotGroup/>
-          <ButtonBack>Back</ButtonBack>
-          <ButtonNext>Next</ButtonNext>
+        
         </CarouselProvider>
         </>
       );
