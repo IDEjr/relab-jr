@@ -33,14 +33,9 @@ export default function CarrosselQuemSomos(...images) {
           <Slider  className={Styles.slider}>
           {images.map((item) => (   
               //mostra um slide para cada imagem contida em images
-            <Slide key={item}  >
-               <div className={Styles.swiperSlide}>
-                
-                <CarouselImage  src={item}  fill style={{ objectFit: 'cover' }} className={Styles.CarouselImage}/>
-                
-              </div>
-              
-            </Slide>
+            <Slide key={item} className={Styles.Slide} >
+                <CarouselImage  src={item} className={Styles.CarouselImage}/>              
+            </Slide>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
             ))
           }
           </Slider>
