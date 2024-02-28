@@ -70,7 +70,7 @@ export default function Home({home, posts, nav, foo}) {
       <ImagemComBotao {...resultados} />
       <ServicesHome servicosHome = {home.servicosHome}/>
       <ImagemComBotao {...membros} />
-      <CarrosselHome {...postsCarrossel}/>  
+      <CarrosselHome titulo = {home.CarrosselHome.tituloCarrossel} posts = {postsCarrossel}/>  
       <Footer {...foo}/>
     </div>
   )
