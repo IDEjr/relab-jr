@@ -12,6 +12,9 @@ import React from 'react';
 
 
 export default function Home({home, posts, nav, foo}) {
+  
+  // pega imagem da home do netlify
+  const path = home.inicioHome.imagem;
 
   // pega dados dos botões do netlify
 
@@ -45,6 +48,22 @@ export default function Home({home, posts, nav, foo}) {
     email: nav.email
   }
 
+//-------------------------------------------------------------------------------------------
+//decidindo os posts a serem mandados para o carrossel
+//Funcionando
+  let i = 0;
+  const postsCarrossel = [];
+  while(posts[i]){
+    if (home.CarrosselHome.postsCarrossel.includes(posts[i].titulo)){
+      postsCarrossel.push(posts[i])
+    }
+    i+=1;
+  } 
+  console.log(postsCarrossel)
+  console.log(posts)
+  
+  
+//------------------------------------------------------------------------------------------
   return (
     // <div className={styles['tudo']}>
     <>
@@ -56,7 +75,7 @@ export default function Home({home, posts, nav, foo}) {
       <ImagemComBotao {...imgButResultados} />
       <ServicesHome servicosHome = {home.servicosHome}/>
       <ImagemComBotao {...imgButMembros} />
-      <CarrosselHome {...posts}/>  
+      <CarrosselHome titulo = {home.CarrosselHome.tituloCarrossel} posts = {postsCarrossel}/>
       <Footer {...foo}/>
     </>
     // </div>
