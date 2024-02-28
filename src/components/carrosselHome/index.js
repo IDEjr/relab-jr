@@ -1,5 +1,5 @@
 import styles from './carrosselHome.module.css'
-import CardPosts from '../cardPosts';
+import CardPosts from '../cardPosts'
 import { register } from 'swiper/element/bundle'
 
 register();
@@ -78,7 +78,7 @@ export default function CarrosselHome(props) {
           
 
       >
-        {data.map((item)=> (
+        {posts.map((item)=> (
           
         <SwiperSlide key={item.titulo} className={styles.swiperIndi}>
           <CardPosts 
