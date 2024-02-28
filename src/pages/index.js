@@ -47,6 +47,7 @@ export default function Home({home, posts, nav, foo}) {
 //-------------------------------------------------------------------------------------------
 //decidindo os posts a serem mandados para o carrossel
 //Funcionando
+// ao invés de usar mais de um argumento, posso passar o titulo junto na variavel utilizada
   let i = 0;
   const postsCarrossel = [];
   while(posts[i]){
@@ -55,8 +56,7 @@ export default function Home({home, posts, nav, foo}) {
     }
     i+=1;
   } 
-  console.log(postsCarrossel)
-  console.log(posts)
+  
   
   
 //------------------------------------------------------------------------------------------
@@ -70,7 +70,7 @@ export default function Home({home, posts, nav, foo}) {
       <ImagemComBotao {...resultados} />
       <ServicesHome servicosHome = {home.servicosHome}/>
       <ImagemComBotao {...membros} />
-      <CarrosselHome {...postsCarrossel}/>  
+      <CarrosselHome  titulo={home.CarrosselHome.tituloCarrossel}  posts={postsCarrossel}/>  
       <Footer {...foo}/>
     </div>
   )

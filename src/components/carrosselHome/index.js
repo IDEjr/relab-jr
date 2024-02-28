@@ -16,15 +16,17 @@ import { Autoplay} from "swiper/modules";
 
 /*Pegue os titulos que estão no json da home, e passar para aqui, e renderizar somente os posts que tem mesmo titulo dos 
 selecionados.*/
-export default function CarrosselHome(...posts) {
-  console.log(posts);
-  
+export default function CarrosselHome(props) {
+
+  let posts = props.posts
   const data = [];
-  for (var i =0; i<5 ; i++){
+  let i = 0;
+  for(let i in posts){
 
-    data.push(posts[0][i]);
+    data.push(posts[i]);
   }
-
+  
+  
  
 
 
@@ -32,7 +34,7 @@ export default function CarrosselHome(...posts) {
     <>
     <section className={styles.carrossel}>
       <h3 className={styles.titleSection}>
-        NOVIDADES
+        {props.titulo}
       </h3>
       <Swiper
     
@@ -80,8 +82,9 @@ export default function CarrosselHome(...posts) {
           
         <SwiperSlide key={item.titulo} className={styles.swiperIndi}>
           <CardPosts 
-            fileName={item.fileName}
             imagem={item.imagemCapa}
+            fileName={item.fileName}
+            
             titulo={item.titulo}
             data={item.data}
             previa={item.previa}
