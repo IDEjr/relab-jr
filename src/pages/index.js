@@ -13,51 +13,53 @@ import React from 'react';
 
 export default function Home({home, posts, nav, foo}) {
 
-  // pega imagem da home do netlify
-  const path = home.inicioHome.imagem;
-
   // pega dados dos botões do netlify
 
-  const resultados = {
+  const tituloHome = home.inicioHome.titulo;
+  const imagemHome = home.inicioHome.imagem;
+
+  const imgButResultados = {
     imagem: home.imgBotaoRes.imagem,
     titulo: home.imgBotaoRes.titulo,
     texto: home.imgBotaoRes.texto,
     textoBotao: home.imgBotaoRes.textoBotao,
     link: 'servicos'
-  };
+  }
 
   const textoBarraHome = {
     texto: home.inicioHome.texto
   }
 
-  const membros = {
+  const imgButMembros = {
     imagem: home.imgBotaoMem.imagem,
     titulo: home.imgBotaoMem.titulo,
     texto: home.imgBotaoMem.texto,
     textoBotao: home.imgBotaoMem.textoBotao,
     link: 'quemSomos'
-  };
+  }
+
   const navData = {
-    logo : nav.logo,
-    linkedin : nav.linkedin,
-    instagram : nav.instagram,
-    email : nav.email
-  };
-  console.log(posts);
+    logo: nav.logo,
+    linkedin: nav.linkedin,
+    instagram: nav.instagram,
+    email: nav.email
+  }
 
   return (
-    <div className={styles['tudo']}>
+    // <div className={styles['tudo']}>
+    <>
       <React.Fragment>
-      <Navbar  {...navData}/>
+      <Navbar {...navData}/>
       </React.Fragment>
-      <Inicio title = {home.inicioHome.titulo} image= {path}/>
+      <Inicio titulo = {tituloHome} imagem = {imagemHome}/>
       <TextoBarraHome {...textoBarraHome}/>
-      <ImagemComBotao {...resultados} />
+      <ImagemComBotao {...imgButResultados} />
       <ServicesHome servicosHome = {home.servicosHome}/>
-      <ImagemComBotao {...membros} />
+      <ImagemComBotao {...imgButMembros} />
       <CarrosselHome {...posts}/>  
       <Footer {...foo}/>
-    </div>
+    </>
+    // </div>
   )
 }
 
