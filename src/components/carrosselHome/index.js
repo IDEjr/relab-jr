@@ -17,7 +17,7 @@ import { Autoplay} from "swiper/modules";
 /*Pegue os titulos que estão no json da home, e passar para aqui, e renderizar somente os posts que tem mesmo titulo dos 
 selecionados.*/
 export default function CarrosselHome(props) {
-
+//So passar os props como o objeto e eles sao desmembrados dentro do componente, esse é o jeito certo de usar.
   let posts = props.posts
   const data = [];
   let i = 0;
