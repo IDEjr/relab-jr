@@ -12,7 +12,7 @@ import React from 'react';
 
 
 export default function Home({home, posts, nav, foo}) {
-
+  
   // pega imagem da home do netlify
   const path = home.inicioHome.imagem;
 
@@ -43,8 +43,23 @@ export default function Home({home, posts, nav, foo}) {
     instagram : nav.instagram,
     email : nav.email
   };
-  console.log(posts);
 
+//-------------------------------------------------------------------------------------------
+//decidindo os posts a serem mandados para o carrossel
+//Funcionando
+  let i = 0;
+  const postsCarrossel = [];
+  while(posts[i]){
+    if (home.CarrosselHome.postsCarrossel.includes(posts[i].titulo)){
+      postsCarrossel.push(posts[i])
+    }
+    i+=1;
+  } 
+  console.log(postsCarrossel)
+  console.log(posts)
+  
+  
+//------------------------------------------------------------------------------------------
   return (
     <div className={styles['tudo']}>
       <React.Fragment>
@@ -55,7 +70,7 @@ export default function Home({home, posts, nav, foo}) {
       <ImagemComBotao {...resultados} />
       <ServicesHome servicosHome = {home.servicosHome}/>
       <ImagemComBotao {...membros} />
-      <CarrosselHome {...posts}/>  
+      <CarrosselHome {...postsCarrossel}/>  
       <Footer {...foo}/>
     </div>
   )
