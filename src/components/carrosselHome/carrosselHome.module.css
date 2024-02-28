@@ -1,22 +1,21 @@
 .carrossel{
-    height: 80vh;
+    height: 100%;
     width: 100%;
     justify-content: center;
     align-items: center;    
 }
 
-
 section .swiperContainer{
-  width: 80%;
+    width: 80%;
 
-  display: block;
+    display: block;
 }
 
 .swiperIndi{
     height: 100%;
     width: 90%;
-  
 }
+
 .margin{
     height: 50px;
 }
@@ -24,7 +23,6 @@ section .swiperContainer{
 .espacoLateral{
     width: 50px;
 }
-
 
 .titleSection{
     padding: 5rem;
@@ -35,8 +33,6 @@ section .swiperContainer{
     width: 100%;
     display: block;
 }
-
-
 
 @media only screen  and (min-width: 1281px)   {
 
