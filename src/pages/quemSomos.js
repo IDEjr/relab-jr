@@ -48,7 +48,7 @@ export default function quemSomos({ quemSomos, membros, nav, carrosselQuemSomos,
       <Navbar {...navData}/>
       <Inicio titulo = {quemSomos.inicioQuemSomos.titulo} imagem = {imagemQuemSomos}/>
       <TextoBarraQuemSomos {...textoBarra}/>
-      <CarrosselQuemSomos images={quemSomos.CarrosselQuemSomos.imagensCarrossel}/>
+       <CarrosselQuemSomos images={quemSomos.carrosselQuemSomos.imagensCarrossel}/> 
       <Valores  {...valores}/>
       <GridMembros   titulo={grid.titulo} logo={grid.logo} membros={membros}/>
       
