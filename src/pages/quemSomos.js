@@ -9,20 +9,23 @@ import CarrosselQuemSomos from '@/components/carrosselQuemSomos'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
 
-export default function quemSomos({quemSomos, membros, nav, carrosselQuemSomos, foo}) {
+export default function quemSomos({ quemSomos, membros, nav, carrosselQuemSomos, foo }) {
 
-  const path = quemSomos.inicioQuemSomos.imagem;
-  const grid = {
-    titulo :quemSomos.painelMembros.titulo,
-    logo: quemSomos.painelMembros.logo
+  const navData = {
+    logo: nav.logo,
+    linkedin: nav.linkedin,
+    instagram: nav.instagram,
+    email: nav.email
   }
+
+  const tituloQuemSomos = quemSomos.inicioQuemSomos.titulo;
+  const imagemQuemSomos = quemSomos.inicioQuemSomos.imagem;
 
   const textoBarra = {
     texto1: quemSomos.inicioQuemSomos.texto1,
-    texto2:  quemSomos.inicioQuemSomos.texto2,
-    logo:  quemSomos.inicioQuemSomos.logo
+    texto2: quemSomos.inicioQuemSomos.texto2,
+    logo: quemSomos.inicioQuemSomos.logo
   }
-
 
   const valores = {
     titulo: quemSomos.valores.titulo,
@@ -36,20 +39,17 @@ export default function quemSomos({quemSomos, membros, nav, carrosselQuemSomos, 
     texto4: quemSomos.valores.texto4,
   }
 
-  
-  const navData = {
-    logo : nav.logo,
-    linkedin : nav.linkedin,
-    instagram : nav.instagram,
-    email : nav.email
-  };
-  
+  const grid = {
+    titulo: quemSomos.painelMembros.titulo,
+    logo: quemSomos.painelMembros.logo
+  }
+
   return (
     <>
-      <Navbar  {...navData}/>
-      <Inicio title = {quemSomos.inicioQuemSomos.titulo} image= {path}/>
+      <Navbar {...navData}/>
+      <Inicio titulo = {tituloQuemSomos} imagem = {imagemQuemSomos}/>
       <TextoBarraQuemSomos {...textoBarra}/>
-      <CarrosselQuemSomos {...quemSomos.CarrosselQuemSomos.imagensCarrossel}/>
+       <CarrosselQuemSomos images={quemSomos.carrosselQuemSomos.imagensCarrossel}/> 
       <Valores  {...valores}/>
       <GridMembros   titulo={grid.titulo} logo={grid.logo} membros={membros}/>
       

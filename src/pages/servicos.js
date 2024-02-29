@@ -9,21 +9,23 @@ import FormularioServicos from '../components/formularioServicos'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
 
 
-export default function servicos({servicos, nav, foo, formularios}) {
-
-  const path = servicos.inicioServicos.imagem;
-
-  const inicioServicos = {
-    titulo: servicos.inicioServicos.texto1,
-    texto: servicos.inicioServicos.texto2,
-  }
+export default function servicos({ servicos, nav, foo, formularios }) {
 
   const navData = {
     logo : nav.logo,
     linkedin : nav.linkedin,
     instagram : nav.instagram,
     email : nav.email
-  };
+  }
+
+  const tituloServicos = servicos.inicioServicos.titulo;
+  const imagemServicos = servicos.inicioServicos.imagem;
+
+  const inicioServicos = {
+    titulo: servicos.inicioServicos.texto1,
+    texto: servicos.inicioServicos.texto2,
+  }
+
   const blocosServicos = {
     imagem1 : servicos.servicos.imagem1,
     servico1 : servicos.servicos.servico1,
@@ -47,8 +49,8 @@ export default function servicos({servicos, nav, foo, formularios}) {
 
   return (
     <>
-      <Navbar  {...navData}/>
-      <Inicio title = {servicos.inicioServicos.titulo} image= {path}/>
+      <Navbar {...navData}/>
+      <Inicio titulo = {tituloServicos} imagem = {imagemServicos}/>
       <TextoServicos {...inicioServicos}/>
       <EscoposServicos {...blocosServicos}/>
       <FormularioServicos {...formularios}/>

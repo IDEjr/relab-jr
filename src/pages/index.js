@@ -13,51 +13,67 @@ import React from 'react';
 
 export default function Home({home, posts, nav, foo}) {
 
-  // pega imagem da home do netlify
-  const path = home.inicioHome.imagem;
+  const navData = {
+    logo: nav.logo,
+    linkedin: nav.linkedin,
+    instagram: nav.instagram,
+    email: nav.email
+  }
 
-  // pega dados dos botões do netlify
-
-  const resultados = {
-    imagem: home.imgBotaoRes.imagem,
-    titulo: home.imgBotaoRes.titulo,
-    texto: home.imgBotaoRes.texto,
-    textoBotao: home.imgBotaoRes.textoBotao,
-    link: 'servicos'
-  };
+  const tituloHome = home.inicioHome.titulo;
+  const imagemHome = home.inicioHome.imagem;
 
   const textoBarraHome = {
     texto: home.inicioHome.texto
   }
 
-  const membros = {
+  const imgButResultados = {
+    imagem: home.imgBotaoRes.imagem,
+    titulo: home.imgBotaoRes.titulo,
+    texto: home.imgBotaoRes.texto,
+    textoBotao: home.imgBotaoRes.textoBotao,
+    link: 'servicos'
+  }
+
+  const imgButMembros = {
     imagem: home.imgBotaoMem.imagem,
     titulo: home.imgBotaoMem.titulo,
     texto: home.imgBotaoMem.texto,
     textoBotao: home.imgBotaoMem.textoBotao,
     link: 'quemSomos'
-  };
-  const navData = {
-    logo : nav.logo,
-    linkedin : nav.linkedin,
-    instagram : nav.instagram,
-    email : nav.email
-  };
-  console.log(posts);
+  }
 
+  const tituloCarrossel = home.CarrosselHome.tituloCarrossel;
+
+//-------------------------------------------------------------------------------------------
+//decidindo os posts a serem mandados para o carrossel
+//Funcionando
+  let i = 0;
+  const postsCarrossel = [];
+  while(posts[i]){
+    if (home.CarrosselHome.postsCarrossel.includes(posts[i].titulo)){
+      postsCarrossel.push(posts[i])
+    }
+    i+=1;
+  } 
+  console.log(postsCarrossel)
+  console.log(posts)
+  
+  
+//------------------------------------------------------------------------------------------
   return (
-    <div className={styles['tudo']}>
+    <>
       <React.Fragment>
-      <Navbar  {...navData}/>
+      <Navbar {...navData}/>
       </React.Fragment>
-      <Inicio title = {home.inicioHome.titulo} image= {path}/>
+      <Inicio titulo = {tituloHome} imagem = {imagemHome}/>
       <TextoBarraHome {...textoBarraHome}/>
-      <ImagemComBotao {...resultados} />
+      <ImagemComBotao {...imgButResultados} />
       <ServicesHome servicosHome = {home.servicosHome}/>
-      <ImagemComBotao {...membros} />
-      <CarrosselHome {...posts}/>  
+      <ImagemComBotao {...imgButMembros} />
+      <CarrosselHome titulo = {tituloCarrossel} posts = {postsCarrossel}/>
       <Footer {...foo}/>
-    </div>
+    </>
   )
 }
 
