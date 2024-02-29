@@ -14,15 +14,15 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectFlip, Pagination, Navigation, Autoplay } from "swiper/modules";
 
 
-export default function CarrosselQuemSomos(...images) {
-  images = images[0];  //pega os dados do array passado (os dados vem em formato de array, e a posição 0 está com os dados que precisamos)
-  var arrImages = [];
-  for (const i in images) {
-    arrImages.push(images[i]); //arranjando os dados em um novo array
-  }
-  images = arrImages //atribuindo a images
+export default function CarrosselQuemSomos({images}) {
+  // images = images[0];  //pega os dados do array passado (os dados vem em formato de array, e a posição 0 está com os dados que precisamos)
+  // var arrImages = [];
+  // for (const i in images) {
+  //   arrImages.push(images[i]); //arranjando os dados em um novo array
+  // }
+  //arrImages //atribuindo a images
  
- 
+ console.log(images);
   return (
     <>
       <div className={Styles.container}>
@@ -47,8 +47,7 @@ export default function CarrosselQuemSomos(...images) {
           //  }}
 
           navigation={{  //configurações do navi
-            enabled: false,
-            
+            enabled: false
           }}
 
           autoplay={{  //configurações do autoplay
@@ -64,14 +63,14 @@ export default function CarrosselQuemSomos(...images) {
               }}}}
         >
 
-          {images.map((item) => (     //mostra um slide para cada imagem contida em images
+           {images.map((item) => (     //mostra um slide para cada imagem contida em images
             <SwiperSlide key={item} className={Styles.swiperSlide} >
               <div className={Styles.image}>
 
                 <Image src={item} fill style={{ objectFit: 'cover' }} alt="Post" />
               </div>
             </SwiperSlide>))
-          }
+          } 
         </Swiper>
       </div>
     </>
