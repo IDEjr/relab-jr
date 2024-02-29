@@ -60,8 +60,14 @@ export default function Posts({ content, nav, foo }) {
               {content.previa}
             </text>
           </div>
+          
+          
           <text className={styles['details']}>
-            {content.autor}<span/>{dataForm}
+            <a href='https://www.youtube.com/watch?v=UjdREuYhSx8&list=RDUjdREuYhSx8&start_radio=1&ab_channel=NimaFarzaneh' className={styles['autor']}>
+              {content.autor}
+            </a>
+            <span/>
+            {dataForm}
           </text>
         </div>
       </div>
@@ -83,7 +89,9 @@ export default function Posts({ content, nav, foo }) {
             <div className={styles['author-and-pencil']}>
               <Image className={styles['']} src={pencilImg}/>
               <text className={styles['author-name']}>
+              <a href='https://www.youtube.com/watch?v=UjdREuYhSx8&list=RDUjdREuYhSx8&start_radio=1&ab_channel=NimaFarzaneh' className={styles['autor']}>
                 {content.autor}
+              </a>
               </text>
             </div>
             <button onClick={handleMove} className={styles['voltar-button']}>
