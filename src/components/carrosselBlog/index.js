@@ -16,7 +16,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 // necessário?
 
 
-export default function CarrosselBlog(...posts) {
+export default function CarrosselBlog({posts}) {
 
   const [domLoaded, setDomLoaded] = useState(false);
   const arrPosts = [];
@@ -29,26 +29,26 @@ export default function CarrosselBlog(...posts) {
 
 
 
-  for (const i in posts[0]) //pega os dados importantes que estão localizados na posição 0 
-    {  
-    arrPosts.push(posts[0][i]); //rearranja os dados em um novo array
-    arrPosts[i].data = new Date(arrPosts[i].data) //transforma as datas que estão em formato de string para formato DATE
-    }
+   for (const i in posts) //pega os dados importantes que estão localizados na posição 0 
+     {  
+     arrPosts.push(posts[i]); //rearranja os dados em um novo array
+     arrPosts[i].data = new Date(arrPosts[i].data) //transforma as datas que estão em formato de string para formato DATE
+     }
 
 
-  function ordemDecrescente(a, b) {
-    return b.data - a.data;  //função passada por parametro para o ordenamento, se b-a então estará ordenado pelos mais recentes. Se a-b, estará ordenado da data antiga par a mais nova
-  }
+   function ordemDecrescente(a, b) {
+     return b.data - a.data;  //função passada por parametro para o ordenamento, se b-a então estará ordenado pelos mais recentes. Se a-b, estará ordenado da data antiga par a mais nova
+   }
 
-  arrPosts.sort(ordemDecrescente) //ordena os quatro primeiros por data
+   posts.sort(ordemDecrescente) //ordena os quatro primeiros por data
 
   for (let i = 0; i < arrPosts.length; i++) {
     arrPosts[i].data = arrPosts[i].data.toISOString().split('T')[0]; //transforma as datas em formato DATE para string
   }
 
-  for (let i = 0; i < 3; i++) {
-    recents.push(arrPosts[i])  //limita o tamanho dos posts para 3
-  }
+   for (let i = 0; i < 3; i++) {
+     recents.push(posts[i])  //limita o tamanho dos posts para 3
+   }
 
   
   return (
