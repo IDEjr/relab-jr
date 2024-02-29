@@ -2,7 +2,7 @@ import styles from '../styles/Home.module.css'
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import ImagemComBotao from '../components/imagemComBotao'
-import ServicesHome from '../components/servicesHome'
+import ServicosHome from '../components/servicosHome'
 import Inicio from '../components/inicio'
 import TextoBarraHome from '../components/textoBarraHome/index'
 import CarrosselHome from '../components/carrosselHome'
@@ -69,7 +69,7 @@ export default function Home({home, posts, nav, foo}) {
       <Inicio titulo = {tituloHome} imagem = {imagemHome}/>
       <TextoBarraHome {...textoBarraHome}/>
       <ImagemComBotao {...imgButResultados} />
-      <ServicesHome servicosHome = {home.servicosHome}/>
+      <ServicosHome servicosHome = {home.servicosHome}/>
       <ImagemComBotao {...imgButMembros} />
       <CarrosselHome titulo = {tituloCarrossel} posts = {postsCarrossel}/>
       <Footer {...foo}/>
