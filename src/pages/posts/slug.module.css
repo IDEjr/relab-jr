@@ -86,8 +86,14 @@
 }
 
 .markdown {
-  width: 80%;
+  width: 60%;
   font-size: 18px;
+}
+.markdown-image {
+  width: 60%;
+  height: 740px;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
 }
 
 .author {

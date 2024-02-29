@@ -73,6 +73,11 @@ export default function Posts({ content, nav, foo }) {
             <ReactMarkdown className={styles['markdown']}>
               {content.conteudo}
             </ReactMarkdown>
+            <Image src={content.imagemCapa} className={styles['markdown-image']} width={2000}
+            height={2000}/>
+            <ReactMarkdown className={styles['markdown']}>
+              {content.conteudo}
+            </ReactMarkdown>
           </div>
           <div className={styles['author']}>
             <div className={styles['author-and-pencil']}>
