@@ -12,11 +12,42 @@ import Footer from '../../components/footer'
 import React from 'react'
 
 
+
 const handleMove = () => {
   window.scrollTo({ top: 0, behavior: "smooth" }); // here it goes
 };
 
+//atencao!!!! gambiarra extrema abaixo pq n sei usar react Markdown
+function imagePost(content, num){
+  if(num == 1){
+    if(content.imagemCapa != ""){
+      return(
+        <Image src={content.imagemCapa} className={styles['markdown-image']} fill/>
+      )
+    }
+  }
+  else if(num == 2){
+    //console.log(content.imagemCapa);
+    if(content.imagemCapa != ""){
+      return(
+        <Image src={content.imagemCapa} className={styles['markdown-image']} fill/>
+      )
+    }
+    
+    
+  }
+  else if(num == 3){
+    if(content.imagemCapa != ""){
+      return(
+        <Image src={content.imagemCapa} className={styles['markdown-image']} fill/>
+      )
+    }
+  }
 
+  
+
+  
+}
 
 
 export default function Posts({ content, nav, foo }) {
@@ -76,14 +107,29 @@ export default function Posts({ content, nav, foo }) {
       <div className={styles['bottom-part']}>
         <div className={styles['text-and-rest']}>
           <div className={styles['text-formater']}>
+
+            
+          <div className={styles['img-container']}>
+              {imagePost(content, 1)}
+            </div>
             <ReactMarkdown className={styles['markdown']}>
               {content.conteudo}
             </ReactMarkdown>
-            <Image src={content.imagemCapa} className={styles['markdown-image']} width={2000}
-            height={2000}/>
+
+
+            
+            <div className={styles['img-container']}>
+              {imagePost(content, 2)}
+            </div>
+            
+
+
             <ReactMarkdown className={styles['markdown']}>
               {content.conteudo}
             </ReactMarkdown>
+            <div className={styles['img-container']}>
+              {imagePost(content, 3)}
+            </div>
           </div>
           <div className={styles['author']}>
             <div className={styles['author-and-pencil']}>

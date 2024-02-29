@@ -89,11 +89,18 @@
   width: 60%;
   font-size: 18px;
 }
-.markdown-image {
+
+.img-container {
+  position:sticky;
   width: 60%;
   height: 740px;
   padding-top: 5vh;
   padding-bottom: 5vh;
+}
+.markdown-image {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  position: relative;
 }
 
 .author {
