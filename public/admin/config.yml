@@ -81,7 +81,7 @@ collections:
 
 
           - label: "Carrossel Home"
-            name: "CarrosselHome"
+            name: "carrosselHome"
             widget: "object"
             fields:
               - {label: "Título Carrossel", name: "tituloCarrossel", widget: "string", pattern: ['^.{1,20}$', "Máximo 20 carateres."]}
@@ -114,7 +114,7 @@ collections:
 
 
           - label: "Carrossel Quem Somos"
-            name: "CarrosselQuemSomos"
+            name: "carrosselQuemSomos"
             widget: "object"
             fields:
               - label: "Imagens Carrossel"

@@ -71,8 +71,8 @@ export default function CarrosselBlog(...posts) {
             loop ={true}
             slidesPerView={1}
             effect={'swipe'}
-            pagination={{ clickable: next }} //permite a troca de páginas pelo pagination
-            navigation={{  enabled: false,   }}
+            // pagination={{ clickable: next }} //permite a troca de páginas pelo pagination
+            navigation={{  enabled: false}}
             slidesPerGroup={1}
             autoplay={{  delay: 5000, disableOnInteraction: false  }}
             className={styles.swiperContainer}

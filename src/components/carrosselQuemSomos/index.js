@@ -41,10 +41,10 @@ export default function CarrosselQuemSomos({images}) {
           slidesPerView={1}  //define a quantidade de slides por visualização
           loop = {true}
           grabCursor={true}  //ativando o grabCursor com configurações default
-         
-          //  pagination={{   //configurações da pagination
-          //    clickable: true   
-          //  }}
+          
+          // pagination={{   //configurações da pagination
+          //   clickable: true   
+          // }}
 
           navigation={{  //configurações do navi
             enabled: false
