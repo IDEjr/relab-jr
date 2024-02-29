@@ -21,8 +21,8 @@ export default function CarrosselQuemSomos(...images) {
     arrImages.push(images[i]); //arranjando os dados em um novo array
   }
   images = arrImages //atribuindo a images
-
-
+ 
+ 
   return (
     <>
       <div className={Styles.container}>
@@ -47,7 +47,8 @@ export default function CarrosselQuemSomos(...images) {
           //  }}
 
           navigation={{  //configurações do navi
-            enabled: false
+            enabled: false,
+            
           }}
 
           autoplay={{  //configurações do autoplay
