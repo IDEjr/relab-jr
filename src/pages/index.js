@@ -12,14 +12,20 @@ import React from 'react';
 
 
 export default function Home({home, posts, nav, foo}) {
-  
-  // pega imagem da home do netlify
-  const path = home.inicioHome.imagem;
 
-  // pega dados dos botões do netlify
+  const navData = {
+    logo: nav.logo,
+    linkedin: nav.linkedin,
+    instagram: nav.instagram,
+    email: nav.email
+  }
 
   const tituloHome = home.inicioHome.titulo;
   const imagemHome = home.inicioHome.imagem;
+
+  const textoBarraHome = {
+    texto: home.inicioHome.texto
+  }
 
   const imgButResultados = {
     imagem: home.imgBotaoRes.imagem,
@@ -27,10 +33,6 @@ export default function Home({home, posts, nav, foo}) {
     texto: home.imgBotaoRes.texto,
     textoBotao: home.imgBotaoRes.textoBotao,
     link: 'servicos'
-  }
-
-  const textoBarraHome = {
-    texto: home.inicioHome.texto
   }
 
   const imgButMembros = {
@@ -41,12 +43,7 @@ export default function Home({home, posts, nav, foo}) {
     link: 'quemSomos'
   }
 
-  const navData = {
-    logo: nav.logo,
-    linkedin: nav.linkedin,
-    instagram: nav.instagram,
-    email: nav.email
-  }
+  const tituloCarrossel = home.CarrosselHome.tituloCarrossel;
 
 //-------------------------------------------------------------------------------------------
 //decidindo os posts a serem mandados para o carrossel
@@ -65,7 +62,6 @@ export default function Home({home, posts, nav, foo}) {
   
 //------------------------------------------------------------------------------------------
   return (
-    // <div className={styles['tudo']}>
     <>
       <React.Fragment>
       <Navbar {...navData}/>
@@ -75,10 +71,9 @@ export default function Home({home, posts, nav, foo}) {
       <ImagemComBotao {...imgButResultados} />
       <ServicesHome servicosHome = {home.servicosHome}/>
       <ImagemComBotao {...imgButMembros} />
-      <CarrosselHome titulo = {home.CarrosselHome.tituloCarrossel} posts = {postsCarrossel}/>
+      <CarrosselHome titulo = {tituloCarrossel} posts = {postsCarrossel}/>
       <Footer {...foo}/>
     </>
-    // </div>
   )
 }
 

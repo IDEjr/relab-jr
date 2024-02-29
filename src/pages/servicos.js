@@ -11,19 +11,19 @@ import { handleJSONfile } from '@/utils/functions/jsonHandler'
 
 export default function servicos({ servicos, nav, foo, formularios }) {
 
+  const navData = {
+    logo : nav.logo,
+    linkedin : nav.linkedin,
+    instagram : nav.instagram,
+    email : nav.email
+  }
+
   const tituloServicos = servicos.inicioServicos.titulo;
   const imagemServicos = servicos.inicioServicos.imagem;
 
   const inicioServicos = {
     titulo: servicos.inicioServicos.texto1,
     texto: servicos.inicioServicos.texto2,
-  }
-
-  const navData = {
-    logo : nav.logo,
-    linkedin : nav.linkedin,
-    instagram : nav.instagram,
-    email : nav.email
   }
 
   const blocosServicos = {
@@ -49,7 +49,7 @@ export default function servicos({ servicos, nav, foo, formularios }) {
 
   return (
     <>
-      <Navbar  {...navData}/>
+      <Navbar {...navData}/>
       <Inicio titulo = {tituloServicos} imagem = {imagemServicos}/>
       <TextoServicos {...inicioServicos}/>
       <EscoposServicos {...blocosServicos}/>
