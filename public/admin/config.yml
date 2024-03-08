@@ -81,7 +81,7 @@ collections:
 
 
           - label: "Carrossel Home"
-            name: "CarrosselHome"
+            name: "carrosselHome"
             widget: "object"
             fields:
               - {label: "Título Carrossel", name: "tituloCarrossel", widget: "string", pattern: ['^.{1,20}$', "Máximo 20 carateres."]}
@@ -114,7 +114,7 @@ collections:
 
 
           - label: "Carrossel Quem Somos"
-            name: "CarrosselQuemSomos"
+            name: "carrosselQuemSomos"
             widget: "object"
             fields:
               - label: "Imagens Carrossel"
@@ -237,6 +237,7 @@ collections:
       - {label: "Visível", name: "bool", widget: "boolean", default: true}
       - {label: "Gênero", name: "genero", widget: "relation", collection: "generos", search_fields: ["genero"], display_fields: ["genero"], value_field: "genero", default: ["Outros"]}
       - {label: "Autor(a)", name: "autor", widget: "relation", collection: "membros", search_fields: ["nome"], display_fields: ["nome"], value_field: "nome"}
+      - {label: "LikedIn", name: "linkedin", widget: "relation", collection: "membros", search_fields: ["nome"], display_fields: ["linkedin"], value_field: "linkedin", required: false}
       - {label: "Data", name: "data", widget: "date", date_format: "DD.MM.YYYY"}
       - {label: "Título", name: "titulo", widget: "string", pattern: ['^.{1,40}$', "Máximo 40 carateres."]}
       - {label: "Prévia", name: "previa", widget: "text", pattern: ['^.{1,60}$', "Máximo 60 carateres."]}

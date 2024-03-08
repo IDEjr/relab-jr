@@ -2,7 +2,7 @@ import styles from '../styles/Home.module.css'
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import ImagemComBotao from '../components/imagemComBotao'
-import ServicesHome from '../components/servicesHome'
+import ServicosHome from '../components/servicosHome'
 import Inicio from '../components/inicio'
 import TextoBarraHome from '../components/textoBarraHome/index'
 import CarrosselHome from '../components/carrosselHome'
@@ -13,65 +13,76 @@ import React from 'react';
 
 export default function Home({home, posts, nav, foo}) {
 
-  // pega imagem da home do netlify
-  const path = home.inicioHome.imagem;
+  const navData = {
+    logo: nav.logo,
+    linkedin: nav.linkedin,
+    instagram: nav.instagram,
+    email: nav.email
+  }
 
-  // pega dados dos botões do netlify
-
-  const resultados = {
-    imagem: home.imgBotaoRes.imagem,
-    titulo: home.imgBotaoRes.titulo,
-    texto: home.imgBotaoRes.texto,
-    textoBotao: home.imgBotaoRes.textoBotao,
-    link: 'servicos'
-  };
+  const tituloHome = home.inicioHome.titulo;
+  const imagemHome = home.inicioHome.imagem;
 
   const textoBarraHome = {
     texto: home.inicioHome.texto
   }
 
-  const membros = {
+  const imgButResultados = {
+    imagem: home.imgBotaoRes.imagem,
+    titulo: home.imgBotaoRes.titulo,
+    texto: home.imgBotaoRes.texto,
+    textoBotao: home.imgBotaoRes.textoBotao,
+    link: 'servicos'
+  }
+
+  const imgButMembros = {
     imagem: home.imgBotaoMem.imagem,
     titulo: home.imgBotaoMem.titulo,
     texto: home.imgBotaoMem.texto,
     textoBotao: home.imgBotaoMem.textoBotao,
     link: 'quemSomos'
-  };
-  const navData = {
-    logo : nav.logo,
-    linkedin : nav.linkedin,
-    instagram : nav.instagram,
-    email : nav.email
-  };
-  console.log(posts);
+  }
 
+  const tituloCarrossel = home.carrosselHome.tituloCarrossel;
+
+//-------------------------------------------------------------------------------------------
+//decidindo os posts a serem mandados para o carrossel
+//Funcionando
+  let i = 0;
+  const postsCarrossel = [];
+  while(posts[i]){
+    if (home.carrosselHome.postsCarrossel.includes(posts[i].titulo)){
+      postsCarrossel.push(posts[i])
+    }
+    i+=1;
+  } 
+  console.log(postsCarrossel)
+  console.log(posts)
+  
+  
+//------------------------------------------------------------------------------------------
   return (
-    <div className={styles['tudo']}>
+    <>
       <React.Fragment>
-      <Navbar  {...navData}/>
+      <Navbar {...navData}/>
       </React.Fragment>
-      <Inicio title = {home.inicioHome.titulo} image= {path}/>
+      <Inicio titulo = {tituloHome} imagem = {imagemHome}/>
       <TextoBarraHome {...textoBarraHome}/>
-      <ImagemComBotao {...resultados} />
-      <ServicesHome servicosHome = {home.servicosHome}/>
-      <ImagemComBotao {...membros} />
-      <CarrosselHome {...posts}/>  
+      <ImagemComBotao {...imgButResultados} />
+      <ServicosHome servicosHome = {home.servicosHome}/>
+      <ImagemComBotao {...imgButMembros} />
+      <CarrosselHome titulo = {tituloCarrossel} posts = {postsCarrossel}/>
       <Footer {...foo}/>
-    </div>
+    </>
   )
 }
 
 
 export async function getStaticProps(){
 
-  const caminho = "paginas";
-  const pagina = "home";
-  const caminho2 = "navFooter";
-  const pagina2 = "navbar";
-  const pagina3 = "footer";
-  const home = handleJSONfile(`./content/${caminho}/${pagina}.json`);
-  const nav = handleJSONfile(`./content/${caminho2}/${pagina2}.json`);
-  const foo = handleJSONfile(`./content/${caminho2}/${pagina3}.json`);
+  const home = handleJSONfile(`./content/paginas/home.json`);
+  const nav = handleJSONfile(`./content/navFooter/navbar.json`);
+  const foo = handleJSONfile(`./content/navFooter/footer.json`);
   const posts = handleJSONfiles('./content/posts');
   return {
     props: { home, posts, nav, foo },

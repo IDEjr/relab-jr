@@ -5,7 +5,7 @@ import { FaBars, FaTimes, FaInstagram, FaLinkedin,FaEnvelope} from "react-icons/
 import classnames from 'classnames';
 import Link from 'next/link'
 
-export default function navbar({logo, linkedin, instagram, email }) {
+export default function navbar({ logo, linkedin, instagram, email }) {
     const navRef = useRef();
     const logoRef = useRef();
 	const showNavbar = () => {
@@ -33,18 +33,18 @@ export default function navbar({logo, linkedin, instagram, email }) {
                 <nav className={styles.navbar} ref={navRef}>
                     <button className={
                             classnames(
-                              styles.navBtn,
-                              styles.navRelabBtn
+                                styles.navBtn,
+                                styles.navRelabBtn
                             )
-                          } ref={logoRef}>
-                            <Link href="/">
-                                <Image
-                                    src={logo}
-                                    width={95}
-                                    height={95}
-                                    alt="Logo"
-                                />
-                            </Link> 
+                            } ref={logoRef}>
+                        <Link href="/">
+                            <Image
+                                src={logo}
+                                width={95}
+                                height={95}
+                                alt="Logo"
+                            />
+                        </Link> 
                     </button>
                     {/*<a href="/">HOME</a>*/}
                     <a href="/quemSomos">QUEM SOMOS</a>
@@ -53,10 +53,10 @@ export default function navbar({logo, linkedin, instagram, email }) {
                     <button
                         className={
                             classnames(
-                              styles.navBtn,
-                              styles.navCloseBtn
+                                styles.navBtn,
+                                styles.navCloseBtn
                             )
-                          }
+                        }
                         onClick={showNavbar}>
                         
                         <FaTimes />
@@ -101,6 +101,5 @@ export default function navbar({logo, linkedin, instagram, email }) {
                 </button>
             </header>
         
-
     );
 }

@@ -12,8 +12,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Swiper, SwiperSlide } from 'swiper/react'
-import next from 'next';
-
+// import next from 'next';
+// necessário?
 
 
 export default function CarrosselBlog(...posts) {
@@ -71,8 +71,8 @@ export default function CarrosselBlog(...posts) {
             loop ={true}
             slidesPerView={1}
             effect={'swipe'}
-            pagination={{ clickable: next }} //permite a troca de páginas pelo pagination
-            navigation={{  enabled: false,   }}
+            // pagination={{ clickable: next }} //permite a troca de páginas pelo pagination
+            navigation={{  enabled: false}}
             slidesPerGroup={1}
             autoplay={{  delay: 5000, disableOnInteraction: false  }}
             className={styles.swiperContainer}
