@@ -12,6 +12,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { EffectFade } from 'swiper/modules';
+
 // import next from 'next';
 // necessário?
 
@@ -22,10 +24,10 @@ export default function CarrosselBlog({posts}) {
   const arrPosts = [];
   var recents = [];
 
-  useEffect(() => {
-    setDomLoaded(true); // código implementado pra resolver um problema do react, como o react "cria" a página duas vezes, ele estava criando uma página com os posts fora de ordem
+ // useEffect(() => {
+ //   setDomLoaded(true); // código implementado pra resolver um problema do react, como o react "cria" a página duas vezes, ele estava criando uma página com os posts fora de ordem
                         //e a outra com os posts ordenado, causando erro
-  }, []);
+ // }, []);
 
 
 
@@ -55,7 +57,7 @@ export default function CarrosselBlog({posts}) {
     <>
 
       <section className={styles.container}>
-        {domLoaded && ( //só renderiza quando o react fazer a segunda renderização da página
+        { ( //só renderiza quando o react fazer a segunda renderização da página
           <Swiper
             style={{
               "--swiper-theme-color": "#F2C12E",
@@ -70,10 +72,9 @@ export default function CarrosselBlog({posts}) {
             }}
             loop ={true}
             slidesPerView="auto"
-            effect={'swipe'}
+            
             // pagination={{ clickable: next }} //permite a troca de páginas pelo pagination
             navigation={{  enabled: false}}
-
             autoplay={{  delay: 5000, disableOnInteraction: false  }}
             className={styles.swiperContainer}
             breakpoints={{ 800: {  navigation: { enabled: true }  }}}  //se a tela for maior que 800 pixels, ativa o navigation(as setinhas)
