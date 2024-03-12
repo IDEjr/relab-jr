@@ -12,50 +12,52 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { EffectFade } from 'swiper/modules';
+
 // import next from 'next';
 // necessário?
 
 
-export default function CarrosselBlog(...posts) {
+export default function CarrosselBlog({posts}) {
 
   const [domLoaded, setDomLoaded] = useState(false);
   const arrPosts = [];
   var recents = [];
 
-  useEffect(() => {
-    setDomLoaded(true); // código implementado pra resolver um problema do react, como o react "cria" a página duas vezes, ele estava criando uma página com os posts fora de ordem
+ // useEffect(() => {
+ //   setDomLoaded(true); // código implementado pra resolver um problema do react, como o react "cria" a página duas vezes, ele estava criando uma página com os posts fora de ordem
                         //e a outra com os posts ordenado, causando erro
-  }, []);
+ // }, []);
 
 
 
-  for (const i in posts[0]) //pega os dados importantes que estão localizados na posição 0 
-    {  
-    arrPosts.push(posts[0][i]); //rearranja os dados em um novo array
-    arrPosts[i].data = new Date(arrPosts[i].data) //transforma as datas que estão em formato de string para formato DATE
-    }
+   for (const i in posts) //pega os dados importantes que estão localizados na posição 0 
+     {  
+     arrPosts.push(posts[i]); //rearranja os dados em um novo array
+     arrPosts[i].data = new Date(arrPosts[i].data) //transforma as datas que estão em formato de string para formato DATE
+     }
 
 
-  function ordemDecrescente(a, b) {
-    return b.data - a.data;  //função passada por parametro para o ordenamento, se b-a então estará ordenado pelos mais recentes. Se a-b, estará ordenado da data antiga par a mais nova
-  }
+   function ordemDecrescente(a, b) {
+     return b.data - a.data;  //função passada por parametro para o ordenamento, se b-a então estará ordenado pelos mais recentes. Se a-b, estará ordenado da data antiga par a mais nova
+   }
 
-  arrPosts.sort(ordemDecrescente) //ordena os quatro primeiros por data
+   posts.sort(ordemDecrescente) //ordena os quatro primeiros por data
 
   for (let i = 0; i < arrPosts.length; i++) {
     arrPosts[i].data = arrPosts[i].data.toISOString().split('T')[0]; //transforma as datas em formato DATE para string
   }
 
-  for (let i = 0; i < 3; i++) {
-    recents.push(arrPosts[i])  //limita o tamanho dos posts para 3
-  }
+   for (let i = 0; i < 3; i++) {
+     recents.push(posts[i])  //limita o tamanho dos posts para 3
+   }
 
   
   return (
     <>
 
       <section className={styles.container}>
-        {domLoaded && ( //só renderiza quando o react fazer a segunda renderização da página
+        { ( //só renderiza quando o react fazer a segunda renderização da página
           <Swiper
             style={{
               "--swiper-theme-color": "#F2C12E",
@@ -69,11 +71,10 @@ export default function CarrosselBlog(...posts) {
               "--swiper-pagination-bullet-horizontal-gap": " 15px"
             }}
             loop ={true}
-            slidesPerView={1}
-            effect={'swipe'}
+            slidesPerView="auto"
+            
             // pagination={{ clickable: next }} //permite a troca de páginas pelo pagination
             navigation={{  enabled: false}}
-            slidesPerGroup={1}
             autoplay={{  delay: 5000, disableOnInteraction: false  }}
             className={styles.swiperContainer}
             breakpoints={{ 800: {  navigation: { enabled: true }  }}}  //se a tela for maior que 800 pixels, ativa o navigation(as setinhas)

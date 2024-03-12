@@ -43,7 +43,7 @@ export default function Home({home, posts, nav, foo}) {
     link: 'quemSomos'
   }
 
-  const tituloCarrossel = home.CarrosselHome.tituloCarrossel;
+  const tituloCarrossel = home.carrosselHome.tituloCarrossel;
 
 //-------------------------------------------------------------------------------------------
 //decidindo os posts a serem mandados para o carrossel
@@ -51,7 +51,7 @@ export default function Home({home, posts, nav, foo}) {
   let i = 0;
   const postsCarrossel = [];
   while(posts[i]){
-    if (home.CarrosselHome.postsCarrossel.includes(posts[i].titulo)){
+    if (home.carrosselHome.postsCarrossel.includes(posts[i].titulo)){
       postsCarrossel.push(posts[i])
     }
     i+=1;

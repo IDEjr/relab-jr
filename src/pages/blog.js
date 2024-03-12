@@ -18,7 +18,7 @@ export default function blog({ posts, nav, foo }) {
   return (
     <>
       <Navbar {...navData}/>
-      <CarrosselBlog {...posts}/>  
+      <CarrosselBlog posts = {posts}/>  
       <MenuBlog posts = {posts}/>
       <Footer {...foo}/>
     </> 
