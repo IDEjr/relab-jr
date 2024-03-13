@@ -14,7 +14,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectFlip, Pagination, Navigation, Autoplay } from "swiper/modules";
 
 
-export default function CarrosselQuemSomos({images}) {
+export default function CarrosselQuemSomos({ imagens }) {
   // images = images[0];  //pega os dados do array passado (os dados vem em formato de array, e a posição 0 está com os dados que precisamos)
   // var arrImages = [];
   // for (const i in images) {
@@ -22,7 +22,7 @@ export default function CarrosselQuemSomos({images}) {
   // }
   // images = arrImages //atribuindo a images
 
-console.log(`ta aqui ó ${images}`);
+console.log(`ta aqui ó ${imagens}`);
   return (
     <>
       <div className={Styles.container}>
@@ -41,7 +41,6 @@ console.log(`ta aqui ó ${images}`);
           slidesPerView={1}  //define a quantidade de slides por visualização
           loop = {true}
           grabCursor={true}  //ativando o grabCursor com configurações default
-         
           //  pagination={{   //configurações da pagination
           //    clickable: true   
           //  }}
@@ -63,7 +62,7 @@ console.log(`ta aqui ó ${images}`);
               }}}}
         >
 
-          {images.map((item) => (     //mostra um slide para cada imagem contida em images
+          {imagens.map((item) => (     //mostra um slide para cada imagem contida em images
             <SwiperSlide key={item} className={Styles.swiperSlide} >
               <div className={Styles.image}>
 
