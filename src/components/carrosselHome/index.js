@@ -58,7 +58,7 @@ export default function CarrosselHome(props) {
           modules={[Autoplay]}
           grabCursor={true}
           pagination={{
-            clickable:true
+            enabled: false
           }}
 
           navigation={{  //configurações do navi
@@ -66,11 +66,17 @@ export default function CarrosselHome(props) {
           }}
 
           breakpoints={{
-            1281: {  //acima de 800px, aumenta os slides por visualização para dois, e ativa o navigation (as setinhas)
+            1281: {  //acima de 1281px, ativa o navigation (as setinhas) e o pagination (as bolinhas)
               
               navigation: {
                 enabled: true  
-              }}}}
+            }},
+            767: {  //acima de 1281px, ativa o navigation (as setinhas) e o pagination (as bolinhas)
+              
+             pagination: {
+              enabled: true
+            }}
+          }}
          
           
           
