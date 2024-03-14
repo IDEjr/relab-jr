@@ -3,10 +3,11 @@
     width: 100%;
     justify-content: center;
     align-items: center;    
+    margin-bottom: 30px;
 }
 
 section .swiperContainer{
-    width: 80%;
+    width: 90%;
 
     display: block;
 }
@@ -34,11 +35,21 @@ section .swiperContainer{
     display: block;
 }
 
-@media only screen  and (min-width: 1281px)   {
+
+@media only screen  and (min-width: 767px)   {
 
     .swiperIndi{
         padding: 50px;
       
+    }
+  
+
+
+}
+
+@media only screen  and (min-width: 1025px)   {
+    section .swiperContainer{
+        width: 60%;
     }
   
 
