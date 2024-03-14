@@ -1,5 +1,5 @@
 import styles from './carrosselHome.module.css'
-import CardPosts from '../cardPosts'
+import CardPostsHome from '../cardPostsHome'
 import { register } from 'swiper/element/bundle'
 
 register();
@@ -52,7 +52,7 @@ export default function CarrosselHome(props) {
           }
           }  
           autoplay ={{
-            delay: 5000,
+            delay: 10000000,
             disableOnInteraction: false,
           }}
           modules={[Autoplay]}
@@ -87,7 +87,7 @@ export default function CarrosselHome(props) {
         {posts.map((item)=> (
           
         <SwiperSlide key={item.titulo} className={styles.swiperIndi}>
-          <CardPosts 
+          <CardPostsHome 
             imagem={item.imagemCapa}
             fileName={item.fileName}
             
