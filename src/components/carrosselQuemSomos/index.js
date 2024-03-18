@@ -32,18 +32,17 @@ console.log(`ta aqui ó ${imagens}`);
             "--swiper-pagination-color": "#F2C12E",
             "--swiper-pagination-bullet-inactive-color": "#999999",   //algumas estilizações do navigation, pagination
             "--swiper-pagination-bullet-inactive-opacity": "1",
-            "--swiper-pagination-bullet-size": "16px",
             "--swiper-pagination-bullet-border-radius": "0",
-            "--swiper-pagination-bullet-width": "40px",
+            "--swiper-pagination-bullet-width": "30px",
             "--swiper-pagination-bullet-height": "6px",
             "--swiper-pagination-bullet-horizontal-gap": " 15px"
           }}
           slidesPerView={1}  //define a quantidade de slides por visualização
           loop = {true}
           grabCursor={true}  //ativando o grabCursor com configurações default
-          //  pagination={{   //configurações da pagination
-          //    clickable: true   
-          //  }}
+            pagination={{   //configurações da pagination
+              clickable: true   
+            }}
 
           navigation={{  //configurações do navi
             enabled: false
@@ -53,7 +52,7 @@ console.log(`ta aqui ó ${imagens}`);
             delay: 5000,
             disableOnInteraction: false
           }}
-  
+          
           breakpoints={{
             800: {  //acima de 800px, aumenta os slides por visualização para dois, e ativa o navigation (as setinhas)
               slidesPerView: 2,
