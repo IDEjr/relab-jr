@@ -9,7 +9,7 @@ import FormularioServicos from '../components/formularioServicos'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
 
 
-export default function servicos({ servicos, nav, foo, formularios }) {
+export default function servicos({ servicos, nav, foo, forms }) {
 
   const navData = {
     logo : nav.logo,
@@ -53,7 +53,7 @@ export default function servicos({ servicos, nav, foo, formularios }) {
       <Inicio titulo = {tituloServicos} imagem = {imagemServicos}/>
       <TextoServicos {...inicioServicos}/>
       <EscoposServicos {...blocosServicos}/>
-      <FormularioServicos {...formularios}/>
+      <FormularioServicos {...forms}/>
       <Footer {...foo}/>
     </>
   );
@@ -65,9 +65,9 @@ export async function getStaticProps(){
   const foo = handleJSONfile(`./content/navFooter/footer.json`);
   const servicos = handleJSONfile(`./content/paginas/servicos.json`);
   const nav = handleJSONfile(`./content/navFooter/navbar.json`);
-  const formularios = handleJSONfile(`./content/forms/forms.json`);
+  const forms = handleJSONfile(`./content/forms/forms.json`);
 
   return {
-    props: { servicos, nav, foo, formularios },
+    props: { servicos, nav, foo, forms },
   };
 }

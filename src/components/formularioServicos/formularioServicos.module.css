@@ -88,10 +88,10 @@
 }
 
 .iconsContainer{
-    width: 20%;
+    /* width: 20%; */
     position: relative;
-    margin-top: 5%;
-    margin-left: 10%;
+    margin-top: 2rem;
+    margin-left: 4rem;
 }
 
 .icons{

@@ -1,13 +1,11 @@
 import { useForm } from "react-hook-form";
 import { isEmail } from "validator";
-import styles from "./formularioServicos.module.css"
 import { sendContactForm } from "./../../lib/api";
+import styles from "./formularioServicos.module.css"
 import { FaRegComment, FaRegEnvelope, FaHome } from "react-icons/fa";
 
 
-export default function formularioServicos(formularios) {
-
-    console.log(formularios)
+export default function formularioServicos(forms) {
 
     const {
         register,
@@ -16,14 +14,13 @@ export default function formularioServicos(formularios) {
     } = useForm();
 
     const onSubmit = async (data) => {
-        console.log(data);
         await sendContactForm(data);
     }
 
     return(
         <div className={styles.mainContainer}>
             <h2 className={styles.title}>
-                {formularios.tituloServicos}
+                {forms.tituloServicos}
             </h2>
             <div className={styles.formIconsContainer}>
                 <div className={styles.formContainer}>
@@ -101,20 +98,23 @@ export default function formularioServicos(formularios) {
                 </div>
                 <div className={styles.iconsContainer}>
                     <p className={styles.iconsP}>
-                        <FaRegComment className={styles.icons} /> Celular
+                        <FaRegComment className={styles.icons}/>
+                        {forms.celular}
                     </p>
                     <p className={styles.iconsP}>
-                        <FaRegEnvelope className={styles.icons} /> E-mail
+                        <FaRegEnvelope className={styles.icons}/>
+                        {forms.email}
                     </p>
                     <p className={styles.iconsP}>
-                        <FaHome className={styles.icons} /> Endereço 1 
+                        <FaHome className={styles.icons}/>
+                        {forms.endereco1} 
                     </p>
                     <p className={styles.iconsP}>
-                        <FaHome className={styles.icons} /> Endereço 2 
+                        <FaHome className={styles.icons}/>
+                        {forms.endereco1} 
                     </p>
                 </div>
             </div>
         </div>
     );
-
 };

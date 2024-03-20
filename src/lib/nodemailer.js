@@ -1,15 +1,17 @@
-import nodemaliler from "nodemailer";
+import nodemaliler from "nodemailer"
+import { handleJSONfile } from '@/utils/functions/jsonHandler'
 
-// const email = "caue.scotti@gmail.com";
-const email = "";
-// const pass = "xyeklutnnseearxr";
-const pass = "";
+
+const forms = handleJSONfile(`./content/forms/forms.json`);
+
+const password = forms.senhaApp;
+const email = forms.emailForm;
 
 export const transporter = nodemaliler.createTransport({
     service: 'gmail',
     auth:{
         user: email,
-        pass: pass
+        pass: password
     }
 
 });
