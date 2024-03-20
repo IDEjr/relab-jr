@@ -95,8 +95,9 @@
   border-radius: 10px;
 }
 .button:hover {
-  background: #f1c43c;
-  
+  transition: .2s;
+  background: #f2c12e92;
+  color: white;
 }
 
 
