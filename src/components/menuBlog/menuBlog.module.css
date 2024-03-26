@@ -107,7 +107,6 @@
   .containerMobile{
     display: flex;
     flex-direction: column;
-   
     background: none;
     box-shadow: none;
     background-color: none;
@@ -149,12 +148,20 @@
     background-color: #F2C12E;
   }
 
+  .dropdownInactive{
+    opacity: 0;
+    height: 0;
 
-  .optionsMobile {
+  }
+
+
+  .dropdownActive {
     width: 100%;
     position: relative;
     align-self: flex-end;
-    border-radius: 15px;    
+    border-radius: 15px; 
+    opacity: 1;
+    transition: 1s;
   }
 
   .containerDesktop{

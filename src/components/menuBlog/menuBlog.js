@@ -40,7 +40,7 @@ export default function MenuBlog({posts}) {
         return (
             
             <>
-                <li key={'todos'} tabIndex={0} className={Styles.teste}>
+                <li key={'todos'} tabIndex={0}>
                     <button className={atual === "TODOS"? Styles.active: Styles.button} onClick={() => filter("TODOS", posts)} tabIndex={0} > Todos </button>
                 </li>
                 {filteredgenders.map((filteredgenders) => (
@@ -66,7 +66,7 @@ export default function MenuBlog({posts}) {
                             <h4 onClick={() => setIsactive(!isActive)} className={Styles.optionButton}  ><GoChevronDown className={Styles.icone} /></h4>
                                 
                             </div>
-                           <div className={Styles.optionsMobile}> {isActive && (<RenderOptions />)}</div>                        
+                           <div className={isActive? Styles.dropdownActive: Styles.dropdownInactive}> <RenderOptions /></div>                        
                         </div>
 
                         <div className={Styles.containerDesktop}> {/* div desktop */}                           
