@@ -47,6 +47,7 @@
 	border: none;
 	outline: none;
 	color: white;
+	/* color: #F2C12E; */
 	visibility: hidden;
 	opacity: 0;
 	font-size: 1.8rem;
@@ -57,9 +58,9 @@
 	align-items: center;
 }
 
-.links {
+/* .links {
 	color: #F2C12E;
-}
+} */
 
 
 
@@ -85,9 +86,6 @@
 	}
 
 
-
-
-	
 
 	.cabecalho .navbar {
 		position: fixed;
@@ -116,6 +114,7 @@
 	.navbar .navCloseBtn {
 		position: absolute;
 		top: 2rem;
+		color: white;
 		right: 2rem;
 	}
 	
@@ -137,6 +136,16 @@
 
 	.droplogo{
 		display: none;
+		color: white;
 	}
 
+}
+
+
+
+/* removendo "style" do js */
+.socialNetworks {
+	color:#F2C12E !important;
+	font-size: 1.5em;
+	margin-top: 150px;
 }
