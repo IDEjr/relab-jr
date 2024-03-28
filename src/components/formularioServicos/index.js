@@ -3,6 +3,7 @@ import { isEmail } from "validator";
 import { sendContactForm } from "./../../lib/api";
 import styles from "./formularioServicos.module.css"
 import { FaRegComment, FaRegEnvelope, FaHome } from "react-icons/fa";
+import Image from 'next/image'
 
 
 export default function formularioServicos(forms) {
@@ -19,12 +20,20 @@ export default function formularioServicos(forms) {
 
     return(
         <div className={styles.mainContainer}>
+            <div className={styles.logo}>
+                <Image
+                    src={forms.logo}
+                    width={150}
+                    height={150}
+                />
+            </div>
+            
             <h2 className={styles.title}>
                 {forms.tituloServicos}
             </h2>
             <div className={styles.formIconsContainer}>
                 <div className={styles.formContainer}>
-                    <div className={styles.halfContainer}>
+                    <div className={styles.smallField}>
                         <input
                             className={errors?.name && styles.input_error}
                             type="text"
@@ -36,7 +45,7 @@ export default function formularioServicos(forms) {
                         )}
                     </div>
 
-                    <div className={styles.halfContainer}>
+                    <div className={styles.smallField}>
                         <input
                             className={errors?.email && styles.input_error}
                             type="email"
@@ -55,23 +64,25 @@ export default function formularioServicos(forms) {
                         )}
                     </div>
 
-                    <div className={styles.halfContainer}>
+                    <div className={styles.smallField}>
+                        {/* <label className={styles.label_form}>Celular:</label> */}
                         <input
                             className={errors?.name && styles.input_error}
                             type="tell"
                             placeholder="Celular*"
-                            {...register("numero", { required: true })}
+                            // pattern="[0-9]{2} \[0-9]{5}\-[0-9]{4}"
+                            {...register("celular", { required: true })}
                         />
-                        {errors?.numero?.type === "required" && (
+                        {errors?.celular?.type === "required" && (
                             <p className={styles.error_message}>Campo obrigatório</p>
                         )}
 
-                        {errors?.numero?.type === "validate" && (
+                        {errors?.celular?.type === "validate" && (
                             <p className={styles.error_message}>Número inválido.</p>
                         )}
                     </div>
 
-                    <div className={styles.halfContainer}>
+                    <div className={styles.smallField}>
                         <input
                             className={errors?.name && styles.input_error}
                             type="text"
@@ -83,16 +94,17 @@ export default function formularioServicos(forms) {
                         )}
                     </div>
 
-                    <div className={styles.fullContainer}>
+                    <div className={styles.largeField}>
                         <textarea
                             className={errors?.name && styles.input_error}
+                            // id={styles.mensagem}
                             type="text"
                             placeholder="Sua mensagem"
                             {...register("mensagem", { required: false })}
                         />
                     </div>
 
-                    <div className={styles.halfContainer}>
+                    <div className={styles.smallField}>
                         <button onClick={() => handleSubmit(onSubmit)()}>Enviar</button>
                     </div>
                 </div>

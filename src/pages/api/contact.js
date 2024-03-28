@@ -4,19 +4,24 @@ const handler = async (req, res) => {
 
     if (req.method === "POST"){
         const data = JSON.parse(req.body);
-        if (!data.nome || !data.email || !data.numero || !data.assunto){
-            return res.status(400).json({ message: 'Bosta'})
+        if (!data.nome || !data.email || !data.celular || !data.assunto){
+            return res.status(400).json({ message: 'Erro no preenchimento. Nome, email, celular, assunto inexistente.'})
         }
 
         try {
             await transporter.sendMail({
-                ...mailOptions,
+                ...mailOptions, 
                 subject: data.assunto,
-                text:  "TESTE, TESTE, TESTE",
+                text:
+                `Nome: ${data.nome}\n` +
+                `Celular: ${data.celular}\n` +
+                `E-mail: ${data.email}\n` +
+                `_______________________________________________________________________________________________________________________________________\n` +
+                `${data.mensagem}`,
                 html:  `<p>Nome: ${data.nome}</p>
-                        <p>Número: ${data.numero}</p>
+                        <p>Celular: ${data.celular}</p>
                         <p>E-mail: ${data.email}
-                        <p>_____________________________________________________________________________</p>
+                        <hr/>
                         <p>${data.mensagem}</p>`
             })
             return res.status(200).json({ sucess: true });
