@@ -1,5 +1,5 @@
 .valores{
-    height: 70vh;
+    height: 70%;
     padding-bottom: 1em;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -71,7 +71,8 @@
 
 .titleGrande{
     width: 40vw;
-    height: 10vh;
+    height: 10%;
+    height: 10%;
     border: #F2C12E;
     background-color: #F2C12E;
     margin-left: auto;
@@ -85,7 +86,7 @@
 }
 
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 767px) {
     .valores {
         grid-template-columns: 1fr; /* Uma única coluna */
         grid-template-rows: auto auto auto auto auto ;
@@ -114,7 +115,7 @@
         font-size: 3vh;
         font-weight: 500;
         width: 80%;
-
+        padding: 3%;
     }
     .textValores{
         width: 60%;

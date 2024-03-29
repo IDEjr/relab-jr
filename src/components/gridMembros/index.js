@@ -2,7 +2,7 @@ import Image from 'next/image'
 import styles from './gridMembros.module.css'
 import CardMembros from '../cardMembros';
 
-export default function gridMembros({titulo, logo ,membros }) {
+export default function gridMembros({ titulo, logo, membros }) {
     
   //const cargos = ['Presidência','Vice-Presidência','Diretoria','Assessoria','Gerência','Consultoria']; 
   let Ps = [];
@@ -13,10 +13,12 @@ export default function gridMembros({titulo, logo ,membros }) {
   let Cons = [];
   let aux = membros[0];
   for (let i in membros){
-    if(membros[i].posicao.includes('Presidência')){
+    if(membros[i].posicao == 'Presidência'){
+      console.log(membros[i]);
       Ps.push(membros[i]);
       
-    }else if(membros[i].posicao.includes('Vice-Presidência')){
+    }else if(membros[i].posicao == ('Vice-Presidência')){
+      console.log(membros[i]);
       VPs.push(membros[i]);
     }else if(membros[i].posicao.includes('Diretoria')){
       Dir.push(membros[i]);

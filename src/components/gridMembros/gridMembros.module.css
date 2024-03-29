@@ -46,7 +46,7 @@
 }
 @media only screen and (min-width: 577px) and (max-width: 768px) {
     .chamariz{
-        margin-top: 30vh;
+        margin-top: 100px;
     }
     
 
@@ -61,7 +61,7 @@
 }
 @media only screen and (max-width: 576px) {
     .chamariz{
-        margin-top: 400px;
+        margin-top: 100px;
     }
     .logoGrid{
         display: none;

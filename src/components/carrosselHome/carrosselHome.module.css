@@ -1,22 +1,22 @@
 .carrossel{
-    height: 80vh;
+    height: 100%;
     width: 100%;
     justify-content: center;
     align-items: center;    
+    margin-bottom: 30px;
 }
 
-
 section .swiperContainer{
-  width: 80%;
+    width: 90%;
 
-  display: block;
+    display: block;
 }
 
 .swiperIndi{
     height: 100%;
     width: 90%;
-  
 }
+
 .margin{
     height: 50px;
 }
@@ -24,7 +24,6 @@ section .swiperContainer{
 .espacoLateral{
     width: 50px;
 }
-
 
 .titleSection{
     padding: 5rem;
@@ -37,12 +36,20 @@ section .swiperContainer{
 }
 
 
-
-@media only screen  and (min-width: 1281px)   {
+@media only screen  and (min-width: 767px)   {
 
     .swiperIndi{
         padding: 50px;
       
+    }
+  
+
+
+}
+
+@media only screen  and (min-width: 1025px)   {
+    section .swiperContainer{
+        width: 60%;
     }
   
 
