@@ -51,7 +51,7 @@
   line-height: 3.5vh;
 }
 
-.text-content { /* formatação  de todos os textos*/
+.textContent { /* formatação  de todos os textos*/
   color: #ffff;
   text-align: justify;
 }
@@ -105,7 +105,7 @@
     height: fit-content;
   }
   
-  .text-content {
+  .textContent {
     text-align: justify;
     font-size: 3vw;
     height: 100%;      

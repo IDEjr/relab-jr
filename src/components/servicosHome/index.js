@@ -6,23 +6,23 @@ import Image from 'next/image'
 
 function cadaServico(frame) { 
   return(
-    <div className={styles['individual-block']}>
-      <h3 className={styles['top-text']}>
+    <div className={styles.individualBlock}>
+      <h3 className={styles.topText}>
         {frame.texto}
       </h3>
-      <div className={styles['frames']}>
-        <div className={styles['overlayGrid']}>
-          {/* <div className={styles['arrow-shape']}/> */}
+      <div className={styles.frames}>
+        <div className={styles.overlayGrid}>
+          {/* <div className={styles.arrowShape}/> */}
           {/* <Image
             src={yellowArrow}
-            className={styles['arrow']}
+            className={styles.arrow}
             width={2000}
             height={2000}
             quality={100}
             /> */}
           <Image
             src={frame.imagem}
-            className={styles['insideImg']}
+            className={styles.insideImg}
             width={2000}
             height={2000}
             quality={100}
@@ -67,18 +67,18 @@ export default function servicosHome({servicosHome}) {
 
   return(
     <>
-      <div className={styles['container']}>
-        <h1 className={styles['title-text']}>NOSSOS SERVIÇOS</h1>
-        <div className={styles['blocks-handler']}>
-          <div className={styles['first-two']}>
+      <div className={styles.container}>
+        <h1 className={styles.titleText}>NOSSOS SERVIÇOS</h1>
+        <div className={styles.blocksHandler}>
+          <div className={styles.firstTwo}>
             {cadaServico(firstFrame)}
             {cadaServico(secondFrame)}
           </div>
-          <div className={styles['second-two']}>
+          <div className={styles.secondTwo}>
             {cadaServico(thirdFrame)}
             {cadaServico(fourthFrame)}
           </div>
-          <div className={styles['third-two']}>
+          <div className={styles.thirdTwo}>
             {cadaServico(fifthFrame)}
             {cadaServico(sixthFrame)}
           </div>

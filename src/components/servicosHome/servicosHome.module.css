@@ -12,7 +12,7 @@
 }
 
 /*
-.upper-part {
+.upperPart {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -22,7 +22,7 @@
 }
 
 
-.lower-part {
+.lowerPart {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -34,7 +34,7 @@
 */
 
 
-.blocks-handler {
+.blocksHandler {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -46,7 +46,7 @@
 }
 
 
-.first-two {
+.firstTwo {
   display: flex;
   flex-direction: column;
   gap:5vh;
@@ -54,7 +54,15 @@
 }
 
 
-.second-two {
+.secondTwo {
+  display: flex;
+  flex-direction: column;
+  gap:5vh;
+  width: 100%;
+} 
+
+
+.thirdTwo {
   display: flex;
   flex-direction: column;
   gap:5vh;
@@ -62,15 +70,7 @@
 }
 
 
-.third-two {
-  display: flex;
-  flex-direction: column;
-  gap:5vh;
-  width: 100%;
-}
-
-
-.title-text {
+.titleText {
   display: flex;
   justify-content: center;
   color: #F2C12E;
@@ -87,7 +87,7 @@ each service
 */
 
 
-.individual-block {
+.individualBlock {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -126,7 +126,7 @@ each service
 }
 
 
-.arrow-shape {
+.arrowShape {
   background-color: #a3852b;
   clip-path: polygon(0px 450px, 266px 29px, 251px 20px, 294px 2px, 293px 45px, 279px 37px, 0px 480px);
   z-index: 3;
@@ -147,7 +147,7 @@ each service
 }
 
 
-.top-text {
+.topText {
   color: #fff;
   width: 90%;
   height: 10vh;
@@ -167,11 +167,11 @@ each service
     display: flex;
   }
 
-  .title-text {
+  .titleText {
     width: 100%;
   }
 
-  .blocks-handler {
+  .blocksHandler {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -183,7 +183,7 @@ each service
     border:18px solid #f2c12e99;
   }
 
-  .individual-block {
+  .individualBlock {
     width: 100%;
   }
 
@@ -196,7 +196,7 @@ each service
     height: 630px;
   }
 
-  .arrow-shape {
+  .arrowShape {
     clip-path: polygon(0px 450px, 231px 63px, 213px 54px, 259px 32px, 262px 80px, 245px 71px, 0px 480px);
   }
 
@@ -204,19 +204,19 @@ each service
     height: 500;
   }
 
-  .first-two {
+  .firstTwo {
     flex-direction: row;
     width: 90vw;
     gap:18vw;
   }
 
-  .second-two {
+  .secondTwo {
     flex-direction: row;
     width: 90vw;
     gap:18vw;
   }
 
-  .third-two {
+  .thirdTwo {
     flex-direction: row;
     width: 90vw;
     gap:18vw;
@@ -224,27 +224,27 @@ each service
 }
 
 @media (max-width: 1000px) {
-  .blocks-handler {
+  .blocksHandler {
     align-items: center;
     gap : 15vh;
     padding-left: 13vw;
   }
 
-  .first-two {
+  .firstTwo {
     width: 80vw;
 
     flex-direction: column;
     gap: 15vh;
   }
 
-  .second-two {
+  .secondTwo {
     width: 80vw;
 
     flex-direction: column;
     gap: 15vh;
   }
 
-  .third-two {
+  .thirdTwo {
     width: 80vw;
 
     flex-direction: column;
@@ -256,12 +256,12 @@ each service
     height: 500px;
   }
 
-  .title-text {
+  .titleText {
     padding-top: 7vh;
     padding-bottom: 7vh;
   }
 
-  .top-text {
+  .topText {
     display: flex;
     width: 80vw;
     justify-content: center;
@@ -282,7 +282,7 @@ each service
     height: 500px;
   }
 
-  .arrow-shape {
+  .arrowShape {
     height: 550px;
     clip-path: polygon(0px 312px, 337px 45px, 326px 32px, 383px 17px, 359px 70px, 349px 58px, 0px 333px);
   }
@@ -291,7 +291,7 @@ each service
 
 @media (max-width: 580px) {
 
-  .arrow-shape {
+  .arrowShape {
     clip-path: polygon(0px 312px, 207px 58px, 195px 49px, 239px 33px, 229px 76px, 218px 67px, 0px 333px);
   }
 }
@@ -310,18 +310,18 @@ each service
     height: 490px;
   }
 
-  .arrow-shape {
+  .arrowShape {
     clip-path: polygon(0px 312px, 207px 58px, 195px 49px, 239px 33px, 229px 76px, 218px 67px, 0px 333px);
   }
 }
 
 
 @media (max-width: 380px) {
-  .title-text {
+  .titleText {
     text-align: center;
   }
 
-  .top-text {
+  .topText {
     height: 150px;
   }
 
@@ -333,7 +333,7 @@ each service
     height: 490px;
   }
 
-  .arrow-shape {
+  .arrowShape {
     clip-path: polygon(0px 312px, 111px 60px, 98px 54px, 134px 26px, 135px 70px, 122px 65px, 0px 333px);
   }
 }

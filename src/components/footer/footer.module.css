@@ -8,15 +8,14 @@
   justify-content: space-between;
   gap:1vh;
   position: absolute;
-  
 }
 
-.bg-img-handle {
+.bgImgHandle {
   position: relative;
   z-index: 0;
 }
 
-.linear-gradient {
+.linearGradient {
   background-color: #262626;
   width: 100%;
   height: 100%;
@@ -33,7 +32,6 @@
   align-items: flex-start;
   gap:10vw;
   z-index: 1;
-  
 }
 
 
@@ -64,7 +62,7 @@
 }
 
 
-.social-icons {
+.socialIcons {
   display: flex;
   cursor: alias;
   width: 70%;
@@ -74,7 +72,7 @@
 
 /* css for the bottom part of the footer */
 
-.bottom-part {
+.bottomPart {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -97,7 +95,7 @@
 }
 
 
-.membership-icons {
+.membershipIcons {
   display:flex;
   align-self: flex-start;
   gap:2vw;
@@ -115,39 +113,45 @@
     align-items: center;
     height: 80%;
     gap:0;
-
   }
+
   .contactText {
     padding-top: 2vh;
     font-size:larger;
   }
+
   .relabIcon {
     width: 17vw;
     height: 12vh;
     display: flex;
     padding: 0;
   }
+
   .logoImg {
     width: 17vw;
     height: 120px;
   }
+
   .insideImg {
     width: 40px;
     height: 40px;
   }
+
   .contactSocials {
     padding: 0;
     width: 25vw;
     
   }
-  .bottom-part {
+
+  .bottomPart {
     display:flex;
     padding-right: 0;
     flex-direction: column;
     align-items: center;
     height: 20%;
   }
-  .membership-icons {
+
+  .membershipIcons {
     display: flex;
     width: 100%;
     justify-content: space-around;
@@ -157,7 +161,8 @@
     width: 120px;
     height: 40px;
   }
-  .social-icons {
+
+  .socialIcons {
     width: 85%;
   }
 }
@@ -168,20 +173,23 @@
     width: 70px;
     height: 30px;
   }
-  .membership-icons {
+
+  .membershipIcons {
     width: 100%;
   }
 
-  .unisinos-icon {
+  .unisinosIcon {
     width: 100px;
   }
   
   .footerText {
     font-size: 3vw;
   }
+
   .relabIcon {
     padding-left: +2vw;
   }
+
   .topPart {
     padding-top: 1vh;
   }
@@ -190,14 +198,17 @@
     width: 120px;
     height: 120px;
   }
+
   .logoImg {
     width: 120px;
     height: 120px;
   }
+
   .contactSocials {
     width: 40vw;
     padding-right: 0;
   }
+
   .contactText {
     display: flex;
     width: 60vw;
@@ -205,11 +216,11 @@
     padding-left: 2vw;
     font-size: small;
   }
-  .social-icons {
+
+  .socialIcons {
     width: 20vw;
     justify-content: center;
     gap:+5vw;
-    
   }
 
   .insideImg {
