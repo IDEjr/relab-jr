@@ -277,6 +277,18 @@ collections:
       - {label: "LinkedIn", name: "linkedin", widget: "string", required: false}
 
 
+  - label: "Serviços"
+    name: "servicos"
+    extension: "json"
+    description: "Serviços da Relab Jr"
+    folder: "content/servicos"
+    create: true
+    slug: "{{fields.servico}}"
+    fields:
+      - {label: "Serviço", name: "servico", widget: "string", pattern: ['^.{1,50}$', "Máximo 50 carateres."]}
+      - {label: "Imagem", name: "imagem", widget: "image"}
+      - {label: "Descrição", name: "descricao", widget: "text"}
+
 
   - label: "Navbar e Footer"
     name: "navFooter"
