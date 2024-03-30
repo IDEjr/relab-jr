@@ -32,37 +32,23 @@ function cadaServico(frame) {
     </div>
   )
 }
-
-export default function servicosHome({servicosHome}) {
-
-  const firstFrame = {
-    imagem : servicosHome.imagem1,
-    texto : servicosHome.servico1
+function servicesHandler(){
+  for(var i = 0; i <= (servicos.length)/3; i+=3){
+    
   }
+  return(
+    <div></div>
+  )
+}
+export default function servicosHome({servicosHome, servicos}) {
 
-  const secondFrame = {
-    imagem : servicosHome.imagem2,
-    texto : servicosHome.servico2
-  }
-
-  const thirdFrame = {
-    imagem : servicosHome.imagem3,
-    texto : servicosHome.servico3
-  }
-
-  const fourthFrame = {
-    imagem : servicosHome.imagem4,
-    texto : servicosHome.servico4
-  }
-
-  const fifthFrame = {
-    imagem : servicosHome.imagem5,
-    texto : servicosHome.servico5
-  }
-
-  const sixthFrame = {
-    imagem : servicosHome.imagem6,
-    texto : servicosHome.servico6
+  var frames = new Array();
+  for(var i = 0; i < servicos.length; i++){
+    const frame = {
+      imagem : servicos[i].imagem,
+      texto :  servicos[i].servico
+    }
+    frames[i] = frame;
   }
 
   return(
@@ -71,16 +57,16 @@ export default function servicosHome({servicosHome}) {
         <h1 className={styles.titleText}>NOSSOS SERVIÇOS</h1>
         <div className={styles.blocksHandler}>
           <div className={styles.firstTwo}>
-            {cadaServico(firstFrame)}
-            {cadaServico(secondFrame)}
+            {cadaServico(frames[0])}
+            {cadaServico(frames[1])}
           </div>
           <div className={styles.secondTwo}>
-            {cadaServico(thirdFrame)}
-            {cadaServico(fourthFrame)}
+            {cadaServico(frames[2])}
+            {cadaServico(frames[3])}
           </div>
           <div className={styles.thirdTwo}>
-            {cadaServico(fifthFrame)}
-            {cadaServico(sixthFrame)}
+            {cadaServico(frames[4])}
+            {cadaServico(frames[5])}
           </div>
         </div>
       </div>
