@@ -7,7 +7,7 @@ import { FaRegComment, FaRegEnvelope, FaHome } from "react-icons/fa";
 
 export default function formularioServicos(formularios) {
 
-  console.log(formularios)
+  // console.log(formularios)
 
   const {
     register,
@@ -16,7 +16,7 @@ export default function formularioServicos(formularios) {
   } = useForm();
 
   const onSubmit = async (data) => {
-    console.log(data);
+    // console.log(data);
     await sendContactForm(data);
   }
 

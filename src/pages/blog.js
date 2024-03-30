@@ -6,7 +6,7 @@ import { handleJSONfile } from '../utils/functions/jsonHandler'
 import MenuBlog from '@/components/menuBlog/menuBlog'
 import CarrosselBlog from '@/components/carrosselBlog'
 
-export default function blog({ posts, nav, foo }) {
+export default function Blog({ posts, nav, foo }) {
 
   const navData = {
     logo: nav.logo,

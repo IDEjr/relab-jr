@@ -13,10 +13,10 @@ export default function gridMembros({ titulo, logo, membros }) {
   let aux = membros[0];
   for (let i in membros){
     if(membros[i].posicao == 'Presidência'){
-      console.log(membros[i]);
+      // console.log(membros[i]);
       Ps.push(membros[i]);
     }else if(membros[i].posicao == ('Vice-Presidência')){
-      console.log(membros[i]);
+      // console.log(membros[i]);
       VPs.push(membros[i]);
     }else if(membros[i].posicao.includes('Diretoria')){
       Dir.push(membros[i]);
@@ -30,7 +30,7 @@ export default function gridMembros({ titulo, logo, membros }) {
   }
 
   membros = [...Ps,...VPs,...Dir,...Ass,...Ger,...Cons];
-  console.log(membros)
+  // console.log(membros)
   return (
     <>
       <div className={styles.chamariz}>

@@ -9,7 +9,7 @@ import CarrosselQuemSomos from '@/components/carrosselQuemSomos'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
 
-export default function quemSomos({ quemSomos, membros, nav, foo }) {
+export default function QuemSomos({ quemSomos, membros, nav, foo }) {
 
   const navData = {
     logo: nav.logo,

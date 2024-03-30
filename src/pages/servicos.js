@@ -9,7 +9,7 @@ import FormularioServicos from '../components/formularioServicos'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
 
 
-export default function servicos({ servicos, nav, foo, formularios }) {
+export default function Servicos({ servicos, nav, foo, formularios }) {
 
   const navData = {
     logo : nav.logo,

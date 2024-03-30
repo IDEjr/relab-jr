@@ -7,7 +7,8 @@ export default function inicio(props) {
   return (
     <>
       <div className={styles.container}>
-        <Image src={props.imagem}
+        <Image
+          src={props.imagem}
           width={1920}
           height={400}
           alt='Imagem Inicio'
