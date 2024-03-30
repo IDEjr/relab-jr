@@ -60,7 +60,7 @@ export default function Posts({ content, nav, foo }) {
 
 
           <text className={styles.details}>
-            <a href='https://www.youtube.com/watch?v=UjdREuYhSx8&list=RDUjdREuYhSx8&start_radio=1&ab_channel=NimaFarzaneh' className={styles['autor']}>
+            <a href={content.linkedin} className={styles['autor']}>
               {content.autor}
             </a>
             <span />
@@ -88,7 +88,7 @@ export default function Posts({ content, nav, foo }) {
             <div className={styles.authorAndPencil}>
               <Image src={pencilImg} />
               <text className={styles.authorName}>
-                <a href='https://www.youtube.com/watch?v=UjdREuYhSx8&list=RDUjdREuYhSx8&start_radio=1&ab_channel=NimaFarzaneh' className={styles['autor']}>
+                <a href={content.linkedin} className={styles['autor']}>
                   {content.autor}
                 </a>
               </text>
