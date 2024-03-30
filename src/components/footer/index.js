@@ -14,7 +14,7 @@ export default function Footer(footerData) {
   return (
       <div className={styles.footer}>
         <div className={styles.linearGradient}/>
-        <Image 
+        {/* <Image 
         src={footerData.background}
         
         layout="fill"
@@ -23,7 +23,7 @@ export default function Footer(footerData) {
         className={styles.bgImgHandle}
         
         >
-        </Image>
+        </Image> */}
         <div className={styles.topPart}>
           <button onClick={handleMove} className={styles.relabIcon}>
             <Image
