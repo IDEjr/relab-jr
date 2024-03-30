@@ -72,7 +72,7 @@ export default function CarrosselBlog({posts}) {
             slidesPerView="auto"
             
             // pagination={{ clickable: next }} //permite a troca de páginas pelo pagination
-            navigation={{  enabled: false}}
+            navigation={{  enabled: false, disabledClass: `${styles.navdisabled}`}}
             autoplay={{  delay: 5000, disableOnInteraction: false  }}
             className={styles.swiperContainer}
             breakpoints={{ 800: {  navigation: { enabled: true }  }}}  //se a tela for maior que 800 pixels, ativa o navigation(as setinhas)
