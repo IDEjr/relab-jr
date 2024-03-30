@@ -17,6 +17,6 @@ export const transporter = nodemaliler.createTransport({
 });
 
 export const mailOptions = {
-    from: email,
-    to: email,
+  from: email,
+  to: email,
 };

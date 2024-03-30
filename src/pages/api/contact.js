@@ -31,6 +31,25 @@ const handler = async (req, res) => {
             return res.status(400).json({ message: error.message });
         }
     }
+
+    try {
+      await transporter.sendMail({
+        ...mailOptions,
+        subject: data.assunto,
+        text: "TESTE, TESTE, TESTE",
+        html: `<p>Nome: ${data.nome}</p>
+              <p>Número: ${data.numero}</p>
+              <p>E-mail: ${data.email}
+              <p>_____________________________________________________________________________</p>
+              <p>${data.mensagem}</p>`
+      })
+      return res.status(200).json({ sucess: true });
+
+    } catch (error) {
+      console.log(error);
+      return res.status(400).json({ message: error.message });
+    }
+  }
 };
 
 export default handler;

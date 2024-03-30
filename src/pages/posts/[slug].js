@@ -17,8 +17,6 @@ const handleMove = () => {
 };
 
 
-
-
 export default function Posts({ content, nav, foo }) {
   const router = useRouter();
   const { postId } = router.query
@@ -33,56 +31,52 @@ export default function Posts({ content, nav, foo }) {
     // formata data
     var dataForm;
     dataForm = content.data.substring(8, 10) + '/' + content.data.substring(5, 7) + '/' + content.data.substring(0, 4);
-  
-  
 
   return (
-    <div className={styles['container']}>
+    <div className={styles.container}>
       <React.Fragment>
       <Navbar  {...navData}/>
       </React.Fragment>
-      <div className={styles['top-part']}>
+      <div className={styles.topPart}>
         <Image
-            src={content.imagemCapa}
-            fill={true}
-            className={styles['top-img']}
-            style={{objectFit: 'cover', background: 'black'}}
+          src={content.imagemCapa}
+          fill={true}
+          className={styles.topImg}
+          style={{objectFit: 'cover', background: 'black'}}
         />
-        <div className={styles['content-block']}>
-          <div className={styles['title-and-rest']}>
-            <text className={styles['categorie']}>
+        <div className={styles.contentBlock}>
+          <div className={styles.titleAndRest}>
+            <text className={styles.categorie}>
               {content.genero}
             </text>
-            <h1 className={styles['title']}>
+            <h1 className={styles.title}>
               {content.titulo}
             </h1>
-            <text className={styles['sub-title']}>
+            <text className={styles.subTitle}>
               {content.previa}
             </text>
           </div>
-          <text className={styles['details']}>
+          <text className={styles.details}>
             {content.autor}<span/>{dataForm}
           </text>
         </div>
       </div>
-
-
-      <div className={styles['bottom-part']}>
-        <div className={styles['text-and-rest']}>
-          <div className={styles['text-formater']}>
-            <ReactMarkdown className={styles['markdown']}>
+      <div className={styles.bottomPart}>
+        <div className={styles.textAndRest}>
+          <div className={styles.textFormater}>
+            <ReactMarkdown className={styles.markdown}>
               {content.conteudo}
             </ReactMarkdown>
           </div>
-          <div className={styles['author']}>
-            <div className={styles['author-and-pencil']}>
-              <Image className={styles['']} src={pencilImg}/>
-              <text className={styles['author-name']}>
+          <div className={styles.author}>
+            <div className={styles.authorAndPencil}>
+              <Image src={pencilImg}/>
+              <text className={styles.authorName}>
                 {content.autor}
               </text>
             </div>
-            <button onClick={handleMove} className={styles['voltar-button']}>
-              <Image className={styles['button-image']} src={buttonImg}/>
+            <button onClick={handleMove} className={styles.voltarButton}>
+              <Image className={styles.buttonImage} src={buttonImg}/>
             </button>
           </div>
         </div>
