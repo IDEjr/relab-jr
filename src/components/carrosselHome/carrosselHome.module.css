@@ -1,46 +1,50 @@
 .carrossel{
-    height: 100%;
-    width: 100%;
-    justify-content: center;
-    align-items: center;    
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
 section .swiperContainer{
-    width: 80%;
+  width: 90%;
 
-    display: block;
+  display: block;
 }
 
 .swiperIndi{
-    height: 100%;
-    width: 90%;
+  height: 100%;
+  width: 90%;
 }
 
 .margin{
-    height: 50px;
+  height: 50px;
 }
 
 .espacoLateral{
-    width: 50px;
+  width: 50px;
 }
 
 .titleSection{
-    padding: 5rem;
-    font-size: 30px;
-    color: #F2C12E;
-    text-align: center;
+  padding: 5rem;
+  font-size: 30px;
+  color: #F2C12E;
+  text-align: center;
   
-    width: 100%;
-    display: block;
+  width: 100%;
+  display: block;
 }
 
-@media only screen  and (min-width: 1281px)   {
 
-    .swiperIndi{
-        padding: 50px;
-      
-    }
-  
+@media only screen  and (min-width: 767px)  {
 
+  .swiperIndi{
+    padding: 50px;
+  }
+}
 
+@media only screen  and (min-width: 1025px)  {
+  section .swiperContainer{
+    width: 60%;
+  }
 }

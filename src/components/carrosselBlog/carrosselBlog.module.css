@@ -1,86 +1,77 @@
 .carrosselImage{
-    position: relative;
-    width: 100%;
-    height: 80vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), var(--bg-image, none);
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), var(--bg-image, none);
 }
 
 .imagemCarrossel{
-    object-fit: cover;
-    filter: brightness(40%);
+  object-fit: cover;
+  filter: brightness(40%);
 }
-.swiperContainer{
-width: 100%;
 
+.swiperContainer{
+  width: 100%;;
 }
 
 .container{
-    margin-bottom: 10%;
+  margin-bottom: 10%;
 }
 
 
-.titles{   
-    top: 50%;
-    position: absolute;
-    left: 8%;
-    display: flex;
-    flex-direction: column;
-    
+.titles{    
+  top: 50%;
+  position: absolute;
+  left: 8%;
+  display: flex;
+  flex-direction: column;
 }
+
 .h1{
-    left: 7.9%;
-    top: 35%;
-    position: absolute;
-    font-size: 3vw;
-}   
+  left: 7.9%;
+  top: 35%;
+  position: absolute;
+  font-size: 3vw;
+}    
 .h3{
-    color: #F2C12E;
-    font-size: 1.5vw;
+  color: #F2C12E;
+  font-size: 1.5vw;
 }
 
 .h2{
-    color: #fff;
-    font-size: 2.5vw;
-
+  color: #fff;
+  font-size: 2.5vw;
 }
 
 
 @media only screen  and  (max-width: 1200px)  {
 
-    .carrosselImage{
-     height: 30rem;
-    }
- 
- 
- }
+  .carrosselImage{
+    height: 30rem;
+  }
+}
 
 
+@media only screen  and (max-width: 800px)    {
 
-
- @media only screen  and (max-width: 800px)   {
-
-    .carrosselImage{
-     height: 80vw;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-    }
-    .h2{
-        font-size: 4vw;
-        width: 95%;
-    }
-    .h3{
-        font-size: 3vw;
-    }
-    .h1{
-        font-size: 4vw;
-        width: 95%;
-
-     
-    }
-    .titles{
-       
-        width: 95%;
-    }
- 
- }
+  .carrosselImage{
+    height: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .h2{
+    font-size: 4vw;
+    width: 95%;
+  }
+  .h3{
+    font-size: 3vw;
+  }
+  .h1{
+    font-size: 4vw;
+    width: 95%;
+  }
+  .titles{
+    width: 95%;
+  }
+}
