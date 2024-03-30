@@ -145,7 +145,7 @@
   .dropdownInactive{
     opacity: 0;
     height: 0;
-
+    transform: translateY(-10%);
   }
   .tituloMobile{
     font-size: 5vw;
@@ -157,7 +157,8 @@
     align-self: flex-end;
     border-radius: 15px; 
     opacity: 1;
-    transition: 1s;
+    transform: translateY(0);
+    transition: 0.5s;
   }
 
   .containerDesktop{
