@@ -3,7 +3,7 @@ import styles from './escoposServicos.module.css'
 import { useMediaQuery } from 'react-responsive'
 
 
-function servicoL(imagem, nome, posicao) {
+function servicoL( servico, imagem, descricao ) {
   return(
     <>
       <div className={styles.serviceContainer}>
@@ -15,10 +15,10 @@ function servicoL(imagem, nome, posicao) {
           />
         </div>
         <div className={styles.textContainer}>
-          <div className={styles.titleContainer}>{nome}</div>
+          <div className={styles.titleContainer}>{servico}</div>
           <div className={styles.underBar}></div>
           <div className={styles.descriptionContainer}>
-            {posicao}
+            {descricao}
           </div>
         </div>
       </div>
@@ -26,15 +26,15 @@ function servicoL(imagem, nome, posicao) {
   )
 }
 
-function servicoR(imagem, nome, posicao) {
+function servicoR( servico, imagem, descricao ) {
   return(
     <>
       <div className={styles.serviceContainer}>
         <div className={styles.textContainer}>
-          <div className={styles.titleContainer}>{nome}</div>
+          <div className={styles.titleContainer}>{servico}</div>
           <div className={styles.underBar}></div>
           <div className={styles.descriptionContainer}>
-            {posicao}
+            {descricao}
           </div>
         </div>
         <div className={styles.imagemContainer}>
@@ -58,9 +58,9 @@ export default function escoposServicos( {servicos} ) {
         {servicos && servicos.map((servico, i) => (
           <div key={i}>
           {i % 2 === 0 ? (
-            servicoL(servico.imagem, servico.nome, servico.posicao)
+            servicoL(servico.servico, servico.imagem, servico.descricao)
             ) : (
-            servicoR(servico.imagem, servico.nome, servico.posicao)
+            servicoR(servico.servico, servico.imagem, servico.descricao)
           )}
         </div>
         ))}
