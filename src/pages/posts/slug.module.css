@@ -106,6 +106,15 @@
 .markdown2 :global(ul) {
   padding-left: 3vw;
 }
+.markdown2 :global(img) {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}.markdown :global(img) {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
 .markdown2 {
   display: block;
   width: 60%;
