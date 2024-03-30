@@ -22,7 +22,6 @@ export default function CarrosselQuemSomos({ imagens }) {
   // }
   // images = arrImages //atribuindo a images
 
-console.log(`ta aqui ó ${imagens}`);
   return (
     <>
       <div className={Styles.container}>
@@ -59,13 +58,13 @@ console.log(`ta aqui ó ${imagens}`);
               slidesPerView: 2,
               navigation: {
                 enabled: true  
-              }}}}
+              }
+            }
+          }}
         >
-
           {imagens.map((item) => (     //mostra um slide para cada imagem contida em images
             <SwiperSlide key={item} className={Styles.swiperSlide} >
               <div className={Styles.image}>
-
                 <Image src={item} fill style={{ objectFit: 'cover' }} alt="Post" />
               </div>
             </SwiperSlide>))
@@ -73,4 +72,5 @@ console.log(`ta aqui ó ${imagens}`);
         </Swiper> 
       </div>
     </>
-  )}
+  )
+}

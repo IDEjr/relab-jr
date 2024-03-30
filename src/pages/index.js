@@ -56,8 +56,8 @@ export default function Home({home, posts, nav, foo}) {
     }
     i+=1;
   } 
-  console.log(postsCarrossel)
-  console.log(posts)
+  // console.log(postsCarrossel)
+  // console.log(posts)
   
   
 //------------------------------------------------------------------------------------------

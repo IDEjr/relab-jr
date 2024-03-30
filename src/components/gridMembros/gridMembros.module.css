@@ -1,78 +1,74 @@
-.membrosGrid{
-    width: 100%;
+.membrosGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 250px 250px 250px;/* Três colunas por linha e colunas flexíveis */
+  gap: 100px;
+  padding: 30vh 10vh ;
+  justify-content: center; /* Centraliza horizontalmente */
+  background-color: white;
+  clip-path: polygon(50% 0, 50% 0, 100% 4%, 100% 96%, 50% 100%, 50% 100%, 0 96%, 0 4%);
+}
+
+.logoGrid {
+  margin-bottom: 40px;
+}
+
+.tituloMembros {
+  margin: 100px;
+  font-weight: 500;
+  color: black;
+  text-align: center;
+}
+
+.chamariz {
+  display: flex;
+  flex-direction: column; /* Empilha elementos verticalmente */
+  background-image: linear-gradient(to bottom, #F2C12E,#F2C12E, #262626, #262626); /* Gradiente vertical de vermelho para verde */
+  
+  
+  align-items: center; /* Centraliza verticalmente */
+}
+
+
+@media only screen and (min-width: 769px) and (max-width: 1280px)  {
+  .membrosGrid {
     display: grid;
-    grid-template-columns: 250px 250px 250px;/* Três colunas por linha e colunas flexíveis */
+    grid-template-columns: 200px 200px ;/* Três colunas por linha e colunas flexíveis */
     gap: 100px;
-    padding: 30vh 10vh ;
+    padding: 15vh 10vh ;
     justify-content: center; /* Centraliza horizontalmente */
-    background-color: white;
-    clip-path: polygon(50% 0, 50% 0, 100% 4%, 100% 96%, 50% 100%, 50% 100%, 0 96%, 0 4%);
-    
+    clip-path: polygon(50% 0, 50% 0, 100% 2%, 100% 98%, 50% 100%, 50% 100%, 0 98%, 0 2%);
+  }
 }
 
-.logoGrid{
-    margin-bottom: 40px;
+@media only screen and (min-width: 577px) and (max-width: 768px)  {
+  .chamariz {
+    margin-top: 100px;
+  }
+
+  .membrosGrid {
+    display: grid;
+    grid-template-columns: 200px 200px ;/* Três colunas por linha e colunas flexíveis */
+    gap: 50px;
+    padding: 15vh 0vw ;
+    justify-content: center; /* Centraliza horizontalmente */
+    clip-path: polygon(50% 0, 50% 0, 100% 2%, 100% 98%, 50% 100%, 50% 100%, 0 98%, 0 2%);
+  }
 }
 
-.tituloMembros{
-    margin: 100px;
-    font-weight: 500;
-    color: black;
-    text-align: center;
-}
-
-.chamariz{
-    display: flex;
-    flex-direction: column; /* Empilha elementos verticalmente */
-    background-image: linear-gradient(to bottom, #F2C12E,#F2C12E, #262626, #262626); /* Gradiente vertical de vermelho para verde */
-    
-    
-    align-items: center; /* Centraliza verticalmente */
-}
-
-
-
-@media only screen and (min-width: 769px) and (max-width: 1280px) {
-
-    
-    .membrosGrid{
-        display: grid;
-        grid-template-columns: 200px 200px ;/* Três colunas por linha e colunas flexíveis */
-        gap: 100px;
-        padding: 15vh 10vh ;
-        justify-content: center; /* Centraliza horizontalmente */
-        clip-path: polygon(50% 0, 50% 0, 100% 2%, 100% 98%, 50% 100%, 50% 100%, 0 98%, 0 2%);
-    }
-}
-@media only screen and (min-width: 577px) and (max-width: 768px) {
-    .chamariz{
-        margin-top: 100px;
-    }
-    
-
-    .membrosGrid{
-        display: grid;
-        grid-template-columns: 200px 200px ;/* Três colunas por linha e colunas flexíveis */
-        gap: 50px;
-        padding: 15vh 0vw ;
-        justify-content: center; /* Centraliza horizontalmente */
-        clip-path: polygon(50% 0, 50% 0, 100% 2%, 100% 98%, 50% 100%, 50% 100%, 0 98%, 0 2%);
-    }
-}
 @media only screen and (max-width: 576px) {
-    .chamariz{
-        margin-top: 100px;
-    }
-    .logoGrid{
-        display: none;
-    }
+  .chamariz{
+    margin-top: 100px;
+  }
+  .logoGrid{
+    display: none;
+  }
 
-    .membrosGrid{
-       
-        grid-template-columns: 200px  ;/* Três colunas por linha e colunas flexíveis */
-        gap: 100px;
-        padding: 10vh 10vh ;
-        justify-content: center; /* Centraliza horizontalmente */
-        clip-path: polygon(50% 0, 50% 0, 100% 1%, 100% 99%, 50% 100%, 50% 100%, 0 99%, 0 1%);
-    }
+  .membrosGrid{
+    grid-template-columns: 200px  ;/* Três colunas por linha e colunas flexíveis */
+    gap: 100px;
+    padding: 10vh 10vh ;
+    justify-content: center; /* Centraliza horizontalmente */
+    clip-path: polygon(50% 0, 50% 0, 100% 1%, 100% 99%, 50% 100%, 50% 100%, 0 99%, 0 1%);
+  }
 }

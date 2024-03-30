@@ -1,5 +1,4 @@
 .button, .active {
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,11 +9,7 @@
   color: #F2C12E;
   font-size: 1.4vw;
   padding: 2vw;
-
 }
-
-
-
 
 .container {
   display: flex;
@@ -37,13 +32,12 @@
   white-space: nowrap;
   border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
-  
 }
 
 .icone{
   font-size: 10vw;
-  
 }
+
 .optionButton{
   border-bottom-left-radius: 0px;
   border-top-left-radius: 0px;
@@ -56,14 +50,12 @@
   justify-content: center;
   width: 20vw;  
   height: 100%;
-  
 }
+
 .lista {
   list-style-type: none;
   display: flex;
 }
-
-
 
 .menuContainer, .tituloEBotaoMobile {
   width: fit-content;
@@ -87,7 +79,6 @@
 }
 
 
-
 .active, .button:hover {
   background: #F2C12E;
   color: black;
@@ -104,7 +95,6 @@
 
 @media only screen and (max-width: 800px) {
 
-  
   .containerMobile{
     display: flex;
     flex-direction: column;
@@ -116,9 +106,9 @@
   }
 
   .menuContainer{
-    
     margin-bottom: 10px;
   }
+
   .container{
     justify-content: space-evenly;
   }
@@ -135,16 +125,15 @@
   }
 
   .button, .active{
-      border: none;
-     
-      width: 100%;
-      justify-content: start;
-      align-items: center;
-      text-align: start;
-      background: none;
-      color: #F2C12E;
-      font-size: 3vw;
-      height: 6vh;
+    border: none;
+    width: 100%;
+    justify-content: start;
+    align-items: center;
+    text-align: start;
+    background: none;
+    color: #F2C12E;
+    font-size: 3vw;
+    height: 6vh;
   }
 
   .active{
@@ -173,7 +162,4 @@
   .containerDesktop{
     display: none;
   }
-
-  
-
 }

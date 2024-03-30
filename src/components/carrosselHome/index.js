@@ -22,19 +22,17 @@ export default function CarrosselHome(props) {
   const data = [];
   let i = 0;
   for(let i in posts){
-
     data.push(posts[i]);
   }
 
   return (
     <>
-    <section className={styles.carrossel}>
-      <h3 className={styles.titleSection}>
-        {props.titulo}
-      </h3>
-      <Swiper
-    
-          style={{
+      <section className={styles.carrossel}>
+        <h3 className={styles.titleSection}>
+          {props.titulo}
+        </h3>
+        <Swiper
+          style = {{
             "--swiper-theme-color":"#F2C12E",
             "--swiper-pagination-color": "#F2C12E",
             "--swiper-pagination-bullet-inactive-color": "#999999",
@@ -45,61 +43,50 @@ export default function CarrosselHome(props) {
             "--swiper-pagination-bullet-height": "6px",
             "--swiper-pagination-bullet-horizontal-gap" :" 15px",
             "--swiper-navigation-gap" : "100px"
-          }
-          }  
-          autoplay ={{
+          }}
+          autoplay = {{
             delay: 5000,
             disableOnInteraction: false,
           }}
-          modules={[Autoplay]}
-          grabCursor={true}
-          pagination={{
+          modules = {[Autoplay]}
+          grabCursor = {true}
+          pagination = {{
             enabled: false
           }}
-
-          navigation={{  //configurações do navi
+          navigation = {{  //configurações do navi
             enabled: false
           }}
-
           breakpoints={{
             1281: {  //acima de 1281px, ativa o navigation (as setinhas) e o pagination (as bolinhas)
-              
               navigation: {
                 enabled: true  
-            }},
+              }
+            },
             767: {  //acima de 1281px, ativa o navigation (as setinhas) e o pagination (as bolinhas)
-              
-             pagination: {
-              enabled: true
-            }}
+              pagination: {
+                enabled: true
+              }
+            }
           }}
-         
-          
-          
           className={styles.swiperContainer}
-      >
-        {posts.map((item)=> (
-          
-        <SwiperSlide key={item.titulo} className={styles.swiperIndi}>
-          <CardPosts 
-            imagem={item.imagemCapa}
-            fileName={item.fileName}
-            
-            titulo={item.titulo}
-            data={item.data}
-            previa={item.previa}
-            autor={item.autor}
-          />
-          <div className={styles.margin}>
-
-          </div>
-        </SwiperSlide>))
-        }
-      </Swiper>
-      
-      
-    </section>
-      
+        >
+          {posts.map((item)=> (
+            <SwiperSlide key={item.titulo} className={styles.swiperIndi}>
+              <CardPosts 
+                imagem={item.imagemCapa}
+                fileName={item.fileName}
+                
+                titulo={item.titulo}
+                data={item.data}
+                previa={item.previa}
+                autor={item.autor}
+              />
+              <div className={styles.margin}>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </section>
     </>
   );
 }
