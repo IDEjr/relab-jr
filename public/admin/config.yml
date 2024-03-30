@@ -23,7 +23,6 @@ collections:
   # PÁGINAS--------------------------------------------------------------------------------------------------------
 
 
-
   - label: "Páginas"
     name: "paginas"
     files:
@@ -170,31 +169,6 @@ collections:
               - {label: "Texto 2", name: "texto2", widget: "text", pattern: ['^.{1,600}$', "Máximo 600 carateres."]}
 
 
-          - label: "Serviços Relab Jr."
-            name: "servicos"
-            widget: "object"
-            fields:
-              - {label: "Título Serviços", name: "tituloServicos", widget: "string", pattern: ['^.{1,20}$', "Máximo 20 carateres."]}
-              - {label: "Serviço 1", name: "servico1", widget: "string"}
-              - {label: "Texto 1", name: "texto1", widget: "text", pattern: ['^.{1,550}$', "Máximo 550 carateres."]}
-              - {label: "Imagem 1", name: "imagem1", widget: "image"}
-              - {label: "Serviço 2", name: "servico2", widget: "string"}
-              - {label: "Texto 2", name: "texto2", widget: "text", pattern: ['^.{1,550}$', "Máximo 550 carateres."]}
-              - {label: "Imagem 2", name: "imagem2", widget: "image"}
-              - {label: "Serviço 3", name: "servico3", widget: "string"}
-              - {label: "Texto 3", name: "texto3", widget: "text", pattern: ['^.{1,550}$', "Máximo 550 carateres."]}
-              - {label: "Imagem 3", name: "imagem3", widget: "image"}
-              - {label: "Serviço 4", name: "servico4", widget: "string"}
-              - {label: "Texto 4", name: "texto4", widget: "text", pattern: ['^.{1,550}$', "Máximo 550 carateres."]}
-              - {label: "Imagem 4", name: "imagem4", widget: "image"}
-              - {label: "Serviço 5", name: "servico5", widget: "string"}
-              - {label: "Texto 5", name: "texto5", widget: "text", pattern: ['^.{1,550}$', "Máximo 550 carateres."]}
-              - {label: "Imagem 5", name: "imagem5", widget: "image"}
-              - {label: "Serviço 6", name: "servico6", widget: "string"}
-              - {label: "Texto 6", name: "texto6", widget: "text", pattern: ['^.{1,550}$', "Máximo 550 carateres."]}
-              - {label: "Imagem 6", name: "imagem6", widget: "image"}
-
-
 
       - label: "Página Blog"
         name: "blog"
@@ -221,7 +195,7 @@ collections:
 
 
 
-# PÁGINAS--------------------------------------------------------------------------------------------------------
+# GRUPOS--------------------------------------------------------------------------------------------------------
 
 
 
@@ -277,7 +251,7 @@ collections:
       - {label: "LinkedIn", name: "linkedin", widget: "string", required: false}
 
 
-  - label: "Servicos"
+  - label: "Serviços"
     name: "servicos"
     extension: "json"
     description: "Serviços da Relab Jr"
@@ -285,7 +259,7 @@ collections:
     create: true
     slug: "{{fields.servico}}"
     fields:
-      - {label: "Serviço", name: "servico", widget: "string", pattern: ['^.{1,30}$', "Máximo 30 carateres."]}
+      - {label: "Serviço", name: "servico", widget: "string", pattern: ['^.{1,50}$', "Máximo 50 carateres."]}
       - {label: "Imagem", name: "imagem", widget: "image"}
       - {label: "Descrição", name: "descricao", widget: "text"}
 
