@@ -1,36 +1,30 @@
-
-
-.top-part {
+.topPart {
   width: 100%;
   height: 80vh;
   position: relative;
   display: flex;
-  
 }
 
-
-.content-block {
+.contentBlock {
   width: 100%;
   height: 80vh;
   display: flex;
 }
 
-
-.title-and-rest {
+.titleAndRest {
   width: 100%;
   height: 60%;
   display: flex;
   padding: 10px;
 }
 
-
-.top.img{
+.top.img {
   object-fit: cover;
 }
-.top-img {
+
+.topImg {
   filter: brightness(40%);
 }
-
 
 .title {
   position: absolute;
@@ -38,7 +32,7 @@
   left: 5%;
 }
 
-.sub-title {
+.subTitle {
   position: absolute;
   top: 50%;
   left: 5.1%;
@@ -67,17 +61,19 @@
   font-weight: 400;
   color : #F2C12E;
 }
-.text-and-rest {
+
+.textAndRest {
   display: flex;
   flex-direction: column;
   width: 100%;
   padding-top: 10vh;
 }
-.bottom-part {
+
+.bottomPart {
   padding-bottom: 150px;
 }
 
-.text-formater {
+.textFormater {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,7 +100,7 @@
   padding-top: 2vh;
 }
 
-.author-and-pencil {
+.authorAndPencil {
   display: flex;
   align-items: center;
   padding-left: 19%;
@@ -112,7 +108,7 @@
   color:#F2C12E;
 }
 
-.voltar-button {
+.voltarButton {
   background-color: transparent;
   border: none;
   cursor:pointer;
@@ -121,7 +117,7 @@
   padding-left: 6.5vw;
 }
 
-.button-image {
+.buttonImage {
   width: 9vw;
   height: 8vh;
 }
@@ -133,7 +129,7 @@
 
     width: 60%;
   }
-  .sub-title {
+  .subTitle {
     display: none;
   }
 
@@ -148,51 +144,55 @@
     width: 90%;
   }
 
-
-  .author{
-   display: flex; 
-   flex-direction: column;
-   align-items: flex-start;
+  .author {
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .author-and-pencil {
+  .authorAndPencil {
     display: flex;
     width: 100%;
     padding-left: 9%;
   }
-  .voltar-button {
+
+  .voltarButton {
     padding-left: 45%;
     height: 6vh;
     width: 12vw;
   }
 
-  .post-text {
+  .postText {
     font-size: 1.8em;
     width: 80%;
     padding-bottom: 20px;
   }
-  .author-name {
+
+  .authorName {
     font-size: 1.3em;
     width: 50%;
   }
-  .button-image {
+
+  .buttonImage {
     height: 6vh;
     width: 12vw;
   }
-  
 }
 
 @media (max-width: 795px) {
 
-  .top-part {
+  .topPart {
     height: 40vh;
   }
+
   .categorie {
     top:20%;
   }
+
   .title {
     font-size: 2.5em;
   }
+
   .categorie {
     top: 30%;
   }
@@ -202,43 +202,36 @@
     font-size: 1.1em;
   }
 
-
-
-  .author-and-pencil {
+  .authorAndPencil {
     padding-left: 8%;
   }
 
-  .post-text {
+  .postText {
     font-size: 1.3em;
   }
 
-  
-
-  .button-image {
-    width: 16vw;
-    padding-left: 42%;
-  }
-  .voltar-button {
+  .buttonImage {
     width: 16vw;
     padding-left: 42%;
   }
 
-
+  .voltarButton {
+    width: 16vw;
+    padding-left: 42%;
+  }
 }
 
 @media (max-width: 600px) {
   .title {
     font-size: 2em;
   }
-
-
-
-
 }
+
 @media (max-width: 560px) {
   .categorie {
     font-size: 1.3em;
   }
+
   .title {
     font-size: 2em;
   }
@@ -250,24 +243,24 @@
     gap:5%;
   }
 
-  .post-text {
+  .postText {
     font-size: 1.2em;
   }
 
-
-  .author-and-pencil {
+  .authorAndPencil {
     padding-left: 6%;
   }
 
-  .author-name {
+  .authorName {
     font-size: 1em;
   }
 
-  .voltar-button {
+  .voltarButton {
     width: 25vw;
     padding-left: 39%;
   }
-  .button-image {
+
+  .buttonImage {
     width: 25vw;
     padding-left: 39%;
   }

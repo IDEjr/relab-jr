@@ -9,7 +9,7 @@ import CarrosselQuemSomos from '@/components/carrosselQuemSomos'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
 
-export default function quemSomos({ quemSomos, membros, nav, foo }) {
+export default function QuemSomos({ quemSomos, membros, nav, foo }) {
 
   const navData = {
     logo: nav.logo,
@@ -49,7 +49,7 @@ export default function quemSomos({ quemSomos, membros, nav, foo }) {
       <Navbar {...navData}/>
       <Inicio titulo = {tituloQuemSomos} imagem = {imagemQuemSomos}/>
       <TextoBarraQuemSomos {...textoBarra}/>
-      <CarrosselQuemSomos imagens = {quemSomos.carrosselQuemSomos.imagensCarrossel}/> 
+      <CarrosselQuemSomos imagens = {quemSomos.carrosselQuemSomos.imagensCarrossel}/>
       <Valores {...valores}/>
       <GridMembros titulo = {grid.titulo} logo = {grid.logo} membros = {membros}/>
       
@@ -63,7 +63,6 @@ export async function getStaticProps(){
 
   const foo = handleJSONfile(`./content/navFooter/footer.json`);
   const quemSomos = handleJSONfile(`./content/paginas/quemSomos.json`);
-  // const carrosselQuemSomos = handleJSONfiles(`./content/carrosselQuemSomos`);
   const membros = handleJSONfiles(`./content/membros`);
   const nav = handleJSONfile(`./content/navFooter/navbar.json`);
 

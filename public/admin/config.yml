@@ -5,7 +5,10 @@ backend:
 publish_mode: editorial_workflow # Para fazer um esquema de revisão de novas edições
 media_folder: "public/uploads" # Onde os arquivos de mídia serão armazenados
 public_folder: "/uploads" # Onde a parte de mídia vai poder ser acessada
-#display_url: https://exemplos-da-ide.netlify.app/ # URL que será mostrado no UI do Netlify
+# display_url: https://exemplos-da-ide.netlify.app/ # URL que será mostrado no UI do Netlify
+display_url: https://relabjr.com # URL que será mostrado no UI do Netlify
+
+
 
 slug:
   encoding: "ascii"
@@ -51,16 +54,6 @@ collections:
               - {label: "Texto Botão", name: "textoBotao", widget: "string"}
 
 
-          - label: "Imagem Com Botão Membros"
-            name: "imgBotaoMem"
-            widget: "object"
-            fields:
-              - {label: "Imagem", name: "imagem", widget: "image"}
-              - {label: "Título", name: "titulo", widget: "string"}
-              - {label: "Texto", name: "texto", widget: "text", pattern: ['^.{1,450}$', "Máximo 450 carateres."]}
-              - {label: "Texto Botão", name: "textoBotao", widget: "string"}
-
-
           - label: "Nossos Serviços"
             name: "servicosHome"
             widget: "object"
@@ -78,6 +71,16 @@ collections:
               - {label: "Imagem 5", name: "imagem5", widget: "image"}
               - {label: "Serviço 6", name: "servico6", widget: "string", pattern: ['^.{1,35}$', "Máximo 35 carateres."]}
               - {label: "Imagem 6", name: "imagem6", widget: "image"}
+
+
+          - label: "Imagem Com Botão Membros"
+            name: "imgBotaoMem"
+            widget: "object"
+            fields:
+              - {label: "Imagem", name: "imagem", widget: "image"}
+              - {label: "Título", name: "titulo", widget: "string"}
+              - {label: "Texto", name: "texto", widget: "text", pattern: ['^.{1,450}$', "Máximo 450 carateres."]}
+              - {label: "Texto Botão", name: "textoBotao", widget: "string"}
 
 
           - label: "Carrossel Home"
@@ -208,6 +211,14 @@ collections:
               - {label: "Imagem", name: "imagem", widget: "image"}
               - {label: "Título", name: "titulo", widget: "string"}
 
+          
+          - label: "Ícones Posts"
+            name: "icones"
+            widget: "object"
+            fields:
+              - {label: "Imagem", name: "imagem1", widget: "image"}
+              - {label: "Imagem", name: "imagem2", widget: "image"}
+
 
 
 # PÁGINAS--------------------------------------------------------------------------------------------------------
@@ -218,31 +229,31 @@ collections:
     name: "generos"
     extension: "json"
     description: "Gêneros dos Posts"
-    folder: "content/generos" # Local da pasta onde vão estar os arquivos
-    create: true # Permite que usuários criem arquivos nesse local
-    slug: "{{fields.genero}}" # Nome que vai ficar no URL da página
+    folder: "content/generos"
+    create: true
+    slug: "{{fields.genero}}"
     fields:
       - {label: "Gênero", name: "genero", widget: "string", pattern: ['^.{1,30}$', "Máximo 30 carateres."]}
 
 
 
   - label: "Posts"
-    name: "posts" # Nome usado da rota
+    name: "posts"
     extension: "json"
     description: "Posts da Relab Jr"
-    folder: "content/posts" # Local da pasta onde vão estar os arquivos
-    create: true # Permite que usuários criem arquivos nesse local
-    slug: "{{fields.titulo}}" # Nome que vai ficar no URL da página
-    fields: # Campos disponíveis no Netlify
+    folder: "content/posts"
+    create: true
+    slug: "{{fields.titulo}}"
+    fields:
       - {label: "Visível", name: "bool", widget: "boolean", default: true}
       - {label: "Gênero", name: "genero", widget: "relation", collection: "generos", search_fields: ["genero"], display_fields: ["genero"], value_field: "genero", default: ["Outros"]}
       - {label: "Autor(a)", name: "autor", widget: "relation", collection: "membros", search_fields: ["nome"], display_fields: ["nome"], value_field: "nome"}
-      - {label: "LikedIn", name: "linkedin", widget: "relation", collection: "membros", search_fields: ["nome"], display_fields: ["linkedin"], value_field: "linkedin", required: false}
+      - {label: "LinkedIn", name: "linkedin", widget: "relation", collection: "membros", search_fields: ["nome"], display_fields: ["linkedin"], value_field: "linkedin", required: false}
       - {label: "Data", name: "data", widget: "date", date_format: "DD.MM.YYYY"}
       - {label: "Título", name: "titulo", widget: "string", pattern: ['^.{1,40}$', "Máximo 40 carateres."]}
+      - {label: "Imagem de Capa", name: "imagemCapa", widget: "image"}
       - {label: "Prévia", name: "previa", widget: "text", pattern: ['^.{1,60}$', "Máximo 60 carateres."]}
       - {label: "Conteúdo", name: "conteudo", widget: "markdown"}
-      - {label: "Imagem de Capa", name: "imagemCapa", widget: "image"}
 
 
 
@@ -250,9 +261,9 @@ collections:
     name: "membros"
     extension: "json"
     description: "Membros da Relab Jr"
-    folder: "content/membros" # Local da pasta onde vão estar os arquivos
-    create: true # Permite que usuários criem arquivos nesse local
-    slug: "{{fields.nome}}" # Nome que vai ficar no URL da página
+    folder: "content/membros"
+    create: true
+    slug: "{{fields.nome}}"
     fields:
       - {label: "Nome e sobrenome", name: "nome", widget: "string", pattern: ['^.{1,30}$', "Máximo 30 carateres."]}
       - {label: "Imagem", name: "imagem", widget: "image"}
@@ -263,8 +274,20 @@ collections:
                                                                         "Diretoria Gestão de Pessoas", "Assessoria Gestão de Pessoas", "Gerência Gestão de Pessoas", "Consultoria Gestão de Pessoas",
                                                                         "Diretoria Marketing", "Assessoria Marketing", "Gerência Marketing", "Consultoria Marketing",
                                                                         "Trainee"], default: ["Trainee"]}
-      - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
+      - {label: "LinkedIn", name: "linkedin", widget: "string", required: false}
 
+
+  - label: "Servicos"
+    name: "servicos"
+    extension: "json"
+    description: "Serviços da Relab Jr"
+    folder: "content/servicos"
+    create: true
+    slug: "{{fields.servico}}"
+    fields:
+      - {label: "Serviço", name: "servico", widget: "string", pattern: ['^.{1,30}$', "Máximo 30 carateres."]}
+      - {label: "Imagem", name: "imagem", widget: "image"}
+      - {label: "Descrição", name: "descricao", widget: "text"}
 
 
   - label: "Navbar e Footer"
@@ -279,7 +302,7 @@ collections:
         preview: false
         fields:
           - {label: "Logo", name: "logo", widget: "image"}
-          - {label: "Linkedin", name: "linkedin", widget: "string"}
+          - {label: "LinkedIn", name: "linkedin", widget: "string"}
           - {label: "Email", name: "email", widget: "string"}
           - {label: "Instagram", name: "instagram", widget: "string"}
 
