@@ -22,29 +22,29 @@ export default function Posts({ content, nav, foo }) {
   const { postId } = router.query
 
   const navData = {
-    logo : nav.logo,
-    linkedin : nav.linkedin,
-    instagram : nav.instagram,
-    email : nav.email
+    logo: nav.logo,
+    linkedin: nav.linkedin,
+    instagram: nav.instagram,
+    email: nav.email
   };
 
-    // formata data
-    var dataForm;
-    dataForm = content.data.substring(8, 10) + '/' + content.data.substring(5, 7) + '/' + content.data.substring(0, 4);
-  
-  
+  // formata data
+  var dataForm;
+  dataForm = content.data.substring(8, 10) + '/' + content.data.substring(5, 7) + '/' + content.data.substring(0, 4);
+
+
 
   return (
     <div className={styles['container']}>
       <React.Fragment>
-      <Navbar  {...navData}/>
+        <Navbar  {...navData} />
       </React.Fragment>
       <div className={styles['top-part']}>
         <Image
-            src={content.imagemCapa}
-            fill={true}
-            className={styles['top-img']}
-            style={{objectFit: 'cover', background: 'black'}}
+          src={content.imagemCapa}
+          fill={true}
+          className={styles['top-img']}
+          style={{ objectFit: 'cover', background: 'black' }}
         />
         <div className={styles['content-block']}>
           <div className={styles['title-and-rest']}>
@@ -58,13 +58,13 @@ export default function Posts({ content, nav, foo }) {
               {content.previa}
             </text>
           </div>
-          
-          
+
+
           <text className={styles['details']}>
             <a href='https://www.youtube.com/watch?v=UjdREuYhSx8&list=RDUjdREuYhSx8&start_radio=1&ab_channel=NimaFarzaneh' className={styles['autor']}>
               {content.autor}
             </a>
-            <span/>
+            <span />
             {dataForm}
           </text>
         </div>
@@ -75,10 +75,10 @@ export default function Posts({ content, nav, foo }) {
         <div className={styles['text-and-rest']}>
           <div className={styles['text-formater']}>
 
-            
+
 
             <ReactMarkdown className={styles['markdown']}
-            components={{img:({node,...props})=><img style={{maxWidth:'100%', display: 'block', padding:'5vh 0px 5vh 0px', margin:'auto'}}{...props}/>}}>
+              components={{ img: ({ node, ...props }) => <img style={{ maxWidth: '100%', display: 'block', padding: '5vh 0px 5vh 0px', margin: 'auto' }}{...props} /> }}>
               {content.conteudo}
             </ReactMarkdown>
 
@@ -86,25 +86,25 @@ export default function Posts({ content, nav, foo }) {
           </div>
           <div className={styles['author']}>
             <div className={styles['author-and-pencil']}>
-              <Image className={styles['']} src={pencilImg}/>
+              <Image className={styles['']} src={pencilImg} />
               <text className={styles['author-name']}>
-              <a href='https://www.youtube.com/watch?v=UjdREuYhSx8&list=RDUjdREuYhSx8&start_radio=1&ab_channel=NimaFarzaneh' className={styles['autor']}>
-                {content.autor}
-              </a>
+                <a href='https://www.youtube.com/watch?v=UjdREuYhSx8&list=RDUjdREuYhSx8&start_radio=1&ab_channel=NimaFarzaneh' className={styles['autor']}>
+                  {content.autor}
+                </a>
               </text>
             </div>
             <button onClick={handleMove} className={styles['voltar-button']}>
-              <Image className={styles['button-image']} src={buttonImg}/>
+              <Image className={styles['button-image']} src={buttonImg} />
             </button>
           </div>
         </div>
       </div>
-      <Footer {...foo}/>
+      <Footer {...foo} />
     </div>
   )
 }
 
-export async function getStaticProps({params : {slug} }){
+export async function getStaticProps({ params: { slug } }) {
   const caminho = 'posts';
   const caminho2 = "navFooter";
   const pagina2 = "navbar";
@@ -115,7 +115,7 @@ export async function getStaticProps({params : {slug} }){
   const foo = handleJSONfile(`./content/${caminho2}/${pagina3}.json`);
 
   return {
-    props: { content , nav, foo},
+    props: { content, nav, foo },
   };
 }
 
@@ -127,11 +127,11 @@ export async function getStaticPaths() {
 
   const paths = filesInProjects.map(file => {
     const filename = file.slice(0, file.indexOf('.'))
-    return { params: { slug: filename }}
+    return { params: { slug: filename } }
   })
 
   return {
     paths,
-    fallback: false 
+    fallback: false
   }
 }
