@@ -111,6 +111,8 @@
     background: none;
     box-shadow: none;
     background-color: none;
+    
+    
   }
 
   .menuContainer{
@@ -128,6 +130,7 @@
     margin-bottom: 0;
     justify-content: space-between;
     min-width: 70vw;
+    
     min-height: 6vh;
   }
 
@@ -154,7 +157,9 @@
     height: 0;
 
   }
-
+  .tituloMobile{
+    font-size: 5vw;
+  }
 
   .dropdownActive {
     width: 100%;
