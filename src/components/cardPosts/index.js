@@ -9,7 +9,6 @@ export default function cardPosts({ fileName, imagem, titulo, data, previa, auto
   dataForm = data.substring(8, 10) + '/' + data.substring(5, 7) + '/' + data.substring(0, 4);
 
   const url = `/posts/${fileName}`;
-  
 
   return (
     <>

@@ -5,13 +5,13 @@ export default function gridPosts({posts}) {
   // posts = posts[0];
   // var arrPosts = [];
   // for( const i in posts){
-  //     arrPosts.push(posts[i]);
+  //   arrPosts.push(posts[i]);
   // }
   // posts = arrPosts
   return (
     <>
       <section className={styles.postsGrid}>
-          {posts.map((post, i) => (
+        {posts.map((post, i) => (
           <CardPosts
             key={i}
             fileName={post.fileName}
@@ -20,8 +20,8 @@ export default function gridPosts({posts}) {
             data={post.data}
             previa={post.previa}
             autor={post.autor}
-          />   
-          ))}
+          />
+        ))}
       </section>
     </>
   );

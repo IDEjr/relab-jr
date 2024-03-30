@@ -1,4 +1,4 @@
-.toptext{ /* css da div superior */
+.toptext { /* css da div superior */
   display: flex;
   width: 40%;
   height: 20rem;
@@ -10,38 +10,37 @@
   line-height: 3.5vh;
 }
 
-.container{ /* css do container geral da página*/
-height: 54rem;
-width: 100%;
-display: flex;
-flex-direction: column;
-margin-top: 5%;
-gap: 5%;
+.container { /* css do container geral da página*/
+  height: 54rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  gap: 5%;
 }
 
-.textImage{ /* css da div que suporta a imagem e o texto inferior*/
+.textImage { /* css da div que suporta a imagem e o texto inferior*/
   display: flex;
   justify-content: space-evenly;
   padding: 3rem;
   width: 100%;
-    
 }
-.lampada{ /* css da  própria imagem*/
- position: relative;
- aspect-ratio: 1/1;
- overflow: hidden;
- display: block;
+
+.lampada { /* css da  própria imagem*/
+  position: relative;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  display: block;
   margin-right: 15%;
   height: 100%;
   width: 300px;
-  
 }
-.retangulo{  /* css do retangulo (visivel apenas no mobile)*/
+
+.retangulo {  /* css do retangulo (visivel apenas no mobile)*/
   display: none;
 }
 
-.bottomtext{ /* css da div do texto inferior*/
-  
+.bottomtext { /* css da div do texto inferior*/
   height: 20rem;  
   width: 40%;
   text-align: center;
@@ -52,21 +51,14 @@ gap: 5%;
   line-height: 3.5vh;
 }
 
-
-.text-content{ /* formatação  de todos os textos*/
+.text-content { /* formatação  de todos os textos*/
   color: #ffff;
   text-align: justify;
-  
 }
 
 
-
-
-
-
-
 @media only screen and (max-width: 800px) { /* incio do breakpoint */
-  .bottomtext {
+  .bottomtext  {
     padding-left: 0px;
     margin-left: 0%;
     line-height: 150%;
@@ -74,9 +66,8 @@ gap: 5%;
     height: fit-content; 
     border: none;
   }
- 
- 
-  .toptext{
+
+  .toptext {
     border: none;
     width: 70%;
     height: 15vh;  
@@ -89,15 +80,15 @@ gap: 5%;
     justify-content: center;
   }
 
-  .lampada{
-   width: 30vw;
-   margin: auto;
-   display: flex;
-   margin-top: 5%;
-   margin-bottom: 5%;
+  .lampada {
+  width: 30vw;
+  margin: auto;
+  display: flex;
+  margin-top: 5%;
+  margin-bottom: 5%;
   }
 
-  .textImage{
+  .textImage {
     flex-direction: column-reverse;
     align-items: center;
     justify-content: space-between;
@@ -105,7 +96,7 @@ gap: 5%;
     padding: 0%;   
   }
 
-  .container{
+  .container {
     align-items: center;
     width: 100%;
     justify-content: flex-start;
@@ -114,13 +105,13 @@ gap: 5%;
     height: fit-content;
   }
   
-  .text-content{
+  .text-content {
     text-align: justify;
     font-size: 3vw;
     height: 100%;      
   }
 
-  .retangulo{
+  .retangulo {
     width: 50vw;
     background-color: #F2C12E;
     height: 0.5rem;
