@@ -42,7 +42,7 @@ export default function MenuBlog({posts}) {
           <button className={atual === "TODOS"? Styles.active: Styles.button} onClick={() => filter("TODOS", posts)} tabIndex={0} > Todos </button>
         </li>
         {filteredgenders.map((filteredgenders) => (
-          <li key={filteredgenders}>
+          <li key={filteredgenders.titulo}>
             <button className={atual === filteredgenders? Styles.active: Styles.button} onClick={() => { filter(filteredgenders, posts) }}>
               {filteredgenders}
             </button>
