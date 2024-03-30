@@ -7,9 +7,10 @@ import FormularioServicos from '../components/formularioServicos'
 // import styles from '../styles/servicos.module.css'
 // import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
+import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 
 
-export default function Servicos({ servicos, nav, foo, formularios }) {
+export default function Servicos({ servicos, nav, foo, formularios, servicos1 }) {
 
   const navData = {
     logo : nav.logo,
@@ -52,7 +53,7 @@ export default function Servicos({ servicos, nav, foo, formularios }) {
       <Navbar {...navData}/>
       <Inicio titulo = {tituloServicos} imagem = {imagemServicos}/>
       <TextoServicos {...inicioServicos}/>
-      <EscoposServicos {...blocosServicos}/>
+      <EscoposServicos servicos = {servicos1}/>
       <FormularioServicos {...formularios}/>
       <Footer {...foo}/>
     </>
@@ -67,7 +68,9 @@ export async function getStaticProps(){
   const nav = handleJSONfile(`./content/navFooter/navbar.json`);
   const formularios = handleJSONfile(`./content/forms/forms.json`);
 
+  const servicos1 = handleJSONfiles(`./content/membros`);
+
   return {
-    props: { servicos, nav, foo, formularios },
+    props: { servicos, nav, foo, formularios, servicos1 },
   };
 }
