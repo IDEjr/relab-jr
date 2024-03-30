@@ -66,7 +66,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-top: 10vh;
+  padding-top: 2vh;
 }
 
 .bottomPart {
@@ -80,8 +80,33 @@
   flex-direction: column;
   font-weight: 300;
 }
+.newStyle {
+  margin-top: 10px !important;
+  margin-bottom: 10px 
+  !important;
+}
 
 .markdown {
+  display: block;
+  width: 60%;
+  height: auto;
+  font-size: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 6vh;
+}
+.markdown2 :global(p) {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 120%;
+}
+.markdown2 :global(ol) {
+  padding-left: 3vw;
+}
+.markdown2 :global(ul) {
+  padding-left: 3vw;
+}
+.markdown2 {
   display: block;
   width: 60%;
   height: auto;

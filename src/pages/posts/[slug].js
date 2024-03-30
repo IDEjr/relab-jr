@@ -44,6 +44,7 @@ export default function Posts({ content, nav, foo }) {
           className={styles.topImg}
           style={{objectFit: 'cover', background: 'black'}}
         />
+        <p class="newStyle"></p>
         <div className={styles.contentBlock}>
           <div className={styles.titleAndRest}>
             <text className={styles.categorie}>
@@ -75,6 +76,9 @@ export default function Posts({ content, nav, foo }) {
 
             <ReactMarkdown className={styles.markdown}
               components={{ img: ({ node, ...props }) => <img style={{ maxWidth: '100%', display: 'block', padding: '5vh 0px 5vh 0px', margin: 'auto' }}{...props} /> }}>
+              {content.previa}
+            </ReactMarkdown>
+            <ReactMarkdown className={styles.markdown2}>
               {content.conteudo}
             </ReactMarkdown>
 
