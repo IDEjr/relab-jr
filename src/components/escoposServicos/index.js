@@ -54,7 +54,7 @@ export default function escoposServicos( {servicos} ) {
 
   return(
     <>
-      <ul className={styles.membrosGrid}>
+      <ul className={styles.mainContainer}>
         {servicos && servicos.map((servico, i) => (
           <div key={i}>
           {i % 2 === 0 ? (
