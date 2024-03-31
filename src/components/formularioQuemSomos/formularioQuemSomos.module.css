@@ -1,193 +1,188 @@
 .mainContainer{
-    background-color: #262626;
-    color: #F2C12E;
-    margin-top: 10rem;
-    text-align: center;
-    justify-content: center;
+  background-color: #262626;
+  color: #F2C12E;
+  margin-top: 10rem;
+  /* text-align: center; */
+  /* text-align: left; */
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  text-align: center;
+}
+
+.value_form {
+  color: #de1212;
+  font-weight: 300;
+}
+
+#mensagem {
+  color: rebeccapurple;
+  height: 200px;
+  /* top: 0px;
+  left: 0px; */
+}
+
+#mensagem::placeholder {
+  position: absolute;
+  top: 0;
 }
 
 .title{
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    color: #F2C12E;
-    width: 40%;
-    margin-left: 30%;
-    margin-right: 30%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  color: #F2C12E;
 }
 
-.formIconsContainer{
-    display: flex;
-    width: 60%;
-    margin-top: 4rem;
-    margin-left: 20%;
-    margin-right: 20%;
-    justify-content: space-evenly;
+.formAndContact{
+  display: flex;
+  /* width: 100%; */
+  margin-top: 4rem;
+  margin-left: 20%;
+  margin-right: 20%;
+  justify-content: space-evenly;
 }
 
 .formContainer{
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* margin-top: 4rem;
+  margin-left: 20%; */
+  position: relative;
 }
 
-.halfContainer{
-    width: 100%;
+.doubleInput {
+  display: flex;
+  justify-content: space-between;
 }
 
-.halfContainer input{
-    color: #000000;
-    width: 100%;
-    height: 40px;
-    margin-left: 0px;
+.smallField {
+  width: 45%;
+}
+
+.smallField input {
+  color: #000000;
+  /* font-size: large; */
+  width: 100%;
+  height: 40px;
+  margin-left: 0px;
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+.smallField .input_error {
+  outline: 1px solid rgb(255, 72, 72);
+}
+
+.smallField .error_message {
+  color: rgb(255, 72, 72);
+  font-size: 0.75rem;
+  margin-top: 8px;
+  text-align: left;
+}
+
+.smallField input::placeholder {
+  color: #000000;
+  font-weight: 500;
+}
+
+.mediumField{
+  width: 100%;
+}
+
+.mediumField input{
+  color: #000000;
+  /* font-size: large; */
+  width: 100%;
+  height: 40px;
+  margin-left: 0px;
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+.mediumField .input_error {
+  outline: 1px solid rgb(255, 72, 72);
+}
+
+.mediumField .error_message {
+  color: rgb(255, 72, 72);
+  font-size: 0.75rem;
+  margin-top: 8px;
+  text-align: left;
+}
+
+.mediumField input::placeholder {
+  color: #000000;
+  font-weight: 500;
+}
+
+.mediumField button{
+  width: 100%;
+  /* border-color:#F2C12E;
+  background-color: transparent;
+  color: #F2C12E; */
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.largeField {
+  width: 100%;
+}
+
+.largeField textarea{
+  color: #000000;
+  width: 100%;
+  height: 200px;
+  margin-left: 0px;
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+
+.largeField input::placeholder {
+  color: #000000;
+  /* font-weight: 500; */
+}
+
+.contactContainer {
+  flex: 1;
+  display: flex; 
+  flex-direction: column;
+  /* margin-top: 2rem; */
+}
+
+.contactRows {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.icons {
+  margin-right: 1rem;
+  margin-left: 3rem;
+}
+
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) {
+
+  .formAndContact {
     margin-top: 2rem;
-}
-
-.halfContainer .input_error {
-    outline: 1px solid rgb(255, 72, 72);
-}
-
-.halfContainer .error_message {
-    color: rgb(255, 72, 72);
-    font-size: 0.75rem;
-    margin-top: 8px;
-    text-align: left;
-}
-
-.halfContainer input::placeholder {
-    color: #000000;
-    font-weight: 500;
-}
-
-.halfContainer button{
-    width: 100%;
-    height: 40px;
-    border-color:#F2C12E;
-    color: #eee;
-    background-color: #262626;
-    color: #F2C12E;
-    margin-top: 2rem;
-    margin-bottom: 4rem;
-}
-
-.fullContainer {
-    width: 100%;
-}
-
-.fullContainer textarea{
-    color: #000000;
-    width: 100%;
-    height: 200px;
-    margin-left: 0px;
-    margin-top: 2rem;
-}
-
-.fullContainer input::placeholder {
-    color: #000000;
-    font-weight: 500;
-}
-
-.smallContainers{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.smallContainerLeft{
-    width: 45%;
-    margin-right: 10%;
-    margin-left: 0px;
-}
-
-.smallContainerRight{
-    width: 45%;
-    margin-left: 0px;
-}
-
-.smallContainerLeft input{
-    width: 100%;
-    height: 40px;
-    margin-left: 0px;
-    margin-top: 2rem;
-}
-
-.smallContainerRight input{
-    width: 100%;
-    height: 40px;
-    margin-left: 0px;
-    margin-top: 2rem;
-}
-
-.smallContainerLeft input::placeholder{
-    color: #000000;
-    font-weight: 500;
-}
-
-.smallContainerRight input::placeholder{
-    color: #000000;
-    font-weight: 500;
-}
-
-.smallContainerLeft .input_error {
-    outline: 1px solid rgb(255, 72, 72);
-}
-
-.smallContainerLeft .error_message {
-    color: rgb(255, 72, 72);
-    font-size: 0.75rem;
-    margin-top: 8px;
-    text-align: left;
-}
-
-.smallContainerRight .input_error {
-    outline: 1px solid rgb(255, 72, 72);
-}
-
-.smallContainerRight .error_message {
-    color: rgb(255, 72, 72);
-    font-size: 0.75rem;
-    margin-top: 8px;
-    text-align: left;
-}
-
-.iconsContainer{
-    width: 20%;
-    position: relative;
-    margin-top: 5%;
     margin-left: 10%;
-}
+    margin-right: 10%;
+  }
 
-.icons{
-    font-size: 1.5em; 
-    margin-right: 1rem
-}
+  .largeField textarea{
+    height: 100px
+  }
 
-.iconsP{
-    margin-top: 2rem;
-    text-align: left;
-}
-
-@media only screen and (max-width: 768px) and (orientation: portrait){
-
-    .title{
-        width: 80%;
-        margin-left: 10%;
-        margin-right: 10%;
-    }
-
-    .formIconsContainer{
-        width: 95%;
-        margin-left: 2.5%;
-        margin-right: 2.5%;
-    }
-
-    .fullContainer textarea{
-        height: 100px
-    }
-
-    .iconsContainer{
-        display: none
-    }
+  .contactContainer{
+  display: none
+  }
 }

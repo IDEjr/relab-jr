@@ -5,7 +5,7 @@ const handler = async (req, res) => {
   if (req.method === "POST"){
     const data = JSON.parse(req.body);
     if (!data.nome || !data.email || !data.celular || !data.assunto){
-      return res.status(400).json({ message: 'Erro no preenchimento. Nome, email, celular, assunto inexistente.'})
+      return res.status(400).json({ message: 'Campo(s) obrigatório(s) não preenchido(s).'})
     }
 
     try {

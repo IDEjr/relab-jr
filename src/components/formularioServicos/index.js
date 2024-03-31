@@ -71,7 +71,7 @@ function allowToEnterPhoneNumber(event) {
       </h2>
       <div className={styles.formAndContact}>
         <div className={styles.formContainer}>
-          <div className={styles.smallField}>
+          <div className={styles.mediumField}>
             <input
               className={errors?.name && styles.input_error}
               type="text"
@@ -82,7 +82,7 @@ function allowToEnterPhoneNumber(event) {
               <p className={styles.error_message}>Campo obrigatório</p>
             )}
           </div>
-          <div className={styles.smallField}>
+          <div className={styles.mediumField}>
             <input
               className={errors?.email && styles.input_error}
               type="email"
@@ -99,17 +99,14 @@ function allowToEnterPhoneNumber(event) {
             <p className={styles.error_message}>Email invalido</p>
             )}
           </div>
-          <div className={styles.smallField}>
-            {/* <label className={styles.label_form}>Celular:</label> */}
+          <div className={styles.mediumField}>
             <input
               id=""
               maxlength="14"
               type="text"
               onKeyDown={(event) => allowToEnterPhoneNumber(event)}
               className={errors?.name && styles.input_error}
-              // type="tell"
               placeholder="Celular*"
-              // pattern="[0-9]{2} \[0-9]{5}\-[0-9]{4}"
               {...register("celular", { required: true })}
             />
             {errors?.celular?.type === "required" && (
@@ -119,7 +116,7 @@ function allowToEnterPhoneNumber(event) {
               <p className={styles.error_message}>Número inválido.</p>
             )}
           </div>
-          <div className={styles.smallField}>
+          <div className={styles.mediumField}>
             <input
               className={errors?.name && styles.input_error}
               type="text"
@@ -139,7 +136,7 @@ function allowToEnterPhoneNumber(event) {
               {...register("mensagem", { required: false })}
             />
           </div>
-          <div className={styles.smallField}>
+          <div className={styles.mediumField}>
             <button onClick={() => handleSubmit(onSubmit)()}>Enviar</button>
           </div>
         </div>

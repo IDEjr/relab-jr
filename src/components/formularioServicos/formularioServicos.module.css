@@ -56,11 +56,11 @@
   position: relative;
 }
 
-.smallField{
+.mediumField{
   width: 100%;
 }
 
-.smallField input{
+.mediumField input{
   color: #000000;
   font-size: large;
   width: 100%;
@@ -70,23 +70,23 @@
   font-size: 1rem;
 }
 
-.smallField .input_error {
+.mediumField .input_error {
   outline: 1px solid rgb(255, 72, 72);
 }
 
-.smallField .error_message {
+.mediumField .error_message {
   color: rgb(255, 72, 72);
   font-size: 0.75rem;
   margin-top: 8px;
   text-align: left;
 }
 
-.smallField input::placeholder {
+.mediumField input::placeholder {
   color: #000000;
   font-weight: 500;
 }
 
-.smallField button{
+.mediumField button{
   width: 100%;
   /* border-color:#F2C12E;
   background-color: transparent;
