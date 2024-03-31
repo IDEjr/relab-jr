@@ -18,6 +18,10 @@
   margin-bottom: 10%;
 }
 
+.navdisabled{
+
+  display: none;
+}
 
 .titles{    
   top: 50%;
@@ -74,4 +78,5 @@
   .titles{
     width: 95%;
   }
+
 }

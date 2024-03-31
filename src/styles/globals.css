@@ -95,6 +95,28 @@ header {
 }
 
 
+button {
+  font-size: 1.2rem;
+  border: 2px solid #F2C12E;
+  padding: 1rem 3rem;
+  background-color: transparent;
+  color: #F2C12E;
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+button:hover {
+  background-color: #F2C12E;
+  color: #000000;
+  border: none;
+}
+
+button:active {
+  border: 2px solid #F2C12E;
+  background-color: transparent;
+  color: #F2C12E;
+}
+
 nav a {
 	margin: 0 1rem;
 	color: white;

@@ -85,6 +85,12 @@
   cursor: pointer;
   border-radius: 10px;
 }
+.button:hover {
+  transition: .2s;
+  background: #f2c12e92;
+  color: white;
+}
+
 
 
 @media only screen and (max-width: 800px) {
@@ -95,6 +101,8 @@
     background: none;
     box-shadow: none;
     background-color: none;
+    
+    
   }
 
   .menuContainer{
@@ -112,9 +120,11 @@
     margin-bottom: 0;
     justify-content: space-between;
     min-width: 70vw;
+    
     min-height: 6vh;
   }
 
+  
   .button, .active{
     border: none;
     width: 100%;
@@ -132,12 +142,22 @@
     background-color: #F2C12E;
   }
 
+  .dropdownInactive{
+    opacity: 0;
+    height: 0;
 
-  .optionsMobile {
+  }
+  .tituloMobile{
+    font-size: 5vw;
+  }
+
+  .dropdownActive {
     width: 100%;
     position: relative;
     align-self: flex-end;
-    border-radius: 15px;    
+    border-radius: 15px; 
+    opacity: 1;
+    transition: 1s;
   }
 
   .containerDesktop{

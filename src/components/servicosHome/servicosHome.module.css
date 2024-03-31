@@ -99,7 +99,7 @@ each service
 .frames {
   display: flex;
   width: 85%;
-  height: 600px;
+  height: 450px;
   align-items: flex-end;
   justify-content: center;
 }
@@ -138,10 +138,10 @@ each service
 
 .insideImg {
   width: 75%;
-  height: 530px;
+  height: 420px;
   position:absolute;
   object-fit: cover;
-  border:14px solid #f2c12e99;
+  border:14px solid #F2C12E;
   z-index: 0;
 
 }
@@ -156,8 +156,9 @@ each service
   text-align: center;
   font-size: 30px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   padding-right: 20%;
+  text-transform: uppercase;
 
   line-height: 45px; /* 150% */
 }
@@ -173,14 +174,14 @@ each service
 
   .blocksHandler {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     padding-left: 5vw;
   }
 
   .insideImg {
     width: 80%;
-    border:18px solid #f2c12e99;
+    border:18px solid #F2C12E;
   }
 
   .individualBlock {
@@ -191,41 +192,66 @@ each service
     width: 100%;
   }
 
-  .frames {
-    width: 100%;
-    height: 630px;
-  }
+    .frames {
+        width: 100%;
+    }
+    
 
-  .arrowShape {
-    clip-path: polygon(0px 450px, 231px 63px, 213px 54px, 259px 32px, 262px 80px, 245px 71px, 0px 480px);
-  }
+    .arrow-shape {
+        clip-path: polygon(0px 450px, 231px 63px, 213px 54px, 259px 32px, 262px 80px, 245px 71px, 0px 480px);
+    }
+    .overlayGrid {
+        height: 500;
+    }
+    .first-two {
+        flex-direction: column;
+        width: 90vw;
+        gap:18vw;
+    }
+    .second-two {
+        flex-direction: column;
+        width: 90vw;
+        gap:18vw;
+    }
+    .third-two {
+        flex-direction: column;
+        width: 90vw;
+        gap:18vw;
+    }
 
-  .overlayGrid {
-    height: 500;
-  }
-
-  .firstTwo {
-    flex-direction: row;
-    width: 90vw;
-    gap:18vw;
-  }
-
-  .secondTwo {
-    flex-direction: row;
-    width: 90vw;
-    gap:18vw;
-  }
-
-  .thirdTwo {
-    flex-direction: row;
-    width: 90vw;
-    gap:18vw;
-  }
 }
+
+@media (max-width: 1400px) {
+    .blocks-handler {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 5vw;
+
+    }
+    .first-two {
+        flex-direction: row;
+        width: 90vw;
+        gap:18vw;
+    }
+    .second-two {
+        flex-direction: row;
+        width: 90vw;
+        gap:18vw;
+    }
+    .third-two {
+        flex-direction: row;
+        width: 90vw;
+        gap:18vw;
+    }
+}
+
+
 
 @media (max-width: 1000px) {
   .blocksHandler {
     align-items: center;
+    flex-direction: column;
     gap : 15vh;
     padding-left: 13vw;
   }
@@ -278,7 +304,7 @@ each service
   }
 
   .insideImg {
-    border: 10px solid #f2c12e99;
+    border: 10px solid #F2C12E;
     height: 500px;
   }
 
