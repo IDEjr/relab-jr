@@ -1,8 +1,4 @@
-
-
-
- header .logo{
-	
+header .logo{
 	background-color: #262626;
 }
 
@@ -22,10 +18,8 @@
 }
 
 
-
 .navbar{
 	margin-left: auto;
-
 }
 
 .navbar a {
@@ -62,7 +56,6 @@
 }
 
 
-
 @media only screen and (min-width: 1024px) {
 	.cabecalho .navBtn {
 		padding: 5px;
@@ -85,10 +78,6 @@
 	}
 
 
-
-
-	
-
 	.cabecalho .navbar {
 		position: fixed;
 		top: -100vh;
@@ -102,7 +91,7 @@
 		gap: 1.5rem;
 		background-color: #262626;
 		transition: 1s;
-    	z-index: 999;
+    z-index: 999;
 		
 		border-bottom: 5px solid black;
 		border-image: linear-gradient(to right, red, blue);
@@ -131,4 +120,12 @@
 	.navbar a {
 		font-size: 1.5rem;
 	}
+}
+
+@media only screen and (max-width: 1024px) and (orientation: landscape){
+
+	.droplogo{
+		display: none;
+	}
+
 }

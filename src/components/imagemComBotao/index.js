@@ -11,9 +11,10 @@ export default function imagemComBotao({ imagem, titulo, texto, textoBotao, link
         <h3 className={styles.titulo}>{titulo}</h3>
         <p className={styles.texto}>{texto}</p>
         <div className={styles.boxBotao}>
-          <Link
-          href={link}>
-          <h3 className={styles.botao}>{textoBotao}</h3>
+          <Link href={link}>
+            <button>
+              {textoBotao}
+            </button>
           </Link>
         </div>
       </div>

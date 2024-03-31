@@ -1,32 +1,30 @@
-
-
-.top-part {
+.topPart {
   width: 100%;
   height: 80vh;
   position: relative;
   display: flex;
 }
 
-
-.content-block {
+.contentBlock {
   width: 100%;
   height: 80vh;
   display: flex;
 }
 
-
-.title-and-rest {
+.titleAndRest {
   width: 100%;
   height: 60%;
   display: flex;
   padding: 10px;
 }
 
-
-.top.img{
+.top.img {
   object-fit: cover;
 }
 
+.topImg {
+  filter: brightness(40%);
+}
 
 .title {
   position: absolute;
@@ -34,9 +32,9 @@
   left: 5%;
 }
 
-.sub-title {
+.subTitle {
   position: absolute;
-  top: 47%;
+  top: 50%;
   left: 5.1%;
   font-size: 1.4em;
   font-weight: 500;
@@ -57,34 +55,77 @@
 
 .categorie {
   position: absolute;
-  top:37%;
+  top:35%;
   left: 5.1%;
   font-size: 1.2em;
   font-weight: 400;
   color : #F2C12E;
 }
-.text-and-rest {
+
+.textAndRest {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-top: 10vh;
+  padding-top: 2vh;
 }
-.bottom-part {
+
+.bottomPart {
   padding-bottom: 150px;
 }
 
-.text-formater {
+.textFormater {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   font-weight: 300;
 }
+.newStyle {
+  margin-top: 10px !important;
+  margin-bottom: 10px 
+  !important;
+}
 
 .markdown {
-  width: 80%;
+  display: block;
+  width: 60%;
+  height: auto;
   font-size: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 6vh;
 }
+.markdown2 :global(p) {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 120%;
+}
+.markdown2 :global(ol) {
+  padding-left: 3vw;
+}
+.markdown2 :global(ul) {
+  padding-left: 3vw;
+}
+.markdown2 :global(img) {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}.markdown :global(img) {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+.markdown2 {
+  display: block;
+  width: 60%;
+  height: auto;
+  font-size: 18px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
 
 .author {
   display: flex;
@@ -93,7 +134,7 @@
   padding-top: 2vh;
 }
 
-.author-and-pencil {
+.authorAndPencil {
   display: flex;
   align-items: center;
   padding-left: 19%;
@@ -101,7 +142,7 @@
   color:#F2C12E;
 }
 
-.voltar-button {
+.voltarButton {
   background-color: transparent;
   border: none;
   cursor:pointer;
@@ -110,7 +151,7 @@
   padding-left: 6.5vw;
 }
 
-.button-image {
+.buttonImage {
   width: 9vw;
   height: 8vh;
 }
@@ -119,10 +160,10 @@
 @media (max-width: 1280px) {
   .title {
     font-weight: 500;
-    font-size: 5em;
+
     width: 60%;
   }
-  .sub-title {
+  .subTitle {
     display: none;
   }
 
@@ -133,117 +174,127 @@
 
   .details {
     font-size: 1.8em;
-    top: 64%;
+    top: 80%;
     width: 90%;
   }
 
-
-  .author{
-   display: flex; 
-   flex-direction: column;
-   align-items: flex-start;
+  .author {
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .author-and-pencil {
+  .authorAndPencil {
     display: flex;
     width: 100%;
     padding-left: 9%;
   }
-  .voltar-button {
+
+  .voltarButton {
     padding-left: 45%;
     height: 6vh;
     width: 12vw;
   }
 
-  .post-text {
+  .postText {
     font-size: 1.8em;
     width: 80%;
     padding-bottom: 20px;
   }
-  .author-name {
+
+  .authorName {
     font-size: 1.3em;
     width: 50%;
   }
-  .button-image {
+
+  .buttonImage {
     height: 6vh;
     width: 12vw;
   }
-  
 }
 
 @media (max-width: 795px) {
 
-  .top-part {
+  .topPart {
     height: 40vh;
   }
+
+  .categorie {
+    top:20%;
+  }
+
+  .title {
+    font-size: 2.5em;
+  }
+
   .categorie {
     top: 30%;
   }
-  .title {
-    font-size: 3.5em;
-  }
+
   .details {
     top: 75%;
     font-size: 1.1em;
   }
 
-
-
-  .author-and-pencil {
+  .authorAndPencil {
     padding-left: 8%;
   }
 
-  .post-text {
+  .postText {
     font-size: 1.3em;
   }
 
-  
-
-  .button-image {
-    width: 16vw;
-    padding-left: 42%;
-  }
-  .voltar-button {
+  .buttonImage {
     width: 16vw;
     padding-left: 42%;
   }
 
-
+  .voltarButton {
+    width: 16vw;
+    padding-left: 42%;
+  }
 }
 
+@media (max-width: 600px) {
+  .title {
+    font-size: 2em;
+  }
+}
 
 @media (max-width: 560px) {
   .categorie {
     font-size: 1.3em;
   }
+
   .title {
     font-size: 2em;
   }
 
   .details {
+    top:90%;
     font-size: 0.9em;
     display: flex;
     gap:5%;
   }
 
-  .post-text {
+  .postText {
     font-size: 1.2em;
   }
 
-
-  .author-and-pencil {
+  .authorAndPencil {
     padding-left: 6%;
   }
 
-  .author-name {
+  .authorName {
     font-size: 1em;
   }
 
-  .voltar-button {
+  .voltarButton {
     width: 25vw;
     padding-left: 39%;
   }
-  .button-image {
+
+  .buttonImage {
     width: 25vw;
     padding-left: 39%;
   }

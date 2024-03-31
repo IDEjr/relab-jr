@@ -1,5 +1,4 @@
 .button, .active {
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,11 +9,7 @@
   color: #F2C12E;
   font-size: 1.4vw;
   padding: 2vw;
-
 }
-
-
-
 
 .container {
   display: flex;
@@ -24,46 +19,50 @@
 
 }
 
-.tituloMobile, .optionButton {
-  flex: 1;
+.tituloMobile {
   background-color: #F2C12E;
   color: black;
-  font-size: 3.4vw;
+  font-size: 6.4vw;
   display: flex;
   align-items: center;
-  justify-content: start;
-  width: 100%;
+  justify-content: center;
+  width: 50vw;
   height: 100%;
   padding: 10px;
   white-space: nowrap;
-  border-bottom-left-radius: 20px;
-  border-top-left-radius: 20px;
-  
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
 }
+
+.icone{
+  font-size: 10vw;
+}
+
 .optionButton{
   border-bottom-left-radius: 0px;
   border-top-left-radius: 0px;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
   background-color: #262626;
   color: #F2C12E;
-  justify-content: end;
-  width: 10%;
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20vw;  
+  height: 100%;
 }
+
 .lista {
   list-style-type: none;
   display: flex;
 }
-
-
 
 .menuContainer, .tituloEBotaoMobile {
   width: fit-content;
   height: fit-content;
   display: flex;
   border-radius: 15px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.25);
   margin-bottom: 15vh;
 }
 
@@ -74,12 +73,10 @@
 }
 .menuContainer{
   background: rgba(0, 0, 0, 0.18);
-
 }
 .containerDesktop{
   display: flex; 
 }
-
 
 
 .active, .button:hover {
@@ -88,27 +85,30 @@
   cursor: pointer;
   border-radius: 10px;
 }
-
-
+.button:hover {
+  transition: .2s;
+  background: #f2c12e92;
+  color: white;
+}
 
 
 
 @media only screen and (max-width: 800px) {
 
-  
   .containerMobile{
     display: flex;
     flex-direction: column;
-   
     background: none;
     box-shadow: none;
     background-color: none;
+    
+    
   }
 
   .menuContainer{
-    
     margin-bottom: 10px;
   }
+
   .container{
     justify-content: space-evenly;
   }
@@ -120,47 +120,47 @@
     margin-bottom: 0;
     justify-content: space-between;
     min-width: 70vw;
+    
     min-height: 6vh;
   }
 
+  
   .button, .active{
-      border: none;
-     
-      width: 100%;
-      justify-content: start;
-      align-items: center;
-      text-align: start;
-      background: none;
-      color: #F2C12E;
-      font-size: 3vw;
-      height: 6vh;
+    border: none;
+    width: 100%;
+    justify-content: start;
+    align-items: center;
+    text-align: start;
+    background: none;
+    color: #F2C12E;
+    font-size: 3vw;
+    height: 6vh;
   }
 
   .active{
     color: black;
     background-color: #F2C12E;
   }
-  /* .menuContainer{
-    box-shadow: none;
-    background: none;
-  } */
 
-  .optionsMobile {
+  .dropdownInactive{
+    opacity: 0;
+    height: 0;
+
+  }
+  .tituloMobile{
+    font-size: 5vw;
+  }
+
+  .dropdownActive {
     width: 100%;
     position: relative;
     align-self: flex-end;
-    border-radius: 15px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    
+    border-radius: 15px; 
+    opacity: 1;
+    transition: 1s;
   }
 
   .containerDesktop{
     display: none;
   }
-  .gridPosts{
-    
-  }
-
-  
-
 }
