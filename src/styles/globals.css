@@ -48,6 +48,10 @@ p {
 	background: none;
 }
 
+textarea{
+  color: #000000;
+}
+
 
 h1{
 	font-size: 3rem;

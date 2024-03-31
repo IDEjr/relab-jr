@@ -18,6 +18,45 @@ export default function formularioServicos(forms) {
     await sendContactForm(data);
   }
 
+  function formatPhoneNumber(value) {
+  // Remove todos os caracteres que não são números
+  const numericValue = value.replace(/\D/g, '');
+  
+  // Aplica a formatação
+  let formattedValue = '';
+  if (numericValue.length >= 1) {
+    // let teste = (11-1).toString() +${resto} <- embaixo
+    formattedValue += `(${numericValue.slice(0, 2)}`;
+  }
+  if (numericValue.length >= 3) {
+    formattedValue += `) ${numericValue.slice(2, 7)}`;
+  }
+  if (numericValue.length >= 7) {
+    formattedValue += `-${numericValue.slice(7, 11)}`;
+  }
+  
+  return formattedValue;
+}
+
+function allowToEnterPhoneNumber(event) {
+  const charCode = event.keyCode || event.which;
+
+  // Allow backspace (key code 8)
+  if (charCode === 8) {
+    return true;
+  }
+
+  const currentValue = event.target.value;
+  const formattedValue = formatPhoneNumber(currentValue + String.fromCharCode(charCode));
+
+  // Update the input field value with the formatted phone number
+  event.target.value = formattedValue;
+
+  // Prevent the default behavior of the input event
+  event.preventDefault();
+}
+
+
   return(
     <div className={styles.mainContainer}>
       <div className={styles.logo}>
@@ -27,11 +66,10 @@ export default function formularioServicos(forms) {
           height={150}
         />
       </div>
-      
       <h2 className={styles.title}>
         {forms.tituloServicos}
       </h2>
-      <div className={styles.formAndIcons}>
+      <div className={styles.formAndContact}>
         <div className={styles.formContainer}>
           <div className={styles.smallField}>
             <input
@@ -64,8 +102,12 @@ export default function formularioServicos(forms) {
           <div className={styles.smallField}>
             {/* <label className={styles.label_form}>Celular:</label> */}
             <input
+              id=""
+              maxlength="14"
+              type="text"
+              onKeyDown={(event) => allowToEnterPhoneNumber(event)}
               className={errors?.name && styles.input_error}
-              type="tell"
+              // type="tell"
               placeholder="Celular*"
               // pattern="[0-9]{2} \[0-9]{5}\-[0-9]{4}"
               {...register("celular", { required: true })}
@@ -101,21 +143,21 @@ export default function formularioServicos(forms) {
             <button onClick={() => handleSubmit(onSubmit)()}>Enviar</button>
           </div>
         </div>
-        <div className={styles.iconsContainer}>
-          <p className={styles.iconsP}>
-            <FaRegComment className={styles.icons}/>
+        <div className={styles.contactContainer}>
+          <p className={styles.contactRows}>
+            <FaRegComment  size={30} className={styles.icons}/>
             {forms.celular}
           </p>
-          <p className={styles.iconsP}>
-            <FaRegEnvelope className={styles.icons}/>
+          <p className={styles.contactRows}>
+            <FaRegEnvelope size={30} className={styles.icons}/>
             {forms.email}
           </p>
-          <p className={styles.iconsP}>
-            <FaHome className={styles.icons}/>
+          <p className={styles.contactRows}>
+            <FaHome size={30} className={styles.icons}/>
             {forms.endereco1} 
           </p>
-          <p className={styles.iconsP}>
-            <FaHome className={styles.icons}/>
+          <p className={styles.contactRows}>
+            <FaHome size={30} className={styles.icons}/>
             {forms.endereco1} 
           </p>
         </div>
