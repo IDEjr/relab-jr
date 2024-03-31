@@ -31,7 +31,7 @@ export default function formularioServicos(forms) {
       <h2 className={styles.title}>
         {forms.tituloServicos}
       </h2>
-      <div className={styles.formIconsContainer}>
+      <div className={styles.formAndIcons}>
         <div className={styles.formContainer}>
           <div className={styles.smallField}>
             <input

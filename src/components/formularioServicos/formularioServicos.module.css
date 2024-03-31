@@ -2,6 +2,22 @@
   color: #F2C12E;
 } */
 
+
+.mainContainer{
+  background-color: #262626;
+  color: #F2C12E;
+  margin-top: 10rem;
+  /* text-align: center; */
+  /* text-align: left; */
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  text-align: center;
+}
+
 .value_form {
   color: #de1212;
   font-weight: 300;
@@ -19,21 +35,6 @@
   top: 0;
 }
 
-.mainContainer{
-  background-color: #262626;
-  color: #F2C12E;
-  margin-top: 10rem;
-  /* text-align: center; */
-  /* text-align: left; */
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-}
-
-.logo {
-  text-align: center;
-}
-
 .title{
   text-align: center;
   display: flex;
@@ -41,9 +42,9 @@
   color: #F2C12E;
 }
 
-.formIconsContainer{
+.formAndIcons{
   display: flex;
-  width: 60%;
+  /* width: 100%; */
   margin-top: 4rem;
   margin-left: 20%;
   margin-right: 20%;
@@ -125,6 +126,7 @@
 
 .iconsP {
   margin-top: 2rem;
+  width: 100%;
   display: flex;
   align-items: center;
 }
@@ -136,7 +138,7 @@
 }
 
 
-@media only screen and (max-width: 768px) and (orientation: portrait){
+@media only screen and (max-width: 1024px) and (orientation: portrait){
 
   .formIconsContainer{
   width: 95%;
