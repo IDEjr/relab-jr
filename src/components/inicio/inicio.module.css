@@ -10,7 +10,6 @@
   object-fit: cover;
   max-width: 100%;
   filter: brightness(40%); 
- 
 }
 
 
@@ -41,9 +40,7 @@
 @media (min-width: 1024px) and (max-width: 1560px) {
   .initImg {
     max-height: 90%;
-
   }
-  
 }
 
 @media (max-width: 1023px) {

@@ -3,54 +3,37 @@ import Footer from '../components/footer'
 import Inicio from '../components/inicio'
 import TextoServicos from '../components/textoServicos'
 import EscoposServicos from '../components/escoposServicos'
-import styles from '../styles/servicos.module.css'
-import { handleJSONfiles } from '@/utils/functions/jsonHandler'
+import FormularioServicos from '../components/formularioServicos'
+// import styles from '../styles/servicos.module.css'
+// import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
-import Formulario from '../components/formularioServicos'
+import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 
-export default function servicos({servicos, nav, foo}) {
 
-  const path = servicos.inicioServicos.imagem;
-
-  const inicioServicos = {
-    titulo: servicos.inicioServicos.texto1,
-    texto: servicos.inicioServicos.texto2,
-  }
+export default function Servicos({ paginaServicos, nav, foo, formularios, servicos }) {
 
   const navData = {
     logo : nav.logo,
     linkedin : nav.linkedin,
     instagram : nav.instagram,
     email : nav.email
-  };
-  const blocosServicos = {
-    imagem1 : servicos.servicos.imagem1,
-    servico1 : servicos.servicos.servico1,
-    texto1 : servicos.servicos.texto1,
-    imagem2 : servicos.servicos.imagem2,
-    servico2 : servicos.servicos.servico2,
-    texto2 : servicos.servicos.texto2,
-    imagem3 : servicos.servicos.imagem3,
-    servico3 : servicos.servicos.servico3,
-    texto3 : servicos.servicos.texto3,
-    imagem4 : servicos.servicos.imagem4,
-    servico4 : servicos.servicos.servico4,
-    texto4 : servicos.servicos.texto4,
-    imagem5 : servicos.servicos.imagem5,
-    servico5 : servicos.servicos.servico5,
-    texto5 : servicos.servicos.texto5,
-    imagem6 : servicos.servicos.imagem6,
-    servico6 : servicos.servicos.servico6,
-    texto6 : servicos.servicos.texto6,
+  }
+
+  const tituloServicos = paginaServicos.inicioServicos.titulo;
+  const imagemServicos = paginaServicos.inicioServicos.imagem;
+
+  const inicioServicos = {
+    titulo: paginaServicos.inicioServicos.texto1,
+    texto: paginaServicos.inicioServicos.texto2,
   }
 
   return (
     <>
-      <Navbar  {...navData}/>
-      <Inicio title = {"SERVIÇOS"} image= {path}/>
+      <Navbar {...navData}/>
+      <Inicio titulo = {tituloServicos} imagem = {imagemServicos}/>
       <TextoServicos {...inicioServicos}/>
-      <EscoposServicos {...blocosServicos}/>
-      <Formulario />
+      <EscoposServicos servicos = {servicos}/>
+      <FormularioServicos {...formularios}/>
       <Footer {...foo}/>
     </>
   );
@@ -59,20 +42,14 @@ export default function servicos({servicos, nav, foo}) {
 
 export async function getStaticProps(){
 
-  const caminho = "paginas";
-  const pagina = "servicos";
-  const caminho2 = "navFooter";
+  const foo = handleJSONfile(`./content/navFooter/footer.json`);
+  const paginaServicos = handleJSONfile(`./content/paginas/servicos.json`);
+  const nav = handleJSONfile(`./content/navFooter/navbar.json`);
+  const formularios = handleJSONfile(`./content/forms/forms.json`);
 
+  const servicos = handleJSONfiles(`./content/servicos`);
 
-
-  const pagina3 = "footer";
-  const foo = handleJSONfile(`./content/${caminho2}/${pagina3}.json`);
-
-
-  const pagina2 = "navbar";
-  const servicos = handleJSONfile(`./content/${caminho}/${pagina}.json`);
-  const nav = handleJSONfile(`./content/${caminho2}/${pagina2}.json`);
   return {
-    props: { servicos, nav, foo },
+    props: { paginaServicos, nav, foo, formularios, servicos },
   };
 }

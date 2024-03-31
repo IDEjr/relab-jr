@@ -12,12 +12,9 @@ import Footer from '../../components/footer'
 import React from 'react'
 
 
-
-
 const handleMove = () => {
   window.scrollTo({ top: 0, behavior: "smooth" }); // here it goes
 };
-
 
 
 export default function Posts({ content, nav, foo }) {
@@ -25,68 +22,89 @@ export default function Posts({ content, nav, foo }) {
   const { postId } = router.query
 
   const navData = {
-    logo : nav.logo,
-    linkedin : nav.linkedin,
-    instagram : nav.instagram,
-    email : nav.email
+    logo: nav.logo,
+    linkedin: nav.linkedin,
+    instagram: nav.instagram,
+    email: nav.email
   };
 
+    // formata data
+    var dataForm;
+    dataForm = content.data.substring(8, 10) + '/' + content.data.substring(5, 7) + '/' + content.data.substring(0, 4);
+
   return (
-    <div className={styles['container']}>
+    <div className={styles.container}>
       <React.Fragment>
-      <Navbar  {...navData}/>
+        <Navbar  {...navData} />
       </React.Fragment>
-      <div className={styles['top-part']}>
+      <div className={styles.topPart}>
         <Image
-            src={content.imagemCapa}
-            fill={true}
-            className={styles['top-img']}
+          src={content.imagemCapa}
+          fill={true}
+          className={styles.topImg}
+          style={{objectFit: 'cover', background: 'black'}}
         />
-        <div className={styles['content-block']}>
-          <div className={styles['title-and-rest']}>
-            <text className={styles['categorie']}>
-              {content.selecao}
+        <p class="newStyle"></p>
+        <div className={styles.contentBlock}>
+          <div className={styles.titleAndRest}>
+            <text className={styles.categorie}>
+              {content.genero}
             </text>
-            <h1 className={styles['title']}>
+            <h1 className={styles.title}>
               {content.titulo}
             </h1>
-            <text className={styles['sub-title']}>
+            <text className={styles.subTitle}>
               {content.previa}
             </text>
           </div>
-          <text className={styles['details']}>
-            {content.autor}<span/>{content.data}
+
+
+          <text className={styles.details}>
+            <a href={content.linkedin} className={styles['autor']}>
+              {content.autor}
+            </a>
+            <span />
+            {dataForm}
           </text>
         </div>
       </div>
+      <div className={styles.bottomPart}>
+        <div className={styles.textAndRest}>
+          <div className={styles.textFormater}>
 
 
-      <div className={styles['bottom-part']}>
-        <div className={styles['text-and-rest']}>
-          <div className={styles['text-formater']}>
-            <text className={styles['post-text']}>
+
+            <ReactMarkdown className={styles.markdown}
+              components={{ img: ({ node, ...props }) => <img style={{ maxWidth: '100%', display: 'block', padding: '5vh 0px 5vh 0px', margin: 'auto' }}{...props} /> }}>
+              {content.previa}
+            </ReactMarkdown>
+            <ReactMarkdown className={styles.markdown2}>
               {content.conteudo}
-            </text>
+            </ReactMarkdown>
+
+
           </div>
-          <div className={styles['author']}>
-            <div className={styles['author-and-pencil']}>
-              <Image className={styles['']} src={pencilImg}/>
-              <text className={styles['author-name']}>
-                {content.autor}
+          <div className={styles.author}>
+            <div className={styles.authorAndPencil}>
+              <Image src={pencilImg} />
+              <text className={styles.authorName}>
+                <a href={content.linkedin} className={styles['autor']}>
+                  {content.autor}
+                </a>
               </text>
             </div>
-            <button onClick={handleMove} className={styles['voltar-button']}>
-              <Image className={styles['button-image']} src={buttonImg}/>
+            <button onClick={handleMove} className={styles.voltarButton}>
+              <Image className={styles.buttonImage} src={buttonImg} />
             </button>
           </div>
         </div>
       </div>
-      <Footer {...foo}/>
+      <Footer {...foo} />
     </div>
   )
 }
 
-export async function getStaticProps({params : {slug} }){
+export async function getStaticProps({ params: { slug } }) {
   const caminho = 'posts';
   const caminho2 = "navFooter";
   const pagina2 = "navbar";
@@ -97,7 +115,7 @@ export async function getStaticProps({params : {slug} }){
   const foo = handleJSONfile(`./content/${caminho2}/${pagina3}.json`);
 
   return {
-    props: { content , nav, foo},
+    props: { content, nav, foo },
   };
 }
 
@@ -109,11 +127,11 @@ export async function getStaticPaths() {
 
   const paths = filesInProjects.map(file => {
     const filename = file.slice(0, file.indexOf('.'))
-    return { params: { slug: filename }}
+    return { params: { slug: filename } }
   })
 
   return {
     paths,
-    fallback: false 
+    fallback: false
   }
 }
