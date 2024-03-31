@@ -45,7 +45,7 @@ export async function getStaticProps(){
   const foo = handleJSONfile(`./content/navFooter/footer.json`);
   const paginaServicos = handleJSONfile(`./content/paginas/servicos.json`);
   const nav = handleJSONfile(`./content/navFooter/navbar.json`);
-  const forms = handleJSONfile(`./content/forms/forms.json`);
+  const formularios = handleJSONfile(`./content/forms/forms.json`);
 
   const servicos = handleJSONfiles(`./content/servicos`);
 
