@@ -1,41 +1,13 @@
 import { useForm } from "react-hook-form";
-import { isEmail } from "validator";
+import { isEmail, isMobilePhone } from "validator";
 import { sendContactForm } from "./../../lib/api";
 import styles from "./formularioQuemSomos.module.css"
 import { FaRegComment, FaRegEnvelope, FaHome } from "react-icons/fa";
 import Image from 'next/image'
 
 
-export default function formularioQuemSomos(forms) {
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-
-  const onSubmit = async (data) => {
-    // Validate the phone number format
-    const semester = data.semester;
-    const isValidSemester = /^\d{4}\/\d$/.test(semester); // Check if the format matches "9999/9"
-    const phoneNumber = data.celular;
-    const isValidPhoneNumber = /^\(\d{2}\) \d{5}-\d{4}$/.test(phoneNumber); // Check if the format matches "(99) 99999-9999"
-  
-    if (!isValidPhoneNumber) {
-      alert('Formato de número de telefone inválido. Por favor, insira no formato correto (99) 99999-9999.');
-      return; // Exit the function if the format is not valid
-    }
-
-    if (!isValidSemester) {
-      alert('Formato de semestre inválido. Por favor, insira no formato correto (9999/9).');
-      return; // Exit the function if the format is not valid
-    }
-  
-    // If the format is valid, proceed with form submission
-    await sendContactForm(data);
-  }
-
-  function formatPhoneNumber(value) {
+function formatPhoneNumber(value) {
   // Remove todos os caracteres que não são números
   const numericValue = value.replace(/\D/g, '');
   
@@ -58,7 +30,7 @@ export default function formularioQuemSomos(forms) {
 function allowToEnterPhoneNumber(event) {
   const charCode = event.keyCode || event.which;
 
-  // Allow backspace (key code 8)
+  // Permite backspace
   if (charCode === 8) {
     return true;
   }
@@ -66,20 +38,20 @@ function allowToEnterPhoneNumber(event) {
   const currentValue = event.target.value;
   const formattedValue = formatPhoneNumber(currentValue + String.fromCharCode(charCode));
 
-  // Update the input field value with the formatted phone number
+  // Atualiza o valor do input field com o numero de celular formatado
   event.target.value = formattedValue;
 
-  // Prevent the default behavior of the input event
+  // Impede o comportamento padrão
   event.preventDefault();
 }
 
 
 
 function formatSemester(value) {
-  // Remove all non-numeric characters
+  // Remove todos os caracteres que não são números
   const numericValue = value.replace(/\D/g, '');
 
-  // Apply formatting
+  // Aplica a formatação
   let formattedValue = '';
   if (numericValue.length >= 1) {
     formattedValue += `${numericValue.slice(0, 4)}`;
@@ -94,7 +66,7 @@ function formatSemester(value) {
 function allowToEnterSemester(event) {
   const charCode = event.keyCode || event.which;
 
-  // Allow backspace (key code 8)
+  // Permite backspace
   if (charCode === 8) {
     return true;
   }
@@ -102,14 +74,37 @@ function allowToEnterSemester(event) {
   const currentValue = event.target.value;
   const formattedValue = formatSemester(currentValue + String.fromCharCode(charCode));
 
-  // Update the input field value with the formatted phone number
+  // Atualiza o valor do input field com o semestre formatado
   event.target.value = formattedValue;
 
-  // Prevent the default behavior of the input event
+  // Impede o comportamento padrão
   event.preventDefault();
 }
 
 
+export default function formularioQuemSomos(forms) {
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = async (data) => {
+    try {
+      await sendContactForm(data);
+      // reset() seria melhor
+      document.getElementById("nome").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("curso").value = "";
+      document.getElementById("celular").value = "";
+      document.getElementById("semestre").value = "";
+      document.getElementById("assunto").value = "";
+      document.getElementById("mensagem").value = "";
+    } catch (error) {
+    }
+  }
 
   return(
     <div className={styles.mainContainer}>
@@ -128,9 +123,12 @@ function allowToEnterSemester(event) {
           <div className={styles.mediumField}>
             <input
               className={errors?.name && styles.input_error}
+              id="nome"
               type="text"
               placeholder="Nome*"
-              {...register("nome", { required: true })}
+              {...register("nome", {
+                required: true
+              })}
             />
             {errors?.nome?.type === "required" && (
               <p className={styles.error_message}>Campo obrigatório</p>
@@ -140,6 +138,7 @@ function allowToEnterSemester(event) {
             <div className={styles.smallField}>
               <input
                 className={errors?.email && styles.input_error}
+                id="email"
                 type="email"
                 placeholder="E-mail*"
                 {...register("email", {
@@ -151,15 +150,18 @@ function allowToEnterSemester(event) {
                 <p className={styles.error_message}>Campo obrigatório.</p>
               )}
               {errors?.email?.type === "validate" && (
-              <p className={styles.error_message}>Email invalido</p>
+              <p className={styles.error_message}>Email inválido</p>
               )}
             </div>
             <div className={styles.smallField}>
               <input
                   className={errors?.name && styles.input_error}
+                  id="curso"
                   type="text"
                   placeholder="Curso*"
-                  {...register("curso", { required: true })}
+                  {...register("curso", {
+                    required: true
+                  })}
                 />
                 {errors?.curso?.type === "required" && (
                   <p className={styles.error_message}>Campo obrigatório</p>
@@ -169,16 +171,19 @@ function allowToEnterSemester(event) {
           <div className={styles.doubleInput}>
             <div className={styles.smallField}>
               <input
-                id=""
-                maxlength="14"
+                id="celular"
+                maxLength="14"
                 type="text"
                 onKeyDown={(event) => allowToEnterPhoneNumber(event)}
                 className={errors?.name && styles.input_error}
                 placeholder="Celular*"
-                {...register("celular", { required: true })}
+                {...register("celular", {
+                  required: true,
+                  validate: (value) => isMobilePhone(value, 'pt-BR'),
+                })}
               />
               {errors?.celular?.type === "required" && (
-                <p className={styles.error_message}>Campo asdasobrigatório</p>
+                <p className={styles.error_message}>Campo obrigatório</p>
               )}
               {errors?.celular?.type === "validate" && (
                 <p className={styles.error_message}>Número inválido.</p>
@@ -186,25 +191,34 @@ function allowToEnterSemester(event) {
             </div>
             <div className={styles.smallField}>
               <input
-                id=""
-                maxlength="7"
+                className={errors?.name && styles.input_error}
+                id="semestre"
+                maxLength="7"
                 type="text"
                 onKeyDown={(event) => allowToEnterSemester(event)}
-                className={errors?.name && styles.input_error}
                 placeholder="Semestre*"
-                {...register("semestre", { required: true })}
+                {...register("semestre", {
+                  required: true,
+                  validate: (value) => /^\d{4}\/\d$/.test(value)
+                })}
               />
               {errors?.semestre?.type === "required" && (
                 <p className={styles.error_message}>Campo obrigatório</p>
+              )}
+              {errors?.semestre?.type === "validate" && (
+                <p className={styles.error_message}>Semestre inválido.</p>
               )}
             </div>
           </div>
           <div className={styles.mediumField}>
             <input
               className={errors?.name && styles.input_error}
+              id="assunto"
               type="text"
               placeholder="Assunto*"
-              {...register("assunto", { required: true })}
+              {...register("assunto", {
+                required: true
+              })}
             />
             {errors?.assunto?.type === "required" && (
               <p className={styles.error_message}>Campo obrigatório</p>
@@ -213,10 +227,12 @@ function allowToEnterSemester(event) {
           <div className={styles.largeField}>
             <textarea
               className={errors?.name && styles.input_error}
-              // id={styles.mensagem}
+              id="mensagem"
               type="text"
               placeholder="Sua mensagem"
-              {...register("mensagem", { required: false })}
+              {...register("mensagem", {
+                required: false
+              })}
             />
           </div>
           <div className={styles.mediumField}>
