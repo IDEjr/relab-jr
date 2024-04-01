@@ -5,11 +5,12 @@ import TextoBarraQuemSomos from '../components/textoBarraQuemSomos'
 import Valores from '../components/valores'
 import GridMembros from '@/components/gridMembros'
 import CarrosselQuemSomos from '@/components/carrosselQuemSomos'
+import FormularioQuemSomos from '../components/formularioQuemSomos'
 // import styles from '../styles/quemSomos.module.css'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
 
-export default function quemSomos({ quemSomos, membros, nav, foo }) {
+export default function QuemSomos({ quemSomos, membros, nav, foo, formularios }) {
 
   const navData = {
     logo: nav.logo,
@@ -52,7 +53,7 @@ export default function quemSomos({ quemSomos, membros, nav, foo }) {
       <CarrosselQuemSomos imagens = {quemSomos.carrosselQuemSomos.imagensCarrossel}/>
       <Valores {...valores}/>
       <GridMembros titulo = {grid.titulo} logo = {grid.logo} membros = {membros}/>
-      
+      <FormularioQuemSomos {...formularios}/>
       <Footer {...foo}/>
     </>
   );
@@ -65,8 +66,9 @@ export async function getStaticProps(){
   const quemSomos = handleJSONfile(`./content/paginas/quemSomos.json`);
   const membros = handleJSONfiles(`./content/membros`);
   const nav = handleJSONfile(`./content/navFooter/navbar.json`);
+  const formularios = handleJSONfile(`./content/forms/forms.json`);
 
   return {
-    props: { quemSomos, membros, nav, foo },
+    props: { quemSomos, membros, nav, foo, formularios },
   };
 }

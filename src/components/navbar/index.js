@@ -6,13 +6,13 @@ import classnames from 'classnames';
 import Link from 'next/link'
 
 export default function navbar({ logo, linkedin, instagram, email }) {
-    const navRef = useRef();
-    const logoRef = useRef();
+  const navRef = useRef();
+  const logoRef = useRef();
 	const showNavbar = () => {
 		navRef.current.classList.toggle(
 			"responsiveNav"
 		);
-        logoRef.current.classList.toggle(
+    logoRef.current.classList.toggle(
 			"responsiveLogo"
 		);
 	};

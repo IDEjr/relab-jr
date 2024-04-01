@@ -11,7 +11,7 @@ import { handleJSONfile } from '@/utils/functions/jsonHandler'
 import React from 'react';
 
 
-export default function Home({home, posts, nav, foo}) {
+export default function Home({home, posts, nav, foo, servicos}) {
 
   const navData = {
     logo: nav.logo,
@@ -56,8 +56,8 @@ export default function Home({home, posts, nav, foo}) {
     }
     i+=1;
   } 
-  console.log(postsCarrossel)
-  console.log(posts)
+  // console.log(postsCarrossel)
+  // console.log(posts)
   
   
 //------------------------------------------------------------------------------------------
@@ -69,7 +69,7 @@ export default function Home({home, posts, nav, foo}) {
       <Inicio titulo = {tituloHome} imagem = {imagemHome}/>
       <TextoBarraHome {...textoBarraHome}/>
       <ImagemComBotao {...imgButResultados} />
-      <ServicosHome servicosHome = {home.servicosHome}/>
+      <ServicosHome servicosHome = {home.servicosHome} servicos = {servicos}/>
       <ImagemComBotao {...imgButMembros} />
       <CarrosselHome titulo = {tituloCarrossel} posts = {postsCarrossel}/>
       <Footer {...foo}/>
@@ -84,7 +84,8 @@ export async function getStaticProps(){
   const nav = handleJSONfile(`./content/navFooter/navbar.json`);
   const foo = handleJSONfile(`./content/navFooter/footer.json`);
   const posts = handleJSONfiles('./content/posts');
+  const servicos = handleJSONfiles('./content/servicos');
   return {
-    props: { home, posts, nav, foo },
+    props: { home, posts, nav, foo, servicos },
   };
 }
