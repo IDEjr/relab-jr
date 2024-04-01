@@ -12,6 +12,7 @@ const handleMove = () => {
 
 export default function Footer(footerData) {
   return (
+    <>
       <div className={styles.footer}>
         <div className={styles.linearGradient}/>
         {/* <Image 
@@ -85,5 +86,6 @@ export default function Footer(footerData) {
           </span>
         </div>
       </div>
+    </>
   );
 }
