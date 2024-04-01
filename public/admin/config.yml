@@ -314,9 +314,8 @@ collections:
         editor:
         preview: false
         fields:
-          - {label: "Email Destino", name: "emailDestino", widget: "string"}
-          - {label: "Email Origem", name: "emailOrigem", widget: "string"}
-          - {label: "Senha Google", name: "senha", widget: "string"}
+          - {label: "Email do formulário", name: "emailForm", widget: "string"}
+          - {label: "Senha de App Google", name: "senhaApp", widget: "string"}
           - {label: "Logo Formulários", name: "logo", widget: "image"}
           - {label: "Título Membros", name: "tituloMembros", widget: "string"}
           - {label: "Título Servicos", name: "tituloServicos", widget: "string"}

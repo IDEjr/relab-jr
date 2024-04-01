@@ -63,7 +63,7 @@ export default function escoposServicos( {servicos} ) {
             servicoR(servico.servico, servico.imagem, servico.descricao)
           )}
         </div>
-        ))}
+        ))} 
       </ul>
     </>
   )

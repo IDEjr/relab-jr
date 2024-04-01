@@ -22,10 +22,10 @@ export default function Posts({ content, nav, foo }) {
   const { postId } = router.query
 
   const navData = {
-    logo : nav.logo,
-    linkedin : nav.linkedin,
-    instagram : nav.instagram,
-    email : nav.email
+    logo: nav.logo,
+    linkedin: nav.linkedin,
+    instagram: nav.instagram,
+    email: nav.email
   };
 
     // formata data
@@ -35,7 +35,7 @@ export default function Posts({ content, nav, foo }) {
   return (
     <div className={styles.container}>
       <React.Fragment>
-      <Navbar  {...navData}/>
+        <Navbar  {...navData} />
       </React.Fragment>
       <div className={styles.topPart}>
         <Image
@@ -44,6 +44,7 @@ export default function Posts({ content, nav, foo }) {
           className={styles.topImg}
           style={{objectFit: 'cover', background: 'black'}}
         />
+        <p class="newStyle"></p>
         <div className={styles.contentBlock}>
           <div className={styles.titleAndRest}>
             <text className={styles.categorie}>
@@ -56,37 +57,54 @@ export default function Posts({ content, nav, foo }) {
               {content.previa}
             </text>
           </div>
+
+
           <text className={styles.details}>
-            {content.autor}<span/>{dataForm}
+            <a href={content.linkedin} className={styles['autor']}>
+              {content.autor}
+            </a>
+            <span />
+            {dataForm}
           </text>
         </div>
       </div>
       <div className={styles.bottomPart}>
         <div className={styles.textAndRest}>
           <div className={styles.textFormater}>
-            <ReactMarkdown className={styles.markdown}>
+
+
+
+            <ReactMarkdown className={styles.markdown}
+              components={{ img: ({ node, ...props }) => <img style={{ maxWidth: '100%', display: 'block', padding: '5vh 0px 5vh 0px', margin: 'auto' }}{...props} /> }}>
+              {content.previa}
+            </ReactMarkdown>
+            <ReactMarkdown className={styles.markdown2}>
               {content.conteudo}
             </ReactMarkdown>
+
+
           </div>
           <div className={styles.author}>
             <div className={styles.authorAndPencil}>
-              <Image src={pencilImg}/>
+              <Image src={pencilImg} />
               <text className={styles.authorName}>
-                {content.autor}
+                <a href={content.linkedin} className={styles['autor']}>
+                  {content.autor}
+                </a>
               </text>
             </div>
             <button onClick={handleMove} className={styles.voltarButton}>
-              <Image className={styles.buttonImage} src={buttonImg}/>
+              <Image className={styles.buttonImage} src={buttonImg} />
             </button>
           </div>
         </div>
       </div>
-      <Footer {...foo}/>
+      <Footer {...foo} />
     </div>
   )
 }
 
-export async function getStaticProps({params : {slug} }){
+export async function getStaticProps({ params: { slug } }) {
   const caminho = 'posts';
   const caminho2 = "navFooter";
   const pagina2 = "navbar";
@@ -97,7 +115,7 @@ export async function getStaticProps({params : {slug} }){
   const foo = handleJSONfile(`./content/${caminho2}/${pagina3}.json`);
 
   return {
-    props: { content , nav, foo},
+    props: { content, nav, foo },
   };
 }
 
@@ -109,11 +127,11 @@ export async function getStaticPaths() {
 
   const paths = filesInProjects.map(file => {
     const filename = file.slice(0, file.indexOf('.'))
-    return { params: { slug: filename }}
+    return { params: { slug: filename } }
   })
 
   return {
     paths,
-    fallback: false 
+    fallback: false
   }
 }
