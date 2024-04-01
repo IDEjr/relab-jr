@@ -121,7 +121,7 @@ export default function formularioServicos(forms) {
               <input
                 className={errors?.name && styles.input_error}
                 id="celular"
-                maxLength="14"
+                maxLength="15"
                 type="text"
                 onKeyDown={(event) => allowToEnterPhoneNumber(event)}
                 placeholder="Celular*"
