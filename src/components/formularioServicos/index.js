@@ -34,6 +34,11 @@ function allowToEnterPhoneNumber(event) {
     return true;
   }
 
+  // Permite setas
+  // if (charCode >= 37 && charCode <= 40) {
+  //   return true;
+  // }
+
   const currentValue = event.target.value;
   const formattedValue = formatPhoneNumber(currentValue + String.fromCharCode(charCode));
 

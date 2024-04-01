@@ -35,6 +35,11 @@ function allowToEnterPhoneNumber(event) {
     return true;
   }
 
+  // Permite setas
+  // if (charCode >= 37 && charCode <= 40) {
+  //   return true;
+  // }
+
   const currentValue = event.target.value;
   const formattedValue = formatPhoneNumber(currentValue + String.fromCharCode(charCode));
 
@@ -70,6 +75,11 @@ function allowToEnterSemester(event) {
   if (charCode === 8) {
     return true;
   }
+
+  // Permite setas
+  // if (charCode >= 37 && charCode <= 40) {
+  //   return true;
+  // }
 
   const currentValue = event.target.value;
   const formattedValue = formatSemester(currentValue + String.fromCharCode(charCode));
