@@ -32,7 +32,7 @@ collections:
         extension: "json"
         format: "json"
         editor:
-        preview: false
+          preview: false
         fields:
           - label: "Início Home"
             name: "inicioHome"
@@ -102,7 +102,7 @@ collections:
         extension: "json"
         format: "json"
         editor:
-        preview: false
+          preview: false
         fields:
           - label: "Início Quem Somos"
             name: "inicioQuemSomos"
@@ -157,7 +157,7 @@ collections:
         extension: "json"
         format: "json"
         editor:
-        preview: false
+          preview: false
         fields:
           - label: "Início Serviços"
             name: "inicioServicos"
@@ -176,7 +176,7 @@ collections:
         extension: "json"
         format: "json"
         editor:
-        preview: false
+          preview: false
         fields:
           - label: "Início Blog"
             name: "inicioBlog"
@@ -206,6 +206,8 @@ collections:
     folder: "content/generos"
     create: true
     slug: "{{fields.genero}}"
+    editor:
+      preview: false
     fields:
       - {label: "Gênero", name: "genero", widget: "string", pattern: ['^.{1,30}$', "Máximo 30 carateres."]}
 
@@ -218,6 +220,8 @@ collections:
     folder: "content/posts"
     create: true
     slug: "{{fields.titulo}}"
+    editor:
+      preview: false
     fields:
       - {label: "Visível", name: "bool", widget: "boolean", default: true}
       - {label: "Gênero", name: "genero", widget: "relation", collection: "generos", search_fields: ["genero"], display_fields: ["genero"], value_field: "genero", default: ["Outros"]}
@@ -238,6 +242,8 @@ collections:
     folder: "content/membros"
     create: true
     slug: "{{fields.nome}}"
+    editor:
+      preview: false
     fields:
       - {label: "Nome e sobrenome", name: "nome", widget: "string", pattern: ['^.{1,30}$', "Máximo 30 carateres."]}
       - {label: "Imagem", name: "imagem", widget: "image"}
@@ -258,6 +264,8 @@ collections:
     folder: "content/servicos"
     create: true
     slug: "{{fields.servico}}"
+    editor:
+      preview: false
     fields:
       - {label: "Serviço", name: "servico", widget: "string", pattern: ['^.{1,50}$', "Máximo 50 carateres."]}
       - {label: "Imagem", name: "imagem", widget: "image"}
@@ -266,14 +274,14 @@ collections:
 
   - label: "Navbar e Footer"
     name: "navFooter"
+    editor:
+      preview: false
     files:
       - label: "Navbar"
         name: "navbar"
         file: "content/navFooter/navbar.json"
         extension: "json"
         format: "json"
-        editor:
-        preview: false
         fields:
           - {label: "Logo", name: "logo", widget: "image"}
           - {label: "LinkedIn", name: "linkedin", widget: "string"}
@@ -286,12 +294,10 @@ collections:
         file: "content/navFooter/footer.json"
         extension: "json"
         format: "json"
-        editor:
-        preview: false
         fields:
           - {label: "Logo", name: "logo", widget: "image"}
           - {label: "Linkedin", name: "linkedin", widget: "string"}
-          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Email", name: "email", widget: "strin  g"}
           - {label: "Instagram", name: "instagram", widget: "string"}
           - {label: "Copyright", name: "copy", widget: "string"}
           - {label: "Watermark1", name: "watermark1", widget: "image"}
@@ -305,14 +311,14 @@ collections:
 
   - label: "Formulários"
     name: "forms"
+    editor:
+      preview: false
     files:
       - label: "Formulários"
         name: "forms"
         file: "content/forms/forms.json"
         extension: "json"
         format: "json"
-        editor:
-        preview: false
         fields:
           - {label: "Email do formulário", name: "emailForm", widget: "string"}
           - {label: "Senha de App Google", name: "senhaApp", widget: "string"}

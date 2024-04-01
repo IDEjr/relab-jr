@@ -45,7 +45,7 @@ export default function Posts({ content, nav, foo }) {
             className={styles.topImg}
             style={{objectFit: 'cover', background: 'black'}}
           />
-          <p class="newStyle"></p>
+          <p className="newStyle"></p>
           <div className={styles.contentBlock}>
             <div className={styles.titleAndRest}>
               <p className={styles.categorie}>
