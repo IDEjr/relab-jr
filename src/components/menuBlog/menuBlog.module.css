@@ -79,16 +79,17 @@
 }
 
 
-.active, .button:hover {
+.active{
   background: #F2C12E;
   color: black;
   cursor: pointer;
   border-radius: 10px;
+
 }
-.button:hover {
-  transition: .2s;
-  background: #f2c12e92;
-  color: white;
+
+.button:hover{
+  border-radius: 10px;
+
 }
 
 
