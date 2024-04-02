@@ -89,7 +89,7 @@ export default function formularioServicos(forms) {
           <div className={styles.formContainer}>
             <div className={styles.mediumField}>
               <input
-                className={errors?.name && styles.input_error}
+                className={errors?.nome && styles.input_error}
                 id="nome"
                 type="text"
                 placeholder="Nome*"
@@ -119,7 +119,7 @@ export default function formularioServicos(forms) {
             </div>
             <div className={styles.mediumField}>
               <input
-                className={errors?.name && styles.input_error}
+                className={errors?.celular && styles.input_error}
                 id="celular"
                 maxLength="15"
                 type="text"
@@ -139,7 +139,7 @@ export default function formularioServicos(forms) {
             </div>
             <div className={styles.mediumField}>
               <input
-                className={errors?.name && styles.input_error}
+                className={errors?.assunto && styles.input_error}
                 id="assunto"
                 type="text"
                 placeholder="Assunto*"
@@ -151,7 +151,7 @@ export default function formularioServicos(forms) {
             </div>
             <div className={styles.largeField}>
               <textarea
-                className={errors?.name && styles.input_error}
+                className={errors?.mensagem && styles.input_error}
                 id="mensagem"
                 type="text"
                 placeholder="Sua mensagem"

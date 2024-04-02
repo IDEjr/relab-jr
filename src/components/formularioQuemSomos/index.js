@@ -133,7 +133,7 @@ export default function formularioQuemSomos(forms) {
           <div className={styles.formContainer}>
             <div className={styles.mediumField}>
               <input
-                className={errors?.name && styles.input_error}
+                className={errors?.nome && styles.input_error}
                 id="nome"
                 type="text"
                 placeholder="Nome*"
@@ -166,13 +166,13 @@ export default function formularioQuemSomos(forms) {
               </div>
               <div className={styles.smallField}>
                 <input
-                    className={errors?.name && styles.input_error}
-                    id="curso"
-                    type="text"
-                    placeholder="Curso*"
-                    {...register("curso", {
-                      required: true
-                    })}
+                  className={errors?.curso && styles.input_error}
+                  id="curso"
+                  type="text"
+                  placeholder="Curso*"
+                  {...register("curso", {
+                    required: true
+                  })}
                   />
                   {errors?.curso?.type === "required" && (
                     <p className={styles.error_message}>Campo obrigatório</p>
@@ -182,11 +182,11 @@ export default function formularioQuemSomos(forms) {
             <div className={styles.doubleInput}>
               <div className={styles.smallField}>
                 <input
+                  className={errors?.celular && styles.input_error}
                   id="celular"
-                  maxLength="14"
+                  maxLength="15"
                   type="text"
                   onKeyDown={(event) => allowToEnterPhoneNumber(event)}
-                  className={errors?.name && styles.input_error}
                   placeholder="Celular*"
                   {...register("celular", {
                     required: true,
@@ -202,9 +202,9 @@ export default function formularioQuemSomos(forms) {
               </div>
               <div className={styles.smallField}>
                 <input
-                  className={errors?.name && styles.input_error}
+                  className={errors?.semestre && styles.input_error}
                   id="semestre"
-                  maxLength="7"
+                  maxLength="6"
                   type="text"
                   onKeyDown={(event) => allowToEnterSemester(event)}
                   placeholder="Semestre*"
@@ -223,7 +223,7 @@ export default function formularioQuemSomos(forms) {
             </div>
             <div className={styles.mediumField}>
               <input
-                className={errors?.name && styles.input_error}
+                className={errors?.assunto && styles.input_error}
                 id="assunto"
                 type="text"
                 placeholder="Assunto*"
@@ -237,7 +237,7 @@ export default function formularioQuemSomos(forms) {
             </div>
             <div className={styles.largeField}>
               <textarea
-                className={errors?.name && styles.input_error}
+                className={errors?.mensagem && styles.input_error}
                 id="mensagem"
                 type="text"
                 placeholder="Sua mensagem"
