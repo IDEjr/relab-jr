@@ -20,7 +20,7 @@
 
 .navdisabled{
 
-  display: none;
+  visibility: hidden;
 }
 
 .titles{    
