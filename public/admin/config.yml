@@ -23,7 +23,6 @@ collections:
   # PÁGINAS--------------------------------------------------------------------------------------------------------
 
 
-
   - label: "Páginas"
     name: "paginas"
     files:
@@ -33,7 +32,7 @@ collections:
         extension: "json"
         format: "json"
         editor:
-        preview: false
+          preview: false
         fields:
           - label: "Início Home"
             name: "inicioHome"
@@ -103,7 +102,7 @@ collections:
         extension: "json"
         format: "json"
         editor:
-        preview: false
+          preview: false
         fields:
           - label: "Início Quem Somos"
             name: "inicioQuemSomos"
@@ -158,7 +157,7 @@ collections:
         extension: "json"
         format: "json"
         editor:
-        preview: false
+          preview: false
         fields:
           - label: "Início Serviços"
             name: "inicioServicos"
@@ -170,31 +169,6 @@ collections:
               - {label: "Texto 2", name: "texto2", widget: "text", pattern: ['^.{1,600}$', "Máximo 600 carateres."]}
 
 
-          - label: "Serviços Relab Jr."
-            name: "servicos"
-            widget: "object"
-            fields:
-              - {label: "Título Serviços", name: "tituloServicos", widget: "string", pattern: ['^.{1,20}$', "Máximo 20 carateres."]}
-              - {label: "Serviço 1", name: "servico1", widget: "string"}
-              - {label: "Texto 1", name: "texto1", widget: "text", pattern: ['^.{1,550}$', "Máximo 550 carateres."]}
-              - {label: "Imagem 1", name: "imagem1", widget: "image"}
-              - {label: "Serviço 2", name: "servico2", widget: "string"}
-              - {label: "Texto 2", name: "texto2", widget: "text", pattern: ['^.{1,550}$', "Máximo 550 carateres."]}
-              - {label: "Imagem 2", name: "imagem2", widget: "image"}
-              - {label: "Serviço 3", name: "servico3", widget: "string"}
-              - {label: "Texto 3", name: "texto3", widget: "text", pattern: ['^.{1,550}$', "Máximo 550 carateres."]}
-              - {label: "Imagem 3", name: "imagem3", widget: "image"}
-              - {label: "Serviço 4", name: "servico4", widget: "string"}
-              - {label: "Texto 4", name: "texto4", widget: "text", pattern: ['^.{1,550}$', "Máximo 550 carateres."]}
-              - {label: "Imagem 4", name: "imagem4", widget: "image"}
-              - {label: "Serviço 5", name: "servico5", widget: "string"}
-              - {label: "Texto 5", name: "texto5", widget: "text", pattern: ['^.{1,550}$', "Máximo 550 carateres."]}
-              - {label: "Imagem 5", name: "imagem5", widget: "image"}
-              - {label: "Serviço 6", name: "servico6", widget: "string"}
-              - {label: "Texto 6", name: "texto6", widget: "text", pattern: ['^.{1,550}$', "Máximo 550 carateres."]}
-              - {label: "Imagem 6", name: "imagem6", widget: "image"}
-
-
 
       - label: "Página Blog"
         name: "blog"
@@ -202,7 +176,7 @@ collections:
         extension: "json"
         format: "json"
         editor:
-        preview: false
+          preview: false
         fields:
           - label: "Início Blog"
             name: "inicioBlog"
@@ -221,7 +195,7 @@ collections:
 
 
 
-# PÁGINAS--------------------------------------------------------------------------------------------------------
+# GRUPOS--------------------------------------------------------------------------------------------------------
 
 
 
@@ -232,6 +206,8 @@ collections:
     folder: "content/generos"
     create: true
     slug: "{{fields.genero}}"
+    editor:
+      preview: false
     fields:
       - {label: "Gênero", name: "genero", widget: "string", pattern: ['^.{1,30}$', "Máximo 30 carateres."]}
 
@@ -244,6 +220,8 @@ collections:
     folder: "content/posts"
     create: true
     slug: "{{fields.titulo}}"
+    editor:
+      preview: false
     fields:
       - {label: "Visível", name: "bool", widget: "boolean", default: true}
       - {label: "Gênero", name: "genero", widget: "relation", collection: "generos", search_fields: ["genero"], display_fields: ["genero"], value_field: "genero", default: ["Outros"]}
@@ -264,6 +242,8 @@ collections:
     folder: "content/membros"
     create: true
     slug: "{{fields.nome}}"
+    editor:
+      preview: false
     fields:
       - {label: "Nome e sobrenome", name: "nome", widget: "string", pattern: ['^.{1,30}$', "Máximo 30 carateres."]}
       - {label: "Imagem", name: "imagem", widget: "image"}
@@ -277,29 +257,31 @@ collections:
       - {label: "LinkedIn", name: "linkedin", widget: "string", required: false}
 
 
-  - label: "Servicos"
+  - label: "Serviços"
     name: "servicos"
     extension: "json"
     description: "Serviços da Relab Jr"
     folder: "content/servicos"
     create: true
     slug: "{{fields.servico}}"
+    editor:
+      preview: false
     fields:
-      - {label: "Serviço", name: "servico", widget: "string", pattern: ['^.{1,30}$', "Máximo 30 carateres."]}
+      - {label: "Serviço", name: "servico", widget: "string", pattern: ['^.{1,50}$', "Máximo 50 carateres."]}
       - {label: "Imagem", name: "imagem", widget: "image"}
       - {label: "Descrição", name: "descricao", widget: "text"}
 
 
   - label: "Navbar e Footer"
     name: "navFooter"
+    editor:
+      preview: false
     files:
       - label: "Navbar"
         name: "navbar"
         file: "content/navFooter/navbar.json"
         extension: "json"
         format: "json"
-        editor:
-        preview: false
         fields:
           - {label: "Logo", name: "logo", widget: "image"}
           - {label: "LinkedIn", name: "linkedin", widget: "string"}
@@ -312,12 +294,10 @@ collections:
         file: "content/navFooter/footer.json"
         extension: "json"
         format: "json"
-        editor:
-        preview: false
         fields:
           - {label: "Logo", name: "logo", widget: "image"}
           - {label: "Linkedin", name: "linkedin", widget: "string"}
-          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Email", name: "email", widget: "strin  g"}
           - {label: "Instagram", name: "instagram", widget: "string"}
           - {label: "Copyright", name: "copy", widget: "string"}
           - {label: "Watermark1", name: "watermark1", widget: "image"}
@@ -331,18 +311,17 @@ collections:
 
   - label: "Formulários"
     name: "forms"
+    editor:
+      preview: false
     files:
       - label: "Formulários"
         name: "forms"
         file: "content/forms/forms.json"
         extension: "json"
         format: "json"
-        editor:
-        preview: false
         fields:
-          - {label: "Email Destino", name: "emailDestino", widget: "string"}
-          - {label: "Email Origem", name: "emailOrigem", widget: "string"}
-          - {label: "Senha Google", name: "senha", widget: "string"}
+          - {label: "Email do formulário", name: "emailForm", widget: "string"}
+          - {label: "Senha de App Google", name: "senhaApp", widget: "string"}
           - {label: "Logo Formulários", name: "logo", widget: "image"}
           - {label: "Título Membros", name: "tituloMembros", widget: "string"}
           - {label: "Título Servicos", name: "tituloServicos", widget: "string"}

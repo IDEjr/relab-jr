@@ -59,18 +59,26 @@ export default function MenuBlog({posts}) {
           <ul className={Styles.lista}>
             <div className={Styles.containerMobile}>  {/* div mobile */}
               <div className={Styles.tituloEBotaoMobile}>
-              <h3 className={Styles.tituloMobile} ><p className={Styles.p}>{titulo}</p></h3>
-              <h4 onClick={() => setIsactive(!isActive)} className={Styles.optionButton}  ><GoChevronDown className={Styles.icone} /></h4>
+                <h3 className={Styles.tituloMobile} >
+                  <p className={Styles.p}>
+                    {titulo}
+                  </p>
+                </h3>
+                <h4 onClick={() => setIsactive(!isActive)} className={Styles.optionButton}>
+                  <GoChevronDown className={Styles.icone} />
+                </h4>
               </div>
-              <div className={Styles.optionsMobile}> {isActive && (<RenderOptions />)}</div>            
+              <div className={isActive? Styles.dropdownActive : Styles.dropdownInactive}>
+                {isActive &&(<RenderOptions />)}
+              </div>{/*aqui tem uma pequena redundancia de código. Devido a forma de como o css foi feito, é possivel clicar nas opções do dropdown mesmo com ele sunmido, de ssa forma é possivel animar o css e não poder clicar */}
             </div>
             <div className={Styles.containerDesktop}> {/* div desktop */}               
-              <RenderOptions/>            
+              <RenderOptions />            
             </div>
           </ul>
         </div>
         <div className={Styles.gridPosts}>
-        <GridPosts posts = {filteredPosts} />
+          <GridPosts posts = {filteredPosts} />
         </div>
       </div>
     </>

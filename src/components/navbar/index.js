@@ -12,11 +12,12 @@ export default function navbar({ logo, linkedin, instagram, email }) {
 		navRef.current.classList.toggle(
 			"responsiveNav"
 		);
-    logoRef.current.classList.toggle(
+  logoRef.current.classList.toggle(
 			"responsiveLogo"
 		);
 	};
-  const style = { color: "#F2C12E !important", fontSize: "1.5em", marginTop: "150px" }
+  // const style = { color: "#F2C12E !important", fontSize: "1.5em", marginTop: "150px" }
+  // removing for simplicity, dont know why its here
   
   return(
     <header className={styles.cabecalho}>
@@ -35,18 +36,16 @@ export default function navbar({ logo, linkedin, instagram, email }) {
               styles.navBtn,
               styles.navRelabBtn
             )
-          }
-          ref={logoRef}>
-          <Link href="/">
-            <Image
-              src={logo}
-              width={95}
-              height={95}
-              alt="Logo"
-            />
-          </Link> 
+          } ref={logoRef}>
+            <Link href="/" className={styles.droplogo}>
+              <Image
+                src={logo}
+                width={95}
+                height={95}
+                alt="Logo"
+              />
+            </Link> 
         </button>
-        {/*<a href="/">HOME</a>*/}
         <a href="/quemSomos">QUEM SOMOS</a>
         <a href="/servicos">SERVIÇOS</a>
         <a href="/blog">BLOG</a>
@@ -57,9 +56,8 @@ export default function navbar({ logo, linkedin, instagram, email }) {
               styles.navCloseBtn
             )
           }
-          onClick={showNavbar}
-        >
-          <FaTimes/>
+          onClick={showNavbar}>
+          <FaTimes />
         </button>
         <div className={styles.links}>
           <button
@@ -69,17 +67,7 @@ export default function navbar({ logo, linkedin, instagram, email }) {
               )
             }
             onClick={showNavbar}>
-            <Link href={instagram} target="_blank"><FaInstagram style = {style} /></Link>
-          </button>
-          <button
-            className={
-              classnames(
-                styles.navBtn
-              )
-            }
-            onClick={showNavbar}
-          >
-            <Link href={linkedin} target="_blank"><FaLinkedin style = {style}/></Link>
+            <Link href={instagram} target="_blank"><FaInstagram className={styles.socialNetworks} /></Link>
           </button>
           <button
             className={
@@ -88,14 +76,23 @@ export default function navbar({ logo, linkedin, instagram, email }) {
               )
             }
             onClick={showNavbar}>
-            <Link href={`https://mailto:${email}`} target="_blank"><FaEnvelope style = {style}/></Link>
+            <Link href={linkedin} target="_blank"><FaLinkedin className={styles.socialNetworks}/></Link>
+          </button>
+          <button
+            className={
+              classnames(
+                styles.navBtn
+              )
+            }
+            onClick={showNavbar}>
+            <Link href={`mailto:${email}`} target="_blank"><FaEnvelope className={styles.socialNetworks}/></Link>
           </button>
         </div>
       </nav>
       <button
         className={styles.navBtn}
         onClick={showNavbar}>
-        <FaBars/>
+        <FaBars />
       </button>
     </header>
   );
