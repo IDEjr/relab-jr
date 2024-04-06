@@ -2,59 +2,55 @@ import { useState } from 'react'
 import Styles from './menuBlog.module.css'
 import CardPosts from '../cardPosts'
 import GridPosts from '../gridPosts'
+import { GoChevronDown } from "react-icons/go";
 
 
+export default function MenuBlog({posts}) {
+  const [isActive, setIsactive] = useState(false)
+  const [titulo, setTitulo] = useState("TODOS")
+  const [atual, setAtual]  = useState(false)
 
+  // posts = posts[0]
+  var genderSelection = []
+  // var arrPosts = [];
 
-export default function MenuBlog(...posts) {
-    const [isActive, setIsactive] = useState(false)
-    const [titulo, setTitulo] = useState("TODOS")
-    const [atual, setAtual]  = useState(false)
+  // for (const i in posts) {
+  //   arrPosts.push(posts[i]);
+  // }
 
-    posts = posts[0]
-    var genderSelection = []
-    var arrPosts = [];
+  const [filteredPosts, setFilteredPosts] = useState(posts)
 
-    for (const i in posts) {
-        arrPosts.push(posts[i]);
-    }
+  posts.map((posts) => { genderSelection.push(posts.genero) });
+  const filteredgenders = [...new Set(genderSelection)];
 
-    const [filteredPosts, setFilteredPosts] = useState(arrPosts)
+  const filter = (select, posts) => {
 
-    arrPosts.map((arrPosts) => { genderSelection.push(arrPosts.genero) });
-    const filteredgenders = [...new Set(genderSelection)];
+    let aux = posts;
+    (select == "TODOS") ? aux = posts :
+      aux = posts.filter((obj) => obj.genero == select)
 
-    const filter = (select, arrPosts) => {
+    setFilteredPosts(aux)
+    setTitulo(select)
+    setIsactive(false)
+    setAtual(select)
+  }
 
-        let aux = arrPosts;
-        (select == "TODOS") ? aux = arrPosts :
-            aux = arrPosts.filter((obj) => obj.genero == select)
-           
-        setFilteredPosts(aux)
-        setTitulo(select)
-        setIsactive(false)
-        setAtual(select)
-        
-    }
-
-    const RenderOptions = () => {
-        return (
-            
-            <>
-                <li key={'todos'} tabIndex={0} className={Styles.teste}>
-                    <button className={atual === "TODOS"? Styles.active: Styles.button} onClick={() => filter("TODOS", arrPosts)} tabIndex={0} > Todos </button>
-                </li>
-                {filteredgenders.map((filteredgenders) => (
-                    <li key={filteredgenders.titulo}>
-                        <button className={atual === filteredgenders? Styles.active: Styles.button} onClick={() => { filter(filteredgenders, arrPosts) }}>
-                            {filteredgenders}
-                        </button>
-                    </li>
-                ))}
-            </>)
-
-    }
-
+  const RenderOptions = () => {
+    return (
+      <>
+        <li key={'todos'} tabIndex={0} className={Styles.teste}>
+          <button className={atual === "TODOS"? Styles.active: Styles.button} onClick={() => filter("TODOS", posts)} tabIndex={0} > Todos </button>
+        </li>
+        {filteredgenders.map((filteredgenders) => (
+          <li key={filteredgenders}>
+            <button className={atual === filteredgenders? Styles.active: Styles.button} onClick={() => { filter(filteredgenders, posts) }}>
+              {filteredgenders}
+            </button>
+          </li>
+        ))}
+      </>
+    )
+  }
 
     return (
         <>
@@ -64,10 +60,11 @@ export default function MenuBlog(...posts) {
 
                         <div className={Styles.containerMobile}>  {/* div mobile */}
                            <div className={Styles.tituloEBotaoMobile}>
-                            <h3 className={Styles.tituloMobile} ><p>{titulo}</p></h3>
-                            <h4 className={Styles.optionButton} onClick={() => setIsactive(!isActive)}>Outros</h4>    
+                            <h3 className={Styles.tituloMobile} ><p className={Styles.p}>{titulo}</p></h3>
+                            <h4 onClick={() => setIsactive(!isActive)} className={Styles.optionButton}  ><GoChevronDown className={Styles.icone} /></h4>
+                                
                             </div>
-                           <div className={Styles.optionsMobile}> {isActive && (<RenderOptions />)}</div>                        
+                           <div className={isActive? Styles.dropdownActive : Styles.dropdownInactive}>{isActive &&(<RenderOptions />)} </div>  {/*aqui tem uma pequena redundancia de código. Devido a forma de como o css foi feito, é possivel clicar nas opções do dropdown mesmo com ele sunmido, de ssa forma é possivel animar o css e não poder clicar */}                   
                         </div>
 
                         <div className={Styles.containerDesktop}> {/* div desktop */}                           
@@ -76,7 +73,7 @@ export default function MenuBlog(...posts) {
                     </ul>
                 </div>
                 <div className={Styles.gridPosts}>
-                <GridPosts {...filteredPosts} />
+                <GridPosts posts = {filteredPosts} />
                 </div>
             </div>
         </>

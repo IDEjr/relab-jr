@@ -14,14 +14,13 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectFlip, Pagination, Navigation, Autoplay } from "swiper/modules";
 
 
-export default function CarrosselQuemSomos(...images) {
-  images = images[0];  //pega os dados do array passado (os dados vem em formato de array, e a posição 0 está com os dados que precisamos)
-  var arrImages = [];
-  for (const i in images) {
-    arrImages.push(images[i]); //arranjando os dados em um novo array
-  }
-  images = arrImages //atribuindo a images
-
+export default function CarrosselQuemSomos({ imagens }) {
+  // images = images[0];  //pega os dados do array passado (os dados vem em formato de array, e a posição 0 está com os dados que precisamos)
+  // var arrImages = [];
+  // for (const i in images) {
+  //   arrImages.push(images[i]); //arranjando os dados em um novo array
+  // }
+  // images = arrImages //atribuindo a images
 
   return (
     <>
@@ -39,11 +38,11 @@ export default function CarrosselQuemSomos(...images) {
             "--swiper-pagination-bullet-horizontal-gap": " 15px"
           }}
           slidesPerView={1}  //define a quantidade de slides por visualização
-
+          loop = {true}
           grabCursor={true}  //ativando o grabCursor com configurações default
-          pagination={{   //configurações da pagination
-            clickable: true   
-          }}
+          //  pagination={{   //configurações da pagination
+          //    clickable: true   
+          //  }}
 
           navigation={{  //configurações do navi
             enabled: false
@@ -59,18 +58,19 @@ export default function CarrosselQuemSomos(...images) {
               slidesPerView: 2,
               navigation: {
                 enabled: true  
-              }}}}
+              }
+            }
+          }}
         >
-
-          {images.map((item) => (     //mostra um slide para cada imagem contida em images
+          {imagens.map((item) => (     //mostra um slide para cada imagem contida em images
             <SwiperSlide key={item} className={Styles.swiperSlide} >
               <div className={Styles.image}>
-
                 <Image src={item} fill style={{ objectFit: 'cover' }} alt="Post" />
               </div>
             </SwiperSlide>))
-          }
-        </Swiper>
+          } 
+        </Swiper> 
       </div>
     </>
-  )}
+  )
+}

@@ -1,8 +1,4 @@
-
-
-
- header .logo{
-	
+header .logo{
 	background-color: #262626;
 }
 
@@ -22,10 +18,8 @@
 }
 
 
-
 .navbar{
 	margin-left: auto;
-
 }
 
 .navbar .anchorStuff a {
@@ -49,6 +43,7 @@
 	border: none;
 	outline: none;
 	color: white;
+	/* color: #F2C12E; */
 	visibility: hidden;
 	opacity: 0;
 	font-size: 1.8rem;
@@ -59,10 +54,9 @@
 	align-items: center;
 }
 
-.links {
+/* .links {
 	color: #F2C12E;
-}
-
+} */
 
 
 @media only screen and (min-width: 1024px) {
@@ -86,11 +80,6 @@
 		opacity: 1;
 	}
 
-
-
-
-	
-
 	.cabecalho .navbar {
 		position: fixed;
 		top: -100vh;
@@ -104,7 +93,7 @@
 		gap: 1.5rem;
 		background-color: #262626;
 		transition: 1s;
-    	z-index: 999;
+    z-index: 999;
 		
 		border-bottom: 5px solid black;
 		border-image: linear-gradient(to right, red, blue);
@@ -118,6 +107,7 @@
 	.navbar .navCloseBtn {
 		position: absolute;
 		top: 2rem;
+		color: white;
 		right: 2rem;
 	}
 	
@@ -139,6 +129,16 @@
 
 	.droplogo{
 		display: none;
+		color: white;
 	}
 
+}
+
+
+
+/* removendo "style" do js */
+.socialNetworks {
+	color:#F2C12E !important;
+	font-size: 1.5em;
+	margin-top: 150px;
 }

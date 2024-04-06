@@ -5,18 +5,19 @@ import { FaBars, FaTimes, FaInstagram, FaLinkedin,FaEnvelope} from "react-icons/
 import classnames from 'classnames';
 import Link from 'next/link'
 
-export default function navbar({logo,linkedin, instagram, email }) {
-    const navRef = useRef();
-    const logoRef = useRef();
+export default function navbar({ logo, linkedin, instagram, email }) {
+  const navRef = useRef();
+  const logoRef = useRef();
 	const showNavbar = () => {
 		navRef.current.classList.toggle(
 			"responsiveNav"
 		);
-        logoRef.current.classList.toggle(
+    logoRef.current.classList.toggle(
 			"responsiveLogo"
 		);
 	};
-    const style = { color: "#F2C12E !important", fontSize: "1.5em", marginTop: "150px" }
+    // const style = { color: "#F2C12E !important", fontSize: "1.5em", marginTop: "150px" }
+    // removing for simplicity, dont know why its here
     
     return(
         
@@ -51,57 +52,52 @@ export default function navbar({logo,linkedin, instagram, email }) {
                     <div className={styles.anchorStuff}><a href="/servicos">SERVIÇOS</a></div>
                     <div className={styles.anchorStuff}><a href="/blog">BLOG</a></div>
 
+
+                <button
+                    className={
+                        classnames(
+                            styles.navBtn,
+                            styles.navCloseBtn
+                        )
+                    }
+                    onClick={showNavbar}>
+                    <FaTimes />
+                </button>
+                <div className={styles.links}>
                     <button
                         className={
                             classnames(
-                              styles.navBtn,
-                              styles.navCloseBtn
+                                styles.navBtn
                             )
-                          }
+                        }
                         onClick={showNavbar}>
-                        
-                        <FaTimes />
+                        <Link href={instagram} target="_blank"><FaInstagram className={styles.socialNetworks} /></Link>
                     </button>
-                    <div className={styles.links}>
-                        <button
-                            className={
-                                classnames(
+                    <button
+                        className={
+                            classnames(
                                 styles.navBtn
-                                )
-                            }
-                            onClick={showNavbar}>
-                            <Link href={instagram} target="_blank"><FaInstagram style = {style} /></Link>
-                        </button>
-                        <button
-                            className={
-                                classnames(
+                            )
+                        }
+                        onClick={showNavbar}>
+                        <Link href={linkedin} target="_blank"><FaLinkedin className={styles.socialNetworks}/></Link>
+                    </button>
+                    <button
+                        className={
+                            classnames(
                                 styles.navBtn
-                                
-                                )
-                            }
-                            onClick={showNavbar}>
-                            <Link href={linkedin} target="_blank"><FaLinkedin style = {style}/></Link>
-                        </button>
-                        <button
-                            className={
-                                classnames(
-                                styles.navBtn
-                                )
-                            }
-                            onClick={showNavbar}>
-                            <Link href={`mailto:${email}`} target="_blank"><FaEnvelope style = {style}/></Link>
-                            
-                        </button>
-                    </div>
-                    
-                </nav>
-                <button
-                    className={styles.navBtn}
-                    onClick={showNavbar}>
-                    <FaBars />
-                </button>
-            </header>
-        
-
+                            )
+                        }
+                        onClick={showNavbar}>
+                        <Link href={`mailto:${email}`} target="_blank"><FaEnvelope className={styles.socialNetworks}/></Link>
+                    </button>
+                </div>
+            </nav>
+            <button
+                className={styles.navBtn}
+                onClick={showNavbar}>
+                <FaBars />
+            </button>
+        </header>
     );
 }

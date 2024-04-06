@@ -6,14 +6,15 @@ import styles from './inicio.module.css'
 export default function inicio(props) {  
   return (
     <>
-      <div className={styles['container']}>
-        <Image src={props.image}
+      <div className={styles.container}>
+        <Image
+          src={props.imagem}
           width={1920}
           height={400}
           alt='Imagem Inicio'
-          className={styles['initImg']}
+          className={styles.initImg}
         />
-        <h1 className={styles['title']}>{props.title}</h1>
+        <h1 className={styles.title}>{props.titulo}</h1>
       </div>
     </>
   );
