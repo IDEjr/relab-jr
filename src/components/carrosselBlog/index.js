@@ -32,7 +32,6 @@ export default function CarrosselBlog({posts}) {
   for (let i = 0; i < 3; i++) {
     recents.push(posts[i])  //limita o tamanho dos posts para 3
   }
-
   return (
     <>
       <section className={styles.container}>
@@ -53,11 +52,13 @@ export default function CarrosselBlog({posts}) {
             slidesPerView="auto"
             modules={[Navigation]}
             // pagination={{ clickable: next }} //permite a troca de páginas pelo pagination
-            navigation={{  enabled: false, disabledClass: styles.navdisabled}}
+            navigation={{  enabled: false, navigationDisabledClass: styles.navdisabled}}
             autoplay={{  delay: 5000, disableOnInteraction: false  }}
             className={styles.swiperContainer}
             breakpoints={{ 800: {  navigation: { enabled: true }  }}}  //se a tela for maior que 800 pixels, ativa o navigation(as setinhas)
-          > 
+            breakpointsBase='window'
+            > 
+
             {recents.map((item) => ( //renderiza um slide para cada item no array de recents
               <SwiperSlide key={item.titulo} className={styles.swiperInd}>
                 <Link href={`/posts/${item.fileName}`}>
