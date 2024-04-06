@@ -9,8 +9,8 @@ export default function inicio(props) {
       <div className={styles.container}>
         <Image
           src={props.imagem}
-          width={1920}
-          height={400}
+          width={3840}
+          height={800}
           alt='Imagem Inicio'
           className={styles.initImg}
         />
