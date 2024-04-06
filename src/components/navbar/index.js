@@ -47,9 +47,10 @@ export default function navbar({logo,linkedin, instagram, email }) {
                             </Link> 
                     </button>
                     {/*<a href="/">HOME</a>*/}
-                    <a href="/quemSomos">QUEM SOMOS</a>
-                    <a href="/servicos">SERVIÇOS</a>
-                    <a href="/blog">BLOG</a>
+                    <div className={styles.anchorStuff}><a href="/quemSomos">QUEM SOMOS</a></div>
+                    <div className={styles.anchorStuff}><a href="/servicos">SERVIÇOS</a></div>
+                    <div className={styles.anchorStuff}><a href="/blog">BLOG</a></div>
+
                     <button
                         className={
                             classnames(

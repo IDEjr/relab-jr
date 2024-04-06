@@ -28,16 +28,18 @@
 
 }
 
-.navbar a {
+.navbar .anchorStuff a {
 	margin: 0 1rem;
-	color: white;
+	color:  #D9D9D9;
 	text-decoration: none;
 	font-size: 1.2rem;
+	transition: margin-right 0.3s ease;
 }
 
-.navbar a:hover {
-	color: #D9D9D9;
-	transition: .2s;
+.navbar .anchorStuff a:hover {
+	color: white ;
+	margin-right: 2rem;
+	font-weight: 400;
 }
 
 .cabecalho .navBtn {
