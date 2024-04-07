@@ -1,5 +1,5 @@
 import styles from './carrosselHome.module.css'
-import CardPosts from '../cardPosts'
+import CardPostsHome from '../cardPostsHome'
 import { register } from 'swiper/element/bundle'
 
 register();
