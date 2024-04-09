@@ -17,82 +17,88 @@ const handleMove = () => {
 };
 
 
-
-
 export default function Posts({ content, nav, foo }) {
   const router = useRouter();
   const { postId } = router.query
 
   const navData = {
-    logo : nav.logo,
-    linkedin : nav.linkedin,
-    instagram : nav.instagram,
-    email : nav.email
+    logo: nav.logo,
+    linkedin: nav.linkedin,
+    instagram: nav.instagram,
+    email: nav.email
   };
 
     // formata data
     var dataForm;
     dataForm = content.data.substring(8, 10) + '/' + content.data.substring(5, 7) + '/' + content.data.substring(0, 4);
-  
-  
 
   return (
-    <div className={styles['container']}>
-      <React.Fragment>
-      <Navbar  {...navData}/>
-      </React.Fragment>
-      <div className={styles['top-part']}>
-        <Image
+    <>
+      <div className={styles.container}>
+        <React.Fragment>
+          <Navbar {...navData} />
+        </React.Fragment>
+        <div className={styles.topPart}>
+          <Image
             src={content.imagemCapa}
-            fill={true}
-            className={styles['top-img']}
+            fill
+            className={styles.topImg}
             style={{objectFit: 'cover', background: 'black'}}
-        />
-        <div className={styles['content-block']}>
-          <div className={styles['title-and-rest']}>
-            <text className={styles['categorie']}>
-              {content.genero}
-            </text>
-            <h1 className={styles['title']}>
-              {content.titulo}
-            </h1>
-            <text className={styles['sub-title']}>
-              {content.previa}
-            </text>
-          </div>
-          <text className={styles['details']}>
-            {content.autor}<span/>{dataForm}
-          </text>
-        </div>
-      </div>
-
-
-      <div className={styles['bottom-part']}>
-        <div className={styles['text-and-rest']}>
-          <div className={styles['text-formater']}>
-            <ReactMarkdown className={styles['markdown']}>
-              {content.conteudo}
-            </ReactMarkdown>
-          </div>
-          <div className={styles['author']}>
-            <div className={styles['author-and-pencil']}>
-              <Image className={styles['']} src={pencilImg}/>
-              <text className={styles['author-name']}>
-                {content.autor}
-              </text>
+          />
+          <p className="newStyle"></p>
+          <div className={styles.contentBlock}>
+            <div className={styles.titleAndRest}>
+              <p className={styles.categorie}>
+                {content.genero}
+              </p>
+              <h1 className={styles.title}>
+                {content.titulo}
+              </h1>
+              <p className={styles.subTitle}>
+                {content.previa}
+              </p>
             </div>
-            <button onClick={handleMove} className={styles['voltar-button']}>
-              <Image className={styles['button-image']} src={buttonImg}/>
+            <div className={styles.details}>
+              <a href={content.linkedin} target="_blank" className={styles['autor']}>
+                {content.autor}
+              </a>
+              <p className={styles.data}>
+                {dataForm}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className={styles.markDown}>
+          {/* <ReactMarkdown className={styles.markdown}
+            components={{ img: ({ node, ...props }) => <img style={{ maxWidth: '100%', display: 'block', padding: '5vh 0px 5vh 0px', margin: 'auto' }}{...props} /> }}>
+            {content.previa}
+          </ReactMarkdown> */}
+          <ReactMarkdown className={styles.markdown}>
+            {content.conteudo}
+          </ReactMarkdown>
+        </div>
+        <div className={styles.bottomContainer}>
+          <div className={styles.authorAndPencil}>
+            <Image src={pencilImg} />
+            <text className={styles.authorName}>
+              <a href={content.linkedin} className={styles['autor']}>
+                {content.autor}
+              </a>
+            </text>
+          </div>
+          <div className={styles.buttonContainer}>
+            <button onClick={handleMove} className={styles.voltarButton}>
+              Voltar
             </button>
           </div>
         </div>
+        <Footer {...foo} />
       </div>
-      <Footer {...foo}/>
-    </div>
+    </>
   )
 }
 
-export async function getStaticProps({params : {slug} }){
+export async function getStaticProps({ params: { slug } }) {
   const caminho = 'posts';
   const caminho2 = "navFooter";
   const pagina2 = "navbar";
@@ -103,7 +109,7 @@ export async function getStaticProps({params : {slug} }){
   const foo = handleJSONfile(`./content/${caminho2}/${pagina3}.json`);
 
   return {
-    props: { content , nav, foo},
+    props: { content, nav, foo },
   };
 }
 
@@ -115,11 +121,11 @@ export async function getStaticPaths() {
 
   const paths = filesInProjects.map(file => {
     const filename = file.slice(0, file.indexOf('.'))
-    return { params: { slug: filename }}
+    return { params: { slug: filename } }
   })
 
   return {
     paths,
-    fallback: false 
+    fallback: false
   }
 }

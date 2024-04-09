@@ -56,13 +56,48 @@
   position: relative;
 }
 
+.doubleInput {
+  display: flex;
+  justify-content: space-between;
+}
+
+.smallField {
+  width: 45%;
+}
+
+.smallField input {
+  color: #000000;
+  /* font-size: large; */
+  width: 100%;
+  height: 40px;
+  margin-left: 0px;
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+.smallField .input_error {
+  outline: 1px solid rgb(255, 72, 72);
+}
+
+.smallField .error_message {
+  color: rgb(255, 72, 72);
+  font-size: 0.75rem;
+  margin-top: 8px;
+  text-align: left;
+}
+
+.smallField input::placeholder {
+  color: #000000;
+  font-weight: 500;
+}
+
 .mediumField{
   width: 100%;
 }
 
 .mediumField input{
   color: #000000;
-  font-size: large;
+  /* font-size: large; */
   width: 100%;
   height: 40px;
   margin-left: 0px;

@@ -1,233 +1,230 @@
 .footer {
-    display: flex;
-    width: 100%;
-    max-width: 100%;
-    height: 300px;
-    /*background-color: #262626;*/
-    flex-direction: column;
-    justify-content: space-between;
-    gap:1vh;
-    position: absolute;
-    
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  height: 300px;
+  /*background-color: #262626;*/
+  flex-direction: column;
+  justify-content: space-between;
+  gap:1vh;
+  position: absolute;
 }
 
-.bg-img-handle {
-    position: relative;
-    z-index: 0;
+.bgImgHandle {
+  position: relative;
+  z-index: 0;
 }
 
-.linear-gradient {
-    background-color: #262626;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 0;
+.linearGradient {
+  background-color: #262626;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
 }
 
 
 .topPart {
-    display: flex;
-    justify-content: space-between;
-    align-items:flex-start;
-    height: 80%;
-    align-items: flex-start;
-    gap:10vw;
-    z-index: 1;
-    
+  display: flex;
+  justify-content: space-between;
+  align-items:flex-start;
+  height: 80%;
+  align-items: flex-start;
+  gap:10vw;
+  z-index: 1;
 }
 
 
 .relabIcon {
-    display: flex;
-    width: 150px;
-    background-color: transparent;
-    height: 150px;
-    padding-left: 5vw;
+  display: flex;
+  width: 150px;
+  background-color: transparent;
+  height: 150px;
+  padding-left: 5vw;
 
-    border: none;
-    cursor:pointer;
+  border: none;
+  cursor:pointer;
 }
 
-
-
-
 .contactSocials {
-    display:flex;
-    flex-direction: column;
-    padding-right: 5vw;
-    gap: 1vh;
-    align-items: center;
+  display:flex;
+  flex-direction: column;
+  padding-right: 5vw;
+  gap: 1vh;
+  align-items: center;
 }
 
 
 .contactText {
-    font-weight: 350;
-    font-size: 30px;
-    color: #F2C12E;
+  font-weight: 350;
+  font-size: 30px;
+  color: #F2C12E;
 }
 
 
-.social-icons {
-    display: flex;
-    cursor: alias;
-    width: 70%;
-    justify-content: space-between;
-    align-items: center;
+.socialIcons {
+  display: flex;
+  cursor: alias;
+  width: 70%;
+  justify-content: space-between;
+  align-items: center;
 }
-
-
-
 
 /* css for the bottom part of the footer */
 
-.bottom-part {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    height: 20%;
-    padding-right: 2vw;
-    align-items: center;
-    z-index: 1;
+.bottomPart {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  height: 20%;
+  padding-right: 2vw;
+  align-items: center;
+  z-index: 1;
 }
 
 
 .footerText {
-    display: flex;
-    flex-direction: column;
-    font-size: 1vw;
-    gap:0.5vw;
-    justify-content: center;
-    align-items: center;
-    color: rgba(255, 255, 255, 0.534);
-    justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
+  font-size: 1vw;
+  gap:0.5vw;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.534);
+  justify-content: flex-end;
 }
 
 
-.membership-icons {
-    display:flex;
-    align-self: flex-start;
-    gap:2vw;
-    padding-left: 2vw;
-    align-items: center;
+.membershipIcons {
+  display:flex;
+  align-self: flex-start;
+  gap:2vw;
+  padding-left: 2vw;
+  align-items: center;
 }
-
-
-
 
 @media (max-width: 870px) {
 
-    .topPart {
-        width: 100%;
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: flex-end;
-        align-items: center;
-        height: 80%;
-        gap:0;
+  .topPart {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    height: 80%;
+    gap:0;
+  }
 
-    }
-    .contactText {
-        padding-top: 2vh;
-        font-size:larger;
-    }
-    .relabIcon {
-        width: 17vw;
-        height: 12vh;
-        display: flex;
-        padding: 0;
-    }
-    .logoImg {
-        width: 17vw;
-        height: 120px;
-    }
-    .insideImg {
-        width: 40px;
-        height: 40px;
-    }
-    .contactSocials {
-        padding: 0;
-        width: 25vw;
-        
-    }
-    .bottom-part {
-        display:flex;
-        padding-right: 0;
-        flex-direction: column;
-        align-items: center;
-        height: 20%;
-    }
-    .membership-icons {
-        display: flex;
-        width: 100%;
-        justify-content: space-around;
-    }
+  .contactText {
+    padding-top: 2vh;
+    font-size:larger;
+  }
 
-    .watermarkImg {
-        width: 120px;
-        height: 40px;
-    }
-    .social-icons {
-        width: 85%;
-    }
+  .relabIcon {
+    width: 17vw;
+    height: 12vh;
+    display: flex;
+    padding: 0;
+  }
+
+  .logoImg {
+    width: 17vw;
+    height: 120px;
+  }
+
+  .insideImg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .contactSocials {
+    padding: 0;
+    width: 25vw;
+    
+  }
+
+  .bottomPart {
+    display:flex;
+    padding-right: 0;
+    flex-direction: column;
+    align-items: center;
+    height: 20%;
+  }
+
+  .membershipIcons {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .watermarkImg {
+    width: 120px;
+    height: 40px;
+  }
+
+  .socialIcons {
+    width: 85%;
+  }
 }
 
 
-
-
 @media (max-width: 650px) {
-    .watermarkImg {
-        width: 70px;
-        height: 30px;
-    }
-    .membership-icons {
-        width: 100%;
-    }
+  .watermarkImg {
+    width: 70px;
+    height: 30px;
+  }
 
-    .unisinos-icon {
-        width: 100px;
-    }
-    
-    .footerText {
-        font-size: 3vw;
-    }
-    .relabIcon {
-        padding-left: +2vw;
-    }
-    .topPart {
-        padding-top: 1vh;
-    }
+  .membershipIcons {
+    width: 100%;
+  }
 
-    .relabIcon {
-        width: 120px;
-        height: 120px;
-    }
-    .logoImg {
-        width: 120px;
-        height: 120px;
-    }
-    .contactSocials {
-        width: 40vw;
-        padding-right: 0;
-    }
-    .contactText {
-        display: flex;
-        width: 60vw;
-        justify-content: center;
-        padding-left: 2vw;
-        font-size: small;
-    }
-    .social-icons {
-        width: 20vw;
-        justify-content: center;
-        gap:+5vw;
-        
-    }
-
+  .unisinosIcon {
+    width: 100px;
+  }
   
-    .insideImg {
-        width: 25px;
-        height: 25px;
-    }
-    
+  .footerText {
+    font-size: 3vw;
+  }
 
+  .relabIcon {
+    padding-left: +2vw;
+  }
+
+  .topPart {
+    padding-top: 1vh;
+  }
+
+  .relabIcon {
+    width: 120px;
+    height: 120px;
+  }
+
+  .logoImg {
+    width: 95px;
+    height: 95px;
+  }
+
+  .contactSocials {
+    width: 40vw;
+    padding-right: 0;
+  }
+
+  .contactText {
+    display: flex;
+    width: 60vw;
+    justify-content: center;
+    padding-left: 2vw;
+    font-size: small;
+  }
+
+  .socialIcons {
+    width: 20vw;
+    justify-content: center;
+    gap:+5vw;
+  }
+
+  .insideImg {
+    width: 25px;
+    height: 25px;
+  }
 }
