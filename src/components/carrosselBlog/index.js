@@ -40,6 +40,7 @@ export default function CarrosselBlog({posts}) {
           <Swiper
             style={{
               "--swiper-theme-color": "#F2C12E",
+              "--swiper-navigation-size": "5vw",
               "--swiper-pagination-color": "#F2C12E",
               "--swiper-pagination-bullet-inactive-color": "#F2C12E",
               "--swiper-pagination-bullet-inactive-opacity": "0.2",
@@ -53,10 +54,10 @@ export default function CarrosselBlog({posts}) {
             slidesPerView="auto"
             modules={[Navigation]}
             // pagination={{ clickable: next }} //permite a troca de páginas pelo pagination
-            navigation={{  enabled: false, disabledClass: styles.navdisabled}}
+            navigation={{  enabled: true}}
             autoplay={{  delay: 5000, disableOnInteraction: false  }}
             className={styles.swiperContainer}
-            breakpoints={{ 800: {  navigation: { enabled: true }  }}}  //se a tela for maior que 800 pixels, ativa o navigation(as setinhas)
+            // breakpoints={{ 800: {  navigation: { enabled: true }  }}}  //se a tela for maior que 800 pixels, ativa o navigation(as setinhas)
           > 
             {recents.map((item) => ( //renderiza um slide para cada item no array de recents
               <SwiperSlide key={item.titulo} className={styles.swiperInd}>
