@@ -57,13 +57,12 @@
   display: flex;
 }
 
-.menuContainer, .tituloEBotaoMobile {
+.menuContainer, .tituloEBotaoMobile, .activeBotao{
   width: fit-content;
   height: fit-content;
   display: flex;
   border-radius: 15px;
   box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.25);
-  margin-bottom: 15vh;
 }
 
 .containerMobile{
@@ -71,8 +70,8 @@
   margin-bottom: 0;
   
 }
-.menuContainer{
-  background: rgba(0, 0, 0, 0.18);
+.aaa{
+  position: relative;
 }
 .containerDesktop{
   display: flex; 
@@ -99,7 +98,6 @@
   .containerMobile{
     display: flex;
     flex-direction: column;
-    background: none;
     box-shadow: none;
     background-color: none;
     
@@ -114,7 +112,7 @@
     justify-content: space-evenly;
   }
 
-  .tituloEBotaoMobile {
+  .tituloEBotaoMobile, .activeBotao {
     display: flex;
     align-items: center;
     position: relative;
@@ -142,24 +140,37 @@
     color: black;
     background-color: #F2C12E;
   }
-
+.activeBotao{
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
   .dropdownInactive{
     opacity: 0;
-    height: 0;
-    transform: translateY(-10%);
+    transform: translateY(-3%);
+    transition: transform 150ms ease-in-out;
+    opacity: 100ms ease-in-out; 
+    position: absolute;
+    background-color: #1f1f1f;
+
+    width: 100%;
+    align-self: flex-end;
+    border-radius: 15px;
+    border-top-left-radius: 0; 
+    border-top-right-radius: 0; 
+
+    z-index: 1;
+     
   }
   .tituloMobile{
     font-size: 5vw;
   }
 
   .dropdownActive {
-    width: 100%;
-    position: relative;
-    align-self: flex-end;
-    border-radius: 15px; 
+  
     opacity: 1;
     transform: translateY(0);
-    transition: 0.5s;
+
+
   }
 
   .containerDesktop{

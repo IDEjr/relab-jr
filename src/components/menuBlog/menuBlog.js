@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Styles from "./menuBlog.module.css";
 import GridPosts from "../gridPosts";
-import { GoChevronDown } from "react-icons/go";
+import { GoChevronDown, GoChevronUp } from "react-icons/go";
 
 export default function MenuBlog({ posts }) {
   const [isActive, setIsactive] = useState(false);
@@ -68,7 +68,7 @@ export default function MenuBlog({ posts }) {
           <ul className={Styles.lista}>
             <div className={Styles.containerMobile}>
               {/* div mobile */}
-              <div className={Styles.tituloEBotaoMobile}>
+              <div className={isActive? Styles.activeBotao :Styles.tituloEBotaoMobile}>
                 <h3 className={Styles.tituloMobile}>
                   <p className={Styles.p}>{titulo}</p>
                 </h3>
@@ -76,16 +76,20 @@ export default function MenuBlog({ posts }) {
                   onClick={() => setIsactive(!isActive)}
                   className={Styles.optionButton}
                 >
-                  <GoChevronDown className={Styles.icone} />
+                 {isActive ? <GoChevronUp className={Styles.icone} /> : <GoChevronDown className={Styles.icone} />} 
                 </h4>
               </div>
+              <div className={Styles.aaa}>
               <div
-                className={
-                  isActive ? Styles.dropdownActive : Styles.dropdownInactive
+                className={`
+                ${Styles.dropdownInactive}
+                  ${isActive ? Styles.dropdownActive : null}
+                  `
                 }
               >
                 {isActive && <RenderOptions />}
                 {/*possui uma pequena redundância, necessária para deixar a animação mais fluída*/}
+              </div>
               </div>
             </div>
 
