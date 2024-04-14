@@ -43,7 +43,11 @@
   padding-left: 5vw;
 
   border: none;
-  cursor:pointer;
+}
+
+.footer :global(button):hover {
+  background-color: transparent;
+  border: none;
 }
 
 .contactSocials {
