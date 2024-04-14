@@ -174,16 +174,12 @@
 
 @media (max-width: 650px) {
   .watermarkImg {
-    width: 70px;
+    width: 80px;
     height: 30px;
   }
 
   .membershipIcons {
     width: 100%;
-  }
-
-  .unisinosIcon {
-    width: 100px;
   }
   
   .footerText {
