@@ -29,26 +29,24 @@ export default function CarrosselQuemSomos({ imagens }) {
           style={{
             "--swiper-theme-color": "#F2C12E",
             "--swiper-pagination-color": "#F2C12E",
-            "--swiper-pagination-bullet-inactive-color": "#999999",   //algumas estilizações do navigation, pagination
+            "--swiper-pagination-bullet-inactive-color": "#c19a24  ",   //algumas estilizações do navigation, pagination
             "--swiper-pagination-bullet-inactive-opacity": "1",
-            "--swiper-pagination-bullet-border-radius": "0",
-            "--swiper-pagination-bullet-width": "30px",
-            "--swiper-pagination-bullet-height": "6px",
-            "--swiper-pagination-bullet-horizontal-gap": " 15px"
+            "--swiper-pagination-bullet-border-radius": "10px",
+            "--swiper-pagination-bullet-width": "10px",
+            "--swiper-pagination-bullet-height": "10px",
+            "--swiper-pagination-bullet-horizontal-gap": " 5px"
           }}
           slidesPerView={1}  //define a quantidade de slides por visualização
           loop = {true}
           grabCursor={true}  //ativando o grabCursor com configurações default
-            pagination={{   //configurações da pagination
-              clickable: true   
+
+          pagination={{   //configurações da pagination
+              clickable: true,
+              dynamicBullets: true   
             }}
 
-          navigation={{  //configurações do navi
-            enabled: false
-          }}
-
           autoplay={{  //configurações do autoplay
-            delay: 5000,
+            delay: 3000,
             disableOnInteraction: false
           }}
           
