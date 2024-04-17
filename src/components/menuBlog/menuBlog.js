@@ -68,7 +68,7 @@ export default function MenuBlog({ posts }) {
           <ul className={Styles.lista}>
             <div className={Styles.containerMobile}>
               {/* div mobile */}
-              <div className={isActive? Styles.activeBotao :Styles.tituloEBotaoMobile}>
+              <div className={Styles.tituloEBotaoMobile}>
                 <h3 className={Styles.tituloMobile}>
                   <p className={Styles.p}>{titulo}</p>
                 </h3>
