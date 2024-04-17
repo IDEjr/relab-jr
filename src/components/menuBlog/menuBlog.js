@@ -99,8 +99,10 @@ export default function MenuBlog({ posts }) {
             </div>
           </ul>
         </div>
+        <div className={Styles.GridPosts}>
         <GridPosts posts={filteredPosts} />{" "}
         {/* rederização dos posts filtrados */}
+        </div>
       </div>
     </>
   );
