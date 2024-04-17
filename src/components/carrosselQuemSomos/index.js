@@ -5,22 +5,13 @@ import { register } from 'swiper/element/bundle'
 register(); //função para utilizar o swiper
 
 import 'swiper/css';
-import "swiper/css/effect-flip";    //import das animações
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { EffectFlip, Pagination, Navigation, Autoplay } from "swiper/modules";
 
 
 export default function CarrosselQuemSomos({ imagens }) {
-  // images = images[0];  //pega os dados do array passado (os dados vem em formato de array, e a posição 0 está com os dados que precisamos)
-  // var arrImages = [];
-  // for (const i in images) {
-  //   arrImages.push(images[i]); //arranjando os dados em um novo array
-  // }
-  // images = arrImages //atribuindo a images
 
   return (
     <>
