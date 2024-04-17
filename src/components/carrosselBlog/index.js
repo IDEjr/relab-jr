@@ -1,15 +1,16 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from './carrosselBlog.module.css'
+import { register } from 'swiper/element/bundle'
 
-import { useState } from 'react';
+register(); //função para utilizar o swiper
+
 import 'swiper/css';
-import "swiper/css/effect-flip";
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Swiper, SwiperSlide } from 'swiper/react'
-import  { Navigation } from 'swiper/modules';
+
 
 export default function CarrosselBlog({posts}) {
   const arrPosts = [];
@@ -36,11 +37,10 @@ export default function CarrosselBlog({posts}) {
   return (
     <>
       <section className={styles.container}>
-        { ( //só renderiza quando o react fazer a segunda renderização da página
+   
           <Swiper
             style={{
               "--swiper-theme-color": "#F2C12E",
-              "--swiper-navigation-size": "5vw",
               "--swiper-pagination-color": "#F2C12E",
               "--swiper-pagination-bullet-inactive-color": "#F2C12E",
               "--swiper-pagination-bullet-inactive-opacity": "0.2",
@@ -52,13 +52,11 @@ export default function CarrosselBlog({posts}) {
             }}
             loop ={true}
             slidesPerView="auto"
-            modules={[Navigation]}
-            // pagination={{ clickable: next }} //permite a troca de páginas pelo pagination
-            navigation={{  enabled: true}}
+             pagination={{ clickable: true }} //permite a troca de páginas pelo pagination
+            
             autoplay={{  delay: 5000, disableOnInteraction: false  }}
             className={styles.swiperContainer}
-            // breakpoints={{ 800: {  navigation: { enabled: true }  }}}  //se a tela for maior que 800 pixels, ativa o navigation(as setinhas)
-          > 
+                    > 
             {recents.map((item) => ( //renderiza um slide para cada item no array de recents
               <SwiperSlide key={item.titulo} className={styles.swiperInd}>
                 <Link href={`/posts/${item.fileName}`}>
@@ -75,7 +73,7 @@ export default function CarrosselBlog({posts}) {
               </SwiperSlide>
             ))}
           </Swiper>
-        )}
+
       </section>
     </>
   );
