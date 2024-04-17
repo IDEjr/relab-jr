@@ -177,7 +177,7 @@ export default function formularioServicos(forms) {
             </p>
             <p className={styles.contactRows}>
               <FaHome size={30} className={styles.icons}/>
-              {forms.endereco1} 
+              {forms.endereco2} 
             </p>
           </div>
         </div>
