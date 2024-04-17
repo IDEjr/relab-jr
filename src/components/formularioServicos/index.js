@@ -73,113 +73,115 @@ export default function formularioServicos(forms) {
   }
 
   return(
-    <div className={styles.mainContainer}>
-      <div className={styles.logo}>
-        <Image
-          src={forms.logo}
-          width={150}
-          height={150}
-        />
-      </div>
-      <h2 className={styles.title}>
-        {forms.tituloServicos}
-      </h2>
-      <div className={styles.formAndContact}>
-        <div className={styles.formContainer}>
-          <div className={styles.mediumField}>
-            <input
-              className={errors?.name && styles.input_error}
-              id="nome"
-              type="text"
-              placeholder="Nome*"
-              {...register("nome", { required: true })}
-            />
-            {errors?.nome?.type === "required" && (
-              <p className={styles.error_message}>Campo obrigatório</p>
-            )}
+    <>
+      <div className={styles.mainContainer}>
+        <div className={styles.logo}>
+          <Image
+            src={forms.logo}
+            width={150}
+            height={150}
+          />
+        </div>
+        <h2 className={styles.title}>
+          {forms.tituloServicos}
+        </h2>
+        <div className={styles.formAndContact}>
+          <div className={styles.formContainer}>
+            <div className={styles.mediumField}>
+              <input
+                className={errors?.nome && styles.input_error}
+                id="nome"
+                type="text"
+                placeholder="Nome*"
+                {...register("nome", { required: true })}
+              />
+              {errors?.nome?.type === "required" && (
+                <p className={styles.error_message}>Campo obrigatório</p>
+              )}
+            </div>
+            <div className={styles.mediumField}>
+              <input
+                className={errors?.email && styles.input_error}
+                id="email"
+                type="email"
+                placeholder="E-mail*"
+                {...register("email", {
+                  required: true,
+                  validate: (value) => isEmail(value),
+                })}
+              />
+              {errors?.email?.type === "required" && (
+                <p className={styles.error_message}>Campo obrigatório.</p>
+              )}
+              {errors?.email?.type === "validate" && (
+              <p className={styles.error_message}>Email invalido</p>
+              )}
+            </div>
+            <div className={styles.mediumField}>
+              <input
+                className={errors?.celular && styles.input_error}
+                id="celular"
+                maxLength="15"
+                type="text"
+                onKeyDown={(event) => allowToEnterPhoneNumber(event)}
+                placeholder="Celular*"
+                {...register("celular", {
+                  required: true,
+                  validate: (value) => isMobilePhone(value, 'pt-BR'),
+                })}
+              />
+              {errors?.celular?.type === "required" && (
+                <p className={styles.error_message}>Campo obrigatório</p>
+              )}
+              {errors?.celular?.type === "validate" && (
+                <p className={styles.error_message}>Número inválido.</p>
+              )}
+            </div>
+            <div className={styles.mediumField}>
+              <input
+                className={errors?.assunto && styles.input_error}
+                id="assunto"
+                type="text"
+                placeholder="Assunto*"
+                {...register("assunto", { required: true })}
+              />
+              {errors?.assunto?.type === "required" && (
+                <p className={styles.error_message}>Campo obrigatório</p>
+              )}
+            </div>
+            <div className={styles.largeField}>
+              <textarea
+                className={errors?.mensagem && styles.input_error}
+                id="mensagem"
+                type="text"
+                placeholder="Sua mensagem"
+                {...register("mensagem", { required: false })}
+              />
+            </div>
+            <div className={styles.mediumField}>
+              <button onClick={() => handleSubmit(onSubmit)()}>Enviar</button>
+            </div>
           </div>
-          <div className={styles.mediumField}>
-            <input
-              className={errors?.email && styles.input_error}
-              id="email"
-              type="email"
-              placeholder="E-mail*"
-              {...register("email", {
-                required: true,
-                validate: (value) => isEmail(value),
-              })}
-            />
-            {errors?.email?.type === "required" && (
-              <p className={styles.error_message}>Campo obrigatório.</p>
-            )}
-            {errors?.email?.type === "validate" && (
-            <p className={styles.error_message}>Email invalido</p>
-            )}
-          </div>
-          <div className={styles.mediumField}>
-            <input
-              className={errors?.name && styles.input_error}
-              id="celular"
-              maxLength="14"
-              type="text"
-              onKeyDown={(event) => allowToEnterPhoneNumber(event)}
-              placeholder="Celular*"
-              {...register("celular", {
-                required: true,
-                validate: (value) => isMobilePhone(value, 'pt-BR'),
-              })}
-            />
-            {errors?.celular?.type === "required" && (
-              <p className={styles.error_message}>Campo obrigatório</p>
-            )}
-            {errors?.celular?.type === "validate" && (
-              <p className={styles.error_message}>Número inválido.</p>
-            )}
-          </div>
-          <div className={styles.mediumField}>
-            <input
-              className={errors?.name && styles.input_error}
-              id="assunto"
-              type="text"
-              placeholder="Assunto*"
-              {...register("assunto", { required: true })}
-            />
-            {errors?.assunto?.type === "required" && (
-              <p className={styles.error_message}>Campo obrigatório</p>
-            )}
-          </div>
-          <div className={styles.largeField}>
-            <textarea
-              className={errors?.name && styles.input_error}
-              id="mensagem"
-              type="text"
-              placeholder="Sua mensagem"
-              {...register("mensagem", { required: false })}
-            />
-          </div>
-          <div className={styles.mediumField}>
-            <button onClick={() => handleSubmit(onSubmit)()}>Enviar</button>
+          <div className={styles.contactContainer}>
+            <p className={styles.contactRows}>
+              <FaRegComment  size={30} className={styles.icons}/>
+              {forms.celular}
+            </p>
+            <p className={styles.contactRows}>
+              <FaRegEnvelope size={30} className={styles.icons}/>
+              {forms.email}
+            </p>
+            <p className={styles.contactRows}>
+              <FaHome size={30} className={styles.icons}/>
+              {forms.endereco1} 
+            </p>
+            <p className={styles.contactRows}>
+              <FaHome size={30} className={styles.icons}/>
+              {forms.endereco2} 
+            </p>
           </div>
         </div>
-        <div className={styles.contactContainer}>
-          <p className={styles.contactRows}>
-            <FaRegComment  size={30} className={styles.icons}/>
-            {forms.celular}
-          </p>
-          <p className={styles.contactRows}>
-            <FaRegEnvelope size={30} className={styles.icons}/>
-            {forms.email}
-          </p>
-          <p className={styles.contactRows}>
-            <FaHome size={30} className={styles.icons}/>
-            {forms.endereco1} 
-          </p>
-          <p className={styles.contactRows}>
-            <FaHome size={30} className={styles.icons}/>
-            {forms.endereco1} 
-          </p>
-        </div>
       </div>
-    </div>
+    </>
   );
 };

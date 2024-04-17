@@ -1,53 +1,35 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from './carrosselBlog.module.css'
-import CardPosts from '../cardPosts';
 import { register } from 'swiper/element/bundle'
-import { useState, useEffect } from 'react';
-register();
+
+register(); //função para utilizar o swiper
 
 import 'swiper/css';
-import "swiper/css/effect-flip";
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { EffectFade } from 'swiper/modules';
-
-// import next from 'next';
-// necessário?
 
 
 export default function CarrosselBlog({posts}) {
-
-  const [domLoaded, setDomLoaded] = useState(false);
   const arrPosts = [];
   var recents = [];
 
- // useEffect(() => {
- //   setDomLoaded(true); // código implementado pra resolver um problema do react, como o react "cria" a página duas vezes, ele estava criando uma página com os posts fora de ordem
-                        //e a outra com os posts ordenado, causando erro
- // }, []);
-
-
-
-   for (const i in posts) //pega os dados importantes que estão localizados na posição 0 
-    {  
-      arrPosts.push(posts[i]); //rearranja os dados em um novo array
-      arrPosts[i].data = new Date(arrPosts[i].data) //transforma as datas que estão em formato de string para formato DATE
-    }
-
+  for (const i in posts) //pega os dados importantes que estão localizados na posição 0 
+  {  
+    arrPosts.push(posts[i]); //rearranja os dados em um novo array
+    arrPosts[i].data = new Date(arrPosts[i].data) //transforma as datas que estão em formato de string para formato DATE
+  }
 
   function ordemDecrescente(a, b) {
     return b.data - a.data;  //função passada por parametro para o ordenamento, se b-a então estará ordenado pelos mais recentes. Se a-b, estará ordenado da data antiga par a mais nova
   }
-
   posts.sort(ordemDecrescente) //ordena os quatro primeiros por data
 
   for (let i = 0; i < arrPosts.length; i++) {
     arrPosts[i].data = arrPosts[i].data.toISOString().split('T')[0]; //transforma as datas em formato DATE para string
   }
-
   for (let i = 0; i < 3; i++) {
     recents.push(posts[i])  //limita o tamanho dos posts para 3
   }
@@ -55,7 +37,7 @@ export default function CarrosselBlog({posts}) {
   return (
     <>
       <section className={styles.container}>
-        { ( //só renderiza quando o react fazer a segunda renderização da página
+   
           <Swiper
             style={{
               "--swiper-theme-color": "#F2C12E",
@@ -70,13 +52,11 @@ export default function CarrosselBlog({posts}) {
             }}
             loop ={true}
             slidesPerView="auto"
+             pagination={{ clickable: true }} //permite a troca de páginas pelo pagination
             
-            // pagination={{ clickable: next }} //permite a troca de páginas pelo pagination
-            navigation={{  enabled: false, disabledClass: `${styles.navdisabled}`}}
             autoplay={{  delay: 5000, disableOnInteraction: false  }}
             className={styles.swiperContainer}
-            breakpoints={{ 800: {  navigation: { enabled: true }  }}}  //se a tela for maior que 800 pixels, ativa o navigation(as setinhas)
-          > 
+                    > 
             {recents.map((item) => ( //renderiza um slide para cada item no array de recents
               <SwiperSlide key={item.titulo} className={styles.swiperInd}>
                 <Link href={`/posts/${item.fileName}`}>
@@ -93,7 +73,7 @@ export default function CarrosselBlog({posts}) {
               </SwiperSlide>
             ))}
           </Swiper>
-        )}
+
       </section>
     </>
   );
