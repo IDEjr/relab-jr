@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from './carrosselBlog.module.css'
 import { register } from 'swiper/element/bundle'
+import {  EffectCube,  Navigation, Pagination } from 'swiper/modules';
 
 register(); //função para utilizar o swiper
 
@@ -9,6 +10,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import 'swiper/css/effect-cube';
+
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 
@@ -52,9 +55,11 @@ export default function CarrosselBlog({posts}) {
             loop ={true}
             slidesPerView="auto"
              pagination={{ clickable: true }} //permite a troca de páginas pelo pagination
-            
+            effect={'cube'}
             autoplay={{  delay: 5000, disableOnInteraction: false  }}
             className={styles.swiperContainer}
+            modules={[EffectCube, Navigation, Pagination]}
+
                     > 
             {recents.map((item) => ( //renderiza um slide para cada item no array de recents
               <SwiperSlide key={item.titulo} className={styles.swiperInd}>
