@@ -55,7 +55,7 @@ export default function CarrosselBlog({posts}) {
             loop ={true}
             slidesPerView="auto"
              pagination={{ clickable: true }} //permite a troca de páginas pelo pagination
-            effect={'cube'}
+           // effect={'cube'} ativar caso desejem animação
             autoplay={{  delay: 5000, disableOnInteraction: false  }}
             className={styles.swiperContainer}
             modules={[EffectCube, Navigation, Pagination]}
