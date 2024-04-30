@@ -5,7 +5,7 @@ import { GoChevronDown, GoChevronUp } from "react-icons/go";
 
 export default function MenuBlog({ posts }) {
   const [isActive, setIsactive] = useState(false);
-  const [titulo, setTitulo] = useState("TODOS");
+  const [titulo, setTitulo] = useState("Todos");
   const [atual, setAtual] = useState(false);
   const [filteredPosts, setFilteredPosts] = useState(posts);
 
@@ -19,7 +19,7 @@ export default function MenuBlog({ posts }) {
   const filter = (select, posts) => {
     //função que faz a filtragem dos generos e passa para os states
     let aux = posts;
-    select == "TODOS"
+    select == "Todos"
       ? (aux = posts)
       : (aux = posts.filter((obj) => obj.genero == select));
     setFilteredPosts(aux);
@@ -32,10 +32,10 @@ export default function MenuBlog({ posts }) {
     //função que renderiza as opções do menu
     return (
       <>
-        <li key={"todos"} tabIndex={0}>
+        <li key={"Todos"} tabIndex={0}>
           <button
-            className={atual === "TODOS" ? Styles.active : Styles.button}
-            onClick={() => filter("TODOS", posts)}
+            className={atual === "Todos" ? Styles.active : Styles.button}
+            onClick={() => filter("Todos", posts)}
             tabIndex={0}
           >
             Todos
