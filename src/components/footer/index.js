@@ -58,7 +58,7 @@ export default function Footer(footerData) {
                 src={footerData.watermark1}
                 width={90}
                 height={35}
-                className={styles.watermarkImg}
+                className={styles.watermark1}
                 quality={100}
               />
             </a>            
@@ -67,7 +67,7 @@ export default function Footer(footerData) {
                 src={footerData.watermark2}
                 width={165}
                 height={50}
-                className={styles.watermarkImg}
+                className={styles.watermark2}
                 quality={100}
               />
             </a>
@@ -76,7 +76,7 @@ export default function Footer(footerData) {
                 src={footerData.watermark3}
                 width={150}
                 height={40}
-                className={styles.watermarkImg}
+                className={styles.watermark3}
                 quality={100}
               />
             </a>
