@@ -46,19 +46,13 @@ export default function Home({home, posts, nav, foo, servicos}) {
   const tituloCarrossel = home.carrosselHome.tituloCarrossel;
 
 //-------------------------------------------------------------------------------------------
-//decidindo os posts a serem mandados para o carrossel
-//Funcionando
+//Pega os ultimos 4 posts 
+  console.log(posts)
   let i = 0;
-  const postsCarrossel = [];
-  while(posts[i]){
-    if (home.carrosselHome.postsCarrossel.includes(posts[i].titulo)){
-      postsCarrossel.push(posts[i])
-    }
-    i+=1;
-  } 
-  // console.log(postsCarrossel)
-  // console.log(posts)
-  
+  posts.sort((a, b) => new Date(b.data) - new Date(a.data));
+  console.log(posts)
+  const postsCarrossel = posts.slice(0,4);
+  console.log(postsCarrossel)
   
 //------------------------------------------------------------------------------------------
   return (
