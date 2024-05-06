@@ -9,9 +9,14 @@
 }
 
 .container{
+<<<<<<< HEAD
   align-self: center;
   align-items: center;
   margin-bottom: 10%;
+=======
+align-self: center;
+align-items: center;
+>>>>>>> 25-valores-relab-jr
 }
 
 @media only screen  and  (max-width: 1200px)  {

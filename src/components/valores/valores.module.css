@@ -1,15 +1,17 @@
 .valores{
-  height: 70%;
-  padding-bottom: 1em;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto;
-  gap: 10px;
-  width: 100%; /* Defina a largura desejada para o contêiner */
-  margin: 0 auto; /* Centraliza o contêiner horizontalmente */
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-  text-align: center; /* Alinha o texto horizontalmente no centro */
+    height: 70%;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+    width: 100%; /* Defina a largura desejada para o contêiner */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    text-align: center; /* Alinha o texto horizontalmente no centro */
+    
 }
 
 
@@ -76,48 +78,42 @@
 
 
 @media screen and (max-width: 767px) {
-  .valores {
-    grid-template-columns: 1fr; /* Uma única coluna */
-    grid-template-rows: auto auto auto auto auto ;
-  }
-
-  .middle{
-    grid-row: 1;
-  }
-
-  .topLeft{
-    grid-row: 2;
-    grid-column: 1 / span 2; /* Ocupa da coluna 1 até a coluna 2 */
-  }
-
-  .topRight{
-    grid-row: 3;
-    grid-column: 1 / span 2; /* Ocupa da coluna 1 até a coluna 2 */
-  }
-
-  .bottomLeft{
-    grid-row: 4;
-    grid-column: 1 / span 2; /* Ocupa da coluna 1 até a coluna 2 */
-  }
-
-  .bottomRight{
-    grid-row: 5;
-    grid-column: 1 / span 2; /* Ocupa da coluna 1 até a coluna 2 */
-  }
-
-  .titleGrande{
-    font-size: 3vh;
-    font-weight: 500;
-    width: 80%;
-    padding: 3%;
-  }
-
-  .textValores{
-    width: 60%;
-  }
-
-  .titleValores{
-    font-weight: 500;
-    width: 100%;
-  }
+    .valores {
+        grid-template-columns: 1fr; /* Uma única coluna */
+        grid-template-rows: auto auto auto auto auto ;
+        padding-top: 100px;
+        
+    }
+    .middle{
+        grid-row: 1;
+    }
+    .topLeft{
+        grid-row: 2;
+        grid-column: 1 / span 2; /* Ocupa da coluna 1 até a coluna 2 */
+    }
+    .topRight{
+        grid-row: 3;
+        grid-column: 1 / span 2; /* Ocupa da coluna 1 até a coluna 2 */
+    }
+    .bottomLeft{
+        grid-row: 4;
+        grid-column: 1 / span 2; /* Ocupa da coluna 1 até a coluna 2 */
+    }
+    .bottomRight{
+        grid-row: 5;
+        grid-column: 1 / span 2; /* Ocupa da coluna 1 até a coluna 2 */
+    }
+    .titleGrande{
+        font-size: 3vh;
+        font-weight: 500;
+        width: 80%;
+        padding: 3%;
+    }
+    .textValores{
+        width: 60%;
+    }
+    .titleValores{
+        font-weight: 500;
+        width: 100%;
+    }
 }
