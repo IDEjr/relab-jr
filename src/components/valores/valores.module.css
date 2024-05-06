@@ -1,6 +1,7 @@
 .valores{
     height: 70%;
     padding-bottom: 1em;
+    padding-top: 1em;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
@@ -90,6 +91,7 @@
     .valores {
         grid-template-columns: 1fr; /* Uma única coluna */
         grid-template-rows: auto auto auto auto auto ;
+        padding-top: 100px;
         
     }
     .middle{
