@@ -19,6 +19,7 @@ selecionados.*/
 export default function CarrosselHome(props) {
 //So passar os props como o objeto e eles sao desmembrados dentro do componente, esse é o jeito certo de usar.
   let posts = props.posts
+  console.log(posts)
   const data = [];
   let i = 0;
   for(let i in posts){
