@@ -114,27 +114,6 @@ each service
   align-content: space-between;
 }
 
-
-.arrow {
-  justify-self: flex-start;
-  z-index: 1;
-  /*height: 100%;
-  width: 115%;*/
-  width: 0;
-  height: 0;
-}
-
-
-.arrowShape {
-  background-color: #a3852b;
-  clip-path: polygon(0px 450px, 266px 29px, 251px 20px, 294px 2px, 293px 45px, 279px 37px, 0px 480px);
-  z-index: 3;
-  height: 550px;
-  width: 85%;
-  position:relative;
-}
-
-
 .insideImg {
   width: 100%;
   height: 420px;
@@ -191,7 +170,7 @@ each service
     }
     
     .overlayGrid {
-        height: 500;
+        height: 500px;
     }
 
 
@@ -245,7 +224,6 @@ each service
 
   .frames {
     width: 100%;
-    height: 500px;
   }
 
   .titleText {
@@ -260,16 +238,26 @@ each service
     align-items: center;
   }
 
-  .overlayGrid {
-    height: 600px;
-  }
 
-  .frames {
-    height: 600px;
-  }
 
   .insideImg {
     border: 10px solid #F2C12E;
-    height: 500px;
+  }
+}
+
+@media all and (max-width: 570px) {
+  .overlayGrid {
+    height: 370px;
+  }
+  
+  .frames {
+    height: 350px;
+  }
+
+  .insideImg {
+    height: 350px;
+  }
+  .topText {
+    padding-bottom: 7 0px;
   }
 }
