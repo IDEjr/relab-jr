@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { isEmail, isMobilePhone } from "validator";
-import { sendContactForm } from "./../../lib/api";
+import { sendContactForm } from "@/lib/api";
 import styles from "./formularioServicos.module.css"
 import { FaRegComment, FaRegEnvelope, FaHome } from "react-icons/fa";
 import Image from 'next/image'

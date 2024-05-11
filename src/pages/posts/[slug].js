@@ -7,8 +7,8 @@ import { useRouter } from 'next/router'
 import Image from 'next/image'
 import pencilImg from '../../../public/uploads/slug/pencil.png'
 import buttonImg from '../../../public/uploads/slug//voltarButton.png'
-import Navbar from '../../components/navbar'
-import Footer from '../../components/footer'
+import Navbar from '@/components/navbar'
+import Footer from '@/components/footer'
 import React from 'react'
 
 

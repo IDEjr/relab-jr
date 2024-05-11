@@ -19,25 +19,10 @@ selecionados.*/
 export default function CarrosselHome({posts, titulo}) {
 //So passar os props como o objeto e eles sao desmembrados dentro do componente, esse é o jeito certo de usar.
 
-
-//-------------------------------------------------------------------------------------------
 //Pega os ultimos 4 posts 
-// console.log(posts)
-// let i = 0;
 posts.sort((a, b) => new Date(b.data) - new Date(a.data));
-// console.log(posts)
 const filteredPosts = posts.slice(0,4);
 console.log(filteredPosts)
-
-//------------------------------------------------------------------------------------------
-
-  // let posts = props.posts
-  // console.log(posts)
-  // const data = [];
-  // let i = 0;
-  // for(let i in posts){
-  //   data.push(posts[i]);
-  // }
 
   return (
     <>
