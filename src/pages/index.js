@@ -45,16 +45,6 @@ export default function Home({home, posts, nav, foo, servicos}) {
 
   const tituloCarrossel = home.carrosselHome.tituloCarrossel;
 
-//-------------------------------------------------------------------------------------------
-//Pega os ultimos 4 posts 
-  console.log(posts)
-  let i = 0;
-  posts.sort((a, b) => new Date(b.data) - new Date(a.data));
-  console.log(posts)
-  const postsCarrossel = posts.slice(0,4);
-  console.log(postsCarrossel)
-  
-//------------------------------------------------------------------------------------------
   return (
     <>
       <React.Fragment>
@@ -65,7 +55,7 @@ export default function Home({home, posts, nav, foo, servicos}) {
       <ImagemComBotao {...imgButResultados} />
       <ServicosHome servicosHome = {home.servicosHome} servicos = {servicos}/>
       <ImagemComBotao {...imgButMembros} />
-      <CarrosselHome titulo = {tituloCarrossel} posts = {postsCarrossel}/>
+      <CarrosselHome posts = {posts} titulo = {tituloCarrossel} />
       <Footer {...foo}/>
     </>
   )

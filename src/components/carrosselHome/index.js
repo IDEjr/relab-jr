@@ -16,21 +16,34 @@ import {Autoplay} from "swiper/modules";
 
 /*Pegue os titulos que estão no json da home, e passar para aqui, e renderizar somente os posts que tem mesmo titulo dos 
 selecionados.*/
-export default function CarrosselHome(props) {
+export default function CarrosselHome({posts, titulo}) {
 //So passar os props como o objeto e eles sao desmembrados dentro do componente, esse é o jeito certo de usar.
-  let posts = props.posts
-  console.log(posts)
-  const data = [];
-  let i = 0;
-  for(let i in posts){
-    data.push(posts[i]);
-  }
+
+
+//-------------------------------------------------------------------------------------------
+//Pega os ultimos 4 posts 
+// console.log(posts)
+// let i = 0;
+posts.sort((a, b) => new Date(b.data) - new Date(a.data));
+// console.log(posts)
+const filteredPosts = posts.slice(0,4);
+console.log(filteredPosts)
+
+//------------------------------------------------------------------------------------------
+
+  // let posts = props.posts
+  // console.log(posts)
+  // const data = [];
+  // let i = 0;
+  // for(let i in posts){
+  //   data.push(posts[i]);
+  // }
 
   return (
     <>
       <section className={styles.carrossel}>
         <h3 className={styles.titleSection}>
-          {props.titulo}
+          {titulo}
         </h3>
         <Swiper
           style = {{
@@ -71,16 +84,15 @@ export default function CarrosselHome(props) {
           }}
           className={styles.swiperContainer}
         >
-          {posts.map((item)=> (
-            <SwiperSlide key={item.titulo} className={styles.swiperIndi}>
+          {filteredPosts.map((post)=> (
+            <SwiperSlide key={post.titulo} className={styles.swiperIndi}>
               <CardPosts 
-                imagem={item.imagemCapa}
-                fileName={item.fileName}
-                
-                titulo={item.titulo}
-                data={item.data}
-                previa={item.previa}
-                autor={item.autor}
+                imagem={post.imagemCapa}
+                fileName={post.fileName}
+                titulo={post.titulo}
+                data={post.data}
+                previa={post.previa}
+                autor={post.autor}
               />
               <div className={styles.margin}>
               </div>
