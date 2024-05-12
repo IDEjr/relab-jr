@@ -156,7 +156,11 @@
   align-items: center;
   padding-left: 10%;
   /* width: 38%; */
+  width: 80%;
   color:#F2C12E;
+}
+.authorName {
+  padding-left: 5vw;
 }
 
 .buttonContainer {
