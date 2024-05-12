@@ -1,7 +1,6 @@
 {
   "inicioBlog": {
     "titulo": "BLOG",
-    "textoBotao": "Voltar",
-    "imagem": "/uploads/pencil.png"
+    "textoBotao": "Voltar"
   }
 }

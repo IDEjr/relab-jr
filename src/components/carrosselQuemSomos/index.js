@@ -53,7 +53,12 @@ export default function CarrosselQuemSomos({ imagens }) {
           {imagens.map((item) => (     //mostra um slide para cada imagem contida em images
             <SwiperSlide key={item} className={Styles.swiperSlide} >
               <div className={Styles.image}>
-                <Image src={item} fill style={{ objectFit: 'cover' }} alt="Post" />
+                <Image
+                  src={item}
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  alt="Post"
+                />
               </div>
             </SwiperSlide>))
           } 

@@ -1,6 +1,6 @@
 import styles from './footer.module.css'
 import Image from 'next/image'
-import {FaInstagram, FaLinkedin,FaEnvelope} from "react-icons/fa"
+import {FaInstagram, FaLinkedin, FaEnvelope} from "react-icons/fa"
 
 
 const handleMove = () => {

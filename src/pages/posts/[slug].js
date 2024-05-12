@@ -7,6 +7,7 @@ import Image from 'next/image'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
 import { useRouter } from 'next/router'
 import React from 'react'
+import { RxPencil1 } from "react-icons/rx"
 
 
 const handleMove = () => {
@@ -16,6 +17,8 @@ const handleMove = () => {
 export default function Posts({ post, nav, foo, blog }) {
   const router = useRouter();
   const { postId } = router.query
+
+  console.log(blog)
 
   const navData = {
     logo: nav.logo,
@@ -75,7 +78,7 @@ export default function Posts({ post, nav, foo, blog }) {
         </div>
         <div className={styles.bottomContainer}>
           <div className={styles.authorAndPencil}>
-            <Image src={blog.imagem} />
+            <RxPencil1 />
             <text className={styles.authorName}>
               <a href={post.linkedin} className={styles['autor']}>
                 {post.autor}
@@ -84,7 +87,7 @@ export default function Posts({ post, nav, foo, blog }) {
           </div>
           <div className={styles.buttonContainer}>
             <button onClick={handleMove} className={styles.voltarButton}>
-            {blog.textoBotao}
+            {blog.inicioBlog.textoBotao}
             </button>
           </div>
         </div>

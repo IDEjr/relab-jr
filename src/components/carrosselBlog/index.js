@@ -63,7 +63,12 @@ export default function CarrosselBlog({ posts, titulo }) {
               <SwiperSlide key={item.titulo} className={styles.swiperInd}>
                 <Link href={`/posts/${item.fileName}`}>
                   <div className={styles.carrosselImage}>
-                    <Image src={item.imagemCapa} fill alt={item.titulo} className={styles.imagemCarrossel} />
+                    <Image
+                      src={item.imagemCapa}
+                      fill
+                      alt={item.titulo}
+                      className={styles.imagemCarrossel}
+                    />
                     <h1 className={styles.h1}>{titulo}</h1>
                     <div className={styles.titles}>
                       <h3><p className={styles.h3}>{item.genero} </p></h3>

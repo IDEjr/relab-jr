@@ -12,7 +12,12 @@ export default function textoBarraQuemSomos({ texto1, texto2, logo }) {
         <div className={styles.retangulo}></div>
         <div className={styles.textImage}> {/* inicio da div textImage */}
           <div className={styles.lampada}>
-            <Image src={logo} fill style={{ objectFit: 'cover' }} alt="Post"/>
+            <Image
+              src={logo}
+              fill
+              style={{ objectFit: 'cover' }}
+              alt="Post"
+            />
           </div>
           <div className={styles.bottomtext}>
             <p className={styles.textContent}>{texto2}</p>

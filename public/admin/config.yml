@@ -96,7 +96,7 @@ collections:
 
 
 
-      - label: "Página Quem Somos"
+      - label: "Quem Somos"
         name: "quemSomos"
         file: "content/paginas/quemSomos.json"
         extension: "json"
@@ -151,7 +151,7 @@ collections:
 
 
 
-      - label: "Página Serviços"
+      - label: "Serviços"
         name: "servicos"
         file: "content/paginas/servicos.json"
         extension: "json"
@@ -170,7 +170,7 @@ collections:
 
 
 
-      - label: "Página Blog"
+      - label: "Blog"
         name: "blog"
         file: "content/paginas/blog.json"
         extension: "json"
@@ -184,7 +184,6 @@ collections:
             fields:
               - {label: "Título", name: "titulo", widget: "string"}
               - {label: "Texto Botão Post", name: "textoBotao", widget: "string"}
-              - {label: "Marcação Autor", name: "imagem", widget: "image"}
 
           
           - label: "Ícones Posts"
