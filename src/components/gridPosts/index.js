@@ -5,7 +5,7 @@ export default function gridPosts({posts}) {
   
     return (
       <>
-        <div className={styles.big}>
+        <div className={styles.container}>
           <section className={styles.postsGrid}>
               {posts.map((post, i) => (
               <CardPost
