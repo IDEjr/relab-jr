@@ -15,7 +15,7 @@ import 'swiper/css/effect-cube';
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 
-export default function CarrosselBlog({posts}) {
+export default function CarrosselBlog({ posts, titulo }) {
   const arrPosts = [];
   var recents = [];
 
@@ -64,7 +64,7 @@ export default function CarrosselBlog({posts}) {
                 <Link href={`/posts/${item.fileName}`}>
                   <div className={styles.carrosselImage}>
                     <Image src={item.imagemCapa} fill alt={item.titulo} className={styles.imagemCarrossel} />
-                    <h1 className={styles.h1}>BLOG</h1>
+                    <h1 className={styles.h1}>{titulo}</h1>
                     <div className={styles.titles}>
                       <h3><p className={styles.h3}>{item.genero} </p></h3>
                       <h2><p className={styles.h2}>{item.titulo} </p></h2>

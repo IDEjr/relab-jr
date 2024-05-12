@@ -1,6 +1,7 @@
 {
   "inicioBlog": {
     "titulo": "BLOG",
-    "imagem": "/uploads/262120-qual-a-importancia-dos-relatorios-contabeis-na-tomada-de-decisoes-1200x675.jpg"
+    "textoBotao": "Voltar",
+    "imagem": "/uploads/pencil.png"
   }
 }

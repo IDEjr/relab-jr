@@ -182,8 +182,9 @@ collections:
             name: "inicioBlog"
             widget: "object"
             fields:
-              - {label: "Imagem", name: "imagem", widget: "image"}
               - {label: "Título", name: "titulo", widget: "string"}
+              - {label: "Texto Botão Post", name: "textoBotao", widget: "string"}
+              - {label: "Marcação Autor", name: "imagem", widget: "image"}
 
           
           - label: "Ícones Posts"

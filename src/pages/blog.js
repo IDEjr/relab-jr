@@ -5,7 +5,7 @@ import CarrosselBlog from '@/components/carrosselBlog'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
 
-export default function Blog({ posts, nav, foo }) {
+export default function Blog({ posts, nav, foo, blog }) {
 
   const navData = {
     logo: nav.logo,
@@ -17,7 +17,7 @@ export default function Blog({ posts, nav, foo }) {
   return (
     <>
       <Navbar {...navData}/>
-      <CarrosselBlog posts = {posts}/>  
+      <CarrosselBlog posts = {posts} titulo = {blog.inicioBlog.titulo}/>  
       <MenuBlog posts = {posts}/>
       <Footer {...foo}/>
     </> 
@@ -27,11 +27,12 @@ export default function Blog({ posts, nav, foo }) {
 
 export async function getStaticProps() {
 
-  const foo = handleJSONfile('./content/navFooter/footer.json');
   const posts = handleJSONfiles('./content/posts');
   const nav = handleJSONfile('./content/navFooter/navbar.json');
+  const foo = handleJSONfile('./content/navFooter/footer.json');
+  const blog = handleJSONfile(`./content/paginas/blog.json`);
 
   return {
-    props: { posts, nav, foo },
+    props: { posts, nav, foo, blog },
   };
 }
