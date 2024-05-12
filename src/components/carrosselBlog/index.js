@@ -39,7 +39,6 @@ export default function CarrosselBlog({posts}) {
   return (
     <>
       <section className={styles.container}>
-   
           <Swiper
             style={{
               "--swiper-theme-color": "#F2C12E",
@@ -59,8 +58,7 @@ export default function CarrosselBlog({posts}) {
             autoplay={{  delay: 5000, disableOnInteraction: false  }}
             className={styles.swiperContainer}
             modules={[EffectCube, Navigation, Pagination]}
-
-                    > 
+          >
             {recents.map((item) => ( //renderiza um slide para cada item no array de recents
               <SwiperSlide key={item.titulo} className={styles.swiperInd}>
                 <Link href={`/posts/${item.fileName}`}>
@@ -77,7 +75,6 @@ export default function CarrosselBlog({posts}) {
               </SwiperSlide>
             ))}
           </Swiper>
-
       </section>
     </>
   );

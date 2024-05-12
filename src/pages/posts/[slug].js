@@ -1,21 +1,19 @@
+import Navbar from '@/components/navbar'
+import Footer from '@/components/footer'
 import fs from 'fs'
 import ReactMarkdown from 'react-markdown'
 import matter from 'gray-matter'
 import styles from './slug.module.css'
-import { handleJSONfile } from '@/utils/functions/jsonHandler'
-import { useRouter } from 'next/router'
 import Image from 'next/image'
 import pencilImg from '../../../public/uploads/slug/pencil.png'
-import buttonImg from '../../../public/uploads/slug//voltarButton.png'
-import Navbar from '@/components/navbar'
-import Footer from '@/components/footer'
+import { handleJSONfile } from '@/utils/functions/jsonHandler'
+import { useRouter } from 'next/router'
 import React from 'react'
 
 
 const handleMove = () => {
   window.scrollTo({ top: 0, behavior: "smooth" }); // here it goes
 };
-
 
 export default function Posts({ content, nav, foo }) {
   const router = useRouter();

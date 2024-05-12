@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import styles from './cardPosts.module.css'
+import styles from './cardPost.module.css'
 
 export default function cardPosts({ fileName, imagem, titulo, data, previa, autor}) {
 

@@ -1,18 +1,14 @@
-import CardPosts from "../cardPosts";
+import CardPost from "@/components/cardPost";
 import styles from './gridPosts.module.css'
 
 export default function gridPosts({posts}) {
-    // posts = posts[0];
-    // var arrPosts = [];
-    // for( const i in posts){
-    //     arrPosts.push(posts[i]);
-    // }
-    // posts = arrPosts
+  
     return (
-      <><div className={styles.big}>
+      <>
+        <div className={styles.big}>
           <section className={styles.postsGrid}>
               {posts.map((post, i) => (
-              <CardPosts
+              <CardPost
                 key={i}
                 fileName={post.fileName}
                 imagem={post.imagemCapa}

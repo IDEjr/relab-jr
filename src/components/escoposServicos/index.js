@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import styles from './escoposServicos.module.css'
-import { useMediaQuery } from 'react-responsive'
 
 
 function servicoL( servico, imagem, descricao ) {

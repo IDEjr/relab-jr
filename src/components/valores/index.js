@@ -1,6 +1,4 @@
-import Link from 'next/link'
 import styles from './valores.module.css'
-import Image from 'next/image'
 
 
 export default function valores({...escritos}) {

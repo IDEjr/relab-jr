@@ -1,7 +1,5 @@
 import styles from './servicosHome.module.css'
-import React from 'react'
 import Image from 'next/image'
-// import yellowArrow from '../../../public/uploads/image/servicosHome/yellowArrow.png'
 
 
 function cadaServico(frame) { 

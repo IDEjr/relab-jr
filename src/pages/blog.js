@@ -1,9 +1,9 @@
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
+import MenuBlog from '@/components/menuBlog'
+import CarrosselBlog from '@/components/carrosselBlog'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
-import MenuBlog from '@/components/menuBlog/menuBlog'
-import CarrosselBlog from '@/components/carrosselBlog'
 
 export default function Blog({ posts, nav, foo }) {
 

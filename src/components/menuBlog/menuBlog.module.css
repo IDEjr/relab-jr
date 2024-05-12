@@ -10,6 +10,7 @@
   font-size: 1.4vw;
   padding: 2vw;
 }
+
 .GridPosts{
 margin-top: 5%;
 z-index: -1;
@@ -71,31 +72,26 @@ z-index: -1;
 .containerMobile{
   display: none;
   margin-bottom: 0;
-  
 }
+
 .aaa{
   position: relative;
 }
+
 .containerDesktop{
   display: flex; 
-  
 }
-
 
 .active{
   background: #F2C12E;
   color: black;
   cursor: pointer;
   border-radius: 10px;
-
 }
 
 .button:hover{
   border-radius: 10px;
-
 }
-
-
 
 
 @media only screen and (max-width: 800px) {
@@ -105,17 +101,12 @@ z-index: -1;
     flex-direction: column;
     box-shadow: none;
     background-color: none;
-    
   }
-
 
   .container{
     display: flex;
     justify-content: space-around;
-
   }
-
-  
 
   .tituloEBotaoMobile {
     display: flex;
@@ -125,12 +116,9 @@ z-index: -1;
     justify-content: space-between;
     min-width: 70vw;
     z-index: 1;
-
     min-height: 6vh;
   }
 
-
-  
   .button, .active{
     border: none;
     width: 100%;
@@ -163,8 +151,8 @@ z-index: -1;
     border-top-right-radius: 0; 
     padding-top: 2vh;
     z-index: 0;
-     
   }
+
   .tituloMobile{
     font-size: 5vw;
   }
@@ -172,7 +160,6 @@ z-index: -1;
   .dropdownActive {
     opacity: 1;
     transform: translateY(-3%);
-
   }
 
   .containerDesktop{

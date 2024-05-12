@@ -1,5 +1,5 @@
+import CardPost from '@/components/cardPost'
 import styles from './carrosselHome.module.css'
-import CardPosts from '../cardPosts'
 import { register } from 'swiper/element/bundle'
 
 register();
@@ -71,7 +71,7 @@ console.log(filteredPosts)
         >
           {filteredPosts.map((post)=> (
             <SwiperSlide key={post.titulo} className={styles.swiperIndi}>
-              <CardPosts 
+              <CardPost 
                 imagem={post.imagemCapa}
                 fileName={post.fileName}
                 titulo={post.titulo}

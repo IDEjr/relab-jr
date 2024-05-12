@@ -1,6 +1,6 @@
-import { useState } from "react";
+import GridPosts from "@/components/gridPosts";
 import Styles from "./menuBlog.module.css";
-import GridPosts from "../gridPosts";
+import { useState } from "react";
 import { GoChevronDown, GoChevronUp } from "react-icons/go";
 
 export default function MenuBlog({ posts }) {
@@ -76,7 +76,7 @@ export default function MenuBlog({ posts }) {
                   onClick={() => setIsactive(!isActive)}
                   className={Styles.optionButton}
                 >
-                 {isActive ? <GoChevronUp className={Styles.icone} /> : <GoChevronDown className={Styles.icone} />} 
+                {isActive ? <GoChevronUp className={Styles.icone} /> : <GoChevronDown className={Styles.icone} />} 
                 </h4>
               </div>
               <div className={Styles.aaa}>
