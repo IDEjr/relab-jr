@@ -70,14 +70,14 @@ export default function MenuBlog({ posts }) {
               {/* div mobile */}
               <div className={Styles.tituloEBotaoMobile}>
                 <h3 className={Styles.tituloMobile}>
-                  <p className={Styles.p}>{titulo}</p>
+                  {titulo}
                 </h3>
-                <h4
+                <div
                   onClick={() => setIsactive(!isActive)}
                   className={Styles.optionButton}
                 >
                 {isActive ? <GoChevronUp className={Styles.icone} /> : <GoChevronDown className={Styles.icone} />} 
-                </h4>
+                </div>
               </div>
               <div className={Styles.aaa}>
               <div

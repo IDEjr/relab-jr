@@ -26,6 +26,15 @@
   filter: brightness(40%);
 }
 
+.categorie {
+  position: absolute;
+  top:35%;
+  left: 5.1%;
+  /* font-size: 1.2em; */
+  /* font-weight: 400; */
+  color : #F2C12E;
+}
+
 .title {
   position: absolute;
   top: 40%;
@@ -36,7 +45,7 @@
   position: absolute;
   top: 50%;
   left: 5.1%;
-  font-size: 1.4em;
+  /* font-size: 1.4em; */
   /* font-weight: 500; */
   color: #F2C12E;
 }
@@ -54,15 +63,6 @@
   gap:30%;
 }
 
-.categorie {
-  position: absolute;
-  top:35%;
-  left: 5.1%;
-  font-size: 1.2em;
-  /* font-weight: 400; */
-  color : #F2C12E;
-}
-
 /* .bottomPart {
   
 } */
@@ -74,10 +74,10 @@
   flex-direction: column;
   font-weight: 300;
 } */
+
 .newStyle {
   margin-top: 10px !important;
-  margin-bottom: 10px 
-  !important;
+  margin-bottom: 10px !important;
 }
 
 .markDown {
@@ -106,12 +106,15 @@
   margin-bottom: 15px;
   line-height: 120%;
 }
+
 .markdown :global(ol) {
   padding-left: 3vw;
 }
+
 .markdown :global(ul) {
   padding-left: 3vw;
 }
+
 .markdown :global(img) {
   margin-left: auto;
   margin-right: auto;
@@ -119,11 +122,13 @@
   width: 55vw;
   padding-top: 2vh;
   padding-bottom: 2vh;
+
 }.markdown :global(img) {
   margin-left: auto;
   margin-right: auto;
   display: flex;
 }
+
 .markdown {
   display: block;
   width: 80%;
@@ -159,31 +164,32 @@
   width: 80%;
   color:#F2C12E;
 }
+
 .authorName {
-  padding-left: 5vw;
+  padding-left: 16px;
 }
 
 .buttonContainer {
   display: flex;
   justify-content: center;
-  width: 100%; /* Ensure the button container takes up the full width */
+  width: 100%;
   padding: 5vh 0vw;
 }
 
-.voltarButton {
+/* .voltarButton {
   border: 2px solid #F2C12E;
   padding: 1rem 3rem;
   background-color: transparent;
   color: #F2C12E;
   cursor: pointer;
-  transition: 0.5s; /* Smooth transition */
+  transition: 0.5s;
 }
 
 .voltarButton:hover {
-  background-color: #F2C12E; /* Change background color on hover */
-  color: #000000; /* Change text color on hover */
+  background-color: #F2C12E;
+  color: #000000;
   border: 2px solid #000000;
-}
+} */
 
 
 @media (max-width: 1280px) {

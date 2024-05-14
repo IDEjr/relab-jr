@@ -44,7 +44,7 @@ export default function Posts({ post, nav, foo, blog }) {
             className={styles.topImg}
             style={{objectFit: 'cover', background: 'black'}}
           />
-          <p className="newStyle"></p>
+          <div className="newStyle"></div>
           <div className={styles.postBlock}>
             <div className={styles.titleAndRest}>
               <p className={styles.categorie}>
@@ -58,7 +58,7 @@ export default function Posts({ post, nav, foo, blog }) {
               </p>
             </div>
             <div className={styles.details}>
-              <a href={post.linkedin} target="_blank" className={styles['autor']}>
+              <a href={post.linkedin} target="_blank" className={styles.autor}>
                 {post.autor}
               </a>
               <p className={styles.data}>
@@ -79,14 +79,14 @@ export default function Posts({ post, nav, foo, blog }) {
         <div className={styles.bottomContainer}>
           <div className={styles.authorAndPencil}>
             <RxPencil1 />
-            <text className={styles.authorName}>
-              <a href={post.linkedin} className={styles['autor']}>
+            <p className={styles.authorName}>
+              <a href={post.linkedin} className={styles.autor}>
                 {post.autor}
               </a>
-            </text>
+            </p>
           </div>
           <div className={styles.buttonContainer}>
-            <button onClick={handleMove} className={styles.voltarButton}>
+            <button onClick={handleMove}>
             {blog.inicioBlog.textoBotao}
             </button>
           </div>

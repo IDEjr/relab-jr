@@ -52,7 +52,7 @@ export default function servicosHome({servicosHome, servicos}) {
   return(
     <>
       <div className={styles.container}>
-        <h1 className={styles.titleText}>NOSSOS SERVIÇOS</h1>
+        <h2 className={styles.titleText}>NOSSOS SERVIÇOS</h2>
         <div className={styles.blocksHandler}>
           <div className={styles.firstTwo}>
             {cadaServico(frames[0])}

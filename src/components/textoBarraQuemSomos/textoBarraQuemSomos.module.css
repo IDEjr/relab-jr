@@ -107,14 +107,14 @@
   
   .textContent {
     text-align: justify;
-    font-size: 3vw;
+    /* font-size: 3vw; */
     height: 100%;      
   }
 
   .retangulo {
     width: 50vw;
     background-color: #F2C12E;
-    height: 0.5rem;
+    height: 8px;
     align-self: baseline;
     display: block;
     margin-top: 5%;

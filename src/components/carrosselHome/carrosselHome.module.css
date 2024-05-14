@@ -27,10 +27,10 @@ section .swiperContainer{
 
 .titleSection{
   padding: 5rem;
-  font-size: 30px;
+  /* font-size: 30px; */
+  font-weight: bolder;
   color: #F2C12E;
   text-align: center;
-  
   width: 100%;
   display: block;
 }

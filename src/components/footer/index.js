@@ -32,9 +32,9 @@ export default function Footer(footerData) {
             />
           </button>        
           <div className={styles.contactSocials}>
-            <span className={styles.contactText}>
+            <h3 className={styles.contactText}>
               Entre em contato:
-            </span>
+            </h3>
             <div className={styles.socialIcons}>
               <a className={styles.linkedinIcon} href={footerData.linkedin} target="_blank">
                 <FaLinkedin size={40}/>
@@ -78,9 +78,9 @@ export default function Footer(footerData) {
               />
             </a>
           </div>
-          <span className={styles.footerText}>
-          <text className={styles.footerText}>{footerData.copy}</text>
-          </span>
+          <div className={styles.footerText}>
+          <p className={styles.footerText}>{footerData.copy}</p>
+          </div>
         </div>
       </div>
     </>

@@ -56,12 +56,13 @@
   padding-right: 5vw;
   gap: 1vh;
   align-items: center;
+  text-align: center;
 }
 
 
 .contactText {
-  font-weight: 350;
-  font-size: 30px;
+  /* font-weight: 350; */
+  /* font-size: 30px; */
   color: #F2C12E;
 }
 
@@ -90,7 +91,7 @@
 .footerText {
   display: flex;
   flex-direction: column;
-  font-size: 1vw;
+  /* font-size: 1vw; */
   gap:0.5vw;
   justify-content: center;
   align-items: center;
@@ -116,12 +117,12 @@
     justify-content: flex-end;
     align-items: center;
     height: 80%;
-    gap:0;
+    gap: 0;
   }
 
   .contactText {
     padding-top: 2vh;
-    font-size:larger;
+    /* font-size: larger; */
   }
 
   .relabIcon {
@@ -143,8 +144,7 @@
 
   .contactSocials {
     padding: 0;
-    width: 25vw;
-    
+    /* width: 25vw; */
   }
 
   .bottomPart {
@@ -165,10 +165,12 @@
     width: 120px;
     height: 40px;
   }
+
   .watermark2 {
     width: 120px;
     height: 40px;
   }
+  
   .watermark3 {
     width: 120px;
     height: 40px;
@@ -185,10 +187,12 @@
     width: 80px;
     height: 30px;
   }
+
   .watermark2 {
     width: 80px;
     height: 30px;
   }
+
   .watermark3 {
     width: 80px;
     height: 30px;
@@ -199,7 +203,7 @@
   }
   
   .footerText {
-    font-size: 3vw;
+    /* font-size: 3vw; */
   }
 
   .relabIcon {
@@ -221,16 +225,16 @@
   }
 
   .contactSocials {
-    width: 40vw;
+    /* width: 40vw; */
     padding-right: 0;
   }
 
   .contactText {
     display: flex;
-    width: 60vw;
+    /* width: 60vw; */
     justify-content: center;
-    padding-left: 2vw;
-    font-size: small;
+    /* padding-left: 2vw; */
+    /* font-size: small; */
   }
 
   .socialIcons {
@@ -249,18 +253,22 @@
   .membershipIcons {
     padding-left: 5vw;
   }
+
   .jesuitasIcon {
     width: 100px;
     height: 40px;
   }
+
   .watermark1 {
     width: 80px;
     height: 30px;
   }
+
   .watermark2 {
     width: 100px;
     height: 40px;
   }
+  
   .watermark3 {
     width: 110px;
     height: 40px;

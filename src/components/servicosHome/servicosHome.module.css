@@ -1,5 +1,5 @@
 .container {
-  font-size: large;
+  /* font-size: large; */
   display: flex;
   align-items: center;
   flex-direction:column;
@@ -73,9 +73,9 @@
   display: flex;
   justify-content: center;
   color: #F2C12E;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 400;
+  /* font-size: 40px; */
+  /* font-style: normal; */
+  font-weight: bolder;
   padding-top: 50px;
   padding-bottom: 80px;
 }
@@ -153,7 +153,7 @@ each service
   display: flex;
   justify-content: center;
   text-align: center;
-  font-size: 30px;
+  /* font-size: 30px; */
   font-style: normal;
   font-weight: 300;
   text-transform: uppercase;

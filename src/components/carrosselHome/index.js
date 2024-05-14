@@ -27,9 +27,9 @@ console.log(filteredPosts)
   return (
     <>
       <section className={styles.carrossel}>
-        <h3 className={styles.titleSection}>
+        <h2 className={styles.titleSection}>
           {titulo}
-        </h3>
+        </h2>
         <Swiper
           style = {{
             "--swiper-theme-color":"#F2C12E",

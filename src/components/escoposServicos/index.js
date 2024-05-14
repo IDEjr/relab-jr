@@ -14,11 +14,11 @@ function servicoL( servico, imagem, descricao ) {
           />
         </div>
         <div className={styles.textContainer}>
-          <div className={styles.titleContainer}>{servico}</div>
+          <h2 className={styles.titleContainer}>{servico}</h2>
           <div className={styles.underBar}></div>
-          <div className={styles.descriptionContainer}>
+          <p className={styles.descriptionContainer}>
             {descricao}
-          </div>
+          </p>
         </div>
       </div>
     </>
@@ -30,11 +30,11 @@ function servicoR( servico, imagem, descricao ) {
     <>
       <div className={styles.serviceContainer}>
         <div className={styles.textContainer}>
-          <div className={styles.titleContainer}>{servico}</div>
+          <h2 className={styles.titleContainer}>{servico}</h2>
           <div className={styles.underBar}></div>
-          <div className={styles.descriptionContainer}>
+          <p className={styles.descriptionContainer}>
             {descricao}
-          </div>
+          </p>
         </div>
         <div className={styles.imagemContainer}>
           <Image

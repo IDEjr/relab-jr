@@ -4,11 +4,11 @@
   align-items: center;
   border: none;
   width: fit-content;
-  height: 9vh;
+  /* height: 9vh; */
   background: none;
   color: #F2C12E;
-  font-size: 1.4vw;
-  padding: 2vw;
+  /* font-size: 1.4vw; */
+  padding: 1rem;
 }
 
 .container {
@@ -21,7 +21,7 @@
 .tituloMobile {
   background-color: #F2C12E;
   color: black;
-  font-size: 6.4vw;
+  /* font-size: 6.4vw; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -122,8 +122,8 @@
     text-align: start;
     background: none;
     color: #F2C12E;
-    font-size: 3vw;
-    height: 6vh;
+    /* font-size: 3vw; */
+    /* height: 6vh; */
   }
 
   .active{

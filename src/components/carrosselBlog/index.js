@@ -69,11 +69,11 @@ export default function CarrosselBlog({ posts, titulo }) {
                       alt={item.titulo}
                       className={styles.imagemCarrossel}
                     />
-                    <h1 className={styles.h1}>{titulo}</h1>
-                    <div className={styles.titles}>
-                      <h3><p className={styles.h3}>{item.genero} </p></h3>
-                      <h2><p className={styles.h2}>{item.titulo} </p></h2>
-                      <h3><p className={styles.h3}>{item.previa} </p></h3>
+                    <h1 className={styles.titulo}>{titulo}</h1>
+                    <div className={styles.text}>
+                      <h3 className={styles.generoPrevia}>{item.genero}</h3>
+                      <h2 className={styles.tituloPost}>{item.titulo}</h2>
+                      <h3 className={styles.generoPrevia}>{item.previa}</h3>
                     </div>
                   </div>
                 </Link>
