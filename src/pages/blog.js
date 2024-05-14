@@ -7,16 +7,16 @@ import { handleJSONfile } from '@/utils/functions/jsonHandler'
 
 export default function Blog({ posts, nav, foo, blog }) {
 
-  const navData = {
-    logo: nav.logo,
-    linkedin: nav.linkedin,
-    instagram: nav.instagram,
-    email: nav.email
-  }
+  // const navData = {
+  //   logo: nav.logo,
+  //   linkedin: nav.linkedin,
+  //   instagram: nav.instagram,
+  //   email: nav.email
+  // }
 
   return (
     <>
-      <Navbar {...navData}/>
+      <Navbar {...nav}/>
       <CarrosselBlog posts = {posts} titulo = {blog.inicioBlog.titulo}/>  
       <MenuBlog posts = {posts}/>
       <Footer {...foo}/>

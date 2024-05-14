@@ -1,6 +1,7 @@
 import styles from './footer.module.css'
 import Image from 'next/image'
 import {FaInstagram, FaLinkedin, FaEnvelope} from "react-icons/fa"
+import Link from 'next/link'
 
 
 const handleMove = () => {
@@ -23,63 +24,69 @@ export default function Footer(footerData) {
         >
         </Image> */}
         <div className={styles.topPart}>
-          <button onClick={handleMove} className={styles.relabIcon}>
+          <a onClick={handleMove}>
             <Image
               src={footerData.logo}
               width={150}
               height={150}
-              className={styles.logoImg}
+              className={styles.relabLogo}
             />
-          </button>        
+          </a>        
           <div className={styles.contactSocials}>
             <h3 className={styles.contactText}>
               Entre em contato:
             </h3>
             <div className={styles.socialIcons}>
-              <a className={styles.linkedinIcon} href={footerData.linkedin} target="_blank">
+              <Link className={styles.linkedinIcon} href={footerData.linkedin} target="_blank">
                 <FaLinkedin size={40}/>
-              </a>
-              <a className={styles.mailIcon} href='/' target="_blank">
+              </Link>
+              <Link className={styles.mailIcon} href={`mailto:${footerData.email}`} target="_blank">
                 <FaEnvelope size={40}/>
-              </a>
-              <a className={styles.instagramIcon} href={footerData.instagram} target="_blank">
+              </Link>
+              <Link className={styles.instagramIcon} href={footerData.instagram} target="_blank">
                 <FaInstagram size={40}/>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
         <div className={styles.bottomPart}>
           <div className={styles.membershipIcons}>
-            <a className={styles.labIcon} href='https://unisinos.br/lab/programas/relab' target='_blank'>
+            <a className={styles.watermarkCover} href='https://unisinos.br/lab/programas/relab' target='_blank'>
               <Image
                 src={footerData.watermark1}
-                width={90}
-                height={35}
-                className={styles.watermark1}
+                // width={90}
+                // height={35}
+                fill
+                objectFit='contain'
+                className={styles.watermark}
                 quality={100}
               />
             </a>            
-            <a className={styles.jesuitasIcon} href='https://jesuitasbrasil.org.br' target='_blank'>
+            <a className={styles.watermarkCover} href='https://jesuitasbrasil.org.br' target='_blank'>
               <Image
                 src={footerData.watermark2}
-                width={165}
-                height={50}
-                className={styles.watermark2}
+                // width={165}
+                // height={50}
+                fill
+                objectFit='contain'
+                className={styles.watermark}
                 quality={100}
               />
             </a>
-            <a className={styles.unisinosIcon} href='https://www.unisinos.br/' target='_blank'>
+            <a className={styles.watermarkCover} href='https://www.unisinos.br/' target='_blank'>
               <Image
                 src={footerData.watermark3}
-                width={150}
-                height={40}
-                className={styles.watermark3}
+                // width={150}
+                // height={40}
+                fill
+                objectFit='contain'
+                className={styles.watermark}
                 quality={100}
               />
             </a>
           </div>
           <div className={styles.footerText}>
-          <p className={styles.footerText}>{footerData.copy}</p>
+            <p className={styles.footerText}>{footerData.copy}</p>
           </div>
         </div>
       </div>

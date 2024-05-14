@@ -10,12 +10,12 @@ import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 
 export default function Servicos({ paginaServicos, nav, foo, formularios, servicos }) {
 
-  const navData = {
-    logo : nav.logo,
-    linkedin : nav.linkedin,
-    instagram : nav.instagram,
-    email : nav.email
-  }
+  // const navData = {
+  //   logo : nav.logo,
+  //   linkedin : nav.linkedin,
+  //   instagram : nav.instagram,
+  //   email : nav.email
+  // }
 
   const tituloServicos = paginaServicos.inicioServicos.titulo;
   const imagemServicos = paginaServicos.inicioServicos.imagem;
@@ -27,7 +27,7 @@ export default function Servicos({ paginaServicos, nav, foo, formularios, servic
 
   return (
     <>
-      <Navbar {...navData}/>
+      <Navbar {...nav}/>
       <Inicio titulo = {tituloServicos} imagem = {imagemServicos}/>
       <TextoServicos {...inicioServicos}/>
       <EscoposServicos servicos = {servicos}/>

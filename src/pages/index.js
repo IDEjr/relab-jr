@@ -12,12 +12,12 @@ import React from 'react'
 
 export default function Home({home, posts, nav, foo, servicos}) {
 
-  const navData = {
-    logo: nav.logo,
-    linkedin: nav.linkedin,
-    instagram: nav.instagram,
-    email: nav.email
-  }
+  // const navData = {
+  //   logo: nav.logo,
+  //   linkedin: nav.linkedin,
+  //   instagram: nav.instagram,
+  //   email: nav.email
+  // }
 
   const tituloHome = home.inicioHome.titulo;
   const imagemHome = home.inicioHome.imagem;
@@ -47,7 +47,7 @@ export default function Home({home, posts, nav, foo, servicos}) {
   return (
     <>
       <React.Fragment>
-      <Navbar {...navData}/>
+      <Navbar {...nav}/>
       </React.Fragment>
       <Inicio titulo = {tituloHome} imagem = {imagemHome}/>
       <TextoBarraHome {...textoBarraHome}/>

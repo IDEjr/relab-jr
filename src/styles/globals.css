@@ -48,6 +48,7 @@ strong {
 a {
 	color: #f2c12e;
 	text-decoration: none;
+  cursor: pointer;
 }
 
 
