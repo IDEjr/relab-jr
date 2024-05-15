@@ -1,10 +1,8 @@
 .link {
   text-decoration: none;
-  
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 
@@ -17,11 +15,12 @@
   position: relative;
   width: 95%;
   height: 100%;
-  border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 1);
   
-  aspect-ratio: 9/5;
+  aspect-ratio: 14/5;
   
+  border-radius: 2vh;
+  /* border-radius: 20% 20% 10% 10%; */
 }
 
 .box{
@@ -32,6 +31,9 @@
   align-items: center;
   flex-direction: row;
   background-color: #242424;
+  
+  border-radius: 2vh;
+  /* border-radius: 20% 20% 10% 10%; */
 }
 
 
@@ -41,8 +43,7 @@
   position: relative;
   display: block;
   overflow: hidden;
-  /* aspect-ratio: 1/1; */
-  border-radius: 4%;
+  border-radius: 2vh;
 }
 
 
@@ -54,10 +55,14 @@
   overflow: hidden;
   height: 100%;
   width: 100%;
-  padding-bottom: 2%;
+  /* padding-bottom: 2%;
   padding-top: 2%;
   padding-left: 4%;
-  padding-right: 4%;
+  padding-right: 4%; */
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 
@@ -66,13 +71,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin-bottom: 2%;
+  /* margin-bottom: 2%; */
 }
 
 
 .titulo {
-  display: flex;
-    font-size: 20px;
+  /* display: flex; */
+  /* font-size: 20px; */
   word-wrap: break-word;
   color: #F2C12E;
 
@@ -94,7 +99,7 @@
 
 
 .previa {
-    font-size: 18px;
+  /* font-size: 18px; */
   word-wrap: break-word;
   color: white;
 
@@ -110,21 +115,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 2%;
+  /* padding: 10px; */
+  /* margin-top: 2%; */
 }
 
 
 .data {
-    font-size: 15px;
+  /* font-size: 15px; */
   color: white;
-  padding: 5%;
+  /* padding: 5%; */
 }
 
 
 .autor {
-    font-size: 15px;
+  /* font-size: 15px; */
   color: white;
-  padding: 5%;
+  /* padding: 5%; */
   
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -132,7 +138,7 @@
 }
 
 
-@media only screen  and (min-width: 1921px)  {
+/* @media only screen  and (min-width: 1921px)  {
 
   .previa{
     font-size:16px ;
@@ -146,8 +152,8 @@
   .titulo{
     font-size: 20px;
   }
-}
-
+} */
+/* 
 @media only screen  and (min-width: 1441px) and (max-width: 1920px)  {
 
   .previa{
@@ -162,9 +168,9 @@
   .titulo{
     font-size: 20px;
   }
-}
+} */
 
-@media only screen  and (min-width: 1281px) and (max-width: 1440px)  {
+/* @media only screen  and (min-width: 1281px) and (max-width: 1440px)  {
   .previa{
     font-size:16px ;
   }
@@ -177,10 +183,10 @@
   .titulo{
     font-size: 20px;
   }
-}
+} */
 
 
-@media only screen  and (min-width: 1025px) and (max-width: 1280px)  {
+/* @media only screen  and (min-width: 1025px) and (max-width: 1280px)  {
 
   .previa{
     font-size:14px ;
@@ -194,10 +200,10 @@
   .titulo{
     font-size: 18px;
   }
-}
+} */
 
-@media only screen  and (min-width: 769px) and (max-width: 1024px)  {
-
+@media only screen  and (min-width: 800px) and (max-width: 1024px)  {
+/* 
   .card{
   width: 99%;
   }
@@ -213,11 +219,23 @@
   .titulo{
     font-size: 20px;
   }
+ */
+  .card{
+    aspect-ratio: 9/7;
+  }
+
+  .data {
+    display: none;
+  }
+
+  .embaixo {
+    justify-content: center;
+  }
 }
 
-@media only screen  and (min-width: 577px) and (max-width: 768px) and (orientation: portrait) {
+@media only screen  and (min-width: 577px) and (max-width: 799px) {
 
-  .previa{
+  /* .previa{
     font-size:12px ;
   }
   .autor{
@@ -228,30 +246,55 @@
   }
   .titulo{
     font-size: 13px;
+  } */
+
+  .card{
+    aspect-ratio: 9/7;
+  }
+
+  .data {
+    display: none;
+  }
+
+  .embaixo {
+    justify-content: center;
   }
 }
 
-@media only screen and (min-width: 300px) and (max-width: 576px)  and (orientation: portrait) {
-  .previa{
+@media only screen and (min-width: 300px) and (max-width: 576px) {
+  /* .previa{
     font-size:12px ;
+  }
+  .autor{
+    font-size: 12px;
+  }
+  .data{
+    font-size: 12px;
+  }
+  .titulo{
+    font-size: 13px;
+  } */
+
+  .card{
+    aspect-ratio: 9/7;
+  }
   
+  .data {
+    display: none;
   }
-  .autor{
-    font-size: 12px;
+
+  .embaixo {
+    justify-content: center;
   }
-  .data{
-    font-size: 12px;
+
+  .emCima {
+    color: rebeccapurple;
   }
-  .titulo{
-    font-size: 13px;
-  }
-  .card{
-  aspect-ratio: 9/7;
-  }
+
 }
 
-@media only screen  and (max-width: 299px)  and (orientation: portrait) {
-  .previa{
+@media only screen  and (max-width: 299px) {
+  /* .previa{
     font-size:12px ;
   }
   .autor{
@@ -262,8 +305,16 @@
   }
   .titulo{
     font-size: 13px;
-  }
-  .card{
+  } */
+  /* .card{
   aspect-ratio: 9/7;
+  } */
+  
+  .data {
+    display: none;
+  }
+
+  .embaixo {
+    justify-content: center;
   }
 }

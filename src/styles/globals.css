@@ -181,6 +181,13 @@ header nav {
 	}
 }
 
+@media only screen and (max-width: 1280px) {
+
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
 
 @media only screen and (max-width: 830px) {
 
