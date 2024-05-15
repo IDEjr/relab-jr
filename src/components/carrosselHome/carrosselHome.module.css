@@ -14,8 +14,8 @@
   /* margin-bottom: 30px; */
 }
 
-section .swiperContainer{
-  width: 80%;
+.swiperContainer{
+  /* width: 80%; */
   display: block;
 }
 
@@ -49,7 +49,7 @@ section .swiperContainer{
   .swiperIndi{
     padding: 50px;
   }
-  section .swiperContainer{
+  .swiperContainer{
     width: 40%;
   }
 } */
@@ -58,7 +58,7 @@ section .swiperContainer{
   .swiperIndi{
     padding: 50px;
   }
-  section .swiperContainer{
+  .swiperContainer{
     width: 40%;
   }
 } */
@@ -67,8 +67,8 @@ section .swiperContainer{
   .swiperIndi{
     padding: 0rem 3rem 3rem 3rem;
   }
-  section .swiperContainer{
-    width: 50%;
+  .carrossel {
+    width: 70%;
   }
 }
 
@@ -77,8 +77,8 @@ section .swiperContainer{
   .swiperIndi{
     padding: 0rem 3rem 3rem 3rem;
   }
-  section .swiperContainer{
-    width: 60%;
+  .carrossel{
+    width: 80%;
   }
 }
 
@@ -86,25 +86,28 @@ section .swiperContainer{
   .swiperIndi{
     padding: 50px;
   }
-  section .swiperContainer{
+  .swiperContainer{
     width: 60%;
   }
 } */
 
 /* @media only screen  and (min-width: 577px) and (max-width: 768px) and (orientation: portrait) {
-  section .swiperContainer{
+  .swiperContainer{
     width: 60%;
   }
 } */
 
 /* @media only screen and (min-width: 300px) and (max-width: 576px)  and (orientation: portrait) {
-  section .swiperContainer{
+  .swiperContainer{
     width: 80%;
   }
 } */
 
 @media only screen  and (max-width: 576px)  and (orientation: portrait) {
-  section .swiperContainer{
-    width: 80%;
+  .swiperIndi{
+    padding: 0rem 2rem 2rem 2rem;
+  }
+  .carrossel {
+    width: 100%;
   }
 }

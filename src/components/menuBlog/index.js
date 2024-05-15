@@ -99,9 +99,9 @@ export default function MenuBlog({ posts }) {
             </div>
           </ul>
         </div>
-        <div className={styles.GridPosts}>
-        <GridPosts posts={filteredPosts} />{" "}
-        {/* rederização dos posts filtrados */}
+        <div className={styles.gridPosts}>
+          <GridPosts posts={filteredPosts} />{" "}
+          {/* rederização dos posts filtrados */}
         </div>
       </div>
     </>
