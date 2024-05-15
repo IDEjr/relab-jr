@@ -1,5 +1,5 @@
 import GridPosts from "@/components/gridPosts";
-import Styles from "./menuBlog.module.css";
+import styles from "./menuBlog.module.css";
 import { useState } from "react";
 import { GoChevronDown, GoChevronUp } from "react-icons/go";
 
@@ -34,7 +34,7 @@ export default function MenuBlog({ posts }) {
       <>
         <li key={"Todos"} tabIndex={0}>
           <button
-            className={atual === "Todos" ? Styles.active : Styles.button}
+            className={atual === "Todos" ? styles.active : styles.button}
             onClick={() => filter("Todos", posts)}
             tabIndex={0}
           >
@@ -45,7 +45,7 @@ export default function MenuBlog({ posts }) {
           <li key={filteredgenders}>
             <button
               className={
-                atual === filteredgenders ? Styles.active : Styles.button
+                atual === filteredgenders ? styles.active : styles.button
               }
               onClick={() => {
                 filter(filteredgenders, posts);
@@ -61,29 +61,29 @@ export default function MenuBlog({ posts }) {
 
   return (
     <>
-      <div className={Styles.container}>
+      <div className={styles.container}>
         {/* div que engloba todo o componente */}
-        <div className={Styles.menuContainer}>
+        <div className={styles.menuContainer}>
           {/* div que engloba apenas a parte do menu */}
-          <ul className={Styles.lista}>
-            <div className={Styles.containerMobile}>
+          <ul className={styles.lista}>
+            <div className={styles.containerMobile}>
               {/* div mobile */}
-              <div className={Styles.tituloEBotaoMobile}>
-                <h3 className={Styles.tituloMobile}>
+              <div className={styles.tituloEBotaoMobile}>
+                <h3 className={styles.tituloMobile}>
                   {titulo}
                 </h3>
                 <div
                   onClick={() => setIsactive(!isActive)}
-                  className={Styles.optionButton}
+                  className={styles.optionButton}
                 >
-                {isActive ? <GoChevronUp className={Styles.icone} /> : <GoChevronDown className={Styles.icone} />} 
+                {isActive ? <GoChevronUp className={styles.icone} /> : <GoChevronDown className={styles.icone} />} 
                 </div>
               </div>
-              <div className={Styles.aaa}>
+              <div className={styles.aaa}>
               <div
                 className={`
-                ${Styles.dropdownInactive}
-                  ${isActive ? Styles.dropdownActive : null}
+                ${styles.dropdownInactive}
+                  ${isActive ? styles.dropdownActive : null}
                   `
                 }
               >
@@ -93,13 +93,13 @@ export default function MenuBlog({ posts }) {
               </div>
             </div>
 
-            <div className={Styles.containerDesktop}>
+            <div className={styles.containerDesktop}>
               {/* div desktop, renderizado acima de 800px */}
               <RenderOptions />
             </div>
           </ul>
         </div>
-        <div className={Styles.GridPosts}>
+        <div className={styles.GridPosts}>
         <GridPosts posts={filteredPosts} />{" "}
         {/* rederização dos posts filtrados */}
         </div>

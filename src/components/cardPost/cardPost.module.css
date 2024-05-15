@@ -138,7 +138,7 @@
 }
 
 
-/* @media only screen  and (min-width: 1921px)  {
+/* @media only screen and (min-width: 1921px)  {
 
   .previa{
     font-size:16px ;
@@ -154,7 +154,7 @@
   }
 } */
 /* 
-@media only screen  and (min-width: 1441px) and (max-width: 1920px)  {
+@media only screen and (min-width: 1441px) and (max-width: 1920px)  {
 
   .previa{
     font-size:16px ;
@@ -170,7 +170,7 @@
   }
 } */
 
-/* @media only screen  and (min-width: 1281px) and (max-width: 1440px)  {
+/* @media only screen and (min-width: 1281px) and (max-width: 1440px)  {
   .previa{
     font-size:16px ;
   }
@@ -186,7 +186,7 @@
 } */
 
 
-/* @media only screen  and (min-width: 1025px) and (max-width: 1280px)  {
+/* @media only screen and (min-width: 1025px) and (max-width: 1280px)  {
 
   .previa{
     font-size:14px ;
@@ -202,7 +202,7 @@
   }
 } */
 
-@media only screen  and (min-width: 800px) and (max-width: 1024px)  {
+@media only screen and (min-width: 800px) and (max-width: 1024px)  {
 /* 
   .card{
   width: 99%;
@@ -220,7 +220,7 @@
     font-size: 20px;
   }
  */
-  .card{
+  .card {
     aspect-ratio: 9/7;
   }
 
@@ -233,7 +233,7 @@
   }
 }
 
-@media only screen  and (min-width: 577px) and (max-width: 799px) {
+@media only screen and (min-width: 577px) and (max-width: 799px) {
 
   /* .previa{
     font-size:12px ;
@@ -248,7 +248,7 @@
     font-size: 13px;
   } */
 
-  .card{
+  .card {
     aspect-ratio: 9/7;
   }
 
@@ -275,7 +275,7 @@
     font-size: 13px;
   } */
 
-  .card{
+  .card {
     aspect-ratio: 9/7;
   }
   
@@ -290,10 +290,9 @@
   .emCima {
     color: rebeccapurple;
   }
-
 }
 
-@media only screen  and (max-width: 299px) {
+@media only screen and (max-width: 299px) {
   /* .previa{
     font-size:12px ;
   }
