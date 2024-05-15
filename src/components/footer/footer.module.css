@@ -26,13 +26,13 @@
   height: 100%;
 }
 
-.linearGradient {
+/* .linearGradient {
   background-color: #262626;
   width: 100%;
   height: 100%;
   position: absolute;
   z-index: 0;
-}
+} */
 
 
 .topPart {
