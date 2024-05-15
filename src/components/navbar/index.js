@@ -1,9 +1,9 @@
-import styles from './navbar.module.css';
-import { useRef } from "react";
+import styles from './navbar.module.css'
 import Image from 'next/image'
-import { FaBars, FaTimes, FaInstagram, FaLinkedin,FaEnvelope} from "react-icons/fa";
-import classnames from 'classnames';
 import Link from 'next/link'
+import { useRef } from "react"
+import { FaBars, FaTimes, FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa"
+import classnames from 'classnames'
 
 export default function navbar({ logo, linkedin, instagram, email }) {
   const navRef = useRef();
@@ -46,12 +46,11 @@ export default function navbar({ logo, linkedin, instagram, email }) {
               />
             </Link> 
           </button>
-          {/*<a href="/">HOME</a>*/}
-          <div className={styles.anchorStuff}><a href="/quemSomos">QUEM SOMOS</a></div>
-          <div className={styles.anchorStuff}><a href="/servicos">SERVIÇOS</a></div>
-          <div className={styles.anchorStuff}><a href="/blog">BLOG</a></div>
-
-
+          
+          <h3 className={styles.anchorStuff}><a href="/quemSomos">QUEM SOMOS</a></h3>
+          <h3 className={styles.anchorStuff}><a href="/servicos">SERVIÇOS</a></h3>
+          <h3 className={styles.anchorStuff}><a href="/blog">BLOG</a></h3>
+          
           <button
             className={
               classnames(

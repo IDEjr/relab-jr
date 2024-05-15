@@ -22,18 +22,18 @@ header .logo{
 	margin-left: auto;
 }
 
-.navbar .anchorStuff a {
+.anchorStuff a {
 	margin: 0 1rem;
 	color:  #D9D9D9;
 	text-decoration: none;
 	font-size: 1.2rem;
-	transition: margin-right 0.3s ease;
+	/* transition: margin-right 0.3s ease; */
+	transition: 0.4s ease;
 }
 
-.navbar .anchorStuff a:hover {
-	color: white ;
-	margin-right: 2rem;
-	font-weight: 400;
+.anchorStuff a:hover {
+	color: white;
+  font-size: 1.3rem;
 }
 
 .cabecalho .navBtn {
@@ -131,9 +131,7 @@ header .logo{
 		display: none;
 		color: white;
 	}
-
 }
-
 
 
 /* removendo "style" do js */
