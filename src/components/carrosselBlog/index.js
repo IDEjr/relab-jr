@@ -59,6 +59,7 @@ export default function CarrosselBlog({ posts, titulo }) {
             disableOnInteraction: false
           }}
           pagination={{
+            enabled: true,
             clickable: true,
             dynamicBullets: true
           }} //permite a troca de páginas pelo pagination

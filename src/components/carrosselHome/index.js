@@ -15,7 +15,7 @@ import "swiper/css/effect-flip"
 
 /*Pegue os titulos que estão no json da home, e passar para aqui, e renderizar somente os posts que tem mesmo titulo dos 
 selecionados.*/
-export default function CarrosselHome({posts, titulo}) {
+export default function CarrosselHome({ posts, titulo }) {
 //So passar os props como o objeto e eles sao desmembrados dentro do componente, esse é o jeito certo de usar.
 
 //Pega os ultimos 4 posts 
@@ -55,22 +55,22 @@ export default function CarrosselHome({posts, titulo}) {
               dynamicBullets: true 
             }}
             grabCursor={true}
-            navigation={{  //configurações do navi
-              enabled: false
-            }}
+            // navigation={{  //configurações do navi
+            //   enabled: false
+            // }}
             // modules = {[Autoplay]}
-            breakpoints={{
-              // 1281: {  //acima de 1281px, ativa o navigation (as setinhas) e o pagination (as bolinhas)
-              //   navigation: {
-              //     enabled: true  
-              //   }
-              // },
-              // 767: {  //acima de 1281px, ativa o navigation (as setinhas) e o pagination (as bolinhas)
-              //   pagination: {
-              //     enabled: true
-              //   }
-              // }
-            }}
+            // breakpoints={{
+            //   1281: {  //acima de 1281px, ativa o navigation (as setinhas) e o pagination (as bolinhas)
+            //     navigation: {
+            //       enabled: true  
+            //     }
+            //   },
+            //   767: {  //acima de 1281px, ativa o navigation (as setinhas) e o pagination (as bolinhas)
+            //     pagination: {
+            //       enabled: true
+            //     }
+            //   }
+            // }}
             className={styles.swiperContainer}
           >
             {filteredPosts.map((post)=> (

@@ -39,9 +39,9 @@ export default function CarrosselQuemSomos({ imagens }) {
             dynamicBullets: true
           }}
           grabCursor={true}  //ativando o grabCursor com configurações default
-          navigation={{  //configurações do navi
-            enabled: false
-          }}
+          // navigation={{  //configurações do navi
+          //   enabled: false
+          // }}
 
           breakpoints={{
             800: {  //acima de 800px, aumenta os slides por visualização para dois, e ativa o navigation (as setinhas)
