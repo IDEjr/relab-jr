@@ -1,13 +1,12 @@
-import { useForm } from "react-hook-form";
-import { isEmail, isMobilePhone } from "validator";
-import { sendContactForm } from "@/lib/api";
 import styles from "./formularioQuemSomos.module.css"
-import { FaRegComment, FaRegEnvelope, FaHome } from "react-icons/fa";
 import Image from 'next/image'
+import { useForm } from "react-hook-form"
+import { isEmail, isMobilePhone } from "validator"
+import { sendContactForm } from "@/lib/api"
+import { FaRegComment, FaRegEnvelope, FaHome } from "react-icons/fa"
 
 
-
-function formatPhoneNumber(value) {
+function formatPhoneNumber( value ) {
   // Remove todos os caracteres que não são números
   const numericValue = value.replace(/\D/g, '');
   
@@ -27,7 +26,7 @@ function formatPhoneNumber(value) {
   return formattedValue;
 }
 
-function allowToEnterPhoneNumber(event) {
+function allowToEnterPhoneNumber( event ) {
   const charCode = event.keyCode || event.which;
 
   // Permite backspace
@@ -52,7 +51,7 @@ function allowToEnterPhoneNumber(event) {
 
 
 
-function formatSemester(value) {
+function formatSemester( value ) {
   // Remove todos os caracteres que não são números
   const numericValue = value.replace(/\D/g, '');
 
@@ -68,7 +67,7 @@ function formatSemester(value) {
   return formattedValue;
 }
 
-function allowToEnterSemester(event) {
+function allowToEnterSemester( event ) {
   const charCode = event.keyCode || event.which;
 
   // Permite backspace
@@ -92,7 +91,7 @@ function allowToEnterSemester(event) {
 }
 
 
-export default function formularioQuemSomos(forms) {
+export default function formularioQuemSomos( forms ) {
 
   const {
     register,
@@ -166,22 +165,6 @@ export default function formularioQuemSomos(forms) {
               </div>
               <div className={styles.smallField}>
                 <input
-                  className={errors?.curso && styles.input_error}
-                  id="curso"
-                  type="text"
-                  placeholder="Curso*"
-                  {...register("curso", {
-                    required: true
-                  })}
-                  />
-                  {errors?.curso?.type === "required" && (
-                    <p className={styles.error_message}>Campo obrigatório</p>
-                  )}
-              </div>
-            </div>
-            <div className={styles.doubleInput}>
-              <div className={styles.smallField}>
-                <input
                   className={errors?.celular && styles.input_error}
                   id="celular"
                   maxLength="15"
@@ -199,6 +182,22 @@ export default function formularioQuemSomos(forms) {
                 {errors?.celular?.type === "validate" && (
                   <p className={styles.error_message}>Número inválido.</p>
                 )}
+              </div>
+            </div>
+            <div className={styles.doubleInput}>
+              <div className={styles.smallField}>
+                <input
+                  className={errors?.curso && styles.input_error}
+                  id="curso"
+                  type="text"
+                  placeholder="Curso*"
+                  {...register("curso", {
+                    required: true
+                  })}
+                  />
+                  {errors?.curso?.type === "required" && (
+                    <p className={styles.error_message}>Campo obrigatório</p>
+                  )}
               </div>
               <div className={styles.smallField}>
                 <input
@@ -237,36 +236,39 @@ export default function formularioQuemSomos(forms) {
             </div>
             <div className={styles.largeField}>
               <textarea
-                className={errors?.mensagem && styles.input_error}
+                className={styles.mensagem+" "+(errors?.mensagem && styles.input_error)}
                 id="mensagem"
                 type="text"
                 placeholder="Sua mensagem"
                 {...register("mensagem", {
-                  required: false
+                  required: true
                 })}
               />
+              {errors?.mensagem?.type === "required" && (
+                <p className={styles.error_message}>Campo obrigatório</p>
+              )}
             </div>
             <div className={styles.mediumField}>
               <button onClick={() => handleSubmit(onSubmit)()}>Enviar</button>
             </div>
           </div>
           <div className={styles.contactContainer}>
-            <p className={styles.contactRows}>
-              <FaRegComment  size={30} className={styles.icons}/>
-              {forms.celular}
-            </p>
-            <p className={styles.contactRows}>
-              <FaRegEnvelope size={30} className={styles.icons}/>
-              {forms.email}
-            </p>
-            <p className={styles.contactRows}>
-              <FaHome size={30} className={styles.icons}/>
-              {forms.endereco1} 
-            </p>
-            <p className={styles.contactRows}>
-              <FaHome size={30} className={styles.icons}/>
-              {forms.endereco2} 
-            </p>
+            <div className={styles.contactRows}>
+              <div><FaHome size={30} className={styles.icons}/></div>
+              <div>{forms.celular}</div>
+            </div>
+            <div className={styles.contactRows}>
+              <div><FaRegEnvelope size={30} className={styles.icons}/></div>
+              <div>{forms.email}</div>
+            </div>
+            <div className={styles.contactRows}>
+              <div><FaHome size={30} className={styles.icons}/></div>
+              <div>{forms.endereco1}</div>
+            </div>
+            <div className={styles.contactRows}>
+              <div><FaHome size={30} className={styles.icons}/></div>
+              <div>{forms.endereco2}</div>
+            </div>
           </div>
         </div>
       </div>

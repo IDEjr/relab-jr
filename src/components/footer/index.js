@@ -57,7 +57,7 @@ export default function Footer(footerData) {
                 // width={90}
                 // height={35}
                 fill
-                objectFit='contain'
+                style={{objectFit: 'contain'}}
                 className={styles.watermark}
                 quality={100}
               />
@@ -68,7 +68,7 @@ export default function Footer(footerData) {
                 // width={165}
                 // height={50}
                 fill
-                objectFit='contain'
+                style={{objectFit: 'contain'}}
                 className={styles.watermark}
                 quality={100}
               />
@@ -79,7 +79,7 @@ export default function Footer(footerData) {
                 // width={150}
                 // height={40}
                 fill
-                objectFit='contain'
+                style={{objectFit: 'contain'}}
                 className={styles.watermark}
                 quality={100}
               />
