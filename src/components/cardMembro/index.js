@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from './cardMembro.module.css'
 
-export default function cardMembros({ nome, posicao, imagem, linkedin }) {
+export default function CardMembros({ nome, posicao, imagem, linkedin }) {
   return (
     <>
       <Link href={linkedin || "/quemSomos"} target="_blank" className={styles.link}>

@@ -2,7 +2,7 @@ import styles from './textoBarraQuemSomos.module.css'
 import Image from 'next/image'
 
 
-export default function textoBarraQuemSomos({ texto1, texto2, logo }) {
+export default function TextoBarraQuemSomos({ texto1, texto2, logo }) {
   return (
     <>  
       <div className={styles.container}> {/* inicio da div container */}

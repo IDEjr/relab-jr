@@ -2,7 +2,7 @@ import Image from 'next/image'
 import styles from './gridMembros.module.css'
 import CardMembros from '@/components/cardMembro';
 
-export default function gridMembros({ titulo, logo, membros }) {
+export default function GridMembros({ titulo, logo, membros }) {
   //const cargos = ['Presidência','Vice-Presidência','Diretoria','Assessoria','Gerência','Consultoria']; 
   let Ps = [];
   let VPs = [];

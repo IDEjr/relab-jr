@@ -50,7 +50,7 @@ function allowToEnterPhoneNumber( event ) {
 }
 
 
-export default function formularioServicos( forms ) {
+export default function FormularioServicos( forms ) {
 
   const {
     register,
@@ -80,6 +80,7 @@ export default function formularioServicos( forms ) {
             src={forms.logo}
             width={150}
             height={150}
+            alt="Logo"
           />
         </div>
         <h2 className={styles.title}>

@@ -1,7 +1,7 @@
 import styles from './textoServicos.module.css'
 
 
-export default function textoServicos({titulo, texto}) {
+export default function TextoServicos({ titulo, texto }) {
   return(
     <>
       <div>

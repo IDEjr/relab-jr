@@ -8,7 +8,7 @@ const handleMove = () => {
   window.scrollTo({ top: 0, behavior: "smooth" }); // here it goes
 };
 
-export default function Footer(footerData) {
+export default function Footer( footerData ) {
   return (
     <>
       <div className={styles.footer}>
@@ -30,6 +30,7 @@ export default function Footer(footerData) {
               width={150}
               height={150}
               className={styles.relabLogo}
+              alt="Logo"
             />
           </a>        
           <div className={styles.contactSocials}>
@@ -60,6 +61,7 @@ export default function Footer(footerData) {
                 style={{objectFit: 'contain'}}
                 className={styles.watermark}
                 quality={100}
+                alt="Unisinos LAB"
               />
             </a>            
             <a className={styles.watermarkCover} href='https://jesuitasbrasil.org.br' target='_blank'>
@@ -71,6 +73,7 @@ export default function Footer(footerData) {
                 style={{objectFit: 'contain'}}
                 className={styles.watermark}
                 quality={100}
+                alt="Jesuítas Brasil"
               />
             </a>
             <a className={styles.watermarkCover} href='https://www.unisinos.br/' target='_blank'>
@@ -82,6 +85,7 @@ export default function Footer(footerData) {
                 style={{objectFit: 'contain'}}
                 className={styles.watermark}
                 quality={100}
+                alt="Unisinos"
               />
             </a>
           </div>

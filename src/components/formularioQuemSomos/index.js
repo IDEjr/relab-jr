@@ -91,7 +91,7 @@ function allowToEnterSemester( event ) {
 }
 
 
-export default function formularioQuemSomos( forms ) {
+export default function FormularioQuemSomos( forms ) {
 
   const {
     register,
@@ -123,6 +123,7 @@ export default function formularioQuemSomos( forms ) {
             src={forms.logo}
             width={150}
             height={150}
+            alt="Logo"
           />
         </div>
         <h2 className={styles.title}>

@@ -1,7 +1,7 @@
 import styles from './valores.module.css'
 
 
-export default function valores({...escritos}) {
+export default function Valores({ ...escritos }) {
   return(
     <>
       <section className={styles.valores}>

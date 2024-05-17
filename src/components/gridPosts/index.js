@@ -1,7 +1,7 @@
 import CardPost from "@/components/cardPost";
 import styles from './gridPosts.module.css'
 
-export default function gridPosts({posts}) {
+export default function GridPosts({ posts }) {
   
     return (
       <>

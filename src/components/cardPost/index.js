@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from './cardPost.module.css'
 
-export default function cardPosts({ fileName, imagem, titulo, data, previa, autor}) {
+export default function CardPost({ fileName, imagem, titulo, data, previa, autor}) {
 
   // formata data
   var dataForm;

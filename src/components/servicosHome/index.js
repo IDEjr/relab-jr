@@ -6,7 +6,7 @@ function cadaServico(frame) {
   return(
     <div className={styles.individualBlock}>
       <h3 className={styles.topText}>
-        {frame.texto}
+        {frame.titulo}
       </h3>
       <div className={styles.frames}>
         <div className={styles.overlayGrid}>
@@ -24,6 +24,7 @@ function cadaServico(frame) {
             width={2000}
             height={2000}
             quality={100}
+            alt="Logo"
           />
         </div>
       </div>
@@ -38,13 +39,13 @@ function servicesHandler(){
     <div></div>
   )
 }
-export default function servicosHome({servicosHome, servicos}) {
+export default function ServicosHome({servicosHome, servicos}) {
 
   var frames = new Array();
   for(var i = 0; i < servicos.length; i++){
     const frame = {
       imagem : servicos[i].imagem,
-      texto :  servicos[i].servico
+      titulo :  servicos[i].servico
     }
     frames[i] = frame;
   }

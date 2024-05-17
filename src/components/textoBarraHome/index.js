@@ -1,6 +1,6 @@
 import styles from './textoBarraHome.module.css'
 
-export default function TextoBarraHome({texto}) {
+export default function TextoBarraHome({ texto }) {
   return(
     <>
       <div className={styles.container}> 

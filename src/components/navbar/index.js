@@ -5,7 +5,7 @@ import { useRef } from "react"
 import { FaBars, FaTimes, FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa"
 import classnames from 'classnames'
 
-export default function navbar({ logo, linkedin, instagram, email }) {
+export default function Navbar({ logo, linkedin, instagram, email }) {
   const navRef = useRef();
   const logoRef = useRef();
 	const showNavbar = () => {
@@ -47,9 +47,9 @@ export default function navbar({ logo, linkedin, instagram, email }) {
             </Link> 
           </button>
           
-          <h3 className={styles.anchorStuff}><a href="/quemSomos">QUEM SOMOS</a></h3>
-          <h3 className={styles.anchorStuff}><a href="/servicos">SERVIÇOS</a></h3>
-          <h3 className={styles.anchorStuff}><a href="/blog">BLOG</a></h3>
+          <h3 className={styles.anchorStuff}><Link href="/quemSomos">QUEM SOMOS</Link></h3>
+          <h3 className={styles.anchorStuff}><Link href="/servicos">SERVIÇOS</Link></h3>
+          <h3 className={styles.anchorStuff}><Link href="/blog">BLOG</Link></h3>
           
           <button
             className={

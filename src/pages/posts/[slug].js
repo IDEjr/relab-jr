@@ -43,6 +43,7 @@ export default function Posts({ post, nav, foo, blog }) {
             fill
             className={styles.topImg}
             style={{objectFit: 'cover', background: 'black'}}
+            alt="Imagem Capa"
           />
           <div className="newStyle"></div>
           <div className={styles.postBlock}>

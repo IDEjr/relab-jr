@@ -11,6 +11,7 @@ function servicoL( servico, imagem, descricao ) {
             src={imagem}
             style={{objectFit: 'cover'}}
             fill
+            alt={servico}
           />
         </div>
         <div className={styles.textContainer}>
@@ -41,6 +42,7 @@ function servicoR( servico, imagem, descricao ) {
             src={imagem}
             style={{objectFit: 'cover'}}
             fill
+            alt={servico}
           />
         </div>
       </div>
@@ -49,7 +51,7 @@ function servicoR( servico, imagem, descricao ) {
 }
 
 
-export default function escoposServicos( {servicos} ) {
+export default function EscoposServicos( {servicos} ) {
 
   return(
     <>

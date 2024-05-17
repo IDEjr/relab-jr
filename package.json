@@ -14,7 +14,7 @@
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
     "jquery": "^3.7.1",
-    "next": "^13.5.5",
+    "next": "^14.2.3",
     "next-images": "^1.8.5",
     "nodemailer": "^6.9.7",
     "react": "18.2.0",
@@ -30,5 +30,9 @@
     "fs": false,
     "path": false,
     "os": false
+  },
+  "devDependencies": {
+    "eslint": "8.57.0",
+    "eslint-config-next": "14.2.3"
   }
 }
