@@ -267,7 +267,7 @@ collections:
     editor:
       preview: false
     fields:
-      - {label: "Serviço", name: "servico", widget: "string", pattern: ['^.{1,50}$', "Máximo 50 carateres."]}
+      - {label: "Serviço", name: "nome", widget: "string", pattern: ['^.{1,50}$', "Máximo 50 carateres."]}
       - {label: "Imagem", name: "imagem", widget: "image"}
       - {label: "Descrição", name: "descricao", widget: "text"}
 

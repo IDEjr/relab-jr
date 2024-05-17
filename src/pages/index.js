@@ -52,7 +52,7 @@ export default function Home({home, posts, nav, foo, servicos}) {
       <Inicio titulo = {tituloHome} imagem = {imagemHome}/>
       <TextoBarraHome {...textoBarraHome}/>
       <ImagemComBotao {...imgButResultados} />
-      <ServicosHome servicosHome = {home.servicosHome} servicos = {servicos}/>
+      <ServicosHome titulo = {home.servicosHome.tituloServicos} servicos = {servicos}/>
       <ImagemComBotao {...imgButMembros} />
       <CarrosselHome posts = {posts} titulo = {tituloCarrossel} />
       <Footer {...foo}/>

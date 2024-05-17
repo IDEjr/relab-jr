@@ -51,20 +51,20 @@ function servicoR( servico, imagem, descricao ) {
 }
 
 
-export default function EscoposServicos( {servicos} ) {
+export default function EscoposServicos({ servicos }) {
 
   return(
     <>
       <ul className={styles.mainContainer}>
         {servicos && servicos.map((servico, i) => (
           <div key={i}>
-          {i % 2 === 0 ? (
-            servicoL(servico.servico, servico.imagem, servico.descricao)
-            ) : (
-            servicoR(servico.servico, servico.imagem, servico.descricao)
-          )}
-        </div>
-        ))} 
+            {i % 2 === 0 ? (
+              servicoL(servico.servico, servico.imagem, servico.descricao)
+              ) : (
+              servicoR(servico.servico, servico.imagem, servico.descricao)
+            )}
+          </div>
+        ))}
       </ul>
     </>
   )
