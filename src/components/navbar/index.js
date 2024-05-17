@@ -8,14 +8,16 @@ import classnames from 'classnames'
 export default function Navbar({ logo, linkedin, instagram, email }) {
   const navRef = useRef();
   const logoRef = useRef();
+
 	const showNavbar = () => {
-		navRef.current.classList.toggle(
-			"responsiveNav"
-		);
-  logoRef.current.classList.toggle(
-			"responsiveLogo"
-		);
+		navRef.current.classList.toggle( "responsiveNav" );
+    logoRef.current.classList.toggle(	"responsiveLogo" );
 	};
+
+  const closeNavbar = () => {
+    navRef.current.classList.remove("responsiveNav");
+    logoRef.current.classList.remove("responsiveLogo");
+  };
   // const style = { color: "#F2C12E !important", fontSize: "1.5em", marginTop: "150px" }
   // removing for simplicity, dont know why its here
   
@@ -47,9 +49,9 @@ export default function Navbar({ logo, linkedin, instagram, email }) {
             </Link> 
           </button>
           
-          <h3 className={styles.anchorStuff}><Link href="/quemSomos">QUEM SOMOS</Link></h3>
-          <h3 className={styles.anchorStuff}><Link href="/servicos">SERVIÇOS</Link></h3>
-          <h3 className={styles.anchorStuff}><Link href="/blog">BLOG</Link></h3>
+          <h3 className={styles.anchorStuff} onClick={closeNavbar}><Link href="/quemSomos">QUEM SOMOS</Link></h3>
+          <h3 className={styles.anchorStuff} onClick={closeNavbar}><Link href="/servicos">SERVIÇOS</Link></h3>
+          <h3 className={styles.anchorStuff} onClick={closeNavbar}><Link href="/blog">BLOG</Link></h3>
           
           <button
             className={
