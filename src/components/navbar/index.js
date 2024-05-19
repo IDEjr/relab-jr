@@ -71,15 +71,6 @@ export default function Navbar({ logo, linkedin, instagram, email }) {
                 )
               }
               onClick={showNavbar}>
-              <Link href={instagram} target="_blank"><FaInstagram className={styles.socialNetworks} /></Link>
-            </button>
-            <button
-              className={
-                classnames(
-                  styles.navBtn
-                )
-              }
-              onClick={showNavbar}>
               <Link href={linkedin} target="_blank"><FaLinkedin className={styles.socialNetworks}/></Link>
             </button>
             <button
@@ -90,6 +81,15 @@ export default function Navbar({ logo, linkedin, instagram, email }) {
               }
               onClick={showNavbar}>
               <Link href={`mailto:${email}`} target="_blank"><FaEnvelope className={styles.socialNetworks}/></Link>
+            </button>
+            <button
+              className={
+                classnames(
+                  styles.navBtn
+                )
+              }
+              onClick={showNavbar}>
+              <Link href={instagram} target="_blank"><FaInstagram className={styles.socialNetworks} /></Link>
             </button>
           </div>
         </nav>
