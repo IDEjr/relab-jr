@@ -311,11 +311,11 @@ collections:
 
 
   - label: "Contato"
-        name: "contato"
-        file: "content/contato/contato.json"
-        extension: "json"
-        format: "json"
-        fields:
-          - {label: "Linkedin", name: "linkedin", widget: "string"}
-          - {label: "Email", name: "email", widget: "string"}
-          - {label: "Instagram", name: "instagram", widget: "string"}
+    name: "contato"
+    file: "content/contato/contato.json"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Linkedin", name: "linkedin", widget: "string"}
+      - {label: "Email", name: "email", widget: "string"}
+      - {label: "Instagram", name: "instagram", widget: "string"}
