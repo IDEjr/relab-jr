@@ -4,7 +4,7 @@ import styles from './valores.module.css'
 export default function Valores({ ...escritos }) {
   return(
     <>
-      <section className={styles.valores}>
+      <div className={styles.containerValores}>
         <div className={styles.middle}> 
           <h2 className={styles.titleGrande}>{escritos.titulo}</h2>
         </div>
@@ -24,7 +24,7 @@ export default function Valores({ ...escritos }) {
           <h3 className={styles.titleValores}>{escritos.titulo4}</h3>
           <p className={styles.textValores}>{escritos.texto4}</p>
         </div>
-      </section>
+      </div>
     </>
   )
 }
