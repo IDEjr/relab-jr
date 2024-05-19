@@ -38,7 +38,7 @@ export default function MenuBlog({ posts }) {
             onClick={() => filter("Todos", posts)}
             tabIndex={0}
           >
-            Todos
+            <p className={styles.buttonText}>Todos</p>
           </button>
         </li>
         {filteredgenders.map((filteredgenders) => (
@@ -51,7 +51,7 @@ export default function MenuBlog({ posts }) {
                 filter(filteredgenders, posts);
               }}
             >
-              {filteredgenders}
+              <p className={styles.buttonText} >{filteredgenders}</p>
             </button>
           </li>
         ))}
