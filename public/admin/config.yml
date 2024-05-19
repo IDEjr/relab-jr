@@ -58,18 +58,6 @@ collections:
             widget: "object"
             fields:
               - {label: "Título Serviços", name: "tituloServicos", widget: "string", pattern: ['^.{1,20}$', "Máximo 20 carateres."]}
-              - {label: "Serviço 1", name: "servico1", widget: "string", pattern: ['^.{1,35}$', "Máximo 35 carateres."]}
-              - {label: "Imagem 1", name: "imagem1", widget: "image"}
-              - {label: "Serviço 2", name: "servico2", widget: "string", pattern: ['^.{1,35}$', "Máximo 35 carateres."]}
-              - {label: "Imagem 2", name: "imagem2", widget: "image"}
-              - {label: "Serviço 3", name: "servico3", widget: "string", pattern: ['^.{1,35}$', "Máximo 35 carateres."]}
-              - {label: "Imagem 3", name: "imagem3", widget: "image"}
-              - {label: "Serviço 4", name: "servico4", widget: "string", pattern: ['^.{1,35}$', "Máximo 35 carateres."]}
-              - {label: "Imagem 4", name: "imagem4", widget: "image"}
-              - {label: "Serviço 5", name: "servico5", widget: "string", pattern: ['^.{1,35}$', "Máximo 35 carateres."]}
-              - {label: "Imagem 5", name: "imagem5", widget: "image"}
-              - {label: "Serviço 6", name: "servico6", widget: "string", pattern: ['^.{1,35}$', "Máximo 35 carateres."]}
-              - {label: "Imagem 6", name: "imagem6", widget: "image"}
 
 
           - label: "Imagem Com Botão Membros"
@@ -185,15 +173,6 @@ collections:
               - {label: "Título", name: "titulo", widget: "string"}
               - {label: "Texto Botão Post", name: "textoBotao", widget: "string"}
 
-          
-          - label: "Ícones Posts"
-            name: "icones"
-            widget: "object"
-            fields:
-              - {label: "Imagem", name: "imagem1", widget: "image"}
-              - {label: "Imagem", name: "imagem2", widget: "image"}
-
-
 
 # GRUPOS--------------------------------------------------------------------------------------------------------
 
@@ -267,9 +246,9 @@ collections:
     editor:
       preview: false
     fields:
-      - {label: "Serviço", name: "nome", widget: "string", pattern: ['^.{1,50}$', "Máximo 50 carateres."]}
+      - {label: "Serviço", name: "nome", widget: "string", pattern: ['^.{1,35}$', "Máximo 35 carateres."]}
       - {label: "Imagem", name: "imagem", widget: "image"}
-      - {label: "Descrição", name: "descricao", widget: "text"}
+      - {label: "Descrição", name: "descricao", widget: "text", pattern: ['^.{1,500}$', "Máximo 500 carateres."]}
 
 
   - label: "Navbar e Footer"
