@@ -5,7 +5,6 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto auto;
   gap: 3rem;
-  width: 100%; /* Defina a largura desejada para o contêiner */
   justify-content: center;/* Centraliza horizontalmente */
   align-items: center; /* Centraliza verticalmente */
   text-align: center; /* Alinha o texto horizontalmente no centro */
