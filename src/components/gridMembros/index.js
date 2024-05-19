@@ -34,7 +34,7 @@ export default function GridMembros({ titulo, logo, membros }) {
   return (
     <>
       <div className={styles.chamariz}>
-        <h2 className={styles.tituloMembros}> {titulo}</h2>
+        <h2 className={styles.tituloMembros}>{titulo}</h2>
         <Image          
           className={styles.logoGrid}
           src={logo}

@@ -5,7 +5,7 @@ import { useRef } from "react"
 import { FaBars, FaTimes, FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa"
 import classnames from 'classnames'
 
-export default function Navbar({ logo, linkedin, instagram, email }) {
+export default function Navbar({ contato, nav }) {
   const navRef = useRef();
   const logoRef = useRef();
 
@@ -26,7 +26,7 @@ export default function Navbar({ logo, linkedin, instagram, email }) {
       <header className={styles.cabecalho}>
         <Link href="/" className={styles.logo} >
           <Image
-            src={logo}
+            src={nav.logo}
             width={95}
             height={95}
             alt="Logo"
@@ -41,7 +41,7 @@ export default function Navbar({ logo, linkedin, instagram, email }) {
             } ref={logoRef}>
             <Link href="/" className={styles.droplogo}>
               <Image
-                src={logo}
+                src={nav.logo}
                 width={95}
                 height={95}
                 alt="Logo"
@@ -71,7 +71,7 @@ export default function Navbar({ logo, linkedin, instagram, email }) {
                 )
               }
               onClick={showNavbar}>
-              <Link href={instagram} target="_blank"><FaInstagram className={styles.socialNetworks} /></Link>
+              <a href={contato.linkedin} target="_blank"><FaLinkedin className={styles.socialNetworks}/></a>
             </button>
             <button
               className={
@@ -80,7 +80,7 @@ export default function Navbar({ logo, linkedin, instagram, email }) {
                 )
               }
               onClick={showNavbar}>
-              <Link href={linkedin} target="_blank"><FaLinkedin className={styles.socialNetworks}/></Link>
+              <a href={`mailto:${contato.email}`} target="_blank"><FaEnvelope className={styles.socialNetworks}/></a>
             </button>
             <button
               className={
@@ -89,7 +89,7 @@ export default function Navbar({ logo, linkedin, instagram, email }) {
                 )
               }
               onClick={showNavbar}>
-              <Link href={`mailto:${email}`} target="_blank"><FaEnvelope className={styles.socialNetworks}/></Link>
+              <a href={contato.instagram} target="_blank"><FaInstagram className={styles.socialNetworks} /></a>
             </button>
           </div>
         </nav>

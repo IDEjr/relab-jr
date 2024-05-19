@@ -6,6 +6,15 @@ import { sendContactForm } from "@/lib/api"
 import { FaRegComment, FaRegEnvelope, FaHome } from "react-icons/fa"
 
 
+function createWhatsAppLink( celular ) {
+  // Remove caracteres que não são dígitos
+  const celularPuro = celular.replace(/[^\d]/g, '');
+
+  console.log(celularPuro)
+
+  return `https://wa.me/${celularPuro}`;
+}
+
 function formatPhoneNumber( value ) {
   // Remove todos os caracteres que não são números
   const numericValue = value.replace(/\D/g, '');
@@ -50,7 +59,7 @@ function allowToEnterPhoneNumber( event ) {
 }
 
 
-export default function FormularioServicos( forms ) {
+export default function FormularioServicos({ contato, forms }) {
 
   const {
     register,
@@ -71,6 +80,8 @@ export default function FormularioServicos( forms ) {
     } catch (error) {
     }
   }
+
+  const whatsappLink = createWhatsAppLink(contato.celular);
 
   return(
     <>
@@ -167,14 +178,14 @@ export default function FormularioServicos( forms ) {
             </div>
           </div>
           <div className={styles.contactContainer}>
-            <div className={styles.contactRows}>
-              <div><FaHome size={30} className={styles.icons}/></div>
-              <div>{forms.celular}</div>
-            </div>
-            <div className={styles.contactRows}>
+            <a href={whatsappLink}  target="_blank" className={styles.contactRows}>
+              <div><FaRegComment size={30} className={styles.icons}/></div>
+              <div>{contato.celular}</div>
+            </a>
+            <a href={`mailto:${contato.email}`} className={styles.contactRows}>
               <div><FaRegEnvelope size={30} className={styles.icons}/></div>
-              <div>{forms.email}</div>
-            </div>
+              <div>{contato.email}</div>
+            </a>
             <div className={styles.contactRows}>
               <div><FaHome size={30} className={styles.icons}/></div>
               <div>{forms.endereco1}</div>
