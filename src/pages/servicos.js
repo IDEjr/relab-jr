@@ -8,7 +8,7 @@ import { handleJSONfile } from '@/utils/functions/jsonHandler'
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 
 
-export default function Servicos({ paginaServicos, nav, foo, formularios, servicos }) {
+export default function Servicos({ paginaServicos, nav, foo, formularios, servicos, contato }) {
 
   // const navData = {
   //   logo : nav.logo,
@@ -27,12 +27,12 @@ export default function Servicos({ paginaServicos, nav, foo, formularios, servic
 
   return (
     <>
-      <Navbar {...nav}/>
+      <Navbar contato = {contato} nav = {nav}/>
       <Inicio titulo = {tituloServicos} imagem = {imagemServicos}/>
       <TextoServicos {...inicioServicos}/>
       <EscoposServicos servicos = {servicos}/>
-      <FormularioServicos {...formularios}/>
-      <Footer {...foo}/>
+      <FormularioServicos contato = {contato} forms = {formularios}/>
+      <Footer contato = {contato} footer = {foo}/>
     </>
   );
 }
@@ -44,10 +44,10 @@ export async function getStaticProps(){
   const paginaServicos = handleJSONfile(`./content/paginas/servicos.json`);
   const nav = handleJSONfile(`./content/navFooter/navbar.json`);
   const formularios = handleJSONfile(`./content/forms/forms.json`);
-
+  const contato = handleJSONfile(`./content/contato/contato.json`);
   const servicos = handleJSONfiles(`./content/servicos`);
 
   return {
-    props: { paginaServicos, nav, foo, formularios, servicos },
+    props: { paginaServicos, nav, foo, formularios, servicos, contato },
   };
 }

@@ -14,7 +14,7 @@ const handleMove = () => {
   window.scrollTo({ top: 0, behavior: "smooth" }); // here it goes
 };
 
-export default function Posts({ post, nav, foo, blog }) {
+export default function Posts({ post, nav, foo, blog, contato }) {
   const router = useRouter();
   const { postId } = router.query
 
@@ -35,7 +35,7 @@ export default function Posts({ post, nav, foo, blog }) {
     <>
       <div className={styles.container}>
         <React.Fragment>
-          <Navbar {...navData} />
+          <Navbar contato = {contato} nav = {nav} />
         </React.Fragment>
         <div className={styles.topPart}>
           <Image
@@ -86,7 +86,7 @@ export default function Posts({ post, nav, foo, blog }) {
             </button>
           </div>
         </div>
-        <Footer {...foo} />
+        <Footer contato = {contato} foo = {foo}/>
       </div>
     </>
   )
@@ -102,9 +102,10 @@ export async function getStaticProps({ params: { slug } }) {
   const nav = handleJSONfile(`./content/${caminho2}/${pagina2}.json`);
   const foo = handleJSONfile(`./content/${caminho2}/${pagina3}.json`);
   const blog = handleJSONfile(`./content/paginas/blog.json`);
+  const contato = handleJSONfile(`./content/contato/contato.json`);
 
   return {
-    props: { post, nav, foo, blog },
+    props: { post, nav, foo, blog, contato },
   };
 }
 

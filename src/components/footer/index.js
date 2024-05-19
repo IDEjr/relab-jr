@@ -8,13 +8,14 @@ const handleMove = () => {
   window.scrollTo({ top: 0, behavior: "smooth" }); // here it goes
 };
 
-export default function Footer( footerData ) {
+export default function Footer({ contato, footer }) {
+  console.log(footer)
   return (
     <>
       <div className={styles.footer}>
         <div className={styles.linearGradient}/>
         {/* <Image 
-        src={footerData.background}
+        src={footer.background}
         
         layout="fill"
         objectFit="cover"
@@ -24,73 +25,73 @@ export default function Footer( footerData ) {
         >
         </Image> */}
         <div className={styles.topPart}>
-          <a onClick={handleMove}>
-            <Image
-              src={footerData.logo}
-              width={150}
-              height={150}
-              className={styles.relabLogo}
-              alt="Logo"
-            />
-          </a>        
+          <Link href="/" onClick={handleMove}>
+              <Image
+                src={footer.logo}
+                width={150}
+                height={150}
+                className={styles.relabLogo}
+                alt="Logo"
+              />
+          </Link>       
           <div className={styles.contactSocials}>
             <h3 className={styles.contactText}>
-              Entre em contato:
+              {footer.textoContato}
             </h3>
             <div className={styles.socialIcons}>
-              <Link className={styles.linkedinIcon} href={footerData.linkedin} target="_blank">
+              <a className={styles.linkedinIcon} href={contato.linkedin} target="_blank">
                 <FaLinkedin size={40}/>
-              </Link>
-              <Link className={styles.mailIcon} href={`mailto:${footerData.email}`} target="_blank">
+              </a>
+              <a className={styles.mailIcon} href={`mailto:${contato.email}`} target="_blank">
                 <FaEnvelope size={40}/>
-              </Link>
-              <Link className={styles.instagramIcon} href={footerData.instagram} target="_blank">
+              </a>
+              <a className={styles.instagramIcon} href={contato.instagram} target="_blank">
                 <FaInstagram size={40}/>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
         <div className={styles.bottomPart}>
           <div className={styles.membershipIcons}>
-            <a className={styles.watermarkCover} href='https://unisinos.br/lab/programas/relab' target='_blank'>
+            <a className={styles.watermarkCover} href={footer.link1} target='_blank'>
               <Image
-                src={footerData.watermark1}
+                src={footer.watermark1}
                 // width={90}
                 // height={35}
                 fill
                 style={{objectFit: 'contain'}}
                 className={styles.watermark}
                 quality={100}
-                alt="Unisinos LAB"
+                alt={footer.link1}
               />
             </a>            
-            <a className={styles.watermarkCover} href='https://jesuitasbrasil.org.br' target='_blank'>
+            <a className={styles.watermarkCover} href={footer.link2} target='_blank'>
               <Image
-                src={footerData.watermark2}
+                src={footer.watermark2}
                 // width={165}
                 // height={50}
                 fill
                 style={{objectFit: 'contain'}}
                 className={styles.watermark}
                 quality={100}
-                alt="Jesuítas Brasil"
+                alt={footer.link2}
               />
             </a>
-            <a className={styles.watermarkCover} href='https://www.unisinos.br/' target='_blank'>
+            <a className={styles.watermarkCover} href={footer.link3} target='_blank'>
               <Image
-                src={footerData.watermark3}
+                src={footer.watermark3}
                 // width={150}
                 // height={40}
                 fill
                 style={{objectFit: 'contain'}}
                 className={styles.watermark}
                 quality={100}
-                alt="Unisinos"
+                alt={footer.link3}
               />
             </a>
           </div>
           <div className={styles.footerText}>
-            <p className={styles.footerText}>{footerData.copy}</p>
+            <p className={styles.footerText}>{footer.copy}</p>
           </div>
         </div>
       </div>
