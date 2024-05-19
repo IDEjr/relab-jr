@@ -86,7 +86,7 @@ export default function Posts({ post, nav, foo, blog, contato }) {
             </button>
           </div>
         </div>
-        <Footer contato = {contato} foo = {foo}/>
+        <Footer contato = {contato} footer = {foo}/>
       </div>
     </>
   )
