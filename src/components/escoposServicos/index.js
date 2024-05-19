@@ -2,23 +2,23 @@ import Image from 'next/image'
 import styles from './escoposServicos.module.css'
 
 
-function servicoL( servico, imagem, descricao ) {
+function servicoL( servico ) {
   return(
     <>
       <div className={styles.serviceContainer}>
         <div className={styles.imagemContainer}>
           <Image
-            src={imagem}
+            src={servico.imagem}
             style={{objectFit: 'cover'}}
             fill
-            alt={servico}
+            alt={servico.nome}
           />
         </div>
         <div className={styles.textContainer}>
-          <h2 className={styles.titleContainer}>{servico}</h2>
+          <h2 className={styles.titleContainer}>{servico.nome}</h2>
           <div className={styles.underBar}></div>
           <p className={styles.descriptionContainer}>
-            {descricao}
+            {servico.descricao}
           </p>
         </div>
       </div>
@@ -26,23 +26,23 @@ function servicoL( servico, imagem, descricao ) {
   )
 }
 
-function servicoR( servico, imagem, descricao ) {
+function servicoR( servico ) {
   return(
     <>
       <div className={styles.serviceContainer}>
         <div className={styles.textContainer}>
-          <h2 className={styles.titleContainer}>{servico}</h2>
+          <h2 className={styles.titleContainer}>{servico.nome}</h2>
           <div className={styles.underBar}></div>
           <p className={styles.descriptionContainer}>
-            {descricao}
+            {servico.descricao}
           </p>
         </div>
         <div className={styles.imagemContainer}>
           <Image
-            src={imagem}
+            src={servico.imagem}
             style={{objectFit: 'cover'}}
             fill
-            alt={servico}
+            alt={servico.servico}
           />
         </div>
       </div>
@@ -59,9 +59,9 @@ export default function EscoposServicos({ servicos }) {
         {servicos && servicos.map((servico, i) => (
           <div key={i}>
             {i % 2 === 0 ? (
-              servicoL(servico.servico, servico.imagem, servico.descricao)
+              servicoL(servico)
               ) : (
-              servicoR(servico.servico, servico.imagem, servico.descricao)
+              servicoR(servico)
             )}
           </div>
         ))}
