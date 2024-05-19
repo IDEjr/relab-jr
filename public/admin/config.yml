@@ -276,7 +276,7 @@ collections:
         fields:
           - {label: "Logo", name: "logo", widget: "image"}
           - {label: "Linkedin", name: "linkedin", widget: "string"}
-          - {label: "Email", name: "email", widget: "strin  g"}
+          - {label: "Email", name: "email", widget: "string"}
           - {label: "Instagram", name: "instagram", widget: "string"}
           - {label: "Copyright", name: "copy", widget: "string"}
           - {label: "Watermark1", name: "watermark1", widget: "image"}
@@ -312,10 +312,16 @@ collections:
 
   - label: "Contato"
     name: "contato"
-    file: "content/contato/contato.json"
-    extension: "json"
-    format: "json"
-    fields:
-      - {label: "Linkedin", name: "linkedin", widget: "string"}
-      - {label: "Email", name: "email", widget: "string"}
-      - {label: "Instagram", name: "instagram", widget: "string"}
+    editor:
+      preview: false
+    files:
+      - label: "Contato"
+        name: "contato"
+        file: "content/contato/contato.json"
+        extension: "json"
+        format: "json"
+        fields:
+          - {label: "Linkedin", name: "linkedin", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Instagram", name: "instagram", widget: "string"}
+          - {label: "Celular", name: "celular", widget: "string"}
