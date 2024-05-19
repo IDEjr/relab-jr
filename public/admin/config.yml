@@ -75,12 +75,12 @@ collections:
             widget: "object"
             fields:
               - {label: "Título Carrossel", name: "tituloCarrossel", widget: "string", pattern: ['^.{1,20}$', "Máximo 20 carateres."]}
-              - label: "Posts Carrossel"
-                name: "postsCarrossel"
-                widget: "list"
-                min: 3
-                max: 8
-                field: {label: "Post", name: "post", widget: "relation", collection: "posts", search_fields: ["titulo"], display_fields: ["titulo"], value_field: "titulo"}
+              # - label: "Posts Carrossel"
+              #   name: "postsCarrossel"
+              #   widget: "list"
+              #   min: 3
+              #   max: 8
+              #   field: {label: "Post", name: "post", widget: "relation", collection: "posts", search_fields: ["titulo"], display_fields: ["titulo"], value_field: "titulo"}
 
 
 
@@ -242,7 +242,7 @@ collections:
     description: "Serviços da Relab Jr"
     folder: "content/servicos"
     create: true
-    slug: "{{fields.servico}}"
+    slug: "{{fields.nome}}"
     editor:
       preview: false
     fields:
@@ -308,3 +308,14 @@ collections:
           - {label: "Celular", name: "celular", widget: "string"}
           - {label: "Endereço 1", name: "endereco1", widget: "string"}
           - {label: "Endereço 2", name: "endereco2", widget: "string"}
+
+
+  - label: "Contato"
+        name: "contato"
+        file: "content/contato/contato.json"
+        extension: "json"
+        format: "json"
+        fields:
+          - {label: "Linkedin", name: "linkedin", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Instagram", name: "instagram", widget: "string"}
