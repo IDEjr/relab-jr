@@ -3,18 +3,24 @@ import styles from "./menuBlog.module.css";
 import { useState } from "react";
 import { GoChevronDown, GoChevronUp } from "react-icons/go";
 
-export default function MenuBlog({ posts }) {
+export default function MenuBlog({ posts, generos }) {
   const [isActive, setIsactive] = useState(false);
   const [titulo, setTitulo] = useState("Todos");
   const [atual, setAtual] = useState(false);
   const [filteredPosts, setFilteredPosts] = useState(posts);
 
-  var genderSelection = [];
+  var genreSelection = [];
 
-  posts.map((posts) => {
-    genderSelection.push(posts.genero);
-  }); // armazena os generos dos posts em genderSelection
-  const filteredgenders = [...new Set(genderSelection)];
+  // posts.map((posts) => {
+  //   genreSelection.push(posts.genero);
+  // }); // armazena os generos dos posts em genreSelection
+
+  generos.map((generos) => {
+    genreSelection.push(generos.genero);
+  }); // armazena os generos em genreSelection
+
+
+  const filteredGenres = [...new Set(genreSelection)];
 
   const filter = (select, posts) => {
     //função que faz a filtragem dos generos e passa para os states
@@ -41,17 +47,17 @@ export default function MenuBlog({ posts }) {
             <p className={styles.buttonText}>Todos</p>
           </button>
         </li>
-        {filteredgenders.map((filteredgenders) => (
-          <li key={filteredgenders}>
+        {filteredGenres.map((filteredGenres) => (
+          <li key={filteredGenres}>
             <button
               className={
-                atual === filteredgenders ? styles.active : styles.button
+                atual === filteredGenres ? styles.active : styles.button
               }
               onClick={() => {
-                filter(filteredgenders, posts);
+                filter(filteredGenres, posts);
               }}
             >
-              <p className={styles.buttonText} >{filteredgenders}</p>
+              <p className={styles.buttonText}>{filteredGenres}</p>
             </button>
           </li>
         ))}
