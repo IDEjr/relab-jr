@@ -136,6 +136,9 @@ overflow-x: auto;
     display: flex;
     justify-content: space-around;
   }
+  .menuContainer{
+    overflow-x: visible;
+  }
 
   .tituloEBotaoMobile {
     display: flex;
