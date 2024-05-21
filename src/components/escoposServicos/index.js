@@ -6,7 +6,7 @@ function servicoL( servico ) {
   return(
     <>
       <div className={styles.serviceContainer}>
-        <div className={styles.imagemContainer}>
+        <div className={styles.imageLeftContainer}>
           <Image
             src={servico.imagem}
             style={{objectFit: 'cover'}}
@@ -30,6 +30,14 @@ function servicoR( servico ) {
   return(
     <>
       <div className={styles.serviceContainer}>
+        <div className={styles.imageMobileContainer}>
+          <Image
+            src={servico.imagem}
+            style={{objectFit: 'cover'}}
+            fill
+            alt={servico.servico}
+          />
+        </div>
         <div className={styles.textContainer}>
           <h2 className={styles.titleContainer}>{servico.nome}</h2>
           <div className={styles.underBar}></div>
@@ -37,7 +45,7 @@ function servicoR( servico ) {
             {servico.descricao}
           </p>
         </div>
-        <div className={styles.imagemContainer}>
+        <div className={styles.imageRightContainer}>
           <Image
             src={servico.imagem}
             style={{objectFit: 'cover'}}
