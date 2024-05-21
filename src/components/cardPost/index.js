@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import styles from './cardPosts.module.css'
+import styles from './cardPost.module.css'
 
-export default function cardPosts({ fileName, imagem, titulo, data, previa, autor}) {
+export default function CardPost({ fileName, imagem, titulo, data, previa, autor}) {
 
   // formata data
   var dataForm;
@@ -25,7 +25,7 @@ export default function cardPosts({ fileName, imagem, titulo, data, previa, auto
             </div>
             <div className={styles.dados}>
               <div className={styles.emCima}>
-                <h2 className={styles.titulo}>{titulo}</h2>
+                <h3 className={styles.titulo}>{titulo}</h3>
                 <hr className={styles.linha} />
                 <p className={styles.previa}>{previa}</p>
               </div>

@@ -11,19 +11,7 @@
     "textoBotao": "Entre em Contato"
   },
   "servicosHome": {
-    "imagem2": "/uploads/images.jpeg",
-    "imagem3": "/uploads/brainstorming.jpg.webp",
-    "imagem4": "/uploads/pexels-photo-1509428.jpeg",
-    "imagem5": "/uploads/blog-aperto-de-mao-pnqr2oxv4y0cbmsd6r7ggbvlbabhr238ak13due564.png",
-    "imagem6": "/uploads/gestao-pessoas-scaled.jpg",
-    "tituloServicos": "NOSSOS SERVIÇOS",
-    "servico1": "MODELAGEM DE NEGÓCIOS",
-    "servico2": "VIABILIDADE ECONÔMICA",
-    "servico3": "ANÁLISE DE SAÚDE FINANCEIRA",
-    "servico4": "PLANEJAMENTO ESTRATÉGICO",
-    "servico5": "CAPTAÇÃO DE CLIENTES",
-    "servico6": "GESTÃO DE PESSOAS",
-    "imagem1": "/uploads/adobestock_349728647-1024x684.jpg"
+    "tituloServicos": "NOSSOS SERVIÇOS"
   },
   "imgBotaoMem": {
     "imagem": "/uploads/imagemmembros.png",
@@ -37,14 +25,6 @@
     "instagram": "https://www.instagram.com/relabjrconsultoria/"
   },
   "carrosselHome": {
-    "postsCarrossel": [
-      "A Jornada do Cliente",
-      "Descubra o Poder do Golden Circle",
-      "Desvendando a Saúde Financeira",
-      "Roteiro para o Planejamento Estratégico",
-      "Gestão de Pessoas de Alto Impacto",
-      "Viabilidade econômica para o sucesso"
-    ],
     "tituloCarrossel": "NOVIDADES"
   }
 }

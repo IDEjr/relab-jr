@@ -1,4 +1,4 @@
-import { mailOptions, transporter } from "./../../lib/nodemailer";
+import { mailOptions, transporter } from "@/lib/nodemailer"
 
 const handler = async (req, res) => {
 

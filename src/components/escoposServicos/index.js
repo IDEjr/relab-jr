@@ -1,47 +1,56 @@
 import Image from 'next/image'
 import styles from './escoposServicos.module.css'
-import { useMediaQuery } from 'react-responsive'
 
 
-function servicoL( servico, imagem, descricao ) {
+function servicoL( servico ) {
   return(
     <>
       <div className={styles.serviceContainer}>
-        <div className={styles.imagemContainer}>
+        <div className={styles.imageLeftContainer}>
           <Image
-            src={imagem}
+            src={servico.imagem}
             style={{objectFit: 'cover'}}
             fill
+            alt={servico.nome}
           />
         </div>
         <div className={styles.textContainer}>
-          <div className={styles.titleContainer}>{servico}</div>
+          <h2 className={styles.titleContainer}>{servico.nome}</h2>
           <div className={styles.underBar}></div>
-          <div className={styles.descriptionContainer}>
-            {descricao}
-          </div>
+          <p className={styles.descriptionContainer}>
+            {servico.descricao}
+          </p>
         </div>
       </div>
     </>
   )
 }
 
-function servicoR( servico, imagem, descricao ) {
+function servicoR( servico ) {
   return(
     <>
       <div className={styles.serviceContainer}>
-        <div className={styles.textContainer}>
-          <div className={styles.titleContainer}>{servico}</div>
-          <div className={styles.underBar}></div>
-          <div className={styles.descriptionContainer}>
-            {descricao}
-          </div>
-        </div>
-        <div className={styles.imagemContainer}>
+        <div className={styles.imageMobileContainer}>
           <Image
-            src={imagem}
+            src={servico.imagem}
             style={{objectFit: 'cover'}}
             fill
+            alt={servico.servico}
+          />
+        </div>
+        <div className={styles.textContainer}>
+          <h2 className={styles.titleContainer}>{servico.nome}</h2>
+          <div className={styles.underBar}></div>
+          <p className={styles.descriptionContainer}>
+            {servico.descricao}
+          </p>
+        </div>
+        <div className={styles.imageRightContainer}>
+          <Image
+            src={servico.imagem}
+            style={{objectFit: 'cover'}}
+            fill
+            alt={servico.servico}
           />
         </div>
       </div>
@@ -50,20 +59,20 @@ function servicoR( servico, imagem, descricao ) {
 }
 
 
-export default function escoposServicos( {servicos} ) {
+export default function EscoposServicos({ servicos }) {
 
   return(
     <>
       <ul className={styles.mainContainer}>
         {servicos && servicos.map((servico, i) => (
           <div key={i}>
-          {i % 2 === 0 ? (
-            servicoL(servico.servico, servico.imagem, servico.descricao)
-            ) : (
-            servicoR(servico.servico, servico.imagem, servico.descricao)
-          )}
-        </div>
-        ))} 
+            {i % 2 === 0 ? (
+              servicoL(servico)
+              ) : (
+              servicoR(servico)
+            )}
+          </div>
+        ))}
       </ul>
     </>
   )

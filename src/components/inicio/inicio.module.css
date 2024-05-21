@@ -17,7 +17,7 @@
   position: absolute; /* Define o posicionamento absoluto para o texto */
   top: 40%; /* Move o texto 50% para baixo em relação ao container */
   left: 5%; /* Move o texto 50% para a direita em relação ao container */
-  font-size: 6vw;
+  /* font-size: 6vw; */
   color: white; /* Define a cor do texto */
   padding: 10px; /* Adiciona algum espaço interno ao redor do texto */
   max-width: 10em; /* Defina a largura máxima desejada */
@@ -31,7 +31,7 @@
 
   }
   .title{
-    font-size: 5vw;
+    /* font-size: 5vw; */
   }
   
 }
@@ -48,6 +48,6 @@
     min-height: 600px; /* Defina a altura mínima desejada */
   }
   .title{
-    font-size: 8vw;
+    /* font-size: 8vw; */
   }
 }

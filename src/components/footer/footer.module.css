@@ -15,13 +15,24 @@
   z-index: 0;
 }
 
-.linearGradient {
+.watermarkCover {
+  width: 120px;
+  height: 40px;
+  position: relative;
+}
+
+.watermark {
+  width: 100%;
+  height: 100%;
+}
+
+/* .linearGradient {
   background-color: #262626;
   width: 100%;
   height: 100%;
   position: absolute;
   z-index: 0;
-}
+} */
 
 
 .topPart {
@@ -30,20 +41,29 @@
   align-items:flex-start;
   height: 80%;
   align-items: flex-start;
-  gap:10vw;
+  gap: 10vw;
   z-index: 1;
 }
 
+.relabLogo {
+  margin-left: 100px;
+  /* left: 100px; */
+}
 
-.relabIcon {
+
+/* .RelabLogoBox {
   display: flex;
   width: 150px;
-  background-color: transparent;
   height: 150px;
+  background-color: transparent;
   padding-left: 5vw;
 
   border: none;
-  cursor:pointer;
+} */
+
+.footer :global(button):hover {
+  background-color: transparent;
+  border: none;
 }
 
 .contactSocials {
@@ -52,12 +72,13 @@
   padding-right: 5vw;
   gap: 1vh;
   align-items: center;
+  text-align: center;
 }
 
 
 .contactText {
-  font-weight: 350;
-  font-size: 30px;
+  /* font-weight: 350; */
+  /* font-size: 30px; */
   color: #F2C12E;
 }
 
@@ -86,8 +107,8 @@
 .footerText {
   display: flex;
   flex-direction: column;
-  font-size: 1vw;
-  gap:0.5vw;
+  /* font-size: 1vw; */
+  gap: 0.5vw;
   justify-content: center;
   align-items: center;
   color: rgba(255, 255, 255, 0.534);
@@ -98,8 +119,8 @@
 .membershipIcons {
   display:flex;
   align-self: flex-start;
-  gap:2vw;
-  padding-left: 2vw;
+  gap: 2vw;
+  /* padding-left: 2vw; */
   align-items: center;
 }
 
@@ -112,35 +133,35 @@
     justify-content: flex-end;
     align-items: center;
     height: 80%;
-    gap:0;
+    gap: 0;
   }
 
   .contactText {
     padding-top: 2vh;
-    font-size:larger;
+    /* font-size: larger; */
   }
 
-  .relabIcon {
-    width: 17vw;
+  /* .RelabLogoBox {
+    width:  0px;
     height: 12vh;
     display: flex;
     padding: 0;
+  } */
+
+  .relabLogo {
+    margin-left: 0px;
+    /* width: 120px;
+    height: 120px; */
   }
 
-  .logoImg {
-    width: 17vw;
-    height: 120px;
-  }
-
-  .insideImg {
+  /* .insideImg {
     width: 40px;
     height: 40px;
-  }
+  } */
 
   .contactSocials {
     padding: 0;
-    width: 25vw;
-    
+    /* width: 25vw; */
   }
 
   .bottomPart {
@@ -157,74 +178,123 @@
     justify-content: space-around;
   }
 
-  .watermarkImg {
+  /* .watermark1 {
     width: 120px;
     height: 40px;
-  }
+  } */
 
-  .socialIcons {
+  /* .watermark2 {
+    width: 120px;
+    height: 40px;
+  } */
+  
+  /* .watermark3 {
+    width: 120px;
+    height: 40px;
+  } */
+
+  /* .socialIcons {
     width: 85%;
-  }
+  } */
 }
 
 
 @media (max-width: 650px) {
-  .watermarkImg {
-    width: 70px;
+
+  .watermarkCover {
+    width: 90px;
     height: 30px;
+    position: relative;
   }
 
-  .membershipIcons {
+  /* .watermark1 {
+    width: 80px;
+    height: 30px;
+  } */
+
+  /* .watermark2 {
+    width: 80px;
+    height: 30px;
+  } */
+
+  /* .watermark3 {
+    width: 80px;
+    height: 40px;
+  } */
+
+  /* .membershipIcons {
     width: 100%;
-  }
-
-  .unisinosIcon {
-    width: 100px;
-  }
+  } */
   
-  .footerText {
+  /* .footerText {
     font-size: 3vw;
-  }
+  } */
 
-  .relabIcon {
-    padding-left: +2vw;
-  }
+  /* .RelabLogoBox {
+    padding-left: +5vw;
+  } */
 
-  .topPart {
+  /* .topPart {
     padding-top: 1vh;
-  }
+  } */
 
-  .relabIcon {
+  /* .RelabLogoBox {
     width: 120px;
     height: 120px;
-  }
+  } */
 
-  .logoImg {
-    width: 95px;
-    height: 95px;
+  .relabLogo {
+    width: 100px;
+    height: 100px;
   }
 
   .contactSocials {
-    width: 40vw;
+    /* width: 40vw; */
     padding-right: 0;
   }
 
   .contactText {
     display: flex;
-    width: 60vw;
+    /* width: 60vw; */
     justify-content: center;
-    padding-left: 2vw;
-    font-size: small;
+    /* padding-left: 2vw; */
+    /* font-size: small; */
   }
 
   .socialIcons {
-    width: 20vw;
+    /* width: 20vw; */
     justify-content: center;
-    gap:+5vw;
+    gap: +5vw;
   }
 
-  .insideImg {
+  /* .insideImg {
     width: 25px;
     height: 25px;
+  } */
+}
+
+@media (max-width: 500px) {
+  .membershipIcons {
+    padding-left: 5vw;
   }
+
+  /* .jesuitasIcon {
+    width: 100px;
+    height: 40px;
+  } */
+
+  /* .watermark1 {
+    width: 80px;
+    height: 30px;
+  } */
+
+  /* .watermark2 {
+    width: 100px;
+    height: 40px;
+  } */
+  
+  /* .watermark3 {
+    width: 110px;
+    height: 40px;
+  } */
 }

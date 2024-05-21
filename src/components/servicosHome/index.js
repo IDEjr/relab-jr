@@ -1,17 +1,15 @@
 import styles from './servicosHome.module.css'
-import React from 'react'
 import Image from 'next/image'
-// import yellowArrow from '../../../public/uploads/image/servicosHome/yellowArrow.png'
 
 
-function cadaServico(frame) { 
+function Servico( servico ) { 
   return(
-    <div className={styles.individualBlock}>
-      <h3 className={styles.topText}>
-        {frame.texto}
-      </h3>
-      <div className={styles.frames}>
-        <div className={styles.overlayGrid}>
+    <>
+      <div className={styles.serviceContainer}>
+        <div className={styles.serviceName}>
+          <h3>{servico.nome}</h3>
+        </div>
+        <div className={styles.imgContainer}>
           {/* <div className={styles.arrowShape}/> */}
           {/* <Image
             src={yellowArrow}
@@ -21,55 +19,76 @@ function cadaServico(frame) {
             quality={100}
             /> */}
           <Image
-            src={frame.imagem}
-            className={styles.insideImg}
-            width={2000}
-            height={2000}
+            src={servico.imagem}
+            className={styles.serviceImg}
+            // width={2000}
+            // height={2000}
+            fill
+            style={{objectFit: 'cover'}}
             quality={100}
+            alt="Logo"
           />
-        </div>
-      </div>
-    </div>
-  )
-}
-function servicesHandler(){
-  for(var i = 0; i <= (servicos.length)/3; i+=3){
-    
-  }
-  return(
-    <div></div>
-  )
-}
-export default function servicosHome({servicosHome, servicos}) {
-
-  var frames = new Array();
-  for(var i = 0; i < servicos.length; i++){
-    const frame = {
-      imagem : servicos[i].imagem,
-      texto :  servicos[i].servico
-    }
-    frames[i] = frame;
-  }
-
-  return(
-    <>
-      <div className={styles.container}>
-        <h1 className={styles.titleText}>NOSSOS SERVIÇOS</h1>
-        <div className={styles.blocksHandler}>
-          <div className={styles.firstTwo}>
-            {cadaServico(frames[0])}
-            {cadaServico(frames[1])}
-          </div>
-          <div className={styles.secondTwo}>
-            {cadaServico(frames[2])}
-            {cadaServico(frames[3])}
-          </div>
-          <div className={styles.thirdTwo}>
-            {cadaServico(frames[4])}
-            {cadaServico(frames[5])}
-          </div>
         </div>
       </div>
     </>
   )
 }
+
+
+// function servicesHandler(){
+//   for(var i = 0; i <= (servicos.length)/3; i+=3){
+    
+//   }
+//   return(
+//     <div></div>
+//   )
+// }
+
+
+export default function ServicosHome({ titulo, servicos }) {
+
+  // var frames = new Array();
+  // for(var i = 0; i < servicos.length; i++){
+  //   const frame = {
+  //     imagem : servicos[i].imagem,
+  //     titulo :  servicos[i].servico
+  //   }
+  //   frames[i] = frame;
+  // }
+
+  return(
+    <>
+      <div className={styles.container}>
+        <h2 className={styles.titleText}>{titulo}</h2>
+        <div className={styles.serviceFrame}>
+          {servicos && servicos.map((servico, i) => (
+            <div key={i}>
+                {Servico(servico)}
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
+  )
+}
+  // return(
+  //   <>
+  //     <div className={styles.container}>
+  //       <h2 className={styles.titleText}>NOSSOS SERVIÇOS</h2>
+  //       <div className={styles.blocksHandler}>
+  //         <div className={styles.firstTwo}>
+  //           {servico(frames[0])}
+  //           {servico(frames[1])}
+  //         </div>
+  //         <div className={styles.secondTwo}>
+  //           {servico(frames[2])}
+  //           {servico(frames[3])}
+  //         </div>
+  //         <div className={styles.thirdTwo}>
+  //           {servico(frames[4])}
+  //           {servico(frames[5])}
+  //         </div>
+  //       </div>
+  //     </div>
+  //   </>
+  // )

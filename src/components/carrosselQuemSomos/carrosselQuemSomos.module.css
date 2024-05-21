@@ -9,9 +9,8 @@
 }
 
 .container{
-  align-self: center;
-  align-items: center;
-  margin-bottom: 10%;
+align-self: center;
+align-items: center;
 }
 
 @media only screen  and  (max-width: 1200px)  {

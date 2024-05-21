@@ -18,7 +18,7 @@
   display: flex;
   align-items: flex-end;
   flex: 1;
-  font-size: 2rem;
+  /* font-size: 2rem; */
   margin-bottom: 10px;
   color: #f2c12e;
   padding-bottom: 5vh;
@@ -28,7 +28,7 @@
 
 .texto {
   flex: 1;
-  font-size: 1.2rem;
+  /* font-size: 1.2rem; */
   width: 70%;
   line-height: 2rem;
 }
@@ -56,7 +56,7 @@
   
   
   .titulo {
-    font-size: 2.5rem;
+    /* font-size: 2.5rem; */
     margin-bottom: 10px;
     color: #f2c12e;
     padding-bottom: 5vh;
@@ -66,12 +66,12 @@
   
   .texto {
     flex: 1;
-    font-size: 1.3rem;
+    /* font-size: 1.3rem; */
     width: 70%;
     line-height: 2.5rem;
   }
   
   .botao {
-    font-size: 1.8rem;
+    /* font-size: 1.8rem; */
   }
 }
