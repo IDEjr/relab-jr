@@ -1,5 +1,5 @@
 {
-  "name": "blog-com-nextjs",
+  "name": "site-relabjr",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@netlify/plugin-nextjs": "^4.41.3",
+    "@netlify/plugin-nextjs": "^5.0.0",
     "classnames": "^2.3.2",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
