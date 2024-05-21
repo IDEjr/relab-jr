@@ -8,8 +8,8 @@ export default function Inicio( props ) {
       <div className={styles.container}>
         <Image
           src={props.imagem}
-          width={3840}
-          height={800}
+          fill
+          style={{objectFit: 'cover'}}
           alt='Imagem Inicio'
           className={styles.initImg}
         />
