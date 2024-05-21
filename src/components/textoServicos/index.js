@@ -1,18 +1,18 @@
 import styles from './textoServicos.module.css'
 
 
-export default function textoServicos({titulo, texto}) {
+export default function TextoServicos({ titulo, texto }) {
   return(
     <>
-      <div>
-        <h3 className={styles.topContainer}>
+      <div className={styles.mainContainer}>
+        <h3 className={styles.titleContainer}>
           {titulo}
         </h3>
-        <div className={styles.mainContainer}>
-          <div className={styles.centerContainer}>
+        {/* <div className={styles.textContainer}> */}
+          <p className={styles.textContainer}>
             {texto}
-          </div>
-        </div>
+          </p>
+        {/* </div> */}
         <div className={styles.bar}></div>
       </div>
     </>

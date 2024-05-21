@@ -1,22 +1,21 @@
-// import relabIconYellow from '../../../public/uploads/image/footer/relabIconYellow.svg'
 import styles from './footer.module.css'
-import { handleJSONfile } from '@/utils/functions/jsonHandler'
 import Image from 'next/image'
-
-import {FaInstagram, FaLinkedin,FaEnvelope} from "react-icons/fa";
+import {FaInstagram, FaLinkedin, FaEnvelope} from "react-icons/fa"
+import Link from 'next/link'
 
 
 const handleMove = () => {
   window.scrollTo({ top: 0, behavior: "smooth" }); // here it goes
 };
 
-export default function Footer(footerData) {
+export default function Footer({ contato, footer }) {
+  console.log(footer)
   return (
     <>
       <div className={styles.footer}>
         <div className={styles.linearGradient}/>
         {/* <Image 
-        src={footerData.background}
+        src={footer.background}
         
         layout="fill"
         objectFit="cover"
@@ -26,26 +25,27 @@ export default function Footer(footerData) {
         >
         </Image> */}
         <div className={styles.topPart}>
-          <button onClick={handleMove} className={styles.relabIcon}>
-            <Image
-              src={footerData.logo}
-              width={150}
-              height={150}
-              className={styles.logoImg}
-            />
-          </button>        
+          <Link href="/" onClick={handleMove}>
+              <Image
+                src={footer.logo}
+                width={150}
+                height={150}
+                className={styles.relabLogo}
+                alt="Logo"
+              />
+          </Link>       
           <div className={styles.contactSocials}>
-            <span className={styles.contactText}>
-              Entre em contato:
-            </span>
+            <h3 className={styles.contactText}>
+              {footer.textoContato}
+            </h3>
             <div className={styles.socialIcons}>
-              <a className={styles.linkedinIcon} href={footerData.linkedin} target="_blank">
+              <a className={styles.linkedinIcon} href={contato.linkedin} target="_blank">
                 <FaLinkedin size={40}/>
               </a>
-              <a className={styles.mailIcon} href='/' target="_blank">
+              <a className={styles.mailIcon} href={`mailto:${contato.email}`} target="_blank">
                 <FaEnvelope size={40}/>
               </a>
-              <a className={styles.instagramIcon} href={footerData.instagram} target="_blank">
+              <a className={styles.instagramIcon} href={contato.instagram} target="_blank">
                 <FaInstagram size={40}/>
               </a>
             </div>
@@ -53,37 +53,46 @@ export default function Footer(footerData) {
         </div>
         <div className={styles.bottomPart}>
           <div className={styles.membershipIcons}>
-            <a className={styles.labIcon} href='https://unisinos.br/lab/programas/relab' target='_blank'>
+            <a className={styles.watermarkCover} href={footer.link1} target='_blank'>
               <Image
-                src={footerData.watermark1}
-                width={90}
-                height={35}
-                className={styles.watermark1}
+                src={footer.watermark1}
+                // width={90}
+                // height={35}
+                fill
+                style={{objectFit: 'contain'}}
+                className={styles.watermark}
                 quality={100}
+                alt={footer.link1}
               />
             </a>            
-            <a className={styles.jesuitasIcon} href='https://jesuitasbrasil.org.br' target='_blank'>
+            <a className={styles.watermarkCover} href={footer.link2} target='_blank'>
               <Image
-                src={footerData.watermark2}
-                width={165}
-                height={50}
-                className={styles.watermark2}
+                src={footer.watermark2}
+                // width={165}
+                // height={50}
+                fill
+                style={{objectFit: 'contain'}}
+                className={styles.watermark}
                 quality={100}
+                alt={footer.link2}
               />
             </a>
-            <a className={styles.unisinosIcon} href='https://www.unisinos.br/' target='_blank'>
+            <a className={styles.watermarkCover} href={footer.link3} target='_blank'>
               <Image
-                src={footerData.watermark3}
-                width={150}
-                height={40}
-                className={styles.watermark3}
+                src={footer.watermark3}
+                // width={150}
+                // height={40}
+                fill
+                style={{objectFit: 'contain'}}
+                className={styles.watermark}
                 quality={100}
+                alt={footer.link3}
               />
             </a>
           </div>
-          <span className={styles.footerText}>
-          <text className={styles.footerText}>{footerData.copy}</text>
-          </span>
+          <div className={styles.footerText}>
+            <p className={styles.footerText}>{footer.copy}</p>
+          </div>
         </div>
       </div>
     </>

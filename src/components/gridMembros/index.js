@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import styles from './gridMembros.module.css'
-import CardMembros from '../cardMembros';
+import CardMembros from '@/components/cardMembro';
 
-export default function gridMembros({ titulo, logo, membros }) {
+export default function GridMembros({ titulo, logo, membros }) {
   //const cargos = ['Presidência','Vice-Presidência','Diretoria','Assessoria','Gerência','Consultoria']; 
   let Ps = [];
   let VPs = [];
@@ -34,7 +34,7 @@ export default function gridMembros({ titulo, logo, membros }) {
   return (
     <>
       <div className={styles.chamariz}>
-        <h2 className={styles.tituloMembros}> {titulo}</h2>
+        <h2 className={styles.tituloMembros}>{titulo}</h2>
         <Image          
           className={styles.logoGrid}
           src={logo}

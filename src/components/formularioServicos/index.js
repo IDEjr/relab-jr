@@ -1,12 +1,21 @@
-import { useForm } from "react-hook-form";
-import { isEmail, isMobilePhone } from "validator";
-import { sendContactForm } from "./../../lib/api";
 import styles from "./formularioServicos.module.css"
-import { FaRegComment, FaRegEnvelope, FaHome } from "react-icons/fa";
 import Image from 'next/image'
+import { useForm } from "react-hook-form"
+import { isEmail, isMobilePhone } from "validator"
+import { sendContactForm } from "@/lib/api"
+import { FaRegComment, FaRegEnvelope, FaHome } from "react-icons/fa"
 
 
-function formatPhoneNumber(value) {
+function createWhatsAppLink( celular ) {
+  // Remove caracteres que não são dígitos
+  const celularPuro = celular.replace(/[^\d]/g, '');
+
+  console.log(celularPuro)
+
+  return `https://wa.me/${celularPuro}`;
+}
+
+function formatPhoneNumber( value ) {
   // Remove todos os caracteres que não são números
   const numericValue = value.replace(/\D/g, '');
   
@@ -26,7 +35,7 @@ function formatPhoneNumber(value) {
   return formattedValue;
 }
 
-function allowToEnterPhoneNumber(event) {
+function allowToEnterPhoneNumber( event ) {
   const charCode = event.keyCode || event.which;
 
   // Permite backspace
@@ -50,7 +59,7 @@ function allowToEnterPhoneNumber(event) {
 }
 
 
-export default function formularioServicos(forms) {
+export default function FormularioServicos({ contato, forms }) {
 
   const {
     register,
@@ -72,6 +81,8 @@ export default function formularioServicos(forms) {
     }
   }
 
+  const whatsappLink = createWhatsAppLink(contato.celular);
+
   return(
     <>
       <div className={styles.mainContainer}>
@@ -80,6 +91,7 @@ export default function formularioServicos(forms) {
             src={forms.logo}
             width={150}
             height={150}
+            alt="Logo"
           />
         </div>
         <h2 className={styles.title}>
@@ -114,7 +126,7 @@ export default function formularioServicos(forms) {
                 <p className={styles.error_message}>Campo obrigatório.</p>
               )}
               {errors?.email?.type === "validate" && (
-              <p className={styles.error_message}>Email invalido</p>
+              <p className={styles.error_message}>Email inválido</p>
               )}
             </div>
             <div className={styles.mediumField}>
@@ -155,30 +167,33 @@ export default function formularioServicos(forms) {
                 id="mensagem"
                 type="text"
                 placeholder="Sua mensagem"
-                {...register("mensagem", { required: false })}
+                {...register("mensagem", { required: true })}
               />
+              {errors?.mensagem?.type === "required" && (
+                <p className={styles.error_message}>Campo obrigatório</p>
+              )}
             </div>
             <div className={styles.mediumField}>
               <button onClick={() => handleSubmit(onSubmit)()}>Enviar</button>
             </div>
           </div>
           <div className={styles.contactContainer}>
-            <p className={styles.contactRows}>
-              <FaRegComment  size={30} className={styles.icons}/>
-              {forms.celular}
-            </p>
-            <p className={styles.contactRows}>
-              <FaRegEnvelope size={30} className={styles.icons}/>
-              {forms.email}
-            </p>
-            <p className={styles.contactRows}>
-              <FaHome size={30} className={styles.icons}/>
-              {forms.endereco1} 
-            </p>
-            <p className={styles.contactRows}>
-              <FaHome size={30} className={styles.icons}/>
-              {forms.endereco2} 
-            </p>
+            <a href={whatsappLink}  target="_blank" className={styles.contactRows}>
+              <div><FaRegComment size={30} className={styles.icons}/></div>
+              <div>{contato.celular}</div>
+            </a>
+            <a href={`mailto:${contato.email}`} className={styles.contactRows}>
+              <div><FaRegEnvelope size={30} className={styles.icons}/></div>
+              <div>{contato.email}</div>
+            </a>
+            <div className={styles.contactRows}>
+              <div><FaHome size={30} className={styles.icons}/></div>
+              <div>{forms.endereco1}</div>
+            </div>
+            <div className={styles.contactRows}>
+              <div><FaHome size={30} className={styles.icons}/></div>
+              <div>{forms.endereco2}</div>
+            </div>
           </div>
         </div>
       </div>

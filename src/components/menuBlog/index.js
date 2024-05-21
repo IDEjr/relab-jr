@@ -1,20 +1,26 @@
+import GridPosts from "@/components/gridPosts";
+import styles from "./menuBlog.module.css";
 import { useState } from "react";
-import Styles from "./menuBlog.module.css";
-import GridPosts from "../gridPosts";
 import { GoChevronDown, GoChevronUp } from "react-icons/go";
 
-export default function MenuBlog({ posts }) {
+export default function MenuBlog({ posts, generos }) {
   const [isActive, setIsactive] = useState(false);
   const [titulo, setTitulo] = useState("Todos");
   const [atual, setAtual] = useState(false);
   const [filteredPosts, setFilteredPosts] = useState(posts);
 
-  var genderSelection = [];
+  var genreSelection = [];
 
-  posts.map((posts) => {
-    genderSelection.push(posts.genero);
-  }); // armazena os generos dos posts em genderSelection
-  const filteredgenders = [...new Set(genderSelection)];
+  // posts.map((posts) => {
+  //   genreSelection.push(posts.genero);
+  // }); // armazena os generos dos posts em genreSelection
+
+  generos.map((generos) => {
+    genreSelection.push(generos.genero);
+  }); // armazena os generos em genreSelection
+
+
+  const filteredGenres = [...new Set(genreSelection)];
 
   const filter = (select, posts) => {
     //função que faz a filtragem dos generos e passa para os states
@@ -34,24 +40,24 @@ export default function MenuBlog({ posts }) {
       <>
         <li key={"Todos"} tabIndex={0}>
           <button
-            className={atual === "Todos" ? Styles.active : Styles.button}
+            className={atual === "Todos" ? styles.active : styles.button}
             onClick={() => filter("Todos", posts)}
             tabIndex={0}
           >
-            Todos
+            <p className={styles.buttonText}>Todos</p>
           </button>
         </li>
-        {filteredgenders.map((filteredgenders) => (
-          <li key={filteredgenders}>
+        {filteredGenres.map((filteredGenres) => (
+          <li key={filteredGenres}>
             <button
               className={
-                atual === filteredgenders ? Styles.active : Styles.button
+                atual === filteredGenres ? styles.active : styles.button
               }
               onClick={() => {
-                filter(filteredgenders, posts);
+                filter(filteredGenres, posts);
               }}
             >
-              {filteredgenders}
+              <p className={styles.buttonText}>{filteredGenres}</p>
             </button>
           </li>
         ))}
@@ -61,29 +67,29 @@ export default function MenuBlog({ posts }) {
 
   return (
     <>
-      <div className={Styles.container}>
+      <div className={styles.container}>
         {/* div que engloba todo o componente */}
-        <div className={Styles.menuContainer}>
+        <div className={styles.menuContainer}>
           {/* div que engloba apenas a parte do menu */}
-          <ul className={Styles.lista}>
-            <div className={Styles.containerMobile}>
+          <ul className={styles.lista}>
+            <div className={styles.containerMobile}>
               {/* div mobile */}
-              <div className={Styles.tituloEBotaoMobile}>
-                <h3 className={Styles.tituloMobile}>
-                  <p className={Styles.p}>{titulo}</p>
+              <div className={styles.tituloEBotaoMobile}>
+                <h3 className={styles.tituloMobile}>
+                  {titulo}
                 </h3>
-                <h4
+                <div
                   onClick={() => setIsactive(!isActive)}
-                  className={Styles.optionButton}
+                  className={styles.optionButton}
                 >
-                 {isActive ? <GoChevronUp className={Styles.icone} /> : <GoChevronDown className={Styles.icone} />} 
-                </h4>
+                {isActive ? <GoChevronUp className={styles.icone} /> : <GoChevronDown className={styles.icone} />} 
+                </div>
               </div>
-              <div className={Styles.aaa}>
+              <div className={styles.aaa}>
               <div
                 className={`
-                ${Styles.dropdownInactive}
-                  ${isActive ? Styles.dropdownActive : null}
+                ${styles.dropdownInactive}
+                  ${isActive ? styles.dropdownActive : null}
                   `
                 }
               >
@@ -93,15 +99,15 @@ export default function MenuBlog({ posts }) {
               </div>
             </div>
 
-            <div className={Styles.containerDesktop}>
+            <div className={styles.containerDesktop}>
               {/* div desktop, renderizado acima de 800px */}
               <RenderOptions />
             </div>
           </ul>
         </div>
-        <div className={Styles.GridPosts}>
-        <GridPosts posts={filteredPosts} />{" "}
-        {/* rederização dos posts filtrados */}
+        <div className={styles.gridPosts}>
+          <GridPosts posts={filteredPosts} />{" "}
+          {/* rederização dos posts filtrados */}
         </div>
       </div>
     </>

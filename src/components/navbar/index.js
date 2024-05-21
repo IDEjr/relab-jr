@@ -1,103 +1,104 @@
-import styles from './navbar.module.css';
-import { useRef } from "react";
+import styles from './navbar.module.css'
 import Image from 'next/image'
-import { FaBars, FaTimes, FaInstagram, FaLinkedin,FaEnvelope} from "react-icons/fa";
-import classnames from 'classnames';
 import Link from 'next/link'
+import { useRef } from "react"
+import { FaBars, FaTimes, FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa"
+import classnames from 'classnames'
 
-export default function navbar({ logo, linkedin, instagram, email }) {
+export default function Navbar({ contato, nav }) {
   const navRef = useRef();
   const logoRef = useRef();
+
 	const showNavbar = () => {
-		navRef.current.classList.toggle(
-			"responsiveNav"
-		);
-  logoRef.current.classList.toggle(
-			"responsiveLogo"
-		);
+		navRef.current.classList.toggle( "responsiveNav" );
+    logoRef.current.classList.toggle(	"responsiveLogo" );
 	};
-    // const style = { color: "#F2C12E !important", fontSize: "1.5em", marginTop: "150px" }
-    // removing for simplicity, dont know why its here
-    
-    return(
-        
-            <header className={styles.cabecalho}>
-                <Link href="/" className={styles.logo} >
-                    <Image
-                        src={logo}
-                        width={95}
-                        height={95}
-                        alt="Logo"
-                    />
-                        
-                </Link>
-                <nav className={styles.navbar} ref={navRef}>
-                    <button className={
-                            classnames(
-                              styles.navBtn,
-                              styles.navRelabBtn
-                            )
-                          } ref={logoRef}>
-                            <Link href="/" className={styles.droplogo}>
-                                <Image
-                                    src={logo}
-                                    width={95}
-                                    height={95}
-                                    alt="Logo"
-                                />
-                            </Link> 
-                    </button>
-                    {/*<a href="/">HOME</a>*/}
-                    <div className={styles.anchorStuff}><a href="/quemSomos">QUEM SOMOS</a></div>
-                    <div className={styles.anchorStuff}><a href="/servicos">SERVIÇOS</a></div>
-                    <div className={styles.anchorStuff}><a href="/blog">BLOG</a></div>
 
-
-                <button
-                    className={
-                        classnames(
-                            styles.navBtn,
-                            styles.navCloseBtn
-                        )
-                    }
-                    onClick={showNavbar}>
-                    <FaTimes />
-                </button>
-                <div className={styles.links}>
-                    <button
-                        className={
-                            classnames(
-                                styles.navBtn
-                            )
-                        }
-                        onClick={showNavbar}>
-                        <Link href={instagram} target="_blank"><FaInstagram className={styles.socialNetworks} /></Link>
-                    </button>
-                    <button
-                        className={
-                            classnames(
-                                styles.navBtn
-                            )
-                        }
-                        onClick={showNavbar}>
-                        <Link href={linkedin} target="_blank"><FaLinkedin className={styles.socialNetworks}/></Link>
-                    </button>
-                    <button
-                        className={
-                            classnames(
-                                styles.navBtn
-                            )
-                        }
-                        onClick={showNavbar}>
-                        <Link href={`mailto:${email}`} target="_blank"><FaEnvelope className={styles.socialNetworks}/></Link>
-                    </button>
-                </div>
-            </nav>
+  const closeNavbar = () => {
+    navRef.current.classList.remove("responsiveNav");
+    logoRef.current.classList.remove("responsiveLogo");
+  };
+  // const style = { color: "#F2C12E !important", fontSize: "1.5em", marginTop: "150px" }
+  // removing for simplicity, dont know why its here
+  
+  return(
+    <>
+      <header className={styles.cabecalho}>
+        <Link href="/" className={styles.logo} >
+          <Image
+            src={nav.logo}
+            width={95}
+            height={95}
+            alt="Logo"
+          />
+        </Link>
+        <nav className={styles.navbar} ref={navRef}>
+          <button className={
+            classnames(
+              styles.navBtn,
+              styles.navRelabBtn
+            )
+            } ref={logoRef}>
+            <Link href="/" className={styles.droplogo}>
+              <Image
+                src={nav.logo}
+                width={95}
+                height={95}
+                alt="Logo"
+              />
+            </Link> 
+          </button>
+          
+          <h3 className={styles.anchorStuff} onClick={closeNavbar}><Link href="/quemSomos">QUEM SOMOS</Link></h3>
+          <h3 className={styles.anchorStuff} onClick={closeNavbar}><Link href="/servicos">SERVIÇOS</Link></h3>
+          <h3 className={styles.anchorStuff} onClick={closeNavbar}><Link href="/blog">BLOG</Link></h3>
+          
+          <button
+            className={
+              classnames(
+                styles.navBtn,
+                styles.navCloseBtn
+              )
+            }
+            onClick={showNavbar}>
+            <FaTimes />
+          </button>
+          <div className={styles.links}>
             <button
-                className={styles.navBtn}
-                onClick={showNavbar}>
-                <FaBars />
+              className={
+                classnames(
+                  styles.navBtn
+                )
+              }
+              onClick={showNavbar}>
+              <a href={contato.linkedin} target="_blank"><FaLinkedin className={styles.socialNetworks}/></a>
             </button>
-        </header>
-    );
+            <button
+              className={
+                classnames(
+                  styles.navBtn
+                )
+              }
+              onClick={showNavbar}>
+              <a href={`mailto:${contato.email}`} target="_blank"><FaEnvelope className={styles.socialNetworks}/></a>
+            </button>
+            <button
+              className={
+                classnames(
+                  styles.navBtn
+                )
+              }
+              onClick={showNavbar}>
+              <a href={contato.instagram} target="_blank"><FaInstagram className={styles.socialNetworks} /></a>
+            </button>
+          </div>
+        </nav>
+        <button
+          className={styles.navBtn}
+          onClick={showNavbar}>
+          <FaBars />
+        </button>
+      </header>
+    </>
+  );
 }
