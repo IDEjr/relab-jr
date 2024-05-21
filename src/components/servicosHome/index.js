@@ -2,7 +2,7 @@ import styles from './servicosHome.module.css'
 import Image from 'next/image'
 
 
-function Servico( servico ) { 
+function Servico( servico ) {
   return(
     <>
       <div className={styles.serviceContainer}>
@@ -35,8 +35,8 @@ function Servico( servico ) {
 }
 
 
-// function servicesHandler(){
-//   for(var i = 0; i <= (servicos.length)/3; i+=3){
+// function servicesHandler() {
+//   for(var i = 0; i <= (servicos.length)/3; i+=3) {
     
 //   }
 //   return(
@@ -48,7 +48,7 @@ function Servico( servico ) {
 export default function ServicosHome({ titulo, servicos }) {
 
   // var frames = new Array();
-  // for(var i = 0; i < servicos.length; i++){
+  // for(var i = 0; i < servicos.length; i++) {
   //   const frame = {
   //     imagem : servicos[i].imagem,
   //     titulo :  servicos[i].servico

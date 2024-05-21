@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from './carrosselBlog.module.css'
 import { register } from 'swiper/element/bundle'
 import { Swiper, SwiperSlide } from 'swiper/react'
-// import {  EffectCube,  Navigation, Pagination } from 'swiper/modules';
+// import { EffectCube, Navigation, Pagination } from 'swiper/modules'
 
 register(); //função para utilizar o swiper
 
@@ -20,13 +20,13 @@ export default function CarrosselBlog({ posts, titulo }) {
   var recents = [];
 
   for (const i in posts) //pega os dados importantes que estão localizados na posição 0 
-  {  
+  { 
     arrPosts.push(posts[i]); //rearranja os dados em um novo array
     arrPosts[i].data = new Date(arrPosts[i].data) //transforma as datas que estão em formato de string para formato DATE
   }
 
   function ordemDecrescente(a, b) {
-    return b.data - a.data;  //função passada por parametro para o ordenamento, se b-a então estará ordenado pelos mais recentes. Se a-b, estará ordenado da data antiga par a mais nova
+    return b.data - a.data;//função passada por parametro para o ordenamento, se b-a então estará ordenado pelos mais recentes. Se a-b, estará ordenado da data antiga par a mais nova
   }
   posts.sort(ordemDecrescente) //ordena os quatro primeiros por data
 
@@ -34,7 +34,7 @@ export default function CarrosselBlog({ posts, titulo }) {
     arrPosts[i].data = arrPosts[i].data.toISOString().split('T')[0]; //transforma as datas em formato DATE para string
   }
   for (let i = 0; i < 3; i++) {
-    recents.push(posts[i])  //limita o tamanho dos posts para 3
+    recents.push(posts[i]) //limita o tamanho dos posts para 3
   }
 
   return (
@@ -48,7 +48,7 @@ export default function CarrosselBlog({ posts, titulo }) {
             "--swiper-pagination-bullet-inactive-opacity": "0.5",
             "--swiper-pagination-bullet-size": "10px",
             // "--swiper-pagination-bullet-border-radius": "10px",
-            // "--swiper-pagination-bullet-width": "10px",   
+            // "--swiper-pagination-bullet-width": "10px",
             // "--swiper-pagination-bullet-height": "10px",
             "--swiper-pagination-bullet-horizontal-gap": " 15px"
           }}

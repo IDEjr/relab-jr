@@ -14,7 +14,7 @@ export default function Footer({ contato, footer }) {
     <>
       <div className={styles.footer}>
         <div className={styles.linearGradient}/>
-        {/* <Image 
+        {/* <Image
         src={footer.background}
         
         layout="fill"
@@ -33,7 +33,7 @@ export default function Footer({ contato, footer }) {
                 className={styles.relabLogo}
                 alt="Logo"
               />
-          </Link>       
+          </Link>
           <div className={styles.contactSocials}>
             <h3 className={styles.contactText}>
               {footer.textoContato}
@@ -64,7 +64,7 @@ export default function Footer({ contato, footer }) {
                 quality={100}
                 alt={footer.link1}
               />
-            </a>            
+            </a>
             <a className={styles.watermarkCover} href={footer.link2} target='_blank'>
               <Image
                 src={footer.watermark2}

@@ -61,7 +61,7 @@ export default function Home({ home, posts, nav, foo, servicos, contato }) {
 }
 
 
-export async function getStaticProps(){
+export async function getStaticProps() {
 
   const home = handleJSONfile(`./content/paginas/home.json`);
   const nav = handleJSONfile(`./content/navFooter/navbar.json`);

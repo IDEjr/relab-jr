@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function TextoBarraQuemSomos({ texto1, texto2, logo }) {
   return (
-    <>  
+    <>
       <div className={styles.container}> {/* inicio da div container */}
         <div className={styles.topText}>
           <p className={styles.textContent}>{texto1}</p>
@@ -23,7 +23,7 @@ export default function TextoBarraQuemSomos({ texto1, texto2, logo }) {
             <p className={styles.textContent}>{texto2}</p>
           </div>
         </div> {/* fim da div textImage */}
-      </div>  {/* fim da div container */}
+      </div>{/* fim da div container */}
     </>
   )
 }

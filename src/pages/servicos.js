@@ -38,7 +38,7 @@ export default function Servicos({ paginaServicos, nav, foo, formularios, servic
 }
 
 
-export async function getStaticProps(){
+export async function getStaticProps() {
 
   const foo = handleJSONfile(`./content/navFooter/footer.json`);
   const paginaServicos = handleJSONfile(`./content/paginas/servicos.json`);

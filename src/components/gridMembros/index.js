@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import styles from './gridMembros.module.css'
-import CardMembros from '@/components/cardMembro';
+import CardMembros from '@/components/cardMembro'
 
 export default function GridMembros({ titulo, logo, membros }) {
-  //const cargos = ['Presidência','Vice-Presidência','Diretoria','Assessoria','Gerência','Consultoria']; 
+  //const cargos = ['Presidência','Vice-Presidência','Diretoria','Assessoria','Gerência','Consultoria'];
   let Ps = [];
   let VPs = [];
   let Dir = [];
@@ -11,20 +11,20 @@ export default function GridMembros({ titulo, logo, membros }) {
   let Ger = [];
   let Cons = [];
   let aux = membros[0];
-  for (let i in membros){
-    if(membros[i].posicao == 'Presidência'){
+  for (let i in membros) {
+    if(membros[i].posicao == 'Presidência') {
       // console.log(membros[i]);
       Ps.push(membros[i]);
-    }else if(membros[i].posicao == ('Vice-Presidência')){
+    } else if(membros[i].posicao == ('Vice-Presidência')) {
       // console.log(membros[i]);
       VPs.push(membros[i]);
-    }else if(membros[i].posicao.includes('Diretoria')){
+    } else if(membros[i].posicao.includes('Diretoria')) {
       Dir.push(membros[i]);
-    }else if(membros[i].posicao.includes('Assessoria')){
+    } else if(membros[i].posicao.includes('Assessoria')) {
       Ass.push(membros[i]);
-    }else if(membros[i].posicao.includes('Gerência')){
+    } else if(membros[i].posicao.includes('Gerência')) {
       Ger.push(membros[i]);
-    }else if(membros[i].posicao.includes('Consultoria')){
+    } else if(membros[i].posicao.includes('Consultoria')) {
       Cons.push(membros[i]);
     }
   }
@@ -35,13 +35,13 @@ export default function GridMembros({ titulo, logo, membros }) {
     <>
       <div className={styles.chamariz}>
         <h2 className={styles.tituloMembros}>{titulo}</h2>
-        <Image          
+        <Image
           className={styles.logoGrid}
           src={logo}
           width={95}
           height={95}
           alt="Logo"
-        /> 
+        />
         <ul className={styles.membrosGrid}>
           {membros && membros.map((membro, i) => (
             <CardMembros

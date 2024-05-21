@@ -82,7 +82,7 @@ export default function MenuBlog({ posts, generos }) {
                   onClick={() => setIsactive(!isActive)}
                   className={styles.optionButton}
                 >
-                {isActive ? <GoChevronUp className={styles.icone} /> : <GoChevronDown className={styles.icone} />} 
+                {isActive ? <GoChevronUp className={styles.icone} /> : <GoChevronDown className={styles.icone} />}
                 </div>
               </div>
               <div className={styles.aaa}>

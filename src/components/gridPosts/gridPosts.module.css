@@ -5,8 +5,8 @@
 
 .postsGrid {
   display: grid;
-  grid-column-gap: 50px; 
-  grid-row-gap: 20px; 
+  grid-column-gap: 50px;
+  grid-row-gap: 20px;
 }
 
 
@@ -44,28 +44,28 @@
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .postsGrid {
-    grid-template-columns: 500px; 
+    grid-template-columns: 500px;
     /* padding: 5vh 0vw; */
   }
 }
 
 @media only screen and (min-width: 577px) and (max-width: 768px) {
   .postsGrid {
-    grid-template-columns: 400px; 
+    grid-template-columns: 400px;
     /* padding: 5vh 10vw; */
   }
 }
 
 @media only screen and (min-width: 300px) and (max-width: 576px) {
   .postsGrid {
-    grid-template-columns: 300px; 
+    grid-template-columns: 300px;
     /* padding: 5vh 0vw; */
   }
 }
 
 @media only screen and (max-width: 299px) {
   .postsGrid {
-    grid-template-columns: 230px; 
+    grid-template-columns: 230px;
     /* padding: 5vh 0vw; */
   }
 }

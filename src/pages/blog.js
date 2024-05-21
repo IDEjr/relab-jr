@@ -17,10 +17,10 @@ export default function Blog({ posts, nav, foo, blog, contato, generos }) {
   return (
     <>
       <Navbar contato = {contato} nav = {nav}/>
-      <CarrosselBlog posts = {posts} titulo = {blog.inicioBlog.titulo}/>  
+      <CarrosselBlog posts = {posts} titulo = {blog.inicioBlog.titulo}/>
       <MenuBlog posts = {posts} generos = {generos}/>
       <Footer contato = {contato} footer = {foo}/>
-    </> 
+    </>
   );
 }
 

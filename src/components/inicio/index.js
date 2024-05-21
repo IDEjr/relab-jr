@@ -2,7 +2,7 @@ import Image from 'next/image'
 import styles from './inicio.module.css'
 
 
-export default function Inicio( props ) {  
+export default function Inicio( props ) {
   return (
     <>
       <div className={styles.container}>

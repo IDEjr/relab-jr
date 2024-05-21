@@ -21,7 +21,6 @@ export function handleJSONfiles(filePath) {
   });
   return posts;
 }
-  
 /**
  * @description função que carrega um único JSON de um caminho
  * @param filePath caminho do arquivo com base na raiz

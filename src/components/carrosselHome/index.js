@@ -13,12 +13,12 @@ import 'swiper/css/scrollbar'
 import "swiper/css/effect-flip"
 
 
-/*Pegue os titulos que estão no json da home, e passar para aqui, e renderizar somente os posts que tem mesmo titulo dos 
+/*Pegue os titulos que estão no json da home, e passar para aqui, e renderizar somente os posts que tem mesmo titulo dos
 selecionados.*/
 export default function CarrosselHome({ posts, titulo }) {
 //So passar os props como o objeto e eles sao desmembrados dentro do componente, esse é o jeito certo de usar.
 
-//Pega os ultimos 4 posts 
+//Pega os ultimos 4 posts
   posts.sort((a, b) => new Date(b.data) - new Date(a.data));
   const filteredPosts = posts.slice(0,4);
   console.log(filteredPosts)
@@ -52,20 +52,20 @@ export default function CarrosselHome({ posts, titulo }) {
             pagination={{
               enabled: true,
               clickable: true,
-              dynamicBullets: true 
+              dynamicBullets: true
             }}
             grabCursor={true}
-            // navigation={{  //configurações do navi
+            // navigation={{ //configurações do navi
             //   enabled: false
             // }}
             // modules = {[Autoplay]}
             // breakpoints={{
-            //   1281: {  //acima de 1281px, ativa o navigation (as setinhas) e o pagination (as bolinhas)
+            //   1281: { //acima de 1281px, ativa o navigation (as setinhas) e o pagination (as bolinhas)
             //     navigation: {
-            //       enabled: true  
+            //       enabled: true
             //     }
             //   },
-            //   767: {  //acima de 1281px, ativa o navigation (as setinhas) e o pagination (as bolinhas)
+            //   767: { //acima de 1281px, ativa o navigation (as setinhas) e o pagination (as bolinhas)
             //     pagination: {
             //       enabled: true
             //     }
@@ -75,7 +75,7 @@ export default function CarrosselHome({ posts, titulo }) {
           >
             {filteredPosts.map((post)=> (
               <SwiperSlide key={post.titulo} className={styles.swiperIndi}>
-                <CardPost 
+                <CardPost
                   imagem={post.imagemCapa}
                   fileName={post.fileName}
                   titulo={post.titulo}

@@ -177,7 +177,7 @@
 
 .contactContainer {
   flex: 1;
-  display: flex; 
+  display: flex;
   flex-direction: column;
   /* margin-top: 2rem; */
 }
@@ -198,7 +198,7 @@
 }
 
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 800px) {
 
   .formAndContact {
     flex-direction: column;

@@ -2,15 +2,15 @@ import { mailOptions, transporter } from "@/lib/nodemailer"
 
 const handler = async (req, res) => {
 
-  if (req.method === "POST"){
+  if (req.method === "POST") {
     const data = JSON.parse(req.body);
-    if (!data.nome || !data.email || !data.celular || !data.assunto){
+    if (!data.nome || !data.email || !data.celular || !data.assunto) {
       return res.status(400).json({ message: 'Campo(s) obrigatório(s) não preenchido(s).'})
     }
 
     try {
       await transporter.sendMail({
-        ...mailOptions, 
+        ...mailOptions,
         subject: data.assunto,
         text:
         `Nome: ${data.nome}\n` +

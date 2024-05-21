@@ -20,7 +20,7 @@ export default function CarrosselQuemSomos({ imagens }) {
           style={{
             "--swiper-theme-color": "#F2C12E",
             "--swiper-pagination-color": "#F2C12E",
-            "--swiper-pagination-bullet-inactive-color": "#c19a24  ",   //algumas estilizações do navigation, pagination
+            "--swiper-pagination-bullet-inactive-color": "#c19a24  ", //algumas estilizações do navigation, pagination
             "--swiper-pagination-bullet-inactive-opacity": "0.5",
             "--swiper-pagination-bullet-border-radius": "10px",
             "--swiper-pagination-bullet-width": "10px",
@@ -29,30 +29,30 @@ export default function CarrosselQuemSomos({ imagens }) {
           }}
           slidesPerView={1}  //define a quantidade de slides por visualização
           loop={true}
-          autoplay={{  //configurações do autoplay
+          autoplay={{ //configurações do autoplay
             delay: 3000,
             disableOnInteraction: false
           }}
-          pagination={{   //configurações da pagination
+          pagination={{ //configurações da pagination
             enabled: true,
             clickable: true,
             dynamicBullets: true
           }}
           grabCursor={true}  //ativando o grabCursor com configurações default
-          // navigation={{  //configurações do navi
+          // navigation={{ //configurações do navi
           //   enabled: false
           // }}
 
           breakpoints={{
-            800: {  //acima de 800px, aumenta os slides por visualização para dois, e ativa o navigation (as setinhas)
+            800: { //acima de 800px, aumenta os slides por visualização para dois, e ativa o navigation (as setinhas)
               slidesPerView: 2,
               // navigation: {
-              //   enabled: true  
+              //   enabled: true
               // }
             }
           }}
         >
-          {imagens.map((item) => (     //mostra um slide para cada imagem contida em images
+          {imagens.map((item) => ( //mostra um slide para cada imagem contida em images
             <SwiperSlide key={item} className={styles.swiperSlide} >
               <div className={styles.image}>
                 <Image
@@ -63,8 +63,8 @@ export default function CarrosselQuemSomos({ imagens }) {
                 />
               </div>
             </SwiperSlide>))
-          } 
-        </Swiper> 
+          }
+        </Swiper>
       </div>
     </>
   )

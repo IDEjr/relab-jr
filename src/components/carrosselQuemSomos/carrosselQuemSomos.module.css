@@ -13,7 +13,7 @@ align-self: center;
 align-items: center;
 }
 
-@media only screen  and  (max-width: 1200px)  {
+@media only screen  and  (max-width: 1200px) {
 
   .image{
     height: 30rem;

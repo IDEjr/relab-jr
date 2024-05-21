@@ -98,7 +98,7 @@ header .logo{
 		border-bottom: 5px solid black;
 		border-image: linear-gradient(to right, red, blue);
 	}
-
+  
 	.cabecalho .responsiveNav {
 		transform: translateY(100vh);
 		width: 300px;
@@ -110,7 +110,6 @@ header .logo{
 		color: white;
 		right: 2rem;
 	}
-	
 	
 	.navbar .navRelabBtn {
 		position: absolute;
@@ -125,7 +124,7 @@ header .logo{
 	}
 }
 
-/* @media only screen and (max-width: 1024px) and (orientation: landscape){
+/* @media only screen and (max-width: 1024px) and (orientation: landscape) {
 
 	.droplogo{
 		display: none;

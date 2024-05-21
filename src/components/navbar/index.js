@@ -46,7 +46,7 @@ export default function Navbar({ contato, nav }) {
                 height={95}
                 alt="Logo"
               />
-            </Link> 
+            </Link>
           </button>
           
           <h3 className={styles.anchorStuff} onClick={closeNavbar}><Link href="/quemSomos">QUEM SOMOS</Link></h3>

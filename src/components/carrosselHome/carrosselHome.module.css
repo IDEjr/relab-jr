@@ -97,13 +97,13 @@
   }
 } */
 
-/* @media only screen and (min-width: 300px) and (max-width: 576px)  and (orientation: portrait) {
+/* @media only screen and (min-width: 300px) and (max-width: 576px) and (orientation: portrait) {
   .swiperContainer{
     width: 80%;
   }
 } */
 
-@media only screen  and (max-width: 576px)  and (orientation: portrait) {
+@media only screen  and (max-width: 576px) and (orientation: portrait) {
   .swiperIndi{
     padding: 0rem 2rem 2rem 2rem;
   }

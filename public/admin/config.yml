@@ -226,7 +226,7 @@ collections:
     fields:
       - {label: "Nome e sobrenome", name: "nome", widget: "string", pattern: ['^.{1,30}$', "Máximo 30 carateres."]}
       - {label: "Imagem", name: "imagem", widget: "image"}
-      - {label: "Posição", name: "posicao", widget: "select",  options: ["Presidência", "Vice-Presidência",
+      - {label: "Posição", name: "posicao", widget: "select", options: ["Presidência", "Vice-Presidência",
                                                                         "Diretoria Projetos", "Assessoria Projetos", "Gerência Projetos", "Consultoria Projetos",
                                                                         "Diretoria Financeiro", "Assessoria Financeiro", "Gerência Financeiro", "Consultoria Financeiro",
                                                                         "Diretoria Comercial", "Assessoria Comercial", "Gerência Comercial", "Consultoria Comercial",

@@ -59,7 +59,7 @@ export default function QuemSomos({ quemSomos, membros, nav, foo, formularios, c
 }
 
 
-export async function getStaticProps(){
+export async function getStaticProps() {
 
   const foo = handleJSONfile(`./content/navFooter/footer.json`);
   const quemSomos = handleJSONfile(`./content/paginas/quemSomos.json`);
