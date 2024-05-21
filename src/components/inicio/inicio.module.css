@@ -2,16 +2,12 @@
   position: relative; /* Define o posicionamento relativo para o container */
   display: inline-block; /* Ou display: block, dependendo do layout desejado */
   width: 100%;
+  height: 100vh;
 }
-
 
 .initImg {
-  height: 800px;
-  object-fit: cover;
-  max-width: 100%;
   filter: brightness(40%); 
 }
-
 
 .title {
   position: absolute; /* Define o posicionamento absoluto para o texto */
@@ -22,32 +18,4 @@
   padding: 10px; /* Adiciona algum espaço interno ao redor do texto */
   max-width: 10em; /* Defina a largura máxima desejada */
   word-wrap: break-word; /* Garante que as palavras se quebrem para a próxima linha */
-}
-
-
-@media (min-width: 1561px) {
-  .initImg {
-    max-height: 90%;
-
-  }
-  .title{
-    /* font-size: 5vw; */
-  }
-  
-}
-
-
-@media (min-width: 1024px) and (max-width: 1560px) {
-  .initImg {
-    max-height: 90%;
-  }
-}
-
-@media (max-width: 1023px) {
-  .initImg {
-    min-height: 600px; /* Defina a altura mínima desejada */
-  }
-  .title{
-    /* font-size: 8vw; */
-  }
 }
