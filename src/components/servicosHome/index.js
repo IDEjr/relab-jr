@@ -51,7 +51,7 @@ export default function ServicosHome({ titulo, servicos }) {
   // for(var i = 0; i < servicos.length; i++) {
   //   const frame = {
   //     imagem : servicos[i].imagem,
-  //     titulo :  servicos[i].servico
+  //     titulo : servicos[i].servico
   //   }
   //   frames[i] = frame;
   // }

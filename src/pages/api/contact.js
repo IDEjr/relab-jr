@@ -18,11 +18,11 @@ const handler = async (req, res) => {
         `E-mail: ${data.email}\n` +
         `_______________________________________________________________________________________________________________________________________\n` +
         `${data.mensagem}`,
-        html:  `<p>Nome: ${data.nome}</p>
-            <p>Celular: ${data.celular}</p>
-            <p>E-mail: ${data.email}
-            <hr/>
-            <p>${data.mensagem}</p>`
+        html:`<p>Nome: ${data.nome}</p>
+              <p>Celular: ${data.celular}</p>
+              <p>E-mail: ${data.email}
+              <hr/>
+              <p>${data.mensagem}</p>`
       })
       return res.status(200).json({ sucess: true });
 

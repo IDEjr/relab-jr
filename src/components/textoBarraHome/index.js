@@ -4,9 +4,9 @@ export default function TextoBarraHome({ texto }) {
   return(
     <>
       <div className={styles.container}>
-        <div className={styles.retangulo}></div>
-        <div className={styles.text}>
-          <p className={styles.textContent}>
+        <div className={styles.bar}></div>
+        <div className={styles.textContainer}>
+          <p className={styles.text}>
             {texto}
           </p>
         </div>
