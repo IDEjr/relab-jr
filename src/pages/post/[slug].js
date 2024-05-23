@@ -75,7 +75,7 @@ export default function Posts({ post, nav, foo, blog, contato }) {
           <div className={styles.authorAndPencil}>
             <RxPencil1 />
             <p className={styles.authorName}>
-              <a href={post.linkedin} className={styles.autor}>
+              <a href={post.linkedin} target="_blank" className={styles.autor}>
                 {post.autor}
               </a>
             </p>
