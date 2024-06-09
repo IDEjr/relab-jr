@@ -10,8 +10,6 @@ function createWhatsAppLink( celular ) {
   // Remove caracteres que não são dígitos
   const celularPuro = celular.replace(/[^\d]/g, '');
 
-  console.log(celularPuro)
-
   return `https://wa.me/${celularPuro}`;
 }
 

@@ -18,8 +18,6 @@ export default function Posts({ post, nav, foo, blog, contato }) {
   const router = useRouter();
   const { postId } = router.query
 
-  console.log(blog)
-
   const navData = {
     logo: nav.logo,
     linkedin: nav.linkedin,

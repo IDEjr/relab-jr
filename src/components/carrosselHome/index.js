@@ -21,7 +21,6 @@ export default function CarrosselHome({ posts, titulo }) {
 //Pega os ultimos 4 posts
   posts.sort((a, b) => new Date(b.data) - new Date(a.data));
   const filteredPosts = posts.slice(0,4);
-  console.log(filteredPosts)
 
   return (
     <>

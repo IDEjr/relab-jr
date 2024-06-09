@@ -9,7 +9,6 @@ const handleMove = () => {
 };
 
 export default function Footer({ contato, footer }) {
-  console.log(footer)
   return (
     <>
       <div className={styles.footer}>
