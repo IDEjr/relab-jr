@@ -2,7 +2,7 @@ import styles from "./formularioQuemSomos.module.css"
 import Image from 'next/image'
 import { useForm } from "react-hook-form"
 import { isEmail, isMobilePhone } from "validator"
-import { sendContactForm } from "@/lib/api"
+import { sendContactForm } from "@/lib/sendForm"
 import { FaRegComment, FaRegEnvelope, FaHome } from "react-icons/fa"
 
 
@@ -109,7 +109,7 @@ export default function FormularioQuemSomos({ contato, forms }) {
 
   const onSubmit = async (data) => {
     try {
-      await sendContactForm(data);
+      await sendContactForm(data, "contactMembers");
       // reset() seria melhor
       document.getElementById("nome").value = "";
       document.getElementById("email").value = "";
