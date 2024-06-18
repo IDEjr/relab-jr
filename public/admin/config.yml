@@ -5,7 +5,7 @@ backend:
 publish_mode: editorial_workflow # Para fazer um esquema de revisão de novas edições
 media_folder: "public/uploads" # Onde os arquivos de mídia serão armazenados
 public_folder: "/uploads" # Onde a parte de mídia vai poder ser acessada
-display_url: https://admin-ui-netlify-relabjr.com # URL que será mostrado no UI do Netlify
+#display_url: https://admin-ui-netlify-relabjr.com # URL que será mostrado no UI do Netlify
 
 
 
@@ -293,8 +293,6 @@ collections:
         extension: "json"
         format: "json"
         fields:
-          - {label: "Email do formulário", name: "emailForm", widget: "string"}
-          - {label: "Senha de App Google", name: "senhaApp", widget: "string"}
           - {label: "Logo Formulários", name: "logo", widget: "image"}
           - {label: "Título Membros", name: "tituloMembros", widget: "string"}
           - {label: "Título Servicos", name: "tituloServicos", widget: "string"}

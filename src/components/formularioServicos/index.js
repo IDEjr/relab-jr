@@ -68,12 +68,7 @@ export default function FormularioServicos({ contato, forms }) {
 
   const onSubmit = async (data) => {
     try {
-      const formData = {
-        ...data,
-        emailForm: forms.emailForm,
-        senhaApp: forms.senhaApp,
-      };
-      await sendContactForm(formData, "contactClients");
+      await sendContactForm(data, "contactClients");
       
       // reset() seria melhor
       document.getElementById("nome").value = "";
