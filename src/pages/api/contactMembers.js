@@ -1,14 +1,33 @@
-import { mailOptions, transporter } from "@/utils/functions/nodemailer"
+import nodemailer from "nodemailer"
 
 const handler = async (req, res) => {
 
   if (req.method === "POST") {
-    const data = JSON.parse(req.body);
+    const data = req.body;
     if (!data.nome || !data.email || !data.celular || !data.curso || !data.semestre || !data.assunto || !data.mensagem) {
       return res.status(400).json({ message: 'Campo(s) obrigatório(s) não preenchido(s).'})
     }
 
     try {
+      const email = data.emailForm;
+      const password = data.senhaApp;
+      
+      console.log(email)
+      console.log(password)
+
+      const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth:{
+          user: email,
+          pass: password
+        }
+      });
+    
+      const mailOptions = {
+        from: email,
+        to: email,
+      };
+      
       await transporter.sendMail({
         ...mailOptions,
         subject: data.assunto,

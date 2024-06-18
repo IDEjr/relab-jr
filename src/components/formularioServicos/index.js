@@ -68,7 +68,13 @@ export default function FormularioServicos({ contato, forms }) {
 
   const onSubmit = async (data) => {
     try {
-      await sendContactForm(data, "contactClients");
+      const formData = {
+        ...data,
+        emailForm: forms.emailForm,
+        senhaApp: forms.senhaApp,
+      };
+      await sendContactForm(formData, "contactClients");
+      
       // reset() seria melhor
       document.getElementById("nome").value = "";
       document.getElementById("email").value = "";
@@ -76,8 +82,10 @@ export default function FormularioServicos({ contato, forms }) {
       document.getElementById("assunto").value = "";
       document.getElementById("mensagem").value = "";
     } catch (error) {
+      console.error("Error sending contact form:", error);
     }
-  }
+  };
+  
 
   const whatsappLink = createWhatsAppLink(contato.celular);
 
