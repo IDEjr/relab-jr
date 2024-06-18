@@ -1,4 +1,4 @@
-import nodemailer from "nodemailer"
+import nodemailer from 'nodemailer'
 
 
 const handler = async (req, res) => {
@@ -10,11 +10,8 @@ const handler = async (req, res) => {
     }
 
     try {
-      const email = data.emailForm;
-      const password = data.senhaApp;
-      
-      console.log(email)
-      console.log(password)
+      const email = process.env.EMAIL_FORM;
+      const password = process.env.SENHA_DE_APP;
 
       const transporter = nodemailer.createTransport({
         service: 'gmail',

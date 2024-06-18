@@ -1,25 +1,18 @@
 import styles from './navbar.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useRef } from "react"
-import { FaBars, FaTimes, FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa"
+import { useRef } from 'react'
+import { FaBars, FaTimes, FaInstagram, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 import classnames from 'classnames'
 
 export default function Navbar({ contato, nav }) {
   const navRef = useRef();
   const logoRef = useRef();
 
-	const showNavbar = () => {
+	const toggleNavbar = () => {
 		navRef.current.classList.toggle( "responsiveNav" );
     logoRef.current.classList.toggle(	"responsiveLogo" );
 	};
-
-  const closeNavbar = () => {
-    navRef.current.classList.remove("responsiveNav");
-    logoRef.current.classList.remove("responsiveLogo");
-  };
-  // const style = { color: "#F2C12E !important", fontSize: "1.5em", marginTop: "150px" }
-  // removing for simplicity, dont know why its here
   
   return(
     <>
@@ -49,9 +42,15 @@ export default function Navbar({ contato, nav }) {
             </Link>
           </button>
           
-          <h3 className={styles.anchorStuff} onClick={closeNavbar}><Link href="/quemSomos">QUEM SOMOS</Link></h3>
-          <h3 className={styles.anchorStuff} onClick={closeNavbar}><Link href="/servicos">SERVIÇOS</Link></h3>
-          <h3 className={styles.anchorStuff} onClick={closeNavbar}><Link href="/blog">BLOG</Link></h3>
+          <h3 className={styles.anchorStuff} onClick={toggleNavbar}>
+            <Link href="/quemSomos">QUEM SOMOS</Link>
+          </h3>
+          <h3 className={styles.anchorStuff} onClick={toggleNavbar}>
+            <Link href="/servicos">SERVIÇOS</Link>
+          </h3>
+          <h3 className={styles.anchorStuff} onClick={toggleNavbar}>
+            <Link href="/blog">BLOG</Link>
+          </h3>
           
           <button
             className={
@@ -60,42 +59,30 @@ export default function Navbar({ contato, nav }) {
                 styles.navCloseBtn
               )
             }
-            onClick={showNavbar}>
+            onClick={toggleNavbar}>
             <FaTimes />
           </button>
           <div className={styles.links}>
-            <button
-              className={
-                classnames(
-                  styles.navBtn
-                )
-              }
-              onClick={showNavbar}>
-              <a href={contato.linkedin} target="_blank"><FaLinkedin className={styles.socialNetworks}/></a>
+            <button className={styles.navBtn} onClick={toggleNavbar}>
+              <a href={contato.linkedin} target="_blank" >
+                <FaLinkedin className={styles.socialNetworks} />
+              </a>
             </button>
-            <button
-              className={
-                classnames(
-                  styles.navBtn
-                )
-              }
-              onClick={showNavbar}>
-              <a href={`mailto:${contato.email}`} target="_blank"><FaEnvelope className={styles.socialNetworks}/></a>
+            <button className={styles.navBtn} onClick={toggleNavbar}>
+              <a href={`mailto:${contato.email}`} target="_blank" >
+                <FaEnvelope className={styles.socialNetworks} />
+              </a>
             </button>
-            <button
-              className={
-                classnames(
-                  styles.navBtn
-                )
-              }
-              onClick={showNavbar}>
-              <a href={contato.instagram} target="_blank"><FaInstagram className={styles.socialNetworks} /></a>
+            <button className={styles.navBtn} onClick={toggleNavbar}>
+              <a href={contato.instagram} target="_blank" >
+                <FaInstagram className={styles.socialNetworks} />
+              </a>
             </button>
           </div>
         </nav>
         <button
           className={styles.navBtn}
-          onClick={showNavbar}>
+          onClick={toggleNavbar}>
           <FaBars />
         </button>
       </header>

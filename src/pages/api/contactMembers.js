@@ -9,8 +9,8 @@ const handler = async (req, res) => {
     }
 
     try {
-      const email = data.emailForm;
-      const password = data.senhaApp;
+      const email = process.env.EMAIL_FORM;
+      const password = process.env.SENHA_DE_APP;
       
       console.log(email)
       console.log(password)
