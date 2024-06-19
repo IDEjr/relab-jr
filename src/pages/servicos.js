@@ -10,13 +10,6 @@ import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 
 export default function Servicos({ paginaServicos, nav, foo, formularios, servicos, contato }) {
 
-  // const navData = {
-  //   logo : nav.logo,
-  //   linkedin : nav.linkedin,
-  //   instagram : nav.instagram,
-  //   email : nav.email
-  // }
-
   const tituloServicos = paginaServicos.inicioServicos.titulo;
   const imagemServicos = paginaServicos.inicioServicos.imagem;
 

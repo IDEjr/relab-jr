@@ -110,15 +110,7 @@ export default function FormularioQuemSomos({ contato, forms }) {
   const onSubmit = async (data) => {
     try {
       await sendContactForm(data, "contactMembers");
-
-      // reset() seria melhor
-      document.getElementById("nome").value = "";
-      document.getElementById("email").value = "";
-      document.getElementById("celular").value = "";
-      document.getElementById("curso").value = "";
-      document.getElementById("semestre").value = "";
-      document.getElementById("assunto").value = "";
-      document.getElementById("mensagem").value = "";
+      reset()
     } catch (error) {
       console.error("Error sending contact form:", error);
     }
@@ -142,127 +134,129 @@ export default function FormularioQuemSomos({ contato, forms }) {
         </h2>
         <div className={styles.formAndContact}>
           <div className={styles.formContainer}>
-            <div className={styles.mediumField}>
-              <input
-                className={errors?.nome && styles.input_error}
-                id="nome"
-                type="text"
-                placeholder="Nome*"
-                {...register("nome", {
-                  required: true
-                })}
-              />
-              {errors?.nome?.type === "required" && (
-                <p className={styles.error_message}>Campo obrigatório</p>
-              )}
-            </div>
-            <div className={styles.doubleInput}>
-              <div className={styles.smallField}>
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <div className={styles.mediumField}>
                 <input
-                  className={errors?.email && styles.input_error}
-                  id="email"
-                  type="email"
-                  placeholder="E-mail*"
-                  {...register("email", {
-                    required: true,
-                    validate: (value) => isEmail(value),
-                  })}
-                />
-                {errors?.email?.type === "required" && (
-                  <p className={styles.error_message}>Campo obrigatório.</p>
-                )}
-                {errors?.email?.type === "validate" && (
-                <p className={styles.error_message}>Email inválido</p>
-                )}
-              </div>
-              <div className={styles.smallField}>
-                <input
-                  className={errors?.celular && styles.input_error}
-                  id="celular"
-                  maxLength="15"
+                  className={errors?.nome && styles.input_error}
+                  id="nome"
                   type="text"
-                  onKeyDown={(event) => allowToEnterPhoneNumber(event)}
-                  placeholder="Celular*"
-                  {...register("celular", {
-                    required: true,
-                    validate: (value) => isMobilePhone(value, 'pt-BR'),
-                  })}
-                />
-                {errors?.celular?.type === "required" && (
-                  <p className={styles.error_message}>Campo obrigatório</p>
-                )}
-                {errors?.celular?.type === "validate" && (
-                  <p className={styles.error_message}>Número inválido.</p>
-                )}
-              </div>
-            </div>
-            <div className={styles.doubleInput}>
-              <div className={styles.smallField}>
-                <input
-                  className={errors?.curso && styles.input_error}
-                  id="curso"
-                  type="text"
-                  placeholder="Curso*"
-                  {...register("curso", {
+                  placeholder="Nome*"
+                  {...register("nome", {
                     required: true
                   })}
-                  />
-                  {errors?.curso?.type === "required" && (
-                    <p className={styles.error_message}>Campo obrigatório</p>
-                  )}
-              </div>
-              <div className={styles.smallField}>
-                <input
-                  className={errors?.semestre && styles.input_error}
-                  id="semestre"
-                  maxLength="6"
-                  type="text"
-                  onKeyDown={(event) => allowToEnterSemester(event)}
-                  placeholder="Semestre*"
-                  {...register("semestre", {
-                    required: true,
-                    validate: (value) => /^\d{4}\/\d$/.test(value)
-                  })}
                 />
-                {errors?.semestre?.type === "required" && (
+                {errors?.nome?.type === "required" && (
                   <p className={styles.error_message}>Campo obrigatório</p>
                 )}
-                {errors?.semestre?.type === "validate" && (
-                  <p className={styles.error_message}>Semestre inválido.</p>
+              </div>
+              <div className={styles.doubleInput}>
+                <div className={styles.smallField}>
+                  <input
+                    className={errors?.email && styles.input_error}
+                    id="email"
+                    type="email"
+                    placeholder="E-mail*"
+                    {...register("email", {
+                      required: true,
+                      validate: (value) => isEmail(value),
+                    })}
+                  />
+                  {errors?.email?.type === "required" && (
+                    <p className={styles.error_message}>Campo obrigatório.</p>
+                  )}
+                  {errors?.email?.type === "validate" && (
+                  <p className={styles.error_message}>Email inválido</p>
+                  )}
+                </div>
+                <div className={styles.smallField}>
+                  <input
+                    className={errors?.celular && styles.input_error}
+                    id="celular"
+                    maxLength="15"
+                    type="text"
+                    onKeyDown={(event) => allowToEnterPhoneNumber(event)}
+                    placeholder="Celular*"
+                    {...register("celular", {
+                      required: true,
+                      validate: (value) => isMobilePhone(value, 'pt-BR'),
+                    })}
+                  />
+                  {errors?.celular?.type === "required" && (
+                    <p className={styles.error_message}>Campo obrigatório</p>
+                  )}
+                  {errors?.celular?.type === "validate" && (
+                    <p className={styles.error_message}>Número inválido.</p>
+                  )}
+                </div>
+              </div>
+              <div className={styles.doubleInput}>
+                <div className={styles.smallField}>
+                  <input
+                    className={errors?.curso && styles.input_error}
+                    id="curso"
+                    type="text"
+                    placeholder="Curso*"
+                    {...register("curso", {
+                      required: true
+                    })}
+                    />
+                    {errors?.curso?.type === "required" && (
+                      <p className={styles.error_message}>Campo obrigatório</p>
+                    )}
+                </div>
+                <div className={styles.smallField}>
+                  <input
+                    className={errors?.semestre && styles.input_error}
+                    id="semestre"
+                    maxLength="6"
+                    type="text"
+                    onKeyDown={(event) => allowToEnterSemester(event)}
+                    placeholder="Semestre*"
+                    {...register("semestre", {
+                      required: true,
+                      validate: (value) => /^\d{4}\/\d$/.test(value)
+                    })}
+                  />
+                  {errors?.semestre?.type === "required" && (
+                    <p className={styles.error_message}>Campo obrigatório</p>
+                  )}
+                  {errors?.semestre?.type === "validate" && (
+                    <p className={styles.error_message}>Semestre inválido.</p>
+                  )}
+                </div>
+              </div>
+              <div className={styles.mediumField}>
+                <input
+                  className={errors?.assunto && styles.input_error}
+                  id="assunto"
+                  type="text"
+                  placeholder="Assunto*"
+                  {...register("assunto", {
+                    required: true
+                  })}
+                />
+                {errors?.assunto?.type === "required" && (
+                  <p className={styles.error_message}>Campo obrigatório</p>
                 )}
               </div>
-            </div>
-            <div className={styles.mediumField}>
-              <input
-                className={errors?.assunto && styles.input_error}
-                id="assunto"
-                type="text"
-                placeholder="Assunto*"
-                {...register("assunto", {
-                  required: true
-                })}
-              />
-              {errors?.assunto?.type === "required" && (
-                <p className={styles.error_message}>Campo obrigatório</p>
-              )}
-            </div>
-            <div className={styles.largeField}>
-              <textarea
-                className={styles.mensagem+" "+(errors?.mensagem && styles.input_error)}
-                id="mensagem"
-                type="text"
-                placeholder="Sua mensagem"
-                {...register("mensagem", {
-                  required: true
-                })}
-              />
-              {errors?.mensagem?.type === "required" && (
-                <p className={styles.error_message}>Campo obrigatório</p>
-              )}
-            </div>
-            <div className={styles.mediumField}>
-              <button onClick={() => handleSubmit(onSubmit)()}>Enviar</button>
-            </div>
+              <div className={styles.largeField}>
+                <textarea
+                  className={styles.mensagem+" "+(errors?.mensagem && styles.input_error)}
+                  id="mensagem"
+                  type="text"
+                  placeholder="Sua mensagem"
+                  {...register("mensagem", {
+                    required: true
+                  })}
+                />
+                {errors?.mensagem?.type === "required" && (
+                  <p className={styles.error_message}>Campo obrigatório</p>
+                )}
+              </div>
+              <div className={styles.mediumField}>
+                <button onClick={() => handleSubmit(onSubmit)()}>Enviar</button>
+              </div>
+            </form>
           </div>
           <div className={styles.contactContainer}>
             <a href={whatsappLink} target="_blank" className={styles.contactRows}>

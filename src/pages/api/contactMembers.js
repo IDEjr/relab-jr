@@ -1,5 +1,6 @@
 import nodemailer from "nodemailer"
 
+
 const handler = async (req, res) => {
 
   if (req.method === "POST") {
@@ -11,9 +12,6 @@ const handler = async (req, res) => {
     try {
       const email = process.env.EMAIL_FORM;
       const password = process.env.SENHA_DE_APP;
-      
-      console.log(email)
-      console.log(password)
 
       const transporter = nodemailer.createTransport({
         service: 'gmail',

@@ -12,13 +12,6 @@ import React from 'react'
 
 export default function Home({ home, posts, nav, foo, servicos, contato }) {
 
-  // const navData = {
-  //   logo: nav.logo,
-  //   linkedin: nav.linkedin,
-  //   instagram: nav.instagram,
-  //   email: nav.email
-  // }
-
   const tituloHome = home.inicioHome.titulo;
   const imagemHome = home.inicioHome.imagem;
 

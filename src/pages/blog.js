@@ -7,13 +7,6 @@ import { handleJSONfile } from '@/utils/functions/jsonHandler'
 
 export default function Blog({ posts, nav, foo, blog, contato, generos }) {
 
-  // const navData = {
-  //   logo: nav.logo,
-  //   linkedin: nav.linkedin,
-  //   instagram: nav.instagram,
-  //   email: nav.email
-  // }
-
   return (
     <>
       <Navbar contato = {contato} nav = {nav}/>

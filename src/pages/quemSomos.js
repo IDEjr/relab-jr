@@ -10,13 +10,7 @@ import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
 
 export default function QuemSomos({ quemSomos, membros, nav, foo, formularios, contato }) {
-
-  // const navData = {
-  //   logo: nav.logo,
-  //   linkedin: nav.linkedin,
-  //   instagram: nav.instagram,
-  //   email: nav.email
-  // }
+  
 
   const tituloQuemSomos = quemSomos.inicioQuemSomos.titulo;
   const imagemQuemSomos = quemSomos.inicioQuemSomos.imagem;
