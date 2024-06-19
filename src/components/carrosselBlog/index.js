@@ -3,7 +3,6 @@ import Image from 'next/image'
 import styles from './carrosselBlog.module.css'
 import { register } from 'swiper/element/bundle'
 import { Swiper, SwiperSlide } from 'swiper/react'
-// import { EffectCube, Navigation, Pagination } from 'swiper/modules'
 
 register(); //função para utilizar o swiper
 
@@ -70,7 +69,7 @@ export default function CarrosselBlog({ posts, titulo }) {
         >
           {recents.map((item) => ( //renderiza um slide para cada item no array de recents
             <SwiperSlide key={item.titulo} className={styles.swiperInd}>
-              <Link href={`/posts/${item.fileName}`}>
+              <Link href={`/post/${item.fileName}`}>
                 <div className={styles.carrosselImage}>
                   <Image
                     src={item.imagemCapa}

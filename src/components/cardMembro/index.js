@@ -1,11 +1,10 @@
-import Link from 'next/link'
 import Image from 'next/image'
 import styles from './cardMembro.module.css'
 
 export default function CardMembros({ nome, posicao, imagem, linkedin }) {
   return (
     <>
-      <Link href={linkedin || "/quemSomos"} target="_blank" className={styles.link}>
+      <a href={linkedin} target="_blank" className={styles.link}>
         <div className={styles.container}>
           <div className={styles.box}>
             <div className={styles.dados}>
@@ -22,7 +21,7 @@ export default function CardMembros({ nome, posicao, imagem, linkedin }) {
             </div>
           </div>
         </div>
-      </Link>
+      </a>
     </>
   );
 }
