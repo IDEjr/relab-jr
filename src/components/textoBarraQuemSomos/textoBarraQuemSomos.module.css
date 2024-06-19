@@ -1,4 +1,4 @@
-.container { /* css do container geral da página*/
+.container {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -6,7 +6,7 @@
   margin-bottom: 5rem;
 }
 
-.topText { /* css da div superior */
+.topText {
   display: flex;
   align-items: center;
   text-align: center;
@@ -18,7 +18,7 @@
   line-height: 3rem;
 }
 
-.bottomText { /* css da div do texto inferior*/
+.bottomText {
   display: flex;
   text-align: center;
   align-items: center;
@@ -29,14 +29,14 @@
   line-height: 3rem;
 }
 
-.textImage { /* css da div que suporta a imagem e o texto inferior*/
+.textImage {
   display: flex;
   justify-content: space-evenly;
   padding: 3rem;
   width: 100%;
 }
 
-.lampada { /* css da  própria imagem*/
+.lampada {
   position: relative;
   aspect-ratio: 1/1;
   overflow: hidden;
@@ -45,7 +45,7 @@
   width: 300px;
 }
 
-.bar { /* css do retangulo (visivel apenas no mobile)*/
+.bar {
   width: 50%;
   background-color: #F2C12E;
   height: 8px;
@@ -53,14 +53,13 @@
   display: none;
 }
 
-.textContent { /* formatação  de todos os textos*/
+.textContent {
   color: white;
   text-align: justify;
 }
 
 
-@media only screen and (max-width: 1320px) { /* incio do breakpoint */
-  
+@media only screen and (max-width: 1320px) {
   .container {
     display: flex;
     justify-content: center;
@@ -115,4 +114,4 @@
   .bar {
     display: block;
   }
-}  /* fim do breakpoint */
+}
