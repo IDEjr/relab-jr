@@ -17,12 +17,9 @@
 }
 
 .imageRightContainer, .imageLeftContainer, .imageMobileContainer {
-  /* width: 300px;
-  height: 300px; */
   align-self: center;
   width: 30%;
   height: 100%;
-  /* height:fit-content; */
   aspect-ratio: 1/1;
   position: relative;
 }
@@ -40,6 +37,7 @@
 
 .titleContainer {
   color: #F2C12E;
+  padding: 1rem;
 }
 
 .underBar {
@@ -88,8 +86,8 @@
     justify-content: center;
     text-align: center;
     width: 100%;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .titleContainer {

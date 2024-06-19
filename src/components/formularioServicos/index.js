@@ -1,26 +1,22 @@
-import styles from "./formularioServicos.module.css"
 import Image from 'next/image'
+import styles from "./formularioServicos.module.css"
+import { sendContactForm } from "@/lib/sendForm"
 import { useForm } from "react-hook-form"
 import { isEmail, isMobilePhone } from "validator"
-import { sendContactForm } from "@/lib/sendForm"
 import { FaRegComment, FaRegEnvelope, FaHome } from "react-icons/fa"
 
 
 function createWhatsAppLink( celular ) {
-  // Remove caracteres que não são dígitos
   const celularPuro = celular.replace(/[^\d]/g, '');
 
   return `https://wa.me/${celularPuro}`;
 }
 
 function formatPhoneNumber( value ) {
-  // Remove todos os caracteres que não são números
   const numericValue = value.replace(/\D/g, '');
   
-  // Aplica a formatação
   let formattedValue = '';
   if (numericValue.length >= 1) {
-    // let teste = (11-1).toString() +${resto} <- embaixo
     formattedValue += `(${numericValue.slice(0, 2)}`;
   }
   if (numericValue.length >= 3) {
@@ -49,10 +45,8 @@ function allowToEnterPhoneNumber( event ) {
   const currentValue = event.target.value;
   const formattedValue = formatPhoneNumber(currentValue + String.fromCharCode(charCode));
 
-  // Atualiza o valor do input field com o numero de celular formatado
   event.target.value = formattedValue;
 
-  // Impede o comportamento padrão
   event.preventDefault();
 }
 

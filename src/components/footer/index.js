@@ -1,11 +1,11 @@
-import styles from './footer.module.css'
-import Image from 'next/image'
-import {FaInstagram, FaLinkedin, FaEnvelope} from "react-icons/fa"
 import Link from 'next/link'
+import Image from 'next/image'
+import styles from './footer.module.css'
+import { FaInstagram, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 
 
 const handleMove = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" }); // here it goes
+  window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
 export default function Footer({ contato, footer }) {
@@ -13,16 +13,6 @@ export default function Footer({ contato, footer }) {
     <>
       <div className={styles.footer}>
         <div className={styles.linearGradient}/>
-        {/* <Image
-        src={footer.background}
-        
-        layout="fill"
-        objectFit="cover"
-        quality={100}
-        className={styles.bgImgHandle}
-        
-        >
-        </Image> */}
         <div className={styles.topPart}>
           <Link href="/" onClick={handleMove}>
               <Image
@@ -55,8 +45,6 @@ export default function Footer({ contato, footer }) {
             <a className={styles.watermarkCover} href={footer.link1} target='_blank'>
               <Image
                 src={footer.watermark1}
-                // width={90}
-                // height={35}
                 fill
                 style={{objectFit: 'contain'}}
                 className={styles.watermark}
@@ -67,8 +55,6 @@ export default function Footer({ contato, footer }) {
             <a className={styles.watermarkCover} href={footer.link2} target='_blank'>
               <Image
                 src={footer.watermark2}
-                // width={165}
-                // height={50}
                 fill
                 style={{objectFit: 'contain'}}
                 className={styles.watermark}
@@ -79,8 +65,6 @@ export default function Footer({ contato, footer }) {
             <a className={styles.watermarkCover} href={footer.link3} target='_blank'>
               <Image
                 src={footer.watermark3}
-                // width={150}
-                // height={40}
                 fill
                 style={{objectFit: 'contain'}}
                 className={styles.watermark}
