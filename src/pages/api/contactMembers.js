@@ -1,4 +1,5 @@
 import nodemailer from "nodemailer"
+import { mailOptions, transporter } from "@/utils/functions/nodemailer"
 
 
 const handler = async (req, res) => {
@@ -10,22 +11,6 @@ const handler = async (req, res) => {
     }
 
     try {
-      const email = process.env.EMAIL_FORM;
-      const password = process.env.SENHA_DE_APP;
-
-      const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth:{
-          user: email,
-          pass: password
-        }
-      });
-    
-      const mailOptions = {
-        from: email,
-        to: email,
-      };
-      
       await transporter.sendMail({
         ...mailOptions,
         subject: data.assunto,
