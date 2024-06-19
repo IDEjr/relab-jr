@@ -147,6 +147,13 @@ collections:
               - {label: "Texto 2", name: "texto2", widget: "text", pattern: ['^.{1,600}$', "Máximo 600 carateres."]}
 
 
+          - label: "Escopos Servicos"
+            name: "escoposServicos"
+            widget: "object"
+            fields:
+              - {label: "Título Escopos Servicos", name: "titulo", widget: "string"}
+
+
 
       - label: "Blog"
         name: "blog"

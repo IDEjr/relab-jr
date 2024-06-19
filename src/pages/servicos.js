@@ -13,6 +13,8 @@ export default function Servicos({ paginaServicos, nav, foo, formularios, servic
   const tituloServicos = paginaServicos.inicioServicos.titulo;
   const imagemServicos = paginaServicos.inicioServicos.imagem;
 
+  const tituloEscoposServicos = paginaServicos.escoposServicos.titulo;
+
   const inicioServicos = {
     titulo: paginaServicos.inicioServicos.texto1,
     texto: paginaServicos.inicioServicos.texto2,
@@ -23,7 +25,7 @@ export default function Servicos({ paginaServicos, nav, foo, formularios, servic
       <Navbar contato = {contato} nav = {nav}/>
       <Inicio titulo = {tituloServicos} imagem = {imagemServicos}/>
       <TextoServicos {...inicioServicos}/>
-      <EscoposServicos servicos = {servicos}/>
+      <EscoposServicos titulo = {tituloEscoposServicos} servicos = {servicos}/>
       <FormularioServicos contato = {contato} forms = {formularios}/>
       <Footer contato = {contato} footer = {foo}/>
     </>

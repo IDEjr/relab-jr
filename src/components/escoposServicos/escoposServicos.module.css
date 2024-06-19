@@ -7,6 +7,13 @@
   color: #F2C12E;
 }
 
+.title{
+  text-align: center;
+  color: #F2C12E;
+  padding-top: 20px;
+  padding-bottom: 100px;
+}
+
 .serviceContainer {
   display: flex;
   justify-content: space-between;

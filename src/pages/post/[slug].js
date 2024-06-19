@@ -1,31 +1,20 @@
-import styles from './slug.module.css'
 import Image from 'next/image'
+import styles from './slug.module.css'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
-import fs from 'fs'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
-import { useRouter } from 'next/router'
+import fs from 'fs'
 import { RxPencil1 } from "react-icons/rx"
 import ReactMarkdown from 'react-markdown'
 import React from 'react'
 
 
 const handleMove = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" }); // here it goes
+  window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
 export default function Posts({ post, nav, foo, blog, contato }) {
-  const router = useRouter();
-  const { postId } = router.query
 
-  const navData = {
-    logo: nav.logo,
-    linkedin: nav.linkedin,
-    instagram: nav.instagram,
-    email: nav.email
-  };
-
-    // formata data
     var dataForm;
     dataForm = post.data.substring(8, 10) + '/' + post.data.substring(5, 7) + '/' + post.data.substring(0, 4);
 
@@ -61,10 +50,6 @@ export default function Posts({ post, nav, foo, blog, contato }) {
           </div>
         </div>
         <div className={styles.markDown}>
-          {/* <ReactMarkdown className={styles.markdown}
-            components={{ img: ({ node, ...props }) => <img style={{ maxWidth: '100%', display: 'block', padding: '5vh 0px 5vh 0px', margin: 'auto' }}{...props} /> }}>
-            {post.previa}
-          </ReactMarkdown> */}
           <ReactMarkdown className={styles.markdown}>
             {post.conteudo}
           </ReactMarkdown>

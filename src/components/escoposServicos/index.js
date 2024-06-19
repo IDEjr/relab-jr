@@ -3,8 +3,12 @@ import styles from './escoposServicos.module.css'
 
 
 function servicoL( servico ) {
+
+  const id = servico.nome.replace(/ /g, '_');
+
   return(
     <>
+      <div id={id}></div>
       <div className={styles.serviceContainer}>
         <div className={styles.imageLeftContainer}>
           <Image
@@ -15,7 +19,7 @@ function servicoL( servico ) {
           />
         </div>
         <div className={styles.textContainer}>
-          <h2 className={styles.titleContainer}>{servico.nome}</h2>
+          <h3 className={styles.titleContainer}>{servico.nome}</h3>
           <div className={styles.underBar}></div>
           <p className={styles.descriptionContainer}>
             {servico.descricao}
@@ -27,8 +31,12 @@ function servicoL( servico ) {
 }
 
 function servicoR( servico ) {
+
+  const id = servico.nome.replace(/ /g, '_');
+  
   return(
     <>
+      <div id={id}></div>
       <div className={styles.serviceContainer}>
         <div className={styles.imageMobileContainer}>
           <Image
@@ -39,7 +47,7 @@ function servicoR( servico ) {
           />
         </div>
         <div className={styles.textContainer}>
-          <h2 className={styles.titleContainer}>{servico.nome}</h2>
+          <h3 className={styles.titleContainer}>{servico.nome}</h3>
           <div className={styles.underBar}></div>
           <p className={styles.descriptionContainer}>
             {servico.descricao}
@@ -59,10 +67,13 @@ function servicoR( servico ) {
 }
 
 
-export default function EscoposServicos({ servicos }) {
+export default function EscoposServicos({ titulo, servicos }) {
 
   return(
     <>
+      <h2 className={styles.title}>
+        {titulo}
+      </h2>
       <ul className={styles.mainContainer}>
         {servicos && servicos.map((servico, i) => (
           <div key={i}>
