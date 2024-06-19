@@ -3,7 +3,7 @@ import styles from './slug.module.css'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import { handleJSONfile } from '@/utils/functions/jsonHandler'
-import fs from 'fs'
+import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 import { RxPencil1 } from "react-icons/rx"
 import ReactMarkdown from 'react-markdown'
 import React from 'react'
@@ -75,15 +75,12 @@ export default function Posts({ post, nav, foo, blog, contato }) {
   )
 }
 
-export async function getStaticProps({ params: { slug } }) {
-  const caminho = 'posts';
-  const caminho2 = "navFooter";
-  const pagina2 = "navbar";
-  const pagina3 = "footer";
 
-  const post = handleJSONfile(`./content/${caminho}/${slug}.json`);
-  const nav = handleJSONfile(`./content/${caminho2}/${pagina2}.json`);
-  const foo = handleJSONfile(`./content/${caminho2}/${pagina3}.json`);
+export async function getStaticProps({ params: { slug } }) {
+
+  const post = handleJSONfile(`./content/posts/${slug}.json`);
+  const nav = handleJSONfile(`./content/navFooter/navbar.json`);
+  const foo = handleJSONfile(`./content/navFooter/footer.json`);
   const blog = handleJSONfile(`./content/paginas/blog.json`);
   const contato = handleJSONfile(`./content/contato/contato.json`);
 
@@ -92,16 +89,13 @@ export async function getStaticProps({ params: { slug } }) {
   };
 }
 
+
 export async function getStaticPaths() {
-  const raiz = process.env.PWD || process.env.INIT_CWD;
-  const caminho = 'posts';
+  const posts = handleJSONfiles('content/posts');
 
-  const filesInProjects = fs.readdirSync(raiz + `/content/${caminho}`)
-
-  const paths = filesInProjects.map(file => {
-    const filename = file.slice(0, file.indexOf('.'))
-    return { params: { slug: filename } }
-  })
+  const paths = posts.map(post => {
+    return { params: { slug: post.fileName } }
+  });
 
   return {
     paths,
