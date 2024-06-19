@@ -1,6 +1,6 @@
-import styles from './navbar.module.css'
-import Image from 'next/image'
 import Link from 'next/link'
+import Image from 'next/image'
+import styles from './navbar.module.css'
 import { useRef } from 'react'
 import { FaBars, FaTimes, FaInstagram, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 import classnames from 'classnames'

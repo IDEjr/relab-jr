@@ -5,13 +5,10 @@
   border: none;
   width: fit-content;
   height: 100%;
-  /* height: 9vh; */
   background: none;
   color: #F2C12E;
-  /* font-size: 1.4vw; */
   padding: 1rem;
 }
-
 
 .container {
   display: flex;
@@ -25,7 +22,6 @@
 .tituloMobile {
   background-color: #F2C12E;
   color: black;
-  /* font-size: 6.4vw; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,9 +95,7 @@
   border-radius: 10px;
 }
 
-/*início da estilização do scroll **NÃO FUNCIONA NO FIREFOX NEM NO EDGE** */
-
-.menuContainer::-webkit-scrollbar-track { /*estilizando o background do scroll */
+.menuContainer::-webkit-scrollbar-track {
   padding: 2px 0;
   background: none;
 }
@@ -111,19 +105,11 @@
   height: 8px;
 }
 
-.menuContainer::-webkit-scrollbar-thumb { /*estilizando o"botão" do scroll*/
+.menuContainer::-webkit-scrollbar-thumb {
   border-radius: 10px;
   box-shadow: inset 0 0 6px rgba(0,0,0,.3);
   background-color: #F2C12E;
 }
-/*fim da estilização  do scroll */
-
-
-/* @media only screen and (max-width: 906px) {
-  .buttonText{
-    font-size: 0.9rem;
-  }
-} */
 
 
 @media only screen and (max-width: 800px) {
@@ -163,8 +149,6 @@
     text-align: start;
     background: none;
     color: #F2C12E;
-    /* font-size: 3vw; */
-    /* height: 6vh; */
   }
 
   .active {
@@ -188,10 +172,6 @@
     padding-top: 2vh;
     z-index: 1;
   }
-
-  /* .tituloMobile {
-    font-size: 5vw;
-  } */
 
   .dropdownActive {
     opacity: 1;
