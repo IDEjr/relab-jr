@@ -3,7 +3,7 @@ import styles from './carrosselQuemSomos.module.css'
 import { register } from 'swiper/element/bundle'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-register(); //função para utilizar o swiper
+register();
 
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -20,39 +20,30 @@ export default function CarrosselQuemSomos({ imagens }) {
           style={{
             "--swiper-theme-color": "#F2C12E",
             "--swiper-pagination-color": "#F2C12E",
-            "--swiper-pagination-bullet-inactive-color": "#c19a24  ", //algumas estilizações do navigation, pagination
+            "--swiper-pagination-bullet-inactive-color": "#F2C12E",
             "--swiper-pagination-bullet-inactive-opacity": "0.5",
-            "--swiper-pagination-bullet-border-radius": "10px",
-            "--swiper-pagination-bullet-width": "10px",
-            "--swiper-pagination-bullet-height": "10px",
-            "--swiper-pagination-bullet-horizontal-gap": " 5px"
+            "--swiper-pagination-bullet-size": "10px",
+            "--swiper-pagination-bullet-horizontal-gap": " 15px"
           }}
-          slidesPerView={1}  //define a quantidade de slides por visualização
+          slidesPerView={1}
           loop={true}
-          autoplay={{ //configurações do autoplay
+          autoplay={{
             delay: 3000,
             disableOnInteraction: false
           }}
-          pagination={{ //configurações da pagination
+          pagination={{
             enabled: true,
             clickable: true,
             dynamicBullets: true
           }}
-          grabCursor={true}  //ativando o grabCursor com configurações default
-          // navigation={{ //configurações do navi
-          //   enabled: false
-          // }}
-
+          grabCursor={true}
           breakpoints={{
-            800: { //acima de 800px, aumenta os slides por visualização para dois, e ativa o navigation (as setinhas)
+            800: {
               slidesPerView: 2,
-              // navigation: {
-              //   enabled: true
-              // }
             }
           }}
         >
-          {imagens.map((item) => ( //mostra um slide para cada imagem contida em images
+          {imagens.map((item) => (
             <SwiperSlide key={item} className={styles.swiperSlide} >
               <div className={styles.image}>
                 <Image

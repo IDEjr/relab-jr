@@ -8,11 +8,9 @@ export default function CardPost({ fileName, imagem, titulo, data, previa, autor
   var dataForm;
   dataForm = data.substring(8, 10) + '/' + data.substring(5, 7) + '/' + data.substring(0, 4);
 
-  const url = `/post/${fileName}`;
-
   return (
     <>
-      <Link href={url} className={styles.link}>
+      <Link href={`/post/${fileName}`} className={styles.link}>
         <div className={styles.card}>
           <div className={styles.box}>
             <div className={styles.img}>
