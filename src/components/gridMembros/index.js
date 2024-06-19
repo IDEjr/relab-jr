@@ -2,32 +2,32 @@ import Image from 'next/image'
 import styles from './gridMembros.module.css'
 import CardMembros from '@/components/cardMembro'
 
+
 export default function GridMembros({ titulo, logo, membros }) {
-  //const cargos = ['Presidência','Vice-Presidência','Diretoria','Assessoria','Gerência','Consultoria'];
-  let Ps = [];
-  let VPs = [];
-  let Dir = [];
-  let Ass = [];
-  let Ger = [];
-  let Cons = [];
+  let presidencia = [];
+  let vice_presidencia = [];
+  let diretoria = [];
+  let assessoria = [];
+  let gerencia = [];
+  let consultoria = [];
   let aux = membros[0];
   for (let i in membros) {
     if(membros[i].posicao == 'Presidência') {
-      Ps.push(membros[i]);
+      presidencia.push(membros[i]);
     } else if(membros[i].posicao == ('Vice-Presidência')) {
-      VPs.push(membros[i]);
+      vice_presidencia.push(membros[i]);
     } else if(membros[i].posicao.includes('Diretoria')) {
-      Dir.push(membros[i]);
+      diretoria.push(membros[i]);
     } else if(membros[i].posicao.includes('Assessoria')) {
-      Ass.push(membros[i]);
+      assessoria.push(membros[i]);
     } else if(membros[i].posicao.includes('Gerência')) {
-      Ger.push(membros[i]);
+      gerencia.push(membros[i]);
     } else if(membros[i].posicao.includes('Consultoria')) {
-      Cons.push(membros[i]);
+      consultoria.push(membros[i]);
     }
   }
 
-  membros = [...Ps,...VPs,...Dir,...Ass,...Ger,...Cons];
+  membros = [...presidencia,...vice_presidencia,...diretoria,...assessoria,...gerencia,...consultoria];
   return (
     <>
       <div className={styles.chamariz}>

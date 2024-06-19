@@ -50,7 +50,6 @@ function allowToEnterPhoneNumber( event ) {
   event.preventDefault();
 }
 
-
 export default function FormularioServicos({ contato, forms }) {
 
   const {
@@ -74,6 +73,7 @@ export default function FormularioServicos({ contato, forms }) {
 
   return(
     <>
+      <div id='formServicos'></div>
       <div className={styles.mainContainer}>
         <div className={styles.logo}>
           <Image

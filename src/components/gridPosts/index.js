@@ -1,5 +1,5 @@
-import CardPost from "@/components/cardPost";
 import styles from './gridPosts.module.css'
+import CardPost from '@/components/cardPost'
 
 export default function GridPosts({ posts }) {
   

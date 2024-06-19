@@ -24,7 +24,7 @@ export default function Home({ home, posts, nav, foo, servicos, contato }) {
     titulo: home.imgBotaoRes.titulo,
     texto: home.imgBotaoRes.texto,
     textoBotao: home.imgBotaoRes.textoBotao,
-    link: 'servicos'
+    link: '/servicos/#formServicos'
   }
 
   const imgButMembros = {
@@ -32,7 +32,7 @@ export default function Home({ home, posts, nav, foo, servicos, contato }) {
     titulo: home.imgBotaoMem.titulo,
     texto: home.imgBotaoMem.texto,
     textoBotao: home.imgBotaoMem.textoBotao,
-    link: 'quemSomos'
+    link: '/quemSomos/#formQuemSomos'
   }
 
   const tituloCarrossel = home.carrosselHome.tituloCarrossel;
