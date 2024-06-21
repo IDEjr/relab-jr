@@ -9,10 +9,10 @@ export default function Navbar({ contato, nav }) {
   const navRef = useRef();
   const logoRef = useRef();
 
-	const toggleNavbar = () => {
-		navRef.current.classList.toggle( "responsiveNav" );
-    logoRef.current.classList.toggle(	"responsiveLogo" );
-	};
+  const toggleNavbar = () => {
+    navRef.current.classList.toggle( "responsiveNav" );
+    logoRef.current.classList.toggle(  "responsiveLogo" );
+  };
   
   return(
     <>
