@@ -7,11 +7,9 @@
 	height: 100%;
 }
 
-
 html {
 	background-color: #262626;
 }
-
 
 *{
 	margin: 0;
@@ -21,7 +19,6 @@ html {
 	font-family: 'Work Sans', sans-serif;
 	font-weight: 300;
 }
-
 
 header {
 	display: flex;
@@ -33,17 +30,14 @@ header {
 	color: white;
 }
 
-
 body {
 	width: 100%;
 	color: white;
 }
 
-
 strong {
 	font-weight: bold;
 }
-
 
 a {
 	color: #F2C12E;
@@ -51,36 +45,30 @@ a {
   cursor: pointer;
 }
 
-
 p {
 	background: none;
   font-size: 1rem;
 }
 
-textarea{
+textarea {
   color: black;
 }
-
 
 h1{
 	font-size: 5rem;
 }
 
-
 h2{
 	font-size: 2.5rem;
 }
-
 
 h3{
 	font-size: 1.7rem;
 }
 
-
-.footer{
+.footer {
 	background-color: #F2C12E;
 }
-
 
 footer {
 	display: block;
@@ -90,7 +78,6 @@ footer {
 	color: #777;
 	border-top: 1px solid #eaeaea;
 }
-
 
 button {
   font-size: 1.2rem;
@@ -120,11 +107,9 @@ nav a {
 	text-decoration: none;
 }
 
-
 nav a:hover {
 	color: #F2C12E;
 }
-
 
 header .navBtn {
 	padding: 5px;
@@ -137,7 +122,6 @@ header .navBtn {
 	opacity: 0;
 	font-size: 1.8rem;
 }
-
 
 header nav {
 	display: flex;
@@ -181,6 +165,7 @@ header nav {
 	}
 }
 
+
 @media only screen and (max-width: 1280px) {
 
   h3 {
@@ -195,6 +180,7 @@ header nav {
     font-size: 3rem;
   }
 }
+
 
 @media only screen and (max-width: 500px) {
 

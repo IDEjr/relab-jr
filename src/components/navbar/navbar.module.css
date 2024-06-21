@@ -1,4 +1,4 @@
-header .logo{
+header .logo {
 	background-color: #262626;
 }
 
@@ -16,7 +16,7 @@ header .logo{
 	color: white;
 }
 
-.navbar{
+.navbar {
 	margin-left: auto;
 }
 
@@ -58,7 +58,6 @@ header .logo{
 
 
 @media only screen and (min-width: 1024px) {
-
 	.cabecalho .navBtn {
 		padding: 5px;
 		cursor: pointer;
@@ -73,8 +72,8 @@ header .logo{
 	}
 }
 
-@media only screen and (max-width: 1024px) {
 
+@media only screen and (max-width: 1024px) {
 	.cabecalho .navBtn {
 		visibility: visible;
 		opacity: 1;
