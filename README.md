@@ -2,7 +2,7 @@
 
 ## 1. Introdução
 
-Este documento é um guia do código fonte do projeto Next.js. O projeto foi desenvolvido com a finalidade de criar um site dinâmico e eficiente utilizando a tecnologia Next.js. O projeto conta com diversas funcionalidades, incluindo rotas dinâmicas, componentes reutilizáveis e uma estrutura bem organizada para facilitar a manutenção e expansão do código.
+Este documento é um guia do código fonte do site. O projeto foi desenvolvido com a finalidade de criar um site dinâmico com componentes reutilizáveis utilizando a tecnologia Next.js.
 
 ## 2. Estrutura de Diretórios e Arquivos Principais
 
@@ -14,12 +14,14 @@ Diretório responsável por armazenar as dependências do projeto.
 
 ### 2.2 public
 
-Diretório onde se encontram todos os recursos gráficos e arquivos públicos da aplicação.
+Diretório onde se encontram todos os recursos gráficos e arquivos globalmente acessíveis da aplicação.
 
 #### 2.2.1 public/admin
 
+Diretório onde são armazenados os dados da área de administração do conteúdo do site.
+
+- **config.yml**: Arquivo de configuração para a área de administração.
 - **index.html**: Página inicial da área de administração.
-- **config.js**: Arquivo de configuração para a área de administração.
 
 #### 2.2.2 public/uploads
 
@@ -135,7 +137,7 @@ Diretório onde os componentes reutilizáveis estão localizados. Abaixo está a
 
 #### 2.3.2 src/lib
 
-Contém bibliotecas e funções utilitárias.
+Contém bibliotecas para desempenhar funções específicas.
 
 ##### 2.3.2.1 sendForm.js
 
@@ -185,11 +187,7 @@ Este diretório segue a convenção de rotas do Next.js, onde cada arquivo JavaS
 
 Contém estilos globais para o projeto.
 
-##### 2.3.4.1 globals.css
-
-- **Descrição:** Arquivo CSS com estilos globais.
-
-#### 2.3.5 src/utils/funtions
+#### 2.3.5 src/utils
 
 Contém funções utilitárias.
 
@@ -197,12 +195,16 @@ Contém funções utilitárias.
 
 - **Descrição:** Função para manipulação de JSON.
 
+##### 2.3.5.2 nodemailer.js
+
+- **Descrição:** Função para configurar credenciais de envio de email.
+
 ## 3. Configuração e Execução
 
 ### 3.1 Pré-requisitos
 
 - Node.js
-- npm ou yarn
+- npm
 
 ### 3.2 Instalação
 
@@ -215,7 +217,7 @@ git clone <URL_DO_REPOSITORIO>
 Navegue até o diretório do projeto:
 
 ```
-cd site
+cd relabjrconsultoria.com
 ```
 
 Instale as dependências:
@@ -223,25 +225,12 @@ Instale as dependências:
 ```
 npm i
 ```
-
-ou
-
-```
-yarn install
-```
-
 ### 3.3 Desenvolvimento
 
 Para iniciar o servidor de desenvolvimento, execute:
 
 ```
 npm run dev
-```
-
-ou
-
-```
-yarn dev
 ```
 
 O servidor estará disponível em `http://localhost:3000`.
@@ -253,15 +242,3 @@ Para criar uma build para produção, execute:
 ```
 npm run build
 ```
-
-ou
-
-```
-yarn build
-```
-
-## 4. Contato
-
-Para mais informações ou suporte, entre em contato através dos canais fornecidos no site.
-
-Esta documentação fornece uma visão geral da estrutura e funcionalidade do projeto Next.js. Ajuste conforme necessário para incluir detalhes específicos do seu projeto.
