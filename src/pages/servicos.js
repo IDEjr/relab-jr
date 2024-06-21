@@ -4,8 +4,8 @@ import Inicio from '@/components/inicio'
 import TextoServicos from '@/components/textoServicos'
 import EscoposServicos from '@/components/escoposServicos'
 import FormularioServicos from '@/components/formularioServicos'
-import { handleJSONfile } from '@/utils/functions/jsonHandler'
-import { handleJSONfiles } from '@/utils/functions/jsonHandler'
+import { handleJSONfile } from '@/utils/jsonHandler'
+import { handleJSONfiles } from '@/utils/jsonHandler'
 
 
 export default function Servicos({ paginaServicos, nav, foo, formularios, servicos, contato }) {

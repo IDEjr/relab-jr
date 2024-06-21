@@ -5,8 +5,8 @@ import ServicosHome from '@/components/servicosHome'
 import Inicio from '@/components/inicio'
 import TextoBarraHome from '@/components/textoBarraHome/index'
 import CarrosselHome from '@/components/carrosselHome'
-import { handleJSONfiles } from '@/utils/functions/jsonHandler'
-import { handleJSONfile } from '@/utils/functions/jsonHandler'
+import { handleJSONfiles } from '@/utils/jsonHandler'
+import { handleJSONfile } from '@/utils/jsonHandler'
 import React from 'react'
 
 

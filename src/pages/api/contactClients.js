@@ -1,5 +1,4 @@
-import nodemailer from 'nodemailer'
-import { mailOptions, transporter } from "@/utils/functions/nodemailer"
+import { mailOptions, transporter } from "@/utils/nodemailer"
 
 
 const handler = async (req, res) => {
