@@ -2,6 +2,7 @@ import Image from 'next/image'
 import styles from './cardMembro.module.css'
 
 export default function CardMembros({ nome, posicao, imagem, linkedin }) {
+
   return (
     <>
       <a href={linkedin} target="_blank" className={styles.link}>

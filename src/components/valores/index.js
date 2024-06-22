@@ -2,6 +2,7 @@ import styles from './valores.module.css'
 
 
 export default function Valores({ ...escritos }) {
+
   return(
     <>
       <div className={styles.containerValores}>
