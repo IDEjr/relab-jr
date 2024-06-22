@@ -1,9 +1,9 @@
 import Image from 'next/image'
-import styles from "./formularioServicos.module.css"
-import { sendContactForm } from "@/lib/sendForm"
-import { useForm } from "react-hook-form"
-import { isEmail, isMobilePhone } from "validator"
-import { FaRegComment, FaRegEnvelope, FaHome } from "react-icons/fa"
+import styles from './formularioServicos.module.css'
+import { sendContactForm } from '@/lib/sendForm'
+import { useForm } from 'react-hook-form'
+import { isEmail, isMobilePhone } from 'validator'
+import { FaRegComment, FaRegEnvelope, FaHome } from 'react-icons/fa'
 
 
 function createWhatsAppLink( celular ) {
@@ -36,11 +36,6 @@ function allowToEnterPhoneNumber( event ) {
   if (charCode === 8) {
     return true;
   }
-
-  // Permite setas
-  // if (charCode >= 37 && charCode <= 40) {
-  //   return true;
-  // }
 
   const currentValue = event.target.value;
   const formattedValue = formatPhoneNumber(currentValue + String.fromCharCode(charCode));

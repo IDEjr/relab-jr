@@ -4,7 +4,6 @@ import styles from './cardPost.module.css'
 
 export default function CardPost({ fileName, imagem, titulo, data, previa, autor}) {
 
-  // formata data
   var dataForm;
   dataForm = data.substring(8, 10) + '/' + data.substring(5, 7) + '/' + data.substring(0, 4);
 

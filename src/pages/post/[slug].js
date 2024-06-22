@@ -2,9 +2,9 @@ import Image from 'next/image'
 import styles from './slug.module.css'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
-import { handleJSONfile } from '@/utils/functions/jsonHandler'
-import { handleJSONfiles } from '@/utils/functions/jsonHandler'
-import { RxPencil1 } from "react-icons/rx"
+import { handleJSONfile } from '@/utils/jsonHandler'
+import { handleJSONfiles } from '@/utils/jsonHandler'
+import { RxPencil1 } from 'react-icons/rx'
 import ReactMarkdown from 'react-markdown'
 import React from 'react'
 

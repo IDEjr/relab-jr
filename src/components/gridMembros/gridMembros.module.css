@@ -40,6 +40,7 @@
   }
 }
 
+
 @media only screen and (min-width: 577px) and (max-width: 768px) {
   .chamariz {
     margin-top: 100px;
@@ -54,6 +55,7 @@
     clip-path: polygon(50% 0, 50% 0, 100% 2%, 100% 98%, 50% 100%, 50% 100%, 0 98%, 0 2%);
   }
 }
+
 
 @media only screen and (max-width: 576px) {
   .chamariz {

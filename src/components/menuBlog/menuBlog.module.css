@@ -113,7 +113,6 @@
 
 
 @media only screen and (max-width: 800px) {
-
   .containerMobile {
     display: flex;
     flex-direction: column;

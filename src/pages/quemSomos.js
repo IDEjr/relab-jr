@@ -6,8 +6,8 @@ import Valores from '@/components/valores'
 import GridMembros from '@/components/gridMembros'
 import CarrosselQuemSomos from '@/components/carrosselQuemSomos'
 import FormularioQuemSomos from '@/components/formularioQuemSomos'
-import { handleJSONfiles } from '@/utils/functions/jsonHandler'
-import { handleJSONfile } from '@/utils/functions/jsonHandler'
+import { handleJSONfiles } from '@/utils/jsonHandler'
+import { handleJSONfile } from '@/utils/jsonHandler'
 
 export default function QuemSomos({ quemSomos, membros, nav, foo, formularios, contato }) {
   

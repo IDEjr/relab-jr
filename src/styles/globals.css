@@ -3,94 +3,81 @@
 
 :root {
   --fa-primary-color: #F2C12E;
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
 }
-
 
 html {
-	background-color: #262626;
+  background-color: #262626;
 }
-
 
 *{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-size: 16px;
-	font-family: 'Work Sans', sans-serif;
-	font-weight: 300;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
 }
-
 
 header {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	height: 80px;
-	padding: 0 2rem;
-	background-color: #262626;
-	color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 2rem;
+  background-color: #262626;
+  color: white;
 }
-
 
 body {
-	width: 100%;
-	color: white;
+  width: 100%;
+  color: white;
 }
-
 
 strong {
-	font-weight: bold;
+  font-weight: bold;
 }
 
-
 a {
-	color: #F2C12E;
-	text-decoration: none;
+  color: #F2C12E;
+  text-decoration: none;
   cursor: pointer;
 }
 
-
 p {
-	background: none;
+  background: none;
   font-size: 1rem;
 }
 
-textarea{
+textarea {
   color: black;
 }
 
-
 h1{
-	font-size: 5rem;
+  font-size: 5rem;
 }
-
 
 h2{
-	font-size: 2.5rem;
+  font-size: 2.5rem;
 }
-
 
 h3{
-	font-size: 1.7rem;
+  font-size: 1.7rem;
 }
 
-
-.footer{
-	background-color: #F2C12E;
+.footer {
+  background-color: #F2C12E;
 }
-
 
 footer {
-	display: block;
-	text-align: center;
-	padding: 30px 0;
-	margin-top: 60px;
-	color: #777;
-	border-top: 1px solid #eaeaea;
+  display: block;
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 60px;
+  color: #777;
+  border-top: 1px solid #eaeaea;
 }
-
 
 button {
   font-size: 1.2rem;
@@ -115,71 +102,69 @@ button:active {
 }
 
 nav a {
-	margin: 0 1rem;
-	color: white;
-	text-decoration: none;
+  margin: 0 1rem;
+  color: white;
+  text-decoration: none;
 }
-
 
 nav a:hover {
-	color: #F2C12E;
+  color: #F2C12E;
 }
-
 
 header .navBtn {
-	padding: 5px;
-	cursor: pointer;
-	background: transparent;
-	border: none;
-	outline: none;
-	color: white;
-	visibility: hidden;
-	opacity: 0;
-	font-size: 1.8rem;
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 1.8rem;
 }
 
-
 header nav {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 
 @media only screen and (max-width: 1024px) {
-	header .navBtn {
-		visibility: visible;
-		opacity: 1;
-	}
+  header .navBtn {
+    visibility: visible;
+    opacity: 1;
+  }
 
-	header nav {
-		position: fixed;
-		top: -100vh;
-		left: 0;
-		height: 100%;
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		gap: 1.5rem;
-		background-color: #262626;
-		transition: 1s;
-	}
+  header nav {
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: #262626;
+    transition: 1s;
+  }
 
-	header .responsiveNav {
-		transform: translateY(100vh);
-	}
+  header .responsiveNav {
+    transform: translateY(100vh);
+  }
 
-	nav .navCloseBtn {
-		position: absolute;
-		top: 2rem;
-		right: 2rem;
-	}
+  nav .navCloseBtn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
 
-	nav a {
-		font-size: 1.5rem;
-	}
+  nav a {
+    font-size: 1.5rem;
+  }
 }
+
 
 @media only screen and (max-width: 1280px) {
 
@@ -195,6 +180,7 @@ header nav {
     font-size: 3rem;
   }
 }
+
 
 @media only screen and (max-width: 500px) {
 
