@@ -83,7 +83,7 @@ Diretório onde os componentes reutilizáveis estão localizados. Abaixo está a
 ##### 2.3.1.10 gridMembros
 
 - **Localização:** src/components/gridMembros
-- **Descrição:**  Grade para a exibição dos membros da página Quem Somos.
+- **Descrição:** Grade para a exibição dos membros da página Quem Somos.
 
 ##### 2.3.1.11 gridPosts
 
@@ -123,17 +123,17 @@ Diretório onde os componentes reutilizáveis estão localizados. Abaixo está a
 ##### 2.3.1.18 textoBarraQuemSomos
 
 - **Localização:** src/components/textoBarraQuemSomos
-- **Descrição:**  Introdução da página Quem Somos.
+- **Descrição:** Introdução da página Quem Somos.
 
 ##### 2.3.1.19 textoServicos
 
 - **Localização:** src/components/textoServicos
-- **Descrição:**  Introdução da página Serviços.
+- **Descrição:** Introdução da página Serviços.
 
 ##### 2.3.1.20 valores
 
 - **Localização:** src/components/valores
-- **Descrição:**  Display dos valores da Relab Jr.
+- **Descrição:** Display dos valores da Relab Jr.
 
 #### 2.3.2 src/lib
 
@@ -183,6 +183,10 @@ Este diretório segue a convenção de rotas do Next.js, onde cada arquivo JavaS
 
 - **Descrição:** Página dinâmica para exibição de posts baseados em um slug.
 
+##### 2.3.3.10 404.js
+
+- **Descrição:** Página de erro 404 para rotas não encontradas.
+
 #### 2.3.4 src/styles
 
 Contém estilos globais para o projeto.
@@ -225,6 +229,7 @@ Instale as dependências:
 ```
 npm i
 ```
+
 ### 3.3 Desenvolvimento
 
 Para iniciar o servidor de desenvolvimento, execute:
