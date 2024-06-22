@@ -1,4 +1,4 @@
-# Documentação do Site relabjrconsultoria.com - Relab Jr.
+# Documentação do Site relabjrconsultoria.com
 
 ## 1. Introdução
 
@@ -38,102 +38,102 @@ Diretório onde os componentes reutilizáveis estão localizados. Abaixo está a
 ##### 2.3.1.1 cardMembro
 
 - **Localização:** src/components/cardMembro
-- **Descrição:** Componente para exibição de informações de um membro.
+- **Descrição:** Card para exibição de informações de um membro.
 
 ##### 2.3.1.2 cardPost
 
 - **Localização:** src/components/cardPost
-- **Descrição:** Componente para exibição de informações de um post.
+- **Descrição:** Card para exibição de informações de um post.
 
 ##### 2.3.1.3 carrosselBlog
 
 - **Localização:** src/components/carrosselBlog
-- **Descrição:** Componente para o carrossel de posts da seção de blog.
+- **Descrição:** Carrossel de posts da página Blog.
 
 ##### 2.3.1.4 carrosselHome
 
 - **Localização:** src/components/carrosselHome
-- **Descrição:** Componente para o carrossel de cardPosts da página Home.
+- **Descrição:** Carrossel de cardPosts da página Home.
 
 ##### 2.3.1.5 carrosselQuemSomos
 
 - **Localização:** src/components/carrosselQuemSomos
-- **Descrição:** Componente para o carrossel de imagens da página Quem Somos.
+- **Descrição:** Carrossel de imagens da página Quem Somos.
 
 ##### 2.3.1.6 escoposServicos
 
 - **Localização:** src/components/escoposServicos
-- **Descrição:** Componente para exibição de escopos de serviços.
+- **Descrição:** Grade para exibição dos escopos de serviços da página Serviços.
 
 ##### 2.3.1.7 footer
 
 - **Localização:** src/components/footer
-- **Descrição:** Componente para o rodapé do site.
+- **Descrição:** Footer do site.
 
 ##### 2.3.1.8 formularioQuemSomos
 
 - **Localização:** src/components/formularioQuemSomos
-- **Descrição:** Componente para o formulário da página Quem Somos.
+- **Descrição:** Formulário para novos membros da página Quem Somos.
 
 ##### 2.3.1.9 formularioServicos
 
 - **Localização:** src/components/formularioServicos
-- **Descrição:** Componente para o formulário da página de Serviços.
+- **Descrição:** Formulário para clientes da página Serviços.
 
 ##### 2.3.1.10 gridMembros
 
 - **Localização:** src/components/gridMembros
-- **Descrição:** Componente para exibição do painel de membros.
+- **Descrição:**  Grade para a exibição dos membros da página Quem Somos.
 
 ##### 2.3.1.11 gridPosts
 
 - **Localização:** src/components/gridPosts
-- **Descrição:** Componente para exibição de posts em grid dentro do menuBlog.
+- **Descrição:** Grade para a exibição dos cardPosts dentro do componente menuBlog da página Blog.
 
 ##### 2.3.1.12 imagemComBotao
 
 - **Localização:** src/components/imagemComBotao
-- **Descrição:** Componente para o layout das imagens com botão para redirecionamento na página Home.
+- **Descrição:** Layout das imagens com botão para redirecionamento da página Home.
 
 ##### 2.3.1.13 inicio
 
 - **Localização:** src/components/inicio
-- **Descrição:** Componente para a seção inicial das páginas.
+- **Descrição:** Seção inicial das páginas.
 
 ##### 2.3.1.14 menuBlog
 
 - **Localização:** src/components/menuBlog
-- **Descrição:** Componente para o menu do blog.
+- **Descrição:** Menu para filtragem de posts do blog.
 
 ##### 2.3.1.15 navbar
 
 - **Localização:** src/components/navbar
-- **Descrição:** Componente para a barra de navegação.
+- **Descrição:** Barra de navegação.
 
 ##### 2.3.1.16 servicosHome
 
 - **Localização:** src/components/servicosHome
-- **Descrição:** Componente para exibição de serviços na página Home.
+- **Descrição:** Grade para a exibição dos serviços da página Home.
 
 ##### 2.3.1.17 textoBarraHome
 
 - **Localização:** src/components/textoBarraHome
-- **Descrição:** Componente para textos na barra da página Home.
+- **Descrição:** Introdução da página Home.
 
 ##### 2.3.1.18 textoBarraQuemSomos
 
 - **Localização:** src/components/textoBarraQuemSomos
-- **Descrição:** Componente para textos na barra da página Quem Somos.
+- **Descrição:**  Introdução da página Quem Somos.
 
 ##### 2.3.1.19 textoServicos
 
 - **Localização:** src/components/textoServicos
-- **Descrição:** Componente para textos na página de Serviços.
+- **Descrição:**  Introdução da página Serviços.
 
 ##### 2.3.1.20 valores
 
 - **Localização:** src/components/valores
-- **Descrição:** Componente para exibição dos valores da Relab Jr.
+- **Descrição:**  Display dos valores da Relab Jr.
 
 #### 2.3.2 src/lib
 
@@ -157,7 +157,7 @@ Este diretório segue a convenção de rotas do Next.js, onde cada arquivo JavaS
 
 ##### 2.3.3.3 blog.js
 
-- **Descrição:** Página do blog.
+- **Descrição:** Página blog.
 
 ##### 2.3.3.4 index.js
 
@@ -193,7 +193,7 @@ Contém funções utilitárias.
 
 ##### 2.3.5.1 jsonHandler.js
 
-- **Descrição:** Função para manipulação de JSON.
+- **Descrição:** Função para leitura de JSON.
 
 ##### 2.3.5.2 nodemailer.js
 
